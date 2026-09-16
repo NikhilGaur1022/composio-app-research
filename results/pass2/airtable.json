@@ -1,36 +1,41 @@
 {
   "ok": true,
   "result": {
-    "access": "self_serve_free",
-    "api_breadth": "medium",
-    "api_type": "rest",
+    "one_liner": "Airtable is a cloud database/spreadsheet-hybrid platform with a REST Web API for programmatic access to bases, tables, and records.",
     "auth_methods": [
       "oauth2",
       "bearer_token"
     ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://airtable.com/developers/web/api/introduction",
+    "mcp": {
+      "status": "official",
+      "url": "https://airtable.com/developers/agents"
+    },
+    "verdict": "green",
     "blocker": "none",
-    "confidence": 0.78,
-    "docs_url": "https://airtable.com/developers/web/api/authentication",
     "evidence": [
       {
         "field": "auth_methods",
         "url": "https://airtable.com/developers/web/api/authentication",
-        "quote": "Personal access tokens are for personal development, like building an integration for yourself, your client, or your company."
+        "quote": "As of February 1st 2024, the deprecation period for Airtable API keys has ended."
       },
       {
         "field": "auth_methods",
         "url": "https://airtable.com/developers/web/api/authentication",
-        "quote": "OAuth access tokens are recommended for building an integration where other users grant your service access to Airtable's API on their behalf."
+        "quote": "the token must have both the correct scope (`data.records:write`) and the base added to it as a resource"
       },
       {
         "field": "access",
-        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
-        "quote": "From /create/tokens, click the 'Create new token' button to create a new personal access token."
+        "url": "https://support.airtable.com/docs/managing-api-call-limits-in-airtable",
+        "quote": "Free plan: 1000 API calls per month"
       },
       {
         "field": "access",
-        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
-        "quote": "Once your token is created, we will only show it to you once, so we encourage you to copy it to your clipboard and store it somewhere safe."
+        "url": "https://support.airtable.com/docs/managing-api-call-limits-in-airtable",
+        "quote": "Airtable enforces a rate limit of 5 requests per second (per base) to ensure optimal user performance across all pricing tiers."
       },
       {
         "field": "api_type",
@@ -40,25 +45,20 @@
       {
         "field": "mcp",
         "url": "https://airtable.com/developers/agents",
-        "quote": "Any MCP-compatible tool can read, write, and query your bases through natural language, scoped to your existing permissions."
+        "quote": "The Airtable MCP server gives agents your base's full structure — field types, relationships, and views — so they can make context-aware decisions."
       },
       {
         "field": "verdict",
-        "url": "https://airtable.com/developers/web/api/authentication",
-        "quote": "As of February 1st, 2024, the deprecation period for Airtable API keys has ended"
+        "url": "https://support.airtable.com/docs/managing-api-call-limits-in-airtable",
+        "quote": "If you exceed your Free plan's call limit, a 30-day grace period is initiated, allowing you to continue using the API for that period."
       }
     ],
-    "mcp": {
-      "status": "official",
-      "url": "https://airtable.com/developers/agents"
-    },
-    "notes": "Airtable API keys were fully deprecated (removed) as of Feb 1, 2024, replaced by personal access tokens (bearer_token, self-serve at /create/tokens, no paid-plan gate found) and OAuth2 for third-party integrations. Official MCP server distributed via npm (@airtable/mcp-cli) and documented at airtable.com/developers/agents. Did not verify exact endpoint count for api_breadth (estimated medium based on typical REST resource set: records, bases, tables, fields, views, webhooks, comments, attachments).",
-    "one_liner": "Airtable is a cloud spreadsheet-database hybrid for building apps and workflows around structured data.",
-    "verdict": "green"
+    "confidence": 0.82,
+    "notes": "API keys were fully deprecated Feb 1 2024; current auth is Personal Access Tokens (Bearer scheme) for individual dev use, or OAuth2 for third-party integrations requiring app registration at /create/oauth. Free-tier accounts can self-serve create PATs and use the API, but capped at 1000 calls/month and 5 req/sec per base — usable for prototyping/agents but a real constraint at scale. Official MCP server confirmed via /developers/agents with Claude Code plugin and npm CLI install paths. api_breadth estimated medium (records, bases/meta, webhooks, comments, attachments, fields endpoints) — exact count not verified against full API reference."
   },
-  "cost_usd": 0.116601,
-  "turns": 7,
-  "seconds": 35.8,
+  "cost_usd": 0.2052386,
+  "turns": 10,
+  "seconds": 68.5,
   "is_error": false,
   "error": null
 }

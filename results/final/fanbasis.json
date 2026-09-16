@@ -3,51 +3,90 @@
   "name": "fanbasis",
   "category": "Ecommerce",
   "hint": "fanbasis.com",
-  "one_liner": "Creator monetization platform providing REST API for payments infrastructure and digital product hosting.",
+  "one_liner": "Commas (formerly FanBasis) is a payments/checkout and payouts platform for creators and digital-product sellers, positioned as a Stripe alternative with embedded checkout, subscriptions, and BNPL.",
   "auth_methods": [
     "api_key"
   ],
-  "access": "self_serve_free",
+  "access": "partner_gated",
   "api_type": "rest",
   "api_breadth": "unknown",
-  "docs_url": "https://dev-docs.fanbasis.com/",
+  "docs_url": "https://commasdocs.com/",
   "mcp": {
     "status": "none",
     "url": null
   },
-  "verdict": "yellow",
-  "score": 85,
-  "blocker": "undocumented",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.87,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "verdict": "red",
+  "score": 50,
+  "blocker": "partner_gate",
+  "model_verdict": "yellow",
+  "confidence": 0.76,
+  "agreement": 0.94,
+  "grounding_rate": 0.8,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs partner_gated)",
+    "formula verdict red, model said yellow"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "api_key"
+      ],
       "pass1": [
         "api_key"
       ]
     },
     "access": {
+      "pass2": "partner_gated",
       "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "unknown",
       "pass1": "unknown"
     },
     "mcp": {
+      "pass2": "none",
       "pass1": "none"
     }
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://dev-docs.fanbasis.com/",
+      "quote": "Sign in to access API Docs",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://commas.com/",
+      "quote": "Embedded checkouts, multi-rail payouts, APIs and SDKs. Everything you'd replace Stripe with, plus BNPL, recovery and lower effective rates.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://apidocs.fan/",
+      "quote": "Commas API Reference",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://fanbasis.com/api",
+      "quote": "301 Moved Permanently",
+      "grounded": "grounded"
+    },
+    {
+      "field": "one_liner",
+      "url": "https://www.fanbasis.com/",
+      "quote": "301 Moved Permanently",
+      "grounded": "not_grounded"
+    }
+  ],
   "composio": {
     "in_catalog": false,
     "slug": null,
@@ -65,7 +104,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Primary documentation at dev-docs.fanbasis.com requires login. API key auth confirmed via public NPM SDK. Free/paid access model not clearly documented in public sources. No mention of OAuth or other auth methods. Endpoint count unknown. MCP server status unknown.",
+  "notes": "FanBasis has rebranded to \"Commas\" — fanbasis.com and www.fanbasis.com both 301-redirect to commas.com. The company positions itself as a Stripe-alternative payments/checkout platform for creators, with \"APIs and SDKs\" mentioned in enterprise-facing marketing copy on commas.com. An API reference exists (commasdocs.com / apidocs.fan / fbnewapi.netlify.app all resolve to the same Mintlify-style doc site), but it is a JS-rendered SPA that could not be fully read via fetch (returned only \"Commas API Reference\" placeholder text), so specific auth-flow and endpoint-count details could not be verified with verbatim quotes. A separate docs subdomain, dev-docs.fanbasis.com (\"FanBasis API Docsv3\"), is password-gated behind a login screen (\"Sign in to access API Docs\"), indicating documentation/API access is not fully open to the public. Community references (npm @fanbasis/checkout-sdk, unverified secondary summaries) suggest API keys are created via an \"Account > API Keys\" dashboard section and SDKs exist for Node/Python/PHP/Ruby, but these were not confirmed against a primary source page within the search/fetch budget. Given the enterprise-sales framing (\"Everything you'd replace Stripe with\") and gated docs, classified as partner_gated/yellow with low-moderate confidence — a follow-up pass with a JS-rendering fetch (or manual browsing of commasdocs.com) is recommended to confirm auth method details and endpoint breadth.",
   "pass1": {
     "auth_methods": [
       "api_key"
@@ -76,6 +115,16 @@
     "verdict": "yellow",
     "blocker": "undocumented"
   },
-  "pass2": null,
-  "cost_usd": 0.124
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "partner_gate",
+    "confidence": 0.4
+  },
+  "cost_usd": 0.403
 }

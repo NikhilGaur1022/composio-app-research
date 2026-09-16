@@ -61,6 +61,7 @@
       "mcp_registry": "community",
       "composio_wraps_mcp": "official",
       "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "official"
     }
   },
@@ -130,6 +131,12 @@
       "url": "https://docs.composio.dev/toolkits/otter_ai_mcp",
       "quote": "Composio catalog: auth ['DCR_OAUTH'], 3 tools",
       "grounded": "registry"
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+      "quote": "MCP initialize POST -> HTTP 403 (text/html; charset=UTF-8); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {

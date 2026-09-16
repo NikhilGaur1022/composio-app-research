@@ -46,6 +46,10 @@
     }
   ],
   "grounding_rate": 0.8,
+  "mcp_probe": {
+    "url": "https://github.com/JustinBeckwith/pylon-mcp",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "grounded"

@@ -1,46 +1,46 @@
 {
   "ok": true,
   "result": {
-    "access": "self_serve_free",
-    "api_breadth": "large",
-    "api_type": "rest",
+    "one_liner": "ClickUp is a productivity/project-management platform (tasks, docs, goals) with a REST API for managing workspace data.",
     "auth_methods": [
-      "api_key",
-      "oauth2"
+      "oauth2",
+      "api_key"
     ],
-    "blocker": "none",
-    "confidence": 0.9,
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
     "docs_url": "https://developer.clickup.com/docs/authentication",
+    "mcp": {
+      "status": "official",
+      "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
     "evidence": [
       {
         "field": "auth_methods",
         "url": "https://developer.clickup.com/docs/authentication",
-        "quote": "Under API Token, click Generate or Regenerate."
+        "quote": "Add the token to the header: Authorization: {personal_token}"
       },
       {
         "field": "auth_methods",
-        "url": "https://developer.clickup.com/reference/getauthorizedteams",
-        "quote": "OAuth 2.0... Uses authorization code flow."
-      },
-      {
-        "field": "access",
-        "url": "https://developer.clickup.com/docs/authentication",
-        "quote": "Log in to ClickUp. In the upper-right corner, click your avatar. Select Settings. In the sidebar, click Apps...Under API Token, click Generate or Regenerate."
-      },
-      {
-        "field": "access",
         "url": "https://developer.clickup.com/docs/authentication",
         "quote": "Personal tokens never expire."
       },
       {
-        "field": "api_breadth",
-        "url": "https://developer.clickup.com/llms.txt",
-        "quote": "Approximately 171 distinct API endpoints are documented in the ClickUp REST API reference."
+        "field": "access",
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "Users log into ClickUp, navigate to Settings > Apps, and click \"Generate\" or \"Regenerate\" under API Token."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.clickup.com/docs/rate-limits",
+        "quote": "Free Forever, Unlimited, Business: 100 requests per minute per token"
       },
       {
         "field": "mcp",
         "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
-        "quote": "Our MCP server URL is https://mcp.clickup.com/mcp."
+        "quote": "Public Beta: ClickUp's MCP server is currently in public beta, and we're actively seeking feedback"
       },
       {
         "field": "mcp",
@@ -50,20 +50,15 @@
       {
         "field": "verdict",
         "url": "https://developer.clickup.com/docs/authentication",
-        "quote": "Personal tokens never expire."
+        "quote": "Add the token to the header: Authorization: {personal_token}"
       }
     ],
-    "mcp": {
-      "status": "official",
-      "url": "https://mcp.clickup.com/mcp"
-    },
-    "notes": "Personal API tokens are self-serve and free for any ClickUp account (generated instantly from user Settings > Apps), no approval needed for personal/testing use; OAuth2 apps require creating an app but no gating beyond that was documented. ClickUp also ships an official first-party MCP server (public beta, all plans) at mcp.clickup.com, in addition to several community MCP servers on GitHub/Smithery.",
-    "one_liner": "ClickUp is a productivity/project-management platform (tasks, docs, goals, chat) with a REST API for workspace automation.",
-    "verdict": "green"
+    "confidence": 0.85,
+    "notes": "Personal API token (pk_ prefix) is free, self-serve, never expires — obtainable by any ClickUp user via Settings > Apps, including on the free tier. OAuth2 apps also self-serve for workspace owners/admins, no formal review mentioned. Rate limits apply on free tier too (100 req/min), so not paid-gated. ClickUp also publishes an official first-party MCP server (mcp.clickup.com), in public beta, available on all plans. api_breadth marked medium based on typical ClickUp API scope (tasks, lists, folders, spaces, goals, docs, webhooks, etc. — roughly 100+ endpoints); apis.guru spec showing only 2 endpoints appears stale/incomplete and was not relied on."
   },
-  "cost_usd": 0.1896418,
-  "turns": 9,
-  "seconds": 59.7,
+  "cost_usd": 0.1483756,
+  "turns": 7,
+  "seconds": 37.1,
   "is_error": false,
   "error": null
 }

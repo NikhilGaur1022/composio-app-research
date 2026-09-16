@@ -1,9 +1,99 @@
 {
   "name": "Ahrefs",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.ahrefs.com/docs/api/reference/introduction",
+      "quote": "Authorization: Bearer YOUR_API_KEY",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.488
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.ahrefs.com",
+      "quote": "Implement OAuth 2.0 authorization",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3-for-enterprise-plan",
+      "quote": "Using API v3 from any of the above methods is possible for Lite and higher subscription plans",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.ahrefs.com/docs/api/reference/introduction",
+      "quote": "API v3 provides access to Site Explorer, Keywords Explorer, SERP Overview, Rank Tracker, Site Audit, Brand Radar, and management endpoints",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.778
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/ahrefs/ahrefs-mcp-server",
+      "quote": "Official Ahrefs MCP Server",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.ahrefs.com",
+      "quote": "Connect Ahrefs data to AI assistants and agents to enhance their answers with real marketing insights",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.782
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3-for-enterprise-plan",
+      "quote": "Using API v3 from any of the above methods is possible for Lite and higher subscription plans",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "one_liner",
+      "url": "https://docs.ahrefs.com",
+      "quote": "Connect Ahrefs data to AI assistants and agents to enhance their answers with real marketing insights",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.782
+    }
+  ],
+  "grounding_rate": 0.5,
+  "mcp_probe": {
+    "url": "https://github.com/ahrefs/ahrefs-mcp-server",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ],
+    "one_liner": [
+      "not_grounded"
+    ]
+  }
 }

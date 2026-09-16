@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "blocker": "none",
+    "confidence": 0.82,
+    "docs_url": "https://www.mongodb.com/docs/atlas/api/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+        "quote": "you must authenticate your API requests with one of the following authentication methods: - Service account access tokens (OAuth 2.0) - API keys (HTTP Digest Authentication)"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+        "quote": "Service accounts are the recommended method to manage authentication to the Atlas Administration API. Service accounts provide improved security over API keys by using the industry standard OAuth 2.0 protocol with the Client Credentials flow."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+        "quote": "API keys are a legacy method of authenticating to the Atlas Administration API that uses HTTP Digest Authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+        "quote": "You have an Atlas account. To create one, see Create an Atlas Account."
+      },
+      {
+        "field": "access",
+        "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+        "quote": "To create a service account or API keys for an organization, you must have Organization Owner access to that organization."
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+        "quote": "All Atlas Administration API endpoints have the following base URL: https://cloud.mongodb.com/api/atlas/<version>"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+        "quote": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.mongodb.com/docs/atlas/api/",
+        "quote": "add, edit, or delete administrative objects within Atlas, including projects, users, and clusters"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/mongodb-js/mongodb-mcp-server"
+    },
+    "notes": "Atlas Administration API v2 is a broad REST API (clusters, projects, orgs, backups, alerts, network access, federation, streams, etc. — several hundred endpoints, marked \\\"large\\\" from general knowledge of the OpenAPI spec since a live endpoint count could not be fetched in this pass). Free Atlas accounts (including M0 free tier) can create an organization and, with Organization Owner role, generate either OAuth2 service account credentials (recommended, current) or legacy API keys (HTTP Digest auth) — fully self-serve, no paid plan or approval gate for API access itself. mongodb-js/mongodb-mcp-server (1.1k★) is MongoDB's own official MCP server supporting both self-hosted MongoDB and Atlas.",
+    "one_liner": "MongoDB Atlas is a fully-managed cloud MongoDB database platform with a REST Administration API for provisioning and managing clusters, projects, backups, and org resources.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.23757659999999997,
+  "turns": 10,
+  "seconds": 124.6,
+  "is_error": false,
+  "error": null
+}

@@ -1,9 +1,88 @@
 {
   "name": "Jira",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "quote": "Generate an API token for Jira using your Atlassian Account",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "quote": "Forge apps and Connect apps use more secure methods for authentication: OAuth 2.0 and JWT respectively.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+      "quote": "OAuth 2.0 (3LO) apps are created and managed in the developer console.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+      "quote": "Users trying to install an unapproved OAuth 2.0 integration are warned that the app has not yet been reviewed by Atlassian.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/atlassian.com/jira/1001.0.0-SNAPSHOT/openapi.json",
+      "quote": "487 endpoints (apis.guru catalog entry for atlassian.com/jira)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.547
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/atlassian/atlassian-mcp-server",
+      "quote": "Official remote MCP server for Atlassian. Securely connect Jira, Confluence, Jira Service Management, Bitbucket, and Compass to Claude, ChatGPT, Cursor, VS Code, and other AI tools using OAuth 2.1 or ",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+      "quote": "The Jira Cloud platform REST API enables you to interact with Jira Cloud programmatically.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.543
+    }
+  ],
+  "grounding_rate": 0.71,
+  "mcp_probe": {
+    "url": "https://github.com/atlassian/atlassian-mcp-server",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

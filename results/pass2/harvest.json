@@ -2,14 +2,14 @@
   "ok": true,
   "result": {
     "access": "self_serve_free",
-    "api_breadth": "small",
+    "api_breadth": "medium",
     "api_type": "rest",
     "auth_methods": [
-      "oauth2",
-      "bearer_token"
+      "bearer_token",
+      "oauth2"
     ],
     "blocker": "none",
-    "confidence": 0.85,
+    "confidence": 0.82,
     "docs_url": "https://help.getharvest.com/api-v2/",
     "evidence": [
       {
@@ -20,45 +20,44 @@
       {
         "field": "auth_methods",
         "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
-        "quote": "register an OAuth2 Application, also known as an OAuth2 Client"
+        "quote": "Personal Access Tokens replace the Basic Authentication method that was used in our v1 API, as this is more secure."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "because it's more secure and the access token is never visible by a browser"
       },
       {
         "field": "access",
         "url": "https://www.getharvest.com/pricing",
-        "quote": "1 seat, 2 projects, Time tracking, Invoicing, Expense tracking, Mac & iOS apps ... $0 forever"
+        "quote": "$0forever"
       },
       {
         "field": "access",
-        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
-        "quote": "After creating it you'll be provided with a random token and a list of your account IDs."
+        "url": "https://www.getharvest.com/pricing",
+        "quote": "Built for individual freelancers"
       },
       {
-        "field": "mcp",
-        "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
-        "quote": "The Harvest MCP is the connection that gives an MCP-compatible assistant — such as Claude — controlled access to your Harvest account"
+        "field": "access",
+        "url": "https://www.getharvest.com/pricing",
+        "quote": "No credit card required"
       },
       {
-        "field": "mcp",
-        "url": "https://api.harvestapp.com/mcp",
-        "quote": "405 Method Not Allowed"
-      },
-      {
-        "field": "verdict",
+        "field": "api_breadth",
         "url": "https://help.getharvest.com/api-v2/",
-        "quote": "the current API V2 documentation"
+        "quote": "Clients API, Company Settings, Invoices API, Estimates API, Expenses API, Tasks API, Timesheets API, Projects API, Roles API, Users API, Reports API, Paid Time Off API"
       }
     ],
     "mcp": {
-      "status": "official",
-      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP"
+      "status": "community"
     },
-    "notes": "Harvest API v2 uses Bearer-token auth for both Personal Access Tokens (self-serve, created in the Harvest ID Developers portal, no plan restriction) and OAuth2 apps (self-registered, for multi-account integrations). Harvest has a permanently free plan (1 seat/2 projects) so a developer can get API credentials without paying. Harvest also ships an official remote MCP server (api.harvestapp.com/mcp) documented in its help center, distinct from several community MCP implementations on GitHub. API surface is moderate: ~14 resource groups (Clients, Invoices, Estimates, Expenses, Tasks, Timesheets, Projects, Roles, Users, Reports, PTO) with standard CRUD, estimated 40-50 endpoints total.",
-    "one_liner": "Harvest is a time tracking, invoicing, and project-budgeting tool for teams and freelancers.",
+    "notes": "Free \"$0 forever\" 1-seat plan lets any developer sign up and mint a Personal Access Token (bearer token) from Harvest ID's Developers section without sales contact; OAuth2 (Authorization Code + Implicit) is documented for multi-user apps. Basic auth was used in v1 but has been replaced by PATs in v2, so it is not listed as a current method. api_breadth is an estimate (medium) based on ~13 documented resource categories (Clients, Invoices, Estimates, Expenses, Tasks, Timesheets, Projects, Roles, Users, Reports, PTO) since no exact endpoint count was published. No official vendor MCP server found; several community MCP servers exist on GitHub (e.g. ianaleck/harvest-mcp-server, taiste/harvest-mcp-server) per registry leads, not independently verified by fetch.",
+    "one_liner": "Harvest is a time-tracking, invoicing, and expense-management app for freelancers and teams with a REST API v2.",
     "verdict": "green"
   },
-  "cost_usd": 0.28441260000000007,
-  "turns": 13,
-  "seconds": 87.7,
+  "cost_usd": 0.1360202,
+  "turns": 7,
+  "seconds": 51.8,
   "is_error": false,
   "error": null
 }

@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction",
+        "quote": "Authorization: Bearer fc-123456789"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.firecrawl.dev/mcp-server",
+        "quote": "https://mcp.firecrawl.dev/v2/mcp-oauth"
+      },
+      {
+        "field": "access",
+        "url": "https://www.firecrawl.dev/pricing",
+        "quote": "1,000 credits / month"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.firecrawl.dev/mcp-server",
+        "quote": "This is a server URL for your MCP client, not a page to open directly in a browser."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction",
+        "quote": "Authorization: Bearer fc-123456789"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.firecrawl.dev/v2/mcp"
+    },
+    "notes": "Free tier is self-serve, no credit card required (1,000 monthly credits). Core REST API uses API key via Bearer token; the official hosted MCP server additionally supports OAuth sign-in as an alternative to API key. API surface is small (scrape, crawl, map, search, extract, batch-scrape and related status/webhook endpoints).",
+    "one_liner": "Firecrawl is a web scraping/crawling API that converts websites into clean, LLM-ready markdown/structured data.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1097108,
+  "turns": 7,
+  "seconds": 32.0,
+  "is_error": false,
+  "error": null
+}

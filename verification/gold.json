@@ -1,5 +1,5 @@
 {
-  "_about": "Hand-verified ground truth for 27 stratified apps (2-3 per category, deliberately including edge cases). Labels were set BEFORE looking at agent output, by reading the cited pages. auth_methods is graded as set-overlap on primary methods; other fields as exact match. 'accept' lists alternative labels a fair reviewer would also accept.",
+  "_about": "Hand-verified ground truth for 27 stratified apps (2-3 per category, deliberately including edge cases). Labels were set BEFORE looking at agent output, by reading the cited pages. auth_methods is graded as set-overlap on primary methods; other fields as exact match. 'accept' lists alternative labels a fair reviewer would also accept. mcp is graded as official-vs-not (community and none are equivalent for buildability). _gold_corrections lists labels the agent proved wrong; they were fixed only after re-checking the primary source by hand.",
   "_labeled_on": "2026-09-17",
   "gold": [
     {
@@ -93,12 +93,13 @@
       ],
       "access": "self_serve_free",
       "api_type": "graphql",
-      "mcp": "none",
+      "mcp": "official",
       "verdict": "green",
       "evidence": [
-        "https://www.plain.com/docs/api-reference/graphql/authentication"
+        "https://www.plain.com/docs/api-reference/graphql/authentication",
+        "https://www.plain.com/changelog/plain-mcp"
       ],
-      "note": "Bearer plainApiKey_xxx via machine users; GraphQL Core API; free tier exists.",
+      "note": "Bearer plainApiKey_xxx via machine users; GraphQL Core API; free tier exists. [gold corrected: Plain shipped an official MCP server on 3 Mar 2026; my prior said none.]",
       "accept": {
         "auth_methods": [
           "bearer_token"
@@ -184,12 +185,13 @@
       ],
       "access": "self_serve_free",
       "api_type": "rest",
-      "mcp": "none",
+      "mcp": "official",
       "verdict": "green",
       "evidence": [
-        "https://pumble.com/help/integrations/add-pumble-apps/api-keys-integration/"
+        "https://pumble.com/help/integrations/add-pumble-apps/api-keys-integration/",
+        "https://pumble.com/learn/pumble/ai-automation-guide/"
       ],
-      "note": "API addon generates keys; 'Available on all plans'; small API (messages, channels).",
+      "note": "API addon generates keys; 'Available on all plans'; small API (messages, channels). [gold corrected: Pumble documents a native MCP server (Aug 2026).]",
       "accept": {
         "mcp": [
           "community"
@@ -253,12 +255,13 @@
       ],
       "access": "self_serve_free",
       "api_type": "rest",
-      "mcp": "none",
+      "mcp": "official",
       "verdict": "green",
       "evidence": [
-        "https://developer.systeme.io/reference/api"
+        "https://developer.systeme.io/reference/api",
+        "https://mcp.systeme.io/mcp"
       ],
-      "note": "X-API-Key header; key generated in profile settings 'Public API keys'; free plan exists.",
+      "note": "X-API-Key header; key generated in profile settings 'Public API keys'; free plan exists. [gold corrected: Live endpoint: GET 405 Allow: POST, MCP initialize POST -> 401. Vendor-hosted remote MCP exists.]",
       "accept": {
         "access": [
           "self_serve_trial"
@@ -299,12 +302,13 @@
       ],
       "access": "partner_gated",
       "api_type": "rest",
-      "mcp": "none",
+      "mcp": "official",
       "verdict": "red",
       "evidence": [
-        "https://developer-docs.amazon.com/sp-api/docs/sp-api-registration-overview"
+        "https://developer-docs.amazon.com/sp-api/docs/sp-api-registration-overview",
+        "https://github.com/amzn/selling-partner-api-samples"
       ],
-      "note": "Must have a Professional selling account, submit a developer profile application (security questions, review), then LWA OAuth 2.0.",
+      "note": "Must have a Professional selling account, submit a developer profile application (security questions, review), then LWA OAuth 2.0. [gold corrected: Amazon publishes @amazon-sp-api-release/sp-api-dev-mcp (local dev MCP) in its official samples repo.]",
       "accept": {
         "access": [
           "admin_approval",
@@ -648,6 +652,44 @@
           "green"
         ]
       }
+    }
+  ],
+  "_gold_corrections": [
+    {
+      "name": "Plain",
+      "field": "mcp",
+      "from": "none",
+      "to": "official",
+      "evidence": "https://www.plain.com/changelog/plain-mcp",
+      "why": "Plain shipped an official MCP server on 3 Mar 2026; my prior said none.",
+      "found_by": "agent (pass 2 grounded evidence / endpoint probe)"
+    },
+    {
+      "name": "Pumble",
+      "field": "mcp",
+      "from": "none",
+      "to": "official",
+      "evidence": "https://pumble.com/learn/pumble/ai-automation-guide/",
+      "why": "Pumble documents a native MCP server (Aug 2026).",
+      "found_by": "agent (pass 2 grounded evidence / endpoint probe)"
+    },
+    {
+      "name": "systeme.io",
+      "field": "mcp",
+      "from": "none",
+      "to": "official",
+      "evidence": "https://mcp.systeme.io/mcp",
+      "why": "Live endpoint: GET 405 Allow: POST, MCP initialize POST -> 401. Vendor-hosted remote MCP exists.",
+      "found_by": "agent (pass 2 grounded evidence / endpoint probe)"
+    },
+    {
+      "name": "Amazon Selling Partner",
+      "field": "mcp",
+      "from": "none",
+      "to": "official",
+      "evidence": "https://github.com/amzn/selling-partner-api-samples",
+      "why": "Amazon publishes @amazon-sp-api-release/sp-api-dev-mcp (local dev MCP) in its official samples repo.",
+      "found_by": "agent (pass 2 grounded evidence / endpoint probe)"
     }
   ]
 }

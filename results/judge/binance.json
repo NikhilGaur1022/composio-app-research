@@ -63,6 +63,10 @@
     }
   ],
   "grounding_rate": 0.0,
+  "mcp_probe": {
+    "url": "https://github.com/AnalyticAce/binance-mcp-server",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "unreachable",

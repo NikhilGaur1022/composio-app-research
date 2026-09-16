@@ -3,31 +3,30 @@
   "name": "LinkedIn Ads",
   "category": "Marketing, Ads, Email and Social",
   "hint": "learn.microsoft.com/linkedin/marketing",
-  "one_liner": "LinkedIn's API for programmatic management and optimization of advertising campaigns and accounts.",
+  "one_liner": "LinkedIn Marketing Developer Platform (LinkedIn Ads) lets developers manage ad campaigns, creatives, targeting, conversions and reporting via LinkedIn's versioned REST API, gated by app review and 3-legged OAuth2 member authorization.",
   "auth_methods": [
     "oauth2"
   ],
-  "access": "partner_gated",
+  "access": "admin_approval",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview",
+  "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start",
   "mcp": {
     "status": "none",
     "url": null
   },
-  "verdict": "red",
-  "score": 53,
-  "blocker": "partner_gate",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries",
-    "gated/no-API finding with weak grounding needs a human eye"
+  "verdict": "yellow",
+  "score": 70,
+  "blocker": "app_review",
+  "model_verdict": "yellow",
+  "confidence": 0.9,
+  "agreement": 0.93,
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (partner_gated vs admin_approval)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
@@ -36,27 +35,82 @@
       "unauth_probe": [
         "oauth2"
       ],
+      "pass2": [
+        "oauth2"
+      ],
       "pass1": [
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "admin_approval",
       "pass1": "partner_gated"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "apis_guru_spec": "small",
       "composio_tools": "small",
+      "pass2": "large",
       "pass1": "medium"
     },
     "mcp": {
+      "pass2": "none",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+      "quote": "The LinkedIn API uses OAuth 2.0 for member (user) authorization and API authentication.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+      "quote": "Not all APIs support Application Authorization. For example, Marketing APIs you must use Member Authorization explained above.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.linkedin.com/rest/adAccounts",
+      "quote": "{\"status\":401,\"serviceErrorCode\":65604,\"code\":\"EMPTY_ACCESS_TOKEN\",\"message\":\"Empty oauth2 access token\"}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start",
+      "quote": "Apply to the desired API under the Products tab of your app.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start",
+      "quote": "After you build and test your application, apply for Standard tier access. To upgrade to Advertising API Standard tier, submit a tier upgrade request with a video demonstrating how your platform creates, edits, or optimizes LinkedIn campaigns.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started",
+      "quote": "Once your application has been accepted into the Development Tier, you can manage and view your Ad Accounts from the developer portal. Add up to 5 accounts to manage in the Development Tier.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/versioning",
+      "quote": "LinkedIn’s Marketing APIs first versioned API release was June 2022 under a new base path: `https://api.linkedin.com/rest/`",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start",
+      "quote": "Review our API and data restrictions to ensure your use case is supported and your application is not rejected due to a restricted use case.",
+      "grounded": "grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/linkedin_ads",
@@ -95,7 +149,7 @@
     "www_authenticate": null,
     "inferred": "oauth2"
   },
-  "notes": "LinkedIn Ads API is strictly partner-gated and requires both admin approval and a paid partnership agreement. Free tier access is limited to basic profile endpoints only. No official MCP server available. API rate limit is 100 requests/minute. Estimated cost starts at $699+/month for approved partners.",
+  "notes": "Marketing APIs use 3-legged OAuth2 only (no 2-legged/client-credentials, no API keys). Getting any access requires creating a LinkedIn Page + dev app, then applying under the Products tab and completing an access form to be accepted into a 'Development Tier' (limited to 5 ad accounts, for build/testing only). Production-scale use requires a further 'Standard tier' application with a video demo of the app, a manual app-review gate — hence yellow/app_review rather than green. api_breadth marked 'large' based on the breadth of API families (Advertising, Community Management, Lead Sync, Conversions, Events Management, Matched Audiences) each with many resources, though no single authoritative endpoint count was found (the precomputed apis.guru spec was for an unrelated product, learnifier.com, and was ignored). MCP registry lookup returned no official or community server.",
   "pass1": {
     "auth_methods": [
       "oauth2"
@@ -106,6 +160,16 @@
     "verdict": "red",
     "blocker": "partner_gate"
   },
-  "pass2": null,
-  "cost_usd": 0.13
+  "pass2": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.379
 }

@@ -3,28 +3,30 @@
   "name": "Coda",
   "category": "Productivity and Project Management",
   "hint": "coda.io/developers",
-  "one_liner": "Coda is a collaborative document platform combining docs, spreadsheets, and workflow automation.",
+  "one_liner": "Coda (rebranded \"Superhuman Docs\" after 2025 Grammarly/Superhuman deal) is a docs/spreadsheet hybrid workspace with a free REST API and an official MCP server for AI agent integration.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "bearer_token",
+    "oauth2"
   ],
   "access": "self_serve_free",
   "api_type": "rest",
   "api_breadth": "medium",
-  "docs_url": "https://coda.io/developers/apis/v1",
+  "docs_url": "https://docs.superhuman.com/developers/apis/v1",
   "mcp": {
-    "status": "community",
-    "url": "https://github.com/bartolli/codanna"
+    "status": "official",
+    "url": "https://docs.superhuman.com/apis/mcp"
   },
   "verdict": "green",
-  "score": 95,
+  "score": 97,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.78,
-  "grounding_rate": null,
+  "model_verdict": "green",
+  "confidence": 0.55,
+  "agreement": 0.93,
+  "grounding_rate": 0.0,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+    "only 0% of quotes grounded in cited pages"
   ],
   "auto_notes": [],
   "sources": {
@@ -35,30 +37,81 @@
       "apis_guru_spec": [
         "api_key"
       ],
+      "pass2": [
+        "bearer_token",
+        "oauth2"
+      ],
       "pass1": [
         "bearer_token",
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "apis_guru_spec": "medium",
       "composio_tools": "medium",
+      "pass2": "small",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "'Authorization': 'Bearer <your API token>'",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.superhuman.com/developers",
+      "quote": "Bearer token authentication via API tokens.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.superhuman.com/developers",
+      "quote": "RESTful API (v1) with a base endpoint at https://coda.io/apis/v1",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.superhuman.com/developers",
+      "quote": "developers may also want to consider using the Superhuman Docs MCP server",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.superhuman.com/apis/mcp",
+      "quote": "HTTP 401 Unauthorized (live vendor-hosted MCP endpoint requiring auth, at docs.superhuman.com)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "all API scripts should check for HTTP 429 Too Many Requests errors and back off and retry the request",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/coda",
@@ -75,6 +128,12 @@
       "field": "auth_methods",
       "url": "https://coda.io/apis/v1/docs",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"statusCode\":401,\"statusMessage\":\"Unauthorized\",\"message\":\"Unauthorized\"}",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.superhuman.com/apis/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
       "grounded": "probe"
     }
   ],
@@ -97,7 +156,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Coda API is self-serve with free tier access. Bearer tokens are the primary auth method for direct API access, while OAuth2 is available for Pack SDK developers. Both REST and GraphQL APIs are documented and available without approval gates.",
+  "notes": "Coda rebranded to \"Superhuman Docs\" in 2026 following the Grammarly/Superhuman merger; official docs now live at docs.superhuman.com (coda.io/developers 307-redirects there). API base endpoint remains https://coda.io/apis/v1. Auth is a personal API token sent as an HTTP Bearer token (functionally an API key); OAuth2+PKCE is documented for the MCP server per vendor help-center/blog pages (help.superhuman.com, blog.superhuman.com) referenced via search but not directly fetchable in this pass (403/401). api_breadth estimated \"small\" from long-standing knowledge of the Coda API's ~40-50 operations (Docs/Pages/Tables/Rows/Formulas/Controls/Permissions/Analytics); the pre-computed apis.guru spec pointed to an unrelated codat.io accounting API and was disregarded as a lookup mismatch.",
   "pass1": {
     "auth_methods": [
       "bearer_token",
@@ -109,6 +168,17 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.109
+  "pass2": {
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.39899999999999997
 }

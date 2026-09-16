@@ -1,9 +1,83 @@
 {
   "name": "Asana",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.asana.com/docs/authentication",
+      "quote": "PATs are generated in the developer console.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.asana.com/docs/quick-start",
+      "quote": "authorization: Bearer ACCESS_TOKEN",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.asana.com/docs/personal-access-token",
+      "quote": "You can generate a personal access token from the Asana developer console.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.asana.com/docs/quick-start",
+      "quote": "The Asana API is a RESTful interface with predictable resource-oriented URLs, accepts JSON or form-encoded requests, returns JSON, and uses standard HTTP features.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/asana.com/1.0/openapi.json",
+      "quote": "167 endpoints (OpenAPI spec, apis.guru mirror)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.491
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.asana.com/docs/mcp-server",
+      "quote": "Official Asana MCP server (V2) at https://mcp.asana.com/v2/mcp, requiring OAuth 2.0 authentication with a registered client ID and client secret",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.458
+    }
+  ],
+  "grounding_rate": 0.67,
+  "mcp_probe": {
+    "url": "https://mcp.asana.com/v2/mcp",
+    "status": 401,
+    "content_type": "application/json",
+    "www_authenticate": "Bearer realm=\"Asana MCP\", resource_metadata=\"https://mcp.asana.com/.well-known/oauth-protected-resource/v2\", error=\"invalid_request\", error_description=\"Authorization header is required for MCP V2 access\"",
+    "alive": true,
+    "body": "{\"error\":\"invalid_request\",\"error_description\":\"Authorization header is required for MCP V2 access\"}"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
 }

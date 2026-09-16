@@ -1,9 +1,94 @@
 {
   "name": "MrScraper",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "access",
+      "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+      "quote": "The Free plan includes 100 tokens per month with no credit card required.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.mrscraper.com/docs/getting-started/quickstart",
+      "quote": "Create a MrScraper account and obtain your API key from the Playground before following this guide.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "quote": "API keys remain supported for clients without OAuth and carry full account authority",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "quote": "MrScraper MCP is the official Model Context Protocol server for MrScraper.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+      "quote": "MrScraper is a web scraping platform offering both AI-powered and manual scraping capabilities",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.467
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/mrscraper",
+      "quote": "tools: 11",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+      "quote": "The Free plan includes 100 tokens per month with no credit card required.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.71,
+  "mcp_probe": {
+    "url": "https://mcp.mrscraper.com/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer error=\"invalid_token\", error_description=\"Missing Authorization header\", resource_metadata=\"https://mcp.mrscraper.com/.well-known/oauth-protected-resource/mcp\"",
+    "alive": true,
+    "body": "{\"error\":\"invalid_token\",\"error_description\":\"Missing Authorization header\"}"
+  },
+  "by_field": {
+    "access": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

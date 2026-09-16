@@ -70,6 +70,14 @@
     }
   ],
   "grounding_rate": 0.88,
+  "mcp_probe": {
+    "url": "https://mcp.close.com/mcp",
+    "status": 401,
+    "content_type": "application/json",
+    "www_authenticate": "Bearer error=\"invalid_token\", error_description=\"Authentication required\", resource_metadata=\"https://mcp.close.com/.well-known/oauth-protected-resource\"",
+    "alive": true,
+    "body": "{\"error\": \"invalid_token\", \"error_description\": \"Authentication required\"}"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

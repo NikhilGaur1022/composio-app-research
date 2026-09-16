@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "basic"
+    ],
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://docs.brightdata.com/api-reference/authentication",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "An API key is a secure hashed token used to authenticate with Bright Data API."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "Authorization: Bearer <token>"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "brd-customer-[ACCOUNT_ID]-zone-[PROXY_NAME]:[PROXY_PASSWORD]"
+      },
+      {
+        "field": "access",
+        "url": "https://brightdata.com/",
+        "quote": "Get started for free"
+      },
+      {
+        "field": "access",
+        "url": "https://brightdata.com/",
+        "quote": "No credit card required"
+      },
+      {
+        "field": "access",
+        "url": "https://brightdata.com/pricing",
+        "quote": "Free tier pricing available"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "Web Unlocker API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.brightdata.com/mcp-server/overview",
+        "quote": "The Bright Data MCP server gives AI agents and assistants real-time access to public web data through the Model Context Protocol (MCP)."
+      },
+      {
+        "field": "verdict",
+        "url": "https://brightdata.com/",
+        "quote": "Get started for free"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.brightdata.com/mcp-server/overview"
+    },
+    "notes": "Proxy \"native access\" credentials (customer:zone:password over proxy protocol) function like HTTP basic auth alongside the primary bearer-token API key scheme. Composio catalog and unauth probe (401 on invalid creds) corroborate api_key/bearer auth. Free self-serve signup confirmed on marketing site; exact free-tier request/data limits not itemized on pages fetched. API breadth not fully enumerated (llms.txt index not fetched due to budget) but spans Web Unlocker, SERP, Scraping Browser, Scraper/Dataset APIs, and zone/proxy management — estimated medium.",
+    "one_liner": "Bright Data is a web-data platform providing proxy networks, a Web Unlocker, SERP API, scraping browser, and dataset/scraper APIs for programmatic web scraping.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1353492,
+  "turns": 8,
+  "seconds": 39.6,
+  "is_error": false,
+  "error": null
+}

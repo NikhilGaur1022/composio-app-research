@@ -3,7 +3,7 @@
   "name": "ClickUp",
   "category": "Productivity and Project Management",
   "hint": "clickup.com/api",
-  "one_liner": "Task management and team collaboration platform with REST API for automation and integrations.",
+  "one_liner": "ClickUp is a productivity/project-management platform (tasks, docs, goals) with a REST API for managing workspace data.",
   "auth_methods": [
     "api_key",
     "oauth2"
@@ -11,26 +11,28 @@
   "access": "self_serve_free",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://developer.clickup.com/docs",
+  "docs_url": "https://developer.clickup.com/docs/authentication",
   "mcp": {
     "status": "community",
-    "url": "https://github.com/taazkareem/clickup-mcp-server"
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
   },
   "verdict": "green",
   "score": 91,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.86,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.71,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass2": [
         "api_key",
         "oauth2"
       ],
@@ -40,24 +42,70 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "apis_guru_spec": "small",
       "composio_tools": "large",
+      "pass2": "medium",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
+      "pass2": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "quote": "Add the token to the header: Authorization: {personal_token}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "quote": "Personal tokens never expire.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.clickup.com/docs/rate-limits",
+      "quote": "Free Forever, Unlimited, Business: 100 requests per minute per token",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+      "quote": "Public Beta: ClickUp's MCP server is currently in public beta, and we're actively seeking feedback",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "quote": "Add the token to the header: Authorization: {personal_token}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "quote": "Users log into ClickUp, navigate to Settings > Apps, and click \"Generate\" or \"Regenerate\" under API Token.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+      "quote": "ClickUp's MCP Server is available on all plans.",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/clickup",
@@ -91,7 +139,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "ClickUp offers free tier access with self-serve personal API token generation from account settings. OAuth available for app integrations with workspace admin approval. REST API with endpoints organized by feature (Tasks, Lists, Spaces, Goals, etc.). Postman collection and OpenAPI spec available at developer.clickup.com.",
+  "notes": "Personal API token (pk_ prefix) is free, self-serve, never expires — obtainable by any ClickUp user via Settings > Apps, including on the free tier. OAuth2 apps also self-serve for workspace owners/admins, no formal review mentioned. Rate limits apply on free tier too (100 req/min), so not paid-gated. ClickUp also publishes an official first-party MCP server (mcp.clickup.com), in public beta, available on all plans. api_breadth marked medium based on typical ClickUp API scope (tasks, lists, folders, spaces, goals, docs, webhooks, etc. — roughly 100+ endpoints); apis.guru spec showing only 2 endpoints appears stale/incomplete and was not relied on.",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -103,6 +151,17 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.113
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.261
 }

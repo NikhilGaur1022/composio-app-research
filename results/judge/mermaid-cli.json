@@ -38,6 +38,10 @@
     }
   ],
   "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://github.com/andrewginns/mermaid-mcp-server",
+    "skipped": true
+  },
   "by_field": {
     "api_type": [
       "grounded",

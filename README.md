@@ -43,7 +43,7 @@ Every stage writes `results/<stage>/<app>.json`; existing outputs are skipped un
 
 ### Runnable trigger
 
-`.github/workflows/research-one.yml` is a `workflow_dispatch` action: enter an app name, it runs the whole pipeline for that app and commits the JSON. Needs `ANTHROPIC_API_KEY` as a repo secret.
+`ci/research-one.workflow.yml` is a `workflow_dispatch` GitHub Action: enter an app name, it runs the whole pipeline for that app, rebuilds the page and commits. Copy it to `.github/workflows/` and add `ANTHROPIC_API_KEY` as a repo secret to enable it (it lives in `ci/` because the token used to push this repo lacked the `workflow` scope). Locally the equivalent trigger is `python -m agent.run all --app "<name>" --force`.
 
 ## Where a human was needed
 

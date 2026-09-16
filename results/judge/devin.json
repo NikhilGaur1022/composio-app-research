@@ -70,6 +70,14 @@
     }
   ],
   "grounding_rate": 0.75,
+  "mcp_probe": {
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "status": 405,
+    "content_type": "application/json",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "{\"error\": {\"code\": \"405\", \"message\": \"Method not allowed\"}}"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

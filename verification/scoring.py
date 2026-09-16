@@ -48,6 +48,8 @@ def _correct(field, pred, gold_row):
         if gold == ["none"]:
             return p == {"none"} or not p
         return bool(p & g) and p != {"none"}
+    if field == "mcp":
+        return (pred == "official") == (gold == "official") or pred in accept
     return pred == gold or pred in accept
 
 
@@ -61,6 +63,11 @@ def apply_human(merged, changes):
             out["mcp"]["status"] = ch["to"]
         else:
             out[ch["field"]] = ch["to"]
+    # verdict is derived, so recompute it after corrections (same rule as the page)
+    import sys
+    sys.path.insert(0, str(ROOT))
+    from agent.merge import buildability
+    out["score"], out["verdict"] = buildability(out["access"], out["api_type"], out["api_breadth"], out["auth_methods"], out["mcp"]["status"], out["blocker"])
     return out
 
 

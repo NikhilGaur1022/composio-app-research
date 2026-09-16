@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "GitHub's REST and GraphQL APIs let developers manage repos, issues, PRs, actions, and more programmatically across the GitHub platform.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://docs.github.com/rest",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/github/github-mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "GitHub recommends that you use a fine-grained personal access token instead of a personal access token (classic)."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "Some REST API endpoints for GitHub Apps and OAuth apps require you to use basic authentication to access the endpoint."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "replace YOUR-TOKEN with a reference to your token using \"Authorization: Bearer YOUR-TOKEN\""
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "Authentication with username and password is not supported. If you try to authenticate with user name and password, you will receive a 4xx error."
+      },
+      {
+        "field": "access",
+        "url": "https://api.github.com/user",
+        "quote": "{\"message\": \"Requires authentication\",\"documentation_url\": \"https://docs.github.com/rest\",\"status\": \"401\"}"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.github.com/en/rest",
+        "quote": "signals: oauth true, graphql true, rest true"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+        "quote": "endpoints: 845"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/github/github-mcp-server",
+        "quote": "The GitHub MCP Server connects AI tools directly to GitHub's platform."
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Basic auth is only used for a narrow subset of GitHub App/OAuth App endpoints (client ID/secret), not general API access; primary methods are PAT (api_key) and OAuth2/GitHub Apps, with Bearer token header format for all authenticated requests. Free GitHub account suffices to create PATs and register OAuth/GitHub Apps — no paid tier required for API access itself (rate limits differ by plan but base access is free). Official GitHub MCP server exists and is actively maintained by GitHub."
+  },
+  "cost_usd": 0.1519386,
+  "turns": 6,
+  "seconds": 35.7,
+  "is_error": false,
+  "error": null
+}

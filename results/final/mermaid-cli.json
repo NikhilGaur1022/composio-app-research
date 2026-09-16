@@ -19,12 +19,13 @@
   "score": 30,
   "blocker": "cli_not_api",
   "model_verdict": "yellow",
-  "confidence": 0.92,
-  "agreement": 0.89,
+  "confidence": 0.89,
+  "agreement": 0.82,
   "grounding_rate": 1.0,
   "needs_human": false,
   "needs_human_reasons": [],
   "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs no_public_api)",
     "formula verdict red, model said yellow"
   ],
   "sources": {
@@ -34,23 +35,30 @@
       ],
       "pass2": [
         "none"
+      ],
+      "pass1": [
+        "none"
       ]
     },
     "access": {
-      "pass2": "no_public_api"
+      "pass2": "no_public_api",
+      "pass1": "self_serve_free"
     },
     "api_type": {
       "pass2": "cli_only",
-      "apis_guru_spec": "rest"
+      "apis_guru_spec": "rest",
+      "pass1": "cli_only"
     },
     "api_breadth": {
       "apis_guru_spec": "large",
       "composio_tools": "small",
-      "pass2": "unknown"
+      "pass2": "unknown",
+      "pass1": "unknown"
     },
     "mcp": {
       "composio_wraps_mcp": "official",
-      "pass2": "community"
+      "pass2": "community",
+      "pass1": "community"
     }
   },
   "evidence": [
@@ -111,7 +119,16 @@
     "inferred": null
   },
   "notes": "Mermaid CLI (mmdc) is an open-source command-line tool (npm package / Docker image) that renders Mermaid diagram definitions to SVG/PNG/PDF locally. There is no hosted vendor API or auth of any kind — it runs entirely offline as a local process. No official MCP server exists for mermaid-cli itself; several community-built MCP wrappers (Python and JS) exist that shell out to mmdc, but none are vendor-published by mermaid-js. Note: this is distinct from the commercial 'Mermaid Chart' SaaS product (mermaidchart.com), which does have its own official hosted MCP server — that is a different product from this open-source CLI and was not evaluated here. Buildability verdict is for mermaid-cli as a local agent skill/tool invocation, not a hosted API integration.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "none"
+    ],
+    "access": "self_serve_free",
+    "api_type": "cli_only",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "cli_not_api"
+  },
   "pass2": {
     "auth_methods": [
       "none"
@@ -123,5 +140,5 @@
     "blocker": "cli_not_api",
     "confidence": 0.85
   },
-  "cost_usd": 0.13
+  "cost_usd": 0.258
 }

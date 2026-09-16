@@ -62,6 +62,14 @@
     }
   ],
   "grounding_rate": 0.57,
+  "mcp_probe": {
+    "url": "https://docs.reducto.ai/mcp-server",
+    "status": 405,
+    "content_type": "application/json",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "{\"error\": {\"code\": \"405\", \"message\": \"Method not allowed\"}}"
+  },
   "by_field": {
     "access": [
       "grounded",

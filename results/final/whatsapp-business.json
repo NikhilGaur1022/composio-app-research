@@ -21,9 +21,9 @@
   "score": 95,
   "blocker": "app_review",
   "model_verdict": "yellow",
-  "confidence": 0.69,
-  "agreement": 0.91,
-  "grounding_rate": null,
+  "confidence": 0.71,
+  "agreement": 0.89,
+  "grounding_rate": 0.5,
   "needs_human": false,
   "needs_human_reasons": [],
   "auto_notes": [
@@ -66,37 +66,37 @@
       "field": "auth_methods",
       "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
       "quote": "The temporary access token you created to send the hello_world template message expires quickly and is not suitable for development purposes.",
-      "grounded": "unchecked"
-    },
-    {
-      "field": "access",
-      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
-      "quote": "Generate access token to send a test message",
-      "grounded": "unchecked"
-    },
-    {
-      "field": "access",
-      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
-      "quote": "developers.facebook.com/documentation/business-messaging/whatsapp/overview",
-      "grounded": "unchecked"
+      "grounded": "grounded"
     },
     {
       "field": "api_type",
       "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/reference",
       "quote": "Meta for Developers",
-      "grounded": "unchecked"
-    },
-    {
-      "field": "mcp",
-      "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
-      "quote": "tkhattar14/whatsapp-business-mcp (3★)",
-      "grounded": "unchecked"
+      "grounded": "grounded"
     },
     {
       "field": "verdict",
       "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
       "quote": "A list of publishing requirements are listed",
-      "grounded": "unchecked"
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "quote": "Generate access token to send a test message",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+      "quote": "developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+      "quote": "tkhattar14/whatsapp-business-mcp (3★)",
+      "grounded": "not_grounded"
     },
     {
       "field": "auth_methods",

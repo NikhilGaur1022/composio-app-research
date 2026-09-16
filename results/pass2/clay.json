@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "result": {
+    "access": "paid_plan",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key"
+    ],
+    "blocker": "enterprise_only",
+    "confidence": 0.6,
+    "docs_url": "https://developers.clay.com/public-api/authentication.md",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.clay.com/public-api/authentication.md",
+        "quote": "The required header is clay-api-key with your personal API key value."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.clay.com/public-api/authentication.md",
+        "quote": "Create one under Settings → Account → API keys (beta)."
+      },
+      {
+        "field": "access",
+        "url": "https://www.clay.com/pricing",
+        "quote": "Clay API access"
+      },
+      {
+        "field": "access",
+        "url": "https://www.clay.com/pricing",
+        "quote": "Customers are still welcome to use their own API keys for data enrichment or AI in Clay. Each run will count as one Action, but no Data Credit will be used."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "POST /search/query-mode, GET /search/query-mode/reference"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.clay.com/llms.txt",
+        "quote": "Search Operations, Routine Execution, Batch Processing, Table Queries, Workspace Management, Workflow Runs"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.clay.com/guides/clay-mcp",
+        "quote": "The Clay remote MCP server is a hosted Model Context Protocol endpoint at https://api.clay.com/v3/mcp"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.clay.com/pricing",
+        "quote": "Clay API access"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://api.clay.com/v3/mcp"
+    },
+    "notes": "Clay launched a new Public API (api.clay.com/public/v0, July 2026) authenticated with a single 'clay-api-key' header; key creation is self-serve under Settings→Account→API keys (beta) with no explicit plan gate stated in the auth docs. However, Clay's own pricing page lists 'Clay API access' as an Enterprise-tier (custom pricing, contact sales) feature, distinct from the Growth-tier 'Integrate with any HTTP API' (outbound enrichment columns) and Free-tier 'bring your own third-party API key' features — creating ambiguity about whether the beta Public API is broadly self-serve or Enterprise-only. Sided with the pricing page as the more authoritative access signal, hence paid_plan/enterprise_only with moderate confidence. Separately, Clay publishes an official hosted remote MCP server (api.clay.com/v3/mcp) with a free-credit on-ramp (500 credits on first connect per third-party summary), which is not gated the same way.",
+    "one_liner": "Clay is a GTM data enrichment and outbound automation platform (100+ data providers, AI research agent 'Claygent', and workflow tables) that exposes a public HTTP API and an official MCP server for external/agent access.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.3501156,
+  "turns": 13,
+  "seconds": 120.3,
+  "is_error": false,
+  "error": null
+}

@@ -20,8 +20,8 @@
   "score": 93,
   "blocker": "none",
   "model_verdict": "green",
-  "confidence": 0.75,
-  "agreement": 0.94,
+  "confidence": 0.76,
+  "agreement": 0.96,
   "grounding_rate": 0.5,
   "needs_human": false,
   "needs_human_reasons": [],
@@ -34,21 +34,30 @@
       "pass2": [
         "api_key",
         "bearer_token"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token"
       ]
     },
     "access": {
       "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
     "api_type": {
-      "pass2": "rest"
+      "pass2": "rest",
+      "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
-      "pass2": "small"
+      "pass2": "small",
+      "pass1": "small"
     },
     "mcp": {
-      "pass2": "official"
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
+      "pass1": "official"
     }
   },
   "evidence": [
@@ -111,6 +120,12 @@
       "url": "https://transcriptapi.com/api/v2/youtube/transcript",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer; body: {\"detail\":\"Not authenticated\"}",
       "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://transcriptapi.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {
@@ -133,7 +148,17 @@
     "inferred": "bearer_token"
   },
   "notes": "Vendor is transcriptapi.com (third-party service exposing YouTube transcripts, not a YouTube-owned product). Self-serve signup with 100 free credits, no card required; paid tiers start at $5/mo for 1,000 credits. REST API with bearer-token API key auth (confirmed by live 401 probe returning www-authenticate: Bearer). Vendor also hosts its own MCP endpoint at /mcp on the same domain (self-serve, streamable HTTP transport), which counts as official since it's first-party. Note: the site's /mcp path itself returned 401 to unauthenticated WebFetch (expected, since MCP requires a session), so MCP quote is taken from the homepage's install instructions rather than the MCP endpoint response. Some docs subpages (/docs/api, /billing) failed to yield extractable text via WebFetch within the 6-fetch budget; homepage content was sufficiently detailed to cover all required claims.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none"
+  },
   "pass2": {
     "auth_methods": [
       "api_key",
@@ -146,5 +171,5 @@
     "blocker": "none",
     "confidence": 0.8
   },
-  "cost_usd": 0.154
+  "cost_usd": 0.272
 }

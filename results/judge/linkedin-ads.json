@@ -1,9 +1,95 @@
 {
   "name": "LinkedIn Ads",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 8,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+      "quote": "The LinkedIn API uses OAuth 2.0 for member (user) authorization and API authentication.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication",
+      "quote": "Not all APIs support Application Authorization. For example, Marketing APIs you must use Member Authorization explained above.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.linkedin.com/rest/adAccounts",
+      "quote": "{\"status\":401,\"serviceErrorCode\":65604,\"code\":\"EMPTY_ACCESS_TOKEN\",\"message\":\"Empty oauth2 access token\"}",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start",
+      "quote": "Apply to the desired API under the Products tab of your app.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start",
+      "quote": "After you build and test your application, apply for Standard tier access. To upgrade to Advertising API Standard tier, submit a tier upgrade request with a video demonstrating how your platform creat",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started",
+      "quote": "Once your application has been accepted into the Development Tier, you can manage and view your Ad Accounts from the developer portal. Add up to 5 accounts to manage in the Development Tier.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/versioning",
+      "quote": "LinkedIn’s Marketing APIs first versioned API release was June 2022 under a new base path: `https://api.linkedin.com/rest/`",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start",
+      "quote": "Review our API and data restrictions to ensure your use case is supported and your application is not rejected due to a restricted use case.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

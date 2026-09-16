@@ -70,6 +70,14 @@
     }
   ],
   "grounding_rate": 0.75,
+  "mcp_probe": {
+    "url": "https://mcp.higgsfield.ai/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer resource_metadata=\"https://mcp.higgsfield.ai/.well-known/oauth-protected-resource/mcp\", scope=\"openid email offline_access\"",
+    "alive": true,
+    "body": "{\"error\":\"Unauthorized\"}"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

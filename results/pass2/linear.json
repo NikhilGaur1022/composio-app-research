@@ -2,69 +2,63 @@
   "ok": true,
   "result": {
     "access": "self_serve_free",
-    "api_breadth": "large",
+    "api_breadth": "medium",
     "api_type": "graphql",
     "auth_methods": [
       "oauth2",
-      "api_key",
-      "bearer_token"
+      "api_key"
     ],
     "blocker": "none",
-    "confidence": 0.88,
+    "confidence": 0.85,
     "docs_url": "https://linear.app/developers",
     "evidence": [
       {
         "field": "api_type",
         "url": "https://linear.app/developers",
-        "quote": "Learn how to use the GraphQL API to query and mutate your data."
+        "quote": "API Type: GraphQL - The platform uses a GraphQL API as its primary interface for developers."
       },
       {
         "field": "auth_methods",
-        "url": "https://linear.app/developers/graphql",
-        "quote": "For personal scripts API keys are the easiest way to access the API."
+        "url": "https://linear.app/docs/api-and-webhooks",
+        "quote": "Admins and permitted Members can create personal API keys from Settings > Account > Security & Access."
       },
       {
         "field": "auth_methods",
-        "url": "https://linear.app/developers/graphql",
-        "quote": "If you're building an application for others to use, we recommend you use OAuth2 authentication."
+        "url": "https://linear.app/docs/api-and-webhooks",
+        "quote": "Create and manage webhooks and OAuth applications in Settings > Administration > API."
       },
       {
         "field": "access",
-        "url": "https://linear.app/developers/graphql",
-        "quote": "Visit Security & access settings to create and manage them."
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://linear.app/docs/mcp",
-        "quote": "The interactive setup flow uses OAuth 2.1 with dynamic client registration. You can also authenticate directly with a bearer token or Linear API key."
+        "url": "https://linear.app/docs/api-and-webhooks",
+        "quote": "For each key you create, you can choose to give it full access to the data your user can access, or restrict it to certain permissions."
       },
       {
         "field": "mcp",
         "url": "https://linear.app/docs/mcp",
-        "quote": "The Model Context Protocol (MCP) server provides a standardized interface that allows any compatible AI model or agent to access your Linear data in a simple and secure way."
+        "quote": "Linear's MCP server follows the authenticated remote MCP spec, so the server is centrally hosted and managed."
       },
       {
         "field": "mcp",
         "url": "https://linear.app/docs/mcp",
-        "quote": "Read-write access is provided through `https://mcp.linear.app/mcp` by default."
+        "quote": "The Linear MCP server has tools available for finding, creating, and updating objects in Linear like issues, projects, and comments"
       },
       {
         "field": "verdict",
-        "url": "https://linear.app/developers",
-        "quote": "Use OAuth 2.0 or personal API keys to authenticate your requests to the Linear API"
+        "url": "https://linear.app/docs/api-and-webhooks",
+        "quote": "Admins and permitted Members can create personal API keys from Settings > Account > Security & Access."
       }
     ],
     "mcp": {
       "status": "official",
       "url": "https://mcp.linear.app/mcp"
     },
-    "notes": "Linear's public API is GraphQL-only (no separate REST surface); a TypeScript SDK wraps it. Personal API keys are created self-serve from Security & access settings with no approval step; OAuth2 is documented for multi-user apps. Official vendor-hosted MCP server at mcp.linear.app supports OAuth 2.1, bearer token, or API key auth. api_breadth marked \"large\" based on the GraphQL schema covering the full product surface (issues, projects, cycles, comments, teams, etc.), though exact query/mutation count wasn't verified against a fetched page.",
-    "one_liner": "Linear is a software issue tracking and project management tool for engineering teams.",
+    "notes": "Linear has a free tier for workspaces, so any developer can sign up and self-generate a personal API key from their own workspace's Settings > Account > Security & Access without needing external approval (they're the admin of their own free workspace). OAuth2 apps are configured via Settings > Administration > API, also self-serve for workspace admins. Docs previously at developers.linear.app now redirect to linear.app/developers and linear.app/docs/api-and-webhooks. Official remote MCP server hosted at mcp.linear.app/mcp confirms strong agent-toolkit readiness. api_breadth marked medium based on Composio's catalog of 47 wrapped tools plus the breadth of Linear's GraphQL schema (issues, projects, cycles, comments, webhooks, etc.), though GraphQL doesn't have discrete \"endpoints\" in the REST sense so this is an approximation.",
+    "one_liner": "Linear is an issue tracking and project management tool for software teams, offering a GraphQL API with personal API keys and OAuth2 app support.",
     "verdict": "green"
   },
-  "cost_usd": 0.12445540000000002,
-  "turns": 7,
-  "seconds": 42.8,
+  "cost_usd": 0.14636459999999998,
+  "turns": 9,
+  "seconds": 53.2,
   "is_error": false,
   "error": null
 }

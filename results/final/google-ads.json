@@ -3,33 +3,36 @@
   "name": "Google Ads",
   "category": "Marketing, Ads, Email and Social",
   "hint": "developers.google.com/google-ads",
-  "one_liner": "Google Ads API enables programmatic access to manage Google Ads accounts, campaigns, and advertising operations",
+  "one_liner": "Google Ads API is Google's programmatic (REST/gRPC) interface for managing Google Ads accounts, campaigns, and reporting.",
   "auth_methods": [
+    "api_key",
     "oauth2"
   ],
   "access": "admin_approval",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://developers.google.com/google-ads/api",
+  "docs_url": "https://developers.google.com/google-ads/api/docs/start",
   "mcp": {
     "status": "community",
-    "url": "https://github.com/irinabuht12-oss/google-meta-ads-ga4-mcp"
+    "url": "https://github.com/gomarble-ai/google-ads-mcp-server"
   },
   "verdict": "yellow",
   "score": 73,
   "blocker": "app_review",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.89,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "yellow",
+  "confidence": 0.84,
+  "agreement": 0.95,
+  "grounding_rate": 0.75,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
         "oauth2"
       ],
       "pass1": [
@@ -37,23 +40,75 @@
       ]
     },
     "access": {
+      "pass2": "admin_approval",
       "pass1": "admin_approval"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "apis_guru_spec": "small",
       "composio_tools": "small",
+      "pass2": "large",
       "pass1": "unknown"
     },
     "mcp": {
       "github": "community",
+      "pass2": "community",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+      "quote": "Google Ads API also uses the OAuth 2.0 protocol for authentication and authorization.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+      "quote": "a developer token is also required to make Google Ads API calls",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "quote": "Enable Google Ads API in your Google Cloud project to automatically be granted Test access for your project.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "quote": "a detailed manual audit of your application",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.google.com/google-ads/api/rest/overview",
+      "quote": "The Google Ads API can be called either using gRPC or REST.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "quote": "Google may automatically upgrade your project's API access level to Basic once you submit your application.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "quote": "typically takes 10 business days",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/gomarble-ai/google-ads-mcp-server",
+      "quote": "google-ads-mcp-server (143★)",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/googleads",
@@ -86,7 +141,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Google Ads API requires OAuth2 authentication and a developer token. Free testing access available via Test Account Access, but production use (Basic/Standard access) requires application approval. API available via REST and gRPC with client libraries in multiple languages. No MCP server identified. Approval requirement classifies as yellow.",
+  "notes": "Test access (sandbox-like, test accounts only) is granted automatically/free upon enabling the API and OAuth2 client + developer token. Real production use requires applying for Basic access (auto-upgrade after brand verification) or Standard access, which needs a manual Google audit (~10 business days) — this gates broad/unlimited production use, hence admin_approval/app_review rather than pure self-serve. No official Google-published MCP server found; only third-party/community MCP servers exist (e.g. gomarble-ai, amekala). Auth requires both OAuth2 (user/service account) and a developer token (acts as an API-key-like credential) on every call.",
   "pass1": {
     "auth_methods": [
       "oauth2"
@@ -97,6 +152,17 @@
     "verdict": "yellow",
     "blocker": "app_review"
   },
-  "pass2": null,
-  "cost_usd": 0.114
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "confidence": 0.78
+  },
+  "cost_usd": 0.309
 }

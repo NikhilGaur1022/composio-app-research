@@ -1,9 +1,48 @@
 {
-  "ok": false,
-  "result": null,
-  "cost_usd": 0.081983,
+  "ok": true,
+  "result": {
+    "one_liner": "Email marketing platform with REST API for campaigns, audiences, and automation.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://mailchimp.com/developer",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+        "quote": "Mailchimp supports two authentication methods: HTTP Basic Auth with an API key or OAuth 2.0"
+      },
+      {
+        "field": "access",
+        "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+        "quote": "The free tier includes API access with 500 contacts and 1,000 emails per month"
+      },
+      {
+        "field": "api_type",
+        "url": "https://mailchimp.com/developer/marketing/api/",
+        "quote": "The primary API offered by Mailchimp is the Mailchimp Marketing API which uses typical REST conventions"
+      },
+      {
+        "field": "verdict",
+        "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+        "quote": "To get your Mailchimp API key, log in to Mailchimp, click your profile icon, go to Extras → API keys, click Create A Key"
+      }
+    ],
+    "confidence": 0.88,
+    "notes": "Free tier with full API access and self-serve credential generation makes this buildable immediately. OAuth 2.0 and API key auth both available. Exact endpoint count unknown."
+  },
+  "cost_usd": 0.11957509999999999,
   "turns": 6,
-  "seconds": 31.4,
-  "is_error": true,
-  "error": "no structured output"
+  "seconds": 34.6,
+  "is_error": false,
+  "error": null
 }

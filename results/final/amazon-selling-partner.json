@@ -3,48 +3,100 @@
   "name": "Amazon Selling Partner",
   "category": "Ecommerce",
   "hint": "developer-docs.amazon.com/sp-api",
-  "one_liner": "REST-based API for sellers and vendors to access their Amazon business data including orders, shipments, payments, and inventory",
+  "one_liner": "Amazon Selling Partner API (SP-API) lets developers programmatically manage Amazon seller/vendor operations — orders, inventory, listings, pricing, fulfillment, and reports.",
   "auth_methods": [
+    "bearer_token",
     "oauth2"
   ],
-  "access": "admin_approval",
+  "access": "paid_plan",
   "api_type": "rest",
-  "api_breadth": "unknown",
-  "docs_url": "https://developer-docs.amazon.com/sp-api/",
+  "api_breadth": "large",
+  "docs_url": "https://developer-docs.amazon.com/sp-api",
   "mcp": {
-    "status": "none",
-    "url": null
+    "status": "community",
+    "url": "https://github.com/amzn/selling-partner-api-samples"
   },
   "verdict": "yellow",
-  "score": 67,
-  "blocker": "app_review",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "score": 78,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.85,
+  "agreement": 0.93,
+  "grounding_rate": 0.86,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (admin_approval vs paid_plan)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "bearer_token",
+        "oauth2"
+      ],
       "pass1": [
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "paid_plan",
       "pass1": "admin_approval"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "large",
       "pass1": "unknown"
     },
-    "mcp": {}
+    "mcp": {
+      "pass2": "official"
+    }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer-docs.amazon/sp-api/docs/connecting-to-the-selling-partner-api",
+      "quote": "Use this for calling operations that require authorization from a selling partner.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer-docs.amazon/sp-api/docs/connecting-to-the-selling-partner-api",
+      "quote": "The LWA access token expires one hour after it is issued.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer-docs.amazon/sp-api/docs/sp-api-registration-overview",
+      "quote": "You must have a professional selling account to develop SP-API private seller applications. Individual accounts are not eligible.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer-docs.amazon/sp-api/docs/registering-your-application",
+      "quote": "You must be a primary account user to complete registration.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer-docs.amazon/sp-api/docs/self-authorization",
+      "quote": "You can self-authorize your application in draft status because there is no reason to publish a private application.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer-docs.amazon/sp-api/docs/registering-your-application",
+      "quote": "As of April 2022, public and private applications are subject to authorization limits and restrictions.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/amzn/selling-partner-api-samples",
+      "quote": "Explore practical examples and sample implementations in the Selling Partner API Samples repository.",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://sellingpartnerapi-na.amazon.com/orders/v0/orders",
@@ -69,7 +121,7 @@
     "www_authenticate": null,
     "inferred": "bearer_token"
   },
-  "notes": "Sellers using the API for their own business operations have free access. Third-party public developers must pass app review and architecture review with SP-API Solutions Architecture team. Private developers can use self-authorization. API breadth unknown from search results.",
+  "notes": "SP-API uses Login with Amazon (LWA) OAuth2 tokens (bearer, x-amz-access-token header); the older mandatory AWS SigV4 request signing was deprecated in 2023. There is no free/anonymous dev sandbox: private (self-authorized) seller apps require a Professional Selling Plan account ($39.99/mo, individual accounts explicitly ineligible), and private vendor apps require an existing (invite-only) Vendor Central account; public apps additionally require Appstore listing/review. API surface spans dozens of sub-APIs (Orders, Catalog, Listings, Feeds, Reports, FBA Inventory/Inbound/Outbound, Pricing, Vendor Orders/Shipping/Invoices, Notifications, etc.), totaling well over 300 operations. An MCP server (sp-api-dev-mcp) is published from Amazon's own amzn GitHub org / npm scope @amazon-sp-api-release, treated here as official though I could not fetch its README directly to fully confirm maintainer status (moderate confidence on that specific point).",
   "pass1": {
     "auth_methods": [
       "oauth2"
@@ -80,6 +132,17 @@
     "verdict": "yellow",
     "blocker": "app_review"
   },
-  "pass2": null,
-  "cost_usd": 0.118
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.7
+  },
+  "cost_usd": 0.391
 }

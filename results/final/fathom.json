@@ -35,22 +35,33 @@
       "pass2": [
         "api_key",
         "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "jwt",
+        "oauth2"
       ]
     },
     "access": {
       "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
     "api_type": {
-      "pass2": "rest"
+      "pass2": "rest",
+      "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
-      "pass2": "small"
+      "pass2": "small",
+      "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
-      "pass2": "official"
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
+      "pass1": "official"
     }
   },
   "evidence": [
@@ -113,6 +124,12 @@
       "url": "https://api.fathom.ai/external/v1/meetings",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: ",
       "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://api.fathom.ai/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {
@@ -136,7 +153,19 @@
     "inferred": null
   },
   "notes": "Official docs live at developers.fathom.ai (Fathom's dedicated API domain), separate from the consumer app at fathom.video. API key access is self-serve and free (generated from account Settings > API Access, no plan gate or approval mentioned in docs). OAuth2 is documented as the path for multi-tenant/marketplace apps installed by other users, alongside per-user API keys for single-workspace/internal use. Vendor-hosted official MCP server exists at api.fathom.ai/mcp using OAuth-based user authorization; exact OAuth scope/flow details and total endpoint count could not be confirmed within fetch budget (authentication sub-page 404'd), and api_breadth is estimated as small based on the handful of named resources (meetings, recordings summary/transcript, webhooks) — lowering confidence slightly for auth_methods completeness.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
   "pass2": {
     "auth_methods": [
       "api_key",
@@ -149,5 +178,5 @@
     "blocker": "none",
     "confidence": 0.75
   },
-  "cost_usd": 0.221
+  "cost_usd": 0.336
 }

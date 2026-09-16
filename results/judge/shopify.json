@@ -1,9 +1,101 @@
 {
   "name": "Shopify",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 8,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+      "quote": "The merchant is redirected to Shopify to approve access, then back to your app with a code that your app exchanges for an access token.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+      "quote": "Your app authenticates as itself with its client ID and client secret, and there's no merchant approval step.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+      "quote": "The credential your code sends on each GraphQL Admin API request, in the `X-Shopify-Access-Token` header",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://shopify.dev/docs/api/admin-rest",
+      "quote": "The REST Admin API is a legacy API as of October 1, 2024. Starting April 1, 2025, all new public apps must be built exclusively with the GraphQL Admin API.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://shopify.dev/docs/api/admin-graphql",
+      "quote": "The Admin API lets you build apps and integrations that extend and enhance the Shopify admin.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.shopify.com/partners",
+      "quote": "Become a partner",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://shopify.dev/docs/apps/build/devmcp",
+      "quote": "If you prefer MCP, you can connect to Shopify's developer resources through the Dev MCP server. The server runs locally and doesn't require authentication.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://shopify.dev/docs/api/admin-graphql",
+      "quote": "https://{store_name}.myshopify.com/admin/api/2026-07/graphql.json",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://shopify.dev/docs/apps/build/devmcp",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!DOCTYPE html><html lang=\"en\" class=\"Mode-Light\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=devi"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

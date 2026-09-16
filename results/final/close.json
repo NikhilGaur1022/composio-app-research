@@ -60,8 +60,8 @@
     },
     "mcp": {
       "mcp_registry": "official",
-      "github": "community",
       "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "official"
     }
   },
@@ -124,6 +124,12 @@
       "field": "auth_methods",
       "url": "https://api.close.com/api/v1/lead/",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"error\": \"Unauthorized\"} ",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.close.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json); endpoint is live",
       "grounded": "probe"
     }
   ],

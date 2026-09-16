@@ -3,33 +3,38 @@
   "name": "Pinterest",
   "category": "Marketing, Ads, Email and Social",
   "hint": "developers.pinterest.com",
-  "one_liner": "Social media platform for discovering, sharing, and shopping visual content",
+  "one_liner": "Pinterest is a visual discovery/social platform whose developer API (v5) lets apps manage boards, pins, ads, catalogs and user account data.",
   "auth_methods": [
     "oauth2"
   ],
-  "access": "self_serve_free",
+  "access": "admin_approval",
   "api_type": "rest",
-  "api_breadth": "small",
-  "docs_url": "https://developers.pinterest.com/docs/",
+  "api_breadth": "medium",
+  "docs_url": "https://developers.pinterest.com/docs/getting-started/introduction/",
   "mcp": {
     "status": "community",
-    "url": null
+    "url": "https://github.com/cesteral/pinterest-mcp"
   },
-  "verdict": "green",
-  "score": 91,
-  "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
+  "verdict": "yellow",
+  "score": 77,
+  "blocker": "app_review",
+  "model_verdict": "yellow",
+  "confidence": 0.6,
+  "agreement": 0.89,
+  "grounding_rate": 0.17,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+    "only 17% of quotes grounded in cited pages"
   ],
-  "auto_notes": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs admin_approval)"
+  ],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
         "oauth2"
       ],
       "pass1": [
@@ -37,21 +42,61 @@
       ]
     },
     "access": {
+      "pass2": "admin_approval",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "medium",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "community",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "verdict",
+      "url": "https://api.pinterest.com/v5/user_account",
+      "quote": "{\"code\":2,\"message\":\"Authentication failed.\",\"status\":\"failure\"}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "quote": "For the key Authorization, enter the value Bearer {your_token}",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "quote": "Authorization: Basic {base64-encoded_string_made_of client_id:client_secret}",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+      "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+      "quote": "If you want to offer Pinterest capabilities to your users, we recommend upgrading to Standard access to get the full functionality that our API offers.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.composio.dev/toolkits/pinterest",
+      "quote": "wraps_official_mcp: false",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/pinterest",
@@ -84,7 +129,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Pinterest API uses OAuth2 with Authorization Code and Client Credentials flows. Trial tier is freely accessible via self-serve request (reviewed daily). Standard tier also free but requires app approval and video demo. No published pricing. REST API covering ads management, conversion tracking, analytics, and organic/paid content operations.",
+  "notes": "Pinterest API v5 is REST, OAuth 2.0 only (Authorization Code, Client Credentials, Refresh Token grants); token exchange uses HTTP Basic with client_id/client_secret, API calls use Bearer token. New apps must first be approved for free Trial access (sandbox-only Pins/Boards, business-day approval per community reports), then separately apply and wait 1-4 weeks with a demo video for Standard access to unlock full functionality/rate limits — this two-stage review gates real production use, hence admin_approval/app_review rather than self-serve. No official Pinterest-published MCP server found; only community MCP servers (e.g. cesteral/pinterest-mcp, getmcpads pinterest-ads) exist per registry hints.",
   "pass1": {
     "auth_methods": [
       "oauth2"
@@ -95,6 +140,16 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.275
+  "pass2": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.499
 }

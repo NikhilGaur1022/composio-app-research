@@ -19,14 +19,16 @@
   "score": 71,
   "blocker": "paid_only",
   "model_verdict": "yellow",
-  "confidence": 0.71,
-  "agreement": 1.0,
+  "confidence": 0.68,
+  "agreement": 0.93,
   "grounding_rate": 0.43,
   "needs_human": true,
   "needs_human_reasons": [
     "only 43% of quotes grounded in cited pages"
   ],
-  "auto_notes": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs paid_plan)"
+  ],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
@@ -34,21 +36,30 @@
       ],
       "pass2": [
         "api_key"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
       ]
     },
     "access": {
-      "pass2": "paid_plan"
+      "pass2": "paid_plan",
+      "pass1": "self_serve_free"
     },
     "api_type": {
-      "pass2": "rest"
+      "pass2": "rest",
+      "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
-      "pass2": "small"
+      "pass2": "small",
+      "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
-      "pass2": "community"
+      "pass2": "community",
+      "pass1": "official"
     }
   },
   "evidence": [
@@ -127,7 +138,18 @@
     "inferred": null
   },
   "notes": "Note: \"consensus.app\" (AI academic-research search engine) is a distinct company from \"goconsensus.com\" (B2B sales-demo software also branded \"Consensus\") — several third-party trackers (e.g. apitracker.io/a/consensus) conflate the two; disregard any goconsensus.com data. The official docs.consensus.app and help.consensus.app pages returned HTTP 403 (Cloudflare bot-block) on direct fetch, so findings here rely on the consensus.app/home/api marketing page, the Composio toolkit page (which mirrors the official docs), and a third-party API guide (agentsapis.com) — lowering confidence versus a primary-source read. Access is via a self-serve \"Create API key\" flow with no approval/waitlist (\"now open to everyone\"), but usable credits are allocated per paid plan tier (Pro/Team/Enterprise: 500 credits; Deep: 2,000), with no evidence of a free-tier credit allocation, so classified as paid_plan rather than self_serve_free. Auth is a single x-api-key header (api_key), not OAuth — the task hint \"(OAuth requested)\" and the precomputed .well-known/oauth-authorization-server discovery URL likely relate to consensus.app's own user login/SSO rather than the public data API; this was not independently verified due to fetch-budget limits and repeated 403s on the consensus.app domain. Only one documented endpoint (quick_search) was found; pagination beyond page 1 and full-text chunk retrieval are gated to Enterprise. No official MCP server found; MCP registry shows only community/unrelated entries.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
   "pass2": {
     "auth_methods": [
       "api_key"
@@ -139,5 +161,5 @@
     "blocker": "paid_only",
     "confidence": 0.62
   },
-  "cost_usd": 0.216
+  "cost_usd": 0.35
 }

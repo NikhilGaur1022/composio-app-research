@@ -1,9 +1,86 @@
 {
   "name": "Amazon Selling Partner",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 6,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer-docs.amazon/sp-api/docs/connecting-to-the-selling-partner-api",
+      "quote": "Use this for calling operations that require authorization from a selling partner.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer-docs.amazon/sp-api/docs/connecting-to-the-selling-partner-api",
+      "quote": "The LWA access token expires one hour after it is issued.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.869
+    },
+    {
+      "field": "access",
+      "url": "https://developer-docs.amazon/sp-api/docs/sp-api-registration-overview",
+      "quote": "You must have a professional selling account to develop SP-API private seller applications. Individual accounts are not eligible.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer-docs.amazon/sp-api/docs/registering-your-application",
+      "quote": "You must be a primary account user to complete registration.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer-docs.amazon/sp-api/docs/self-authorization",
+      "quote": "You can self-authorize your application in draft status because there is no reason to publish a private application.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer-docs.amazon/sp-api/docs/registering-your-application",
+      "quote": "As of April 2022, public and private applications are subject to authorization limits and restrictions.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/amzn/selling-partner-api-samples",
+      "quote": "Explore practical examples and sample implementations in the Selling Partner API Samples repository.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.545
+    }
+  ],
+  "grounding_rate": 0.86,
+  "mcp_probe": {
+    "url": "https://github.com/amzn/selling-partner-api-samples",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
 }

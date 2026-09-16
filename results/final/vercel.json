@@ -3,7 +3,7 @@
   "name": "Vercel",
   "category": "Developer, Infra and Data platforms",
   "hint": "vercel.com/docs/rest-api",
-  "one_liner": "Vercel is a serverless platform for deploying and managing web applications with integrated CI/CD and edge functions.",
+  "one_liner": "Vercel is a cloud platform for deploying and hosting frontend/web applications, with a REST API to manage projects, deployments, domains, and team resources.",
   "auth_methods": [
     "api_key",
     "bearer_token",
@@ -20,14 +20,12 @@
   "verdict": "green",
   "score": 97,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.92,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.88,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
@@ -39,29 +37,86 @@
         "bearer_token",
         "oauth2"
       ],
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
       "pass1": [
         "bearer_token"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "apis_guru_spec": "medium",
       "composio_tools": "medium",
+      "pass2": "large",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "official",
       "github": "community",
+      "pass2": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+      "quote": "**bearerToken**: HTTP bearer",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+      "quote": "'Authorization': 'Bearer YOUR_ACCESS_TOKEN'",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+      "quote": "\"type\": \"oauth2-token\"",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+      "quote": "Creates and returns a new authentication token for the currently authenticated User.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://vercel.com/docs/rest-api",
+      "quote": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://vercel.com/docs/rest-api",
+      "quote": "| **GET** | [`/v1/access-groups/{idOrName}`](/docs/rest-api/access-groups/reads-an-access-group.md) | Reads an access group |",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://api.vercel.com/v9/projects",
+      "quote": "{\"error\":{\"code\":\"forbidden\",\"message\":\"The request is missing an authentication token\",\"missingToken\":true}}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/vercel/mcp-handler",
+      "quote": "vercel/mcp-handler (669★)",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/vercel",
@@ -101,7 +156,7 @@
     "www_authenticate": null,
     "inferred": "bearer_token"
   },
-  "notes": "Vercel provides a comprehensive REST API with bearer token authentication accessible to all users with Vercel accounts. Tokens can be created self-serve from account settings, making this suitable for agent toolkit development. API covers deployments, projects, domains, teams, and other platform management functions.",
+  "notes": "Vercel REST API is documented at vercel.com/docs/rest-api with 400+ endpoints across dozens of resource groups (projects, deployments, domains, dns, env vars, edge-config, webhooks, teams, etc). Auth is via personal Bearer access tokens created in Account Settings (free on the Hobby plan) or OAuth2 tokens issued to Marketplace/native integrations (response schema shows token type \\\"oauth2-token\\\" with origin e.g. \\\"github\\\"). No app review needed to create a personal token and call the API; building a distributable OAuth integration for the Marketplace goes through Vercel's integration developer flow but isn't required for basic API/agent use. Vercel publishes vercel/mcp-handler, an official SDK/framework for building MCP servers on Vercel (used by the community mcp-vercel server too), though it is a framework rather than a single hosted MCP endpoint.",
   "pass1": {
     "auth_methods": [
       "bearer_token"
@@ -112,6 +167,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.112
+  "pass2": {
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.324
 }

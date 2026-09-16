@@ -10,23 +10,23 @@
       "bearer_token"
     ],
     "blocker": "none",
-    "confidence": 0.85,
+    "confidence": 0.88,
     "docs_url": "https://developers.notion.com/",
     "evidence": [
       {
         "field": "auth_methods",
         "url": "https://developers.notion.com/docs/authorization",
-        "quote": "public connections instead follow the OAuth 2.0 protocol to authorize a connection to interact with a workspace"
+        "quote": "Public connections instead follow the OAuth 2.0 protocol to authorize a connection to interact with a workspace."
       },
       {
         "field": "auth_methods",
         "url": "https://developers.notion.com/docs/authorization",
-        "quote": "A PAT acts as the user who created it and uses that user's permissions in the selected workspace."
+        "quote": "Personal access tokens (PATs) are created directly by a Notion user in the Developer portal"
       },
       {
         "field": "auth_methods",
-        "url": "https://developers.notion.com/reference/intro",
-        "quote": "A bearer token is required to interact with the Notion API."
+        "url": "https://developers.notion.com/docs/authorization",
+        "quote": "include the installation access token in the Authorization header with every API request"
       },
       {
         "field": "access",
@@ -35,31 +35,26 @@
       },
       {
         "field": "api_type",
-        "url": "https://developers.notion.com/reference/intro",
-        "quote": "follows RESTful conventions when possible, with most operations performed via GET, POST, PATCH, and DELETE requests."
+        "url": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
+        "quote": "endpoints: 13"
       },
       {
         "field": "mcp",
         "url": "https://developers.notion.com/docs/mcp",
         "quote": "Notion MCP is a remote MCP server hosted by Notion."
-      },
-      {
-        "field": "verdict",
-        "url": "https://developers.notion.com/docs/authorization",
-        "quote": "The installation access token will be used to authenticate REST API requests."
       }
     ],
     "mcp": {
       "status": "official",
       "url": "https://developers.notion.com/docs/mcp"
     },
-    "notes": "Notion API is self-serve: any user (even on a free personal workspace) can create an internal integration and generate a personal access token / installation token in minutes, no payment or approval needed for internal use. Public (multi-workspace) integrations use OAuth2 and can optionally be listed in the Notion Marketplace, which does require review, but that only gates marketplace distribution, not basic API access. Endpoint count is small (~20-30 REST endpoints: pages, blocks, databases, users, search, comments), consistent with apis.guru's 13-endpoint OpenAPI spec. Notion also publishes an official hosted remote MCP server (developers.notion.com/docs/mcp), separate from the popular community makenotion/notion-mcp-server GitHub repo.",
-    "one_liner": "Notion is an all-in-one workspace/notes/wiki/project-management app with a REST API for reading and writing pages, databases, and blocks.",
+    "notes": "Personal access tokens are self-serve and free, obtainable in minutes via the Developer portal without approval. Public (multi-workspace) integrations use OAuth2 but do require a review step before distribution; internal integrations need no review. Bearer-token header scheme documented explicitly. Official Notion-hosted MCP server confirmed on developers.notion.com/docs/mcp, plus a highly-starred official GitHub repo (makenotion/notion-mcp-server).",
+    "one_liner": "Notion is a workspace/notes/wiki and project-management tool with a REST API for pages, blocks, databases, and users.",
     "verdict": "green"
   },
-  "cost_usd": 0.157209,
-  "turns": 8,
-  "seconds": 53.1,
+  "cost_usd": 0.12092440000000002,
+  "turns": 6,
+  "seconds": 33.2,
   "is_error": false,
   "error": null
 }

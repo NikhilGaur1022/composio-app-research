@@ -78,6 +78,14 @@
     }
   ],
   "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://mcp.plain.com/mcp",
+    "status": 401,
+    "content_type": "",
+    "www_authenticate": "Bearer resource_metadata=\"https://mcp.plain.com/.well-known/oauth-protected-resource/mcp\", scope=\"openid offline_access\", scope_mode=\"require_all\"",
+    "alive": true,
+    "body": ""
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

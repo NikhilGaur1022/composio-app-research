@@ -1,9 +1,77 @@
 {
   "name": "Aircall",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 3,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://support.aircall.io/en-gb/articles/10375355327517",
+      "quote": "Use Basic Auth if you are an Aircall customer building for your own account only.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works",
+      "quote": "Aircall implemented the OAuth 2.0 authentication protocol so you can easily build an app on top of Aircall and deploy it on Aircall's Marketplace.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.442
+    },
+    {
+      "field": "access",
+      "url": "https://aircall.io/pricing/",
+      "quote": "250+ integrations and API access",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works",
+      "quote": "OAuth credentials — If you haven't received them yet, apply to the Tech Partner program",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.783
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.aircall.io/api-references/",
+      "quote": "The foundation for every Aircall integration is the REST API",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.574
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/themobilefirstco/aircall-mcp-server",
+      "quote": "aircall-mcp-server",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.5,
+  "mcp_probe": {
+    "url": "https://github.com/themobilefirstco/aircall-mcp-server",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
 }

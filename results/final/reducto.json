@@ -12,15 +12,15 @@
   "api_breadth": "small",
   "docs_url": "https://docs.reducto.ai/get-started/quickstart",
   "mcp": {
-    "status": "official",
+    "status": "community",
     "url": "https://docs.reducto.ai/mcp-server"
   },
   "verdict": "green",
-  "score": 93,
+  "score": 91,
   "blocker": "none",
   "model_verdict": "green",
-  "confidence": 0.79,
-  "agreement": 0.96,
+  "confidence": 0.73,
+  "agreement": 0.8,
   "grounding_rate": 0.57,
   "needs_human": false,
   "needs_human_reasons": [],
@@ -29,20 +29,27 @@
     "auth_methods": {
       "pass2": [
         "bearer_token"
+      ],
+      "pass1": [
+        "api_key"
       ]
     },
     "access": {
       "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
     "api_type": {
-      "pass2": "rest"
+      "pass2": "rest",
+      "pass1": "rest"
     },
     "api_breadth": {
-      "pass2": "small"
+      "pass2": "small",
+      "pass1": "small"
     },
     "mcp": {
-      "pass2": "official"
+      "pass2": "official",
+      "pass1": "official"
     }
   },
   "evidence": [
@@ -113,7 +120,16 @@
     "inferred": null
   },
   "notes": "Self-serve free account at studio.reducto.ai grants an API key immediately (bearer token auth), with $150 free usage credit before paid rates ($10/1k pages parse, $20/1k pages extract) apply. REST API is small (~18 paths) covering parse/extract/split/edit/classify/pipeline plus job/upload management. Official vendor-published MCP server (reductoai/mcp-server-reducto) is hosted at mcp.reducto.ai and uses the same API key. Higher tiers (Growth/Enterprise) require sales contact but are not needed for basic agent-toolkit buildability.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none"
+  },
   "pass2": {
     "auth_methods": [
       "bearer_token"
@@ -125,5 +141,5 @@
     "blocker": "none",
     "confidence": 0.85
   },
-  "cost_usd": 0.168
+  "cost_usd": 0.321
 }

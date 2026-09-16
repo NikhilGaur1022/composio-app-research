@@ -13,18 +13,18 @@
   ],
   "access": "self_serve_free",
   "api_type": "rest_and_graphql",
-  "api_breadth": "small",
+  "api_breadth": "large",
   "docs_url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
   "mcp": {
     "status": "official",
     "url": "https://github.com/salesforcecli/mcp"
   },
   "verdict": "green",
-  "score": 93,
+  "score": 100,
   "blocker": "none",
   "model_verdict": "green",
-  "confidence": 0.73,
-  "agreement": 0.8,
+  "confidence": 0.75,
+  "agreement": 0.84,
   "grounding_rate": 0.78,
   "needs_human": false,
   "needs_human_reasons": [],
@@ -42,25 +42,33 @@
         "bearer_token",
         "jwt",
         "oauth2"
+      ],
+      "pass1": [
+        "jwt",
+        "oauth2"
       ]
     },
     "access": {
       "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
     "api_type": {
       "pass2": "rest_and_graphql",
-      "apis_guru_spec": "rest"
+      "apis_guru_spec": "rest",
+      "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "apis_guru_spec": "small",
       "composio_tools": "large",
-      "pass2": "large"
+      "pass2": "large",
+      "pass1": "large"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
-      "pass2": "official"
+      "pass2": "official",
+      "pass1": "none"
     }
   },
   "evidence": [
@@ -152,7 +160,17 @@
     "inferred": null
   },
   "notes": "developer.salesforce.com returned HTTP 403 to direct fetches (bot protection), so REST/OAuth doc claims rely on search-result snippets/titles and a direct fetch of login.salesforce.com/.well-known/openid-configuration rather than fully verbatim doc-page quotes; confidence lowered accordingly. Confirmed via search: Developer Edition signup (developer.salesforce.com/signup) grants a free org with full REST/SOAP/Bulk/Metadata/GraphQL API access; auth is OAuth 2.0 (authorization_code, JWT bearer, client_credentials, refresh_token flows) using bearer access tokens, with client auth methods client_secret_post/client_secret_basic/private_key_jwt per the OIDC discovery doc. Salesforce also publishes an official MCP server (salesforcecli/mcp, Salesforce DX MCP, hosted MCP available in every Dev Edition org per the June 2025 dev blog), alongside many community MCP servers (tsmztech, kablewy, cirra, kodey). API surface is very large (sObjects, Bulk, Metadata, Tooling, GraphQL, Streaming, Composite, plus product-specific APIs), well over 300 endpoints, so api_breadth=large despite the smaller Einstein-only OpenAPI spec (45 endpoints) apis.guru indexed.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
   "pass2": {
     "auth_methods": [
       "oauth2",
@@ -166,5 +184,5 @@
     "blocker": "none",
     "confidence": 0.55
   },
-  "cost_usd": 0.379
+  "cost_usd": 0.4
 }

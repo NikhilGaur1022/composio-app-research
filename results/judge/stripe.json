@@ -1,9 +1,112 @@
 {
   "name": "Stripe",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 9,
+  "grounded": 7,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.stripe.com/api/authentication",
+      "quote": "The Stripe API authenticates requests using HTTP Basic Auth. Provide your API key as the basic auth username value. You don't need to provide a password.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.stripe.com/api/authentication",
+      "quote": "If you need to authenticate using bearer auth (for example, for a cross-origin request), use `-H \"Authorization: Bearer ,[object Object],\"` instead of `-u ,[object Object]`.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.771
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.stripe.com/mcp",
+      "quote": "Stripe's MCP server uses OAuth to authorise clients according to the MCP specification",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.stripe.com/keys",
+      "quote": "When you sign up for a Stripe account, we create three types of API keys for you",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.stripe.com/keys",
+      "quote": "Sandbox keys start with `pk_test_` for publishable keys, `rk_test_` for restricted keys and `sk_test_` for secret keys.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.stripe.com/api",
+      "quote": "The Stripe API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, aut",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/stripe.com/2022-11-15/openapi.json",
+      "quote": "446 endpoints (apis.guru catalog entry for stripe.com OpenAPI spec)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.51
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.stripe.com/mcp",
+      "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API and search Stripe's knowledge base, including documentation and support articles.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.stripe.com/keys",
+      "quote": "Build and test: Create or select a sandbox and use its test keys.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.78,
+  "mcp_probe": {
+    "url": "https://mcp.stripe.com",
+    "status": 401,
+    "content_type": "application/json",
+    "www_authenticate": "Bearer resource_metadata=https://mcp.stripe.com/.well-known/oauth-protected-resource",
+    "alive": true,
+    "body": "{\"error\":\"Unauthorized. See https://docs.stripe.com/mcp for usage instructions.\"}"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

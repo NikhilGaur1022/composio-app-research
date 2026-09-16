@@ -3,60 +3,106 @@
   "name": "Firecrawl",
   "category": "Data, SEO and Scraping",
   "hint": "firecrawl.dev",
-  "one_liner": "Firecrawl is a web scraping and search API that intelligently extracts structured data, markdown, and search results from web pages at scale.",
+  "one_liner": "Firecrawl is a web scraping/crawling API that converts websites into clean, LLM-ready markdown/structured data.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "bearer_token",
+    "oauth2"
   ],
   "access": "self_serve_free",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://docs.firecrawl.dev",
+  "docs_url": "https://docs.firecrawl.dev/api-reference/introduction",
   "mcp": {
-    "status": "community",
-    "url": "https://github.com/firecrawl/firecrawl-mcp-server"
+    "status": "official",
+    "url": "https://mcp.firecrawl.dev/v2/mcp"
   },
   "verdict": "green",
-  "score": 91,
+  "score": 93,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.83,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "green",
+  "confidence": 0.96,
+  "agreement": 1.0,
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "api_key"
       ],
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
       "pass1": [
         "bearer_token"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "small",
       "pass1": "small"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "official"
     }
   },
   "evidence": [
     {
       "field": "auth_methods",
+      "url": "https://docs.firecrawl.dev/api-reference/introduction",
+      "quote": "Authorization: Bearer fc-123456789",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.firecrawl.dev/mcp-server",
+      "quote": "https://mcp.firecrawl.dev/v2/mcp-oauth",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.firecrawl.dev/pricing",
+      "quote": "1,000 credits / month",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.firecrawl.dev/mcp-server",
+      "quote": "This is a server URL for your MCP client, not a page to open directly in a browser.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.firecrawl.dev/api-reference/introduction",
+      "quote": "Authorization: Bearer fc-123456789",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/firecrawl",
       "quote": "Composio catalog: auth ['API_KEY'], 30 tools",
       "grounded": "registry"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.firecrawl.dev/v2/mcp",
+      "quote": "MCP initialize POST -> HTTP 200 (text/event-stream); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {
@@ -78,7 +124,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Firecrawl offers both REST API and official MCP server for AI agent integration. Free tier is generous (1,000 credits/month with no payment required), making it immediately buildable. Bearer token authentication via API key is straightforward. The MCP server is officially maintained by the Firecrawl team, providing native integration for Claude and other LLM clients.",
+  "notes": "Free tier is self-serve, no credit card required (1,000 monthly credits). Core REST API uses API key via Bearer token; the official hosted MCP server additionally supports OAuth sign-in as an alternative to API key. API surface is small (scrape, crawl, map, search, extract, batch-scrape and related status/webhook endpoints).",
   "pass1": {
     "auth_methods": [
       "bearer_token"
@@ -89,6 +135,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.11
+  "pass2": {
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.22
 }

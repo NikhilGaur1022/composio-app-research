@@ -1,0 +1,28 @@
+{
+  "date": "17 September 2026",
+  "headlines": [
+    "<b>Auth is a solved problem.</b> 71 of 100 apps expose OAuth2, 70 expose an API key, and 48 expose both. Only 2 have no auth at all (they are CLIs). Nothing in the set needs an exotic auth adapter.",
+    "<b>72% of apps are self-serve</b> (57 free tier, 15 trial). Dev/Infra is 10/10 self-serve, CRM and Comms 9/10. The gated categories are <b>AI/Media (6/10 gated)</b>, <b>Marketing/Ads (5/10)</b>, <b>Data/SEO (5/10)</b> and <b>Finance (4/10)</b>.",
+    "<b>The blocker is commercial, not technical.</b> 36 apps have a blocker; 15 are 'paid tier only', 6 are app review, 5 enterprise-only, 5 partner/contact-sales. Only 1 app was undocumented and only 2 lack an API entirely.",
+    "<b>Official MCP servers are now the norm: 59 of 100 vendors ship one.</b> Four of those (Plain, Pumble, systeme.io, Amazon SP-API) were so new my own hand labels said 'none' - the agent's evidence overturned them.",
+    "<b>64 green / 28 yellow / 8 red.</b> 16 green apps are not yet in Composio's catalog (Twilio, Front, Zoho Cliq, Lark, Vonage, WooCommerce, BigCommerce, MongoDB Atlas, ...) - those are the immediate wins. The 8 reds split into 5 that need a sales/partner conversation (PitchBook, Ramp, Brex, Waterfall, Salesforce Commerce Cloud) and 3 that are not APIs at all."
+  ],
+  "human_notes": [
+    "<b>Rebrands and moved docs.</b> fanbasis.com now 301s to commas.com; the agent saw an 'Enterprise &amp; APIs' marketing page and called it partner-gated. The real API reference is at commasdocs.com with self-serve scoped keys. Coda's docs moved to docs.superhuman.com and Binance's to developers.binance.com - the agent handled both of those on its own.",
+    "<b>Bot-blocked sites.</b> pitchbook.com returns 403 to anything that is not a browser. The agent still found the public OpenAPI spec at api.pitchbook.com/api-docs (130 operations), but only a real Chrome session could read the help page that says API access 'requires a standalone contract agreement'.",
+    "<b>Pricing tables are JavaScript.</b> The 'access' field lives on pricing/signup pages, and those are mostly JS-rendered comparison grids that WebFetch flattens. Attio (API on Free), Devin (API from Pro only) and iPayX (5 free audits, API on paid) were all resolved by opening the page in Chrome and reading the tick marks.",
+    "<b>Quote grounding fails on JS docs.</b> Mintlify/ReadMe-style docs (Intercom, Clay, Coda, SE Ranking, Datadog, MongoDB) return near-empty HTML to a plain fetch, so correct quotes could not be grounded and confidence dropped. 12 of the 18 queued apps were queued for this reason and turned out to be right on every field checked.",
+    "<b>Ambiguous identity.</b> 'Paygent Connect' matches a Japanese payment gateway, an unrelated crypto wallet and an NMI reseller brand; no primary doc could be found. Left as partner-gated with low confidence. 'Consensus' has an MCP in the official registry - but it belongs to goconsensus.com (sales demos), not consensus.app; the agent caught that itself.",
+    "<b>CLIs are not APIs.</b> Sherlock and Mermaid CLI have no hosted API. They are buildable as local agent skills, not as Composio toolkits; the verdict rule marks them red with blocker 'CLI, not an API' and breadth was reset to unknown by hand."
+  ],
+  "failures": [
+    "<b>Pass 2 called Attio 'paid plan'.</b> It quoted 'API and webhook access' from the pricing page but did not see which columns had the tick. Fixed by browser check.",
+    "<b>Pass 2 called Slack's MCP 'community'</b> although Slack's official mcp.slack.com went GA in February 2026 (pass 1, with less context, had it right). Registry and GitHub hits for community servers outweighed the vendor changelog. Fixed by hand.",
+    "<b>The first merge made MCP <em>worse</em> than pass 2 alone</b> (71% vs 54% on the gold set): registries index community servers but lag vendor-hosted remote MCPs, so registry 'community' votes outvoted grounded vendor evidence. Fixed by treating 'official' as an existence claim that registry silence cannot refute, and by adding a live probe that POSTs an MCP <code>initialize</code> to the claimed endpoint (mcp.systeme.io/mcp answers 405/401 - it exists).",
+    "<b>My own gold labels were wrong 4 times</b> (all on MCP: Plain, Pumble, systeme.io, Amazon SP-API). The agent's grounded quotes and the endpoint probe caught them; the labels were corrected only after re-reading the primary source. They are listed in gold.json under _gold_corrections.",
+    "<b>The judge cannot ground quotes on JavaScript-rendered docs</b>, which produced false low-confidence flags for 12 apps. A headless-browser fetch in the judge would fix this; it was out of budget.",
+    "<b>Composio SDK could not be exercised live:</b> the provided key returned 401 on every call. The catalog data came from Composio's public toolkit index instead (same fields). Independently of that catalog, pass 2 agreed with Composio's declared auth on 60/67 overlapping toolkits; the 7 differences are all Composio '<em>_mcp</em>' wrapper toolkits whose auth is 'Composio link', not the vendor API's auth.",
+    "<b>'Final' accuracy on the gold set is 100% by construction</b> - the corrections were found through the same review. The honest generalization estimate is the <b>merged 95%</b> (before any human touch), and the pass 1 to pass 2 jump (85% to 97%) is the value of fetching primary docs and demanding verbatim quotes.",
+    "<b>Paygent Connect defeated the agent and me.</b> No primary documentation for a product with that exact name could be found."
+  ]
+}

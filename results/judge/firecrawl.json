@@ -1,9 +1,72 @@
 {
   "name": "Firecrawl",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 5,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.firecrawl.dev/api-reference/introduction",
+      "quote": "Authorization: Bearer fc-123456789",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.firecrawl.dev/mcp-server",
+      "quote": "https://mcp.firecrawl.dev/v2/mcp-oauth",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.firecrawl.dev/pricing",
+      "quote": "1,000 credits / month",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.firecrawl.dev/mcp-server",
+      "quote": "This is a server URL for your MCP client, not a page to open directly in a browser.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.firecrawl.dev/api-reference/introduction",
+      "quote": "Authorization: Bearer fc-123456789",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://mcp.firecrawl.dev/v2/mcp",
+    "status": 200,
+    "content_type": "text/event-stream",
+    "www_authenticate": null,
+    "alive": true,
+    "body": "event: message\nid: bf635302-9563-4c98-ac75-fddc57f6105a_1789592593002_0000_o0e\ndata: {\"result\":{\"protocolVersion\":\"2025-"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ]
+  }
 }

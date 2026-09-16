@@ -1,9 +1,83 @@
 {
   "name": "systeme.io",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.systeme.io/reference",
+      "quote": "attach your API key to the X-API-Key header of each request",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://systeme.io/pricing",
+      "quote": "the free plan never expires and does not require a credit card",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+      "quote": "Give your key a name, set an expiration date, and click Save",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developer.systeme.io/llms.txt",
+      "quote": "Contact - Create, retrieve, update, delete, and list",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.526
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+      "quote": "This is an initial release implementation and does not yet support the recommended authentication method (OAuth).",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+      "quote": "API calls from a server-side environment",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.404
+    }
+  ],
+  "grounding_rate": 0.67,
+  "mcp_probe": {
+    "url": "https://mcp.systeme.io/mcp",
+    "status": 401,
+    "content_type": "text/html; charset=UTF-8",
+    "www_authenticate": "Bearer resource_metadata=\"https://mcp.systeme.io/.well-known/oauth-protected-resource/mcp\", scope=\"mcp:full\"",
+    "alive": true,
+    "body": ""
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

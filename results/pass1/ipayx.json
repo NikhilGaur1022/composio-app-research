@@ -1,9 +1,48 @@
 {
-  "ok": false,
-  "result": null,
-  "cost_usd": 0.1003951,
-  "turns": 6,
-  "seconds": 29.3,
-  "is_error": true,
-  "error": "no structured output"
+  "ok": true,
+  "result": {
+    "one_liner": "iPayX is a rail-agnostic FX forensic audit layer for B2B payments that audits hidden costs across SWIFT, SEPA, Stablecoin, and Card rails.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://ipayx.ai/docs",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/Ipayx-stellar/mcp-fx-audit"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://mcpservers.org/servers/ipayx-technologies/mcp-fx-audit",
+        "quote": "IPAYX_API_KEY environment variable is optional for live provider quotes"
+      },
+      {
+        "field": "access",
+        "url": "https://glama.ai/mcp/connectors/io.github.Ipayx-stellar/fx-audit",
+        "quote": "you can get a free key at ipayx.ai"
+      },
+      {
+        "field": "api_type",
+        "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+        "quote": "the mcp-fx-audit server uses HTTP transport with the endpoint https://mcp.ipayx.ai/mcp"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+        "quote": "MCP server for iPayX Protocol — audit FX fees, compare currency margins and score cross-border invoices"
+      }
+    ],
+    "confidence": 0.72,
+    "notes": "iPayX Protocol offers free API key access with optional paid model using RLUSD on XRPL. Direct documentation at ipayx.ai/docs not accessible via WebSearch; assessment based on GitHub and MCP server information. API breadth unknown due to search constraints."
+  },
+  "cost_usd": 0.1124769,
+  "turns": 7,
+  "seconds": 35.6,
+  "is_error": false,
+  "error": null
 }

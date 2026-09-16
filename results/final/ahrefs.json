@@ -3,7 +3,7 @@
   "name": "Ahrefs",
   "category": "Data, SEO and Scraping",
   "hint": "ahrefs.com/api",
-  "one_liner": "SEO and backlink analysis platform providing API access to search, domain, and competitor data for paid subscribers.",
+  "one_liner": "Ahrefs is an SEO and backlink/keyword research platform that exposes a REST API v3 (Site Explorer, Keywords Explorer, Rank Tracker, Site Audit, etc.) and an official MCP server for AI agent access.",
   "auth_methods": [
     "api_key",
     "oauth2"
@@ -11,26 +11,28 @@
   "access": "paid_plan",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://docs.ahrefs.com",
+  "docs_url": "https://docs.ahrefs.com/docs/api/reference/introduction",
   "mcp": {
     "status": "community",
-    "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/api-guide"
+    "url": "https://github.com/ahrefs/ahrefs-mcp-server"
   },
   "verdict": "yellow",
   "score": 71,
   "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "yellow",
+  "confidence": 0.75,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.5,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass2": [
         "api_key",
         "oauth2"
       ],
@@ -40,21 +42,73 @@
       ]
     },
     "access": {
+      "pass2": "paid_plan",
       "pass1": "paid_plan"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "unknown",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "official",
       "pass1": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.ahrefs.com",
+      "quote": "Implement OAuth 2.0 authorization",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3-for-enterprise-plan",
+      "quote": "Using API v3 from any of the above methods is possible for Lite and higher subscription plans",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/ahrefs/ahrefs-mcp-server",
+      "quote": "Official Ahrefs MCP Server",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.ahrefs.com/en/articles/6559232-about-api-v3-for-enterprise-plan",
+      "quote": "Using API v3 from any of the above methods is possible for Lite and higher subscription plans",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.ahrefs.com/docs/api/reference/introduction",
+      "quote": "Authorization: Bearer YOUR_API_KEY",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.ahrefs.com/docs/api/reference/introduction",
+      "quote": "API v3 provides access to Site Explorer, Keywords Explorer, SERP Overview, Rank Tracker, Site Audit, Brand Radar, and management endpoints",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.ahrefs.com",
+      "quote": "Connect Ahrefs data to AI assistants and agents to enhance their answers with real marketing insights",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "one_liner",
+      "url": "https://docs.ahrefs.com",
+      "quote": "Connect Ahrefs data to AI assistants and agents to enhance their answers with real marketing insights",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/ahrefs",
@@ -88,7 +142,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "API requires paid Lite plan ($129/mo) or higher for access. Bearer token and OAuth 2.0 are primary auth methods. Official MCP server available. API v2 deprecated as of Nov 2025; v3 is current.",
+  "notes": "API v3 is REST, key-based (Bearer token in Authorization header), no free tier — requires Lite plan or higher (paid). Ahrefs Connect offers OAuth 2.0 for third-party developer integrations. Ahrefs also publishes an official hosted MCP server (api.ahrefs.com/mcp/mcp) available to Lite+ paid plans, using OAuth for client authorization. Older precomputed signal calling it \"enterprise_only\" appears outdated/imprecise — actual gate is any paid plan (Lite+), not Enterprise-only. Endpoint count/breadth not confirmed from a directly fetched reference page (several docs sub-pages 404'd for the fetch tool), so marked unknown rather than guessed.",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -100,6 +154,17 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.112
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.39499999999999996
 }

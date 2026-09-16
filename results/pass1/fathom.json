@@ -1,9 +1,56 @@
 {
-  "ok": false,
-  "result": null,
-  "cost_usd": 0.10999039999999999,
-  "turns": 6,
-  "seconds": 35.2,
-  "is_error": true,
-  "error": "no structured output"
+  "ok": true,
+  "result": {
+    "one_liner": "AI-powered meeting assistant that records, transcribes, and generates summaries with meeting insights and action items.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://api-docs.fathom.global/",
+    "mcp": {
+      "status": "official",
+      "url": "https://help.fathom.video/en/articles/11497793"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://pipeline.zoominfo.com/sales/fathom-api-review",
+        "quote": "API access is available on all plan tiers including the free plan. The developer docs are public, the OpenAPI spec is downloadable, and you can generate an API key and start making calls without upgrading."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.fathom.ai/sdks/authentication",
+        "quote": "You generate an API key from the API Access section of your Settings page and pass it in the header to authenticate."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://api-docs.fathom.global/usage.html",
+        "quote": "For multi-tenant apps or marketplace integrations, OAuth 2.0 is required so each Fathom user can authorize your app against their own account without sharing API keys."
+      },
+      {
+        "field": "api_type",
+        "url": "https://api-docs.fathom.global/reference/rest.html",
+        "quote": "Fathom provides two methods of access to data via the API: a RESTful HTTP API, and client SDKs."
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.fathom.video/en/articles/11497793",
+        "quote": "Fathom MCP: Connect Claude & ChatGPT"
+      }
+    ],
+    "confidence": 0.82,
+    "notes": "Fathom offers free API access on all plans with multiple authentication options. REST API is well-documented and supports OAuth 2.0 for integrations. Official MCP server available for AI assistants. API breadth unknown from search results but appears to cover core meeting data operations."
+  },
+  "cost_usd": 0.11508750000000001,
+  "turns": 7,
+  "seconds": 41.2,
+  "is_error": false,
+  "error": null
 }

@@ -3,34 +3,40 @@
   "name": "Clay",
   "category": "Data, SEO and Scraping",
   "hint": "clay.com",
-  "one_liner": "Clay is a data enrichment and automation platform that provides API access for prospecting, data enhancement, and workflow automation with self-serve credentials.",
+  "one_liner": "Clay is a GTM data enrichment and outbound automation platform (100+ data providers, AI research agent 'Claygent', and workflow tables) that exposes a public HTTP API and an official MCP server for external/agent access.",
   "auth_methods": [
+    "api_key",
     "other"
   ],
-  "access": "self_serve_free",
+  "access": "paid_plan",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://university.clay.com/docs",
+  "docs_url": "https://developers.clay.com/public-api/authentication.md",
   "mcp": {
     "status": "official",
-    "url": "https://github.com/bpw-civic/clay-mcp-server"
+    "url": "https://api.clay.com/v3/mcp"
   },
-  "verdict": "green",
-  "score": 88,
-  "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.83,
-  "grounding_rate": null,
+  "verdict": "yellow",
+  "score": 73,
+  "blocker": "enterprise_only",
+  "model_verdict": "yellow",
+  "confidence": 0.53,
+  "agreement": 0.84,
+  "grounding_rate": 0.12,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+    "only 12% of quotes grounded in cited pages"
   ],
-  "auto_notes": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs paid_plan)"
+  ],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "other"
+      ],
+      "pass2": [
+        "api_key"
       ],
       "pass1": [
         "api_key",
@@ -39,23 +45,76 @@
       ]
     },
     "access": {
+      "pass2": "paid_plan",
       "pass1": "self_serve_free",
       "docs_signal": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "small",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
       "composio_wraps_mcp": "official",
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.clay.com/public-api/authentication.md",
+      "quote": "Create one under Settings → Account → API keys (beta).",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.clay.com/public-api/authentication.md",
+      "quote": "The required header is clay-api-key with your personal API key value.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.clay.com/pricing",
+      "quote": "Clay API access",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.clay.com/pricing",
+      "quote": "Customers are still welcome to use their own API keys for data enrichment or AI in Clay. Each run will count as one Action, but no Data Credit will be used.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.clay.com/llms.txt",
+      "quote": "POST /search/query-mode, GET /search/query-mode/reference",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.clay.com/llms.txt",
+      "quote": "Search Operations, Routine Execution, Batch Processing, Table Queries, Workspace Management, Workflow Runs",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.clay.com/guides/clay-mcp",
+      "quote": "The Clay remote MCP server is a hosted Model Context Protocol endpoint at https://api.clay.com/v3/mcp",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.clay.com/pricing",
+      "quote": "Clay API access",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/clay_mcp",
@@ -66,6 +125,12 @@
       "field": "auth_methods",
       "url": "https://api.clay.com/v3/sources",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"type\":\"Unauthorized\",\"message\":\"You must be logged in\",\"details\":null}",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://api.clay.com/v3/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
       "grounded": "probe"
     }
   ],
@@ -88,7 +153,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Clay provides multiple programmatic access methods: HTTP API with API key/JWT auth (undocumented endpoint count), official MCP server, and webhooks. API documentation is sparse (no OpenAPI spec or clear base URL), but self-serve credentials and official MCP integration make it buildable as an agent toolkit. Free tier access available.",
+  "notes": "Clay launched a new Public API (api.clay.com/public/v0, July 2026) authenticated with a single 'clay-api-key' header; key creation is self-serve under Settings→Account→API keys (beta) with no explicit plan gate stated in the auth docs. However, Clay's own pricing page lists 'Clay API access' as an Enterprise-tier (custom pricing, contact sales) feature, distinct from the Growth-tier 'Integrate with any HTTP API' (outbound enrichment columns) and Free-tier 'bring your own third-party API key' features — creating ambiguity about whether the beta Public API is broadly self-serve or Enterprise-only. Sided with the pricing page as the more authoritative access signal, hence paid_plan/enterprise_only with moderate confidence. Separately, Clay publishes an official hosted remote MCP server (api.clay.com/v3/mcp) with a free-credit on-ramp (500 credits on first connect per third-party summary), which is not gated the same way.",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -101,6 +166,16 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.152
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "yellow",
+    "blocker": "enterprise_only",
+    "confidence": 0.6
+  },
+  "cost_usd": 0.502
 }

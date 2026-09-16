@@ -1,9 +1,77 @@
 {
   "name": "Waterfall.io",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "quote": "All requests require an API key in the x-api-key header.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.waterfall.io/",
+      "quote": "x-api-key: your_key",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.waterfall.io/pricing",
+      "quote": "Before anything is signed we run a benchmark on your data at no cost",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.waterfall.io/pricing",
+      "quote": "Book a call to hear more... Talk to our team (most likely one of the founders) to share your use case",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.798
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "quote": "All requests require an API key in the x-api-key header.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.waterfall.io/pricing",
+      "quote": "Book a call to hear more... Talk to our team (most likely one of the founders) to share your use case",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.798
+    }
+  ],
+  "grounding_rate": 0.67,
+  "mcp_probe": {
+    "url": "",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

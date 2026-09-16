@@ -3,57 +3,131 @@
   "name": "SE Ranking",
   "category": "Data, SEO and Scraping",
   "hint": "seranking.com/api",
-  "one_liner": "SEO and marketing data API offering project management, ranking tracking, and keyword research with free trial then paid subscription",
+  "one_liner": "SE Ranking is an SEO/competitor-research platform offering a Data API and Project API for keyword, backlink, rank-tracking and site-audit data.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "bearer_token",
+    "oauth2"
   ],
-  "access": "self_serve_trial",
+  "access": "paid_plan",
   "api_type": "rest",
   "api_breadth": "medium",
-  "docs_url": "https://seranking.com/api/",
+  "docs_url": "https://seranking.com/api/data/getting-started/",
   "mcp": {
-    "status": "community",
-    "url": "https://seranking.com/api/integrations/mcp/"
+    "status": "official",
+    "url": "https://api.seranking.com/mcp"
   },
   "verdict": "yellow",
-  "score": 90,
+  "score": 77,
   "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.85,
-  "grounding_rate": null,
+  "model_verdict": "yellow",
+  "confidence": 0.54,
+  "agreement": 0.84,
+  "grounding_rate": 0.0,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+    "only 0% of quotes grounded in cited pages"
   ],
-  "auto_notes": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_trial vs paid_plan)"
+  ],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
       "pass1": [
         "api_key",
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "paid_plan",
       "pass1": "self_serve_trial",
       "docs_signal": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "unknown",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "official"
     }
   },
   "evidence": [
     {
       "field": "auth_methods",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "quote": "Include an `Authorization` header in your request, with the value `Token YOUR_API_KEY`.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "quote": "pass the key as a URL query parameter named `apikey`.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "quote": "select SE Ranking and click Connect to authorize",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "All Essential, Pro, Business, Core, Growth, and Enterprise plans include Data API access with a monthly credit allowance.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "The Project API is available on every current subscription plan: Essential, Pro, Business, Core, Growth, and Enterprise. There is nothing extra to buy.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "quote": "The base URL for all requests is `https://api.seranking.com`.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "quote": "a standardized interface that allows any compatible AI model or agent to access your SE Ranking data in a simple and secure way",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "quote": "claude mcp add --transport http se-ranking https://api.seranking.com/mcp",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "API credentials are available to paid subscription plan holders only",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
       "url": "https://api4.seranking.com/sites",
       "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: {\"message\":\"No token\"}",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://api.seranking.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
       "grounded": "probe"
     }
   ],
@@ -74,7 +148,7 @@
     "www_authenticate": null,
     "inferred": "bearer_token"
   },
-  "notes": "SE Ranking provides well-documented REST APIs with both API key and OAuth authentication. Free 14-day trial with no credit card required makes it buildable immediately, but production use requires a paid subscription (Core $129/mo minimum). Official MCP server support available. Verdict is yellow due to paid requirement after trial period.",
+  "notes": "Single API key (via Authorization: Token header or apikey query param) authenticates both the Data API and Project API; no free/trial tier documented, requires an active paid subscription (Essential+). Vendor also publishes an official open-source MCP server (MIT license, hosted at api.seranking.com/mcp) exposing 160+ tools, connectable via OAuth for clients like Claude Desktop/Code — but the underlying account still needs a paid plan since MCP calls draw on the same API credits.",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -86,6 +160,18 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.118
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.298
 }

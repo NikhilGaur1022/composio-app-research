@@ -1,73 +1,53 @@
 {
   "ok": true,
   "result": {
-    "access": "self_serve_free",
+    "access": "paid_plan",
     "api_breadth": "small",
     "api_type": "rest",
     "auth_methods": [
       "bearer_token"
     ],
-    "blocker": "none",
-    "confidence": 0.75,
+    "blocker": "paid_only",
+    "confidence": 0.62,
     "docs_url": "https://www.ipayx.ai/docs/api",
     "evidence": [
+      {
+        "field": "one_liner",
+        "url": "https://www.ipayx.ai",
+        "quote": "See the real cost of every FX transaction. Run a free audit in under 60 seconds."
+      },
       {
         "field": "auth_methods",
         "url": "https://www.ipayx.ai/docs/api",
         "quote": "Every request requires a Bearer token in the `Authorization` header. Keys start with `ipx_live_`."
       },
       {
-        "field": "auth_methods",
-        "url": "https://www.ipayx.ai/docs/mcp-server",
-        "quote": "Method: HTTP Bearer token in `Authorization` header. Format: `ipx_live_xxxxx` (production)"
-      },
-      {
-        "field": "access",
-        "url": "https://www.ipayx.ai/pricing",
-        "quote": "5 audits, lifetime"
-      },
-      {
-        "field": "access",
-        "url": "https://www.ipayx.ai/pricing",
-        "quote": "Banks and institutions: contact sales."
-      },
-      {
         "field": "api_type",
-        "url": "https://www.ipayx.ai/docs/api",
-        "quote": "POST /audit – Forensic analysis of individual transactions, returning a 0–10 score and hidden spread calculation"
-      },
-      {
-        "field": "api_breadth",
         "url": "https://www.ipayx.ai/docs/api",
         "quote": "POST /audit ... GET /rates ... POST /audit/document"
       },
       {
-        "field": "mcp",
-        "url": "https://www.ipayx.ai/docs/mcp-server",
-        "quote": "Production MCP: `https://hvujzsdwcoweirroubeh.supabase.co/functions/v1/mcp-server`"
+        "field": "access",
+        "url": "https://www.ipayx.ai/developers",
+        "quote": "Developer — $99/mo · 100 audits/mo · sandbox"
       },
       {
         "field": "mcp",
         "url": "https://www.ipayx.ai/docs/mcp-server",
-        "quote": "How to get a key: Open your iPayX dashboard → API keys"
-      },
-      {
-        "field": "verdict",
-        "url": "https://www.ipayx.ai/docs/mcp-server",
-        "quote": "10 audits / day per API key (free)"
+        "quote": "Method: HTTP Bearer token in `Authorization` header. Format: `ipx_live_xxxxx` (production) or `ipx_test_xxxxx` (sandbox)."
       }
     ],
     "mcp": {
       "status": "official",
       "url": "https://www.ipayx.ai/docs/mcp-server"
     },
-    "notes": "iPayX is a FINTRAC-registered FX forensic audit API (MSB C10001283) that audits bank/card-network FX rates vs live mid-market across 300+ currencies. Self-serve signup grants a free API key (5 lifetime audits via REST, 10/day via MCP free tier), with Bearer token auth (`ipx_live_...`). Small REST surface (3 endpoints: POST /audit, GET /rates, POST /audit/document) plus webhooks. Vendor publishes an official MCP server alongside the REST API. Production/enterprise FINTRAC-signed reporting for banks routes to sales, but that's an enterprise upsell, not a gate on basic self-serve API access.",
-    "one_liner": "iPayX is a FINTRAC-registered FX forensic audit API/MCP service that scores bank and card FX rates against live mid-market rates across 300+ currencies.",
-    "verdict": "green"
+    "notes": "iPayX is an FX-audit forensic tool (compares bank/card FX rates to mid-market). Docs describe a small REST API (3 endpoints: /audit, /rates, /audit/document) using Bearer-token auth (key prefixes ipx_live_/ipx_test_), plus a vendor-hosted MCP server (same bearer-token auth) documented at /docs/mcp-server for Claude/Perplexity/n8n. The public pricing/developers page lists only paid tiers, cheapest 'Developer' plan at $99/mo (100 audits/mo, includes sandbox) — no clearly self-serve free API tier was confirmed, though a 'Test Sandbox' UI page (/mcp-test) exists that may allow limited unauthenticated demo calls (unconfirmed, page didn't clearly state whether it requires login). No OAuth2/JWT/API-key-header scheme found — auth is HTTP Bearer only. Composio catalog and MCP registry only show community/unofficial repos, but the vendor's own docs describe and host an official MCP server, so mcp.status is set to official rather than community.",
+    "one_liner": "iPayX is a forensic FX-audit platform/API that scores international payment transactions against live mid-market rates to surface hidden bank/card markups.",
+    "verdict": "yellow"
   },
-  "cost_usd": 0.1804136,
-  "turns": 9,
-  "seconds": 63.5,
+  "cost_usd": 0.20527620000000005,
+  "turns": 10,
+  "seconds": 94.6,
   "is_error": false,
   "error": null
 }

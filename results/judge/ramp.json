@@ -110,6 +110,14 @@
     }
   ],
   "grounding_rate": 0.77,
+  "mcp_probe": {
+    "url": "https://mcp.ramp.com/mcp",
+    "status": 401,
+    "content_type": "application/json",
+    "www_authenticate": "Bearer resource_metadata=\"https://mcp.ramp.com/.well-known/oauth-protected-resource/mcp\"",
+    "alive": true,
+    "body": "{\"detail\":\"No access token provided\"}"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

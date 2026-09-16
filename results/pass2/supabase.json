@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest_and_graphql",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.82,
+    "docs_url": "https://supabase.com/docs/reference/api/introduction",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "PATs are tokens with a custom expiry that you manually generate to access the Management API."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "allows your application to generate tokens on behalf of a Supabase user, providing secure and limited access to their account without requiring their credentials"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "Authorization: Bearer <access_token>"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://supabase.com/docs/guides/api",
+        "quote": "provisioned behind an API gateway with key-auth enabled"
+      },
+      {
+        "field": "api_type",
+        "url": "https://supabase.com/docs/guides/api",
+        "quote": "a thin API layer on top of Postgres"
+      },
+      {
+        "field": "api_type",
+        "url": "https://supabase.com/docs/guides/graphql/api",
+        "quote": "In our API, each SQL table is reflected as a set of GraphQL types."
+      },
+      {
+        "field": "access",
+        "url": "https://supabase.com/pricing",
+        "quote": "Unlimited API requests"
+      },
+      {
+        "field": "access",
+        "url": "https://supabase.com/pricing",
+        "quote": "Free projects are paused after 1 week of inactivity. Limit of 2 active projects."
+      },
+      {
+        "field": "mcp",
+        "url": "https://supabase.com/docs/guides/getting-started/mcp",
+        "quote": "The MCP server repository is available at github.com/supabase/mcp"
+      },
+      {
+        "field": "verdict",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "All resources created via the API are subject to the pricing detailed on our Pricing pages"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/supabase/mcp"
+    },
+    "notes": "Two distinct public API surfaces: (1) Management API (api.supabase.com) for org/project admin, auth via Personal Access Tokens or OAuth2, sent as Authorization: Bearer <token>; (2) per-project auto-generated Data API (PostgREST-based REST + pg_graphql-based GraphQL) authenticated via project API keys (anon/service_role) behind a key-auth gateway, layered with Postgres Row Level Security. Free tier gives unlimited API requests but pauses inactive free projects after 1 week and caps at 2 active projects. Management API alone spans 15+ resource categories (projects, organizations, branches, functions, storage, auth config, secrets, etc.) with multiple endpoints each, comfortably >300 total when combined with per-table Data API surface, hence \"large\" breadth (approximate, no single endpoint-count page fetched). Official MCP server published by Supabase at github.com/supabase/mcp with a hosted endpoint at mcp.supabase.com/mcp, alongside numerous community MCP servers (self-hosted variants, lite versions) per registry hints.",
+    "one_liner": "Supabase is an open-source Firebase alternative providing a hosted Postgres database with auto-generated REST/GraphQL APIs, auth, storage, edge functions, and a Management API for provisioning projects.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1758202,
+  "turns": 8,
+  "seconds": 59.5,
+  "is_error": false,
+  "error": null
+}

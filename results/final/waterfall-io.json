@@ -3,11 +3,11 @@
   "name": "Waterfall.io",
   "category": "Data, SEO and Scraping",
   "hint": "waterfall.io (contact/company intel)",
-  "one_liner": "B2B data enrichment platform providing contact, company, and email verification through a REST API",
+  "one_liner": "Waterfall.io is a B2B contact/company data platform that aggregates 30+ data vendors to provide prospecting, contact enrichment, and email verification via API.",
   "auth_methods": [
     "api_key"
   ],
-  "access": "paid_plan",
+  "access": "partner_gated",
   "api_type": "rest",
   "api_breadth": "small",
   "docs_url": "https://docs.waterfall.io/v1/introduction",
@@ -15,39 +15,85 @@
     "status": "community",
     "url": null
   },
-  "verdict": "yellow",
-  "score": 71,
-  "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
+  "verdict": "red",
+  "score": 56,
+  "blocker": "partner_gate",
+  "model_verdict": "red",
+  "confidence": 0.76,
+  "agreement": 0.92,
+  "grounding_rate": 0.67,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+    "gated/no-API finding with weak grounding needs a human eye"
   ],
-  "auto_notes": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs partner_gated)"
+  ],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "api_key"
+      ],
       "pass1": [
         "api_key"
       ]
     },
     "access": {
+      "pass2": "partner_gated",
       "pass1": "paid_plan"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "small",
       "pass1": "small"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "none",
       "pass1": "none"
     }
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "quote": "All requests require an API key in the x-api-key header.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.waterfall.io/",
+      "quote": "x-api-key: your_key",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.waterfall.io/pricing",
+      "quote": "Before anything is signed we run a benchmark on your data at no cost",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "quote": "All requests require an API key in the x-api-key header.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.waterfall.io/pricing",
+      "quote": "Book a call to hear more... Talk to our team (most likely one of the founders) to share your use case",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.waterfall.io/pricing",
+      "quote": "Book a call to hear more... Talk to our team (most likely one of the founders) to share your use case",
+      "grounded": "not_grounded"
+    }
+  ],
   "composio": {
     "in_catalog": false,
     "slug": null,
@@ -65,7 +111,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Waterfall.io is a REST API-based B2B data enrichment platform using API key authentication. Access appears to be usage-based/paid with no free tier indicated in search results. Multiple endpoints confirmed for prospecting, contact enrichment, and email verification. Exact endpoint count unknown (estimated small <50). No evidence of MCP server or free tier access found. Lower confidence due to inability to confirm whether there is a free trial or dev sandbox available.",
+  "notes": "Waterfall.io has a real REST API (docs.waterfall.io/v1) with ~13 documented endpoints (prospecting, contact/company enrichment, email verification, job-change detection) authenticated via a static x-api-key header — no OAuth. However there is no self-serve signup or public pricing/dashboard: the marketing site and pricing page repeatedly funnel prospects to \\\"Book a Call\\\", run a free data benchmark, then issue a custom usage-based quote before any API key is provisioned. This is sales/partner-gated access rather than a dev-portal signup, so despite having a normal REST+API-key surface, it is not buildable today without a sales relationship. MCP registry hints (waterfallbridge, mcp-email-waterfall-orchestrator) do not appear to reference this company's contact-intel product — likely false-positive name collisions with unrelated \\\"waterfall\\\" (e.g., email-waterfall routing) tools — so mcp.status is reported as none rather than community.",
   "pass1": {
     "auth_methods": [
       "api_key"
@@ -76,6 +122,16 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.11
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "red",
+    "blocker": "partner_gate",
+    "confidence": 0.62
+  },
+  "cost_usd": 0.369
 }

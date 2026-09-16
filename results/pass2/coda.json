@@ -1,18 +1,17 @@
 {
   "ok": true,
   "result": {
-    "one_liner": "Coda (rebranded \"Superhuman Docs\" after 2025 Grammarly/Superhuman deal) is a docs/spreadsheet hybrid workspace with a free REST API and an official MCP server for AI agent integration.",
+    "one_liner": "Coda (now rebranded Superhuman Docs) is a doc/table hybrid productivity platform with a REST API for docs, tables, rows, and formulas.",
     "auth_methods": [
-      "bearer_token",
-      "oauth2"
+      "bearer_token"
     ],
     "access": "self_serve_free",
     "api_type": "rest",
-    "api_breadth": "small",
+    "api_breadth": "medium",
     "docs_url": "https://docs.superhuman.com/developers/apis/v1",
     "mcp": {
       "status": "official",
-      "url": "https://docs.superhuman.com/apis/mcp"
+      "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp"
     },
     "verdict": "green",
     "blocker": "none",
@@ -20,12 +19,7 @@
       {
         "field": "auth_methods",
         "url": "https://docs.superhuman.com/developers/apis/v1",
-        "quote": "'Authorization': 'Bearer <your API token>'"
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://docs.superhuman.com/developers",
-        "quote": "Bearer token authentication via API tokens."
+        "quote": "Authorization: Bearer <your API token>"
       },
       {
         "field": "access",
@@ -33,32 +27,27 @@
         "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces."
       },
       {
-        "field": "api_type",
-        "url": "https://docs.superhuman.com/developers",
-        "quote": "RESTful API (v1) with a base endpoint at https://coda.io/apis/v1"
+        "field": "api_breadth",
+        "url": "https://docs.superhuman.com/developers/apis/v1",
+        "quote": "40+ endpoints across categories including Folders, Docs, Pages, Tables, Rows, Formulas, Controls, and Analytics"
       },
       {
         "field": "mcp",
-        "url": "https://docs.superhuman.com/developers",
-        "quote": "developers may also want to consider using the Superhuman Docs MCP server"
-      },
-      {
-        "field": "mcp",
-        "url": "https://docs.superhuman.com/apis/mcp",
-        "quote": "HTTP 401 Unauthorized (live vendor-hosted MCP endpoint requiring auth, at docs.superhuman.com)"
+        "url": "https://blog.superhuman.com/introducing-superhuman-docs/",
+        "quote": "Coda MCP is now available in public beta! Official connectors with OpenAI and Anthropic have already been launched."
       },
       {
         "field": "verdict",
         "url": "https://docs.superhuman.com/developers/apis/v1",
-        "quote": "all API scripts should check for HTTP 429 Too Many Requests errors and back off and retry the request"
+        "quote": "Base URL: https://coda.io/apis/v1"
       }
     ],
     "confidence": 0.72,
-    "notes": "Coda rebranded to \"Superhuman Docs\" in 2026 following the Grammarly/Superhuman merger; official docs now live at docs.superhuman.com (coda.io/developers 307-redirects there). API base endpoint remains https://coda.io/apis/v1. Auth is a personal API token sent as an HTTP Bearer token (functionally an API key); OAuth2+PKCE is documented for the MCP server per vendor help-center/blog pages (help.superhuman.com, blog.superhuman.com) referenced via search but not directly fetchable in this pass (403/401). api_breadth estimated \"small\" from long-standing knowledge of the Coda API's ~40-50 operations (Docs/Pages/Tables/Rows/Formulas/Controls/Permissions/Analytics); the pre-computed apis.guru spec pointed to an unrelated codat.io accounting API and was disregarded as a lookup mismatch."
+    "notes": "Coda was acquired into the Superhuman product suite and is being rebranded \"Superhuman Docs\" (docs now live at docs.superhuman.com, coda.io/developers redirects there). The REST API uses a Bearer API token generated from account settings (self-serve, free tier included); createDoc requires Doc Maker/Admin workspace role but token generation itself is not gated. Could not directly verify OAuth2 support or the precise token-generation page (404s), and the OAuth discovery doc URL from precomputed context (coda.io/.well-known/oauth-authorization-server) was not independently confirmed — auth_methods may be incomplete if OAuth2 is also offered for third-party integrations. Official MCP server is in public beta with Anthropic/OpenAI connectors."
   },
-  "cost_usd": 0.28990699999999997,
-  "turns": 15,
-  "seconds": 97.1,
+  "cost_usd": 0.22820700000000002,
+  "turns": 13,
+  "seconds": 68.2,
   "is_error": false,
   "error": null
 }

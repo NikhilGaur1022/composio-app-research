@@ -1,9 +1,83 @@
 {
   "name": "Plaid",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "Almost all Plaid API endpoints require a client_id and secret. These may be sent either in the request body or in the headers PLAID-CLIENT-ID and PLAID-SECRET.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/docs/quickstart/",
+      "quote": "Get started with test credentials and life-like data.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "create an account on the Plaid Dashboard. Once you've completed the signup process and acknowledged our terms, we'll provide a live client_id and secret via the Dashboard.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.907
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.apis.guru/v2/specs/plaid.com/2020-09-14_1.334.0/openapi.json",
+      "quote": "198 endpoints",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.composio.dev/toolkits/plaid_mcp",
+      "quote": "wraps_official_mcp: true",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.388
+    },
+    {
+      "field": "verdict",
+      "url": "https://plaid.com/docs/quickstart/",
+      "quote": "Get started with test credentials and life-like data.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.67,
+  "mcp_probe": {
+    "url": "https://docs.composio.dev/toolkits/plaid_mcp",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!DOCTYPE html><html data-dpl-id=\"dpl_5udfx6JJ8brALvkGERKzGNg8Dkoj\" lang=\"en\" class=\"abcdiatype_71140e1b-module__nSDJta_"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

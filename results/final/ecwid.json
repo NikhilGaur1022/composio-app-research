@@ -3,52 +3,98 @@
   "name": "Ecwid",
   "category": "Ecommerce",
   "hint": "api-docs.ecwid.com",
-  "one_liner": "Ecwid is a cloud-based ecommerce platform for managing products, orders, customers, and storefront settings across online channels.",
+  "one_liner": "Ecwid is a hosted ecommerce platform (part of Lightspeed) offering a REST API to manage products, orders, customers, and storefront data.",
   "auth_methods": [
-    "bearer_token"
+    "api_key",
+    "oauth2"
   ],
-  "access": "paid_plan",
+  "access": "self_serve_free",
   "api_type": "rest",
   "api_breadth": "medium",
-  "docs_url": "https://api-docs.ecwid.com/reference/rest-api",
+  "docs_url": "https://docs.ecwid.com/api-reference",
   "mcp": {
     "status": "community",
-    "url": null
+    "url": "io.usefulapi/ecwid"
   },
-  "verdict": "yellow",
-  "score": 75,
-  "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.81,
+  "agreement": 0.93,
+  "grounding_rate": 0.67,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs self_serve_free)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
       "pass1": [
         "bearer_token",
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "paid_plan"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "medium",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "community",
       "pass1": "none"
     }
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://raw.githubusercontent.com/Ecwid/ecwid-api-docs/master/includes/_authentication.md",
+      "quote": "Ecwid supports oAuth2 protocol to provide applications with an easy way to authenticate and access store data on behalf of the user with access tokens.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "quote": "If you customize your own store, however, you can skip OAuth and easily get an access token for your store.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "quote": "Public token allows only public data to be received and is safe to use in public code",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://raw.githubusercontent.com/Ecwid/ecwid-api-docs/master/includes/_authentication.md",
+      "quote": "Both types of access tokens do not expire, so you can use them as long as the application is installed in a merchant's store.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://api-docs.ecwid.com/reference/rest-api",
+      "quote": "Ecwid API is a RESTful API with oAuth2 authentication.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://registry.modelcontextprotocol.io",
+      "quote": "io.usefulapi/ecwid",
+      "grounded": "not_grounded"
+    }
+  ],
   "composio": {
     "in_catalog": false,
     "slug": null,
@@ -66,7 +112,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "API access requires a paid subscription, but Ecwid offers free paid plan upgrades for qualifying development use cases. Buildable with yellow verdict due to paid requirement, though free alternatives exist for qualifying projects.",
+  "notes": "Ecwid REST API (docs.ecwid.com / api-docs.ecwid.com redirects there). Two credential paths: (1) OAuth2 authorization-code flow for public apps distributed to merchants, requiring the merchant to install the app and grant scopes — no partner gate or app-store review documented for using the API itself; (2) for a developer's own store, you can skip OAuth entirely and copy a static secret/public access token directly from the app dashboard (my.ecwid.com/#develop-apps) after free signup — functions like a personal API key. This makes it self-serve free. api_breadth is an estimate (products, orders, customers, categories, discounts, shipping/tax, webhooks, storefront) — did not enumerate the full endpoint list within budget, so treat as medium with moderate confidence. MCP is community-only (io.usefulapi/ecwid), not vendor-published.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -78,6 +124,17 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.108
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.302
 }

@@ -1,9 +1,47 @@
 {
-  "ok": false,
-  "result": null,
-  "cost_usd": 0.137719,
-  "turns": 6,
-  "seconds": 46.1,
-  "is_error": true,
-  "error": "no structured output"
+  "ok": true,
+  "result": {
+    "one_liner": "Open-source CLI tool that searches for usernames across 400+ social media sites and websites",
+    "auth_methods": [
+      "none"
+    ],
+    "access": "self_serve_free",
+    "api_type": "cli_only",
+    "api_breadth": "large",
+    "docs_url": "https://github.com/sherlock-project/sherlock",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "cli_not_api",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "Uses direct HTTP requests to publicly available URLs without authentication"
+      },
+      {
+        "field": "api_type",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "Primary interface is command-line tool; no official maintained API"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "Searches across 400+ social networks and websites"
+      },
+      {
+        "field": "verdict",
+        "url": "https://github.com/sherlock-project/api",
+        "quote": "Experimental REST API exists but has not been actively maintained since 2021"
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "Sherlock is an open-source CLI tool requiring no credentials. An experimental REST API exists but is unmaintained. Third-party wrappers like Apify provide REST API access with their own credentials. Agents can invoke Sherlock via CLI subprocess, but lack of an official maintained API makes integration suboptimal."
+  },
+  "cost_usd": 0.15225415000000003,
+  "turns": 4,
+  "seconds": 63.4,
+  "is_error": false,
+  "error": null
 }

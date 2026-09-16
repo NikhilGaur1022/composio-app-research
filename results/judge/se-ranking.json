@@ -1,9 +1,110 @@
 {
   "name": "SE Ranking",
-  "checked": 0,
+  "checked": 9,
   "grounded": 0,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "quote": "Include an `Authorization` header in your request, with the value `Token YOUR_API_KEY`.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.455
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "quote": "pass the key as a URL query parameter named `apikey`.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.417
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "quote": "select SE Ranking and click Connect to authorize",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.467
+    },
+    {
+      "field": "access",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "All Essential, Pro, Business, Core, Growth, and Enterprise plans include Data API access with a monthly credit allowance.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.41
+    },
+    {
+      "field": "access",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "The Project API is available on every current subscription plan: Essential, Pro, Business, Core, Growth, and Enterprise. There is nothing extra to buy.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.385
+    },
+    {
+      "field": "api_type",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "quote": "The base URL for all requests is `https://api.seranking.com`.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.428
+    },
+    {
+      "field": "mcp",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "quote": "a standardized interface that allows any compatible AI model or agent to access your SE Ranking data in a simple and secure way",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.406
+    },
+    {
+      "field": "mcp",
+      "url": "https://seranking.com/api/integrations/mcp/",
+      "quote": "claude mcp add --transport http se-ranking https://api.seranking.com/mcp",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.44
+    },
+    {
+      "field": "verdict",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "API credentials are available to paid subscription plan holders only",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.459
+    }
+  ],
+  "grounding_rate": 0.0,
+  "mcp_probe": {
+    "url": "https://api.seranking.com/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer resource_metadata=\"https://api.seranking.com/mcp/.well-known/oauth-protected-resource\"",
+    "alive": true,
+    "body": "{\"error\":\"unauthorized\",\"error_description\":\"A valid Bearer token is required. Authorize via the MCP OAuth flow.\"}"
+  },
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

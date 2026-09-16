@@ -64,6 +64,7 @@
       "mcp_registry": "community",
       "github": "community",
       "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "community"
     }
   },
@@ -126,6 +127,12 @@
       "field": "auth_methods",
       "url": "https://api.attio.com/v2/objects",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"status_code\":401,\"type\":\"auth_error\",\"code\":\"unauthorized\",\"message\":\"The Authorization header was not provided. Double check that you are including the header and that there is not a typo in the na",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.attio.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
       "grounded": "probe"
     }
   ],

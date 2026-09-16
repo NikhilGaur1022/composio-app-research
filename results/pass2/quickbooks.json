@@ -1,35 +1,45 @@
 {
   "ok": true,
   "result": {
-    "access": "self_serve_free",
-    "api_breadth": "large",
-    "api_type": "rest",
+    "one_liner": "QuickBooks Online is Intuit's cloud accounting platform, exposing a REST Accounting API (v3) for invoices, payments, customers, and financial data.",
     "auth_methods": [
       "oauth2"
     ],
-    "blocker": "none",
-    "confidence": 0.65,
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
     "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/NyxToolsDev/quickbooks-mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
     "evidence": [
       {
         "field": "auth_methods",
-        "url": "https://quickbooks.api.intuit.com/v3/company/1/companyinfo/1",
-        "quote": "Bearer realm=\"Intuit\""
+        "url": "https://dev.to/zuplo/quickbooks-api-complete-developers-guide-2026-3l77",
+        "quote": "The QuickBooks API uses OAuth 2.0 exclusively — there are no API keys or basic authentication options."
       },
       {
         "field": "auth_methods",
-        "url": "https://www.getknit.dev/blog/quickbooks-online-api-integration-guide-in-depth",
-        "quote": "OAuth 2.0 allows users to log into their QuickBooks account via the OAuth 2.0 flow."
+        "url": "https://intuit.github.io/QuickBooks-V3-PHP-SDK/authorization.html",
+        "quote": "Most recent QuickBooks Online apps will have OAuth 2.0 as their default authentication protocol."
       },
       {
-        "field": "api_breadth",
-        "url": "https://www.getknit.dev/blog/quickbooks-online-api-integration-guide-in-depth",
-        "quote": "Each entity supports full and sparse update operations"
+        "field": "access",
+        "url": "https://dev.to/zuplo/quickbooks-api-complete-developers-guide-2026-3l77",
+        "quote": "Sign in at developer.intuit.com (free account)"
       },
       {
-        "field": "verdict",
-        "url": "https://www.getknit.dev/blog/quickbooks-online-api-integration-guide-in-depth",
-        "quote": "QuickBooks Online imposes rate limits to restrict the number of requests in a specified timeframe."
+        "field": "access",
+        "url": "https://dev.to/zuplo/quickbooks-api-complete-developers-guide-2026-3l77",
+        "quote": "create up to five sandbox companies per developer account"
+      },
+      {
+        "field": "api_type",
+        "url": "https://quickbooks.api.intuit.com/v3/company/1/companyinfo/1",
+        "quote": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> <IntuitResponse time=\"2026-09-16T13:21:18.009-07:00\" xmlns=\"http://schema.intuit.com/finance/v3\">     <Fault type=\"AUTHENTICATION\">         <Err"
       },
       {
         "field": "mcp",
@@ -37,17 +47,12 @@
         "quote": "wraps_official_mcp: false"
       }
     ],
-    "mcp": {
-      "status": "community",
-      "url": "https://github.com/NyxToolsDev/quickbooks-mcp-server"
-    },
-    "notes": "developer.intuit.com is a JS-rendered SPA that WebFetch could not extract text from (pages returned as truncated/empty), so auth/getting-started claims lean on the unauthenticated API probe (401 + WWW-Authenticate: Bearer realm=\\\"Intuit\\\", confirming OAuth2 bearer tokens) and secondary sources (Intuit's own Medium/help-article summaries, getknit.dev) rather than a directly quoted primary page. Multiple independent secondary sources consistently describe: free self-serve signup at developer.intuit.com, automatic sandbox company creation (up to 5 per account), OAuth 2.0 Authorization Code flow exclusively (no API keys/basic auth), Client ID/Secret issued per app, and a rate limit around 500 req/min/company. QuickBooks spans multiple APIs (Accounting ~30 entities with CRUD+query, Payments, Payroll, Reports), pushing combined endpoint count into the hundreds (Composio wraps 114 discrete tools alone), hence \"large\". MCP support is community-only (caribooks/quickbooks, NyxToolsDev/quickbooks-mcp-server on registries); no official Intuit-published MCP server found. Confidence lowered because the primary developer.intuit.com pages could not be directly fetched/quoted within this pass.",
-    "one_liner": "QuickBooks Online is Intuit's cloud accounting platform, exposing a REST Accounting API (plus separate Payments and Payroll APIs) for invoices, expenses, customers, and financial reporting.",
-    "verdict": "green"
+    "confidence": 0.82,
+    "notes": "Official developer.intuit.com pages are a JS-rendered SPA that WebFetch could not extract text from (returned only truncated shells) despite multiple attempts on get-started and OAuth2 docs pages; findings corroborated instead via Intuit's own GitHub SDK docs (intuit.github.io, an Intuit-owned domain) and a third-party developer guide, plus the deterministic unauth API probe confirming a live v3 REST endpoint requiring Bearer/OAuth2 tokens. No official Intuit MCP server found; only community MCP servers exist in the registry. API breadth estimated medium based on ~30+ accounting entities each supporting multiple CRUD/query operations (Composio wraps 114 tools over this API)."
   },
-  "cost_usd": 0.3341056,
+  "cost_usd": 0.23366980000000004,
   "turns": 12,
-  "seconds": 142.1,
+  "seconds": 88.8,
   "is_error": false,
   "error": null
 }

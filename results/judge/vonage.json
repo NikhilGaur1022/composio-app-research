@@ -1,9 +1,99 @@
 {
   "name": "Vonage",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 6,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "access",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "an API key and secret that you can use to access our APIs",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "We'll give you some free credit when you first open your account and you can top up when you run low.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "API key and secret sent Base64 encoded in the Authorization header",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "a compact, URL-safe means of representing claims to be transferred between two parties",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/api/sms",
+      "quote": "Your API key. Only required if setting sig.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.362
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.vonage.com/en/home",
+      "quote": "rest",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-documentation-mcp-server",
+      "quote": "We're excited to announce the Vonage Documentation MCP Server — a new way to access Vonage docs directly from your development environment or AI assistant.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "Access to our APIs is charged on a per-request basis.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.75,
+  "mcp_probe": {
+    "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-documentation-mcp-server",
+    "status": 0,
+    "alive": false,
+    "error": "ReadTimeout"
+  },
+  "by_field": {
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

@@ -3,35 +3,39 @@
   "name": "Notion",
   "category": "Productivity and Project Management",
   "hint": "developers.notion.com",
-  "one_liner": "Notion is a workspace productivity platform that allows developers to programmatically access and manipulate databases, pages, blocks, and workspace content via API.",
+  "one_liner": "Notion is a workspace/notes/wiki and project-management tool with a REST API for pages, blocks, databases, and users.",
   "auth_methods": [
     "api_key",
+    "bearer_token",
     "oauth2"
   ],
   "access": "self_serve_free",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://developers.notion.com",
+  "docs_url": "https://developers.notion.com/",
   "mcp": {
     "status": "official",
-    "url": "https://github.com/makenotion/notion-next"
+    "url": "https://developers.notion.com/docs/mcp"
   },
   "verdict": "green",
   "score": 93,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.91,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.83,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "api_key",
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "bearer_token",
         "oauth2"
       ],
       "pass1": [
@@ -40,23 +44,63 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "apis_guru_spec": "small",
       "composio_tools": "medium",
+      "pass2": "small",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "official",
-      "github": "community"
+      "github": "community",
+      "pass2": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.notion.com/docs/authorization",
+      "quote": "Public connections instead follow the OAuth 2.0 protocol to authorize a connection to interact with a workspace.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.notion.com/docs/authorization",
+      "quote": "Personal access tokens (PATs) are created directly by a Notion user in the Developer portal",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.notion.com/docs/authorization",
+      "quote": "include the installation access token in the Authorization header with every API request",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "quote": "The fastest way to start building is the Quickstart — create a personal access token, make your first API request, and see a new page appear in your workspace in under two minutes.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.notion.com/docs/mcp",
+      "quote": "Notion MCP is a remote MCP server hosted by Notion.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
+      "quote": "endpoints: 13",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/notion",
@@ -96,7 +140,7 @@
     "www_authenticate": null,
     "inferred": "bearer_token"
   },
-  "notes": "Notion API is free to use across all workspace tiers with rate limits of ~3 requests/second. OAuth is required for public integrations, while internal integrations can use bearer tokens. All three workspace plans (Free, Plus, Business, Enterprise) have full API access.",
+  "notes": "Personal access tokens are self-serve and free, obtainable in minutes via the Developer portal without approval. Public (multi-workspace) integrations use OAuth2 but do require a review step before distribution; internal integrations need no review. Bearer-token header scheme documented explicitly. Official Notion-hosted MCP server confirmed on developers.notion.com/docs/mcp, plus a highly-starred official GitHub repo (makenotion/notion-mcp-server).",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -108,6 +152,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.128
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.88
+  },
+  "cost_usd": 0.249
 }

@@ -1,9 +1,90 @@
 {
   "name": "ClickUp",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "quote": "Add the token to the header: Authorization: {personal_token}",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "quote": "Personal tokens never expire.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "quote": "Users log into ClickUp, navigate to Settings > Apps, and click \"Generate\" or \"Regenerate\" under API Token.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.57
+    },
+    {
+      "field": "access",
+      "url": "https://developer.clickup.com/docs/rate-limits",
+      "quote": "Free Forever, Unlimited, Business: 100 requests per minute per token",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+      "quote": "Public Beta: ClickUp's MCP server is currently in public beta, and we're actively seeking feedback",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.829
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+      "quote": "ClickUp's MCP Server is available on all plans.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.78
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "quote": "Add the token to the header: Authorization: {personal_token}",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.71,
+  "mcp_probe": {
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": ""
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

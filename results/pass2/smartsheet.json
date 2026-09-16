@@ -6,59 +6,54 @@
     "api_type": "rest",
     "auth_methods": [
       "oauth2",
-      "api_key"
+      "bearer_token"
     ],
     "blocker": "paid_only",
-    "confidence": 0.85,
-    "docs_url": "https://developers.smartsheet.com/",
+    "confidence": 0.82,
+    "docs_url": "https://developers.smartsheet.com/api/smartsheet/introduction",
     "evidence": [
       {
-        "field": "auth_methods",
-        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
-        "quote": "If an unauthorized user gets a copy of this token, they will be able to access all Smartsheet data that you have access to, both to read and modify on your behalf."
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
-        "quote": "You can generate access tokens in the Smartsheet UI."
-      },
-      {
         "field": "access",
         "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
         "quote": "Required plan: Business, Enterprise, or Advanced Work Management"
       },
       {
-        "field": "access",
-        "url": "https://developers.smartsheet.com/register",
-        "quote": "The email address used to register for Developer Tools must belong to an existing licensed Smartsheet user on a Business plan or higher."
+        "field": "auth_methods",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+        "quote": "Authorization: Bearer JKlMNOpQ12RStUVwxYZAbcde3F5g6hijklM789"
       },
       {
-        "field": "api_type",
-        "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
-        "quote": "REST base URL of https://api.smartsheet.com/2.0"
-      },
-      {
-        "field": "mcp",
-        "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
-        "quote": "Unlock the power of AI by connecting Smartsheet with Claude, ChatGPT, and other AI clients through the Smartsheet MCP (Model Context Protocol) server."
+        "field": "auth_methods",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+        "quote": "OAuth 2.0 ... three-legged OAuth process"
       },
       {
         "field": "mcp",
         "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
-        "quote": "Required plan: Business, Enterprise, or Advanced Work Management"
+        "quote": "Smartsheet MCP server introduction"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/smartsheet-platform/smar-mcp",
+        "quote": "This project has been deprecated. Please use the official Smartsheet MCP server instead."
+      },
+      {
+        "field": "verdict",
+        "url": "https://api.smartsheet.com/2.0/sheets",
+        "quote": "You are not authorized to perform this action."
       }
     ],
     "mcp": {
       "status": "official",
       "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server"
     },
-    "notes": "API and official MCP server both gated behind Business/Enterprise/Advanced Work Management plans; no free-tier credential path exists. Free trial accounts explicitly cannot generate API access tokens.",
-    "one_liner": "Smartsheet is a work management/collaboration platform (sheets, projects, workflows) with a REST API and official MCP server.",
+    "notes": "Full REST API with access tokens (bearer) and 3-legged OAuth2. Access tokens can be self-generated in the UI, but the API itself is gated to paying plans (Business, Enterprise, or Advanced Work Management) — no free tier for API access. Smartsheet has since published an official, first-party MCP server (superseding the earlier community/deprecated smar-mcp repo), so this is buildable but not free-tier self-serve.",
+    "one_liner": "Smartsheet is a cloud work-management/spreadsheet-hybrid platform offering a REST API for sheets, rows, workflows, and reports, gated to paid plans.",
     "verdict": "yellow"
   },
-  "cost_usd": 0.21224600000000005,
-  "turns": 11,
-  "seconds": 54.4,
+  "cost_usd": 0.1687404,
+  "turns": 10,
+  "seconds": 44.9,
   "is_error": false,
   "error": null
 }

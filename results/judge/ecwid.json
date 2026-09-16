@@ -1,9 +1,77 @@
 {
   "name": "Ecwid",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://api-docs.ecwid.com/reference/rest-api",
+      "quote": "Ecwid API is a RESTful API with oAuth2 authentication.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.42
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://raw.githubusercontent.com/Ecwid/ecwid-api-docs/master/includes/_authentication.md",
+      "quote": "Ecwid supports oAuth2 protocol to provide applications with an easy way to authenticate and access store data on behalf of the user with access tokens.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "quote": "If you customize your own store, however, you can skip OAuth and easily get an access token for your store.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "quote": "Public token allows only public data to be received and is safe to use in public code",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://raw.githubusercontent.com/Ecwid/ecwid-api-docs/master/includes/_authentication.md",
+      "quote": "Both types of access tokens do not expire, so you can use them as long as the application is installed in a merchant's store.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://registry.modelcontextprotocol.io",
+      "quote": "io.usefulapi/ecwid",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    }
+  ],
+  "grounding_rate": 0.67,
+  "mcp_probe": {
+    "url": "io.usefulapi/ecwid",
+    "skipped": true
+  },
+  "by_field": {
+    "api_type": [
+      "not_grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
 }

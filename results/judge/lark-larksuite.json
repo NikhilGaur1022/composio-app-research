@@ -62,6 +62,10 @@
     }
   ],
   "grounding_rate": 0.29,
+  "mcp_probe": {
+    "url": "https://github.com/larksuite/lark-openapi-mcp",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",

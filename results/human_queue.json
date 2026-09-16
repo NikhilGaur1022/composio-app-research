@@ -1,380 +1,9 @@
 [
   {
-    "name": "Sherlock",
-    "confidence": 0.32,
+    "name": "iPayX",
+    "confidence": 0.52,
     "reasons": [
-      "pass2 failed; relying on pass1 + registries",
-      "gated/no-API finding with weak grounding needs a human eye",
-      "no_public_api but api_type=rest"
-    ]
-  },
-  {
-    "name": "Mailchimp",
-    "confidence": 0.39,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries",
-      "gated/no-API finding with weak grounding needs a human eye"
-    ]
-  },
-  {
-    "name": "Aircall",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Google Ads",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Meta Ads",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "LinkedIn Ads",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries",
-      "gated/no-API finding with weak grounding needs a human eye"
-    ]
-  },
-  {
-    "name": "GoHighLevel",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Klaviyo",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "systeme.io",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Pinterest",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Threads (Meta)",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "SendGrid",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Shopify",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "WooCommerce",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "BigCommerce",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Salesforce Commerce Cloud",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries",
-      "gated/no-API finding with weak grounding needs a human eye",
-      "family check: Salesforce products use oauth2, found ['api_key']"
-    ]
-  },
-  {
-    "name": "Magento (Adobe Commerce)",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries",
-      "gated/no-API finding with weak grounding needs a human eye"
-    ]
-  },
-  {
-    "name": "Squarespace",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Ecwid",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Gumroad",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Amazon Selling Partner",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "fanbasis",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "DataForSEO",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "SE Ranking",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Ahrefs",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "MrScraper",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Apify",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Firecrawl",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Bright Data",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Waterfall.io",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Clay",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "GitHub",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Vercel",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Netlify",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Cloudflare",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Supabase",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Neo4j",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Snowflake",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "MongoDB Atlas",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Datadog",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Sentry",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Notion",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Airtable",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Linear",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Jira",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Asana",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Monday.com",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "ClickUp",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Coda",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Smartsheet",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Harvest",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Stripe",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
-    ]
-  },
-  {
-    "name": "Plaid",
-    "confidence": 0.45,
-    "reasons": [
-      "pass2 failed; relying on pass1 + registries"
+      "only 0% of quotes grounded in cited pages"
     ]
   },
   {
@@ -385,9 +14,32 @@
     ]
   },
   {
-    "name": "Paygent Connect",
+    "name": "Clay",
+    "confidence": 0.53,
+    "reasons": [
+      "only 12% of quotes grounded in cited pages"
+    ]
+  },
+  {
+    "name": "SE Ranking",
+    "confidence": 0.54,
+    "reasons": [
+      "only 0% of quotes grounded in cited pages"
+    ]
+  },
+  {
+    "name": "Coda",
+    "confidence": 0.55,
+    "reasons": [
+      "only 0% of quotes grounded in cited pages"
+    ]
+  },
+  {
+    "name": "Datadog",
     "confidence": 0.58,
-    "reasons": []
+    "reasons": [
+      "only 12% of quotes grounded in cited pages"
+    ]
   },
   {
     "name": "Binance",
@@ -398,10 +50,10 @@
     ]
   },
   {
-    "name": "iPayX",
-    "confidence": 0.59,
+    "name": "Pinterest",
+    "confidence": 0.6,
     "reasons": [
-      "only 0% of quotes grounded in cited pages"
+      "only 17% of quotes grounded in cited pages"
     ]
   },
   {
@@ -419,6 +71,28 @@
     ]
   },
   {
+    "name": "Salesforce Commerce Cloud",
+    "confidence": 0.65,
+    "reasons": [
+      "only 28% of quotes grounded in cited pages",
+      "gated/no-API finding with weak grounding needs a human eye"
+    ]
+  },
+  {
+    "name": "MongoDB Atlas",
+    "confidence": 0.65,
+    "reasons": [
+      "only 12% of quotes grounded in cited pages"
+    ]
+  },
+  {
+    "name": "Consensus",
+    "confidence": 0.68,
+    "reasons": [
+      "only 43% of quotes grounded in cited pages"
+    ]
+  },
+  {
     "name": "Gladly",
     "confidence": 0.7,
     "reasons": [
@@ -433,10 +107,17 @@
     ]
   },
   {
-    "name": "Consensus",
-    "confidence": 0.71,
+    "name": "DataForSEO",
+    "confidence": 0.76,
     "reasons": [
       "only 43% of quotes grounded in cited pages"
+    ]
+  },
+  {
+    "name": "Waterfall.io",
+    "confidence": 0.76,
+    "reasons": [
+      "gated/no-API finding with weak grounding needs a human eye"
     ]
   },
   {

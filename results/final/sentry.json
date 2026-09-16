@@ -3,33 +3,40 @@
   "name": "Sentry",
   "category": "Developer, Infra and Data platforms",
   "hint": "docs.sentry.io/api",
-  "one_liner": "Error tracking and performance monitoring platform with REST API and official MCP server for AI agents.",
+  "one_liner": "Sentry is an error-monitoring/observability platform with a large REST API for managing projects, issues, events, and alerts programmatically.",
   "auth_methods": [
+    "basic",
+    "bearer_token",
     "oauth2"
   ],
-  "access": "self_serve_free",
+  "access": "self_serve_trial",
   "api_type": "rest",
   "api_breadth": "large",
   "docs_url": "https://docs.sentry.io/api/",
   "mcp": {
     "status": "community",
-    "url": "https://github.com/getsentry/sentry-mcp"
+    "url": "https://mcp.sentry.dev/"
   },
-  "verdict": "green",
-  "score": 98,
-  "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "verdict": "yellow",
+  "score": 93,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.71,
+  "agreement": 0.92,
+  "grounding_rate": 0.5,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs self_serve_trial)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "basic",
+        "bearer_token",
         "oauth2"
       ],
       "pass1": [
@@ -39,22 +46,74 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_trial",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "large",
+      "pass2": "large",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
+      "pass2": "official",
       "pass1": "official"
     }
   },
   "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://docs.sentry.io/api/",
+      "quote": "The Sentry web API is used to access the Sentry platform programmatically.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.sentry.io/api/auth/",
+      "quote": "Authentication tokens are passed using an auth header, and are used to authenticate as a user or organization account with the API.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.sentry.io/api/auth/",
+      "quote": "A Sentry user can belong to multiple organizations. The access token only provides access to the specific organization the user selected during the OAuth flow.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.sentry.io/api/guides/create-auth-token/",
+      "quote": "A Sentry account with an organization-level role of Manager or Admin",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.sentry.io/api/auth/",
+      "quote": "API Keys: A deprecated authentication method using HTTP Basic Auth, though still supported for existing accounts.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://sentry.io/pricing/",
+      "quote": "API\" with checkmarks indicating availability in Team, Business, and Enterprise plans, but notably absent from the Developer plan",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.sentry.io/product/sentry-mcp/",
+      "quote": "301 Moved Permanently -> https://mcp.sentry.dev/",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://sentry.io/api/0/projects/",
+      "quote": "{\"detail\":\"Authentication credentials were not provided.\"} (www-authenticate: Bearer realm=\"api\")",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/sentry",
@@ -87,7 +146,7 @@
     "www_authenticate": "Bearer realm=\"api\"",
     "inferred": "bearer_token"
   },
-  "notes": "Sentry provides self-serve free access to API credentials through personal tokens and internal integrations. OAuth2, bearer tokens, and API keys are all supported authentication methods. Official MCP server at mcp.sentry.dev provides remote access for AI agents. REST is the primary API type. Endpoint count not determined. Verdict is green - buildable agent toolkit with self-serve free credentials and official MCP integration.",
+  "notes": "Sentry's REST API (\"web API\") is large (organizations, projects, issues, events, alerts, releases, etc.). Auth: organization/personal auth tokens (bearer), OAuth2 apps (authorization code + PKCE + device flow), and a deprecated Basic-Auth API-key method still honored for legacy accounts. Free \"Developer\" plan explicitly excludes the \"API & third-party integrations\" feature per the pricing comparison table — API access requires the paid Team tier (which has a free trial), hence self_serve_trial rather than self_serve_free. Creating an auth token additionally requires an org Manager/Admin role. Sentry publishes an official MCP server (getsentry/sentry-mcp, 854★) reachable via mcp.sentry.dev, also listed as a feature of the free plan (chat/agent access to Sentry data), distinct from the paid REST API gate.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -100,6 +159,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.254
+  "pass2": {
+    "auth_methods": [
+      "bearer_token",
+      "oauth2",
+      "basic"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.68
+  },
+  "cost_usd": 0.438
 }

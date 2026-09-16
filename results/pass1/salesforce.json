@@ -1,9 +1,48 @@
 {
-  "ok": false,
-  "result": null,
-  "cost_usd": 0.110628,
+  "ok": true,
+  "result": {
+    "one_liner": "Cloud-based CRM platform with comprehensive REST and GraphQL APIs for sales, service, and customer engagement automation.",
+    "auth_methods": [
+      "oauth2",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://developer.salesforce.com/docs",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://help.salesforce.com/s/articleView?language=en_US&id=remoteaccess_oauth_jwt_flow.htm",
+        "quote": "The JWT Bearer Flow is an OAuth flow in which an external app sends a signed JSON string to Salesforce called JWT to obtain an access token."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org.html",
+        "quote": "Salesforce Developer Edition provides a free solution for testing and development, and you can sign up for a Developer Edition account at developer.salesforce.com/signup."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.salesforce.com/blogs/2024/04/accessing-object-data-with-salesforce-platform-apis",
+        "quote": "Salesforce offers a portfolio of more than 30+ distinct APIs spanning REST, SOAP, GraphQL, gRPC, and event-streaming protocols"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest_compatible_editions.htm",
+        "quote": "As of the Spring '24 release (API version 60.0), the REST API provides 48 top-level resources."
+      }
+    ],
+    "confidence": 0.89,
+    "notes": "Free Developer Edition grants full API access for development. REST API has 48+ top-level resources; GraphQL API available. OAuth2 (JWT Bearer flow) is primary documented authentication. Salesforce's vast, mature API ecosystem spans multiple protocols; total endpoint count across all APIs exceeds 300."
+  },
+  "cost_usd": 0.1323254,
   "turns": 6,
-  "seconds": 78.9,
-  "is_error": true,
-  "error": "no structured output"
+  "seconds": 71.3,
+  "is_error": false,
+  "error": null
 }

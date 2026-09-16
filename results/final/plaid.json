@@ -3,37 +3,40 @@
   "name": "Plaid",
   "category": "Finance and Fintech",
   "hint": "plaid.com/docs",
-  "one_liner": "Plaid is a fintech API platform that enables applications to connect with users' financial institutions to access and verify banking data.",
+  "one_liner": "Plaid is a fintech API platform that lets developers securely connect apps to users' bank accounts for data, payments, and identity verification.",
   "auth_methods": [
     "api_key",
     "other"
   ],
-  "access": "self_serve_trial",
+  "access": "self_serve_free",
   "api_type": "rest",
   "api_breadth": "medium",
   "docs_url": "https://plaid.com/docs/api/",
   "mcp": {
     "status": "official",
-    "url": "https://github.com/tomfunk/fungible"
+    "url": "https://docs.composio.dev/toolkits/plaid_mcp"
   },
-  "verdict": "yellow",
-  "score": 92,
-  "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "verdict": "green",
+  "score": 97,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.81,
+  "agreement": 0.93,
+  "grounding_rate": 0.67,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_trial vs self_serve_free)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "other"
       ],
       "apis_guru_spec": [
+        "api_key"
+      ],
+      "pass2": [
         "api_key"
       ],
       "pass1": [
@@ -43,25 +46,65 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_trial"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "apis_guru_spec": "medium",
       "composio_tools": "small",
+      "pass2": "medium",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
       "composio_wraps_mcp": "official",
       "github": "community",
+      "pass2": "community",
       "pass1": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "Almost all Plaid API endpoints require a client_id and secret. These may be sent either in the request body or in the headers PLAID-CLIENT-ID and PLAID-SECRET.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/docs/quickstart/",
+      "quote": "Get started with test credentials and life-like data.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "create an account on the Plaid Dashboard. Once you've completed the signup process and acknowledged our terms, we'll provide a live client_id and secret via the Dashboard.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://plaid.com/docs/quickstart/",
+      "quote": "Get started with test credentials and life-like data.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.apis.guru/v2/specs/plaid.com/2020-09-14_1.334.0/openapi.json",
+      "quote": "198 endpoints",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.composio.dev/toolkits/plaid_mcp",
+      "quote": "wraps_official_mcp: true",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/plaid_mcp",
@@ -94,7 +137,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Plaid has self-serve signup with a limited free sandbox tier (200 calls/product), but production API access requires a paid subscription. The exact endpoint count is not publicly disclosed but likely falls in the medium range given the breadth of financial data products. OAuth2 is the preferred authentication method. Official MCP server available for AI assistant integration.",
+  "notes": "Core Plaid API auth is client_id/secret (api_key style), sent via headers PLAID-CLIENT-ID/PLAID-SECRET or request body; not OAuth2/bearer for developer access (Plaid Link uses OAuth for end-user bank login, which is a separate concern from developer API auth). Free self-serve Sandbox account obtainable via Dashboard signup with no sales contact required; Production access requires additional verification/compliance review per Plaid policy but is still self-serve initiated. MCP: no official vendor-published MCP server page could be confirmed (docs/mcp and docs/ai-tools paths 404'd); registry and third-party (Composio) list a community/wrapped MCP server plus several community GitHub MCP repos (e.g. plaid/ai-coding-toolkit, 304techmaven/plaid-mcp-server), so classified as community pending direct confirmation.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -107,6 +150,16 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.223
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.361
 }

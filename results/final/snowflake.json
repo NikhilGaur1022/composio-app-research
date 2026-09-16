@@ -3,34 +3,41 @@
   "name": "Snowflake",
   "category": "Developer, Infra and Data platforms",
   "hint": "docs.snowflake.com",
-  "one_liner": "Snowflake is a cloud data platform for data warehousing, analytics, and data applications.",
+  "one_liner": "Snowflake is a cloud data platform (data warehouse, Cortex AI, apps) with a documented REST SQL API and broader account/object management REST APIs.",
   "auth_methods": [
-    "oauth2"
+    "api_key",
+    "jwt",
+    "oauth2",
+    "other"
   ],
   "access": "self_serve_trial",
-  "api_type": "rest_and_graphql",
-  "api_breadth": "small",
-  "docs_url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
   "mcp": {
-    "status": "community",
-    "url": "https://github.com/Snowflake-Labs/mcp"
+    "status": "official",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"
   },
   "verdict": "green",
-  "score": 86,
+  "score": 92,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "green",
+  "confidence": 0.88,
+  "agreement": 0.93,
+  "grounding_rate": 0.9,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "jwt",
+        "oauth2",
+        "other"
       ],
       "pass1": [
         "bearer_token",
@@ -39,22 +46,86 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_trial",
       "pass1": "self_serve_trial"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "medium",
       "pass1": "large"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
+      "pass2": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "quote": "Authorization: Bearer _oauth_token_",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "quote": "Assign the public key to your Snowflake user.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "quote": "Authorization: Bearer WIF.{provider}.{token}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+      "quote": "To sign up for a trial account, all you need is a valid email address; no payment information or other qualifying information is required.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+      "quote": "The trial continues for 30 days (from the sign-up date) or until you've depleted your free usage balance, whichever occurs first.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+      "quote": "a REST API that you can use to access and update data in a Snowflake database",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+      "quote": "The Snowflake-managed MCP server lets AI agents securely retrieve data from Snowflake accounts without needing to deploy separate infrastructure.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Snowflake-Labs/mcp",
+      "quote": "This project is deprecated and no longer maintained. Please migrate to the official Snowflake MCP Server.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+      "quote": "no payment information or other qualifying information is required",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+      "quote": "Programmatic Access Tokens (PAT)",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/snowflake",
@@ -81,7 +152,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Snowflake provides native REST APIs (SQL API and resource management API) with OAuth2 and JWT authentication. GraphQL is available through third-party integrations like Hasura. Free trial removes access barriers for developers. API breadth marked as 'large' based on extensive endpoint coverage across multiple domains, though exact count not confirmed in documentation.",
+  "notes": "Public REST API (SQL API + object/account management REST APIs) supports OAuth, key-pair JWT, Programmatic Access Tokens, and Workload Identity Federation. Free 30-day trial (no credit card) gives working credentials, converting to paid after. Snowflake now ships an official Snowflake-managed MCP server (GA Aug 2026); the older Snowflake-Labs/mcp community repo is deprecated in favor of it.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -94,6 +165,19 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.118
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "jwt",
+      "api_key",
+      "other"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.78
+  },
+  "cost_usd": 0.367
 }

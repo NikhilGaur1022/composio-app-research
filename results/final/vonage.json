@@ -14,16 +14,16 @@
   "api_breadth": "small",
   "docs_url": "https://developer.vonage.com/en/home",
   "mcp": {
-    "status": "community",
+    "status": "official",
     "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-documentation-mcp-server"
   },
   "verdict": "green",
-  "score": 91,
+  "score": 93,
   "blocker": "none",
   "model_verdict": "green",
-  "confidence": 0.74,
+  "confidence": 0.86,
   "agreement": 1.0,
-  "grounding_rate": null,
+  "grounding_rate": 0.75,
   "needs_human": false,
   "needs_human_reasons": [],
   "auto_notes": [],
@@ -70,49 +70,49 @@
       "field": "access",
       "url": "https://developer.vonage.com/en/getting-started/overview",
       "quote": "an API key and secret that you can use to access our APIs",
-      "grounded": "unchecked"
+      "grounded": "grounded"
     },
     {
       "field": "access",
       "url": "https://developer.vonage.com/en/getting-started/overview",
       "quote": "We'll give you some free credit when you first open your account and you can top up when you run low.",
-      "grounded": "unchecked"
+      "grounded": "grounded"
     },
     {
       "field": "auth_methods",
       "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
       "quote": "API key and secret sent Base64 encoded in the Authorization header",
-      "grounded": "unchecked"
+      "grounded": "grounded"
     },
     {
       "field": "auth_methods",
       "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
       "quote": "a compact, URL-safe means of representing claims to be transferred between two parties",
-      "grounded": "unchecked"
-    },
-    {
-      "field": "auth_methods",
-      "url": "https://developer.vonage.com/en/api/sms",
-      "quote": "Your API key. Only required if setting sig.",
-      "grounded": "unchecked"
-    },
-    {
-      "field": "api_type",
-      "url": "https://developer.vonage.com/en/home",
-      "quote": "rest",
-      "grounded": "unchecked"
+      "grounded": "grounded"
     },
     {
       "field": "mcp",
       "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-documentation-mcp-server",
       "quote": "We're excited to announce the Vonage Documentation MCP Server — a new way to access Vonage docs directly from your development environment or AI assistant.",
-      "grounded": "unchecked"
+      "grounded": "grounded"
     },
     {
       "field": "verdict",
       "url": "https://developer.vonage.com/en/getting-started/overview",
       "quote": "Access to our APIs is charged on a per-request basis.",
-      "grounded": "unchecked"
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/api/sms",
+      "quote": "Your API key. Only required if setting sig.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.vonage.com/en/home",
+      "quote": "rest",
+      "grounded": "not_grounded"
     },
     {
       "field": "api_breadth",

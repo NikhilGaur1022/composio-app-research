@@ -21,8 +21,8 @@
   "score": 86,
   "blocker": "none",
   "model_verdict": "yellow",
-  "confidence": 0.73,
-  "agreement": 0.93,
+  "confidence": 0.71,
+  "agreement": 0.88,
   "grounding_rate": 0.57,
   "needs_human": false,
   "needs_human_reasons": [],
@@ -39,21 +39,29 @@
         "api_key",
         "basic",
         "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2"
       ]
     },
     "access": {
       "pass2": "self_serve_trial",
+      "pass1": "self_serve_trial",
       "docs_signal": "self_serve_free"
     },
     "api_type": {
-      "pass2": "rest"
+      "pass2": "rest",
+      "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "composio_tools": "small",
-      "pass2": "medium"
+      "pass2": "medium",
+      "pass1": "unknown"
     },
     "mcp": {
-      "pass2": "community"
+      "pass2": "community",
+      "pass1": "none"
     }
   },
   "evidence": [
@@ -127,7 +135,17 @@
     "inferred": null
   },
   "notes": "Private-app API keys (HTTP Basic auth: email + API key) are obtainable directly from any Gorgias account (trial or paid) via account settings, no app review needed — this is the self-serve path most agent toolkits would use. Public/marketplace apps additionally require OAuth2 and are implied to need a listing process, but no explicit review/approval page was found in this pass (would need to check developers.gorgias.com/docs/set-up-oauth2-app-store for confirmation). Pricing page did not explicitly state which tiers include API access; rate limits (40-80 req/20s per third-party source) suggest it's broadly available rather than gated to a specific paid tier. No official vendor-published MCP server found; several community GitHub MCP servers and a Composio-wrapped toolkit (32 tools, api_key+oauth2) exist.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
   "pass2": {
     "auth_methods": [
       "api_key",
@@ -141,5 +159,5 @@
     "blocker": "none",
     "confidence": 0.62
   },
-  "cost_usd": 0.31
+  "cost_usd": 0.327
 }

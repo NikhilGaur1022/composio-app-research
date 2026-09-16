@@ -9,61 +9,51 @@
       "bearer_token"
     ],
     "blocker": "none",
-    "confidence": 0.82,
+    "confidence": 0.86,
     "docs_url": "https://developers.asana.com/docs/authentication",
     "evidence": [
       {
         "field": "auth_methods",
         "url": "https://developers.asana.com/docs/authentication",
-        "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API."
+        "quote": "PATs are generated in the developer console."
       },
       {
         "field": "auth_methods",
-        "url": "https://developers.asana.com/docs/authentication",
-        "quote": "OAuth is an open-standard authentication protocol that allows you to approve one application interacting with another on your behalf without providing your username and password."
+        "url": "https://developers.asana.com/docs/quick-start",
+        "quote": "authorization: Bearer ACCESS_TOKEN"
       },
       {
         "field": "access",
-        "url": "https://developers.asana.com/docs/authentication",
-        "quote": "Treat your PAT like you would treat a password. Do not share it and do not display it online."
-      },
-      {
-        "field": "access",
-        "url": "https://forum.asana.com/t/how-to-get-de-credentials-about-api-using-a-free-tier/148548",
-        "quote": "you should look here for the information on how to authenticate to the API"
+        "url": "https://developers.asana.com/docs/personal-access-token",
+        "quote": "You can generate a personal access token from the Asana developer console."
       },
       {
         "field": "api_type",
-        "url": "https://developers.asana.com",
-        "quote": "signals: oauth true"
+        "url": "https://developers.asana.com/docs/quick-start",
+        "quote": "The Asana API is a RESTful interface with predictable resource-oriented URLs, accepts JSON or form-encoded requests, returns JSON, and uses standard HTTP features."
       },
       {
         "field": "api_breadth",
         "url": "https://api.apis.guru/v2/specs/asana.com/1.0/openapi.json",
-        "quote": "endpoints: 167"
+        "quote": "167 endpoints (OpenAPI spec, apis.guru mirror)"
       },
       {
         "field": "mcp",
-        "url": "https://github.com/roychri/mcp-server-asana",
-        "quote": "roychri/mcp-server-asana (148★)"
-      },
-      {
-        "field": "verdict",
-        "url": "https://developers.asana.com/docs/authentication",
-        "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API."
+        "url": "https://developers.asana.com/docs/mcp-server",
+        "quote": "Official Asana MCP server (V2) at https://mcp.asana.com/v2/mcp, requiring OAuth 2.0 authentication with a registered client ID and client secret"
       }
     ],
     "mcp": {
-      "status": "community",
-      "url": "https://github.com/roychri/mcp-server-asana"
+      "status": "official",
+      "url": "https://mcp.asana.com/v2/mcp"
     },
-    "notes": "Asana's REST API (developers.asana.com) supports OAuth 2.0 for multi-user apps and Personal Access Tokens (used as Bearer tokens) for scripts/single-user use, both self-serve from the Asana web app with no approval process found in docs. A free Asana account is sufficient to generate a PAT via the developer console (app.asana.com/0/my-apps); paid tiers only affect feature availability (e.g., Portfolios) and rate limits (150 req/min free vs 1500 paid per community sources), not baseline API access. Also supports Service Accounts (Enterprise-only, super-admin created) and OpenID Connect for user login, not counted as core API auth methods. No official Asana-published MCP server was found; multiple community MCP servers exist (e.g. roychri/mcp-server-asana, 148 stars). API surface is REST, ~167 endpoints per the apis.guru OpenAPI spec.",
-    "one_liner": "Asana is a work/project management platform with a REST API for managing tasks, projects, portfolios, and workflows.",
+    "notes": "Free self-serve access: any Asana user can generate a Personal Access Token from the developer console (app.asana.com/0/my-apps) with no paid plan or approval required, and PATs are passed as Bearer tokens. OAuth2 is the recommended method for multi-user apps and is also what the official MCP server (V2, launched Feb 2026) uses. A separate Service Account auth method exists but is Enterprise-tier/admin-only and is not counted here since PAT/OAuth already provide self-serve access. API is REST, ~167 endpoints per OpenAPI spec.",
+    "one_liner": "Asana is a work-management and project-tracking platform with a REST API for tasks, projects, and portfolios.",
     "verdict": "green"
   },
-  "cost_usd": 0.20612019999999998,
-  "turns": 8,
-  "seconds": 84.5,
+  "cost_usd": 0.1485874,
+  "turns": 7,
+  "seconds": 32.3,
   "is_error": false,
   "error": null
 }

@@ -1,9 +1,97 @@
 {
   "name": "WooCommerce",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 7,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "The WooCommerce REST API uses a key system to control access.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "quote": "You may use HTTP Basic Auth by providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "quote": "You must use OAuth 1.0a 'one-legged' authentication to ensure REST API credentials cannot be intercepted.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "To create or manage keys for a specific WordPress user: 1. Go to WooCommerce > Settings > Advanced > REST API. 2. Select Create an API key or Add Key.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.857
+    },
+    {
+      "field": "access",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "The Consumer Secret is shown only once. Copy and store it in a safe place before leaving the page.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "The WooCommerce REST API uses a key system to control access.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/AmitGurbani/mcp-server-woocommerce",
+      "quote": "WooCommerce is a registered trademark of Automattic Inc. This project is not affiliated with, endorsed by, or sponsored by Automattic Inc.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.363
+    },
+    {
+      "field": "verdict",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "To create or manage keys for a specific WordPress user: 1. Go to WooCommerce > Settings > Advanced > REST API. 2. Select Create an API key or Add Key.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.857
+    }
+  ],
+  "grounding_rate": 0.88,
+  "mcp_probe": {
+    "url": "https://github.com/AmitGurbani/mcp-server-woocommerce",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

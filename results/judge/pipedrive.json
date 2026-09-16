@@ -70,6 +70,14 @@
     }
   ],
   "grounding_rate": 0.62,
+  "mcp_probe": {
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /en/"
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",

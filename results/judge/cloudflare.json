@@ -1,9 +1,86 @@
 {
   "name": "Cloudflare",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+      "quote": "Whenever possible, use API tokens to interact with the Cloudflare API.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+      "quote": "API keys have several limitations that make them less secure than API tokens.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.796
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.cloudflare.com/client/v4/zones",
+      "quote": "Missing X-Auth-Email header ... Missing X-Auth-Key header",
+      "status": 403,
+      "verdict": "not_grounded",
+      "score": 0.803
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/",
+      "quote": "MCP clients connect to MCP servers over the Internet, establishing a connection using Streamable HTTP, and authorizing the MCP client access to resources on the user's account using OAuth.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.cloudflare.com/api/",
+      "quote": "npm install cloudflare",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+      "quote": "Model Context Protocol (MCP) is a new, standardized protocol for managing context between large language models (LLMs) and external systems.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
+      "quote": "Enterprise customers can also contact Cloudflare Support to raise the Client API per user, GraphQL, or API token limits to a higher value.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.57,
+  "mcp_probe": {
+    "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded",
+      "not_grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ]
+  }
 }

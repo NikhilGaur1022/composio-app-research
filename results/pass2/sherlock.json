@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Sherlock is an open-source Python CLI tool that hunts down social media accounts by searching usernames across 400+ sites; it has no hosted API or web service.",
+    "auth_methods": [
+      "none"
+    ],
+    "access": "no_public_api",
+    "api_type": "cli_only",
+    "api_breadth": "unknown",
+    "docs_url": "https://github.com/sherlock-project/sherlock",
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/Burnsedia/sherlock-mcp"
+    },
+    "verdict": "red",
+    "blocker": "cli_not_api",
+    "evidence": [
+      {
+        "field": "api_type",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "Hunt down social media accounts by username across social networks"
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "pipx install sherlock-project"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "quote": "docker run -it --rm sherlock/sherlock"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Burnsedia/sherlock-mcp",
+        "quote": "Burnsedia/sherlock-mcp"
+      }
+    ],
+    "confidence": 0.9,
+    "notes": "Sherlock is a locally-run CLI/Python package (installed via pipx/pip/uv/Docker) for OSINT username enumeration across 400+ sites. It is not a service with a hosted API, so there are no credentials, auth methods, or endpoints to speak of. Any \"agent toolkit\" use would mean shelling out to the CLI or wrapping it, not calling a REST/GraphQL API. MCP servers exist only as community wrappers around the CLI (e.g., Burnsedia/sherlock-mcp, jcucci/dotnet-sherlock-mcp), none vendor-published."
+  },
+  "cost_usd": 0.08745299999999999,
+  "turns": 4,
+  "seconds": 25.8,
+  "is_error": false,
+  "error": null
+}

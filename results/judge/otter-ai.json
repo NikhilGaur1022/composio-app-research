@@ -86,6 +86,14 @@
     }
   ],
   "grounding_rate": 0.3,
+  "mcp_probe": {
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "www_authenticate": null,
+    "alive": true,
+    "body": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/htm"
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",

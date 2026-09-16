@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://vercel.com/docs/rest-api",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+        "quote": "**bearerToken**: HTTP bearer"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+        "quote": "'Authorization': 'Bearer YOUR_ACCESS_TOKEN'"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+        "quote": "\"type\": \"oauth2-token\""
+      },
+      {
+        "field": "access",
+        "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+        "quote": "Creates and returns a new authentication token for the currently authenticated User."
+      },
+      {
+        "field": "api_type",
+        "url": "https://vercel.com/docs/rest-api",
+        "quote": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://vercel.com/docs/rest-api",
+        "quote": "| **GET** | [`/v1/access-groups/{idOrName}`](/docs/rest-api/access-groups/reads-an-access-group.md) | Reads an access group |"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/vercel/mcp-handler",
+        "quote": "vercel/mcp-handler (669★)"
+      },
+      {
+        "field": "verdict",
+        "url": "https://api.vercel.com/v9/projects",
+        "quote": "{\"error\":{\"code\":\"forbidden\",\"message\":\"The request is missing an authentication token\",\"missingToken\":true}}"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/vercel/mcp-handler"
+    },
+    "notes": "Vercel REST API is documented at vercel.com/docs/rest-api with 400+ endpoints across dozens of resource groups (projects, deployments, domains, dns, env vars, edge-config, webhooks, teams, etc). Auth is via personal Bearer access tokens created in Account Settings (free on the Hobby plan) or OAuth2 tokens issued to Marketplace/native integrations (response schema shows token type \\\"oauth2-token\\\" with origin e.g. \\\"github\\\"). No app review needed to create a personal token and call the API; building a distributable OAuth integration for the Marketplace goes through Vercel's integration developer flow but isn't required for basic API/agent use. Vercel publishes vercel/mcp-handler, an official SDK/framework for building MCP servers on Vercel (used by the community mcp-vercel server too), though it is a framework rather than a single hosted MCP endpoint.",
+    "one_liner": "Vercel is a cloud platform for deploying and hosting frontend/web applications, with a REST API to manage projects, deployments, domains, and team resources.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.21180539999999998,
+  "turns": 13,
+  "seconds": 61.2,
+  "is_error": false,
+  "error": null
+}

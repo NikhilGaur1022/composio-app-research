@@ -3,8 +3,9 @@
   "name": "Gumroad",
   "category": "Ecommerce",
   "hint": "gumroad.com/api",
-  "one_liner": "Gumroad is an e-commerce platform that allows creators to sell digital products directly to customers with built-in payment processing.",
+  "one_liner": "Gumroad is an ecommerce platform for creators to sell digital products, courses, and memberships directly to customers.",
   "auth_methods": [
+    "bearer_token",
     "oauth2"
   ],
   "access": "self_serve_free",
@@ -13,23 +14,25 @@
   "docs_url": "https://gumroad.com/api",
   "mcp": {
     "status": "community",
-    "url": null
+    "url": "https://github.com/rmarescu/gumroad-mcp"
   },
   "verdict": "green",
   "score": 91,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.8,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.57,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "bearer_token",
         "oauth2"
       ],
       "pass1": [
@@ -37,21 +40,73 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "small",
       "pass1": "small"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "community",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "quote": "The Gumroad OAuth API is based around REST. We return JSON for every request, including errors.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://gumkit.app/blog/gumroad-api-access-token/",
+      "quote": "there is no plan to pick, no scope checklist, no approval queue",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://gumkit.app/blog/gumroad-api-access-token/",
+      "quote": "Generating one takes about two minutes and lives entirely inside your own Gumroad settings.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/rmarescu/gumroad-mcp",
+      "quote": "A Model Context Protocol (MCP) server implementation for Gumroad API",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.gumroad.com/v2/products",
+      "quote": "Bearer realm=\"Doorkeeper\", error=\"invalid_token\", error_description=\"The access token is invalid\"",
+      "grounded": "unreachable"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "quote": "Credentials Issued: Upon creation, you receive an Application ID and Application Secret... Use the \"Generate access token\" button to obtain your access token.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "quote": "provides access to these resources: Products, Offer codes, Variants and custom fields, User public information, Sales and subscribers, License verification",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/keithah/gumroad-mcp",
+      "quote": "MCP server for Gumroad API - lookup subscriptions, sales, and products",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/gumroad",
@@ -84,7 +139,7 @@
     "www_authenticate": "Bearer realm=\"Doorkeeper\", error=\"invalid_token\", error_description=\"The access token is invalid\"",
     "inferred": "bearer_token"
   },
-  "notes": "Gumroad API is freely accessible via self-serve OAuth registration. The Verify License API endpoint does not require OAuth application credentials. Six scopes available: view_profile, edit_products, view_sales, view_payouts, and others. No MCP server found. No paid tier requirement for API access.",
+  "notes": "Gumroad's official vendor docs page (gumroad.com/api) is a JS-rendered SPA that couldn't be fetched as static text, so primary evidence comes from Gumroad's own API endpoint (Doorkeeper OAuth realm) plus a detailed third-party integration guide (Rollout) and a token-creation walkthrough (gumkit.app) that both describe the same self-serve flow: log into any free Gumroad account, go to Settings > Advanced, create an application (get client_id/secret for OAuth2) or click \"Generate access token\" for a personal bearer token — no approval queue. No official Gumroad-published MCP server found; multiple community/open-source MCP wrappers exist (rmarescu/gumroad-mcp, keithah/gumroad-mcp). API is small (~6 resource groups: products, offer codes, sales, subscribers, variants/custom fields, license verification).",
   "pass1": {
     "auth_methods": [
       "oauth2"
@@ -95,6 +150,17 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.107
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.8
+  },
+  "cost_usd": 0.378
 }

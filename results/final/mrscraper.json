@@ -3,59 +3,117 @@
   "name": "MrScraper",
   "category": "Data, SEO and Scraping",
   "hint": "docs.mrscraper.com",
-  "one_liner": "Web scraping service with AI-powered data extraction from any public domain",
+  "one_liner": "MrScraper is an AI-powered and manual web scraping platform (scraper API, bulk scraping, residential proxy, web unblocker) with REST API, CLI, SDKs, and an official MCP server.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "bearer_token",
+    "oauth2"
   ],
   "access": "self_serve_free",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://docs.mrscraper.com",
+  "docs_url": "https://docs.mrscraper.com/docs/getting-started/overview",
   "mcp": {
-    "status": "none",
-    "url": null
+    "status": "official",
+    "url": "https://mcp.mrscraper.com/mcp"
   },
   "verdict": "green",
-  "score": 88,
+  "score": 93,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.85,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.71,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "api_key"
       ],
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
       "pass1": [
         "api_key"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "small",
       "pass1": "unknown"
     },
     "mcp": {
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "none"
     }
   },
   "evidence": [
     {
+      "field": "access",
+      "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+      "quote": "The Free plan includes 100 tokens per month with no credit card required.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.mrscraper.com/docs/getting-started/quickstart",
+      "quote": "Create a MrScraper account and obtain your API key from the Playground before following this guide.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "quote": "API keys remain supported for clients without OAuth and carry full account authority",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "quote": "MrScraper MCP is the official Model Context Protocol server for MrScraper.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+      "quote": "The Free plan includes 100 tokens per month with no credit card required.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+      "quote": "MrScraper is a web scraping platform offering both AI-powered and manual scraping capabilities",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/mrscraper",
+      "quote": "tools: 11",
+      "grounded": "not_grounded"
+    },
+    {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/mrscraper",
       "quote": "Composio catalog: auth ['API_KEY'], 11 tools",
       "grounded": "registry"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.mrscraper.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {
@@ -77,7 +135,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Free tier available with 1,000 tokens/month (no credit card required). Paid plans start at $199/month. Python SDK and CLI tools available. REST API authenticated via API key token in headers and query parameters.",
+  "notes": "Free self-serve tier (100 tokens/month, no card) via app.mrscraper.com/playground gives an API key usable as query param (?token=), header (x-api-token), or Bearer token. Official hosted MCP server also supports OAuth 2.1 browser sign-in in addition to API-key fallback. REST API Reference documents endpoints; exact count not confirmed on vendor docs but Composio catalog lists 11 wrapped tools, suggesting a small surface (scraping/bulk-scraping/proxy/scheduling focused). api_breadth marked \"small\" with lower confidence since full endpoint count wasn't directly verified on docs.mrscraper.com.",
   "pass1": {
     "auth_methods": [
       "api_key"
@@ -88,6 +146,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.123
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.312
 }

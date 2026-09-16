@@ -54,6 +54,10 @@
     }
   ],
   "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://github.com/mcp-dir/notebooklm-mcp",
+    "skipped": true
+  },
   "by_field": {
     "api_type": [
       "grounded"

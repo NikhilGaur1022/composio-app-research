@@ -3,32 +3,31 @@
   "name": "Neo4j",
   "category": "Developer, Infra and Data platforms",
   "hint": "neo4j.com/docs/api",
-  "one_liner": "A graph database platform with REST and GraphQL APIs for building connected data applications.",
+  "one_liner": "Neo4j is a graph database platform (self-managed or Aura cloud) offering a REST management API (Aura API) for provisioning/managing database instances, plus driver-based Cypher query access and an official MCP server.",
   "auth_methods": [
     "api_key",
     "basic",
+    "bearer_token",
     "oauth2",
     "other"
   ],
   "access": "self_serve_free",
-  "api_type": "rest_and_graphql",
+  "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://neo4j.com/docs/api",
+  "docs_url": "https://neo4j.com/docs/aura/api/authentication/",
   "mcp": {
-    "status": "community",
-    "url": "https://github.com/neo4j-contrib/mcp-neo4j"
+    "status": "official",
+    "url": "https://neo4j.com/docs/mcp/current/"
   },
   "verdict": "green",
-  "score": 91,
+  "score": 93,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.87,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "green",
+  "confidence": 0.87,
+  "agreement": 0.89,
+  "grounding_rate": 0.86,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
@@ -38,6 +37,11 @@
         "oauth2",
         "other"
       ],
+      "pass2": [
+        "basic",
+        "bearer_token",
+        "oauth2"
+      ],
       "pass1": [
         "basic",
         "bearer_token",
@@ -46,28 +50,81 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "small",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "official"
     }
   },
   "evidence": [
     {
       "field": "auth_methods",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "The Aura API uses OAuth 2.0 for API authentication",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "Authentication to the token endpoint uses HTTP Basic Authentication, where the client ID and client secret are provided as the username and password, respectively.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "All tiers can create Aura API credentials.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+      "quote": "The Aura API allows you to programmatically perform actions on your Aura instances without the need to log in to the Console.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://neo4j.com/docs/mcp/current/",
+      "quote": "Introduction - Neo4j MCP",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/neo4j/mcp",
+      "quote": "Neo4j official MCP Server",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+      "quote": "Free and trial accounts (without billing): 25 requests per minute",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/neo4j",
       "quote": "Composio catalog: auth ['OAUTH2', 'BASIC', 'API_KEY', 'S2S_OAUTH2'], 21 tools",
       "grounded": "registry"
+    },
+    {
+      "field": "mcp",
+      "url": "https://neo4j.com/docs/mcp/current/",
+      "quote": "MCP initialize POST -> HTTP 403 (text/html); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {
@@ -92,7 +149,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "API breadth unknown from search results. REST API is deprecated (removed in Neo4j 4.0) but still documented. GraphQL is the modern approach. Confidence reduced due to inability to verify exact endpoint counts and some auth details from snippets alone.",
+  "notes": "Neo4j's product-level HTTP API is the Aura API (cloud instance management: create/pause/resize DB instances, snapshots, tenants), which is REST + OAuth2 client-credentials, self-serve on free/trial tiers with lower rate limits (25 req/min) vs paid tiers (125 req/min). Separately, database query access uses Bolt/HTTP via language drivers (not a REST product API), and Neo4j also ships an official local MCP server (neo4j/mcp, downloadable binary) plus a larger community-maintained Neo4j Labs MCP suite (neo4j-contrib/mcp-neo4j) for Cypher query execution against any Neo4j deployment. api_breadth marked \"small\" based on the scope of documented Aura API resources (instances/tenants/projects/snapshots/CMKs); no official endpoint count was found in the pages fetched.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -106,6 +163,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.111
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.307
 }

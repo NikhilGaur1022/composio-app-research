@@ -1,9 +1,97 @@
 {
   "name": "Google Ads",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 6,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+      "quote": "Google Ads API also uses the OAuth 2.0 protocol for authentication and authorization.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+      "quote": "a developer token is also required to make Google Ads API calls",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "quote": "Enable Google Ads API in your Google Cloud project to automatically be granted Test access for your project.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "quote": "a detailed manual audit of your application",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "quote": "typically takes 10 business days",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.625
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.google.com/google-ads/api/rest/overview",
+      "quote": "The Google Ads API can be called either using gRPC or REST.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/gomarble-ai/google-ads-mcp-server",
+      "quote": "google-ads-mcp-server (143★)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.647
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "quote": "Google may automatically upgrade your project's API access level to Basic once you submit your application.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.75,
+  "mcp_probe": {
+    "url": "https://github.com/gomarble-ai/google-ads-mcp-server",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

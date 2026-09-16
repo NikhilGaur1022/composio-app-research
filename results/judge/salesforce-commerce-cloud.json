@@ -1,9 +1,86 @@
 {
   "name": "Salesforce Commerce Cloud",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 2,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/references/b2c-commerce-ocapi/oauth.html",
+      "quote": "All client applications that access the Open Commerce API must be registered through the Account Manager.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+      "quote": "provide a credentials string in the HTTP header that is composed of your client ID, followed by a colon (:), followed by your client secret (password)",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.salesforce.com/s/articleView?id=000393797&language=en_US&type=1",
+      "quote": "Partners must first join the AppExchange Partner Program under the 'B2C Commerce' Partner Category.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.salesforce.com/s/articleView?id=000393797&language=en_US&type=1",
+      "quote": "The Trial Sandbox/Environment is created for B2C Commerce ISV prospects",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.salesforce.com/s/articleView?id=000393797&language=en_US&type=1",
+      "quote": "Request your Trial from this link",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.145
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.salesforce.com/developer-centers/commerce-cloud",
+      "quote": "docs_page signal check: no official or community MCP server listed in registry lookups for Salesforce Commerce Cloud",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.4
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.salesforce.com/s/articleView?id=000393797&language=en_US&type=1",
+      "quote": "On-Demand Sandboxes operate on a usage-based pricing model. Partners receive annual free credits based on their partnership tier",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    }
+  ],
+  "grounding_rate": 0.29,
+  "mcp_probe": {
+    "url": "",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded",
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

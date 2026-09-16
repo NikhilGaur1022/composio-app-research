@@ -1,9 +1,81 @@
 {
   "name": "GoHighLevel",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://marketplace.gohighlevel.com/docs/",
+      "quote": "OAuth 2.0 or Private Integration Token",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken/",
+      "quote": "static/fixed OAuth2 Access Tokens",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken/",
+      "quote": "By default, all agency admins can create and manage Private Integrations.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.ruzuku.com/compare/gohighlevel-pricing",
+      "quote": "GoHighLevel's main plans are $97/month for Starter, $297/month for Unlimited, and $497/month for Agency Pro",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.667
+    },
+    {
+      "field": "mcp",
+      "url": "https://rocketlauncher.ai/use-cases/what-is-mcp-gohighlevel",
+      "quote": "GoHighLevel ships an official MCP server at https://services.leadconnectorhq.com/mcp/",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://marketplace.gohighlevel.com/docs/",
+      "quote": "Marketplace app or Private integration",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.83,
+  "mcp_probe": {
+    "url": "https://services.leadconnectorhq.com/mcp/",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer realm=\"ghl-mcp\", error=\"invalid_token\", resource_metadata=\"https://services.leadconnectorhq.com/mcp/.well-known/oauth-protected-resource/mcp\"",
+    "alive": true,
+    "body": "{\"error\":\"invalid_token\",\"error_description\":\"Authorization required for protected tools\"}"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ]
+  }
 }

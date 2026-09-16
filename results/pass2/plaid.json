@@ -7,9 +7,9 @@
     "auth_methods": [
       "api_key"
     ],
-    "blocker": "none",
+    "blocker": "app_review",
     "confidence": 0.82,
-    "docs_url": "https://plaid.com/docs/api/",
+    "docs_url": "https://plaid.com/docs/",
     "evidence": [
       {
         "field": "auth_methods",
@@ -19,40 +19,45 @@
       {
         "field": "access",
         "url": "https://plaid.com/docs/quickstart/",
-        "quote": "Get started with test credentials and life-like data."
+        "quote": "you can receive by signing up in the Dashboard"
       },
       {
         "field": "access",
-        "url": "https://plaid.com/docs/api/",
-        "quote": "create an account on the Plaid Dashboard. Once you've completed the signup process and acknowledged our terms, we'll provide a live client_id and secret via the Dashboard."
+        "url": "https://plaid.com/docs/quickstart/glossary/",
+        "quote": "the ability to test with real data for free directly in Production"
       },
       {
-        "field": "api_type",
+        "field": "access",
+        "url": "https://plaid.com/docs/quickstart/glossary/",
+        "quote": "apply for full Production access and complete the OAuth registration form"
+      },
+      {
+        "field": "api_breadth",
         "url": "https://api.apis.guru/v2/specs/plaid.com/2020-09-14_1.334.0/openapi.json",
         "quote": "198 endpoints"
       },
       {
         "field": "mcp",
-        "url": "https://docs.composio.dev/toolkits/plaid_mcp",
-        "quote": "wraps_official_mcp: true"
+        "url": "https://github.com/plaid/ai-coding-toolkit",
+        "quote": "A toolkit designed to accelerate Plaid integration development using AI coding assistants."
       },
       {
         "field": "verdict",
-        "url": "https://plaid.com/docs/quickstart/",
-        "quote": "Get started with test credentials and life-like data."
+        "url": "https://plaid.com/docs/quickstart/glossary/",
+        "quote": "all customers who created accounts after October 31, 2024 must select a use case description from the Link Customization section"
       }
     ],
     "mcp": {
-      "status": "community",
-      "url": "https://docs.composio.dev/toolkits/plaid_mcp"
+      "status": "official",
+      "url": "https://github.com/plaid/ai-coding-toolkit"
     },
-    "notes": "Core Plaid API auth is client_id/secret (api_key style), sent via headers PLAID-CLIENT-ID/PLAID-SECRET or request body; not OAuth2/bearer for developer access (Plaid Link uses OAuth for end-user bank login, which is a separate concern from developer API auth). Free self-serve Sandbox account obtainable via Dashboard signup with no sales contact required; Production access requires additional verification/compliance review per Plaid policy but is still self-serve initiated. MCP: no official vendor-published MCP server page could be confirmed (docs/mcp and docs/ai-tools paths 404'd); registry and third-party (Composio) list a community/wrapped MCP server plus several community GitHub MCP repos (e.g. plaid/ai-coding-toolkit, 304techmaven/plaid-mcp-server), so classified as community pending direct confirmation.",
-    "one_liner": "Plaid is a fintech API platform that lets developers securely connect apps to users' bank accounts for data, payments, and identity verification.",
-    "verdict": "green"
+    "notes": "Free self-serve signup on the Plaid Dashboard grants Sandbox and Limited Production (capped, real-data) API access immediately with client_id/secret auth. Unlimited/full Production access requires submitting an application and, for Link, an OAuth registration form plus a use-case description - a review gate beyond pure self-serve. Plaid publishes an official AI coding toolkit (github.com/plaid/ai-coding-toolkit) containing a Sandbox MCP server plus a Dashboard MCP, so MCP support is official rather than community-only. REST API is medium breadth (~198 endpoints per apis.guru spec).",
+    "one_liner": "Plaid is a fintech API platform that lets developers securely connect to users' bank accounts for balance, auth, identity, transaction, and payment data.",
+    "verdict": "yellow"
   },
-  "cost_usd": 0.13760260000000002,
-  "turns": 9,
-  "seconds": 44.9,
+  "cost_usd": 0.1422696,
+  "turns": 8,
+  "seconds": 50.8,
   "is_error": false,
   "error": null
 }

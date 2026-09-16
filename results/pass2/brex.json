@@ -5,28 +5,14 @@
     "api_breadth": "medium",
     "api_type": "rest",
     "auth_methods": [
+      "oauth2",
       "bearer_token",
-      "oauth2"
+      "api_key"
     ],
-    "blocker": "partner_gate",
-    "confidence": 0.72,
-    "docs_url": "https://developer.brex.com",
+    "blocker": "enterprise_only",
+    "confidence": 0.82,
+    "docs_url": "https://developer.brex.com/docs/authentication/",
     "evidence": [
-      {
-        "field": "api_type",
-        "url": "https://developer.brex.com",
-        "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification"
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://developer.brex.com/docs/authentication/",
-        "quote": "Authorization: \"Bearer {{user_token}}\""
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://developer.brex.com/guides/partner_authentication",
-        "quote": "only for Brex developer partners"
-      },
       {
         "field": "access",
         "url": "https://developer.brex.com/guides/quickstart",
@@ -34,31 +20,56 @@
       },
       {
         "field": "access",
-        "url": "https://developer.brex.com/guides/partner_authentication",
-        "quote": "Please contact our developer support team to be issued a client ID and client secret for partner authentication."
+        "url": "https://developer.brex.com/docs/authentication/",
+        "quote": "Sign in to dashboard.brex.com as an account admin or card admin"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.brex.com/docs/authentication/",
+        "quote": "generate a user token from your Brex dashboard and pass it along in your API call headers"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.brex.com/docs/mcp/",
+        "quote": "MCP clients that support OAuth will automatically initiate a browser-based authorization flow when you first connect."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.brex.com/docs/mcp/",
+        "quote": "account and card admins can authenticate with a Brex API token. Generate one from Settings → Developer"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.brex.com",
+        "quote": "Brex APIs use the REST architecture"
       },
       {
         "field": "api_breadth",
         "url": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.json",
-        "quote": "54 endpoints (apis.guru OpenAPI spec index for brex.io)"
+        "quote": "endpoints: 54"
       },
       {
         "field": "mcp",
-        "url": "https://developer.brex.com/docs/mcp",
-        "quote": "MCP clients that support OAuth will automatically initiate a browser-based authorization flow when you first connect."
+        "url": "https://developer.brex.com/docs/mcp/",
+        "quote": "The Brex MCP server lets AI assistants interact directly with your Brex account."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.brex.com/docs/authentication/",
+        "quote": "Brex currently only offers a production API server at https://api.brex.com."
       }
     ],
     "mcp": {
       "status": "official",
-      "url": "https://developer.brex.com/docs/mcp"
+      "url": "https://developer.brex.com/docs/mcp/"
     },
-    "notes": "Two distinct credential paths. (1) Existing Brex customers: an account/card admin logs into dashboard.brex.com, accepts a developer API agreement, and self-issues a bearer token (90-day expiry, scoped) from Settings > Developer — no sandbox, no free signup for non-customers. (2) Third-party/partner integrations: OAuth2 (authorization_code and client_credentials grants) requires contacting Brex developer support to be issued a client ID/secret as a registered partner — this is the path relevant to building a general-purpose agent toolkit and is gated. Brex also publishes an official hosted MCP server (api.brex.com/mcp) supporting both OAuth (per-user, browser flow, RFC 7591 dynamic client registration) and bearer-token auth for non-OAuth MCP clients. API is REST/OpenAPI-based (~54 endpoints per apis.guru spec) covering cards, expenses, transactions, users, budgets, etc.",
-    "one_liner": "Brex is a corporate card and spend-management platform offering a REST API (cards, expenses, transactions, budgets, users) plus an official MCP server for agent access.",
+    "notes": "Brex's REST API and its official MCP server both require the caller to already be an existing Brex business customer with account-admin or card-admin dashboard access (no public self-serve dev signup or sandbox/free tier documented). Tokens are bearer/user tokens generated from Settings > Developer; the MCP server additionally supports an OAuth2 browser authorization flow. No mention of a free trial. Buildable as an agent toolkit only for teams that already have a live Brex account with admin rights.",
+    "one_liner": "Brex is a corporate card and spend-management platform offering a REST API and an official MCP server for account/card admins of existing Brex customers.",
     "verdict": "yellow"
   },
-  "cost_usd": 0.202982,
-  "turns": 9,
-  "seconds": 87.5,
+  "cost_usd": 0.14628479999999996,
+  "turns": 8,
+  "seconds": 50.2,
   "is_error": false,
   "error": null
 }

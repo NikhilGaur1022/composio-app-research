@@ -46,6 +46,10 @@
     }
   ],
   "grounding_rate": 0.4,
+  "mcp_probe": {
+    "url": "https://github.com/NyxToolsDev/quickbooks-mcp-server",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",

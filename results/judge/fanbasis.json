@@ -1,9 +1,68 @@
 {
   "name": "fanbasis",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 5,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "access",
+      "url": "https://dev-docs.fanbasis.com/",
+      "quote": "Sign in to access API Docs",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://commas.com/",
+      "quote": "Embedded checkouts, multi-rail payouts, APIs and SDKs. Everything you'd replace Stripe with, plus BNPL, recovery and lower effective rates.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.867
+    },
+    {
+      "field": "one_liner",
+      "url": "https://www.fanbasis.com/",
+      "quote": "301 Moved Permanently",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://apidocs.fan/",
+      "quote": "Commas API Reference",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://fanbasis.com/api",
+      "quote": "301 Moved Permanently",
+      "status": 301,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.8,
+  "mcp_probe": {
+    "url": "",
+    "skipped": true
+  },
+  "by_field": {
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "one_liner": [
+      "not_grounded"
+    ],
+    "auth_methods": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
 }

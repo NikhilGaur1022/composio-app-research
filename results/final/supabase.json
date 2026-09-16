@@ -3,35 +3,39 @@
   "name": "Supabase",
   "category": "Developer, Infra and Data platforms",
   "hint": "supabase.com/docs",
-  "one_liner": "PostgreSQL database platform with auto-generated REST/GraphQL APIs, real-time features, and authentication.",
+  "one_liner": "Supabase is an open-source Firebase alternative providing a hosted Postgres database with auto-generated REST/GraphQL APIs, auth, storage, edge functions, and a Management API for provisioning projects.",
   "auth_methods": [
     "api_key",
+    "bearer_token",
     "oauth2"
   ],
   "access": "self_serve_free",
   "api_type": "rest_and_graphql",
-  "api_breadth": "medium",
-  "docs_url": "https://supabase.com/docs",
+  "api_breadth": "large",
+  "docs_url": "https://supabase.com/docs/reference/api/introduction",
   "mcp": {
     "status": "official",
     "url": "https://github.com/supabase/mcp"
   },
   "verdict": "green",
-  "score": 97,
+  "score": 100,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.95,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "api_key",
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "bearer_token",
         "oauth2"
       ],
       "pass1": [
@@ -42,22 +46,86 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest_and_graphql",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "composio_tools": "medium",
+      "pass2": "large",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "official",
       "github": "community",
+      "pass2": "official",
       "pass1": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "PATs are tokens with a custom expiry that you manually generate to access the Management API.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "allows your application to generate tokens on behalf of a Supabase user, providing secure and limited access to their account without requiring their credentials",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "Authorization: Bearer <access_token>",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://supabase.com/docs/guides/api",
+      "quote": "provisioned behind an API gateway with key-auth enabled",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://supabase.com/docs/guides/api",
+      "quote": "a thin API layer on top of Postgres",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://supabase.com/docs/guides/graphql/api",
+      "quote": "In our API, each SQL table is reflected as a set of GraphQL types.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://supabase.com/pricing",
+      "quote": "Unlimited API requests",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://supabase.com/pricing",
+      "quote": "Free projects are paused after 1 week of inactivity. Limit of 2 active projects.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://supabase.com/docs/guides/getting-started/mcp",
+      "quote": "The MCP server repository is available at github.com/supabase/mcp",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "All resources created via the API are subject to the pricing detailed on our Pricing pages",
+      "grounded": "grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/supabase",
@@ -91,7 +159,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Supabase provides auto-generated REST and GraphQL APIs that scale with database schema; no fixed endpoint count. Official MCP server enables AI assistant integration (Cursor, Claude, Windsurf). Free tier includes full API access via Personal Access Tokens and OAuth2. No approval or paid tier required for basic API access.",
+  "notes": "Two distinct public API surfaces: (1) Management API (api.supabase.com) for org/project admin, auth via Personal Access Tokens or OAuth2, sent as Authorization: Bearer <token>; (2) per-project auto-generated Data API (PostgREST-based REST + pg_graphql-based GraphQL) authenticated via project API keys (anon/service_role) behind a key-auth gateway, layered with Postgres Row Level Security. Free tier gives unlimited API requests but pauses inactive free projects after 1 week and caps at 2 active projects. Management API alone spans 15+ resource categories (projects, organizations, branches, functions, storage, auth config, secrets, etc.) with multiple endpoints each, comfortably >300 total when combined with per-table Data API surface, hence \"large\" breadth (approximate, no single endpoint-count page fetched). Official MCP server published by Supabase at github.com/supabase/mcp with a hosted endpoint at mcp.supabase.com/mcp, alongside numerous community MCP servers (self-hosted variants, lite versions) per registry hints.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -105,6 +173,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.136
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.312
 }

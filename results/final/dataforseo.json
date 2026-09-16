@@ -3,7 +3,7 @@
   "name": "DataForSEO",
   "category": "Data, SEO and Scraping",
   "hint": "docs.dataforseo.com",
-  "one_liner": "SEO and SEM data collection platform offering SERP, keyword, and on-page analytics via REST API",
+  "one_liner": "DataForSEO is a REST API platform providing SEO, SERP, keyword, backlink, and business-data scraping/analytics data for developers.",
   "auth_methods": [
     "basic"
   ],
@@ -12,19 +12,19 @@
   "api_breadth": "large",
   "docs_url": "https://docs.dataforseo.com/v3/",
   "mcp": {
-    "status": "community",
-    "url": null
+    "status": "official",
+    "url": "https://mcp.dataforseo.com/v3/mcp"
   },
   "verdict": "green",
-  "score": 98,
+  "score": 100,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.76,
   "agreement": 1.0,
-  "grounding_rate": null,
+  "grounding_rate": 0.43,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+    "only 43% of quotes grounded in cited pages"
   ],
   "auto_notes": [],
   "sources": {
@@ -35,26 +35,76 @@
       "unauth_probe": [
         "basic"
       ],
+      "pass2": [
+        "basic"
+      ],
       "pass1": [
         "basic"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "large",
+      "pass2": "large",
       "pass1": "large"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.dataforseo.com/v3/auth/?bash",
+      "quote": "DataForSEO is using the Basic Authentication, which makes it possible to call our APIs with almost any programming language.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.dataforseo.com/v3/auth/?bash",
+      "quote": "Create a free account with DataForSEO",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.dataforseo.com/v3/auth/?bash",
+      "quote": "the API password is generated automatically by DataForSEO and is different from your account password",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://dataforseo.com/pricing",
+      "quote": "With DataForSEO you pay only for the individual services you consume.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.dataforseo.com/v3/",
+      "quote": "Review the kickstart guide to APIs",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/dataforseo",
+      "quote": "312",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://dataforseo.com/model-context-protocol",
+      "quote": "Empower AI integration with DataForSEO MCP",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/dataforseo",
@@ -65,6 +115,12 @@
       "field": "auth_methods",
       "url": "https://api.dataforseo.com/v3/appendix/user_data",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Basic realm=\"DataForSEO REST API\"; body: {\"status_code\":40100,\"status_message\":\"You are not Authorized to Access this Resource. Your Login Information Here: https:\\/\\/app.dataforseo.com\\/login .\",\"time\":\"0 sec.\",\"cost\":0,\"tasks_count\":0,\"tas",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.dataforseo.com/v3/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
       "grounded": "probe"
     }
   ],
@@ -87,7 +143,7 @@
     "www_authenticate": "Basic realm=\"DataForSEO REST API\"",
     "inferred": "basic"
   },
-  "notes": "API uses HTTP Basic Auth with email + auto-generated password. Free tier includes $1 credit upon signup (covers ~500 live SERP requests). $50 minimum deposit required for paid use. Supports JSON and XML responses. Official SDKs available for PHP, Python, C#, Java, TypeScript. Multiple API categories: SERP, Keywords Data, On-Page, Labs.",
+  "notes": "Free account signup yields Basic Auth login/password (API password auto-generated, distinct from account password) via API Access dashboard; pay-as-you-go for live data ($50 min payment) but sandbox/free unlimited trial mode is documented separately for testing. Official MCP server published by vendor (GitHub Apr 2025, npm May 2025) at https://mcp.dataforseo.com/v3/mcp, using same Basic Auth credentials. Composio wraps it (not the official MCP) with 312 tools/endpoints across SERP, Keywords, Backlinks, OnPage, Business Data, Domain Analytics, Content Analysis products, indicating large breadth.",
   "pass1": {
     "auth_methods": [
       "basic"
@@ -98,6 +154,16 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.101
+  "pass2": {
+    "auth_methods": [
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.326
 }

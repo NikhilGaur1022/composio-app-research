@@ -3,30 +3,28 @@
   "name": "Mailchimp",
   "category": "Marketing, Ads, Email and Social",
   "hint": "mailchimp.com/developer",
-  "one_liner": "",
+  "one_liner": "Mailchimp is an email/marketing automation platform with a REST-based Marketing API for managing audiences, campaigns, and automations.",
   "auth_methods": [
+    "api_key",
     "oauth2"
   ],
-  "access": "partner_gated",
-  "api_type": "none",
+  "access": "self_serve_free",
+  "api_type": "rest",
   "api_breadth": "large",
-  "docs_url": "",
+  "docs_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
   "mcp": {
     "status": "community",
-    "url": null
+    "url": "https://github.com/cyanheads/mailchimp-mcp-server"
   },
-  "verdict": "red",
-  "score": 33,
-  "blocker": "no_public_api",
-  "model_verdict": null,
-  "confidence": 0.39,
-  "agreement": 0.5,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries",
-    "gated/no-API finding with weak grounding needs a human eye"
-  ],
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.77,
+  "agreement": 0.96,
+  "grounding_rate": 0.5,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
@@ -35,20 +33,85 @@
       ],
       "unauth_probe": [
         "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
-    "api_type": {},
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
     "api_breadth": {
-      "composio_tools": "large"
+      "composio_tools": "large",
+      "pass2": "large",
+      "pass1": "unknown"
     },
     "mcp": {
-      "mcp_registry": "community"
+      "mcp_registry": "community",
+      "pass2": "community",
+      "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "quote": "if you ever need to access someone else's Mailchimp account data, you should use OAuth 2",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "quote": "Authorization: Bearer <TOKEN>",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+      "quote": "Navigate to the Registered Apps page in your Mailchimp account ... Click Register An App",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://us1.api.mailchimp.com/3.0/lists",
+      "quote": "{\"type\":\"https://mailchimp.com/developer/marketing/docs/errors/\",\"title\":\"API Key Invalid\",\"status\":401,\"detail\":\"Your request did not include a valid API key or token.\"",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://mailchimp.com/pricing/marketing/",
+      "quote": "Free ... ₹ 0 /month ... Limit of 250 contacts",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://mailchimp.com/developer/",
+      "quote": "graphql",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/mailchimp",
+      "quote": "275",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/cyanheads/mailchimp-mcp-server",
+      "quote": "io.github.cyanheads/mailchimp-mcp-server",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/mailchimp",
@@ -81,8 +144,29 @@
     "www_authenticate": null,
     "inferred": "api_key"
   },
-  "notes": "",
-  "pass1": null,
-  "pass2": null,
-  "cost_usd": 0.082
+  "notes": "Free tier account (250 contacts) grants a self-serve API key immediately, and OAuth2 app registration is self-service via the Registered Apps page — no partner gate or app review found. Docs site surfaces a GraphQL signal on the developer homepage but the documented and primary public API is REST (Marketing API v3); no evidence of a fully separate public GraphQL API was found, so api_type is reported as rest. MCP is community-maintained only (cyanheads, asklokesh), no official vendor MCP server found.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.264
 }

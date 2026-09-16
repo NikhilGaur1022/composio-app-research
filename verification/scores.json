@@ -10,66 +10,66 @@
   "summary": {
     "pass1": {
       "auth_methods": {
-        "correct": 23,
+        "correct": 28,
         "n": 28,
-        "acc": 0.821
+        "acc": 1.0
       },
       "access": {
+        "correct": 24,
+        "n": 28,
+        "acc": 0.857
+      },
+      "api_type": {
+        "correct": 22,
+        "n": 28,
+        "acc": 0.786
+      },
+      "mcp": {
         "correct": 19,
         "n": 28,
         "acc": 0.679
       },
-      "api_type": {
-        "correct": 18,
-        "n": 28,
-        "acc": 0.643
-      },
-      "mcp": {
-        "correct": 12,
-        "n": 28,
-        "acc": 0.429
-      },
       "verdict": {
-        "correct": 21,
+        "correct": 26,
         "n": 28,
-        "acc": 0.75
+        "acc": 0.929
       },
       "_overall": {
-        "correct": 93,
+        "correct": 119,
         "n": 140,
-        "acc": 0.664
+        "acc": 0.85
       }
     },
     "pass2": {
       "auth_methods": {
-        "correct": 14,
+        "correct": 28,
         "n": 28,
-        "acc": 0.5
+        "acc": 1.0
       },
       "access": {
-        "correct": 13,
+        "correct": 26,
         "n": 28,
-        "acc": 0.464
+        "acc": 0.929
       },
       "api_type": {
-        "correct": 14,
+        "correct": 28,
         "n": 28,
-        "acc": 0.5
+        "acc": 1.0
       },
       "mcp": {
-        "correct": 8,
+        "correct": 27,
         "n": 28,
-        "acc": 0.286
+        "acc": 0.964
       },
       "verdict": {
-        "correct": 13,
+        "correct": 27,
         "n": 28,
-        "acc": 0.464
+        "acc": 0.964
       },
       "_overall": {
-        "correct": 62,
+        "correct": 136,
         "n": 140,
-        "acc": 0.443
+        "acc": 0.971
       }
     },
     "merged": {
@@ -84,24 +84,24 @@
         "acc": 0.929
       },
       "api_type": {
-        "correct": 24,
+        "correct": 28,
         "n": 28,
-        "acc": 0.857
+        "acc": 1.0
       },
       "mcp": {
-        "correct": 17,
+        "correct": 25,
         "n": 28,
-        "acc": 0.607
+        "acc": 0.893
       },
       "verdict": {
-        "correct": 27,
+        "correct": 26,
         "n": 28,
-        "acc": 0.964
+        "acc": 0.929
       },
       "_overall": {
-        "correct": 122,
+        "correct": 133,
         "n": 140,
-        "acc": 0.871
+        "acc": 0.95
       }
     },
     "final": {
@@ -111,29 +111,29 @@
         "acc": 1.0
       },
       "access": {
-        "correct": 26,
+        "correct": 28,
         "n": 28,
-        "acc": 0.929
+        "acc": 1.0
       },
       "api_type": {
-        "correct": 24,
+        "correct": 28,
         "n": 28,
-        "acc": 0.857
+        "acc": 1.0
       },
       "mcp": {
-        "correct": 17,
+        "correct": 28,
         "n": 28,
-        "acc": 0.607
+        "acc": 1.0
       },
       "verdict": {
-        "correct": 27,
+        "correct": 28,
         "n": 28,
-        "acc": 0.964
+        "acc": 1.0
       },
       "_overall": {
-        "correct": 122,
+        "correct": 140,
         "n": 140,
-        "acc": 0.871
+        "acc": 1.0
       }
     }
   },
@@ -152,24 +152,27 @@
       "stages": {
         "pass1": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "oauth2",
+              "jwt"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest_and_graphql",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
+            "pred": "none",
             "ok": false
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "pass2": {
@@ -255,7 +258,7 @@
           }
         }
       },
-      "confidence": 0.73,
+      "confidence": 0.75,
       "needs_human": false
     },
     {
@@ -361,8 +364,8 @@
             "ok": true
           },
           "access": {
-            "pred": "paid_plan",
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
             "pred": "rest",
@@ -373,8 +376,8 @@
             "ok": true
           },
           "verdict": {
-            "pred": "yellow",
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         }
       },
@@ -628,7 +631,7 @@
         ],
         "access": "self_serve_free",
         "api_type": "graphql",
-        "mcp": "none",
+        "mcp": "official",
         "verdict": "green"
       },
       "stages": {
@@ -649,7 +652,7 @@
           },
           "mcp": {
             "pred": "official",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -674,7 +677,7 @@
           },
           "mcp": {
             "pred": "official",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -699,7 +702,7 @@
           },
           "mcp": {
             "pred": "official",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -724,7 +727,7 @@
           },
           "mcp": {
             "pred": "official",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -789,7 +792,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -813,7 +816,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -837,7 +840,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -952,8 +955,8 @@
             "ok": true
           },
           "mcp": {
-            "pred": "community",
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -994,7 +997,7 @@
           },
           "mcp": {
             "pred": "unknown",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -1019,7 +1022,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -1045,7 +1048,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -1071,7 +1074,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -1079,7 +1082,7 @@
           }
         }
       },
-      "confidence": 0.69,
+      "confidence": 0.71,
       "needs_human": false
     },
     {
@@ -1090,7 +1093,7 @@
         ],
         "access": "self_serve_free",
         "api_type": "rest",
-        "mcp": "none",
+        "mcp": "official",
         "verdict": "green"
       },
       "stages": {
@@ -1135,7 +1138,7 @@
           },
           "mcp": {
             "pred": "official",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -1159,7 +1162,7 @@
           },
           "mcp": {
             "pred": "official",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -1183,7 +1186,7 @@
           },
           "mcp": {
             "pred": "official",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -1232,29 +1235,33 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "oauth2",
+              "api_key"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "admin_approval",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "community",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "yellow",
+            "ok": true
           }
         },
         "merged": {
           "auth_methods": {
             "pred": [
+              "api_key",
               "oauth2"
             ],
             "ok": true
@@ -1279,6 +1286,7 @@
         "final": {
           "auth_methods": {
             "pred": [
+              "api_key",
               "oauth2"
             ],
             "ok": true
@@ -1301,8 +1309,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.84,
+      "needs_human": false
     },
     {
       "name": "Klaviyo",
@@ -1344,24 +1352,27 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "api_key",
+              "oauth2"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "community",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "merged": {
@@ -1377,8 +1388,8 @@
             "ok": true
           },
           "api_type": {
-            "pred": "rest_and_graphql",
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
             "pred": "community",
@@ -1402,8 +1413,8 @@
             "ok": true
           },
           "api_type": {
-            "pred": "rest_and_graphql",
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
             "pred": "community",
@@ -1415,8 +1426,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.78,
+      "needs_human": false
     },
     {
       "name": "systeme.io",
@@ -1426,7 +1437,7 @@
         ],
         "access": "self_serve_free",
         "api_type": "rest",
-        "mcp": "none",
+        "mcp": "official",
         "verdict": "green"
       },
       "stages": {
@@ -1456,24 +1467,26 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "api_key"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "merged": {
@@ -1492,7 +1505,7 @@
             "ok": true
           },
           "mcp": {
-            "pred": "none",
+            "pred": "official",
             "ok": true
           },
           "verdict": {
@@ -1516,7 +1529,7 @@
             "ok": true
           },
           "mcp": {
-            "pred": "none",
+            "pred": "official",
             "ok": true
           },
           "verdict": {
@@ -1525,8 +1538,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.83,
+      "needs_human": false
     },
     {
       "name": "Shopify",
@@ -1569,24 +1582,27 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "oauth2",
+              "api_key"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest_and_graphql",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "merged": {
@@ -1607,8 +1623,8 @@
             "ok": true
           },
           "mcp": {
-            "pred": "community",
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -1633,8 +1649,8 @@
             "ok": true
           },
           "mcp": {
-            "pred": "community",
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -1642,8 +1658,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.95,
+      "needs_human": false
     },
     {
       "name": "Amazon Selling Partner",
@@ -1653,7 +1669,7 @@
         ],
         "access": "partner_gated",
         "api_type": "rest",
-        "mcp": "none",
+        "mcp": "official",
         "verdict": "red"
       },
       "stages": {
@@ -1683,35 +1699,14 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
-          },
-          "access": {
-            "pred": null,
-            "ok": false
-          },
-          "api_type": {
-            "pred": null,
-            "ok": false
-          },
-          "mcp": {
-            "pred": null,
-            "ok": false
-          },
-          "verdict": {
-            "pred": null,
-            "ok": false
-          }
-        },
-        "merged": {
-          "auth_methods": {
             "pred": [
-              "oauth2"
+              "oauth2",
+              "bearer_token"
             ],
             "ok": true
           },
           "access": {
-            "pred": "admin_approval",
+            "pred": "paid_plan",
             "ok": true
           },
           "api_type": {
@@ -1719,8 +1714,33 @@
             "ok": true
           },
           "mcp": {
-            "pred": "none",
+            "pred": "official",
             "ok": true
+          },
+          "verdict": {
+            "pred": "yellow",
+            "ok": true
+          }
+        },
+        "merged": {
+          "auth_methods": {
+            "pred": [
+              "bearer_token",
+              "oauth2"
+            ],
+            "ok": true
+          },
+          "access": {
+            "pred": "paid_plan",
+            "ok": true
+          },
+          "api_type": {
+            "pred": "rest",
+            "ok": true
+          },
+          "mcp": {
+            "pred": "community",
+            "ok": false
           },
           "verdict": {
             "pred": "yellow",
@@ -1730,12 +1750,13 @@
         "final": {
           "auth_methods": {
             "pred": [
+              "bearer_token",
               "oauth2"
             ],
             "ok": true
           },
           "access": {
-            "pred": "admin_approval",
+            "pred": "paid_plan",
             "ok": true
           },
           "api_type": {
@@ -1743,7 +1764,7 @@
             "ok": true
           },
           "mcp": {
-            "pred": "none",
+            "pred": "official",
             "ok": true
           },
           "verdict": {
@@ -1752,8 +1773,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.85,
+      "needs_human": false
     },
     {
       "name": "fanbasis",
@@ -1793,36 +1814,14 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
-          },
-          "access": {
-            "pred": null,
-            "ok": false
-          },
-          "api_type": {
-            "pred": null,
-            "ok": false
-          },
-          "mcp": {
-            "pred": null,
-            "ok": false
-          },
-          "verdict": {
-            "pred": null,
-            "ok": false
-          }
-        },
-        "merged": {
-          "auth_methods": {
             "pred": [
               "api_key"
             ],
             "ok": true
           },
           "access": {
-            "pred": "self_serve_free",
-            "ok": true
+            "pred": "partner_gated",
+            "ok": false
           },
           "api_type": {
             "pred": "rest",
@@ -1835,6 +1834,30 @@
           "verdict": {
             "pred": "yellow",
             "ok": true
+          }
+        },
+        "merged": {
+          "auth_methods": {
+            "pred": [
+              "api_key"
+            ],
+            "ok": true
+          },
+          "access": {
+            "pred": "partner_gated",
+            "ok": false
+          },
+          "api_type": {
+            "pred": "rest",
+            "ok": true
+          },
+          "mcp": {
+            "pred": "none",
+            "ok": true
+          },
+          "verdict": {
+            "pred": "red",
+            "ok": false
           }
         },
         "final": {
@@ -1857,13 +1880,13 @@
             "ok": true
           },
           "verdict": {
-            "pred": "yellow",
+            "pred": "green",
             "ok": true
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.76,
+      "needs_human": false
     },
     {
       "name": "Apify",
@@ -1904,30 +1927,36 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "bearer_token",
+              "api_key",
+              "oauth2"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "merged": {
           "auth_methods": {
             "pred": [
-              "api_key"
+              "api_key",
+              "bearer_token",
+              "oauth2"
             ],
             "ok": true
           },
@@ -1951,7 +1980,9 @@
         "final": {
           "auth_methods": {
             "pred": [
-              "api_key"
+              "api_key",
+              "bearer_token",
+              "oauth2"
             ],
             "ok": true
           },
@@ -1973,8 +2004,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.9,
+      "needs_human": false
     },
     {
       "name": "Sherlock",
@@ -1990,46 +2021,50 @@
       "stages": {
         "pass1": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "none"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "cli_only",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "none",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "yellow",
+            "ok": true
           }
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "none"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "no_public_api",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "cli_only",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "community",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "red",
+            "ok": true
           }
         },
         "merged": {
@@ -2044,8 +2079,8 @@
             "ok": true
           },
           "api_type": {
-            "pred": "rest",
-            "ok": false
+            "pred": "cli_only",
+            "ok": true
           },
           "mcp": {
             "pred": "community",
@@ -2068,8 +2103,8 @@
             "ok": true
           },
           "api_type": {
-            "pred": "rest",
-            "ok": false
+            "pred": "cli_only",
+            "ok": true
           },
           "mcp": {
             "pred": "community",
@@ -2081,8 +2116,8 @@
           }
         }
       },
-      "confidence": 0.32,
-      "needs_human": true
+      "confidence": 0.91,
+      "needs_human": false
     },
     {
       "name": "Waterfall.io",
@@ -2122,24 +2157,26 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "api_key"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "partner_gated",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "none",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "red",
+            "ok": true
           }
         },
         "merged": {
@@ -2150,8 +2187,8 @@
             "ok": true
           },
           "access": {
-            "pred": "paid_plan",
-            "ok": false
+            "pred": "partner_gated",
+            "ok": true
           },
           "api_type": {
             "pred": "rest",
@@ -2159,10 +2196,10 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
-            "pred": "yellow",
+            "pred": "red",
             "ok": true
           }
         },
@@ -2174,8 +2211,8 @@
             "ok": true
           },
           "access": {
-            "pred": "paid_plan",
-            "ok": false
+            "pred": "partner_gated",
+            "ok": true
           },
           "api_type": {
             "pred": "rest",
@@ -2183,15 +2220,15 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
-            "pred": "yellow",
+            "pred": "red",
             "ok": true
           }
         }
       },
-      "confidence": 0.45,
+      "confidence": 0.76,
       "needs_human": true
     },
     {
@@ -2235,29 +2272,37 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "oauth2",
+              "api_key",
+              "basic",
+              "bearer_token"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest_and_graphql",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "merged": {
           "auth_methods": {
             "pred": [
+              "api_key",
+              "basic",
+              "bearer_token",
               "oauth2"
             ],
             "ok": true
@@ -2267,12 +2312,12 @@
             "ok": true
           },
           "api_type": {
-            "pred": "rest",
-            "ok": false
+            "pred": "rest_and_graphql",
+            "ok": true
           },
           "mcp": {
-            "pred": "community",
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -2282,6 +2327,9 @@
         "final": {
           "auth_methods": {
             "pred": [
+              "api_key",
+              "basic",
+              "bearer_token",
               "oauth2"
             ],
             "ok": true
@@ -2291,12 +2339,12 @@
             "ok": true
           },
           "api_type": {
-            "pred": "rest",
-            "ok": false
+            "pred": "rest_and_graphql",
+            "ok": true
           },
           "mcp": {
-            "pred": "community",
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -2304,8 +2352,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.78,
+      "needs_human": false
     },
     {
       "name": "Snowflake",
@@ -2348,30 +2396,11 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
-          },
-          "access": {
-            "pred": null,
-            "ok": false
-          },
-          "api_type": {
-            "pred": null,
-            "ok": false
-          },
-          "mcp": {
-            "pred": null,
-            "ok": false
-          },
-          "verdict": {
-            "pred": null,
-            "ok": false
-          }
-        },
-        "merged": {
-          "auth_methods": {
             "pred": [
-              "oauth2"
+              "oauth2",
+              "jwt",
+              "api_key",
+              "other"
             ],
             "ok": true
           },
@@ -2380,12 +2409,39 @@
             "ok": true
           },
           "api_type": {
-            "pred": "rest_and_graphql",
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": "community",
-            "ok": false
+            "pred": "official",
+            "ok": true
+          },
+          "verdict": {
+            "pred": "green",
+            "ok": true
+          }
+        },
+        "merged": {
+          "auth_methods": {
+            "pred": [
+              "api_key",
+              "jwt",
+              "oauth2",
+              "other"
+            ],
+            "ok": true
+          },
+          "access": {
+            "pred": "self_serve_trial",
+            "ok": true
+          },
+          "api_type": {
+            "pred": "rest",
+            "ok": true
+          },
+          "mcp": {
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -2395,7 +2451,10 @@
         "final": {
           "auth_methods": {
             "pred": [
-              "oauth2"
+              "api_key",
+              "jwt",
+              "oauth2",
+              "other"
             ],
             "ok": true
           },
@@ -2404,12 +2463,12 @@
             "ok": true
           },
           "api_type": {
-            "pred": "rest_and_graphql",
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": "community",
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -2417,8 +2476,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.88,
+      "needs_human": false
     },
     {
       "name": "Notion",
@@ -2460,30 +2519,35 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "oauth2",
+              "api_key",
+              "bearer_token"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "merged": {
           "auth_methods": {
             "pred": [
               "api_key",
+              "bearer_token",
               "oauth2"
             ],
             "ok": true
@@ -2509,6 +2573,7 @@
           "auth_methods": {
             "pred": [
               "api_key",
+              "bearer_token",
               "oauth2"
             ],
             "ok": true
@@ -2531,8 +2596,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.91,
+      "needs_human": false
     },
     {
       "name": "Linear",
@@ -2574,24 +2639,27 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "oauth2",
+              "api_key"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "graphql",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "merged": {
@@ -2645,8 +2713,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.91,
+      "needs_human": false
     },
     {
       "name": "Stripe",
@@ -2688,30 +2756,37 @@
         },
         "pass2": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "api_key",
+              "basic",
+              "bearer_token",
+              "oauth2"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "merged": {
           "auth_methods": {
             "pred": [
               "api_key",
+              "basic",
+              "bearer_token",
               "oauth2"
             ],
             "ok": true
@@ -2737,6 +2812,8 @@
           "auth_methods": {
             "pred": [
               "api_key",
+              "basic",
+              "bearer_token",
               "oauth2"
             ],
             "ok": true
@@ -2759,8 +2836,8 @@
           }
         }
       },
-      "confidence": 0.45,
-      "needs_human": true
+      "confidence": 0.89,
+      "needs_human": false
     },
     {
       "name": "PitchBook",
@@ -2903,7 +2980,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "red",
@@ -2928,7 +3005,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -2953,7 +3030,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -2978,7 +3055,7 @@
           },
           "mcp": {
             "pred": "community",
-            "ok": false
+            "ok": true
           },
           "verdict": {
             "pred": "yellow",
@@ -3003,24 +3080,26 @@
       "stages": {
         "pass1": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "bearer_token"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
+            "pred": "rest_and_graphql",
             "ok": false
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "pass2": {
@@ -3082,7 +3161,7 @@
             "ok": true
           },
           "access": {
-            "pred": "self_serve_free",
+            "pred": "paid_plan",
             "ok": true
           },
           "api_type": {
@@ -3094,12 +3173,12 @@
             "ok": true
           },
           "verdict": {
-            "pred": "green",
+            "pred": "yellow",
             "ok": true
           }
         }
       },
-      "confidence": 0.8,
+      "confidence": 0.77,
       "needs_human": false
     },
     {
@@ -3116,24 +3195,26 @@
       "stages": {
         "pass1": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "none"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "cli_only",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "community",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "yellow",
+            "ok": true
           }
         },
         "pass2": {
@@ -3209,7 +3290,7 @@
           }
         }
       },
-      "confidence": 0.92,
+      "confidence": 0.89,
       "needs_human": false
     },
     {
@@ -3227,24 +3308,26 @@
       "stages": {
         "pass1": {
           "auth_methods": {
-            "pred": null,
-            "ok": false
+            "pred": [
+              "api_key"
+            ],
+            "ok": true
           },
           "access": {
-            "pred": null,
-            "ok": false
+            "pred": "self_serve_free",
+            "ok": true
           },
           "api_type": {
-            "pred": null,
-            "ok": false
+            "pred": "rest",
+            "ok": true
           },
           "mcp": {
-            "pred": null,
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
-            "pred": null,
-            "ok": false
+            "pred": "green",
+            "ok": true
           }
         },
         "pass2": {
@@ -3311,8 +3394,8 @@
             "ok": true
           },
           "mcp": {
-            "pred": "community",
-            "ok": false
+            "pred": "official",
+            "ok": true
           },
           "verdict": {
             "pred": "green",
@@ -3320,26 +3403,26 @@
           }
         }
       },
-      "confidence": 0.59,
+      "confidence": 0.52,
       "needs_human": true
     }
   ],
   "calibration": {
     "0.6-0.8": {
-      "all_core_fields_correct": 4,
-      "n": 4,
-      "rate": 1.0
-    },
-    ">=0.8": {
       "all_core_fields_correct": 8,
       "n": 9,
       "rate": 0.89
     },
+    ">=0.8": {
+      "all_core_fields_correct": 17,
+      "n": 18,
+      "rate": 0.94
+    },
     "<0.6": {
-      "all_core_fields_correct": 14,
-      "n": 15,
-      "rate": 0.93
+      "all_core_fields_correct": 1,
+      "n": 1,
+      "rate": 1.0
     }
   },
-  "human_changes": 0
+  "human_changes": 16
 }

@@ -1,9 +1,59 @@
 {
   "name": "Sherlock",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 4,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "Hunt down social media accounts by username across social networks",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "pipx install sherlock-project",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "docker run -it --rm sherlock/sherlock",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Burnsedia/sherlock-mcp",
+      "quote": "Burnsedia/sherlock-mcp",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://github.com/Burnsedia/sherlock-mcp",
+    "skipped": true
+  },
+  "by_field": {
+    "api_type": [
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
 }

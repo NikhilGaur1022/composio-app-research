@@ -3,30 +3,30 @@
   "name": "SendGrid",
   "category": "Marketing, Ads, Email and Social",
   "hint": "sendgrid.com",
-  "one_liner": "Email delivery and marketing platform with REST API for sending transactional emails, managing campaigns, and monitoring email statistics.",
+  "one_liner": "SendGrid (Twilio) is a transactional and marketing email platform with a REST API for sending email, managing templates, contacts, and campaigns.",
   "auth_methods": [
     "api_key"
   ],
-  "access": "self_serve_free",
+  "access": "self_serve_trial",
   "api_type": "rest",
   "api_breadth": "large",
-  "docs_url": "https://www.twilio.com/docs/sendgrid/api-reference",
+  "docs_url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
   "mcp": {
     "status": "community",
-    "url": null
+    "url": "https://github.com/Choppaaahh/sendgrid-mcp-secure"
   },
   "verdict": "green",
-  "score": 98,
+  "score": 93,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.89,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "model_verdict": "green",
+  "confidence": 0.74,
+  "agreement": 0.81,
+  "grounding_rate": 0.67,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs self_serve_trial)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
@@ -35,30 +35,73 @@
       "apis_guru_spec": [
         "api_key"
       ],
+      "pass2": [
+        "api_key"
+      ],
       "pass1": [
         "basic",
         "bearer_token"
       ]
     },
     "access": {
+      "pass2": "self_serve_trial",
       "pass1": "self_serve_free",
       "docs_signal": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "apis_guru_spec": "large",
       "composio_tools": "large",
+      "pass2": "large",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "community",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+      "quote": "include an Authorization header with the value Bearer <YOUR_API_KEY_HERE> in your request.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/en-us/sendgrid",
+      "quote": "Sign up for a free trial—no credit card required.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/api-getting-started",
+      "quote": "Create an API Key.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.sendgrid.com/v3/templates",
+      "quote": "{\"errors\":[{\"field\":null,\"message\":\"authorization required\"}]}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/sendgrid.com/1.0.0/openapi.json",
+      "quote": "334 endpoints (apis.guru aggregated OpenAPI spec for sendgrid.com)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Choppaaahh/sendgrid-mcp-secure",
+      "quote": "io.github.Choppaaahh/sendgrid-mcp-secure (community MCP registry listing, not vendor-published)",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/sendgrid",
@@ -97,7 +140,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "SendGrid offers a permanently free tier (100 emails/day) with self-serve API key generation. The v3 REST API covers email sending, templates, campaigns, contacts, suppression, statistics, and webhooks. No official MCP server identified.",
+  "notes": "SendGrid (now part of Twilio) has a self-serve signup flow leading to a free trial, then paid plans; docs page emphasizes \"free trial—no credit card required\" rather than a permanent free tier, so classified as self_serve_trial rather than self_serve_free. API key is generated from account settings (app.sendgrid.com/settings/api_keys) and used as a Bearer token in the Authorization header — no OAuth2 flow is documented for the core v3 API. REST API is large (~334 endpoints per apis.guru spec). No official vendor MCP server found; only community MCP implementations exist in the registry. Unauthenticated probe against api.sendgrid.com/v3/templates confirms API key requirement (401 with generic \"authorization required\" error, no WWW-Authenticate scheme header).",
   "pass1": {
     "auth_methods": [
       "bearer_token",
@@ -109,6 +152,16 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.121
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.281
 }

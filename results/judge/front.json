@@ -54,6 +54,14 @@
     }
   ],
   "grounding_rate": 0.83,
+  "mcp_probe": {
+    "url": "https://mcp.frontapp.com/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer resource_metadata=\"https://mcp.frontapp.com/.well-known/oauth-protected-resource\"",
+    "alive": true,
+    "body": "{\"error\":\"Missing authentication token.\"}"
+  },
   "by_field": {
     "access": [
       "grounded"

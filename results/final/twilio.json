@@ -63,7 +63,6 @@
     },
     "mcp": {
       "mcp_registry": "community",
-      "github": "community",
       "pass2": "official",
       "pass1": "official"
     }

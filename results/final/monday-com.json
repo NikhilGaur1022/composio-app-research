@@ -3,14 +3,15 @@
   "name": "Monday.com",
   "category": "Productivity and Project Management",
   "hint": "developer.monday.com",
-  "one_liner": "monday.com is a cloud-based work management platform that offers project management, task tracking, and team collaboration tools.",
+  "one_liner": "Monday.com is a work OS / project-management platform with a GraphQL API for boards, items, and workflows, accessible via personal API tokens or OAuth2 apps.",
   "auth_methods": [
+    "api_key",
     "oauth2"
   ],
   "access": "self_serve_free",
   "api_type": "graphql",
   "api_breadth": "medium",
-  "docs_url": "https://developer.monday.com/api-reference/",
+  "docs_url": "https://developer.monday.com/api-reference/docs/authentication",
   "mcp": {
     "status": "official",
     "url": "https://github.com/mondaycom/mcp"
@@ -18,18 +19,20 @@
   "verdict": "green",
   "score": 95,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.82,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.6,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
         "oauth2"
       ],
       "pass1": [
@@ -39,21 +42,55 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "graphql",
       "pass1": "graphql"
     },
     "api_breadth": {
       "composio_tools": "medium",
+      "pass2": "medium",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "official",
-      "github": "community"
+      "github": "community",
+      "pass2": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.monday.com/api-reference/docs/basics",
+      "quote": "The monday.com API is built with GraphQL, a flexible query language that allows you to return as much or as little data as you need.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/mondaycom/mcp",
+      "quote": "Enable AI agents to work reliably - giving them secure access to structured data, tools to take action, and the context needed to make smart decisions.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.monday.com/apps/docs/oauth",
+      "quote": "If you don't have an app, follow these steps to create an app in the monday UI and locate your client_id and client_secret.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "quote": "If you don't have a monday.com account yet, create a free developer account to get an API token and start testing.",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/monday",
@@ -86,7 +123,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Monday.com offers free API access via personal tokens or OAuth 2.0. GraphQL API covers boards, items, users, workspaces and related operations. MCP support mentioned in agents signup but official status unclear. All monday.com plans including free tier include API access with no per-call charges.",
+  "notes": "Personal API tokens are free/self-serve via a developer sandbox account; OAuth2 apps require registering an app in the Developer Center (also self-serve, no approval needed to obtain client_id/secret for testing). Some user roles (viewers, disabled/unconfirmed accounts, student accounts) cannot access the API. Official MCP servers exist for both the monday platform (boards/items) and monday apps (dev tooling).",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -99,6 +136,17 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.112
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "graphql",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.265
 }

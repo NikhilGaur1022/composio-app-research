@@ -1,9 +1,119 @@
 {
   "name": "Snowflake",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 10,
+  "grounded": 9,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "quote": "Authorization: Bearer _oauth_token_",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "quote": "Assign the public key to your Snowflake user.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "quote": "Authorization: Bearer WIF.{provider}.{token}",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+      "quote": "Programmatic Access Tokens (PAT)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.817
+    },
+    {
+      "field": "access",
+      "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+      "quote": "To sign up for a trial account, all you need is a valid email address; no payment information or other qualifying information is required.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+      "quote": "The trial continues for 30 days (from the sign-up date) or until you've depleted your free usage balance, whichever occurs first.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+      "quote": "a REST API that you can use to access and update data in a Snowflake database",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+      "quote": "The Snowflake-managed MCP server lets AI agents securely retrieve data from Snowflake accounts without needing to deploy separate infrastructure.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Snowflake-Labs/mcp",
+      "quote": "This project is deprecated and no longer maintained. Please migrate to the official Snowflake MCP Server.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+      "quote": "no payment information or other qualifying information is required",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.9,
+  "mcp_probe": {
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!DOCTYPE html><html lang=\"en\"><head><meta charSet=\"utf-8\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=devic"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

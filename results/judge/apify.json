@@ -1,9 +1,70 @@
 {
   "name": "Apify",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 5,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.apify.com/api/v2",
+      "quote": "Using your token in the request header is more secure than using it as a URL parameter because URLs are often stored in browser history and server logs.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.apify.com/platform/integrations/mcp",
+      "quote": "OAuth (Recommended) - Sign in through your browser on first connection",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.511
+    },
+    {
+      "field": "access",
+      "url": "https://apify.com/pricing",
+      "quote": "Absolutely! We offer a free plan that lets you use most of the features of the Apify platform, but with certain limits. No credit card is required.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.apify.com/platform/integrations/mcp",
+      "quote": "The Apify MCP server...allows AI applications and agents to interact with the Apify platform using Model Context Protocol (MCP).",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.908
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.apify.com/v2/acts",
+      "quote": "{   \"error\": {     \"type\": \"token-not-provided\",     \"message\": \"Authentication token was not provided\"   } }",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.8,
+  "mcp_probe": {
+    "url": "https://mcp.apify.com",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer realm=\"OAuth\", error=\"invalid_token\", error_description=\"Missing or invalid access token. Pass an Apify API token in the Authorization: Bearer <token> header. Manage tokens at https://console.apify.com/account/integrations\"",
+    "alive": true,
+    "body": "{\"error\":\"invalid_token\",\"error_description\":\"Missing or invalid access token. Pass an Apify API token in the Authorizat"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
 }

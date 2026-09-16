@@ -1,9 +1,99 @@
 {
   "name": "Sentry",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://docs.sentry.io/api/",
+      "quote": "The Sentry web API is used to access the Sentry platform programmatically.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.sentry.io/api/auth/",
+      "quote": "Authentication tokens are passed using an auth header, and are used to authenticate as a user or organization account with the API.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.sentry.io/api/auth/",
+      "quote": "A Sentry user can belong to multiple organizations. The access token only provides access to the specific organization the user selected during the OAuth flow.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.sentry.io/api/auth/",
+      "quote": "API Keys: A deprecated authentication method using HTTP Basic Auth, though still supported for existing accounts.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.533
+    },
+    {
+      "field": "access",
+      "url": "https://sentry.io/pricing/",
+      "quote": "API\" with checkmarks indicating availability in Team, Business, and Enterprise plans, but notably absent from the Developer plan",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.355
+    },
+    {
+      "field": "access",
+      "url": "https://docs.sentry.io/api/guides/create-auth-token/",
+      "quote": "A Sentry account with an organization-level role of Manager or Admin",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.sentry.io/product/sentry-mcp/",
+      "quote": "301 Moved Permanently -> https://mcp.sentry.dev/",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.615
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://sentry.io/api/0/projects/",
+      "quote": "{\"detail\":\"Authentication credentials were not provided.\"} (www-authenticate: Bearer realm=\"api\")",
+      "status": 401,
+      "verdict": "not_grounded",
+      "score": 0.0
+    }
+  ],
+  "grounding_rate": 0.5,
+  "mcp_probe": {
+    "url": "https://mcp.sentry.dev/",
+    "status": 405,
+    "content_type": "",
+    "www_authenticate": null,
+    "alive": false,
+    "body": ""
+  },
+  "by_field": {
+    "api_type": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
 }

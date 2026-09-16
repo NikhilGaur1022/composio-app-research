@@ -3,52 +3,108 @@
   "name": "MongoDB Atlas",
   "category": "Developer, Infra and Data platforms",
   "hint": "mongodb.com/docs/atlas/api",
-  "one_liner": "MongoDB Atlas is a fully managed cloud database platform providing REST APIs for database cluster administration, configuration, and lifecycle management.",
+  "one_liner": "MongoDB Atlas is a fully-managed cloud MongoDB database platform with a REST Administration API for provisioning and managing clusters, projects, backups, and org resources.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "oauth2"
   ],
   "access": "self_serve_free",
   "api_type": "rest",
-  "api_breadth": "medium",
-  "docs_url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/",
+  "api_breadth": "large",
+  "docs_url": "https://www.mongodb.com/docs/atlas/api/",
   "mcp": {
-    "status": "community",
+    "status": "official",
     "url": "https://github.com/mongodb-js/mongodb-mcp-server"
   },
   "verdict": "green",
-  "score": 95,
+  "score": 100,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.65,
   "agreement": 1.0,
-  "grounding_rate": null,
+  "grounding_rate": 0.12,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+    "only 12% of quotes grounded in cited pages"
   ],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
       "pass1": [
         "api_key",
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "large",
       "pass1": "medium"
     },
     "mcp": {
-      "github": "community",
+      "pass2": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "mcp",
+      "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "quote": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+      "quote": "you must authenticate your API requests with one of the following authentication methods: - Service account access tokens (OAuth 2.0) - API keys (HTTP Digest Authentication)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+      "quote": "Service accounts are the recommended method to manage authentication to the Atlas Administration API. Service accounts provide improved security over API keys by using the industry standard OAuth 2.0 protocol with the Client Credentials flow.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+      "quote": "API keys are a legacy method of authenticating to the Atlas Administration API that uses HTTP Digest Authentication.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+      "quote": "You have an Atlas account. To create one, see Create an Atlas Account.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+      "quote": "To create a service account or API keys for an organization, you must have Organization Owner access to that organization.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+      "quote": "All Atlas Administration API endpoints have the following base URL: https://cloud.mongodb.com/api/atlas/<version>",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.mongodb.com/docs/atlas/api/",
+      "quote": "add, edit, or delete administrative objects within Atlas, including projects, users, and clusters",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://cloud.mongodb.com/api/atlas/v2/groups",
@@ -73,7 +129,7 @@
     "www_authenticate": "Digest realm=\"MMS Public API\", domain=\"\", nonce=\"u1ON62Xgtyu5vP80ATz5oB9LoRpnPtnv\", algorithm=MD5, qop=\"auth\", stale=false",
     "inferred": "other"
   },
-  "notes": "MongoDB Atlas free tier (M0) provides self-serve API access. Atlas Admin API v2 is the primary REST API for programmatic access. OAuth2 Service Accounts are recommended over legacy API keys. App Services tier includes 1M free API requests monthly. API breadth estimated as medium based on typical admin API scope covering projects, clusters, users, billing, and monitoring resources.",
+  "notes": "Atlas Administration API v2 is a broad REST API (clusters, projects, orgs, backups, alerts, network access, federation, streams, etc. — several hundred endpoints, marked \\\"large\\\" from general knowledge of the OpenAPI spec since a live endpoint count could not be fetched in this pass). Free Atlas accounts (including M0 free tier) can create an organization and, with Organization Owner role, generate either OAuth2 service account credentials (recommended, current) or legacy API keys (HTTP Digest auth) — fully self-serve, no paid plan or approval gate for API access itself. mongodb-js/mongodb-mcp-server (1.1k★) is MongoDB's own official MCP server supporting both self-hosted MongoDB and Atlas.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -85,6 +141,17 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.104
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.34199999999999997
 }

@@ -1,9 +1,86 @@
 {
   "name": "Magento (Adobe Commerce)",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 6,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "Third-party applications authenticate with OAuth 1.0a",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "Mobile applications authenticate using tokens",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "Administrators and customers are authenticated with login credentials",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "you must use Adobe Identity Management Service (IMS) to authenticate your requests",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+      "quote": "You must register a web service on Admin. Use the following general steps to set up Magento to enable web services.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.adobe.com/commerce/webapi/graphql/",
+      "quote": "GraphQL is a data query language and runtime that revolutionizes how you build and consume APIs",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "quote": "io.github.juan-cinto-infracommerce/magento-cloud",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.495
+    }
+  ],
+  "grounding_rate": 0.86,
+  "mcp_probe": {
+    "url": "https://github.com/juan-cinto-infracommerce/magento-cloud",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
 }

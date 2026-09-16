@@ -1,47 +1,43 @@
 {
   "ok": true,
   "result": {
-    "one_liner": "Jira is Atlassian's issue-tracking and project-management tool, exposed via a Cloud REST API for programmatic access to issues, projects, and workflows.",
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
     "auth_methods": [
       "oauth2",
       "api_key",
-      "basic"
+      "basic",
+      "jwt"
     ],
-    "access": "self_serve_free",
-    "api_type": "rest",
-    "api_breadth": "large",
-    "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
-    "mcp": {
-      "status": "official",
-      "url": "https://github.com/atlassian/atlassian-mcp-server"
-    },
-    "verdict": "green",
     "blocker": "none",
+    "confidence": 0.88,
+    "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
     "evidence": [
       {
         "field": "auth_methods",
         "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
-        "quote": "you're not saving your primary account password outside of where you authenticate"
+        "quote": "Generate an API token for Jira using your Atlassian Account"
       },
       {
         "field": "auth_methods",
-        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
-        "quote": "Set this to the desired scopes: Separate multiple scopes with a space"
-      },
-      {
-        "field": "access",
         "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
-        "quote": "generate an API token for your Atlassian account"
+        "quote": "Forge apps and Connect apps use more secure methods for authentication: OAuth 2.0 and JWT respectively."
       },
       {
         "field": "access",
         "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
-        "quote": "Users trying to install an unapproved OAuth 2.0 integration are warned that the app has not yet been reviewed by Atlassian"
+        "quote": "OAuth 2.0 (3LO) apps are created and managed in the developer console."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+        "quote": "Users trying to install an unapproved OAuth 2.0 integration are warned that the app has not yet been reviewed by Atlassian."
       },
       {
         "field": "api_breadth",
         "url": "https://api.apis.guru/v2/specs/atlassian.com/jira/1001.0.0-SNAPSHOT/openapi.json",
-        "quote": "487 endpoints"
+        "quote": "487 endpoints (apis.guru catalog entry for atlassian.com/jira)"
       },
       {
         "field": "mcp",
@@ -50,16 +46,21 @@
       },
       {
         "field": "verdict",
-        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
-        "quote": "Access the developer console and select \"Create\" → \"OAuth 2.0 integration\""
+        "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+        "quote": "The Jira Cloud platform REST API enables you to interact with Jira Cloud programmatically."
       }
     ],
-    "confidence": 0.85,
-    "notes": "API tokens (basic auth) and OAuth 2.0 (3LO) app registration are both self-serve/free via an Atlassian account and developer console — no paid tier or approval needed to obtain credentials for private/dev use; Marketplace distribution requires review but that's not a blocker for building an agent toolkit. Atlassian also publishes an official hosted remote MCP server (GA Feb 2026) supporting OAuth 2.1 or API tokens, in addition to numerous community MCP servers (sooperset/mcp-atlassian, etc.)."
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/atlassian/atlassian-mcp-server"
+    },
+    "notes": "Anyone can sign up for a free Atlassian/Jira account and generate an API token immediately at id.atlassian.com/manage/api-tokens, or register an OAuth 2.0 (3LO) app for free in the developer console (personal-use apps need no approval; public distribution requires Atlassian Marketplace review). REST API covers 487+ endpoints. Atlassian also publishes an official hosted MCP server (mcp.atlassian.com) supporting OAuth 2.1 and API tokens, GA Feb 2026.",
+    "one_liner": "Jira is Atlassian's issue-tracking and project-management platform with a large, well-documented Cloud REST API.",
+    "verdict": "green"
   },
-  "cost_usd": 0.17088020000000004,
-  "turns": 8,
-  "seconds": 45.7,
+  "cost_usd": 0.1565198,
+  "turns": 7,
+  "seconds": 39.8,
   "is_error": false,
   "error": null
 }

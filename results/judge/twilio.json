@@ -78,6 +78,14 @@
     }
   ],
   "grounding_rate": 0.67,
+  "mcp_probe": {
+    "url": "https://www.twilio.com/docs/ai/mcp",
+    "status": 405,
+    "content_type": "",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "Method Not Allowed"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

@@ -54,6 +54,14 @@
     }
   ],
   "grounding_rate": 0.83,
+  "mcp_probe": {
+    "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+    "status": 405,
+    "content_type": "text/html",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n</body>\r\n</html>"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

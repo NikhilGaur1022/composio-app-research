@@ -3,14 +3,15 @@
   "name": "Salesforce Commerce Cloud",
   "category": "Ecommerce",
   "hint": "developer.salesforce.com/docs/commerce",
-  "one_liner": "Enterprise ecommerce platform providing REST and GraphQL APIs for headless B2C Commerce.",
+  "one_liner": "Salesforce Commerce Cloud (B2C Commerce) is an enterprise ecommerce platform whose OCAPI/SCAPI REST APIs use OAuth2 client-credentials auth via Salesforce Account Manager, but a usable sandbox requires being an existing customer or an approved partner rather than self-serve signup.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "oauth2"
   ],
   "access": "partner_gated",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://developer.salesforce.com/docs/commerce/commerce-api/overview",
+  "docs_url": "https://developer.salesforce.com/developer-centers/commerce-cloud",
   "mcp": {
     "status": "none",
     "url": null
@@ -18,21 +19,23 @@
   "verdict": "red",
   "score": 53,
   "blocker": "partner_gate",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.72,
-  "grounding_rate": null,
+  "model_verdict": "red",
+  "confidence": 0.65,
+  "agreement": 0.94,
+  "grounding_rate": 0.29,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries",
-    "gated/no-API finding with weak grounding needs a human eye",
-    "family check: Salesforce products use oauth2, found ['api_key']"
+    "only 28% of quotes grounded in cited pages",
+    "gated/no-API finding with weak grounding needs a human eye"
   ],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "apis_guru_spec": [
         "api_key"
+      ],
+      "pass2": [
+        "oauth2"
       ],
       "pass1": [
         "bearer_token",
@@ -41,21 +44,67 @@
       ]
     },
     "access": {
+      "pass2": "partner_gated",
       "pass1": "partner_gated"
     },
     "api_type": {
+      "pass2": "rest",
       "apis_guru_spec": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "apis_guru_spec": "small",
+      "pass2": "large",
       "pass1": "large"
     },
     "mcp": {
+      "pass2": "none",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/references/b2c-commerce-ocapi/oauth.html",
+      "quote": "All client applications that access the Open Commerce API must be registered through the Account Manager.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+      "quote": "provide a credentials string in the HTTP header that is composed of your client ID, followed by a colon (:), followed by your client secret (password)",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.salesforce.com/s/articleView?id=000393797&language=en_US&type=1",
+      "quote": "Partners must first join the AppExchange Partner Program under the 'B2C Commerce' Partner Category.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.salesforce.com/s/articleView?id=000393797&language=en_US&type=1",
+      "quote": "The Trial Sandbox/Environment is created for B2C Commerce ISV prospects",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.salesforce.com/s/articleView?id=000393797&language=en_US&type=1",
+      "quote": "Request your Trial from this link",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.salesforce.com/developer-centers/commerce-cloud",
+      "quote": "docs_page signal check: no official or community MCP server listed in registry lookups for Salesforce Commerce Cloud",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.salesforce.com/s/articleView?id=000393797&language=en_US&type=1",
+      "quote": "On-Demand Sandboxes operate on a usage-based pricing model. Partners receive annual free credits based on their partnership tier",
+      "grounded": "not_grounded"
+    },
     {
       "field": "api_breadth",
       "url": "https://api.apis.guru/v2/specs/salesforce.local/einstein/2.0.1/openapi.json",
@@ -80,7 +129,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Salesforce Commerce Cloud requires partner status or enterprise customer relationship to obtain sandbox access. On-demand sandboxes require purchasing credits and ISV partnership. No free developer tier available. API supports OAuth2, bearer tokens, and JWT authentication. Both REST and GraphQL interfaces provided for extensive commerce operations.",
+  "notes": "SFCC exposes two REST API families: legacy OCAPI (deprecated) and current SCAPI (Shopper, Data/Admin APIs), both authenticated via OAuth2 client-credentials grant against Salesforce Account Manager (client ID + secret -> bearer token). There is no self-serve signup: a working sandbox requires either being an existing customer (Order Form) or an approved AppExchange \"B2C Commerce\" partner, or submitting a vetted trial-sandbox request form as an ISV prospect (up to 90 days). developer.salesforce.com blocked direct WebFetch (403/bot protection) for several pages, so some auth-page quotes are corroborated via search-engine extraction rather than a direct fetch; access/blocker evidence was independently verified via a successful direct fetch of the help.salesforce.com sandbox-access article. api_breadth is inferred as \"large\" from the combined OCAPI Data API + SCAPI Shopper/Admin API surface (many resource groups), not from a directly cited endpoint count — treat with moderate confidence. No MCP server (official or community) was found in registry/GitHub lookups.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -93,6 +142,16 @@
     "verdict": "red",
     "blocker": "partner_gate"
   },
-  "pass2": null,
-  "cost_usd": 0.108
+  "pass2": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "red",
+    "blocker": "partner_gate",
+    "confidence": 0.68
+  },
+  "cost_usd": 0.485
 }

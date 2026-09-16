@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.8,
+    "docs_url": "https://gumroad.com/api",
+    "evidence": [
+      {
+        "field": "api_type",
+        "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+        "quote": "The Gumroad OAuth API is based around REST. We return JSON for every request, including errors."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://api.gumroad.com/v2/products",
+        "quote": "Bearer realm=\"Doorkeeper\", error=\"invalid_token\", error_description=\"The access token is invalid\""
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+        "quote": "Credentials Issued: Upon creation, you receive an Application ID and Application Secret... Use the \"Generate access token\" button to obtain your access token."
+      },
+      {
+        "field": "access",
+        "url": "https://gumkit.app/blog/gumroad-api-access-token/",
+        "quote": "there is no plan to pick, no scope checklist, no approval queue"
+      },
+      {
+        "field": "access",
+        "url": "https://gumkit.app/blog/gumroad-api-access-token/",
+        "quote": "Generating one takes about two minutes and lives entirely inside your own Gumroad settings."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+        "quote": "provides access to these resources: Products, Offer codes, Variants and custom fields, User public information, Sales and subscribers, License verification"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/rmarescu/gumroad-mcp",
+        "quote": "A Model Context Protocol (MCP) server implementation for Gumroad API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/keithah/gumroad-mcp",
+        "quote": "MCP server for Gumroad API - lookup subscriptions, sales, and products"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/rmarescu/gumroad-mcp"
+    },
+    "notes": "Gumroad's official vendor docs page (gumroad.com/api) is a JS-rendered SPA that couldn't be fetched as static text, so primary evidence comes from Gumroad's own API endpoint (Doorkeeper OAuth realm) plus a detailed third-party integration guide (Rollout) and a token-creation walkthrough (gumkit.app) that both describe the same self-serve flow: log into any free Gumroad account, go to Settings > Advanced, create an application (get client_id/secret for OAuth2) or click \"Generate access token\" for a personal bearer token — no approval queue. No official Gumroad-published MCP server found; multiple community/open-source MCP wrappers exist (rmarescu/gumroad-mcp, keithah/gumroad-mcp). API is small (~6 resource groups: products, offer codes, sales, subscribers, variants/custom fields, license verification).",
+    "one_liner": "Gumroad is an ecommerce platform for creators to sell digital products, courses, and memberships directly to customers.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.270721,
+  "turns": 11,
+  "seconds": 88.9,
+  "is_error": false,
+  "error": null
+}

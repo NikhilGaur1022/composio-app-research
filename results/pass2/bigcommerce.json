@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest_and_graphql",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "jwt"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://developer.bigcommerce.com/docs/start",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.bigcommerce.com/docs/start/authentication",
+        "quote": "Most of our REST endpoints and GraphQL Admin API endpoints use the X-Auth-Token header to authenticate to BigCommerce servers."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.bigcommerce.com/docs/start/authentication",
+        "quote": "BigCommerce no longer issues legacy API Accounts to new stores."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.bigcommerce.com/docs/start",
+        "quote": "Sign up for a free BigCommerce trial store to test API calls and build integrations without affecting live data."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.bigcommerce.com/docs/start",
+        "quote": "REST Management API, REST Storefront API, GraphQL Storefront API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+        "quote": "The BigCommerce MCP server lets AI agents interact with a BigCommerce storefront using purpose-built commerce tools."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview"
+    },
+    "notes": "Free trial store gives immediate self-serve OAuth credentials (client_id/secret/access_token via X-Auth-Token) for both REST Management API and GraphQL Admin/Storefront APIs. Legacy basic-auth API accounts are deprecated (no longer issued to new stores), so 'basic' was excluded. JWT auth applies to Customer Login/Current Customer and GraphQL Storefront/Payments APIs. Official MCP server is storefront-shopping-focused (search/cart/checkout), not full admin API coverage, but it exists and is vendor-published.",
+    "one_liner": "BigCommerce is an ecommerce platform offering REST and GraphQL APIs for store/catalog/order management and storefront/checkout operations.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1840544,
+  "turns": 9,
+  "seconds": 57.2,
+  "is_error": false,
+  "error": null
+}

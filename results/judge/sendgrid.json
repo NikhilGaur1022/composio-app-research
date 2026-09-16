@@ -1,9 +1,79 @@
 {
   "name": "SendGrid",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+      "quote": "include an Authorization header with the value Bearer <YOUR_API_KEY_HERE> in your request.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/en-us/sendgrid",
+      "quote": "Sign up for a free trial—no credit card required.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/api-getting-started",
+      "quote": "Create an API Key.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/sendgrid.com/1.0.0/openapi.json",
+      "quote": "334 endpoints (apis.guru aggregated OpenAPI spec for sendgrid.com)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.507
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Choppaaahh/sendgrid-mcp-secure",
+      "quote": "io.github.Choppaaahh/sendgrid-mcp-secure (community MCP registry listing, not vendor-published)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.597
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.sendgrid.com/v3/templates",
+      "quote": "{\"errors\":[{\"field\":null,\"message\":\"authorization required\"}]}",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.67,
+  "mcp_probe": {
+    "url": "https://github.com/Choppaaahh/sendgrid-mcp-secure",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ]
+  }
 }

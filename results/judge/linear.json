@@ -1,9 +1,92 @@
 {
   "name": "Linear",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 6,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://linear.app/developers",
+      "quote": "API Type: GraphQL - The platform uses a GraphQL API as its primary interface for developers.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.407
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://linear.app/docs/api-and-webhooks",
+      "quote": "Admins and permitted Members can create personal API keys from Settings > Account > Security & Access.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://linear.app/docs/api-and-webhooks",
+      "quote": "Create and manage webhooks and OAuth applications in Settings > Administration > API.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://linear.app/docs/api-and-webhooks",
+      "quote": "For each key you create, you can choose to give it full access to the data your user can access, or restrict it to certain permissions.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://linear.app/docs/mcp",
+      "quote": "Linear's MCP server follows the authenticated remote MCP spec, so the server is centrally hosted and managed.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://linear.app/docs/mcp",
+      "quote": "The Linear MCP server has tools available for finding, creating, and updating objects in Linear like issues, projects, and comments",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://linear.app/docs/api-and-webhooks",
+      "quote": "Admins and permitted Members can create personal API keys from Settings > Account > Security & Access.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.86,
+  "mcp_probe": {
+    "url": "https://mcp.linear.app/mcp",
+    "status": 401,
+    "content_type": "application/json",
+    "www_authenticate": "Bearer realm=\"OAuth\", resource_metadata=\"https://mcp.linear.app/.well-known/oauth-protected-resource/mcp\", error=\"invalid_token\", error_description=\"Missing or invalid access token\"",
+    "alive": true,
+    "body": "{\"error\":\"invalid_token\",\"error_description\":\"Missing or invalid access token\"}"
+  },
+  "by_field": {
+    "api_type": [
+      "not_grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

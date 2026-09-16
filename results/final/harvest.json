@@ -3,8 +3,9 @@
   "name": "Harvest",
   "category": "Productivity and Project Management",
   "hint": "harvestapp.com (help.getharvest.com/api-v2)",
-  "one_liner": "Time tracking and project management platform for teams to track work time, manage projects, and generate invoices.",
+  "one_liner": "Harvest is a time tracking, invoicing, and project-budgeting tool for teams and freelancers.",
   "auth_methods": [
+    "bearer_token",
     "oauth2"
   ],
   "access": "self_serve_free",
@@ -12,24 +13,26 @@
   "api_breadth": "medium",
   "docs_url": "https://help.getharvest.com/api-v2/",
   "mcp": {
-    "status": "community",
-    "url": "https://github.com/raphasouthall/neurostack"
+    "status": "official",
+    "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP"
   },
   "verdict": "green",
-  "score": 95,
+  "score": 97,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.87,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "green",
+  "confidence": 0.79,
+  "agreement": 0.96,
+  "grounding_rate": 0.57,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "bearer_token",
         "oauth2"
       ],
       "pass1": [
@@ -38,28 +41,81 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "medium",
+      "pass2": "small",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "none"
     }
   },
   "evidence": [
     {
       "field": "auth_methods",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "quote": "The API can be accessed by creating a Personal Access Token from the Developers section of Harvest ID.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "quote": "register an OAuth2 Application, also known as an OAuth2 Client",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "quote": "After creating it you'll be provided with a random token and a list of your account IDs.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.getharvest.com/api-v2/",
+      "quote": "the current API V2 documentation",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.getharvest.com/pricing",
+      "quote": "1 seat, 2 projects, Time tracking, Invoicing, Expense tracking, Mac & iOS apps ... $0 forever",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+      "quote": "The Harvest MCP is the connection that gives an MCP-compatible assistant — such as Claude — controlled access to your Harvest account",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://api.harvestapp.com/mcp",
+      "quote": "405 Method Not Allowed",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/harvest",
       "quote": "Composio catalog: auth ['OAUTH2'], 57 tools",
       "grounded": "registry"
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+      "quote": "MCP initialize POST -> HTTP 403 (text/html; charset=UTF-8); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {
@@ -81,7 +137,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Harvest API is REST v2 with approximately 50+ endpoints covering Clients, Projects, Tasks, Time Entries, Expenses, Invoices, Estimates, Users, and Cost Rates. Available on all tiers including free. OAuth 2.0 and Personal Access Tokens supported. Permissions mirror account roles (Administrators: all access; Managers: projects/people they manage; Members: own data only). No official MCP server. Buildable immediately as a self-serve agent toolkit.",
+  "notes": "Harvest API v2 uses Bearer-token auth for both Personal Access Tokens (self-serve, created in the Harvest ID Developers portal, no plan restriction) and OAuth2 apps (self-registered, for multi-account integrations). Harvest has a permanently free plan (1 seat/2 projects) so a developer can get API credentials without paying. Harvest also ships an official remote MCP server (api.harvestapp.com/mcp) documented in its help center, distinct from several community MCP implementations on GitHub. API surface is moderate: ~14 resource groups (Clients, Invoices, Estimates, Expenses, Tasks, Timesheets, Projects, Roles, Users, Reports, PTO) with standard CRUD, estimated 40-50 endpoints total.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -93,6 +149,17 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.147
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.43099999999999994
 }

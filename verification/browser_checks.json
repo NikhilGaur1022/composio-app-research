@@ -4,7 +4,7 @@
     "field": "access",
     "url": "https://pitchbook.com/help/PitchBook-api",
     "screenshot": "pitchbook-help-api.jpg",
-    "agent_correct": null,
+    "agent_correct": true,
     "finding": "Site returns 403 to scripts; in a real browser the help page says the API 'is a separate offering from the PitchBook Platform that requires a standalone contract agreement' and keys come from the Direct Data team. Label: partner_gated."
   },
   {
@@ -12,7 +12,7 @@
     "field": "access",
     "url": "https://attio.com/pricing",
     "screenshot": "attio-pricing.jpg",
-    "agent_correct": null,
+    "agent_correct": false,
     "finding": "Pricing comparison table lists 'API and webhook access' under Integrations with a tick in every column including Free ($0). Pass 2 had said paid_plan. Label: self_serve_free."
   },
   {
@@ -20,15 +20,15 @@
     "field": "access",
     "url": "https://devin.ai/pricing",
     "screenshot": "devin-pricing.jpg",
-    "agent_correct": null,
-    "finding": "Plan matrix: 'Devin API' is \u2717 on Free and \u2713 on Pro ($20/mo), Max, Teams, Enterprise. Label: paid_plan."
+    "agent_correct": false,
+    "finding": "Plan matrix: 'Devin API' is ✗ on Free and ✓ on Pro ($20/mo), Max, Teams, Enterprise. Label: paid_plan."
   },
   {
     "app": "iPayX",
     "field": "docs_url",
     "url": "https://www.ipayx.ai/docs/api",
     "screenshot": "ipayx-api-docs.jpg",
-    "agent_correct": null,
+    "agent_correct": false,
     "finding": "The hinted URL ipayx.ai/docs is a 404 (screenshot ipayx-docs-404.jpg). Real docs: /docs/api - 'REST API v1', 'Bearer auth, OpenAPI 3.1', 3 endpoints, 'Get an API key' button; plus an official MCP server (/docs/mcp-server). Pricing: 5 free audits, 'production-grade API' on paid tiers."
   },
   {
@@ -36,7 +36,7 @@
     "field": "api_type",
     "url": "https://higgsfield.ai/cli",
     "screenshot": "higgsfield-cli.jpg",
-    "agent_correct": null,
+    "agent_correct": true,
     "finding": "JS-rendered page. Ships an npm CLI (`higgsfield auth login`, browser sign-in), an official MCP (higgsfield.ai/mcp) and a REST API via console.higgsfield.ai. Not CLI-only; it is API + MCP + CLI."
   }
 ]

@@ -1,9 +1,77 @@
 {
   "name": "Squarespace",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+      "quote": "a generated API key or start the OAuth process with Squarespace to become a registered OAuth client",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+      "quote": "Squarespace's Commerce Advanced",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.775
+    },
+    {
+      "field": "access",
+      "url": "https://developers.squarespace.com/commerce-apis/oauth",
+      "quote": "We will review your registration and respond with your_client_id and your_client_secret as soon as possible.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.squarespace.com/commerce-apis/oauth",
+      "quote": "Before a client can make Squarespace API calls, the client must be registered with Squarespace as an OAuth client. Start the Oauth client process here.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.squarespace.com/1.0/commerce/orders",
+      "quote": "\"type\" : \"AUTHORIZATION_ERROR\",   \"subtype\" : null,   \"message\" : \"You are not authorized to do that.\"",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.squarespace.com/",
+      "quote": "Start building",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.83,
+  "mcp_probe": {
+    "url": "",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
 }

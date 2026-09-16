@@ -1,9 +1,96 @@
 {
   "name": "Gumroad",
-  "checked": 0,
-  "grounded": 0,
-  "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "checked": 7,
+  "grounded": 4,
+  "unreachable": 1,
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "quote": "The Gumroad OAuth API is based around REST. We return JSON for every request, including errors.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.gumroad.com/v2/products",
+      "quote": "Bearer realm=\"Doorkeeper\", error=\"invalid_token\", error_description=\"The access token is invalid\"",
+      "status": 401,
+      "verdict": "unreachable"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "quote": "Credentials Issued: Upon creation, you receive an Application ID and Application Secret... Use the \"Generate access token\" button to obtain your access token.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.748
+    },
+    {
+      "field": "access",
+      "url": "https://gumkit.app/blog/gumroad-api-access-token/",
+      "quote": "there is no plan to pick, no scope checklist, no approval queue",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://gumkit.app/blog/gumroad-api-access-token/",
+      "quote": "Generating one takes about two minutes and lives entirely inside your own Gumroad settings.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "quote": "provides access to these resources: Products, Offer codes, Variants and custom fields, User public information, Sales and subscribers, License verification",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.693
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/rmarescu/gumroad-mcp",
+      "quote": "A Model Context Protocol (MCP) server implementation for Gumroad API",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/keithah/gumroad-mcp",
+      "quote": "MCP server for Gumroad API - lookup subscriptions, sales, and products",
+      "status": 404,
+      "verdict": "not_grounded",
+      "score": 0.411
+    }
+  ],
+  "grounding_rate": 0.57,
+  "mcp_probe": {
+    "url": "https://github.com/rmarescu/gumroad-mcp",
+    "skipped": true
+  },
+  "by_field": {
+    "api_type": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "unreachable",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "not_grounded"
+    ]
+  }
 }

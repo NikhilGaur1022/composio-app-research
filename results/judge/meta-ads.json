@@ -1,9 +1,88 @@
 {
   "name": "Meta Ads",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+      "quote": "If you're managing someone's ads, use the `scope` parameter to prompt them for the `ads_management` or `ads_read` permissions.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.858
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://graph.facebook.com/v21.0/me/adaccounts",
+      "quote": "OAuth \"Facebook Platform\" \"invalid_request\" \"An active access token must be used to query information about the current user.\"",
+      "status": 400,
+      "verdict": "not_grounded",
+      "score": 0.621
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/permissions/reference/ads_management",
+      "quote": "Business Verification is required for all apps making requests for Advanced Access.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/app-review",
+      "quote": "If your app will be used by anyone without a Role on the app or a role in a Business that has claimed the app, it must first undergo App Review.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.531
+    },
+    {
+      "field": "api_type",
+      "url": "https://graph.facebook.com/v21.0/me/adaccounts",
+      "quote": "{\"error\":{\"message\":\"An active access token must be used to query information about the current user.\",\"type\":\"OAuthException\",\"code\":2500,\"fbtrace_id\":\"A4Dg2mXdap5qxspBnE3BUSq\"}}",
+      "status": 400,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/pipeboard-co/meta-ads-mcp",
+      "quote": "pipeboard-co/meta-ads-mcp (1261★)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.591
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.facebook.com/docs/app-review",
+      "quote": "As part of the review process we will test your app to verify that it actually uses the permissions and features you are requesting.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.57,
+  "mcp_probe": {
+    "url": "https://github.com/pipeboard-co/meta-ads-mcp",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

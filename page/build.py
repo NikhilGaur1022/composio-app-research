@@ -78,7 +78,8 @@ mcp_c = Counter(r["mcp"]["status"] for r in rows)
 api_c = Counter(r["api_type"] for r in rows)
 self_serve = sum(1 for r in rows if r["access"].startswith("self_serve"))
 composio_in = sum(1 for r in rows if r["composio"]["in_catalog"])
-composio_agree = sum(1 for r in rows if r["composio"]["auth_agrees"])
+# independent agreement: pass-2's own auth finding vs Composio's declared auth (the merge also uses the catalog, so the merged number is not independent)
+composio_agree = sum(1 for r in rows if r["composio"]["in_catalog"] and r["composio"].get("auth") and set(r["composio"]["auth"]) & set((r.get("pass2") or {}).get("auth_methods") or []))
 oauth_n = auth_c["oauth2"]; apikey_n = auth_c["api_key"]
 both_n = sum(1 for r in rows if "oauth2" in r["auth_methods"] and "api_key" in r["auth_methods"])
 total_cost = sum(r.get("cost_usd", 0) for r in rows)
@@ -112,8 +113,15 @@ top_blocker = blocker_c.most_common(1)[0] if blocker_c else ("none", 0)
 # ----------------------------------------------------------------------------- charts (inline SVG)
 def stacked_bar_svg(data: dict, keys: list, labels: dict, colors: list, width=760, row_h=26, label_w=96):
     """Horizontal 100%-stacked bars, one row per category. data: {cat: Counter}."""
-    h = row_h * len(data) + 34
     plot_w = width - label_w - 8
+    # legend layout first, so the height accounts for wrapped rows
+    legend = []; lx = label_w; ly = 0
+    for i, k in enumerate(keys):
+        w = 16 + 6.6 * len(labels.get(k, k)) + 14
+        if lx + w > width and lx > label_w:
+            lx = label_w; ly += 16
+        legend.append((i, k, lx, ly)); lx += w
+    h = row_h * len(data) + 34 + ly
     out = [f'<svg class="chart" viewBox="0 0 {width} {h}" role="img" aria-label="stacked bar chart">']
     y = 4
     for cat, cnt in data.items():
@@ -130,12 +138,9 @@ def stacked_bar_svg(data: dict, keys: list, labels: dict, colors: list, width=76
                 out.append(f'<text x="{x + w / 2 - 1:.1f}" y="{y + row_h / 2 + 4}" text-anchor="middle" class="cv">{v}</text>')
             x += w
         y += row_h
-    # legend
-    lx = label_w
-    for i, k in enumerate(keys):
-        out.append(f'<rect x="{lx}" y="{y + 10}" width="10" height="10" rx="2" fill="var(--s{i + 1})"/>')
-        out.append(f'<text x="{lx + 14}" y="{y + 19}" class="cl">{esc(labels.get(k, k))}</text>')
-        lx += 16 + 7 * len(labels.get(k, k)) + 14
+    for i, k, lx, ly in legend:
+        out.append(f'<rect x="{lx}" y="{y + 10 + ly}" width="10" height="10" rx="2" fill="var(--s{i + 1})"/>')
+        out.append(f'<text x="{lx + 14}" y="{y + 19 + ly}" class="cl">{esc(labels.get(k, k))}</text>')
     out.append("</svg>")
     return "".join(out)
 
@@ -394,7 +399,7 @@ footer{{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-s
     <div class="tile a"><div class="n">{self_serve}%</div><div class="l">self-serve credentials</div></div>
     <div class="tile a"><div class="n">{oauth_n}</div><div class="l">expose OAuth2</div></div>
     <div class="tile a"><div class="n">{mcp_c['official']}</div><div class="l">official MCP servers</div></div>
-    <div class="tile"><div class="n">{acc('pass1')}→{acc('final')}</div><div class="l">accuracy on {scores.get('n_gold', 0)}-app gold set</div></div>
+    <div class="tile"><div class="n">{acc('pass1')}→{acc('merged')}</div><div class="l">agent accuracy on {scores.get('n_gold', 0)}-app gold set, before any human fix</div></div>
   </div>
 </header>
 
@@ -464,7 +469,8 @@ footer{{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-s
 <div class="tw"><table><thead><tr><th>Confidence</th><th>Apps</th><th>All core fields right</th></tr></thead><tbody>
 {"".join(f"<tr><td>{esc(b)}</td><td>{v['n']}</td><td>{(v['rate'] * 100):.0f}%</td></tr>" for b, v in sorted(calib.items()))}
 </tbody></table></div>
-<p style="font-size:.9rem">Composio's own catalog covers {composio_in} of the 100; on auth this research agrees with it for {composio_agree} ({(composio_agree / composio_in * 100) if composio_in else 0:.0f}%). Disagreements are listed in the failures section.</p></div>
+<p style="font-size:.9rem">Composio's own catalog covers {composio_in} of the 100. Pass 2, working independently of the catalog, agreed with Composio's declared auth on {composio_agree}/{composio_in} ({(composio_agree / composio_in * 100) if composio_in else 0:.0f}%); the differences are explained in the failures section.</p>
+<div class="note" style="margin-top:12px"><b>Read the last bar carefully.</b> "Final" is 100% on the gold set by construction: the human corrections were found through the same review. The honest estimate for an unseen app is the <b>merged</b> bar, before any human touched it.</div></div>
 </div>
 <h3>Gold set: hits and misses, per stage</h3>
 <p class="muted" style="font-size:.85rem">✓ = matches the hand label (or an accepted alternative); ✗ = miss. Hover a cell for the gold value.</p>

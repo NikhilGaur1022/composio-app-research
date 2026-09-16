@@ -1,9 +1,97 @@
 {
   "name": "GitHub",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "GitHub recommends that you use a fine-grained personal access token instead of a personal access token (classic).",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "Some REST API endpoints for GitHub Apps and OAuth apps require you to use basic authentication to access the endpoint.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "replace YOUR-TOKEN with a reference to your token using \"Authorization: Bearer YOUR-TOKEN\"",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.604
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "Authentication with username and password is not supported. If you try to authenticate with user name and password, you will receive a 4xx error.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://api.github.com/user",
+      "quote": "{\"message\": \"Requires authentication\",\"documentation_url\": \"https://docs.github.com/rest\",\"status\": \"401\"}",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.github.com/en/rest",
+      "quote": "signals: oauth true, graphql true, rest true",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.495
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+      "quote": "endpoints: 845",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/github/github-mcp-server",
+      "quote": "The GitHub MCP Server connects AI tools directly to GitHub's platform.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.62,
+  "mcp_probe": {
+    "url": "https://github.com/github/github-mcp-server",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
 }

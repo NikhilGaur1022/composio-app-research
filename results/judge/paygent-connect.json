@@ -1,9 +1,36 @@
 {
   "name": "Paygent Connect",
-  "checked": 0,
-  "grounded": 0,
-  "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "checked": 1,
+  "grounded": 1,
+  "unreachable": 1,
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://docs.nmi.com/reference/getting-started",
+      "quote": "Manage API authentication, user access, and event-driven integrations",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://paygent.com",
+      "quote": "",
+      "status": 0,
+      "verdict": "unreachable"
+    }
+  ],
+  "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "",
+    "skipped": true
+  },
+  "by_field": {
+    "api_type": [
+      "grounded"
+    ],
+    "verdict": [
+      "unreachable"
+    ]
+  }
 }

@@ -1,9 +1,81 @@
 {
   "name": "Notion",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.notion.com/docs/authorization",
+      "quote": "Public connections instead follow the OAuth 2.0 protocol to authorize a connection to interact with a workspace.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.notion.com/docs/authorization",
+      "quote": "Personal access tokens (PATs) are created directly by a Notion user in the Developer portal",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.notion.com/docs/authorization",
+      "quote": "include the installation access token in the Authorization header with every API request",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "quote": "The fastest way to start building is the Quickstart — create a personal access token, make your first API request, and see a new page appear in your workspace in under two minutes.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
+      "quote": "endpoints: 13",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.notion.com/docs/mcp",
+      "quote": "Notion MCP is a remote MCP server hosted by Notion.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.83,
+  "mcp_probe": {
+    "url": "https://developers.notion.com/docs/mcp",
+    "status": 405,
+    "content_type": "application/json",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "{\"error\": {\"code\": \"405\", \"message\": \"Method not allowed\"}}"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
 }

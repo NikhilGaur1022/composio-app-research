@@ -3,53 +3,102 @@
   "name": "systeme.io",
   "category": "Marketing, Ads, Email and Social",
   "hint": "systeme.io (funnel builder)",
-  "one_liner": "Systeme.io is a funnel builder and marketing automation platform for creating sales funnels, email campaigns, and managing contacts.",
+  "one_liner": "systeme.io is an all-in-one funnel builder and marketing platform (funnels, email campaigns, courses, ecommerce) offering a self-serve REST API and an official MCP server.",
   "auth_methods": [
     "api_key"
   ],
   "access": "self_serve_free",
   "api_type": "rest",
-  "api_breadth": "small",
-  "docs_url": "https://developer.systeme.io/reference/api",
+  "api_breadth": "medium",
+  "docs_url": "https://developer.systeme.io/reference",
   "mcp": {
-    "status": "none",
-    "url": null
+    "status": "official",
+    "url": "https://mcp.systeme.io/mcp"
   },
   "verdict": "green",
-  "score": 88,
+  "score": 97,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.83,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.67,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "api_key"
+      ],
       "pass1": [
         "api_key"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free",
       "docs_signal": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "medium",
       "pass1": "small"
     },
-    "mcp": {}
+    "mcp": {
+      "pass2": "official",
+      "mcp_endpoint_probe": "official"
+    }
   },
   "evidence": [
     {
       "field": "auth_methods",
+      "url": "https://developer.systeme.io/reference",
+      "quote": "attach your API key to the X-API-Key header of each request",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://systeme.io/pricing",
+      "quote": "the free plan never expires and does not require a credit card",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+      "quote": "Give your key a name, set an expiration date, and click Save",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+      "quote": "This is an initial release implementation and does not yet support the recommended authentication method (OAuth).",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developer.systeme.io/llms.txt",
+      "quote": "Contact - Create, retrieve, update, delete, and list",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+      "quote": "API calls from a server-side environment",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
       "url": "https://api.systeme.io/api/contacts",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"type\":\"https:\\/\\/tools.ietf.org\\/html\\/rfc2616#section-10\",\"title\":\"An error occurred\",\"detail\":\"Full authentication is required to access this resource.\"}",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.systeme.io/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (text/html; charset=UTF-8); endpoint is live",
       "grounded": "probe"
     }
   ],
@@ -70,7 +119,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Public API supports contacts, tags, custom fields, newsletters, campaigns, and funnels management. API uses cursor-based pagination. Users can create up to 3 API keys per account. Platform integrates with Make.com and other automation tools.",
+  "notes": "Public REST API (developer.systeme.io/reference, ~40 resources x CRUD = roughly 100-150 endpoints, so medium breadth) authenticated via X-API-Key header; keys are self-generated in dashboard Settings > MCP & API keys with no approval step, and the free plan (no credit card required) includes API/MCP key generation. Separately, systeme.io ships an official MCP server (mcp.systeme.io/mcp) authenticated with a key-based scheme (OAuth explicitly not yet supported per their docs), covering contacts, tags, and newsletters. No OAuth2/JWT/basic documented for the public API — key-only auth today.",
   "pass1": {
     "auth_methods": [
       "api_key"
@@ -81,6 +130,16 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.118
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.78
+  },
+  "cost_usd": 0.356
 }

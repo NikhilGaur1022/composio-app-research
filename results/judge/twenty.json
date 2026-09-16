@@ -70,6 +70,10 @@
     }
   ],
   "grounding_rate": 0.62,
+  "mcp_probe": {
+    "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

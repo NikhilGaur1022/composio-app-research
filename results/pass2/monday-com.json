@@ -1,7 +1,7 @@
 {
   "ok": true,
   "result": {
-    "one_liner": "Monday.com is a cloud-based work OS / project management platform with a GraphQL API for managing boards, items, columns, users, and workspaces.",
+    "one_liner": "Monday.com is a work OS / project-management platform with a GraphQL API for boards, items, and workflows, accessible via personal API tokens or OAuth2 apps.",
     "auth_methods": [
       "oauth2",
       "api_key"
@@ -12,7 +12,7 @@
     "docs_url": "https://developer.monday.com/api-reference/docs/authentication",
     "mcp": {
       "status": "official",
-      "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp"
+      "url": "https://github.com/mondaycom/mcp"
     },
     "verdict": "green",
     "blocker": "none",
@@ -20,17 +20,17 @@
       {
         "field": "auth_methods",
         "url": "https://developer.monday.com/api-reference/docs/authentication",
-        "quote": "Personal tokens allow you to interact with the API using your own user account."
+        "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call."
       },
       {
         "field": "auth_methods",
         "url": "https://developer.monday.com/apps/docs/oauth",
-        "quote": "request authorization to read or modify data in a user's monday account"
+        "quote": "If you don't have an app, follow these steps to create an app in the monday UI and locate your client_id and client_secret."
       },
       {
         "field": "access",
-        "url": "https://developer.monday.com/api-reference/docs/basics",
-        "quote": "Admin, member, and guest users are all able to utilize the monday.com API"
+        "url": "https://developer.monday.com/api-reference/docs/authentication",
+        "quote": "If you don't have a monday.com account yet, create a free developer account to get an API token and start testing."
       },
       {
         "field": "api_type",
@@ -39,21 +39,16 @@
       },
       {
         "field": "mcp",
-        "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
-        "quote": "monday.com provides two MCP servers: monday apps MCP for building, configuring, and deploying monday apps... and monday platform MCP for managing boards, items, and workflows with AI"
-      },
-      {
-        "field": "verdict",
-        "url": "https://developer.monday.com/api-reference/docs/authentication",
-        "quote": "Navigate to your profile - Developers - Developer Center - API token - Show"
+        "url": "https://github.com/mondaycom/mcp",
+        "quote": "Enable AI agents to work reliably - giving them secure access to structured data, tools to take action, and the context needed to make smart decisions."
       }
     ],
     "confidence": 0.85,
-    "notes": "Auth is via personal V2 API tokens (passed in Authorization header) for individual/self-serve use, plus full OAuth2 flow for published apps requiring client ID/secret from the Developer Center. Free developer account gives immediate API + OAuth app creation access, no sales/partner gate. Official hosted MCP server available at mcp.monday.com/mcp (github.com/mondaycom/mcp) plus a separate monday-apps MCP for building apps. API breadth not explicitly enumerated in docs; classified medium based on GraphQL schema scope (boards/items/columns/users/workspaces/updates/webhooks) and third-party tool wrappers (~125 actions)."
+    "notes": "Personal API tokens are free/self-serve via a developer sandbox account; OAuth2 apps require registering an app in the Developer Center (also self-serve, no approval needed to obtain client_id/secret for testing). Some user roles (viewers, disabled/unconfirmed accounts, student accounts) cannot access the API. Official MCP servers exist for both the monday platform (boards/items) and monday apps (dev tooling)."
   },
-  "cost_usd": 0.15863120000000003,
-  "turns": 7,
-  "seconds": 49.8,
+  "cost_usd": 0.1533874,
+  "turns": 8,
+  "seconds": 36.8,
   "is_error": false,
   "error": null
 }

@@ -1,9 +1,101 @@
 {
   "name": "Datadog",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 1,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.datadoghq.com/api/latest/",
+      "quote": "Authenticate to the API with an API key using the header `DD-API-KEY`",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.402
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "quote": "Requests that write data require reporting access and require an `API key`. Requests that read data require full access and also require an `application key`.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.372
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.datadoghq.com/developers/authorization/oauth2_in_datadog/",
+      "quote": "Use the `access_token` to make calls to Datadog API endpoints by sending it in as a part of the authorization header of your request",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+      "quote": "Your org must have at least one API key, and up to 50 API keys by default.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.393
+    },
+    {
+      "field": "access",
+      "url": "https://www.datadoghq.com/pricing/",
+      "quote": "Core collection and visualization features",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.datadoghq.com/api/latest/",
+      "quote": "an HTTP REST API",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.448
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.datadoghq.com/mcp_server/",
+      "quote": "The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents that support the Model Context Protocol (MCP).",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.396
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+      "quote": "To create an API key, navigate to Organization Settings and select the API Keys tab, then click New Key",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.397
+    }
+  ],
+  "grounding_rate": 0.12,
+  "mcp_probe": {
+    "url": "https://docs.datadoghq.com/mcp_server/",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!doctype html><html lang=en-US data-type=page data-relpermalink=/404.html data-env=live data-commit-ref style=opacity:0"
+  },
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

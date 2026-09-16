@@ -57,6 +57,7 @@
     "mcp": {
       "mcp_registry": "community",
       "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "none"
     }
   },
@@ -101,6 +102,12 @@
       "field": "auth_methods",
       "url": "https://api2.frontapp.com/conversations",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"_error\":{\"status\":401,\"title\":\"Unauthenticated\",\"message\":\"JSON Web Token error\"}}",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.frontapp.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
       "grounded": "probe"
     }
   ],

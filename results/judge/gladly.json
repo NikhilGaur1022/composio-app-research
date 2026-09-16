@@ -62,6 +62,14 @@
     }
   ],
   "grounding_rate": 0.43,
+  "mcp_probe": {
+    "url": "https://www.stackone.com/connectors/gladly/mcp/",
+    "status": 405,
+    "content_type": "",
+    "www_authenticate": null,
+    "alive": false,
+    "body": ""
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

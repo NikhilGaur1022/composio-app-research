@@ -78,6 +78,10 @@
     }
   ],
   "grounding_rate": 0.78,
+  "mcp_probe": {
+    "url": "https://github.com/chigwell/telegram-mcp",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

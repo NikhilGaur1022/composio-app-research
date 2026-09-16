@@ -57,6 +57,7 @@
     "mcp": {
       "mcp_registry": "community",
       "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "none"
     }
   },
@@ -144,6 +145,12 @@
       "url": "https://docs.composio.dev/toolkits/ramp",
       "quote": "Composio catalog: auth ['OAUTH2'], 88 tools",
       "grounded": "registry"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.ramp.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {

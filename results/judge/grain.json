@@ -62,6 +62,14 @@
     }
   ],
   "grounding_rate": 0.86,
+  "mcp_probe": {
+    "url": "https://developers.grain.com/mcp",
+    "status": 403,
+    "content_type": "text/html",
+    "www_authenticate": null,
+    "alive": true,
+    "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML><HEAD><META"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

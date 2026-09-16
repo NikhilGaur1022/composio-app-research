@@ -1,9 +1,101 @@
 {
   "name": "Klaviyo",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "Private API keys can be used to read and write data to your Klaviyo account.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "OAuth offers multiple benefits over a private key integration, including security, usability, improved rate limits.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "quote": "All `/api` endpoints use private API keys with API scopes to authenticate requests, passed via the header Authorization: Klaviyo-API-Key your-private-api-key",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.366
+    },
+    {
+      "field": "access",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "To manage API keys, you must have an Owner, Admin, or Manager role on your Klaviyo account.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.klaviyo.com/sign-up",
+      "quote": "Klaviyo: Sign Up for Free Today",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "quote": "All new API endpoints are rate limited on a per-account basis, and use a fixed-window rate limiting algorithm with two distinct windows: burst (short) and steady (long).",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.37
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.composio.dev/toolkits/klaviyo",
+      "quote": "225 tools",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "After you have created your private API key, copy it to a secure location",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.62,
+  "mcp_probe": {
+    "url": "https://docs.composio.dev/toolkits/klaviyo",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!DOCTYPE html><html data-dpl-id=\"dpl_5udfx6JJ8brALvkGERKzGNg8Dkoj\" lang=\"en\" class=\"abcdiatype_71140e1b-module__nSDJta_"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

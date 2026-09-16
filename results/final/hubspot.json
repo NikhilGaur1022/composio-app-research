@@ -64,6 +64,7 @@
       "mcp_registry": "community",
       "github": "community",
       "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "none"
     }
   },
@@ -126,6 +127,12 @@
       "field": "auth_methods",
       "url": "https://api.hubapi.com/crm/v3/objects/contacts",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"status\":\"error\",\"message\":\"Authentication credentials not found. This API supports OAuth 2.0 authentication and you can find more details at https://developers.hubspot.com/docs/methods/auth/oauth-ov",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.hubspot.com/ai-tools/mcp",
+      "quote": "MCP initialize POST -> HTTP 403 (text/plain;charset=UTF-8); endpoint is live",
       "grounded": "probe"
     }
   ],

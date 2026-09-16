@@ -1,9 +1,103 @@
 {
   "name": "Clay",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 1,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.clay.com/public-api/authentication.md",
+      "quote": "The required header is clay-api-key with your personal API key value.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.607
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.clay.com/public-api/authentication.md",
+      "quote": "Create one under Settings → Account → API keys (beta).",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.clay.com/pricing",
+      "quote": "Clay API access",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.clay.com/pricing",
+      "quote": "Customers are still welcome to use their own API keys for data enrichment or AI in Clay. Each run will count as one Action, but no Data Credit will be used.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.405
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.clay.com/llms.txt",
+      "quote": "POST /search/query-mode, GET /search/query-mode/reference",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.72
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.clay.com/llms.txt",
+      "quote": "Search Operations, Routine Execution, Batch Processing, Table Queries, Workspace Management, Workflow Runs",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.449
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.clay.com/guides/clay-mcp",
+      "quote": "The Clay remote MCP server is a hosted Model Context Protocol endpoint at https://api.clay.com/v3/mcp",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.484
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.clay.com/pricing",
+      "quote": "Clay API access",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    }
+  ],
+  "grounding_rate": 0.12,
+  "mcp_probe": {
+    "url": "https://api.clay.com/v3/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer resource_metadata=\"https://api.clay.com/.well-known/oauth-protected-resource/v3/mcp\"",
+    "alive": true,
+    "body": "{\"type\":\"Unauthorized\",\"message\":\"You must be logged in\",\"oauth\":{\"resource\":\"https://api.clay.com/v3/mcp\",\"authorizatio"
+  },
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

@@ -3,46 +3,84 @@
   "name": "Sherlock",
   "category": "Data, SEO and Scraping",
   "hint": "github.com/sherlock-project/sherlock",
-  "one_liner": "",
+  "one_liner": "Sherlock is an open-source Python CLI tool that hunts down social media accounts by searching usernames across 400+ sites; it has no hosted API or web service.",
   "auth_methods": [
     "none"
   ],
   "access": "no_public_api",
-  "api_type": "rest",
+  "api_type": "cli_only",
   "api_breadth": "large",
-  "docs_url": "",
+  "docs_url": "https://github.com/sherlock-project/sherlock",
   "mcp": {
     "status": "community",
-    "url": "https://github.com/holistis/bug-bounty-intelligence-mcp"
+    "url": "https://github.com/Burnsedia/sherlock-mcp"
   },
   "verdict": "red",
-  "score": 48,
-  "blocker": "no_public_api",
-  "model_verdict": null,
-  "confidence": 0.32,
-  "agreement": 0.33,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries",
-    "gated/no-API finding with weak grounding needs a human eye",
-    "no_public_api but api_type=rest"
+  "score": 28,
+  "blocker": "cli_not_api",
+  "model_verdict": "red",
+  "confidence": 0.91,
+  "agreement": 0.84,
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs no_public_api)"
   ],
-  "auto_notes": [],
   "sources": {
-    "auth_methods": {},
-    "access": {},
+    "auth_methods": {
+      "pass2": [
+        "none"
+      ],
+      "pass1": [
+        "none"
+      ]
+    },
+    "access": {
+      "pass2": "no_public_api",
+      "pass1": "self_serve_free"
+    },
     "api_type": {
-      "apis_guru_spec": "rest"
+      "pass2": "cli_only",
+      "apis_guru_spec": "rest",
+      "pass1": "cli_only"
     },
     "api_breadth": {
-      "apis_guru_spec": "large"
+      "apis_guru_spec": "large",
+      "pass2": "unknown",
+      "pass1": "large"
     },
     "mcp": {
-      "mcp_registry": "community"
+      "mcp_registry": "community",
+      "pass2": "community",
+      "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "Hunt down social media accounts by username across social networks",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "pipx install sherlock-project",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "docker run -it --rm sherlock/sherlock",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Burnsedia/sherlock-mcp",
+      "quote": "Burnsedia/sherlock-mcp",
+      "grounded": "grounded"
+    },
     {
       "field": "api_breadth",
       "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
@@ -67,8 +105,27 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "",
-  "pass1": null,
-  "pass2": null,
-  "cost_usd": 0.138
+  "notes": "Sherlock is a locally-run CLI/Python package (installed via pipx/pip/uv/Docker) for OSINT username enumeration across 400+ sites. It is not a service with a hosted API, so there are no credentials, auth methods, or endpoints to speak of. Any \"agent toolkit\" use would mean shelling out to the CLI or wrapping it, not calling a REST/GraphQL API. MCP servers exist only as community wrappers around the CLI (e.g., Burnsedia/sherlock-mcp, jcucci/dotnet-sherlock-mcp), none vendor-published.",
+  "pass1": {
+    "auth_methods": [
+      "none"
+    ],
+    "access": "self_serve_free",
+    "api_type": "cli_only",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "cli_not_api"
+  },
+  "pass2": {
+    "auth_methods": [
+      "none"
+    ],
+    "access": "no_public_api",
+    "api_type": "cli_only",
+    "api_breadth": "unknown",
+    "verdict": "red",
+    "blocker": "cli_not_api",
+    "confidence": 0.9
+  },
+  "cost_usd": 0.239
 }

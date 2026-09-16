@@ -20,12 +20,14 @@
   "score": 93,
   "blocker": "none",
   "model_verdict": "green",
-  "confidence": 0.84,
-  "agreement": 1.0,
+  "confidence": 0.82,
+  "agreement": 0.93,
   "grounding_rate": 0.75,
   "needs_human": false,
   "needs_human_reasons": [],
-  "auto_notes": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_trial vs self_serve_free)"
+  ],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
@@ -33,22 +35,32 @@
       ],
       "pass2": [
         "api_key"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
       ]
     },
     "access": {
-      "pass2": "self_serve_free"
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_trial"
     },
     "api_type": {
-      "pass2": "rest"
+      "pass2": "rest",
+      "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "medium",
-      "pass2": "small"
+      "pass2": "small",
+      "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
       "composio_wraps_mcp": "official",
-      "pass2": "official"
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
+      "pass1": "official"
     }
   },
   "evidence": [
@@ -105,6 +117,12 @@
       "url": "https://docs.composio.dev/toolkits/higgsfield_mcp",
       "quote": "Composio catalog: auth ['DCR_OAUTH'], 101 tools",
       "grounded": "registry"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.higgsfield.ai/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {
@@ -127,7 +145,18 @@
     "inferred": null
   },
   "notes": "Higgsfield's core developer API (docs.higgsfield.ai) uses a custom two-part API key (key ID + secret) sent via Authorization: Key header, obtainable via free self-serve signup at console.higgsfield.ai with a $15 signup credit, then pay-per-use pricing (not a hard trial cutoff, so classified as self_serve_free rather than self_serve_trial). Separately, Higgsfield also ships an official hosted MCP server (mcp.higgsfield.ai) that authenticates via account login/OAuth-style sign-in instead of API keys — this is a second, higher-level access path layered on top of the same account/credits, not a replacement for the REST API's auth. api_breadth is an estimate (docs list ~5+ model endpoints: SOUL, SOUL 2, SOUL Cinema, video models, etc.) — no endpoint count was published, so treat as approximate.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
   "pass2": {
     "auth_methods": [
       "api_key"
@@ -139,5 +168,5 @@
     "blocker": "none",
     "confidence": 0.72
   },
-  "cost_usd": 0.221
+  "cost_usd": 0.33
 }

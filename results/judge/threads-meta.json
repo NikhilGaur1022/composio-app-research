@@ -1,9 +1,99 @@
 {
   "name": "Threads (Meta)",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/docs/threads/overview",
+      "quote": "https://graph.threads.net/v1.0/<THREADS_USER_ID>/threads_publishing_limit?fields=quota_usage,config&access_token=<ACCESS_TOKEN>",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "In order for app users without a role on your app to be able to grant your app these permissions, each permission must first be approved through the App Review process, and your app must be published.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.625
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "create an app and pick the Threads Use Case",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.facebook.com/docs/threads/overview",
+      "quote": "The Threads API can be accessed by either graph.threads.com or graph.threads.net.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.facebook.com/docs/threads/reference",
+      "quote": "Refer to each endpoint's reference document for usage requirements.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.835
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Digital-Threads/token-pilot",
+      "quote": "io.github.Digital-Threads/token-pilot",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.723
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "quote": "each permission must first be approved through the App Review process, and your app must be published",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.592
+    }
+  ],
+  "grounding_rate": 0.62,
+  "mcp_probe": {
+    "url": "https://github.com/Digital-Threads/token-pilot",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

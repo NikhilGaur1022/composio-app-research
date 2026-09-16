@@ -6,54 +6,65 @@
     "api_type": "rest",
     "auth_methods": [
       "api_key",
-      "oauth2"
+      "oauth2",
+      "bearer_token"
     ],
     "blocker": "none",
-    "confidence": 0.72,
+    "confidence": 0.85,
     "docs_url": "https://docs.datadoghq.com/api/latest/",
     "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "Authenticate to the API with an API key using the header `DD-API-KEY`"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Requests that write data require reporting access and require an `API key`. Requests that read data require full access and also require an `application key`."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.datadoghq.com/developers/authorization/oauth2_in_datadog/",
+        "quote": "Use the `access_token` to make calls to Datadog API endpoints by sending it in as a part of the authorization header of your request"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+        "quote": "Your org must have at least one API key, and up to 50 API keys by default."
+      },
+      {
+        "field": "access",
+        "url": "https://www.datadoghq.com/pricing/",
+        "quote": "Core collection and visualization features"
+      },
       {
         "field": "api_type",
         "url": "https://docs.datadoghq.com/api/latest/",
         "quote": "an HTTP REST API"
       },
       {
-        "field": "auth_methods",
-        "url": "https://docs.datadoghq.com/api/latest/authentication/",
-        "quote": "Manage your account's API and application keys in Datadog, and see the API and Application Keys page in the documentation."
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://docs.datadoghq.com/developers/authorization/oauth2_in_datadog/",
-        "quote": "create and configure your OAuth client in the Developer Platform"
-      },
-      {
-        "field": "access",
-        "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
-        "quote": "Navigate to Organization Settings, click the API keys tab, select \"New Key,\" enter a name, and click \"Create API key.\""
-      },
-      {
-        "field": "access",
-        "url": "https://www.datadoghq.com/pricing/",
-        "quote": "Core collection and visualization features ... Up to 5 hosts"
-      },
-      {
         "field": "mcp",
-        "url": "https://github.com/winor30/mcp-server-datadog",
-        "quote": "winor30/mcp-server-datadog (143 stars, community-maintained)"
+        "url": "https://docs.datadoghq.com/mcp_server/",
+        "quote": "The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents that support the Model Context Protocol (MCP)."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+        "quote": "To create an API key, navigate to Organization Settings and select the API Keys tab, then click New Key"
       }
     ],
     "mcp": {
-      "status": "community",
-      "url": "https://github.com/winor30/mcp-server-datadog"
+      "status": "official",
+      "url": "https://docs.datadoghq.com/mcp_server/"
     },
-    "notes": "API/application keys are self-serve: any signed-up account (including the free Infrastructure Monitoring tier, up to 5 hosts) can generate keys immediately from Organization Settings — no approval needed. OAuth2 is also documented (DD-API-KEY/DD-APPLICATION-KEY headers for standard auth; separate OAuth2 client flow for building published integrations via the Developer Platform, which is oriented at partners/integration builders but not required for basic API key access). No official Datadog-published MCP server was found; several community MCP servers exist (winor30, GeLi2001, datadog-labs, shelfio). API surface is very large (dozens of product categories: metrics, logs, monitors, dashboards, security, synthetics, RUM, SLOs, etc.), consistent with composio's report of 65 wrapped tools covering a subset.",
-    "one_liner": "Datadog is a cloud monitoring and security platform (infrastructure, APM, logs, RUM, security) with a large public REST API for querying and managing all its telemetry and configuration data.",
+    "notes": "Datadog offers a permanent free tier (up to 5 hosts, 1-day retention) with self-serve org signup; API keys and application keys are generated immediately in Organization Settings without approval. Core API auth is via DD-API-KEY/DD-APPLICATION-KEY headers (api_key-style), and Datadog separately supports full OAuth2 (authorization code + client credentials) for third-party apps, with resulting access tokens used as bearer tokens. REST API spans v1 and v2 with hundreds of documented endpoints across products (large breadth). Datadog publishes its own official, vendor-built MCP Server (GA as of ~March 2026) in addition to several community MCP servers on GitHub/registries.",
+    "one_liner": "Datadog is a cloud observability and security platform (infrastructure/APM monitoring, logs, metrics, dashboards, alerting).",
     "verdict": "green"
   },
-  "cost_usd": 0.1890402,
-  "turns": 8,
-  "seconds": 66.8,
+  "cost_usd": 0.27803680000000003,
+  "turns": 14,
+  "seconds": 63.0,
   "is_error": false,
   "error": null
 }

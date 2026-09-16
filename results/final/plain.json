@@ -57,8 +57,8 @@
     },
     "mcp": {
       "mcp_registry": "community",
-      "github": "community",
       "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "official"
     }
   },
@@ -127,6 +127,12 @@
       "field": "auth_methods",
       "url": "https://core-api.uk.plain.com/graphql/v1",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"message\":\"Unauthorized\"}",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.plain.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 401 (); endpoint is live",
       "grounded": "probe"
     }
   ],

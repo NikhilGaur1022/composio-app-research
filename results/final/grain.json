@@ -13,15 +13,15 @@
   "api_breadth": "small",
   "docs_url": "https://developers.grain.com/",
   "mcp": {
-    "status": "community",
+    "status": "official",
     "url": "https://developers.grain.com/mcp"
   },
   "verdict": "yellow",
-  "score": 71,
+  "score": 73,
   "blocker": "paid_only",
   "model_verdict": "yellow",
-  "confidence": 0.88,
-  "agreement": 0.94,
+  "confidence": 0.89,
+  "agreement": 0.95,
   "grounding_rate": 0.86,
   "needs_human": false,
   "needs_human_reasons": [],
@@ -31,21 +31,31 @@
       "pass2": [
         "bearer_token",
         "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
       ]
     },
     "access": {
       "pass2": "paid_plan",
+      "pass1": "paid_plan",
       "docs_signal": "self_serve_free"
     },
     "api_type": {
-      "pass2": "rest"
+      "pass2": "rest",
+      "pass1": "rest"
     },
     "api_breadth": {
-      "pass2": "small"
+      "pass2": "small",
+      "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
-      "pass2": "official"
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
+      "pass1": "official"
     }
   },
   "evidence": [
@@ -96,6 +106,12 @@
       "url": "https://api.grain.com/_/public-api/recordings",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer resource_metadata=\"https://grain.com/.well-known/oauth-protected-resource\"; body: {\"error\":\"unauthorized\"}",
       "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.grain.com/mcp",
+      "quote": "MCP initialize POST -> HTTP 403 (text/html); endpoint is live",
+      "grounded": "probe"
     }
   ],
   "composio": {
@@ -116,7 +132,18 @@
     "inferred": "bearer_token"
   },
   "notes": "Grain's public REST API requires a bearer token (Personal Access Token or Workspace Access Token, generated in account/workspace settings) or OAuth2 for third-party distributed integrations. No free tier: PAT access needs Starter plan or above; WAT needs Business/Enterprise and admin rights. All requests need a Public-Api-Version header (current: 2025-10-31). API surface is small (~20 endpoints: recordings, hooks/webhooks, users/teams/meeting types, OAuth token mgmt). Grain also ships an official hosted remote MCP server (https://api.grain.com/_/mcp) using OAuth, exposing meeting recordings/notes/transcripts/deals/coaching data with built-in report prompts — this MCP path could give agent builders a self-serve-ish route via OAuth without a paid PAT, but the underlying REST API itself is paid-gated.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
   "pass2": {
     "auth_methods": [
       "oauth2",
@@ -129,5 +156,5 @@
     "blocker": "paid_only",
     "confidence": 0.82
   },
-  "cost_usd": 0.2
+  "cost_usd": 0.315
 }

@@ -3,14 +3,15 @@
   "name": "Squarespace",
   "category": "Ecommerce",
   "hint": "developers.squarespace.com",
-  "one_liner": "Website and e-commerce builder platform providing REST APIs for managing products, orders, and inventory.",
+  "one_liner": "Squarespace is a website/ecommerce platform whose Commerce APIs let developers manage orders, inventory, products and transactions via REST endpoints authenticated with either a site-generated API key or an OAuth app.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "oauth2"
   ],
   "access": "paid_plan",
   "api_type": "rest",
   "api_breadth": "small",
-  "docs_url": "https://developers.squarespace.com/commerce-apis/",
+  "docs_url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
   "mcp": {
     "status": "none",
     "url": null
@@ -18,36 +19,78 @@
   "verdict": "yellow",
   "score": 68,
   "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "yellow",
+  "confidence": 0.86,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.83,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
       "pass1": [
         "api_key",
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "paid_plan",
       "pass1": "paid_plan"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "small",
       "pass1": "small"
     },
     "mcp": {
+      "pass2": "none",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+      "quote": "a generated API key or start the OAuth process with Squarespace to become a registered OAuth client",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.squarespace.com/commerce-apis/oauth",
+      "quote": "We will review your registration and respond with your_client_id and your_client_secret as soon as possible.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.squarespace.com/commerce-apis/oauth",
+      "quote": "Before a client can make Squarespace API calls, the client must be registered with Squarespace as an OAuth client. Start the Oauth client process here.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.squarespace.com/1.0/commerce/orders",
+      "quote": "\"type\" : \"AUTHORIZATION_ERROR\",   \"subtype\" : null,   \"message\" : \"You are not authorized to do that.\"",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.squarespace.com/",
+      "quote": "Start building",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+      "quote": "Squarespace's Commerce Advanced",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://api.squarespace.com/1.0/commerce/orders",
@@ -72,7 +115,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "API key access requires paid Advanced plan ($52/mo). OAuth integration requires developer approval and is gated for marketplace extensions. Commerce API is limited to commerce operations (orders, products, inventory). No public MCP server available.",
+  "notes": "Two auth paths documented on the same page: (1) an API key generated in-account under Settings > Advanced > Developer API Keys, which the docs say requires the Commerce Advanced plan; (2) an OAuth client, which requires submitting an app registration (name, icon, redirect URIs, ToS/privacy links) that Squarespace manually reviews before issuing client_id/secret — i.e. not instantly self-serve. So access is gated both by a paid Commerce plan (for API keys) and by manual review (for OAuth apps); picked paid_plan as the primary blocker since it's the more direct/common path, but app_review is a secondary real constraint for the OAuth route. No official or community MCP server found (registry and GitHub search both empty). api_breadth marked \"small\" based on general knowledge of the Commerce API surface (orders, inventory, products, transactions, profiles, webhooks) — not independently verified by counting endpoints in this pass; treat with lower confidence.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -84,6 +127,17 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.115
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.68
+  },
+  "cost_usd": 0.269
 }

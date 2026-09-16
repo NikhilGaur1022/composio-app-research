@@ -1,9 +1,72 @@
 {
   "name": "BigCommerce",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 5,
+  "grounded": 3,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.bigcommerce.com/docs/start/authentication",
+      "quote": "Most of our REST endpoints and GraphQL Admin API endpoints use the X-Auth-Token header to authenticate to BigCommerce servers.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.bigcommerce.com/docs/start/authentication",
+      "quote": "BigCommerce no longer issues legacy API Accounts to new stores.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.bigcommerce.com/docs/start",
+      "quote": "Sign up for a free BigCommerce trial store to test API calls and build integrations without affecting live data.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.bigcommerce.com/docs/start",
+      "quote": "REST Management API, REST Storefront API, GraphQL Storefront API",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.608
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+      "quote": "The BigCommerce MCP server lets AI agents interact with a BigCommerce storefront using purpose-built commerce tools.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.415
+    }
+  ],
+  "grounding_rate": 0.6,
+  "mcp_probe": {
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "status": 405,
+    "content_type": "",
+    "www_authenticate": null,
+    "alive": false,
+    "body": ""
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
 }

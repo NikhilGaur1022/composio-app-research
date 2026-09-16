@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "basic"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://docs.dataforseo.com/v3/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.dataforseo.com/v3/auth/?bash",
+        "quote": "DataForSEO is using the Basic Authentication, which makes it possible to call our APIs with almost any programming language."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.dataforseo.com/v3/auth/?bash",
+        "quote": "Create a free account with DataForSEO"
+      },
+      {
+        "field": "access",
+        "url": "https://dataforseo.com/pricing",
+        "quote": "With DataForSEO you pay only for the individual services you consume."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.dataforseo.com/v3/",
+        "quote": "Review the kickstart guide to APIs"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://docs.composio.dev/toolkits/dataforseo",
+        "quote": "312"
+      },
+      {
+        "field": "mcp",
+        "url": "https://dataforseo.com/model-context-protocol",
+        "quote": "Empower AI integration with DataForSEO MCP"
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.dataforseo.com/v3/auth/?bash",
+        "quote": "the API password is generated automatically by DataForSEO and is different from your account password"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.dataforseo.com/v3/mcp"
+    },
+    "notes": "Free account signup yields Basic Auth login/password (API password auto-generated, distinct from account password) via API Access dashboard; pay-as-you-go for live data ($50 min payment) but sandbox/free unlimited trial mode is documented separately for testing. Official MCP server published by vendor (GitHub Apr 2025, npm May 2025) at https://mcp.dataforseo.com/v3/mcp, using same Basic Auth credentials. Composio wraps it (not the official MCP) with 312 tools/endpoints across SERP, Keywords, Backlinks, OnPage, Business Data, Domain Analytics, Content Analysis products, indicating large breadth.",
+    "one_liner": "DataForSEO is a REST API platform providing SEO, SERP, keyword, backlink, and business-data scraping/analytics data for developers.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.22493020000000002,
+  "turns": 9,
+  "seconds": 56.4,
+  "is_error": false,
+  "error": null
+}

@@ -1,9 +1,92 @@
 {
   "name": "Airtable",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 4,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://airtable.com/developers/web/api/authentication",
+      "quote": "As of February 1st 2024, the deprecation period for Airtable API keys has ended.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.458
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://airtable.com/developers/web/api/authentication",
+      "quote": "the token must have both the correct scope (`data.records:write`) and the base added to it as a resource",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.442
+    },
+    {
+      "field": "access",
+      "url": "https://support.airtable.com/docs/managing-api-call-limits-in-airtable",
+      "quote": "Free plan: 1000 API calls per month",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://support.airtable.com/docs/managing-api-call-limits-in-airtable",
+      "quote": "Airtable enforces a rate limit of 5 requests per second (per base) to ensure optimal user performance across all pricing tiers.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://airtable.com/developers/web/api/introduction",
+      "quote": "The API closely follows REST semantics, uses JSON to encode objects, and relies on standard HTTP codes to signal operation outcomes.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.409
+    },
+    {
+      "field": "mcp",
+      "url": "https://airtable.com/developers/agents",
+      "quote": "The Airtable MCP server gives agents your base's full structure — field types, relationships, and views — so they can make context-aware decisions.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.943
+    },
+    {
+      "field": "verdict",
+      "url": "https://support.airtable.com/docs/managing-api-call-limits-in-airtable",
+      "quote": "If you exceed your Free plan's call limit, a 30-day grace period is initiated, allowing you to continue using the API for that period.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.57,
+  "mcp_probe": {
+    "url": "https://airtable.com/developers/agents",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!DOCTYPE html>\n<html style=\"overflow:auto\" lang=\"en\"><head><meta name=\"referrer\" content=\"no-referrer\"/><meta name=\"rob"
+  },
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

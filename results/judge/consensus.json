@@ -62,6 +62,10 @@
     }
   ],
   "grounding_rate": 0.43,
+  "mcp_probe": {
+    "url": "com.consensus-analytics/mcp (MCP registry listing, community-maintained; no vendor-published server found)",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",

@@ -1,9 +1,99 @@
 {
   "name": "Netlify",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 5,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "quote": "Netlify uses OAuth2 for authentication. All requests must use HTTPS.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "quote": "Authorization: Bearer YOUR_OAUTH2_ACCESS_TOKEN",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "quote": "Go to Applications > Personal access tokens, Select New access token",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/netlify.com/2.15.0/swagger.json",
+      "quote": "endpoints: 120",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "quote": "curl -H \"Authorization: Bearer YOUR_OAUTH2_ACCESS_TOKEN\" https://api.netlify.com/api/v1/sites",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.812
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+      "quote": "Netlify's Official MCP Server",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.649
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/netlify/netlify-mcp",
+      "quote": "Netlify's Official MCP server",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+      "quote": "Select New access token",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.62,
+  "mcp_probe": {
+    "url": "https://github.com/netlify/netlify-mcp",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

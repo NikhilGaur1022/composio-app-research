@@ -70,6 +70,10 @@
     }
   ],
   "grounding_rate": 0.12,
+  "mcp_probe": {
+    "url": "https://github.com/intercom/intercom-mcp-server",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",

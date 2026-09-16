@@ -1,9 +1,77 @@
 {
   "name": "Pinterest",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 1,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "quote": "For the key Authorization, enter the value Bearer {your_token}",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.516
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "quote": "Authorization: Basic {base64-encoded_string_made_of client_id:client_secret}",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.465
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+      "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.445
+    },
+    {
+      "field": "access",
+      "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+      "quote": "If you want to offer Pinterest capabilities to your users, we recommend upgrading to Standard access to get the full functionality that our API offers.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.427
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.composio.dev/toolkits/pinterest",
+      "quote": "wraps_official_mcp: false",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.319
+    },
+    {
+      "field": "verdict",
+      "url": "https://api.pinterest.com/v5/user_account",
+      "quote": "{\"code\":2,\"message\":\"Authentication failed.\",\"status\":\"failure\"}",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.17,
+  "mcp_probe": {
+    "url": "https://github.com/cesteral/pinterest-mcp",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

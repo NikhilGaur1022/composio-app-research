@@ -54,6 +54,10 @@
     }
   ],
   "grounding_rate": 0.67,
+  "mcp_probe": {
+    "url": "https://github.com/korotovsky/slack-mcp-server",
+    "skipped": true
+  },
   "by_field": {
     "access": [
       "grounded",

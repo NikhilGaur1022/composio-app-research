@@ -3,34 +3,39 @@
   "name": "Apify",
   "category": "Data, SEO and Scraping",
   "hint": "docs.apify.com",
-  "one_liner": "Web scraping, automation, and data extraction platform with pre-built actors and scrapers for social media, search engines, maps, and e-commerce sites",
+  "one_liner": "Apify is a web scraping and automation platform where developers run/build \"Actors\" (scrapers/crawlers) via a large REST API, with an official MCP server for AI agent access.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "bearer_token",
+    "oauth2"
   ],
   "access": "self_serve_free",
   "api_type": "rest",
-  "api_breadth": "medium",
-  "docs_url": "https://docs.apify.com/api",
+  "api_breadth": "large",
+  "docs_url": "https://docs.apify.com/api/v2",
   "mcp": {
     "status": "official",
-    "url": "https://github.com/apify/apify-mcp-server"
+    "url": "https://mcp.apify.com"
   },
   "verdict": "green",
-  "score": 97,
+  "score": 100,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.83,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "green",
+  "confidence": 0.9,
+  "agreement": 1.0,
+  "grounding_rate": 0.8,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
       ],
       "pass1": [
         "bearer_token",
@@ -38,21 +43,56 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "medium",
+      "pass2": "large",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "official",
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.apify.com/api/v2",
+      "quote": "Using your token in the request header is more secure than using it as a URL parameter because URLs are often stored in browser history and server logs.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://apify.com/pricing",
+      "quote": "Absolutely! We offer a free plan that lets you use most of the features of the Apify platform, but with certain limits. No credit card is required.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.apify.com/platform/integrations/mcp",
+      "quote": "The Apify MCP server...allows AI applications and agents to interact with the Apify platform using Model Context Protocol (MCP).",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.apify.com/v2/acts",
+      "quote": "{   \"error\": {     \"type\": \"token-not-provided\",     \"message\": \"Authentication token was not provided\"   } }",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.apify.com/platform/integrations/mcp",
+      "quote": "OAuth (Recommended) - Sign in through your browser on first connection",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/apify",
@@ -63,6 +103,12 @@
       "field": "auth_methods",
       "url": "https://api.apify.com/v2/acts",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {   \"error\": {     \"type\": \"token-not-provided\",     \"message\": \"Authentication token was not provided\"   } }",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://mcp.apify.com",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
       "grounded": "probe"
     }
   ],
@@ -85,7 +131,7 @@
     "www_authenticate": null,
     "inferred": "bearer_token"
   },
-  "notes": "Apify offers a REST API with OAuth and bearer token authentication, a free tier with $5 monthly credits, and an official MCP server maintained by Apify at mcp.apify.com for direct AI agent integration.",
+  "notes": "REST API secured by bearer token (Apify API token, found in Console under Integrations); token can also be passed as URL query param. MCP server (mcp.apify.com) additionally supports OAuth for AI agent connections. Free tier ($5/mo platform credit, no credit card) makes self-serve dev access straightforward. Large API surface covering Actors, datasets, key-value stores, tasks, webhooks, schedules, etc.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -97,6 +143,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.106
+  "pass2": {
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.9
+  },
+  "cost_usd": 0.219
 }

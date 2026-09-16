@@ -1,9 +1,110 @@
 {
   "name": "Bright Data",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 9,
+  "grounded": 9,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "An API key is a secure hashed token used to authenticate with Bright Data API.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "Authorization: Bearer <token>",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "brd-customer-[ACCOUNT_ID]-zone-[PROXY_NAME]:[PROXY_PASSWORD]",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://brightdata.com/",
+      "quote": "Get started for free",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://brightdata.com/",
+      "quote": "No credit card required",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://brightdata.com/pricing",
+      "quote": "Free tier pricing available",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "Web Unlocker API",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.brightdata.com/mcp-server/overview",
+      "quote": "The Bright Data MCP server gives AI agents and assistants real-time access to public web data through the Model Context Protocol (MCP).",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://brightdata.com/",
+      "quote": "Get started for free",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://docs.brightdata.com/mcp-server/overview",
+    "status": 405,
+    "content_type": "application/json",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "{\"error\": {\"code\": \"405\", \"message\": \"Method not allowed\"}}"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

@@ -70,6 +70,10 @@
     }
   ],
   "grounding_rate": 0.62,
+  "mcp_probe": {
+    "url": "",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",

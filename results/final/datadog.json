@@ -3,35 +3,42 @@
   "name": "Datadog",
   "category": "Developer, Infra and Data platforms",
   "hint": "docs.datadoghq.com/api",
-  "one_liner": "Comprehensive observability and monitoring platform providing REST and GraphQL APIs for metrics, logs, traces, and infrastructure monitoring.",
+  "one_liner": "Datadog is a cloud observability and security platform (infrastructure/APM monitoring, logs, metrics, dashboards, alerting).",
   "auth_methods": [
     "api_key",
     "bearer_token",
     "oauth2"
   ],
-  "access": "self_serve_trial",
-  "api_type": "rest_and_graphql",
-  "api_breadth": "medium",
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
   "docs_url": "https://docs.datadoghq.com/api/latest/",
   "mcp": {
     "status": "community",
-    "url": "https://github.com/winor30/mcp-server-datadog"
+    "url": "https://docs.datadoghq.com/mcp_server/"
   },
-  "verdict": "yellow",
-  "score": 90,
-  "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.85,
-  "grounding_rate": null,
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.58,
+  "agreement": 0.82,
+  "grounding_rate": 0.12,
   "needs_human": true,
   "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+    "only 12% of quotes grounded in cited pages"
   ],
-  "auto_notes": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_trial vs self_serve_free)"
+  ],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass2": [
         "api_key",
         "bearer_token",
         "oauth2"
@@ -42,23 +49,75 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_trial",
       "docs_signal": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "composio_tools": "medium",
+      "pass2": "large",
       "pass1": "large"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
+      "pass2": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "access",
+      "url": "https://www.datadoghq.com/pricing/",
+      "quote": "Core collection and visualization features",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.datadoghq.com/api/latest/",
+      "quote": "Authenticate to the API with an API key using the header `DD-API-KEY`",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "quote": "Requests that write data require reporting access and require an `API key`. Requests that read data require full access and also require an `application key`.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.datadoghq.com/developers/authorization/oauth2_in_datadog/",
+      "quote": "Use the `access_token` to make calls to Datadog API endpoints by sending it in as a part of the authorization header of your request",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+      "quote": "Your org must have at least one API key, and up to 50 API keys by default.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.datadoghq.com/api/latest/",
+      "quote": "an HTTP REST API",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.datadoghq.com/mcp_server/",
+      "quote": "The Datadog MCP Server acts as a bridge between your observability data in Datadog and any AI agents that support the Model Context Protocol (MCP).",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+      "quote": "To create an API key, navigate to Organization Settings and select the API Keys tab, then click New Key",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/datadog",
@@ -93,7 +152,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Datadog offers self-serve free tier for evaluation (proof-of-concept), but comprehensive API access for production use requires Pro or Enterprise paid plans. Free tier is severely limited (5 hosts, 1-day retention). API breadth estimated as large (>300 endpoints) based on platform comprehensiveness covering dashboards, alerts, monitors, metrics, logs, traces, synthetics, and infrastructure. OAuth2 and API keys are primary auth methods. No official MCP server found.",
+  "notes": "Datadog offers a permanent free tier (up to 5 hosts, 1-day retention) with self-serve org signup; API keys and application keys are generated immediately in Organization Settings without approval. Core API auth is via DD-API-KEY/DD-APPLICATION-KEY headers (api_key-style), and Datadog separately supports full OAuth2 (authorization code + client credentials) for third-party apps, with resulting access tokens used as bearer tokens. REST API spans v1 and v2 with hundreds of documented endpoints across products (large breadth). Datadog publishes its own official, vendor-built MCP Server (GA as of ~March 2026) in addition to several community MCP servers on GitHub/registries.",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -105,6 +164,18 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.111
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.389
 }

@@ -78,6 +78,14 @@
     }
   ],
   "grounding_rate": 0.0,
+  "mcp_probe": {
+    "url": "https://www.ipayx.ai/docs/mcp-server",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <script>\n      if (window.location.hostname ="
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",

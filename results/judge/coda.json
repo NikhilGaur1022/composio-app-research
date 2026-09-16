@@ -1,9 +1,92 @@
 {
   "name": "Coda",
-  "checked": 0,
+  "checked": 7,
   "grounded": 0,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "'Authorization': 'Bearer <your API token>'",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.625
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.superhuman.com/developers",
+      "quote": "Bearer token authentication via API tokens.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.541
+    },
+    {
+      "field": "access",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.395
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.superhuman.com/developers",
+      "quote": "RESTful API (v1) with a base endpoint at https://coda.io/apis/v1",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.444
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.superhuman.com/developers",
+      "quote": "developers may also want to consider using the Superhuman Docs MCP server",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.431
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.superhuman.com/apis/mcp",
+      "quote": "HTTP 401 Unauthorized (live vendor-hosted MCP endpoint requiring auth, at docs.superhuman.com)",
+      "status": 401,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "all API scripts should check for HTTP 429 Too Many Requests errors and back off and retry the request",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.398
+    }
+  ],
+  "grounding_rate": 0.0,
+  "mcp_probe": {
+    "url": "https://docs.superhuman.com/apis/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer realm=\"mcp\", resource_metadata=\"https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp\", scope=\"mcp:all\"",
+    "alive": true,
+    "body": "{\"statusCode\":401,\"statusMessage\":\"Unauthorized\",\"message\":\"Unauthorized\"}"
+  },
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
 }

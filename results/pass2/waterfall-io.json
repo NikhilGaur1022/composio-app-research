@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "result": {
+    "access": "partner_gated",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key"
+    ],
+    "blocker": "partner_gate",
+    "confidence": 0.62,
+    "docs_url": "https://docs.waterfall.io/v1/introduction",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.waterfall.io/v1/introduction",
+        "quote": "All requests require an API key in the x-api-key header."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.waterfall.io/",
+        "quote": "x-api-key: your_key"
+      },
+      {
+        "field": "access",
+        "url": "https://www.waterfall.io/pricing",
+        "quote": "Before anything is signed we run a benchmark on your data at no cost"
+      },
+      {
+        "field": "access",
+        "url": "https://www.waterfall.io/pricing",
+        "quote": "Book a call to hear more... Talk to our team (most likely one of the founders) to share your use case"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.waterfall.io/v1/introduction",
+        "quote": "All requests require an API key in the x-api-key header."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.waterfall.io/pricing",
+        "quote": "Book a call to hear more... Talk to our team (most likely one of the founders) to share your use case"
+      }
+    ],
+    "mcp": {
+      "status": "none"
+    },
+    "notes": "Waterfall.io has a real REST API (docs.waterfall.io/v1) with ~13 documented endpoints (prospecting, contact/company enrichment, email verification, job-change detection) authenticated via a static x-api-key header — no OAuth. However there is no self-serve signup or public pricing/dashboard: the marketing site and pricing page repeatedly funnel prospects to \\\"Book a Call\\\", run a free data benchmark, then issue a custom usage-based quote before any API key is provisioned. This is sales/partner-gated access rather than a dev-portal signup, so despite having a normal REST+API-key surface, it is not buildable today without a sales relationship. MCP registry hints (waterfallbridge, mcp-email-waterfall-orchestrator) do not appear to reference this company's contact-intel product — likely false-positive name collisions with unrelated \\\"waterfall\\\" (e.g., email-waterfall routing) tools — so mcp.status is reported as none rather than community.",
+    "one_liner": "Waterfall.io is a B2B contact/company data platform that aggregates 30+ data vendors to provide prospecting, contact enrichment, and email verification via API.",
+    "verdict": "red"
+  },
+  "cost_usd": 0.2587058,
+  "turns": 11,
+  "seconds": 84.6,
+  "is_error": false,
+  "error": null
+}

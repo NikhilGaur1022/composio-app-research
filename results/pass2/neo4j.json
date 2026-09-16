@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "basic"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://neo4j.com/docs/aura/api/authentication/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "The Aura API uses OAuth 2.0 for API authentication"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "Authentication to the token endpoint uses HTTP Basic Authentication, where the client ID and client secret are provided as the username and password, respectively."
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "All tiers can create Aura API credentials."
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "Free and trial accounts (without billing): 25 requests per minute"
+      },
+      {
+        "field": "api_type",
+        "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+        "quote": "The Aura API allows you to programmatically perform actions on your Aura instances without the need to log in to the Console."
+      },
+      {
+        "field": "mcp",
+        "url": "https://neo4j.com/docs/mcp/current/",
+        "quote": "Introduction - Neo4j MCP"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/neo4j/mcp",
+        "quote": "Neo4j official MCP Server"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://neo4j.com/docs/mcp/current/"
+    },
+    "notes": "Neo4j's product-level HTTP API is the Aura API (cloud instance management: create/pause/resize DB instances, snapshots, tenants), which is REST + OAuth2 client-credentials, self-serve on free/trial tiers with lower rate limits (25 req/min) vs paid tiers (125 req/min). Separately, database query access uses Bolt/HTTP via language drivers (not a REST product API), and Neo4j also ships an official local MCP server (neo4j/mcp, downloadable binary) plus a larger community-maintained Neo4j Labs MCP suite (neo4j-contrib/mcp-neo4j) for Cypher query execution against any Neo4j deployment. api_breadth marked \"small\" based on the scope of documented Aura API resources (instances/tenants/projects/snapshots/CMKs); no official endpoint count was found in the pages fetched.",
+    "one_liner": "Neo4j is a graph database platform (self-managed or Aura cloud) offering a REST management API (Aura API) for provisioning/managing database instances, plus driver-based Cypher query access and an official MCP server.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.19644200000000003,
+  "turns": 8,
+  "seconds": 62.4,
+  "is_error": false,
+  "error": null
+}

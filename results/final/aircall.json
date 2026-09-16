@@ -3,53 +3,98 @@
   "name": "Aircall",
   "category": "Communications and Messaging",
   "hint": "aircall.io",
-  "one_liner": "Aircall is a cloud-based communications platform providing voice calling, SMS messaging, and conversation intelligence for business integrations.",
+  "one_liner": "Aircall is a cloud-based call center and business phone system with click-to-dial, call routing, and CRM integrations.",
   "auth_methods": [
-    "basic"
+    "basic",
+    "oauth2"
   ],
-  "access": "self_serve_free",
+  "access": "paid_plan",
   "api_type": "rest",
-  "api_breadth": "medium",
-  "docs_url": "https://developer.aircall.io/api-references",
+  "api_breadth": "small",
+  "docs_url": "https://developers.aircall.io/api-references",
   "mcp": {
     "status": "community",
     "url": "https://github.com/themobilefirstco/aircall-mcp-server"
   },
-  "verdict": "green",
-  "score": 95,
-  "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.87,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "verdict": "yellow",
+  "score": 71,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.71,
+  "agreement": 0.88,
+  "grounding_rate": 0.5,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs paid_plan)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "basic",
+        "oauth2"
+      ],
       "pass1": [
         "basic",
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "paid_plan",
       "pass1": "self_serve_free",
       "docs_signal": "partner_gated"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "small",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "community",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://support.aircall.io/en-gb/articles/10375355327517",
+      "quote": "Use Basic Auth if you are an Aircall customer building for your own account only.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://aircall.io/pricing/",
+      "quote": "250+ integrations and API access",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/themobilefirstco/aircall-mcp-server",
+      "quote": "aircall-mcp-server",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works",
+      "quote": "Aircall implemented the OAuth 2.0 authentication protocol so you can easily build an app on top of Aircall and deploy it on Aircall's Marketplace.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works",
+      "quote": "OAuth credentials — If you haven't received them yet, apply to the Tech Partner program",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.aircall.io/api-references/",
+      "quote": "The foundation for every Aircall integration is the REST API",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://api.aircall.io/v1/calls",
@@ -74,7 +119,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Self-serve basic auth credentials available from dashboard. OAuth for marketplace partners requires contacting Aircall. Rate limited to 120 requests/minute per company. Free tier mentioned but plan-gating details are undocumented.",
+  "notes": "Two auth tracks: (1) Basic Auth with a self-generated api_id/token, available to any Aircall customer on a paid plan (even entry-level Essentials includes \"API access\") for building against your own account only; (2) OAuth2, required for multi-tenant Marketplace apps, which requires applying to and being approved by Aircall's Technology Partner program (client_id/client_secret issued after approval). No official Aircall-published MCP server found; several unofficial community MCP servers exist on GitHub with low star counts. Not present in Composio catalog. API surface appears CRM/telephony-resource sized (calls, contacts, users, numbers, teams, tags, webhooks, insights) — treated as small/unknown breadth since no endpoint count was directly verified.",
   "pass1": {
     "auth_methods": [
       "basic",
@@ -86,6 +131,17 @@
     "verdict": "yellow",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.137
+  "pass2": {
+    "auth_methods": [
+      "basic",
+      "oauth2"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.377
 }

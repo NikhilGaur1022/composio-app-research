@@ -1,9 +1,90 @@
 {
   "name": "Neo4j",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 6,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "The Aura API uses OAuth 2.0 for API authentication",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "Authentication to the token endpoint uses HTTP Basic Authentication, where the client ID and client secret are provided as the username and password, respectively.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://neo4j.com/docs/aura/api/authentication/",
+      "quote": "All tiers can create Aura API credentials.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+      "quote": "Free and trial accounts (without billing): 25 requests per minute",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.571
+    },
+    {
+      "field": "api_type",
+      "url": "https://neo4j.com/docs/aura/platform/api/overview/",
+      "quote": "The Aura API allows you to programmatically perform actions on your Aura instances without the need to log in to the Console.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://neo4j.com/docs/mcp/current/",
+      "quote": "Introduction - Neo4j MCP",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/neo4j/mcp",
+      "quote": "Neo4j official MCP Server",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.86,
+  "mcp_probe": {
+    "url": "https://neo4j.com/docs/mcp/current/",
+    "status": 403,
+    "content_type": "text/html",
+    "www_authenticate": null,
+    "alive": true,
+    "body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<HTML><HEAD><META"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ]
+  }
 }

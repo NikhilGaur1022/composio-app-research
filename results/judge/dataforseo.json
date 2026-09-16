@@ -1,9 +1,94 @@
 {
   "name": "DataForSEO",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 3,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.dataforseo.com/v3/auth/?bash",
+      "quote": "DataForSEO is using the Basic Authentication, which makes it possible to call our APIs with almost any programming language.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.dataforseo.com/v3/auth/?bash",
+      "quote": "Create a free account with DataForSEO",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://dataforseo.com/pricing",
+      "quote": "With DataForSEO you pay only for the individual services you consume.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.382
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.dataforseo.com/v3/",
+      "quote": "Review the kickstart guide to APIs",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.636
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/dataforseo",
+      "quote": "312",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://dataforseo.com/model-context-protocol",
+      "quote": "Empower AI integration with DataForSEO MCP",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.475
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.dataforseo.com/v3/auth/?bash",
+      "quote": "the API password is generated automatically by DataForSEO and is different from your account password",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.43,
+  "mcp_probe": {
+    "url": "https://mcp.dataforseo.com/v3/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer error=\"invalid_token\", error_description=\"token is null or empty\", resource_metadata=\"https://mcp.dataforseo.com/.well-known/oauth-protected-resource\", scope=\"api\"",
+    "alive": true,
+    "body": "{\"error\":\"invalid auth\",\"error_description\":\"invalid auth\"}"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

@@ -3,34 +3,36 @@
   "name": "Klaviyo",
   "category": "Marketing, Ads, Email and Social",
   "hint": "developers.klaviyo.com",
-  "one_liner": "Marketing automation platform with email, SMS, and customer data platform APIs",
+  "one_liner": "Klaviyo is a marketing automation platform (email, SMS, and push) for ecommerce and D2C brands, offering a REST API for managing profiles, campaigns, flows, segments, and events.",
   "auth_methods": [
     "api_key",
     "oauth2"
   ],
   "access": "self_serve_free",
-  "api_type": "rest_and_graphql",
+  "api_type": "rest",
   "api_breadth": "large",
-  "docs_url": "https://developers.klaviyo.com/",
+  "docs_url": "https://developers.klaviyo.com/en/reference/api_overview",
   "mcp": {
     "status": "community",
-    "url": ""
+    "url": "https://docs.composio.dev/toolkits/klaviyo"
   },
   "verdict": "green",
   "score": 98,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "green",
+  "confidence": 0.78,
+  "agreement": 0.89,
+  "grounding_rate": 0.62,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass2": [
         "api_key",
         "oauth2"
       ],
@@ -40,21 +42,73 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "composio_tools": "large",
+      "pass2": "large",
       "pass1": "medium"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "community",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "Private API keys can be used to read and write data to your Klaviyo account.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "OAuth offers multiple benefits over a private key integration, including security, usability, improved rate limits.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "To manage API keys, you must have an Owner, Admin, or Manager role on your Klaviyo account.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.klaviyo.com/sign-up",
+      "quote": "Klaviyo: Sign Up for Free Today",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "quote": "After you have created your private API key, copy it to a secure location",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "quote": "All `/api` endpoints use private API keys with API scopes to authenticate requests, passed via the header Authorization: Klaviyo-API-Key your-private-api-key",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "quote": "All new API endpoints are rate limited on a per-account basis, and use a fixed-window rate limiting algorithm with two distinct windows: burst (short) and steady (long).",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.composio.dev/toolkits/klaviyo",
+      "quote": "225 tools",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/klaviyo",
@@ -88,7 +142,7 @@
     "www_authenticate": "Bearer, Klaviyo-API-Key",
     "inferred": "bearer_token"
   },
-  "notes": "API key auth is deprecated; OAuth2 is the future standard. Free tier includes access to profiles, events, lists, segments, campaigns, flows, templates, webhooks. Advanced features like SMS events require paid plans. Both REST and GraphQL APIs are fully documented at developers.klaviyo.com.",
+  "notes": "Klaviyo has a mature, well-documented REST API (23+ resource categories: Accounts, Campaigns, Catalogs, Events, Flows, Lists, Metrics, Profiles, Segments, Templates, Webhooks, etc.), each with multiple CRUD/relationship endpoints, so total endpoint count exceeds 300 (breadth marked \"large\", though no single official page states an exact total). Free (\"Forever Free\") Klaviyo accounts can be created with no credit card (up to 250 profiles / 500 email sends/month), and any account with an Owner/Admin/Manager role can generate private API keys with configurable scopes directly from account settings — no app review or sales contact required — so this is self-serve. OAuth2 is documented as an alternative for tech/app partners with improved rate limits, but private API keys are the standard, immediately available path. No official Klaviyo-published MCP server was found; only community MCP servers (mcparmory, pipeworx-io, scalably) exist per the registry hints.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -100,6 +154,17 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.112
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.317
 }

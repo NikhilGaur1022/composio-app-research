@@ -70,6 +70,14 @@
     }
   ],
   "grounding_rate": 0.88,
+  "mcp_probe": {
+    "url": "https://api.fathom.ai/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer resource_metadata=\"https://api.fathom.ai/.well-known/oauth-protected-resource/mcp\"",
+    "alive": true,
+    "body": "{\"error\":\"unauthorized\"}"
+  },
   "by_field": {
     "access": [
       "grounded",

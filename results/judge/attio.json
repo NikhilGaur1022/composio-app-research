@@ -70,6 +70,14 @@
     }
   ],
   "grounding_rate": 0.88,
+  "mcp_probe": {
+    "url": "https://mcp.attio.com/mcp",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "www_authenticate": "Bearer resource_metadata=\"https://mcp.attio.com/.well-known/oauth-protected-resource\", scope=\"openid offline_access mcp\"",
+    "alive": true,
+    "body": "{\"statusCode\":401,\"error\":\"Unauthorized\",\"message\":\"The requesting user did not present an authentication token\",\"status"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

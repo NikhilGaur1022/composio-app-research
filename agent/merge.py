@@ -4,7 +4,12 @@ Per field, independent sources vote with weights. Confidence is computed from
 (a) cross-source agreement, (b) the judge's quote-grounding rate, (c) the model's own stated confidence.
 Rows below threshold, or with conflicting sources, go to the human queue.
 """
+import re
 from collections import Counter, defaultdict
+
+
+def slug_token(name: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", name.lower().split(" (")[0].split(".")[0])[:8]
 
 STANDARD_AUTH = {"oauth2", "api_key", "bearer_token", "basic", "jwt"}
 ACCESS_SCORE = {"self_serve_free": 40, "self_serve_trial": 35, "paid_plan": 20, "admin_approval": 22, "partner_gated": 5, "no_public_api": 0}
@@ -141,24 +146,37 @@ def merge_app(app, registry, probes, pass1, pass2, judge) -> dict:
     sources["api_breadth"] = {s: v for s, v, _ in votes}
 
     # ---- mcp ----
+    # "official" is an existence claim: a vendor page or a live vendor endpoint proves it, and registry
+    # silence cannot refute it (registries lag vendor-hosted remote MCPs by months).
     votes = []
+    mcp_ev = by_field.get("mcp", [])
+    p2_mcp = (r2.get("mcp") or {}).get("status")
+    p2_url = ((r2.get("mcp") or {}).get("url") or "")
+    mcp_probe = (judge or {}).get("mcp_probe") or {}
     if mr.get("status") and mr["status"] != "none":
         votes.append(("mcp_registry", mr["status"], 0.8))
     if comp.get("wraps_mcp"):
         votes.append(("composio_wraps_mcp", "official", 0.7))
-    top = (gh.get("items") or [None])[0]
-    if top and top["stars"] >= 20:
+    app_tok = slug_token(app["name"])
+    top = next((i for i in (gh.get("items") or []) if i["stars"] >= 20 and app_tok in i["full_name"].lower().replace("-", "").replace("_", "")), None)
+    if top:
         votes.append(("github", "community", 0.4))
-    if (r2.get("mcp") or {}).get("status") and r2["mcp"]["status"] != "unknown":
-        votes.append(("pass2", r2["mcp"]["status"], gw("mcp", 0.8)))
+    if p2_mcp and p2_mcp != "unknown":
+        votes.append(("pass2", p2_mcp, gw("mcp", 0.8)))
+    if mcp_probe.get("alive"):
+        votes.append(("mcp_endpoint_probe", "official", 0.9))
     if (r1.get("mcp") or {}).get("status") and r1["mcp"]["status"] != "unknown":
         votes.append(("pass1", r1["mcp"]["status"], 0.2))
-    mcp_status, mcp_agree, _ = _vote(votes)
-    mcp_status = mcp_status or "none"
-    # 'official' beats 'community' if any strong source says official
-    if any(v == "official" and w >= 0.7 for _, v, w in votes):
+    strong_official = (mr.get("status") == "official" or comp.get("wraps_mcp") or mcp_probe.get("alive")
+                       or (p2_mcp == "official" and "not_grounded" not in mcp_ev and (mcp_ev or p2_url)))
+    if strong_official:
         mcp_status = "official"
-    mcp_url = (r2.get("mcp") or {}).get("url") or (mr.get("official") or [{}])[0].get("repo") or (top or {}).get("url") or (r1.get("mcp") or {}).get("url")
+    elif any(v == "community" for _, v, _ in votes) or p2_mcp == "official":
+        mcp_status = "community"
+    else:
+        mcp_status = "none"
+    mcp_agree = round(sum(1 for _, v, _ in votes if v == mcp_status) / len(votes), 2) if votes else 0.0
+    mcp_url = p2_url or (mr.get("official") or [{}])[0].get("repo") or (top or {}).get("url") or (r1.get("mcp") or {}).get("url")
     sources["mcp"] = {s: v for s, v, _ in votes}
 
     # ---- blocker & verdict ----
@@ -208,6 +226,8 @@ def merge_app(app, registry, probes, pass1, pass2, judge) -> dict:
         evidence.append({"field": "api_breadth", "url": ag.get("spec_url"), "quote": f"APIs.guru OpenAPI spec: {ag.get('endpoints')} operations, securitySchemes {ag.get('auth')}", "grounded": "registry"})
     if up.get("status") in (401, 403):
         evidence.append({"field": "auth_methods", "url": up.get("url"), "quote": f"Unauthenticated probe -> HTTP {up['status']}; WWW-Authenticate: {up.get('www_authenticate')}; body: {up.get('body_snippet')}", "grounded": "probe"})
+    if mcp_probe.get("alive"):
+        evidence.append({"field": "mcp", "url": mcp_probe["url"], "quote": f"MCP initialize POST -> HTTP {mcp_probe['status']} ({mcp_probe.get('content_type')}); endpoint is live", "grounded": "probe"})
 
     return {
         "id": app["id"], "name": app["name"], "category": app["category"], "hint": app["hint"],

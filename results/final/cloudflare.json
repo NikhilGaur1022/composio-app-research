@@ -3,34 +3,39 @@
   "name": "Cloudflare",
   "category": "Developer, Infra and Data platforms",
   "hint": "developers.cloudflare.com/api",
-  "one_liner": "CDN and security platform providing REST and GraphQL APIs for managing DNS, firewall, workers, storage, and edge computing services.",
+  "one_liner": "Cloudflare is a CDN, DNS, security, and edge-compute (Workers) platform with a broad REST API for managing zones, DNS, security, and serverless resources.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "bearer_token",
+    "oauth2"
   ],
   "access": "self_serve_free",
-  "api_type": "rest_and_graphql",
-  "api_breadth": "small",
-  "docs_url": "https://developers.cloudflare.com/fundamentals/api/",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://developers.cloudflare.com/api/",
   "mcp": {
-    "status": "community",
+    "status": "official",
     "url": "https://github.com/cloudflare/mcp-server-cloudflare"
   },
   "verdict": "green",
-  "score": 91,
+  "score": 100,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "green",
+  "confidence": 0.76,
+  "agreement": 0.89,
+  "grounding_rate": 0.57,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
       ],
       "pass1": [
         "api_key",
@@ -39,21 +44,67 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "large",
       "pass1": "large"
     },
     "mcp": {
       "mcp_registry": "community",
-      "github": "community"
+      "github": "community",
+      "pass2": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+      "quote": "Whenever possible, use API tokens to interact with the Cloudflare API.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/",
+      "quote": "MCP clients connect to MCP servers over the Internet, establishing a connection using Streamable HTTP, and authorizing the MCP client access to resources on the user's account using OAuth.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+      "quote": "Model Context Protocol (MCP) is a new, standardized protocol for managing context between large language models (LLMs) and external systems.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
+      "quote": "Enterprise customers can also contact Cloudflare Support to raise the Client API per user, GraphQL, or API token limits to a higher value.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+      "quote": "API keys have several limitations that make them less secure than API tokens.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.cloudflare.com/client/v4/zones",
+      "quote": "Missing X-Auth-Email header ... Missing X-Auth-Key header",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.cloudflare.com/api/",
+      "quote": "npm install cloudflare",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/cloudflare",
@@ -86,7 +137,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Cloudflare's comprehensive platform API is well-documented and accessible via free tier. Both REST and GraphQL endpoints are available. API breadth estimated as large based on coverage of multiple major products (Workers, R2, Analytics, Firewall, etc.). Bearer token support inferred from standard API token implementations.",
+  "notes": "Cloudflare's REST API (api.cloudflare.com) is available to any signed-up account, including the free plan; free-tier accounts can create scoped API Tokens (recommended, bearer-token style Authorization header) or legacy Global API Key (X-Auth-Key/X-Auth-Email header pair). OAuth2 is used for authorizing remote MCP client connections to a user's Cloudflare account rather than for the core REST API itself. Cloudflare publishes and maintains an official open-source MCP server suite (cloudflare/mcp-server-cloudflare, 4.2k★) covering Workers, DNS analytics, observability, browser rendering, audit logs, and a general 'Code Mode' server for broad API access; this matches the community/official registry hit 'com.cloudflare.mcp/mcp'. API surface is large (500+ documented REST endpoints across Zones, DNS, SSL/TLS, Firewall, Load Balancers, Workers, etc.). Higher rate limits are gated to Enterprise support requests, but base API access itself is not paywalled.",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -99,6 +150,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.105
+  "pass2": {
+    "auth_methods": [
+      "bearer_token",
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.8
+  },
+  "cost_usd": 0.287
 }

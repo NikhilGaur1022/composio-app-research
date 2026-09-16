@@ -62,6 +62,10 @@
     }
   ],
   "grounding_rate": 0.57,
+  "mcp_probe": {
+    "url": "https://github.com/drewburchfield/help-scout-mcp-server",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

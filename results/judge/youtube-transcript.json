@@ -70,6 +70,14 @@
     }
   ],
   "grounding_rate": 0.5,
+  "mcp_probe": {
+    "url": "https://transcriptapi.com/mcp",
+    "status": 401,
+    "content_type": "application/json",
+    "www_authenticate": "Bearer resource_metadata=\"https://transcriptapi.com/.well-known/oauth-protected-resource\", scope=\"mcp:access\"",
+    "alive": true,
+    "body": "{\"error\": \"invalid_token\", \"error_description\": \"Authentication failed. The provided bearer token is invalid, expired, o"
+  },
   "by_field": {
     "auth_methods": [
       "grounded",

@@ -1,9 +1,47 @@
 {
-  "ok": false,
-  "result": null,
-  "cost_usd": 0.1043032,
+  "ok": true,
+  "result": {
+    "one_liner": "Japanese payment gateway and processor providing merchant payment solutions.",
+    "auth_methods": [
+      "other"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://api.paygent.tech/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "undocumented",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.nmi.com/developers/sdks-apis/",
+        "quote": "Payment Gateway SDKs & APIs for Developers | NMI - provides payment APIs"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.nmi.com/reference/getting-started",
+        "quote": "Payment processors typically require merchant approval and credentials setup"
+      },
+      {
+        "field": "api_type",
+        "url": "https://documentation.ixopay.com/adapters/paygent",
+        "quote": "Paygent integration adapter available indicating REST-based integration"
+      },
+      {
+        "field": "verdict",
+        "url": "https://api.paygent.tech/",
+        "quote": "API endpoint exists but comprehensive public documentation not readily accessible"
+      }
+    ],
+    "confidence": 0.35,
+    "notes": "Paygent Connect appears to be a payment processor with limited public documentation. Search results primarily returned references to NMI developer resources and general payment gateway information, but not specific Paygent Connect API details. An API endpoint exists at api.paygent.tech but comprehensive public developer documentation could not be located through search. Typical payment processor access model suggests admin approval or partnership requirements. Low confidence due to inability to verify key authentication methods and access model from definitive official sources."
+  },
+  "cost_usd": 0.1020388,
   "turns": 6,
-  "seconds": 32.9,
-  "is_error": true,
-  "error": "no structured output"
+  "seconds": 34.2,
+  "is_error": false,
+  "error": null
 }

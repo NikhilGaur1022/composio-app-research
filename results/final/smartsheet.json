@@ -3,53 +3,102 @@
   "name": "Smartsheet",
   "category": "Productivity and Project Management",
   "hint": "smartsheet.com/developers",
-  "one_liner": "Smartsheet is a cloud-based project management and work collaboration platform for teams.",
+  "one_liner": "Smartsheet is a work management/collaboration platform (sheets, projects, workflows) with a REST API and official MCP server.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "oauth2"
   ],
   "access": "paid_plan",
   "api_type": "rest",
-  "api_breadth": "unknown",
+  "api_breadth": "medium",
   "docs_url": "https://developers.smartsheet.com/",
   "mcp": {
-    "status": "community",
-    "url": "https://github.com/smartsheet-platform/smar-mcp"
+    "status": "official",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server"
   },
   "verdict": "yellow",
-  "score": 68,
+  "score": 77,
   "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "yellow",
+  "confidence": 0.91,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 0.86,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
       "pass1": [
         "api_key",
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "paid_plan",
       "pass1": "paid_plan"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
+      "pass2": "medium",
       "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
       "github": "community",
+      "pass2": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "quote": "If an unauthorized user gets a copy of this token, they will be able to access all Smartsheet data that you have access to, both to read and modify on your behalf.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "quote": "You can generate access tokens in the Smartsheet UI.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.smartsheet.com/register",
+      "quote": "The email address used to register for Developer Tools must belong to an existing licensed Smartsheet user on a Business plan or higher.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "quote": "Unlock the power of AI by connecting Smartsheet with Claude, ChatGPT, and other AI clients through the Smartsheet MCP (Model Context Protocol) server.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "quote": "REST base URL of https://api.smartsheet.com/2.0",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://api.smartsheet.com/2.0/sheets",
@@ -74,7 +123,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "API access requires minimum Business plan subscription ($24.19/user/month). Free tier and Pro plans do not include API access. OAuth 2.0 and API key (bearer token) authentication are supported. Exact endpoint count unknown from available documentation.",
+  "notes": "API and official MCP server both gated behind Business/Enterprise/Advanced Work Management plans; no free-tier credential path exists. Free trial accounts explicitly cannot generate API access tokens.",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -86,6 +135,17 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.137
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.349
 }

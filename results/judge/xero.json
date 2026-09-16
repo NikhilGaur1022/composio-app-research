@@ -54,6 +54,10 @@
     }
   ],
   "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "skipped": true
+  },
   "by_field": {
     "auth_methods": [
       "grounded"

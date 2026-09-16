@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.82,
+    "docs_url": "https://docs.mrscraper.com/docs/getting-started/overview",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+        "quote": "The Free plan includes 100 tokens per month with no credit card required."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.mrscraper.com/docs/getting-started/quickstart",
+        "quote": "Create a MrScraper account and obtain your API key from the Playground before following this guide."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+        "quote": "API keys remain supported for clients without OAuth and carry full account authority"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+        "quote": "MrScraper MCP is the official Model Context Protocol server for MrScraper."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+        "quote": "MrScraper is a web scraping platform offering both AI-powered and manual scraping capabilities"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://docs.composio.dev/toolkits/mrscraper",
+        "quote": "tools: 11"
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+        "quote": "The Free plan includes 100 tokens per month with no credit card required."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.mrscraper.com/mcp"
+    },
+    "notes": "Free self-serve tier (100 tokens/month, no card) via app.mrscraper.com/playground gives an API key usable as query param (?token=), header (x-api-token), or Bearer token. Official hosted MCP server also supports OAuth 2.1 browser sign-in in addition to API-key fallback. REST API Reference documents endpoints; exact count not confirmed on vendor docs but Composio catalog lists 11 wrapped tools, suggesting a small surface (scraping/bulk-scraping/proxy/scheduling focused). api_breadth marked \"small\" with lower confidence since full endpoint count wasn't directly verified on docs.mrscraper.com.",
+    "one_liner": "MrScraper is an AI-powered and manual web scraping platform (scraper API, bulk scraping, residential proxy, web unblocker) with REST API, CLI, SDKs, and an official MCP server.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1892292,
+  "turns": 10,
+  "seconds": 50.7,
+  "is_error": false,
+  "error": null
+}

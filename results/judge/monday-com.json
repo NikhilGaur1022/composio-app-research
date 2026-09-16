@@ -1,9 +1,68 @@
 {
   "name": "Monday.com",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 5,
+  "grounded": 3,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.monday.com/apps/docs/oauth",
+      "quote": "If you don't have an app, follow these steps to create an app in the monday UI and locate your client_id and client_secret.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.769
+    },
+    {
+      "field": "access",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "quote": "If you don't have a monday.com account yet, create a free developer account to get an API token and start testing.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.802
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.monday.com/api-reference/docs/basics",
+      "quote": "The monday.com API is built with GraphQL, a flexible query language that allows you to return as much or as little data as you need.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/mondaycom/mcp",
+      "quote": "Enable AI agents to work reliably - giving them secure access to structured data, tools to take action, and the context needed to make smart decisions.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.6,
+  "mcp_probe": {
+    "url": "https://github.com/mondaycom/mcp",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
 }

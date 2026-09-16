@@ -1,9 +1,115 @@
 {
   "name": "Supabase",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 10,
+  "grounded": 10,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "PATs are tokens with a custom expiry that you manually generate to access the Management API.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "allows your application to generate tokens on behalf of a Supabase user, providing secure and limited access to their account without requiring their credentials",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "Authorization: Bearer <access_token>",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://supabase.com/docs/guides/api",
+      "quote": "provisioned behind an API gateway with key-auth enabled",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://supabase.com/docs/guides/api",
+      "quote": "a thin API layer on top of Postgres",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://supabase.com/docs/guides/graphql/api",
+      "quote": "In our API, each SQL table is reflected as a set of GraphQL types.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://supabase.com/pricing",
+      "quote": "Unlimited API requests",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://supabase.com/pricing",
+      "quote": "Free projects are paused after 1 week of inactivity. Limit of 2 active projects.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://supabase.com/docs/guides/getting-started/mcp",
+      "quote": "The MCP server repository is available at github.com/supabase/mcp",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://supabase.com/docs/reference/api/introduction",
+      "quote": "All resources created via the API are subject to the pricing detailed on our Pricing pages",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "mcp_probe": {
+    "url": "https://github.com/supabase/mcp",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

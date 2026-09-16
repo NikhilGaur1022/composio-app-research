@@ -3,33 +3,38 @@
   "name": "GoHighLevel",
   "category": "Marketing, Ads, Email and Social",
   "hint": "highlevel.stoplight.io",
-  "one_liner": "GoHighLevel is a sales and marketing platform providing CRM, email, SMS, landing pages, and workflow automation with REST API access for integrations.",
+  "one_liner": "GoHighLevel is an all-in-one sales/marketing CRM platform (funnels, email/SMS, ads, automation) offering a REST API for contacts, campaigns, and workflows.",
   "auth_methods": [
+    "bearer_token",
     "oauth2"
   ],
-  "access": "paid_plan",
+  "access": "self_serve_trial",
   "api_type": "rest",
   "api_breadth": "large",
-  "docs_url": "https://highlevel.stoplight.io/docs/integrations/",
+  "docs_url": "https://marketplace.gohighlevel.com/docs/",
   "mcp": {
-    "status": "none",
-    "url": ""
+    "status": "official",
+    "url": "https://services.leadconnectorhq.com/mcp/"
   },
   "verdict": "yellow",
-  "score": 75,
+  "score": 95,
   "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "model_verdict": "yellow",
+  "confidence": 0.79,
+  "agreement": 0.92,
+  "grounding_rate": 0.83,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs self_serve_trial)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "bearer_token",
         "oauth2"
       ],
       "pass1": [
@@ -38,20 +43,61 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_trial",
       "pass1": "paid_plan"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "large",
+      "pass2": "large",
       "pass1": "medium"
     },
     "mcp": {
+      "pass2": "official",
+      "mcp_endpoint_probe": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://marketplace.gohighlevel.com/docs/",
+      "quote": "OAuth 2.0 or Private Integration Token",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken/",
+      "quote": "static/fixed OAuth2 Access Tokens",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken/",
+      "quote": "By default, all agency admins can create and manage Private Integrations.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://rocketlauncher.ai/use-cases/what-is-mcp-gohighlevel",
+      "quote": "GoHighLevel ships an official MCP server at https://services.leadconnectorhq.com/mcp/",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://marketplace.gohighlevel.com/docs/",
+      "quote": "Marketplace app or Private integration",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.ruzuku.com/compare/gohighlevel-pricing",
+      "quote": "GoHighLevel's main plans are $97/month for Starter, $297/month for Unlimited, and $497/month for Agency Pro",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/highlevel",
@@ -62,6 +108,12 @@
       "field": "auth_methods",
       "url": "https://services.leadconnectorhq.com/contacts/",
       "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"statusCode\":401,\"message\":\"version header was not found.\"}",
+      "grounded": "probe"
+    },
+    {
+      "field": "mcp",
+      "url": "https://services.leadconnectorhq.com/mcp/",
+      "quote": "MCP initialize POST -> HTTP 401 (application/json; charset=utf-8); endpoint is live",
       "grounded": "probe"
     }
   ],
@@ -84,7 +136,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "GoHighLevel is buildable as an agent toolkit with comprehensive API coverage across contacts, opportunities, calendars, workflows, conversations, and payments. Main limitation is paid subscription requirement ($297+/month minimum). OAuth 2.0 and API keys both documented and production-ready. Access tokens expire every 24 hours requiring refresh token management.",
+  "notes": "GoHighLevel's current API (v2) is REST-based on the Developer Marketplace (marketplace.gohighlevel.com/docs), authenticated via OAuth 2.0 (for distributed Marketplace apps) or Private Integration Tokens (static bearer tokens scoped to one sub-account/agency, requiring admin access, \"static/fixed OAuth2 Access Tokens\"). Legacy v1 API keys exist but are deprecated in favor of v2. There is no perpetual free tier: HighLevel offers only a 14-day (or extended 30-day via some partner links) trial, after which a paid subscription ($97-$497/mo) is required to hold a sub-account and generate credentials — docs themselves are publicly viewable without signup. An MCP server appears to be hosted by HighLevel itself at services.leadconnectorhq.com/mcp/ (same domain as their official API, per the unauthenticated probe in the provided context returning a structured HighLevel API error rather than a generic 404), authenticated with a Private Integration Token; this is corroborated only by third-party writeups, not a directly fetched vendor page (that URL 401'd without a body), so treat mcp.status confidence as moderate, not confirmed. api_breadth is inferred as \"large\" from the breadth of documented resource categories (contacts, conversations, calendars, opportunities, payments, workflows, funnels, social planner, etc.) and the Composio catalog wrapping 218 actions for this toolkit; not independently verified by an endpoint count during this pass.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -96,6 +148,17 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.11
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.55
+  },
+  "cost_usd": 0.439
 }

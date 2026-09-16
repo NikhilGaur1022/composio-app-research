@@ -3,33 +3,40 @@
   "name": "GitHub",
   "category": "Developer, Infra and Data platforms",
   "hint": "docs.github.com/rest",
-  "one_liner": "Version control and collaboration platform providing REST and GraphQL APIs for repository, issue, pull request, and workflow automation.",
+  "one_liner": "GitHub's REST and GraphQL APIs let developers manage repos, issues, PRs, actions, and more programmatically across the GitHub platform.",
   "auth_methods": [
+    "api_key",
+    "basic",
+    "bearer_token",
     "oauth2"
   ],
   "access": "self_serve_free",
-  "api_type": "rest",
+  "api_type": "rest_and_graphql",
   "api_breadth": "large",
-  "docs_url": "https://docs.github.com/en/rest",
+  "docs_url": "https://docs.github.com/rest",
   "mcp": {
-    "status": "community",
-    "url": "https://github.com/modelcontextprotocol/servers"
+    "status": "official",
+    "url": "https://github.com/github/github-mcp-server"
   },
   "verdict": "green",
-  "score": 98,
+  "score": 100,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 0.89,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "model_verdict": "green",
+  "confidence": 0.78,
+  "agreement": 0.87,
+  "grounding_rate": 0.62,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "basic",
+        "bearer_token",
         "oauth2"
       ],
       "pass1": [
@@ -39,23 +46,75 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest_and_graphql",
       "apis_guru_spec": "rest",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
       "apis_guru_spec": "large",
       "composio_tools": "large",
+      "pass2": "large",
       "pass1": "large"
     },
     "mcp": {
       "mcp_registry": "community",
+      "pass2": "official",
       "pass1": "official"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "GitHub recommends that you use a fine-grained personal access token instead of a personal access token (classic).",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "Some REST API endpoints for GitHub Apps and OAuth apps require you to use basic authentication to access the endpoint.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "Authentication with username and password is not supported. If you try to authenticate with user name and password, you will receive a 4xx error.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://api.github.com/user",
+      "quote": "{\"message\": \"Requires authentication\",\"documentation_url\": \"https://docs.github.com/rest\",\"status\": \"401\"}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/github/github-mcp-server",
+      "quote": "The GitHub MCP Server connects AI tools directly to GitHub's platform.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "quote": "replace YOUR-TOKEN with a reference to your token using \"Authorization: Bearer YOUR-TOKEN\"",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.github.com/en/rest",
+      "quote": "signals: oauth true, graphql true, rest true",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+      "quote": "endpoints: 845",
+      "grounded": "not_grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/github",
@@ -94,7 +153,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "GitHub offers free tier access with self-serve credentials for both REST and GraphQL APIs. REST API has hundreds of endpoints; GraphQL provides flexible query access to the same data. Personal access tokens and OAuth are primary documented methods. Free users can authenticate and make API calls with standard rate limits; higher limits available with paid accounts. Official GitHub MCP server enables AI-powered repository and workflow automation.",
+  "notes": "Basic auth is only used for a narrow subset of GitHub App/OAuth App endpoints (client ID/secret), not general API access; primary methods are PAT (api_key) and OAuth2/GitHub Apps, with Bearer token header format for all authenticated requests. Free GitHub account suffices to create PATs and register OAuth/GitHub Apps — no paid tier required for API access itself (rate limits differ by plan but base access is free). Official GitHub MCP server exists and is actively maintained by GitHub.",
   "pass1": {
     "auth_methods": [
       "oauth2",
@@ -107,6 +166,19 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.121
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.273
 }

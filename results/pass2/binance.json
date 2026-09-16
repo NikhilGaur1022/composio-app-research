@@ -5,65 +5,59 @@
     "api_breadth": "large",
     "api_type": "rest",
     "auth_methods": [
-      "api_key",
-      "other"
+      "api_key"
     ],
-    "blocker": "other",
-    "confidence": 0.75,
-    "docs_url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
     "evidence": [
       {
         "field": "auth_methods",
-        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
-        "quote": "Signatures generated using HMAC are not case-sensitive."
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
+        "quote": "We support HMAC, RSA, and Ed25519 keys."
       },
       {
         "field": "auth_methods",
-        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
-        "quote": "It is highly recommended to use Ed25519 API keys"
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/endpoint-security-type",
-        "quote": "Secure endpoints require a valid API key to be specified and authenticated."
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
+        "quote": "We recommend to use Ed25519 API keys."
       },
       {
         "field": "access",
-        "url": "https://www.binance.com/en/support/faq/how-to-create-api-360002502072",
-        "quote": "before creating an API Key, you need to make a deposit of any amount to your Spot Wallet to activate your account and complete identity verification"
-      },
-      {
-        "field": "access",
-        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
-        "quote": "API keys can be created on the API Management page of your Binance account."
+        "url": "https://www.binance.com/en/support/faq/360002502072",
+        "quote": "enable two-factor authentication (2FA) on your account; make a deposit of any amount to your Spot Wallet to activate your account; and verify your identity"
       },
       {
         "field": "api_type",
-        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
-        "quote": "Secure endpoints require a valid API key to be specified and authenticated."
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+        "quote": "Each endpoint has a security type indicating required API key permissions"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/nirholas/Binance-MCP",
+        "quote": "A Model Context Protocol (MCP) server for Binance.com API. Offers standardized access to spot trading, wallets, staking, simple earn, convert, mining, algo trading..."
       },
       {
         "field": "mcp",
         "url": "https://github.com/AnalyticAce/binance-mcp-server",
-        "quote": "binance-mcp-server (47 stars)"
+        "quote": "Unofficial tools and server implementation for Binance's Model Context Protocol (MCP)."
       },
       {
         "field": "verdict",
-        "url": "https://www.binance.com/en/support/faq/how-to-create-api-360002502072",
-        "quote": "before creating an API Key, you need to make a deposit of any amount to your Spot Wallet to activate your account and complete identity verification"
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
+        "quote": "Both API key and secret key are sensitive and should never be shared with anyone."
       }
     ],
     "mcp": {
       "status": "community",
-      "url": "https://github.com/AnalyticAce/binance-mcp-server"
+      "url": "https://github.com/nirholas/Binance-MCP"
     },
-    "notes": "Docs moved from binance-docs.github.io to developers.binance.com (github.io now redirects). REST API is free self-serve via the Binance account's API Management page, but creating a key requires 2FA, a Spot Wallet deposit, and identity (KYC) verification first — a real-world friction point beyond typical dev-account signup, hence yellow rather than green. Auth is a static API key sent via X-MBX-APIKEY header plus a request signature (HMAC, RSA, or Ed25519) — not OAuth2/JWT/bearer/basic. API surface is very large (spot, margin, futures, options, wallet, sub-account endpoints combined run into the hundreds). No vendor-published MCP server found; several community MCP servers exist on GitHub and in the MCP registry (all community-maintained, none official).",
-    "one_liner": "Binance is a cryptocurrency exchange offering spot, margin, futures, and wallet trading via a large REST API.",
-    "verdict": "yellow"
+    "notes": "Official docs live at developers.binance.com (the old binance-docs.github.io hint 404s / has migrated). Credentials are obtained free via a standard Binance account: enable 2FA, make a spot-wallet deposit, and complete identity verification (KYC) — this is standard exchange onboarding rather than a partner/app-review gate, so classified as self_serve_free rather than admin_approval. No OAuth2 for the trading API itself (a separate OAuth-based 'Binance Connect'/account-linking flow exists for some partner integrations but is not the primary developer API auth). API surface spans spot, margin, futures, options, pay, and more — well over 300 endpoints combined, hence 'large'. No official vendor-published MCP server found; only community/unofficial implementations (e.g., nirholas/Binance-MCP, AnalyticAce/binance-mcp-server).",
+    "one_liner": "Binance is a global cryptocurrency exchange offering REST/WebSocket APIs for spot, margin, futures, options, and pay/wallet operations.",
+    "verdict": "green"
   },
-  "cost_usd": 0.1700448,
-  "turns": 7,
-  "seconds": 54.9,
+  "cost_usd": 0.2582696,
+  "turns": 9,
+  "seconds": 68.8,
   "is_error": false,
   "error": null
 }

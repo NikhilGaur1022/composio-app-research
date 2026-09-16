@@ -1,9 +1,79 @@
 {
   "name": "WhatsApp Business",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 6,
+  "grounded": 3,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "quote": "The temporary access token you created to send the hello_world template message expires quickly and is not suitable for development purposes.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "quote": "Generate access token to send a test message",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.807
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+      "quote": "developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.525
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/reference",
+      "quote": "Meta for Developers",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+      "quote": "tkhattar14/whatsapp-business-mcp (3★)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.71
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "quote": "A list of publishing requirements are listed",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.5,
+  "mcp_probe": {
+    "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

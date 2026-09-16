@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "Netlify uses OAuth2 for authentication. All requests must use HTTPS."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "Authorization: Bearer YOUR_OAUTH2_ACCESS_TOKEN"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "Go to Applications > Personal access tokens, Select New access token"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://api.apis.guru/v2/specs/netlify.com/2.15.0/swagger.json",
+        "quote": "endpoints: 120"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "curl -H \"Authorization: Bearer YOUR_OAUTH2_ACCESS_TOKEN\" https://api.netlify.com/api/v1/sites"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+        "quote": "Netlify's Official MCP Server"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/netlify/netlify-mcp",
+        "quote": "Netlify's Official MCP server"
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "Select New access token"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/netlify/netlify-mcp"
+    },
+    "notes": "Personal access tokens (bearer) are generated directly from any Netlify account (including free tier) via Applications > Personal access tokens, no approval needed. OAuth2 is documented as required only for public third-party integrations distributed to other users; direct API use with a PAT is the common self-serve path. Netlify also publishes an official remote/local MCP server (netlify-mcp.netlify.app/mcp and @netlify/mcp npm package) built on the same CLI/API surface.",
+    "one_liner": "Netlify is a web hosting/deployment platform (sites, builds, forms, functions, DNS) with a REST API for managing sites and deployments programmatically.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1548028,
+  "turns": 7,
+  "seconds": 36.4,
+  "is_error": false,
+  "error": null
+}

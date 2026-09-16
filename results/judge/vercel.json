@@ -1,9 +1,99 @@
 {
   "name": "Vercel",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 8,
+  "grounded": 7,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+      "quote": "**bearerToken**: HTTP bearer",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+      "quote": "'Authorization': 'Bearer YOUR_ACCESS_TOKEN'",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+      "quote": "\"type\": \"oauth2-token\"",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+      "quote": "Creates and returns a new authentication token for the currently authenticated User.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://vercel.com/docs/rest-api",
+      "quote": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://vercel.com/docs/rest-api",
+      "quote": "| **GET** | [`/v1/access-groups/{idOrName}`](/docs/rest-api/access-groups/reads-an-access-group.md) | Reads an access group |",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/vercel/mcp-handler",
+      "quote": "vercel/mcp-handler (669★)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.585
+    },
+    {
+      "field": "verdict",
+      "url": "https://api.vercel.com/v9/projects",
+      "quote": "{\"error\":{\"code\":\"forbidden\",\"message\":\"The request is missing an authentication token\",\"missingToken\":true}}",
+      "status": 403,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.88,
+  "mcp_probe": {
+    "url": "https://github.com/vercel/mcp-handler",
+    "skipped": true
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
 }

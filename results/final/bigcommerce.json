@@ -3,50 +3,92 @@
   "name": "BigCommerce",
   "category": "Ecommerce",
   "hint": "developer.bigcommerce.com",
-  "one_liner": "BigCommerce is a fully-hosted ecommerce platform providing REST and GraphQL APIs for building storefronts and integrations.",
+  "one_liner": "BigCommerce is an ecommerce platform offering REST and GraphQL APIs for store/catalog/order management and storefront/checkout operations.",
   "auth_methods": [
+    "bearer_token",
+    "jwt",
     "oauth2"
   ],
-  "access": "self_serve_trial",
+  "access": "self_serve_free",
   "api_type": "rest_and_graphql",
   "api_breadth": "large",
-  "docs_url": "https://developer.bigcommerce.com/docs/start/authentication",
+  "docs_url": "https://developer.bigcommerce.com/docs/start",
   "mcp": {
-    "status": "none",
-    "url": null
+    "status": "community",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview"
   },
-  "verdict": "yellow",
-  "score": 90,
-  "blocker": "paid_only",
-  "model_verdict": null,
-  "confidence": 0.45,
-  "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.8,
+  "agreement": 0.93,
+  "grounding_rate": 0.6,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_trial vs self_serve_free)"
   ],
-  "auto_notes": [],
   "sources": {
     "auth_methods": {
+      "pass2": [
+        "bearer_token",
+        "jwt",
+        "oauth2"
+      ],
       "pass1": [
         "oauth2"
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_trial"
     },
     "api_type": {
+      "pass2": "rest_and_graphql",
       "pass1": "rest_and_graphql"
     },
     "api_breadth": {
+      "pass2": "large",
       "pass1": "large"
     },
     "mcp": {
+      "pass2": "official",
       "pass1": "none"
     }
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.bigcommerce.com/docs/start/authentication",
+      "quote": "Most of our REST endpoints and GraphQL Admin API endpoints use the X-Auth-Token header to authenticate to BigCommerce servers.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.bigcommerce.com/docs/start/authentication",
+      "quote": "BigCommerce no longer issues legacy API Accounts to new stores.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.bigcommerce.com/docs/start",
+      "quote": "Sign up for a free BigCommerce trial store to test API calls and build integrations without affecting live data.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.bigcommerce.com/docs/start",
+      "quote": "REST Management API, REST Storefront API, GraphQL Storefront API",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+      "quote": "The BigCommerce MCP server lets AI agents interact with a BigCommerce storefront using purpose-built commerce tools.",
+      "grounded": "not_grounded"
+    }
+  ],
   "composio": {
     "in_catalog": false,
     "slug": null,
@@ -64,7 +106,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "BigCommerce requires a paid subscription after the 15-day trial to maintain API access. OAuth2 is the documented authentication method. Both REST and GraphQL APIs are available. API rate limits and feature access vary by subscription tier. For a free developer account with persistent API access, a paid plan would be required.",
+  "notes": "Free trial store gives immediate self-serve OAuth credentials (client_id/secret/access_token via X-Auth-Token) for both REST Management API and GraphQL Admin/Storefront APIs. Legacy basic-auth API accounts are deprecated (no longer issued to new stores), so 'basic' was excluded. JWT auth applies to Customer Login/Current Customer and GraphQL Storefront/Payments APIs. Official MCP server is storefront-shopping-focused (search/cart/checkout), not full admin API coverage, but it exists and is vendor-published.",
   "pass1": {
     "auth_methods": [
       "oauth2"
@@ -75,6 +117,18 @@
     "verdict": "yellow",
     "blocker": "paid_only"
   },
-  "pass2": null,
-  "cost_usd": 0.117
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.301
 }

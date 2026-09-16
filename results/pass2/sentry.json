@@ -1,52 +1,47 @@
 {
   "ok": true,
   "result": {
-    "access": "self_serve_free",
+    "access": "self_serve_trial",
     "api_breadth": "large",
     "api_type": "rest",
     "auth_methods": [
-      "oauth2",
       "bearer_token",
+      "oauth2",
       "basic"
     ],
-    "blocker": "none",
-    "confidence": 0.85,
+    "blocker": "paid_only",
+    "confidence": 0.68,
     "docs_url": "https://docs.sentry.io/api/",
     "evidence": [
       {
-        "field": "auth_methods",
-        "url": "https://docs.sentry.io/api/auth/",
-        "quote": "Authentication tokens are passed using an auth header, and are used to authenticate as a user or organization account."
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://docs.sentry.io/api/auth/",
-        "quote": "You can create authentication tokens within Sentry by creating an internal integration."
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://docs.sentry.io/api/auth/",
-        "quote": "PKCE protects against authorization code interception attacks and is strongly recommended for all OAuth clients."
-      },
-      {
-        "field": "access",
-        "url": "https://sentry.io/pricing/",
-        "quote": "For solo devs working on small projects"
-      },
-      {
-        "field": "access",
-        "url": "https://sentry.io/pricing/",
-        "quote": "MCP access"
-      },
-      {
         "field": "api_type",
         "url": "https://docs.sentry.io/api/",
-        "quote": "the Sentry web API"
+        "quote": "The Sentry web API is used to access the Sentry platform programmatically."
       },
       {
-        "field": "mcp",
-        "url": "https://mcp.sentry.dev/",
-        "quote": "Connects AI assistants to Sentry for searching errors, analyzing performance, triaging issues, reading documentation, and managing projects — all via the Model Context Protocol."
+        "field": "auth_methods",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "Authentication tokens are passed using an auth header, and are used to authenticate as a user or organization account with the API."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "A Sentry user can belong to multiple organizations. The access token only provides access to the specific organization the user selected during the OAuth flow."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "API Keys: A deprecated authentication method using HTTP Basic Auth, though still supported for existing accounts."
+      },
+      {
+        "field": "access",
+        "url": "https://sentry.io/pricing/",
+        "quote": "API\" with checkmarks indicating availability in Team, Business, and Enterprise plans, but notably absent from the Developer plan"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.sentry.io/api/guides/create-auth-token/",
+        "quote": "A Sentry account with an organization-level role of Manager or Admin"
       },
       {
         "field": "mcp",
@@ -54,22 +49,22 @@
         "quote": "301 Moved Permanently -> https://mcp.sentry.dev/"
       },
       {
-        "field": "verdict",
-        "url": "https://sentry.io/pricing/",
-        "quote": "$0 ... Limited to one user"
+        "field": "auth_methods",
+        "url": "https://sentry.io/api/0/projects/",
+        "quote": "{\"detail\":\"Authentication credentials were not provided.\"} (www-authenticate: Bearer realm=\"api\")"
       }
     ],
     "mcp": {
       "status": "official",
       "url": "https://mcp.sentry.dev/"
     },
-    "notes": "Sentry offers a $0 Developer plan with self-serve signup that includes API and MCP access, so no payment or approval gate blocks initial credential acquisition. Auth tokens (bearer, scoped) and OAuth2 (with PKCE and device flow for CLI/headless) are the primary documented methods; legacy API keys use HTTP Basic auth but are deprecated. The API spans 20+ resource categories (orgs, projects, issues, events, releases, teams, dashboards, crons, replays, profiling, SCIM, integration platform, etc.) which, combined with Composio's 211-tool wrapper count, indicates a large (>300 endpoint) surface, though docs do not publish an exact total. Sentry publishes and hosts its own official MCP server at mcp.sentry.dev (also referenced from getsentry/sentry-mcp on GitHub), confirmed via docs.sentry.io/product/sentry-mcp/ redirecting there.",
-    "one_liner": "Sentry is an application monitoring and error-tracking platform with a REST API for managing organizations, projects, issues, events, and releases.",
-    "verdict": "green"
+    "notes": "Sentry's REST API (\"web API\") is large (organizations, projects, issues, events, alerts, releases, etc.). Auth: organization/personal auth tokens (bearer), OAuth2 apps (authorization code + PKCE + device flow), and a deprecated Basic-Auth API-key method still honored for legacy accounts. Free \"Developer\" plan explicitly excludes the \"API & third-party integrations\" feature per the pricing comparison table — API access requires the paid Team tier (which has a free trial), hence self_serve_trial rather than self_serve_free. Creating an auth token additionally requires an org Manager/Admin role. Sentry publishes an official MCP server (getsentry/sentry-mcp, 854★) reachable via mcp.sentry.dev, also listed as a feature of the free plan (chat/agent access to Sentry data), distinct from the paid REST API gate.",
+    "one_liner": "Sentry is an error-monitoring/observability platform with a large REST API for managing projects, issues, events, and alerts programmatically.",
+    "verdict": "yellow"
   },
-  "cost_usd": 0.19057300000000005,
+  "cost_usd": 0.18437880000000004,
   "turns": 10,
-  "seconds": 75.4,
+  "seconds": 54.4,
   "is_error": false,
   "error": null
 }

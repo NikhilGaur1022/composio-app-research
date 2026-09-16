@@ -1,9 +1,90 @@
 {
   "name": "Smartsheet",
-  "checked": 0,
-  "grounded": 0,
+  "checked": 7,
+  "grounded": 6,
   "unreachable": 0,
-  "items": [],
-  "grounding_rate": null,
-  "by_field": {}
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "quote": "If an unauthorized user gets a copy of this token, they will be able to access all Smartsheet data that you have access to, both to read and modify on your behalf.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "quote": "You can generate access tokens in the Smartsheet UI.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.smartsheet.com/register",
+      "quote": "The email address used to register for Developer Tools must belong to an existing licensed Smartsheet user on a Business plan or higher.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "quote": "REST base URL of https://api.smartsheet.com/2.0",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.677
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "quote": "Unlock the power of AI by connecting Smartsheet with Claude, ChatGPT, and other AI clients through the Smartsheet MCP (Model Context Protocol) server.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.86,
+  "mcp_probe": {
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+    "status": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "www_authenticate": null,
+    "alive": false,
+    "body": "<!doctype html>\n  <html lang=\"en-US\">\n  <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+  },
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ]
+  }
 }

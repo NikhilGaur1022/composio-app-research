@@ -3,34 +3,39 @@
   "name": "Bright Data",
   "category": "Data, SEO and Scraping",
   "hint": "brightdata.com",
-  "one_liner": "Bright Data is a web data collection platform providing residential proxies, datacenter proxies, SERP API, and web scraping services.",
+  "one_liner": "Bright Data is a web-data platform providing proxy networks, a Web Unlocker, SERP API, scraping browser, and dataset/scraper APIs for programmatic web scraping.",
   "auth_methods": [
-    "api_key"
+    "api_key",
+    "basic",
+    "bearer_token"
   ],
   "access": "self_serve_free",
   "api_type": "rest",
-  "api_breadth": "small",
-  "docs_url": "https://docs.brightdata.com",
+  "api_breadth": "medium",
+  "docs_url": "https://docs.brightdata.com/api-reference/authentication",
   "mcp": {
-    "status": "none",
-    "url": "https://github.com/arjunprabhulal/adk-mcp-brightdata"
+    "status": "official",
+    "url": "https://docs.brightdata.com/mcp-server/overview"
   },
   "verdict": "green",
-  "score": 88,
+  "score": 97,
   "blocker": "none",
-  "model_verdict": null,
-  "confidence": 0.45,
+  "model_verdict": "green",
+  "confidence": 0.95,
   "agreement": 1.0,
-  "grounding_rate": null,
-  "needs_human": true,
-  "needs_human_reasons": [
-    "pass2 failed; relying on pass1 + registries"
-  ],
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
   "auto_notes": [],
   "sources": {
     "auth_methods": {
       "composio_catalog": [
         "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "basic",
+        "bearer_token"
       ],
       "pass1": [
         "api_key",
@@ -39,21 +44,79 @@
       ]
     },
     "access": {
+      "pass2": "self_serve_free",
       "pass1": "self_serve_free",
       "docs_signal": "self_serve_free"
     },
     "api_type": {
+      "pass2": "rest",
       "pass1": "rest"
     },
     "api_breadth": {
       "composio_tools": "small",
+      "pass2": "medium",
       "pass1": "unknown"
     },
     "mcp": {
+      "pass2": "official",
       "pass1": "none"
     }
   },
   "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "An API key is a secure hashed token used to authenticate with Bright Data API.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "Authorization: Bearer <token>",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "brd-customer-[ACCOUNT_ID]-zone-[PROXY_NAME]:[PROXY_PASSWORD]",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://brightdata.com/",
+      "quote": "Get started for free",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://brightdata.com/",
+      "quote": "No credit card required",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://brightdata.com/pricing",
+      "quote": "Free tier pricing available",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "Web Unlocker API",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.brightdata.com/mcp-server/overview",
+      "quote": "The Bright Data MCP server gives AI agents and assistants real-time access to public web data through the Model Context Protocol (MCP).",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://brightdata.com/",
+      "quote": "Get started for free",
+      "grounded": "grounded"
+    },
     {
       "field": "auth_methods",
       "url": "https://docs.composio.dev/toolkits/brightdata",
@@ -86,7 +149,7 @@
     "www_authenticate": null,
     "inferred": null
   },
-  "notes": "Bright Data offers automatic free trial (14-30 days) and recurring 5,000 credits/month free tier for Web Unlocker, SERP API, Web Scraper, and Scraper Studio. Self-serve signup with immediate API access. Usage-based pricing for additional credits.",
+  "notes": "Proxy \"native access\" credentials (customer:zone:password over proxy protocol) function like HTTP basic auth alongside the primary bearer-token API key scheme. Composio catalog and unauth probe (401 on invalid creds) corroborate api_key/bearer auth. Free self-serve signup confirmed on marketing site; exact free-tier request/data limits not itemized on pages fetched. API breadth not fully enumerated (llms.txt index not fetched due to budget) but spans Web Unlocker, SERP, Scraping Browser, Scraper/Dataset APIs, and zone/proxy management — estimated medium.",
   "pass1": {
     "auth_methods": [
       "api_key",
@@ -99,6 +162,18 @@
     "verdict": "green",
     "blocker": "none"
   },
-  "pass2": null,
-  "cost_usd": 0.114
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.78
+  },
+  "cost_usd": 0.249
 }

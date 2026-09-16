@@ -19,8 +19,8 @@
   "score": 91,
   "blocker": "none",
   "model_verdict": "green",
-  "confidence": 0.59,
-  "agreement": 1.0,
+  "confidence": 0.52,
+  "agreement": 0.83,
   "grounding_rate": 0.0,
   "needs_human": true,
   "needs_human_reasons": [
@@ -31,20 +31,27 @@
     "auth_methods": {
       "pass2": [
         "bearer_token"
+      ],
+      "pass1": [
+        "api_key"
       ]
     },
     "access": {
-      "pass2": "self_serve_free"
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free"
     },
     "api_type": {
-      "pass2": "rest"
+      "pass2": "rest",
+      "pass1": "rest"
     },
     "api_breadth": {
-      "pass2": "small"
+      "pass2": "small",
+      "pass1": "unknown"
     },
     "mcp": {
       "mcp_registry": "community",
-      "pass2": "official"
+      "pass2": "official",
+      "pass1": "official"
     }
   },
   "evidence": [
@@ -121,7 +128,16 @@
     "inferred": null
   },
   "notes": "iPayX is a FINTRAC-registered FX forensic audit API (MSB C10001283) that audits bank/card-network FX rates vs live mid-market across 300+ currencies. Self-serve signup grants a free API key (5 lifetime audits via REST, 10/day via MCP free tier), with Bearer token auth (`ipx_live_...`). Small REST surface (3 endpoints: POST /audit, GET /rates, POST /audit/document) plus webhooks. Vendor publishes an official MCP server alongside the REST API. Production/enterprise FINTRAC-signed reporting for banks routes to sales, but that's an enterprise upsell, not a gate on basic self-serve API access.",
-  "pass1": null,
+  "pass1": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
   "pass2": {
     "auth_methods": [
       "bearer_token"
@@ -133,5 +149,5 @@
     "blocker": "none",
     "confidence": 0.75
   },
-  "cost_usd": 0.28
+  "cost_usd": 0.292
 }

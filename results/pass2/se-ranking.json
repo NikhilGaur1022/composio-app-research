@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "result": {
+    "access": "paid_plan",
+    "api_breadth": "unknown",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "blocker": "paid_only",
+    "confidence": 0.82,
+    "docs_url": "https://seranking.com/api/data/getting-started/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://seranking.com/api/data/getting-started/",
+        "quote": "Include an `Authorization` header in your request, with the value `Token YOUR_API_KEY`."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://seranking.com/api/data/getting-started/",
+        "quote": "pass the key as a URL query parameter named `apikey`."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://seranking.com/api/integrations/mcp/",
+        "quote": "select SE Ranking and click Connect to authorize"
+      },
+      {
+        "field": "access",
+        "url": "https://seranking.com/api/how-to-get-api/",
+        "quote": "All Essential, Pro, Business, Core, Growth, and Enterprise plans include Data API access with a monthly credit allowance."
+      },
+      {
+        "field": "access",
+        "url": "https://seranking.com/api/how-to-get-api/",
+        "quote": "The Project API is available on every current subscription plan: Essential, Pro, Business, Core, Growth, and Enterprise. There is nothing extra to buy."
+      },
+      {
+        "field": "api_type",
+        "url": "https://seranking.com/api/data/getting-started/",
+        "quote": "The base URL for all requests is `https://api.seranking.com`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://seranking.com/api/integrations/mcp/",
+        "quote": "a standardized interface that allows any compatible AI model or agent to access your SE Ranking data in a simple and secure way"
+      },
+      {
+        "field": "mcp",
+        "url": "https://seranking.com/api/integrations/mcp/",
+        "quote": "claude mcp add --transport http se-ranking https://api.seranking.com/mcp"
+      },
+      {
+        "field": "verdict",
+        "url": "https://seranking.com/api/how-to-get-api/",
+        "quote": "API credentials are available to paid subscription plan holders only"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://api.seranking.com/mcp"
+    },
+    "notes": "Single API key (via Authorization: Token header or apikey query param) authenticates both the Data API and Project API; no free/trial tier documented, requires an active paid subscription (Essential+). Vendor also publishes an official open-source MCP server (MIT license, hosted at api.seranking.com/mcp) exposing 160+ tools, connectable via OAuth for clients like Claude Desktop/Code — but the underlying account still needs a paid plan since MCP calls draw on the same API credits.",
+    "one_liner": "SE Ranking is an SEO/competitor-research platform offering a Data API and Project API for keyword, backlink, rank-tracking and site-audit data.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.1797604,
+  "turns": 7,
+  "seconds": 44.1,
+  "is_error": false,
+  "error": null
+}

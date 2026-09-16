@@ -1,38 +1,43 @@
 {
   "ok": true,
   "result": {
-    "access": "admin_approval",
+    "access": "partner_gated",
     "api_breadth": "unknown",
-    "api_type": "rest",
+    "api_type": "none",
     "auth_methods": [
-      "api_key"
+      "none"
     ],
     "blocker": "undocumented",
-    "confidence": 0.15,
-    "docs_url": "https://docs.nmi.com/",
+    "confidence": 0.25,
+    "docs_url": "https://www.pay-gent.com/",
     "evidence": [
       {
-        "field": "api_type",
-        "url": "https://docs.nmi.com/reference/getting-started",
-        "quote": "Manage API authentication, user access, and event-driven integrations"
+        "field": "one_liner",
+        "url": "https://www.pay-gent.com/",
+        "quote": "Paygent — Your payment gateway partner"
       },
       {
         "field": "verdict",
         "url": "https://paygent.com",
         "quote": ""
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.nmi.com/reference/getting-started",
+        "quote": "Getting Started with Payment APIs | NMI Developer Portal"
       }
     ],
     "mcp": {
       "status": "unknown",
       "url": ""
     },
-    "notes": "Could not locate an official, independently-documented \"Paygent Connect\" product. Multiple unrelated entities share the \"Paygent\" name (Japanese Paygent Co./GMO-affiliated payment gateway at pay-gent.com with no public dev docs found; api.paygent.tech, an unrelated crypto/AI-agent wallet product; and generic \"paygent\" WooCommerce/gomerchant integrations for the Japanese gateway). The hint \"NMI-powered\" suggests Paygent Connect is a small white-label/ISV reseller built on NMI's gateway platform (common for ISOs), which would mean the underlying tech is NMI's Direct Post/Query REST API (api_key-style security-key auth) but issued under Paygent's own branding after merchant underwriting — a pattern typical of NMI resellers, not self-serve. The paygent.com domain returned no response (status 0) in the deterministic probe and no docs page was found. All fields above are best-effort inference from the NMI white-label reseller pattern, not verified against an actual Paygent Connect developer portal — confidence is low and this should be re-verified with a live fetch of the actual Paygent Connect vendor domain if/when it is identified. MCP registry hits (\"com.obsmetrics.paygent/agents\", \"io.github.djautomd-lab/aipaygent\") could not be confirmed as related to this specific product, so mcp.status is reported as unknown rather than guessed.",
-    "one_liner": "Paygent Connect appears to be a small, NMI-powered white-label payment gateway/reseller, but no official, independently verifiable developer documentation site for this specific branded product could be located.",
+    "notes": "\"Paygent Connect\" could not be located as a distinct, documented product. The precomputed unauth_api_probe (paygent.com) and docs_page lookups both returned empty/status 0, and no vendor developer-docs site was found across 5 searches and 3 fetches. www.pay-gent.com resolves but has no substantive content. The name most plausibly refers to an NMI white-label reseller/ISV storefront (hint: 'NMI-powered'); NMI itself gates its v4 API behind an active merchant account obtained through a certified reseller/partner ('NMI doesn't typically sell directly to merchants; it distributes its gateway through certified partners and resellers' — per search summary of nmi.com/paymentcloudinc.com, not independently verified with a direct quote), meaning even if Paygent Connect is that reseller, API access would require partner/merchant onboarding rather than self-serve signup. Distinct from the unrelated Japanese 株式会社ペイジェント (Paygent Inc.) payment gateway and from newer 2026 'Paygent' AI-agent-payment startups (paygent.tech, paygent.net, paygentcommerce.com, withpaygent.com) — none of which match the NMI hint. MCP registry hits (com.obsmetrics.paygent/agents, io.github.djautomd-lab/aipaygent) appear to belong to these unrelated AI-agent-payment projects, not to an NMI-powered Paygent Connect, so mcp.status is reported unknown rather than official. Given the inability to find real developer documentation, this is reported as red/undocumented with low confidence rather than guessing at unverifiable details.",
+    "one_liner": "Paygent Connect appears to be an NMI-powered (\"white-label\") payment gateway/reseller offering, but no independently verifiable, vendor-published developer documentation site could be located for it.",
     "verdict": "red"
   },
-  "cost_usd": 0.4018402,
-  "turns": 14,
-  "seconds": 98.9,
+  "cost_usd": 0.29018700000000003,
+  "turns": 10,
+  "seconds": 83.2,
   "is_error": false,
   "error": null
 }

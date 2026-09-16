@@ -70,6 +70,14 @@
     }
   ],
   "grounding_rate": 0.88,
+  "mcp_probe": {
+    "url": "https://developers.hubspot.com/ai-tools/mcp",
+    "status": 403,
+    "content_type": "text/plain;charset=UTF-8",
+    "www_authenticate": null,
+    "alive": true,
+    "body": "Request Forbidden"
+  },
   "by_field": {
     "auth_methods": [
       "not_grounded",
