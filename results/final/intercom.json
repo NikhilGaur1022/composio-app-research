@@ -1,0 +1,176 @@
+{
+  "id": 12,
+  "name": "Intercom",
+  "category": "Support and Helpdesk",
+  "hint": "intercom.com",
+  "one_liner": "Intercom is a customer messaging and support platform (helpdesk, live chat, AI agent Fin) with a REST API and app/integration platform.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/intercom/intercom-mcp-server"
+  },
+  "verdict": "yellow",
+  "score": 92,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.53,
+  "agreement": 0.76,
+  "grounding_rate": 0.12,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "only 12% of quotes grounded in cited pages"
+  ],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs self_serve_trial)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "unauth_probe": [
+        "basic"
+      ],
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_trial",
+      "pass1": "paid_plan",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass2": "large",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "mcp",
+      "url": "https://github.com/intercom/intercom-mcp-server",
+      "quote": "Learn how to use the Model Context Protocol (MCP) to enable AI agents to securely access and interact with your Intercom data whenever helpful.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "OAuth is for if you're building a public app that accesses other people's Intercom data.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "An Access Token is for if you're using the API to access data in your own Intercom workspace, in other words, building a private app.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "We provide you with an Access Token as soon as you create an app on your workspace. You can find your Access Token in the Configure > Authentication section.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/",
+      "quote": "Private App Developers: Can work within their existing paid Intercom workspace by accessing the Developer Hub",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/",
+      "quote": "The intercom API reference",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/",
+      "quote": "Admins, AI Content, Articles, Audiences, Away Status Reasons, Banners, Brands, Calls, Companies, Contacts, Content, Content Snippets, Conversations, Custom Object Instances, Data Attributes...",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/",
+      "quote": "Public App Developers: Must create a new development workspace to develop and publish the app... limited to US regions and have restrictions like maximum 20 users/leads and watermarked Messenger.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/intercom",
+      "quote": "Composio catalog: auth ['OAUTH2'], 133 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.intercom.io/contacts",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Basic realm=\"intercom.io\"; body: {\"type\":\"error.list\",\"request_id\":\"0005mu6a1hpn4347i160\",\"errors\":[{\"code\":\"missing_authorization\",\"message\":\"No authorization was provided\"}]}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "INTERCOM",
+    "tools": 133,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/intercom"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Basic realm=\"intercom.io\"",
+    "inferred": "basic"
+  },
+  "notes": "OAuth2 for public apps accessing other workspaces' data; Access Token (API key) for private apps within your own workspace, issued instantly on app creation with no admin approval or app review step documented. Full production API access effectively requires an Intercom workspace, which is a paid product (free trial available); a free, capability-limited development workspace exists for building/testing public apps (US-only, 20 user cap, watermarked). MCP: Intercom publishes an official MCP server (github.com/intercom/intercom-mcp-server) in addition to several community MCP servers.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.315
+}

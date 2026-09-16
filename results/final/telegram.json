@@ -1,0 +1,179 @@
+{
+  "id": 27,
+  "name": "Telegram",
+  "category": "Communications and Messaging",
+  "hint": "core.telegram.org",
+  "one_liner": "Telegram is a cloud-based messaging platform offering a free public Bot API (HTTP/JSON) for building bots and an MTProto client API for building custom Telegram clients.",
+  "auth_methods": [
+    "api_key",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://core.telegram.org/bots/api",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/chigwell/telegram-mcp"
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.88,
+  "agreement": 1.0,
+  "grounding_rate": 0.78,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "other"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2",
+        "other"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "composio_tools": "small",
+      "pass2": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "Each bot is given a unique authentication token when it is created.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "https://api.telegram.org/bot<token>/METHOD_NAME",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://core.telegram.org/api/obtaining_api_id",
+      "quote": "You will get basic addresses as well as the api_id and api_hash parameters required for user authorization",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "Each bot is given a unique authentication token when it is created.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://core.telegram.org/api/obtaining_api_id",
+      "quote": "Sign up for Telegram using an official application. Log in to your Telegram core: https://my.telegram.org",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "Each bot is given a unique authentication token when it is created.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/telegram.org/5.0.0/openapi.json",
+      "quote": "74 endpoints",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/chigwell/telegram-mcp",
+      "quote": "chigwell/telegram-mcp (1618★)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/telegram",
+      "quote": "Composio catalog: auth ['API_KEY'], 18 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/telegram.org/5.0.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 74 operations, securitySchemes []",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "TELEGRAM",
+    "tools": 18,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/telegram"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 74
+  },
+  "probe": {
+    "status": 404,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Telegram exposes two distinct public APIs: (1) the Bot API — free, instant self-serve via @BotFather, token-based auth appended to the request URL, REST-like HTTP/JSON, ~74-130+ methods depending on version; (2) the MTProto Client API — free self-serve registration at my.telegram.org yielding api_id/api_hash, but requires implementing the MTProto binary protocol and full user (phone-number) authorization, which is a heavier, non-REST integration (classified as auth \"other\"). No official Telegram-published MCP server found; several community MCP servers exist (chigwell/telegram-mcp, sparfenyuk/mcp-telegram, dryeab/mcp-telegram) wrapping either the Bot API or MTProto client libraries. Verdict is green because a fully functional agent toolkit (bot-based) is buildable today with zero-friction self-serve credentials.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "other"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "other"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.239
+}

@@ -1,0 +1,91 @@
+{
+  "id": 79,
+  "name": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "hint": "smartsheet.com/developers",
+  "one_liner": "Smartsheet is a cloud-based project management and work collaboration platform for teams.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "paid_plan",
+  "api_type": "rest",
+  "api_breadth": "unknown",
+  "docs_url": "https://developers.smartsheet.com/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/smartsheet-platform/smar-mcp"
+  },
+  "verdict": "yellow",
+  "score": 68,
+  "blocker": "paid_only",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "paid_plan"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://api.smartsheet.com/2.0/sheets",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: {   \"errorCode\" : 1004,   \"message\" : \"You are not authorized to perform this action.\",   \"refId\" : \"inzaz2\" }",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "API access requires minimum Business plan subscription ($24.19/user/month). Free tier and Pro plans do not include API access. OAuth 2.0 and API key (bearer token) authentication are supported. Exact endpoint count unknown from available documentation.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": null,
+  "cost_usd": 0.137
+}

@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Clay is a data enrichment and automation platform that provides API access for prospecting, data enhancement, and workflow automation with self-serve credentials.",
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://university.clay.com/docs",
+    "mcp": {
+      "status": "official",
+      "url": "https://api.clay.com/v3/mcp"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://university.clay.com/docs/http-api-integration-overview",
+        "quote": "clay-api-key header for standard API requests"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://university.clay.com/docs/http-api-with-jwt-authentication-integration-overview",
+        "quote": "JWT Authentication for APIs with short-lived tokens"
+      },
+      {
+        "field": "access",
+        "url": "https://university.clay.com/docs/guide-find-clay-api-key",
+        "quote": "Under Account, locate API key. You'll find your API key here for integrations."
+      },
+      {
+        "field": "mcp",
+        "url": "https://mcpservers.org/remote-mcp-servers/clay",
+        "quote": "The Clay remote MCP server is a hosted Model Context Protocol endpoint at https://api.clay.com/v3/mcp"
+      },
+      {
+        "field": "verdict",
+        "url": "https://university.clay.com/docs/guide-find-clay-api-key",
+        "quote": "Users locate API keys directly in their Account settings, indicating self-serve access"
+      }
+    ],
+    "confidence": 0.7,
+    "notes": "Clay provides multiple programmatic access methods: HTTP API with API key/JWT auth (undocumented endpoint count), official MCP server, and webhooks. API documentation is sparse (no OpenAPI spec or clear base URL), but self-serve credentials and official MCP integration make it buildable as an agent toolkit. Free tier access available."
+  },
+  "cost_usd": 0.15204959999999998,
+  "turns": 6,
+  "seconds": 83.6,
+  "is_error": false,
+  "error": null
+}

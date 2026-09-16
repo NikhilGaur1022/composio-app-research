@@ -1,0 +1,104 @@
+{
+  "id": 76,
+  "name": "Monday.com",
+  "category": "Productivity and Project Management",
+  "hint": "developer.monday.com",
+  "one_liner": "monday.com is a cloud-based work management platform that offers project management, task tracking, and team collaboration tools.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "graphql",
+  "api_breadth": "medium",
+  "docs_url": "https://developer.monday.com/api-reference/",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/mondaycom/mcp"
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2",
+        "other"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "official",
+      "github": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/monday",
+      "quote": "Composio catalog: auth ['OAUTH2'], 125 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.monday.com/v2",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"errors\":[{\"message\":\"Not authenticated\",\"extensions\":{\"code\":\"NOT_AUTHENTICATED\"}}]}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "MONDAY",
+    "tools": 125,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/monday"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Monday.com offers free API access via personal tokens or OAuth 2.0. GraphQL API covers boards, items, users, workspaces and related operations. MCP support mentioned in agents signup but official status unclear. All monday.com plans including free tier include API access with no per-call charges.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "other"
+    ],
+    "access": "self_serve_free",
+    "api_type": "graphql",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.112
+}

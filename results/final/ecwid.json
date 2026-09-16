@@ -1,0 +1,83 @@
+{
+  "id": 47,
+  "name": "Ecwid",
+  "category": "Ecommerce",
+  "hint": "api-docs.ecwid.com",
+  "one_liner": "Ecwid is a cloud-based ecommerce platform for managing products, orders, customers, and storefront settings across online channels.",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "access": "paid_plan",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://api-docs.ecwid.com/reference/rest-api",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "yellow",
+  "score": 75,
+  "blocker": "paid_only",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "paid_plan"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 404,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "API access requires a paid subscription, but Ecwid offers free paid plan upgrades for qualifying development use cases. Buildable with yellow verdict due to paid requirement, though free alternatives exist for qualifying projects.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": null,
+  "cost_usd": 0.108
+}

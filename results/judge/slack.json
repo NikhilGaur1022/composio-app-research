@@ -1,0 +1,73 @@
+{
+  "name": "Slack",
+  "checked": 6,
+  "grounded": 4,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "access",
+      "url": "https://docs.slack.dev/quickstart",
+      "quote": "If you don't have a Slack workspace already, we recommend also setting up a developer sandbox.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.slack.dev/quickstart",
+      "quote": "Now you've got everything you need to start developing on the Slack platform!",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.slack.dev/authentication/",
+      "quote": "Learn how to use OAuth 2.0 to securely authenticate users and request access tokens.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.slack.dev/authentication/",
+      "quote": "Understand the different types of tokens your app can use (user tokens, bot tokens, and app tokens) and how to manage them.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/slack.com/1.7.0/openapi.json",
+      "quote": "174 endpoints",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/korotovsky/slack-mcp-server",
+      "quote": "korotovsky/slack-mcp-server (1829★)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.636
+    }
+  ],
+  "grounding_rate": 0.67,
+  "by_field": {
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
+}

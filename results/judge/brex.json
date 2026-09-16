@@ -1,0 +1,84 @@
+{
+  "name": "Brex",
+  "checked": 7,
+  "grounded": 5,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://developer.brex.com",
+      "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.brex.com/docs/authentication/",
+      "quote": "Authorization: \"Bearer {{user_token}}\"",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.785
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "quote": "only for Brex developer partners",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.brex.com/guides/quickstart",
+      "quote": "This guide assumes you are a Brex customer with admin access to your dashboard.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "quote": "Please contact our developer support team to be issued a client ID and client secret for partner authentication.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.json",
+      "quote": "54 endpoints (apis.guru OpenAPI spec index for brex.io)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.431
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.brex.com/docs/mcp",
+      "quote": "MCP clients that support OAuth will automatically initiate a browser-based authorization flow when you first connect.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.71,
+  "by_field": {
+    "api_type": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
+}

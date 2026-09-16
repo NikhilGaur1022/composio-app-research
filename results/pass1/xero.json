@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Xero is cloud accounting/bookkeeping software with a REST API for building financial integrations.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developer.xero.com",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/XeroAPI/xero-mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.xero.com/faq/getting-started",
+        "quote": "The Xero API does not support basic API Key authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/getting-started",
+        "quote": "The first step is to sign up for a free Xero account."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/getting-started",
+        "quote": "The quickest way to try out the API is to set up your demo company and dive into the API Explorer."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.xero.com/documentation/guides/getting-started/overview",
+        "quote": "Xero provides a comprehensive REST API for integrating with accounting and payroll applications."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/XeroAPI/xero-mcp-server",
+        "quote": "An MCP server that integrates with the MCP protocol and Xero APIs"
+      }
+    ],
+    "confidence": 0.88,
+    "notes": "Xero's public REST APIs use OAuth2 only. Any developer can sign up for a free Xero account and register an app in the developer portal to get OAuth2 credentials immediately. Free demo company available for testing via API Explorer with no paywall. Publishing to Xero's App Store requires review, and premium Custom Connections feature (client_credentials grant) is a paid add-on, but base API access and development are self-serve free. Official MCP server published by Xero. Medium API breadth with 224+ accounting endpoints."
+  },
+  "cost_usd": 0.04911070000000001,
+  "turns": 6,
+  "seconds": 26.7,
+  "is_error": false,
+  "error": null
+}

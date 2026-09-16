@@ -1,0 +1,75 @@
+{
+  "name": "NotebookLM",
+  "checked": 6,
+  "grounded": 6,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "https://ENDPOINT_LOCATION-discoveryengine.googleapis.com/v1alpha/projects/PROJECT_NUMBER/locations/LOCATION/notebooks",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "gcloud auth print-access-token",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+      "quote": "You can purchase Gemini Notebook Enterprise as a standalone product or as part of Gemini Enterprise.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+      "quote": "Pre-GA features are available 'as is' and might have limited support.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+      "quote": "a highly compliant, enterprise-ready version of Gemini Notebook",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/mcp-dir/notebooklm-mcp",
+      "quote": "NotebookLM has no official API",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "by_field": {
+    "api_type": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
+}

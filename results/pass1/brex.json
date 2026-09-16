@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Brex provides a REST API for fintech and payments with bearer token and OAuth2 authentication.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developer.brex.com/",
+    "mcp": {
+      "status": "unknown",
+      "url": "https://developer.brex.com/docs/mcp"
+    },
+    "verdict": "yellow",
+    "blocker": "partner_gate",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.brex.com/guides/authentication",
+        "quote": "API Token authentication and OAuth 2.0 for Brex partners with OAuth credentials"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.brex.com/guides/partner_authentication",
+        "quote": "Production OAuth credentials require Brex Partner registration and review"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.brex.com/",
+        "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification"
+      }
+    ],
+    "confidence": 0.72,
+    "notes": "User tokens available via self-serve for existing account admins; no developer sandbox. Production OAuth integration requires formal Brex partner approval. MCP server referenced in docs but vendor status unclear."
+  },
+  "cost_usd": 0.125926,
+  "turns": 6,
+  "seconds": 46.6,
+  "is_error": false,
+  "error": null
+}

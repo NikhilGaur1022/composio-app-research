@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "result": {
+    "access": "admin_approval",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "basic"
+    ],
+    "blocker": "enterprise_only",
+    "confidence": 0.72,
+    "docs_url": "https://developer.gladly.com/rest/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://help.gladly.com/developer-tutorials/docs/authentication",
+        "quote": "requires an Agent to provide a username and password for a request"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "Gladly API uses token-based Basic Authentication. API tokens are associated with designated Gladly users."
+      },
+      {
+        "field": "access",
+        "url": "https://help.gladly.com/implementation/docs/get-your-api-tokens",
+        "quote": "These can be created within the Gladly UI, for users who have the API User role."
+      },
+      {
+        "field": "access",
+        "url": "https://help.gladly.com/implementation/docs/get-your-api-tokens",
+        "quote": "at least one technical admin log in to Gladly and create a token"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.eesel.ai/blog/gladly-pricing",
+        "quote": "Gladly does not offer a free trial or freemium plan. Gladly does not offer a free plan, and free trials are not publicly available. Access is usually provided through sales-led demos."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "Clients access the REST API via HTTPS at the organization's Gladly domain"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.stackone.com/connectors/gladly/mcp/",
+        "quote": "StackOne's production Gladly MCP server includes 65 pre-built actions"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://www.stackone.com/connectors/gladly/mcp/"
+    },
+    "notes": "Gladly is an enterprise CX/helpdesk platform sold via sales-led, 12-month contracts with custom pricing; no self-serve free tier or public trial for the core product (a separate Shopify-app 30-day trial exists but likely doesn't expose the full REST API). Once an org is a customer, an admin must grant a user the 'API User' role in Settings to generate a Basic Auth token — so credentials are gated behind both being a paying customer and admin action. REST API documented at developer.gladly.com/rest/ covers ~13 resource categories (Agents, Conversations, Customers, Webhooks, Reports, etc.) with dozens of endpoints — sized as medium breadth. No official vendor MCP server found; StackOne offers a third-party/community MCP connector with 65 actions.",
+    "one_liner": "Gladly is an enterprise customer-service/helpdesk platform unifying channels (voice, chat, email, SMS) into a single customer timeline, with an AI agent add-on.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.2237656,
+  "turns": 9,
+  "seconds": 68.7,
+  "is_error": false,
+  "error": null
+}

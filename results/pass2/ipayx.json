@@ -1,0 +1,73 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.75,
+    "docs_url": "https://www.ipayx.ai/docs/api",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "Every request requires a Bearer token in the `Authorization` header. Keys start with `ipx_live_`."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.ipayx.ai/docs/mcp-server",
+        "quote": "Method: HTTP Bearer token in `Authorization` header. Format: `ipx_live_xxxxx` (production)"
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/pricing",
+        "quote": "5 audits, lifetime"
+      },
+      {
+        "field": "access",
+        "url": "https://www.ipayx.ai/pricing",
+        "quote": "Banks and institutions: contact sales."
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "POST /audit – Forensic analysis of individual transactions, returning a 0–10 score and hidden spread calculation"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://www.ipayx.ai/docs/api",
+        "quote": "POST /audit ... GET /rates ... POST /audit/document"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.ipayx.ai/docs/mcp-server",
+        "quote": "Production MCP: `https://hvujzsdwcoweirroubeh.supabase.co/functions/v1/mcp-server`"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.ipayx.ai/docs/mcp-server",
+        "quote": "How to get a key: Open your iPayX dashboard → API keys"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.ipayx.ai/docs/mcp-server",
+        "quote": "10 audits / day per API key (free)"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://www.ipayx.ai/docs/mcp-server"
+    },
+    "notes": "iPayX is a FINTRAC-registered FX forensic audit API (MSB C10001283) that audits bank/card-network FX rates vs live mid-market across 300+ currencies. Self-serve signup grants a free API key (5 lifetime audits via REST, 10/day via MCP free tier), with Bearer token auth (`ipx_live_...`). Small REST surface (3 endpoints: POST /audit, GET /rates, POST /audit/document) plus webhooks. Vendor publishes an official MCP server alongside the REST API. Production/enterprise FINTRAC-signed reporting for banks routes to sales, but that's an enterprise upsell, not a gate on basic self-serve API access.",
+    "one_liner": "iPayX is a FINTRAC-registered FX forensic audit API/MCP service that scores bank and card FX rates against live mid-market rates across 300+ currencies.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1804136,
+  "turns": 9,
+  "seconds": 63.5,
+  "is_error": false,
+  "error": null
+}

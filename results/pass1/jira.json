@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Jira is a project management and issue tracking platform for planning, tracking, and managing work across teams.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "bearer_token",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-oauth-authentication/",
+        "quote": "OAuth 2.0 Authentication for Jira REST API involves the use of OAuth protocol to obtain the access or Id token"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://unified.to/blog/jira_api_key_how_to_get_it_and_use_it_api_token_guide_for_developers",
+        "quote": "For API Token (Basic Auth): Generate a token at https://id.atlassian.com/manage-profile/security/api-tokens"
+      },
+      {
+        "field": "access",
+        "url": "https://supergood.ai/api-report-card/atlassian-jira",
+        "quote": "Jira Cloud has a comprehensive self-serve REST API (v3) on every tier including Free"
+      },
+      {
+        "field": "access",
+        "url": "https://community.atlassian.com/forums/Jira-questions/Use-REST-API-with-Jira-instance-on-Free-Plan/qaq-p/2955396",
+        "quote": "free plan provides access to the full functionality of the Jira REST API"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+        "quote": "The Jira Cloud platform REST API"
+      },
+      {
+        "field": "access",
+        "url": "https://titanapps.io/blog/jira_api_token_how_to_create_manage_and_secure_your_authentication",
+        "quote": "users can generate API tokens directly without requiring administrative approval"
+      }
+    ],
+    "confidence": 0.92,
+    "notes": "Jira Cloud offers full API access on the free tier with self-serve credential generation. OAuth 2.0 is the modern standard; OAuth 1.0a and API tokens with basic auth are also supported. Forge apps use JWT. The REST API is comprehensive with endpoints covering projects, issues, workflows, users, and more."
+  },
+  "cost_usd": 0.1233628,
+  "turns": 6,
+  "seconds": 49.5,
+  "is_error": false,
+  "error": null
+}

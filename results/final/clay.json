@@ -1,0 +1,106 @@
+{
+  "id": 60,
+  "name": "Clay",
+  "category": "Data, SEO and Scraping",
+  "hint": "clay.com",
+  "one_liner": "Clay is a data enrichment and automation platform that provides API access for prospecting, data enhancement, and workflow automation with self-serve credentials.",
+  "auth_methods": [
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://university.clay.com/docs",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/bpw-civic/clay-mcp-server"
+  },
+  "verdict": "green",
+  "score": 88,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.83,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "other"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "jwt"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "composio_wraps_mcp": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/clay_mcp",
+      "quote": "Composio catalog: auth ['DCR_OAUTH'], 17 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.clay.com/v3/sources",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"type\":\"Unauthorized\",\"message\":\"You must be logged in\",\"details\":null}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "CLAY_MCP",
+    "tools": 17,
+    "auth": [
+      "other"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/clay_mcp"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Clay provides multiple programmatic access methods: HTTP API with API key/JWT auth (undocumented endpoint count), official MCP server, and webhooks. API documentation is sparse (no OpenAPI spec or clear base URL), but self-serve credentials and official MCP integration make it buildable as an agent toolkit. Free tier access available.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "bearer_token",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.152
+}

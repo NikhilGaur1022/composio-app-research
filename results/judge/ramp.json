@@ -1,0 +1,142 @@
+{
+  "name": "Ramp",
+  "checked": 13,
+  "grounded": 10,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://support.ramp.com/accessing-the-developer-api",
+      "quote": "Client ID and Client Secret",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.ramp.com/accessing-the-developer-api",
+      "quote": "onboard production customers through OAuth",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.ramp.com/developer/v1/transactions",
+      "quote": "Access token with given access_token not found",
+      "status": 404,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API",
+      "quote": "Admin access is required",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://support.ramp.com/accessing-the-developer-api",
+      "quote": "Request access using the sandbox access form",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://ramp.com/developer-api",
+      "quote": "One platform, three ways in.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://ramp.com/developer-api",
+      "quote": "Embed Ramp's full spend management stack directly into your platform via API.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.791
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.ramp.com",
+      "quote": "api.ramp.com/developer/v1",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.523
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.ramp.com/openapi/developer-api.json",
+      "quote": "\"security\": [ { \"oauth2\": [\"accounting:read\"] } ]",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.ramp.com/ramp-mcp",
+      "quote": "Any MCP-compatible AI client can connect using the server URL `https://mcp.ramp.com/mcp`.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.ramp.com/ramp-mcp",
+      "quote": "Your Ramp permissions come with you.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://ramp.com/developer-api",
+      "quote": "Dedicated partner manager",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "one_liner",
+      "url": "https://ramp.com",
+      "quote": "Time and money-saving corporate cards, bill payments, accounting automation",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.551
+    }
+  ],
+  "grounding_rate": 0.77,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded",
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ],
+    "one_liner": [
+      "not_grounded"
+    ]
+  }
+}

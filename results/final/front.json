@@ -1,0 +1,150 @@
+{
+  "id": 14,
+  "name": "Front",
+  "category": "Support and Helpdesk",
+  "hint": "front.com",
+  "one_liner": "Front is a customer communication / shared-inbox helpdesk platform with a REST API for managing conversations, messages, contacts, and workflow automation.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://dev.frontapp.com/docs/welcome",
+  "mcp": {
+    "status": "official",
+    "url": "https://mcp.frontapp.com/mcp"
+  },
+  "verdict": "green",
+  "score": 97,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.88,
+  "agreement": 0.94,
+  "grounding_rate": 0.83,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs self_serve_free)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "paid_plan",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass2": "medium",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://dev.frontapp.com/docs/welcome",
+      "quote": "You'll get access to a free developer environment that will provide everything you need to begin building with our APIs.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "The Core API uses Bearer tokens to authenticate its user. You MUST send the token for each request in the Authorization header.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "Front recommends implementing OAuth when feasible, which has the additional benefit of building within our application framework.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://dev.frontapp.com/docs/mcp-server",
+      "quote": "Front's MCP server (mcp.frontapp.com/mcp) lets AI agents act on Front conversation data using a single OAuth-authenticated endpoint.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://dev.frontapp.com/docs/welcome",
+      "quote": "You'll get access to a free developer environment that will provide everything you need to begin building with our APIs.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://dev.frontapp.com/reference/introduction",
+      "quote": "REST API designed to communicate using JSON for request and response handling.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api2.frontapp.com/conversations",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"_error\":{\"status\":401,\"title\":\"Unauthenticated\",\"message\":\"JSON Web Token error\"}}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": "bearer_token"
+  },
+  "notes": "Front provides a free developer sandbox account (limited to 3 teammates) for building against its REST Core API, with both API-token and OAuth2 authentication (both transmitted as Bearer tokens). OAuth is required/recommended for public integrations distributed to other Front customers, but a developer can self-serve an API token immediately for building/testing without sales contact. Front also ships an official vendor-published MCP server (open beta, OAuth 2.1+PKCE, mcp.frontapp.com/mcp) exposing conversations, messages, contacts, tags, etc.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.271
+}

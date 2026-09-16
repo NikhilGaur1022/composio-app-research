@@ -1,0 +1,163 @@
+{
+  "id": 87,
+  "name": "Xero",
+  "category": "Finance and Fintech",
+  "hint": "developer.xero.com",
+  "one_liner": "Xero is cloud accounting/bookkeeping software (invoicing, payroll, bank reconciliation) with a REST API for building financial integrations.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developer.xero.com",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/XeroAPI/xero-mcp-server"
+  },
+  "verdict": "green",
+  "score": 97,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.93,
+  "agreement": 1.0,
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "apis_guru_spec": [
+        "oauth2"
+      ],
+      "pass2": [
+        "oauth2"
+      ],
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "composio_tools": "medium",
+      "pass2": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "quote": "The Xero API does not support basic API Key authentication.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "quote": "The first step is to sign up for a free Xero account.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "quote": "The quickest way to try out the API is to set up your demo company and dive into the API Explorer.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.xero.com/api.xro/2.0/Organisation",
+      "quote": "{\"Type\":null,\"Title\":\"Unauthorized\",\"Status\":401,\"Detail\":\"AuthenticationUnsuccessful\",\"Instance\":\"c3d029bd-75c1-4486-9178-d9c98a83a756\",\"Extensions\":{}}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/XeroAPI/xero-mcp-server",
+      "quote": "An MCP server that integrates with the MCP protocol",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "quote": "OAuth 1.0a is in the process of being deprecated and OAuth 2.0 is required for all new integrations.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/xero",
+      "quote": "Composio catalog: auth ['OAUTH2'], 53 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/xero.com/xero_accounting/2.9.4/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 224 operations, securitySchemes ['oauth2']",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.xero.com/api.xro/2.0/Organisation",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer; body: {\"Type\":null,\"Title\":\"Unauthorized\",\"Status\":401,\"Detail\":\"AuthenticationUnsuccessful\",\"Instance\":\"c3d029bd-75c1-4486-9178-d9c98a83a756\",\"Extensions\":{}}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "XERO",
+    "tools": 53,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/xero"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 224
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Bearer",
+    "inferred": "bearer_token"
+  },
+  "notes": "Xero's public Accounting/Payroll REST APIs use OAuth2 only (no API-key/basic auth). Any developer can sign up for a free Xero account, register an app in the developer portal to get a Client ID/Secret immediately, and build/test freely against a free demo company via the API Explorer — no paywall or approval needed to start developing. Publishing an app for broad public/production use (beyond the developer's own demo/trial orgs) goes through Xero's App Store review, and a premium 'Custom Connections' feature (client_credentials grant, no user consent screen) is a paid add-on — but base API access and OAuth2 authorization-code development is self-serve free. apis.guru lists 224 accounting-API endpoints (medium breadth). Xero publishes an official MCP server (@xeroapi/xero-mcp-server, MIT licensed, under the XeroAPI GitHub org) that runs locally via OAuth2 Custom Connections credentials.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.291
+}

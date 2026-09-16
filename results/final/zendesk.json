@@ -1,0 +1,164 @@
+{
+  "id": 11,
+  "name": "Zendesk",
+  "category": "Support and Helpdesk",
+  "hint": "zendesk.com",
+  "one_liner": "Zendesk is a customer service/helpdesk platform (tickets, help center, chat, talk) with a documented REST API for automating support workflows.",
+  "auth_methods": [
+    "api_key",
+    "basic",
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/reminia/zendesk-mcp-server"
+  },
+  "verdict": "green",
+  "score": 93,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.9,
+  "agreement": 0.87,
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs self_serve_trial)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "basic",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "basic",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_trial",
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass2": "large",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "Zendesk supports using OAuth access tokens to authenticate API requests.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "Basic authentication is used for API tokens. The credentials must be sent with the request in an Authorization header.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "API tokens are auto-generated passwords in the Zendesk Admin Center.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.zendesk.com/documentation/",
+      "quote": "Try out the Sunshine Platform with a free, 14-day trial account.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+      "quote": "For information on the authentication required to use the API, see Security and authentication in the general API introduction.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/reminia/zendesk-mcp-server",
+      "quote": "A Model Context Protocol server for Zendesk",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/zendesk",
+      "quote": "Composio catalog: auth ['OAUTH2'], 452 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.zendesk.com/api/v2/tickets.json",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Zendesk realm=\"API\"; body: {\"error\":\"Couldn't authenticate you\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "ZENDESK",
+    "tools": 452,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/zendesk"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Zendesk realm=\"API\"",
+    "inferred": "other"
+  },
+  "notes": "Zendesk's REST API spans Ticketing, Help Center, Chat, Talk, Sunshine and more (well over 300 documented endpoints). API tokens (basic auth, generated instantly in Admin Center) still work but Zendesk is pushing OAuth access tokens as the recommended/required method going forward; both remain documented auth paths today. Free 14-day trial accounts get an Admin Center where a token can be generated immediately, so self-serve credentials are available before any paid commitment. No official vendor MCP server found; multiple community/partner MCP servers exist (reminia, mattcoatsworth, koundinya, fruggr, Swifteq/digital4better).",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.284
+}

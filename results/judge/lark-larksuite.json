@@ -1,0 +1,82 @@
+{
+  "name": "Lark (Larksuite)",
+  "checked": 7,
+  "grounded": 2,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM",
+      "quote": "以应用身份调用 API 时需要使用的凭证，可读写的数据范围由应用的数据权限范围决定。该类凭证的值以`t-`为前缀",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM",
+      "quote": "以用户身份调用 API 时需要使用的凭证，可读写的数据范围由用户可读写的数据范围决定。该类凭证的值以`u-`为前缀",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM",
+      "quote": "调用获取授权登录授权码接口，获取登录预授权码 `code`",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://open.larksuite.com/document/home/introduction-to-custom-app-development/self-built-application-development-process",
+      "quote": "点击右上角的 **免费试用**，注册并创建企业账号",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://open.larksuite.com/document/home/introduction-to-custom-app-development/self-built-application-development-process",
+      "quote": "在 [开发者后台](https://open.larksuite.com/app)，点击 **创建企业自建应用**",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://open.larksuite.com/open-apis/im/v1/messages",
+      "quote": "{\"code\":99991661,\"msg\":\"Missing access token for authorization. Please make a request with token attached.\"}",
+      "status": 400,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/larksuite/lark-openapi-mcp",
+      "quote": "飞书/Lark官方 OpenAPI MCP",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.29,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
+}

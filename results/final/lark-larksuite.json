@@ -1,0 +1,153 @@
+{
+  "id": 24,
+  "name": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "hint": "open.larksuite.com",
+  "one_liner": "Lark (Larksuite) is an all-in-one workplace communication and collaboration suite (chat, docs, calendar, approvals) with an extensive Open Platform REST API.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://open.larksuite.com/document/home/index",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/larksuite/lark-openapi-mcp"
+  },
+  "verdict": "green",
+  "score": 100,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.63,
+  "agreement": 0.89,
+  "grounding_rate": 0.29,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "only 28% of quotes grounded in cited pages"
+  ],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (admin_approval vs self_serve_free)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "admin_approval"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass2": "large",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://open.larksuite.com/open-apis/im/v1/messages",
+      "quote": "{\"code\":99991661,\"msg\":\"Missing access token for authorization. Please make a request with token attached.\"}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/larksuite/lark-openapi-mcp",
+      "quote": "飞书/Lark官方 OpenAPI MCP",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM",
+      "quote": "以应用身份调用 API 时需要使用的凭证，可读写的数据范围由应用的数据权限范围决定。该类凭证的值以`t-`为前缀",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM",
+      "quote": "以用户身份调用 API 时需要使用的凭证，可读写的数据范围由用户可读写的数据范围决定。该类凭证的值以`u-`为前缀",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM",
+      "quote": "调用获取授权登录授权码接口，获取登录预授权码 `code`",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://open.larksuite.com/document/home/introduction-to-custom-app-development/self-built-application-development-process",
+      "quote": "点击右上角的 **免费试用**，注册并创建企业账号",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://open.larksuite.com/document/home/introduction-to-custom-app-development/self-built-application-development-process",
+      "quote": "在 [开发者后台](https://open.larksuite.com/app)，点击 **创建企业自建应用**",
+      "grounded": "not_grounded"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 400,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Lark (Larksuite) Open Platform exposes a broad REST API (IM, Contact, Drive/Docs, Calendar, Approval, Attendance, Bitable, etc.) under open.larksuite.com/open-apis. Developers self-register a free enterprise account via the 免费试用 (free trial) flow and become the default admin, then create a custom (self-built) app in the developer console to get app_id/app_secret credentials — no separate app review needed for building/using an app within your own tenant. Auth uses app_id/app_secret (api_key-like) to mint tenant_access_token/app_access_token, or a standard OAuth2 authorization-code flow to mint user_access_token; all tokens are then sent as Bearer tokens in the Authorization header. Publishing an app to the public marketplace for other tenants would require additional admin/marketplace review, but that is not required to build and use an agent toolkit against your own tenant. An official vendor-published MCP server exists at larksuite/lark-openapi-mcp. Confidence is moderated by relying on Chinese-language doc pages via fetch summarization rather than direct verbatim inspection of English docs.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "app_review"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.68
+  },
+  "cost_usd": 0.29200000000000004
+}

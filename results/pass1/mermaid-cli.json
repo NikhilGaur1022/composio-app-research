@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "A command-line tool for rendering Mermaid diagrams to SVG, PNG, or PDF output.",
+    "auth_methods": [
+      "none"
+    ],
+    "access": "self_serve_free",
+    "api_type": "cli_only",
+    "api_breadth": "unknown",
+    "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+    "mcp": {
+      "status": "community",
+      "url": "https://glama.ai/mcp/servers/@Narasimhaponnada/mcp-mermiad"
+    },
+    "verdict": "yellow",
+    "blocker": "cli_not_api",
+    "evidence": [
+      {
+        "field": "api_type",
+        "url": "https://github.com/mermaid-js/mermaid-cli",
+        "quote": "Command line tool for the Mermaid library"
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.npmjs.com/package/@mermaid-js/mermaid-cli",
+        "quote": "CLI tool for rendering Mermaid diagrams to SVG, PNG, or PDF output"
+      },
+      {
+        "field": "access",
+        "url": "https://github.com/mermaid-js/mermaid-cli",
+        "quote": "Open-source tool available via npm: npm install -g @mermaid-js/mermaid-cli"
+      },
+      {
+        "field": "api_type",
+        "url": "https://deepwiki.com/mermaid-js/mermaid/2-core-api",
+        "quote": "mermaid-js and mermaid-cli do not appear to provide a public REST API"
+      }
+    ],
+    "confidence": 0.95,
+    "notes": "Mermaid CLI is a pure CLI tool with no REST or GraphQL API. Freely installable via npm, homebrew, snap, or docker. Can be used programmatically via Node.js SDK. Community MCP server exists but not vendor-official. Yellow verdict due to CLI-only nature; usable in agent toolkit if shelling out to process or importing Node.js library."
+  },
+  "cost_usd": 0.12844899999999998,
+  "turns": 8,
+  "seconds": 47.2,
+  "is_error": false,
+  "error": null
+}

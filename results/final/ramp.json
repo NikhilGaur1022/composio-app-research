@@ -1,0 +1,192 @@
+{
+  "id": 89,
+  "name": "Ramp",
+  "category": "Finance and Fintech",
+  "hint": "docs.ramp.com",
+  "one_liner": "Ramp is a corporate card, expense management, bill pay, and accounting-automation platform for businesses, with a developer REST API and an official hosted MCP server for AI agents.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "partner_gated",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://docs.ramp.com/developer-api/v1/overview",
+  "mcp": {
+    "status": "official",
+    "url": "https://mcp.ramp.com/mcp"
+  },
+  "verdict": "red",
+  "score": 65,
+  "blocker": "partner_gate",
+  "model_verdict": "yellow",
+  "confidence": 0.73,
+  "agreement": 0.82,
+  "grounding_rate": 0.77,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs partner_gated)",
+    "formula verdict red, model said yellow"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "partner_gated",
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass2": "large",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://support.ramp.com/accessing-the-developer-api",
+      "quote": "Client ID and Client Secret",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.ramp.com/accessing-the-developer-api",
+      "quote": "onboard production customers through OAuth",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.ramp.com/developer/v1/transactions",
+      "quote": "Access token with given access_token not found",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API",
+      "quote": "Admin access is required",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://support.ramp.com/accessing-the-developer-api",
+      "quote": "Request access using the sandbox access form",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://ramp.com/developer-api",
+      "quote": "One platform, three ways in.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.ramp.com/openapi/developer-api.json",
+      "quote": "\"security\": [ { \"oauth2\": [\"accounting:read\"] } ]",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.ramp.com/ramp-mcp",
+      "quote": "Any MCP-compatible AI client can connect using the server URL `https://mcp.ramp.com/mcp`.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://support.ramp.com/ramp-mcp",
+      "quote": "Your Ramp permissions come with you.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://ramp.com/developer-api",
+      "quote": "Dedicated partner manager",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://ramp.com/developer-api",
+      "quote": "Embed Ramp's full spend management stack directly into your platform via API.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.ramp.com",
+      "quote": "api.ramp.com/developer/v1",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "one_liner",
+      "url": "https://ramp.com",
+      "quote": "Time and money-saving corporate cards, bill payments, accounting automation",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/ramp",
+      "quote": "Composio catalog: auth ['OAUTH2'], 88 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "RAMP",
+    "tools": 88,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/ramp"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 404,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Ramp has a substantial official REST API (docs.ramp.com/developer-api, api.ramp.com/developer/v1) covering transactions, cards, bills, vendors, reimbursements, purchase orders, trips, accounting sync (Accounting API alone has ~45-50 endpoints per OpenAPI spec sampling; Composio's toolkit wraps 88 tools). Auth is OAuth2 only: a business Admin/Business Owner creates a \"Developer app\" in-app and enables the client_credentials grant for server-to-server access to their own data (self-serve within an existing paid Ramp business account); authorization_code/OAuth is used when onboarding other businesses. Building an integration that serves OTHER Ramp businesses (the agent-toolkit case) requires either the sandbox access form (self-serve, ~1 min provisioning, pre-populated sandbox business) for testing, then explicitly \"apply for production access,\" or going through Ramp's Technology Partner Program (contact-sales form) for embedded/integration partnerships - hence partner_gated/yellow rather than fully self-serve. Notably Ramp also ships an OFFICIAL hosted MCP server (mcp.ramp.com/mcp, one-click install for Claude/ChatGPT) that proxies the authenticated end-user's own Ramp permissions - this is a strong, low-friction path for an agent toolkit even though the raw REST API has partner gating for multi-tenant production use. api_breadth marked \"large\" with moderate confidence only - could not get an exact total endpoint count within budget (OpenAPI spec fetch was truncated to the Accounting sub-API).",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "partner_gate",
+    "confidence": 0.55
+  },
+  "cost_usd": 0.59
+}

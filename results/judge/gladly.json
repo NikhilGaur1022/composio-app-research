@@ -1,0 +1,84 @@
+{
+  "name": "Gladly",
+  "checked": 7,
+  "grounded": 3,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://help.gladly.com/developer-tutorials/docs/authentication",
+      "quote": "requires an Agent to provide a username and password for a request",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Gladly API uses token-based Basic Authentication. API tokens are associated with designated Gladly users.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.44
+    },
+    {
+      "field": "access",
+      "url": "https://help.gladly.com/implementation/docs/get-your-api-tokens",
+      "quote": "These can be created within the Gladly UI, for users who have the API User role.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.gladly.com/implementation/docs/get-your-api-tokens",
+      "quote": "at least one technical admin log in to Gladly and create a token",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.eesel.ai/blog/gladly-pricing",
+      "quote": "Gladly does not offer a free trial or freemium plan. Gladly does not offer a free plan, and free trials are not publicly available. Access is usually provided through sales-led demos.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.381
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Clients access the REST API via HTTPS at the organization's Gladly domain",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.455
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.stackone.com/connectors/gladly/mcp/",
+      "quote": "StackOne's production Gladly MCP server includes 65 pre-built actions",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.715
+    }
+  ],
+  "grounding_rate": 0.43,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
+}

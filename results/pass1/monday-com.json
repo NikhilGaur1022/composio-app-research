@@ -1,0 +1,50 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "monday.com is a cloud-based work management platform that offers project management, task tracking, and team collaboration tools.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "other"
+    ],
+    "access": "self_serve_free",
+    "api_type": "graphql",
+    "api_breadth": "unknown",
+    "docs_url": "https://developer.monday.com/api-reference/",
+    "mcp": {
+      "status": "unknown",
+      "url": "https://monday.com/agents-signup"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.monday.com/api-reference/docs/authentication",
+        "quote": "Personal API Tokens, OAuth 2.0 is a protocol that lets your app request authorization, and short-lived tokens are supported"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.monday.com/apps/docs/manage-user-tokens-and-credentials",
+        "quote": "API access is bundled into all monday.com plans, including the Free tier. There are no per-call charges"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+        "quote": "GraphQL always exposes one endpoint and allows you to determine the structure of the returned data"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.monday.com/api-reference/docs/authentication",
+        "quote": "click on your profile picture in the top right corner, select Developers to open the Developer Center, click API token > Show"
+      }
+    ],
+    "confidence": 0.92,
+    "notes": "Monday.com offers free API access via personal tokens or OAuth 2.0. GraphQL API covers boards, items, users, workspaces and related operations. MCP support mentioned in agents signup but official status unclear. All monday.com plans including free tier include API access with no per-call charges."
+  },
+  "cost_usd": 0.1118112,
+  "turns": 6,
+  "seconds": 27.7,
+  "is_error": false,
+  "error": null
+}

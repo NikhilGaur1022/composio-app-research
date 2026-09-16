@@ -1,0 +1,86 @@
+{
+  "name": "Binance",
+  "checked": 1,
+  "grounded": 0,
+  "unreachable": 7,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+      "quote": "Signatures generated using HMAC are not case-sensitive.",
+      "status": 202,
+      "verdict": "unreachable"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+      "quote": "It is highly recommended to use Ed25519 API keys",
+      "status": 202,
+      "verdict": "unreachable"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/endpoint-security-type",
+      "quote": "Secure endpoints require a valid API key to be specified and authenticated.",
+      "status": 202,
+      "verdict": "unreachable"
+    },
+    {
+      "field": "access",
+      "url": "https://www.binance.com/en/support/faq/how-to-create-api-360002502072",
+      "quote": "before creating an API Key, you need to make a deposit of any amount to your Spot Wallet to activate your account and complete identity verification",
+      "status": 202,
+      "verdict": "unreachable"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+      "quote": "API keys can be created on the API Management page of your Binance account.",
+      "status": 202,
+      "verdict": "unreachable"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+      "quote": "Secure endpoints require a valid API key to be specified and authenticated.",
+      "status": 202,
+      "verdict": "unreachable"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/AnalyticAce/binance-mcp-server",
+      "quote": "binance-mcp-server (47 stars)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.62
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.binance.com/en/support/faq/how-to-create-api-360002502072",
+      "quote": "before creating an API Key, you need to make a deposit of any amount to your Spot Wallet to activate your account and complete identity verification",
+      "status": 202,
+      "verdict": "unreachable"
+    }
+  ],
+  "grounding_rate": 0.0,
+  "by_field": {
+    "auth_methods": [
+      "unreachable",
+      "unreachable",
+      "unreachable"
+    ],
+    "access": [
+      "unreachable",
+      "unreachable"
+    ],
+    "api_type": [
+      "unreachable"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "unreachable"
+    ]
+  }
+}

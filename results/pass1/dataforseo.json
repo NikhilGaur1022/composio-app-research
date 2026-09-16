@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "SEO and SEM data collection platform offering SERP, keyword, and on-page analytics via REST API",
+    "auth_methods": [
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://docs.dataforseo.com/v3/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.dataforseo.com/v3/auth/",
+        "quote": "HTTP Basic Authentication with your account email address and a dedicated API password"
+      },
+      {
+        "field": "access",
+        "url": "https://dataforseo.com/help-center/how-does-your-free-unlimited-trial-work",
+        "quote": "Upon registration free $1 credit for API testing will be added to your account balance. You can use this balance for an unlimited period"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.dataforseo.com/v3/",
+        "quote": "When working with DataForSEO APIs, you will be using only POST and GET methods"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://github.com/dataforseo/OpenApiDocumentation",
+        "quote": "openapi documentation of all DataForSEO endpoints"
+      }
+    ],
+    "confidence": 0.92,
+    "notes": "API uses HTTP Basic Auth with email + auto-generated password. Free tier includes $1 credit upon signup (covers ~500 live SERP requests). $50 minimum deposit required for paid use. Supports JSON and XML responses. Official SDKs available for PHP, Python, C#, Java, TypeScript. Multiple API categories: SERP, Keywords Data, On-Page, Labs."
+  },
+  "cost_usd": 0.10065439999999999,
+  "turns": 5,
+  "seconds": 28.5,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://docs.slack.dev/authentication/",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://docs.slack.dev/quickstart",
+        "quote": "If you don't have a Slack workspace already, we recommend also setting up a developer sandbox."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.slack.dev/quickstart",
+        "quote": "Now you've got everything you need to start developing on the Slack platform!"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.slack.dev/authentication/",
+        "quote": "Learn how to use OAuth 2.0 to securely authenticate users and request access tokens."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.slack.dev/authentication/",
+        "quote": "Understand the different types of tokens your app can use (user tokens, bot tokens, and app tokens) and how to manage them."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://api.apis.guru/v2/specs/slack.com/1.7.0/openapi.json",
+        "quote": "174 endpoints"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/korotovsky/slack-mcp-server",
+        "quote": "korotovsky/slack-mcp-server (1829★)"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/korotovsky/slack-mcp-server"
+    },
+    "notes": "Slack Web API (REST-style) accessed via app creation on api.slack.com/docs.slack.dev; free developer sandbox/workspace lets anyone create an app and obtain OAuth bot/user tokens (xoxb-/xoxp-) sent as Bearer tokens. No official Slack-published MCP server found; several high-star community MCP servers exist (korotovsky/slack-mcp-server, tuannvm/slack-mcp-client, slackapi/slack-skills-plugin). Some admin-level endpoints (Enterprise Grid) require additional approval, but core Web API is self-serve.",
+    "one_liner": "Slack is a team messaging and collaboration platform with channels, DMs, and a large app/bot ecosystem.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.11109180000000002,
+  "turns": 7,
+  "seconds": 32.7,
+  "is_error": false,
+  "error": null
+}

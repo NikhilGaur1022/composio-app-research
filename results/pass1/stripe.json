@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Stripe provides payment processing, billing, and financial services APIs with REST endpoints for handling transactions, accounts, billing cycles, and connect functionality.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://docs.stripe.com/api",
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.stripe.com/mcp"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://stripe.com/docs/api/authentication",
+        "quote": "The Stripe API uses API keys to authenticate requests."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://stripe.com/docs/stripe-apps/api-authentication/oauth",
+        "quote": "OAuth 2.0 available for authorization flows with access and refresh tokens"
+      },
+      {
+        "field": "access",
+        "url": "https://dashboard.stripe.com/apikeys",
+        "quote": "After you create a Stripe account, we generate two pairs of API keys for you—a publishable client-side key and a secret server-side key."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.stripe.com/api",
+        "quote": "The Stripe API is organized around REST, with predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://docs.stripe.com/api",
+        "quote": "Hundreds of endpoints across categories like Accounts, Payments, Billing, Connect"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.stripe.com/mcp",
+        "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API."
+      }
+    ],
+    "confidence": 0.96,
+    "notes": "Stripe offers comprehensive financial APIs with immediate free credentials. REST API is primary with extensive endpoint coverage (>300). OAuth2 available for integrations. Official MCP server available for AI agents. No payment required to start development in sandbox mode."
+  },
+  "cost_usd": 0.23337039999999998,
+  "turns": 5,
+  "seconds": 54.2,
+  "is_error": false,
+  "error": null
+}

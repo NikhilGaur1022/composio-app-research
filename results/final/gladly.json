@@ -1,0 +1,144 @@
+{
+  "id": 20,
+  "name": "Gladly",
+  "category": "Support and Helpdesk",
+  "hint": "gladly.com",
+  "one_liner": "Gladly is an enterprise customer-service/helpdesk platform unifying channels (voice, chat, email, SMS) into a single customer timeline, with an AI agent add-on.",
+  "auth_methods": [
+    "basic"
+  ],
+  "access": "admin_approval",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developer.gladly.com/rest/",
+  "mcp": {
+    "status": "community",
+    "url": "https://www.stackone.com/connectors/gladly/mcp/"
+  },
+  "verdict": "yellow",
+  "score": 77,
+  "blocker": "enterprise_only",
+  "model_verdict": "yellow",
+  "confidence": 0.7,
+  "agreement": 0.93,
+  "grounding_rate": 0.43,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "only 43% of quotes grounded in cited pages"
+  ],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs admin_approval)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "basic"
+      ],
+      "pass1": [
+        "api_key",
+        "basic"
+      ]
+    },
+    "access": {
+      "pass2": "admin_approval",
+      "pass1": "paid_plan"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass2": "medium",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "pass2": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://help.gladly.com/developer-tutorials/docs/authentication",
+      "quote": "requires an Agent to provide a username and password for a request",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.gladly.com/implementation/docs/get-your-api-tokens",
+      "quote": "These can be created within the Gladly UI, for users who have the API User role.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.gladly.com/implementation/docs/get-your-api-tokens",
+      "quote": "at least one technical admin log in to Gladly and create a token",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Gladly API uses token-based Basic Authentication. API tokens are associated with designated Gladly users.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.eesel.ai/blog/gladly-pricing",
+      "quote": "Gladly does not offer a free trial or freemium plan. Gladly does not offer a free plan, and free trials are not publicly available. Access is usually provided through sales-led demos.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Clients access the REST API via HTTPS at the organization's Gladly domain",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.stackone.com/connectors/gladly/mcp/",
+      "quote": "StackOne's production Gladly MCP server includes 65 pre-built actions",
+      "grounded": "not_grounded"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 0,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Gladly is an enterprise CX/helpdesk platform sold via sales-led, 12-month contracts with custom pricing; no self-serve free tier or public trial for the core product (a separate Shopify-app 30-day trial exists but likely doesn't expose the full REST API). Once an org is a customer, an admin must grant a user the 'API User' role in Settings to generate a Basic Auth token — so credentials are gated behind both being a paying customer and admin action. REST API documented at developer.gladly.com/rest/ covers ~13 resource categories (Agents, Conversations, Customers, Webhooks, Reports, etc.) with dozens of endpoints — sized as medium breadth. No official vendor MCP server found; StackOne offers a third-party/community MCP connector with 65 actions.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "basic"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "red",
+    "blocker": "paid_only"
+  },
+  "pass2": {
+    "auth_methods": [
+      "basic"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "enterprise_only",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.326
+}

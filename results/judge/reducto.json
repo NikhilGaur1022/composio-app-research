@@ -1,0 +1,86 @@
+{
+  "name": "Reducto",
+  "checked": 7,
+  "grounded": 4,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "access",
+      "url": "https://docs.reducto.ai/get-started/quickstart",
+      "quote": "Go to studio.reducto.ai and sign up for a free account.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://reducto.ai/pricing",
+      "quote": "Free$150 in free usage",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.reducto.ai/get-started/quickstart",
+      "quote": "Authorization: Bearer $REDUCTO_API_KEY",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://platform.reducto.ai/openapi.json",
+      "quote": "/parse, /extract, /split, /edit, /pipeline, /classify, /job/{job_id}, /upload",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.639
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://platform.reducto.ai/openapi.json",
+      "quote": "18 distinct paths including /parse, /parse_async, /extract, /split, /edit, /pipeline, /classify, /job/{job_id}, /upload",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.538
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.reducto.ai/mcp-server",
+      "quote": "The hosted server runs at https://mcp.reducto.ai/mcp, and you can add this to your MCP client config by replacing your-api-key with a key from studio.reducto.ai/api-keys.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.7
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.reducto.ai/get-started/quickstart",
+      "quote": "Go to studio.reducto.ai and sign up for a free account.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.57,
+  "by_field": {
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "SEO and marketing data API offering project management, ranking tracking, and keyword research with free trial then paid subscription",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://seranking.com/api/",
+    "mcp": {
+      "status": "official",
+      "url": "https://seranking.com/api/integrations/mcp/"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://seranking.com/api/project/getting-started/",
+        "quote": "A single API key authenticates every endpoint across both the Data API and the Project API"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://seranking.com/api/integrations/mcp/",
+        "quote": "OAuth is recommended for MCP Server—it opens a browser on first connect, stores the token locally"
+      },
+      {
+        "field": "access",
+        "url": "https://seranking.com/api-pricing.html",
+        "quote": "The 14-day free trial gives you 100K API credits across all six API endpoints, as well as MCP server access"
+      },
+      {
+        "field": "access",
+        "url": "https://seranking.com/api-pricing.html",
+        "quote": "A 14-day free trial is available on Core – no credit card required"
+      },
+      {
+        "field": "api_type",
+        "url": "https://seranking.com/api/data/getting-started/",
+        "quote": "GET requests can include parameters in the URL's query string, while POST requests must include the Content-Type: application/json header"
+      },
+      {
+        "field": "mcp",
+        "url": "https://seranking.com/api/integrations/mcp/",
+        "quote": "MCP Server - SE Ranking API Documentation provides OAuth and API key authentication options"
+      }
+    ],
+    "confidence": 0.9,
+    "notes": "SE Ranking provides well-documented REST APIs with both API key and OAuth authentication. Free 14-day trial with no credit card required makes it buildable immediately, but production use requires a paid subscription (Core $129/mo minimum). Official MCP server support available. Verdict is yellow due to paid requirement after trial period."
+  },
+  "cost_usd": 0.11764909999999999,
+  "turns": 7,
+  "seconds": 40.7,
+  "is_error": false,
+  "error": null
+}

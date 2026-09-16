@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.8,
+    "docs_url": "https://transcriptapi.com/docs/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://transcriptapi.com",
+        "quote": "Authorization: Bearer API_KEY"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://transcriptapi.com/api/v2/youtube/transcript",
+        "quote": "www-authenticate: Bearer"
+      },
+      {
+        "field": "access",
+        "url": "https://transcriptapi.com",
+        "quote": "100 free credits to try the API — no card required."
+      },
+      {
+        "field": "access",
+        "url": "https://transcriptapi.com",
+        "quote": "Monthly: $5/month (1,000 credits/month)"
+      },
+      {
+        "field": "api_type",
+        "url": "https://transcriptapi.com",
+        "quote": "REST API with HTTP endpoints (curl examples provided throughout documentation)."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://transcriptapi.com",
+        "quote": "Get Transcripts, Search YouTube, Search Within Channels, Browse Channel Videos, Track New Uploads (RSS), Extract Playlist Videos, Resolve Channel Handles"
+      },
+      {
+        "field": "mcp",
+        "url": "https://transcriptapi.com",
+        "quote": "claude mcp add --transport http transcript-api https://transcriptapi.com/mcp"
+      },
+      {
+        "field": "verdict",
+        "url": "https://transcriptapi.com",
+        "quote": "100 free credits to try the API — no card required."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://transcriptapi.com/mcp"
+    },
+    "notes": "Vendor is transcriptapi.com (third-party service exposing YouTube transcripts, not a YouTube-owned product). Self-serve signup with 100 free credits, no card required; paid tiers start at $5/mo for 1,000 credits. REST API with bearer-token API key auth (confirmed by live 401 probe returning www-authenticate: Bearer). Vendor also hosts its own MCP endpoint at /mcp on the same domain (self-serve, streamable HTTP transport), which counts as official since it's first-party. Note: the site's /mcp path itself returned 401 to unauthenticated WebFetch (expected, since MCP requires a session), so MCP quote is taken from the homepage's install instructions rather than the MCP endpoint response. Some docs subpages (/docs/api, /billing) failed to yield extractable text via WebFetch within the 6-fetch budget; homepage content was sufficiently detailed to cover all required claims.",
+    "one_liner": "TranscriptAPI.com is a third-party REST API for fetching YouTube video transcripts, channel/video search, and playlist data.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1542724,
+  "turns": 9,
+  "seconds": 43.3,
+  "is_error": false,
+  "error": null
+}

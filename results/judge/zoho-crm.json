@@ -1,0 +1,73 @@
+{
+  "name": "Zoho CRM",
+  "checked": 6,
+  "grounded": 6,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v7/oauth-overview.html",
+      "quote": "The Zoho CRM API uses the OAuth2.0 protocol for authentication.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+      "quote": "Connect Zoho CRM to any app and perform actions with 5000 API calls/day.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+      "quote": "Forever free, for 3 users",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html",
+      "quote": "You will receive the client credentials such as Client ID and Client Secret in the Client Secret tab",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.zoho.com/crm/developer/mcp.html",
+      "quote": "Deploy four composable MCP servers that give your AI agent secure, scoped access to your Zoho CRM.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html",
+      "quote": "Go to Zoho Developer Console and click on GET STARTED",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "by_field": {
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ]
+  }
+}

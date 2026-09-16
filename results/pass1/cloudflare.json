@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "CDN and security platform providing REST and GraphQL APIs for managing DNS, firewall, workers, storage, and edge computing services.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://developers.cloudflare.com/fundamentals/api/",
+    "mcp": {
+      "status": "unknown"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/",
+        "quote": "Authenticate with a Cloudflare API key or create an OAuth client"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.cloudflare.com/fundamentals/oauth/create-an-oauth-client/",
+        "quote": "Cloudflare OAuth clients support the OAuth 2.0 Authorization Code flow"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.cloudflare.com/analytics/graphql-api/",
+        "quote": "GraphQL Analytics API allows users to query data about HTTP requests"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.cloudflare.com/fundamentals/api/",
+        "quote": "Cloudflare provides both REST and GraphQL APIs"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+        "quote": "Free tier offerings include Workers with 100K requests/day, KV Namespace, D1 Database, and API access"
+      }
+    ],
+    "confidence": 0.82,
+    "notes": "Cloudflare's comprehensive platform API is well-documented and accessible via free tier. Both REST and GraphQL endpoints are available. API breadth estimated as large based on coverage of multiple major products (Workers, R2, Analytics, Firewall, etc.). Bearer token support inferred from standard API token implementations."
+  },
+  "cost_usd": 0.1051482,
+  "turns": 6,
+  "seconds": 33.0,
+  "is_error": false,
+  "error": null
+}

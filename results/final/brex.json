@@ -1,0 +1,172 @@
+{
+  "id": 88,
+  "name": "Brex",
+  "category": "Finance and Fintech",
+  "hint": "developer.brex.com",
+  "one_liner": "Brex is a corporate card and spend-management platform offering a REST API (cards, expenses, transactions, budgets, users) plus an official MCP server for agent access.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "admin_approval",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developer.brex.com",
+  "mcp": {
+    "status": "official",
+    "url": "https://developer.brex.com/docs/mcp"
+  },
+  "verdict": "red",
+  "score": 79,
+  "blocker": "partner_gate",
+  "model_verdict": "yellow",
+  "confidence": 0.8,
+  "agreement": 0.93,
+  "grounding_rate": 0.71,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (partner_gated vs admin_approval)",
+    "formula verdict red, model said yellow"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "apis_guru_spec": [
+        "api_key"
+      ],
+      "pass2": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "admin_approval",
+      "pass1": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "composio_tools": "medium",
+      "pass2": "medium",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://developer.brex.com",
+      "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "quote": "only for Brex developer partners",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.brex.com/guides/quickstart",
+      "quote": "This guide assumes you are a Brex customer with admin access to your dashboard.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "quote": "Please contact our developer support team to be issued a client ID and client secret for partner authentication.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.brex.com/docs/mcp",
+      "quote": "MCP clients that support OAuth will automatically initiate a browser-based authorization flow when you first connect.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.brex.com/docs/authentication/",
+      "quote": "Authorization: \"Bearer {{user_token}}\"",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.json",
+      "quote": "54 endpoints (apis.guru OpenAPI spec index for brex.io)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/brex",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 84 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 54 operations, securitySchemes ['api_key']",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "BREX",
+    "tools": 84,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/brex"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 54
+  },
+  "probe": {
+    "status": 404,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Two distinct credential paths. (1) Existing Brex customers: an account/card admin logs into dashboard.brex.com, accepts a developer API agreement, and self-issues a bearer token (90-day expiry, scoped) from Settings > Developer — no sandbox, no free signup for non-customers. (2) Third-party/partner integrations: OAuth2 (authorization_code and client_credentials grants) requires contacting Brex developer support to be issued a client ID/secret as a registered partner — this is the path relevant to building a general-purpose agent toolkit and is gated. Brex also publishes an official hosted MCP server (api.brex.com/mcp) supporting both OAuth (per-user, browser flow, RFC 7591 dynamic client registration) and bearer-token auth for non-OAuth MCP clients. API is REST/OpenAPI-based (~54 endpoints per apis.guru spec) covering cards, expenses, transactions, users, budgets, etc.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "partner_gate"
+  },
+  "pass2": {
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "partner_gate",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.329
+}

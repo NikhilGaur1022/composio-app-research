@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": {
+    "access": "admin_approval",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "blocker": "app_review",
+    "confidence": 0.72,
+    "docs_url": "https://developers.pinterest.com/docs/getting-started/introduction/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+        "quote": "For the key Authorization, enter the value Bearer {your_token}"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+        "quote": "Authorization: Basic {base64-encoded_string_made_of client_id:client_secret}"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "If you want to offer Pinterest capabilities to your users, we recommend upgrading to Standard access to get the full functionality that our API offers."
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.composio.dev/toolkits/pinterest",
+        "quote": "wraps_official_mcp: false"
+      },
+      {
+        "field": "verdict",
+        "url": "https://api.pinterest.com/v5/user_account",
+        "quote": "{\"code\":2,\"message\":\"Authentication failed.\",\"status\":\"failure\"}"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/cesteral/pinterest-mcp"
+    },
+    "notes": "Pinterest API v5 is REST, OAuth 2.0 only (Authorization Code, Client Credentials, Refresh Token grants); token exchange uses HTTP Basic with client_id/client_secret, API calls use Bearer token. New apps must first be approved for free Trial access (sandbox-only Pins/Boards, business-day approval per community reports), then separately apply and wait 1-4 weeks with a demo video for Standard access to unlock full functionality/rate limits — this two-stage review gates real production use, hence admin_approval/app_review rather than self-serve. No official Pinterest-published MCP server found; only community MCP servers (e.g. cesteral/pinterest-mcp, getmcpads pinterest-ads) exist per registry hints.",
+    "one_liner": "Pinterest is a visual discovery/social platform whose developer API (v5) lets apps manage boards, pins, ads, catalogs and user account data.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.22447240000000002,
+  "turns": 11,
+  "seconds": 66.1,
+  "is_error": false,
+  "error": null
+}

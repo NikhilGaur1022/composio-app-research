@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Enterprise ecommerce platform providing REST and GraphQL APIs for headless B2C Commerce.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "jwt"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "red",
+    "blocker": "partner_gate",
+    "docs_url": "https://developer.salesforce.com/docs/commerce/commerce-api/overview",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/custom-api-authentication.html",
+        "quote": "The Custom APIs DX endpoint uses an Account Manager OAuth 2.0 bearer token for authentication."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/references/b2c-commerce-ocapi/jwt.html",
+        "quote": "JWT | Open Commerce API authentication method"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/overview",
+        "quote": "Salesforce Commerce Cloud offers modern REST API family and GraphQL support for efficient queries."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/b2c-developer-sandboxes.html",
+        "quote": "Unless you are an ISV partner, it will not be possible to access a B2C commerce cloud sandbox. Requires purchasing sandbox credits."
+      }
+    ],
+    "confidence": 0.72,
+    "notes": "Salesforce Commerce Cloud requires partner status or enterprise customer relationship to obtain sandbox access. On-demand sandboxes require purchasing credits and ISV partnership. No free developer tier available. API supports OAuth2, bearer tokens, and JWT authentication. Both REST and GraphQL interfaces provided for extensive commerce operations."
+  },
+  "cost_usd": 0.10828879999999999,
+  "turns": 6,
+  "seconds": 65.4,
+  "is_error": false,
+  "error": null
+}

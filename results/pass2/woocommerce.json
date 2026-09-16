@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "other"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+        "quote": "The WooCommerce REST API uses a key system to control access."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+        "quote": "You may use HTTP Basic Auth by providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+        "quote": "You must use OAuth 1.0a 'one-legged' authentication to ensure REST API credentials cannot be intercepted."
+      },
+      {
+        "field": "access",
+        "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+        "quote": "To create or manage keys for a specific WordPress user: 1. Go to WooCommerce > Settings > Advanced > REST API. 2. Select Create an API key or Add Key."
+      },
+      {
+        "field": "access",
+        "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+        "quote": "The Consumer Secret is shown only once. Copy and store it in a safe place before leaving the page."
+      },
+      {
+        "field": "api_type",
+        "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+        "quote": "The WooCommerce REST API uses a key system to control access."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/AmitGurbani/mcp-server-woocommerce",
+        "quote": "WooCommerce is a registered trademark of Automattic Inc. This project is not affiliated with, endorsed by, or sponsored by Automattic Inc."
+      },
+      {
+        "field": "verdict",
+        "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+        "quote": "To create or manage keys for a specific WordPress user: 1. Go to WooCommerce > Settings > Advanced > REST API. 2. Select Create an API key or Add Key."
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/AmitGurbani/mcp-server-woocommerce"
+    },
+    "notes": "WooCommerce is a self-hosted WordPress plugin, not a hosted SaaS with a signup flow; \"self_serve_free\" means any store owner (on their own free WooCommerce install) can generate Consumer Key/Secret instantly from wp-admin with no vendor approval. Auth is via Consumer Key/Secret used either as HTTP Basic Auth (HTTPS) or OAuth 1.0a one-legged signing (non-HTTPS) — classified as api_key + basic + other since the schema has no oauth1 option. Endpoint count not stated in docs but covers ~20 resource groups (products, orders, customers, coupons, refunds, reports, webhooks, etc.) with CRUD+batch, consistent with \"medium\" breadth. No official vendor MCP server found; only community projects exist.",
+    "one_liner": "WooCommerce is an open-source WordPress ecommerce plugin exposing a REST API for managing products, orders, customers, and store data on self-hosted stores.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1733968,
+  "turns": 6,
+  "seconds": 54.0,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,84 @@
+{
+  "name": "Grain",
+  "checked": 7,
+  "grounded": 6,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Click here to generate a PAT.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Workspace API access is available on Business and Enterprise plans and requires admin access to generate.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Personal API access is available on Starter, Business, and Enterprise plans.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.grain.com/",
+      "quote": "https://api.grain.com",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://grain.com/release-note/06-18-2025",
+      "quote": "Grain's official MCP server",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.75
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.grain.com/mcp",
+      "quote": "Official Grain MCP Server: Quick Start Guide",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Personal API access is available on Starter, Business, and Enterprise plans.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.86,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

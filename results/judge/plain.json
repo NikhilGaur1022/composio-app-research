@@ -1,0 +1,104 @@
+{
+  "name": "Plain",
+  "checked": 9,
+  "grounded": 9,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.plain.com/docs/graphql/authentication",
+      "quote": "Authorization: Bearer plainApiKey_xxx",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.plain.com/docs/graphql/authentication",
+      "quote": "Click 'Add API key' and select the permissions you need.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.plain.com/pricing",
+      "quote": "7 day free trial",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.plain.com/pricing",
+      "quote": "No credit card required",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.plain.com/docs/graphql/authentication",
+      "quote": "Go to Settings → Machine Users and click + Add Machine User",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.plain.com/changelog/plain-mcp",
+      "quote": "30 tools across threads, customers, tenants, help center articles, and workspace data",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.plain.com/changelog/plain-mcp",
+      "quote": "You can now connect AI tools like Claude, ChatGPT, and Cursor directly to your Plain workspace using the Plain MCP server.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.plain.com/changelog/plain-mcp",
+      "quote": "You authenticate with your existing Plain account, so the MCP server has the same permissions as your user.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.plain.com/docs/graphql/authentication",
+      "quote": "Each API key carries its own fine-grained permissions",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Systeme.io is a funnel builder and marketing automation platform for creating sales funnels, email campaigns, and managing contacts.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://developer.systeme.io/reference/api",
+    "mcp": {
+      "status": "unknown"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+        "quote": "attach your API key to the X-API-Key header of each request"
+      },
+      {
+        "field": "access",
+        "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+        "quote": "To create a public API key, click your profile picture, select Settings, and scroll down to MCP & API keys. You can create up to 3 API keys per account."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.systeme.io/reference/api",
+        "quote": "RESTful API that enables programmatic access to selected features including contact and tag management"
+      },
+      {
+        "field": "verdict",
+        "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+        "quote": "Public API endpoints for contacts, tags, custom fields, newsletters, campaigns, and funnels with self-serve key creation"
+      }
+    ],
+    "notes": "Public API supports contacts, tags, custom fields, newsletters, campaigns, and funnels management. API uses cursor-based pagination. Users can create up to 3 API keys per account. Platform integrates with Make.com and other automation tools."
+  },
+  "cost_usd": 0.1177862,
+  "turns": 7,
+  "seconds": 46.8,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,151 @@
+{
+  "id": 6,
+  "name": "Podio",
+  "category": "CRM and Sales",
+  "hint": "podio.com",
+  "one_liner": "Podio is a customizable work-management/CRM platform (owned by Citrix/Progress) with a REST API covering apps, items, tasks, and workflows.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://developers.podio.com/authentication",
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.89,
+  "agreement": 0.96,
+  "grounding_rate": 0.88,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "oauth2"
+      ],
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass2": "large",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "pass2": "none",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.podio.com/authentication",
+      "quote": "Your application is assigned a unique identifier, called 'Client ID', together with a 'Client Secret'. You will need both of these to authenticate.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.podio.com/authentication",
+      "quote": "Authorization: OAuth2 ACCESS_TOKEN",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.podio.com/api-key",
+      "quote": "It's easy to get one or more API keys for accessing your Podio data. You just have to sign in or sign up with Podio, and go to the API key tab in your settings.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.podio.com/",
+      "quote": "you should review our Terms of API use and then grab an API key for each app you want to build from your account settings page.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.podio.com/",
+      "quote": "The Podio API is a complete programmable interface to all Podio functionality",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.podio.com/",
+      "quote": "the entire Podio frontend is built on the API",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.podio.com/",
+      "quote": "The Podio API is a complete programmable interface to all Podio functionality",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://api.podio.com/org/",
+      "quote": "Bearer realm=\"podio\", error=\"invalid_request\"",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.podio.com/org/",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer realm=\"podio\", error=\"invalid_request\"; body: {\"error\":\"unauthorized\",\"error_detail\":null,\"error_description\":\"invalid_request\",\"error_parameters\":{},\"error_propagate\":false,\"request\":{\"url\":\"/org/\",\"method\":\"GET\",\"query_string\":\"\"}}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Bearer realm=\"podio\", error=\"invalid_request\"",
+    "inferred": "bearer_token"
+  },
+  "notes": "Podio API uses OAuth2 exclusively (server-side, client-side, username/password, and app-auth flows are all OAuth2 grant variants); the docs call the client_id/client_secret pair an 'API key' but it functions as OAuth2 app credentials, not a separate api_key header scheme. Any free Podio account can generate these instantly via account settings with no approval step, so access is self-serve. API is described as covering the entire product surface (items, apps, tasks, files, contacts, hooks, etc.), suggesting large breadth, though no exact endpoint count was found. No MCP server (official or community) found. Some third-party chatter about Podio's long-term future exists but no official deprecation/sunset notice was found; docs and API are live.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.78
+  },
+  "cost_usd": 0.265
+}

@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Stripe is a payments and financial infrastructure platform offering a REST API for payments, billing, Connect marketplaces, issuing, and treasury.",
+    "auth_methods": [
+      "basic",
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://docs.stripe.com/api",
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.stripe.com"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.stripe.com/api/authentication",
+        "quote": "The Stripe API authenticates requests using HTTP Basic Auth. Provide your API key as the basic auth username value. You don't need to provide a password."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.stripe.com/api/authentication",
+        "quote": "If you need to authenticate using bearer auth (for example, for a cross-origin request), use `-H \"Authorization: Bearer ,[object Object],\"` instead of `-u ,[object Object]`."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.stripe.com/mcp",
+        "quote": "Stripe's MCP server uses OAuth to authorise clients according to the MCP specification"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.stripe.com/keys",
+        "quote": "When you sign up for a Stripe account, we create three types of API keys for you"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.stripe.com/keys",
+        "quote": "Sandbox keys start with `pk_test_` for publishable keys, `rk_test_` for restricted keys and `sk_test_` for secret keys."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.stripe.com/api",
+        "quote": "The Stripe API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://api.apis.guru/v2/specs/stripe.com/2022-11-15/openapi.json",
+        "quote": "446 endpoints (apis.guru catalog entry for stripe.com OpenAPI spec)"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.stripe.com/mcp",
+        "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API and search Stripe's knowledge base, including documentation and support articles."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.stripe.com/keys",
+        "quote": "Build and test: Create or select a sandbox and use its test keys."
+      }
+    ],
+    "confidence": 0.93,
+    "notes": "Primary auth for the REST API is HTTP Basic Auth with the API key as username (bearer auth also explicitly supported as an alternative). OAuth2 applies to the official hosted MCP server (mcp.stripe.com) and to Stripe Connect platform flows; it is not the primary REST API auth mechanism. Signup is fully self-serve and free (sandbox/test-mode keys issued immediately on account creation, no approval needed for test mode). API breadth is large (446 endpoints per apis.guru OpenAPI catalog; docs.stripe.com/api lists dozens of resource families including Core, Payments, Billing, Connect, Issuing, Treasury, Tax). MCP is officially vendor-published and hosted at mcp.stripe.com with documented setup for Claude Code, Cursor, VS Code, ChatGPT, and Codex."
+  },
+  "cost_usd": 0.2259132,
+  "turns": 8,
+  "seconds": 49.6,
+  "is_error": false,
+  "error": null
+}

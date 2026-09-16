@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Bright Data is a web data collection platform providing residential proxies, datacenter proxies, SERP API, and web scraping services.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://docs.brightdata.com",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.78,
+    "notes": "Bright Data offers automatic free trial (14-30 days) and recurring 5,000 credits/month free tier for Web Unlocker, SERP API, Web Scraper, and Scraper Studio. Self-serve signup with immediate API access. Usage-based pricing for additional credits.",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "An API key is a secure hashed token used to authenticate with Bright Data API, with a default key created automatically upon account creation."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "Native Access - Authenticate and interact with the Bright Data platform using proxy protocol username and password."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.brightdata.com/api-reference/authentication",
+        "quote": "the CLI implements four distinct authentication methods: Loopback OAuth2 for local machines, Device Flow optimized for headless environments, Direct API Key"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.brightdata.com/general/account/billing-and-pricing/faqs",
+        "quote": "Everyone who signs up to Bright Data automatically gets a free trial, which can be used for all Bright Data products."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.brightdata.com/general/account/billing-and-pricing/faqs",
+        "quote": "Every new account also gets a recurring free tier of 5,000 credits per month for the Web Unlocker API, SERP API, Web Scraper API and Scraper Studio"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.brightdata.com/api-reference/postman-collection",
+        "quote": "REST endpoints expose session inventory (GET /browser_sessions) for observability and lifecycle inspection"
+      }
+    ]
+  },
+  "cost_usd": 0.11385219999999999,
+  "turns": 6,
+  "seconds": 42.1,
+  "is_error": false,
+  "error": null
+}

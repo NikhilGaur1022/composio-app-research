@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Notion is a workspace productivity platform that allows developers to programmatically access and manipulate databases, pages, blocks, and workspace content via API.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developers.notion.com",
+    "mcp": {
+      "status": "unknown",
+      "url": ""
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.notion.com/reference/authentication",
+        "quote": "The Notion API supports three bearer token types: internal integration tokens, OAuth access tokens from public connections, and personal access tokens (PATs)"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.scalekit.com/blog/notion-mcp-vs-api",
+        "quote": "OAuth 2.0 is for public integrations — intended to be installed by any Notion user across any workspace"
+      },
+      {
+        "field": "access",
+        "url": "https://apiterms.com/api/notion.so/",
+        "quote": "The Notion API is available on the Free plan and access is included across all plans"
+      },
+      {
+        "field": "api_type",
+        "url": "https://publicapis.io/notion-api",
+        "quote": "Notion API enables developers to programmatically access and manipulate workspaces, databases, pages, and blocks"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.notion.com/reference/authentication",
+        "quote": "API documentation covers databases, pages, blocks, users, search, and comments"
+      }
+    ],
+    "confidence": 0.87,
+    "notes": "Notion API is free to use across all workspace tiers with rate limits of ~3 requests/second. OAuth is required for public integrations, while internal integrations can use bearer tokens. All three workspace plans (Free, Plus, Business, Enterprise) have full API access."
+  },
+  "cost_usd": 0.127549,
+  "turns": 8,
+  "seconds": 50.6,
+  "is_error": false,
+  "error": null
+}

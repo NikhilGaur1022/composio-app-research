@@ -1,0 +1,178 @@
+{
+  "id": 92,
+  "name": "Otter AI",
+  "category": "AI, Research and Media-native",
+  "hint": "help.otter.ai (MCP server)",
+  "one_liner": "Otter.ai is an AI meeting assistant that records, transcribes, and summarizes conversations, exposing an Enterprise-gated REST API and an official OAuth MCP server for querying meeting transcripts/insights.",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "other"
+  ],
+  "access": "admin_approval",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+  "mcp": {
+    "status": "official",
+    "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+  },
+  "verdict": "yellow",
+  "score": 75,
+  "blocker": "enterprise_only",
+  "model_verdict": "yellow",
+  "confidence": 0.64,
+  "agreement": 0.89,
+  "grounding_rate": 0.3,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "only 30% of quotes grounded in cited pages"
+  ],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs admin_approval)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "other"
+      ],
+      "pass2": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass2": "admin_approval",
+      "pass1": "paid_plan"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass2": "small",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "composio_wraps_mcp": "official",
+      "pass2": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "quote": "OAuth-authenticated with granular permissions.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "quote": "Interested in Otter for your enterprise? Request a demo to see how the MCP Server can transform your team's workflow.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "one_liner",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "quote": "Otter's MCP Server connects your meeting data directly to AI tools like Claude and ChatGPT, bringing your meeting intelligence into your everyday AI workflows.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "All API requests require authentication using Bearer token authentication.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "This content is available for the Otter Enterprise plan and may require admin permissions.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "If you do not see this feature for your workspace, contact your Otter account manager.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "Authorization: Bearer YOUR_API_KEY",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "Enterprise plan users are currently limited to 10 requests / second.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "quote": "Otter's MCP Server",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "This content is available for the Otter Enterprise plan and may require admin permissions.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/otter_ai_mcp",
+      "quote": "Composio catalog: auth ['DCR_OAUTH'], 3 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "OTTER_AI_MCP",
+    "tools": 3,
+    "auth": [
+      "other"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/otter_ai_mcp"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 200,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Otter's REST/webhook Public API (Bearer-token API keys, ~7 documented endpoints across channel/conversation/workspace resources plus webhooks) is restricted to Enterprise-plan workspaces and may require admin permissions to enable; workspaces that don't see the Developer tab must contact their Otter account manager. Otter also runs an official OAuth-authenticated remote MCP server for meeting-transcript search/summarization, again positioned as an enterprise offering (\"Request a demo\"). Could not directly fetch the help.otter.ai pages (403 to normal WebFetch; used a read-proxy) so treat exact endpoint counts as approximate.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": {
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "yellow",
+    "blocker": "enterprise_only",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.392
+}

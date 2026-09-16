@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Open-source WordPress ecommerce plugin with REST API for managing products, orders, and customers.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.88,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+        "quote": "OAuth Authentication: WooCommerce follows the spec for simple OAuth 1.0a authentication. API Key Authentication: Pre-generated keys can be used to authenticate use of the REST API endpoints."
+      },
+      {
+        "field": "access",
+        "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+        "quote": "WooCommerce is a free, open-source commerce platform for WordPress. API credentials can be self-served directly from your WooCommerce admin panel without requiring any external service or payment."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+        "quote": "WooCommerce 2.6+ is fully integrated with the WordPress REST API, allowing WC data to be created, read, updated, and deleted using requests in JSON format."
+      },
+      {
+        "field": "verdict",
+        "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+        "quote": "To generate your WooCommerce API credentials, log in to your WordPress dashboard. New keys can be generated either through the WordPress admin interface or auto-generated through an endpoint."
+      }
+    ],
+    "notes": "WooCommerce REST API is fully self-serve with credentials generated in admin panel. Core API is REST (v3); GraphQL support available via optional WooGraphQL extension. API breadth estimated at medium range based on common endpoints (products, orders, customers, variations). No official MCP server."
+  },
+  "cost_usd": 0.12230389999999998,
+  "turns": 8,
+  "seconds": 33.0,
+  "is_error": false,
+  "error": null
+}

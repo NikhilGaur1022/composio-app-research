@@ -1,0 +1,85 @@
+{
+  "id": 49,
+  "name": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "hint": "developer-docs.amazon.com/sp-api",
+  "one_liner": "REST-based API for sellers and vendors to access their Amazon business data including orders, shipments, payments, and inventory",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "admin_approval",
+  "api_type": "rest",
+  "api_breadth": "unknown",
+  "docs_url": "https://developer-docs.amazon.com/sp-api/",
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "verdict": "yellow",
+  "score": 67,
+  "blocker": "app_review",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "admin_approval"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass1": "unknown"
+    },
+    "mcp": {}
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://sellingpartnerapi-na.amazon.com/orders/v0/orders",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: {   \"errors\": [     {       \"code\": \"Unauthorized\",       \"message\": \"Access to requested resource is denied.\",       \"details\": \"Access token is missing in the request header.\"     }   ] }",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": "bearer_token"
+  },
+  "notes": "Sellers using the API for their own business operations have free access. Third-party public developers must pass app review and architecture review with SP-API Solutions Architecture team. Private developers can use self-authorization. API breadth unknown from search results.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "app_review"
+  },
+  "pass2": null,
+  "cost_usd": 0.118
+}

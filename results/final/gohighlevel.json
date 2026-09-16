@@ -1,0 +1,101 @@
+{
+  "id": 34,
+  "name": "GoHighLevel",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "highlevel.stoplight.io",
+  "one_liner": "GoHighLevel is a sales and marketing platform providing CRM, email, SMS, landing pages, and workflow automation with REST API access for integrations.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "paid_plan",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://highlevel.stoplight.io/docs/integrations/",
+  "mcp": {
+    "status": "none",
+    "url": ""
+  },
+  "verdict": "yellow",
+  "score": 75,
+  "blocker": "paid_only",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "paid_plan"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/highlevel",
+      "quote": "Composio catalog: auth ['OAUTH2'], 218 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://services.leadconnectorhq.com/contacts/",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"statusCode\":401,\"message\":\"version header was not found.\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "HIGHLEVEL",
+    "tools": 218,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/highlevel"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "GoHighLevel is buildable as an agent toolkit with comprehensive API coverage across contacts, opportunities, calendars, workflows, conversations, and payments. Main limitation is paid subscription requirement ($297+/month minimum). OAuth 2.0 and API keys both documented and production-ready. Access tokens expire every 24 hours requiring refresh token management.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": null,
+  "cost_usd": 0.11
+}

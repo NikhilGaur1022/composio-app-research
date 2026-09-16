@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "MongoDB Atlas is a fully managed cloud database platform providing REST APIs for database cluster administration, configuration, and lifecycle management.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/authentication",
+        "quote": "The Atlas Administration API supports OAuth2 Service Accounts and HTTP Digest-based API keys. Service accounts are the recommended authentication method."
+      },
+      {
+        "field": "access",
+        "url": "https://www.mongodb.com/pricing",
+        "quote": "Free tier (M0) includes 512 MB storage and is free forever with self-serve signup available."
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/",
+        "quote": "MongoDB Atlas Administration API allows developers to manage all components in MongoDB Atlas using REST endpoints."
+      }
+    ],
+    "confidence": 0.82,
+    "notes": "MongoDB Atlas free tier (M0) provides self-serve API access. Atlas Admin API v2 is the primary REST API for programmatic access. OAuth2 Service Accounts are recommended over legacy API keys. App Services tier includes 1M free API requests monthly. API breadth estimated as medium based on typical admin API scope covering projects, clusters, users, billing, and monitoring resources."
+  },
+  "cost_usd": 0.1039274,
+  "turns": 6,
+  "seconds": 25.7,
+  "is_error": false,
+  "error": null
+}

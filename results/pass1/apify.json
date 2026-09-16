@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Web scraping, automation, and data extraction platform with pre-built actors and scrapers for social media, search engines, maps, and e-commerce sites",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://docs.apify.com/api",
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.apify.com/integrations/mcp"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.apify.com/api/v2/getting-started",
+        "quote": "Apify supports two main authentication methods: OAuth 2.0 for allowing users to authorize integrations without sharing credentials, and API token generated from account settings"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.apify.com/platform/integrations/api",
+        "quote": "Apify's Free plan is $0/month with $5 in monthly platform credits, no credit card required"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.apify.com/integrations/mcp",
+        "quote": "The Apify MCP server enables AI agents to extract data from social media, search engines, maps, e-commerce sites using thousands of ready-made scrapers and crawlers"
+      }
+    ],
+    "notes": "Apify offers a REST API with OAuth and bearer token authentication, a free tier with $5 monthly credits, and an official MCP server maintained by Apify at mcp.apify.com for direct AI agent integration."
+  },
+  "cost_usd": 0.10649689999999999,
+  "turns": 6,
+  "seconds": 31.8,
+  "is_error": false,
+  "error": null
+}

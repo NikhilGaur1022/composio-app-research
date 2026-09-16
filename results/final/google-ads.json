@@ -1,0 +1,102 @@
+{
+  "id": 31,
+  "name": "Google Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.google.com/google-ads",
+  "one_liner": "Google Ads API enables programmatic access to manage Google Ads accounts, campaigns, and advertising operations",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "admin_approval",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developers.google.com/google-ads/api",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/irinabuht12-oss/google-meta-ads-ga4-mcp"
+  },
+  "verdict": "yellow",
+  "score": 73,
+  "blocker": "app_review",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.89,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "admin_approval"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "small",
+      "composio_tools": "small",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/googleads",
+      "quote": "Composio catalog: auth ['OAUTH2'], 28 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/google.com/v3/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 23 operations, securitySchemes []",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "GOOGLEADS",
+    "tools": 28,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/googleads"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 23
+  },
+  "probe": {
+    "status": 404,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Google Ads API requires OAuth2 authentication and a developer token. Free testing access available via Test Account Access, but production use (Basic/Standard access) requires application approval. API available via REST and gRPC with client libraries in multiple languages. No MCP server identified. Approval requirement classifies as yellow.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "app_review"
+  },
+  "pass2": null,
+  "cost_usd": 0.114
+}

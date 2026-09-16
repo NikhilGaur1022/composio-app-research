@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Netlify is a web hosting and serverless platform for deploying static sites and applications with CI/CD, forms, and serverless functions.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "Authorization: Bearer <YOUR_PERSONAL_ACCESS_TOKEN>"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "If you build or use an application that accesses the Netlify API as an OAuth app"
+      },
+      {
+        "field": "access",
+        "url": "https://www.netlify.com/blog/introducing-netlify-free-plan/",
+        "quote": "Netlify Free plan is free forever with no financial risk"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+        "quote": "The base URL for API requests is https://api.netlify.com/api/v1"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Free tier includes full API access. Personal access tokens and OAuth applications both supported. REST API is primary interface with endpoints for sites, deploys, hooks, and more."
+  },
+  "cost_usd": 0.13625869999999998,
+  "turns": 6,
+  "seconds": 67.8,
+  "is_error": false,
+  "error": null
+}

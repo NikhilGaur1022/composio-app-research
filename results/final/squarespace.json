@@ -1,0 +1,89 @@
+{
+  "id": 46,
+  "name": "Squarespace",
+  "category": "Ecommerce",
+  "hint": "developers.squarespace.com",
+  "one_liner": "Website and e-commerce builder platform providing REST APIs for managing products, orders, and inventory.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "paid_plan",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developers.squarespace.com/commerce-apis/",
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "verdict": "yellow",
+  "score": 68,
+  "blocker": "paid_only",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "paid_plan"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass1": "small"
+    },
+    "mcp": {
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://api.squarespace.com/1.0/commerce/orders",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {   \"type\" : \"AUTHORIZATION_ERROR\",   \"subtype\" : null,   \"message\" : \"You are not authorized to do that.\",   \"details\" : null,   \"contextId\" : \"SLEAPLOWDEYSHEISWUST\" }",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "API key access requires paid Advanced plan ($52/mo). OAuth integration requires developer approval and is gated for marketplace extensions. Commerce API is limited to commerce operations (orders, products, inventory). No public MCP server available.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": null,
+  "cost_usd": 0.115
+}

@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Version control and collaboration platform providing REST and GraphQL APIs for repository, issue, pull request, and workflow automation.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://docs.github.com/en/rest",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/modelcontextprotocol/servers"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "you can create a personal access token, generate a token with a GitHub App, or use the built-in GITHUB_TOKEN"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.github.com/en/graphql/guides/forming-calls-with-graphql",
+        "quote": "Add an Authorization header: Authorization: Bearer TOKEN (replace TOKEN with your GitHub personal access token)"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "quote": "If you want to use the GitHub REST API for personal use, you can create a personal access token"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.github.com/en/graphql/overview/about-the-graphql-api",
+        "quote": "GitHub provides both REST and GraphQL APIs for accessing repository data and performing operations"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/modelcontextprotocol/servers",
+        "quote": "Official GitHub MCP server implementation for Model Context Protocol"
+      }
+    ],
+    "confidence": 0.91,
+    "notes": "GitHub offers free tier access with self-serve credentials for both REST and GraphQL APIs. REST API has hundreds of endpoints; GraphQL provides flexible query access to the same data. Personal access tokens and OAuth are primary documented methods. Free users can authenticate and make API calls with standard rate limits; higher limits available with paid accounts. Official GitHub MCP server enables AI-powered repository and workflow automation."
+  },
+  "cost_usd": 0.1214435,
+  "turns": 6,
+  "seconds": 54.8,
+  "is_error": false,
+  "error": null
+}

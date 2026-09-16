@@ -1,0 +1,98 @@
+{
+  "id": 44,
+  "name": "Salesforce Commerce Cloud",
+  "category": "Ecommerce",
+  "hint": "developer.salesforce.com/docs/commerce",
+  "one_liner": "Enterprise ecommerce platform providing REST and GraphQL APIs for headless B2C Commerce.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "partner_gated",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developer.salesforce.com/docs/commerce/commerce-api/overview",
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "verdict": "red",
+  "score": 53,
+  "blocker": "partner_gate",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.72,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries",
+    "gated/no-API finding with weak grounding needs a human eye",
+    "family check: Salesforce products use oauth2, found ['api_key']"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "apis_guru_spec": [
+        "api_key"
+      ],
+      "pass1": [
+        "bearer_token",
+        "jwt",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "partner_gated"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "small",
+      "pass1": "large"
+    },
+    "mcp": {
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/salesforce.local/einstein/2.0.1/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 45 operations, securitySchemes ['bearer_token']",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 45
+  },
+  "probe": {
+    "status": 405,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Salesforce Commerce Cloud requires partner status or enterprise customer relationship to obtain sandbox access. On-demand sandboxes require purchasing credits and ISV partnership. No free developer tier available. API supports OAuth2, bearer tokens, and JWT authentication. Both REST and GraphQL interfaces provided for extensive commerce operations.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "jwt"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "red",
+    "blocker": "partner_gate"
+  },
+  "pass2": null,
+  "cost_usd": 0.108
+}

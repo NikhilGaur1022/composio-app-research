@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_trial",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.62,
+    "docs_url": "https://developers.gorgias.com/reference/introduction",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.gorgias.com/docs/authentication",
+        "quote": "Using OAuth2 is mandatory for public apps."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.gorgias.com/docs/authentication",
+        "quote": "perform requests directly from the API Reference using your API keys"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.gorgias.com/reference/introduction",
+        "quote": "uses standard HTTP response codes, authentication, and verbs"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.gorgias.com/llms.txt",
+        "quote": "Account, Customers, Custom Fields, Events, Files, Integrations, Jobs, Macros, Metric Cards, Rules, Satisfaction Surveys, Search, Statistics, Tags, Teams, Tickets, Ticket Messages, Users, Views, Voice Calls, Widgets"
+      },
+      {
+        "field": "access",
+        "url": "https://www.gorgias.com/signup?ref-position=other",
+        "quote": "Get Started with Free Trial"
+      },
+      {
+        "field": "access",
+        "url": "https://www.gorgias.com/pricing",
+        "quote": "Developer Docs"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/mattcoatsworth/Gorgias-MCP-Server",
+        "quote": "Gorgias-MCP-Server (4★)"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/mattcoatsworth/Gorgias-MCP-Server"
+    },
+    "notes": "Private-app API keys (HTTP Basic auth: email + API key) are obtainable directly from any Gorgias account (trial or paid) via account settings, no app review needed — this is the self-serve path most agent toolkits would use. Public/marketplace apps additionally require OAuth2 and are implied to need a listing process, but no explicit review/approval page was found in this pass (would need to check developers.gorgias.com/docs/set-up-oauth2-app-store for confirmation). Pricing page did not explicitly state which tiers include API access; rate limits (40-80 req/20s per third-party source) suggest it's broadly available rather than gated to a specific paid tier. No official vendor-published MCP server found; several community GitHub MCP servers and a Composio-wrapped toolkit (32 tools, api_key+oauth2) exist.",
+    "one_liner": "Gorgias is an e-commerce-focused helpdesk/support platform with a REST API for tickets, customers, macros, and integrations.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.199637,
+  "turns": 11,
+  "seconds": 61.0,
+  "is_error": false,
+  "error": null
+}

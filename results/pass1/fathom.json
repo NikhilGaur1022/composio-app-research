@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "result": null,
+  "cost_usd": 0.10999039999999999,
+  "turns": 6,
+  "seconds": 35.2,
+  "is_error": true,
+  "error": "no structured output"
+}

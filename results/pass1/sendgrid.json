@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Email delivery and marketing platform with REST API for sending transactional emails, managing campaigns, and monitoring email statistics.",
+    "auth_methods": [
+      "bearer_token",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://www.twilio.com/docs/sendgrid/api-reference",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication",
+        "quote": "Twilio SendGrid supports API keys delivered via Bearer token or Basic authentication"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys",
+        "quote": "Bearer Token Authentication: API keys can be delivered via Bearer token, which is the recommended approach for the v3 Web API"
+      },
+      {
+        "field": "access",
+        "url": "https://www.getaiperks.com/en/ai/sendgrid-pricing-free-credits",
+        "quote": "The free tier includes 100 emails per day with no credit card required and no expiration date"
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+        "quote": "Free tier of 100 emails per day includes basic API access, SMTP relay, and 1 sender identity"
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+        "quote": "The SendGrid v3 Web API provides a REST interface to send email at scale"
+      },
+      {
+        "field": "verdict",
+        "url": "https://sendgrid.com/en-us/solutions/email-api",
+        "quote": "Sign up for SendGrid and start sending emails with the free tier - 100 emails per day, no credit card required"
+      }
+    ],
+    "notes": "SendGrid offers a permanently free tier (100 emails/day) with self-serve API key generation. The v3 REST API covers email sending, templates, campaigns, contacts, suppression, statistics, and webhooks. No official MCP server identified."
+  },
+  "cost_usd": 0.1211793,
+  "turns": 8,
+  "seconds": 44.0,
+  "is_error": false,
+  "error": null
+}

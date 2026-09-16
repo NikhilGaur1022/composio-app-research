@@ -1,0 +1,67 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://developers.podio.com/authentication",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.podio.com/authentication",
+        "quote": "Your application is assigned a unique identifier, called 'Client ID', together with a 'Client Secret'. You will need both of these to authenticate."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.podio.com/authentication",
+        "quote": "Authorization: OAuth2 ACCESS_TOKEN"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.podio.com/api-key",
+        "quote": "It's easy to get one or more API keys for accessing your Podio data. You just have to sign in or sign up with Podio, and go to the API key tab in your settings."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.podio.com/",
+        "quote": "you should review our Terms of API use and then grab an API key for each app you want to build from your account settings page."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.podio.com/",
+        "quote": "The Podio API is a complete programmable interface to all Podio functionality"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.podio.com/",
+        "quote": "the entire Podio frontend is built on the API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.podio.com/",
+        "quote": "The Podio API is a complete programmable interface to all Podio functionality"
+      },
+      {
+        "field": "verdict",
+        "url": "https://api.podio.com/org/",
+        "quote": "Bearer realm=\"podio\", error=\"invalid_request\""
+      }
+    ],
+    "mcp": {
+      "status": "none"
+    },
+    "notes": "Podio API uses OAuth2 exclusively (server-side, client-side, username/password, and app-auth flows are all OAuth2 grant variants); the docs call the client_id/client_secret pair an 'API key' but it functions as OAuth2 app credentials, not a separate api_key header scheme. Any free Podio account can generate these instantly via account settings with no approval step, so access is self-serve. API is described as covering the entire product surface (items, apps, tasks, files, contacts, hooks, etc.), suggesting large breadth, though no exact endpoint count was found. No MCP server (official or community) found. Some third-party chatter about Podio's long-term future exists but no official deprecation/sunset notice was found; docs and API are live.",
+    "one_liner": "Podio is a customizable work-management/CRM platform (owned by Citrix/Progress) with a REST API covering apps, items, tasks, and workflows.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.15914620000000002,
+  "turns": 8,
+  "seconds": 97.7,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,84 @@
+{
+  "name": "Gorgias",
+  "checked": 7,
+  "grounded": 4,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.gorgias.com/docs/authentication",
+      "quote": "Using OAuth2 is mandatory for public apps.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.gorgias.com/docs/authentication",
+      "quote": "perform requests directly from the API Reference using your API keys",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.gorgias.com/reference/introduction",
+      "quote": "uses standard HTTP response codes, authentication, and verbs",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.gorgias.com/llms.txt",
+      "quote": "Account, Customers, Custom Fields, Events, Files, Integrations, Jobs, Macros, Metric Cards, Rules, Satisfaction Surveys, Search, Statistics, Tags, Teams, Tickets, Ticket Messages, Users, Views, Voice ",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.372
+    },
+    {
+      "field": "access",
+      "url": "https://www.gorgias.com/signup?ref-position=other",
+      "quote": "Get Started with Free Trial",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.gorgias.com/pricing",
+      "quote": "Developer Docs",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/mattcoatsworth/Gorgias-MCP-Server",
+      "quote": "Gorgias-MCP-Server (4★)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.613
+    }
+  ],
+  "grounding_rate": 0.57,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
+}

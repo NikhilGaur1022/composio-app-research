@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "REST-based API for sellers and vendors to access their Amazon business data including orders, shipments, payments, and inventory",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developer-docs.amazon.com/sp-api/",
+    "mcp": {
+      "status": "unknown"
+    },
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications",
+        "quote": "The authorization model for the Selling Partner API is based on Login with Amazon, Amazon's implementation of OAuth 2.0"
+      },
+      {
+        "field": "access",
+        "url": "https://developer-docs.amazon.com/sp-api/docs/authorize-public-applications",
+        "quote": "All developers who want to build a publicly available application with restricted SP-API roles must go through an architecture review"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer-docs.amazon.com/sp-api/",
+        "quote": "The Selling Partner API (SP-API) is a REST-based API that helps sellers and vendors access their data on orders, shipments, payments, inventory"
+      }
+    ],
+    "confidence": 0.75,
+    "notes": "Sellers using the API for their own business operations have free access. Third-party public developers must pass app review and architecture review with SP-API Solutions Architecture team. Private developers can use self-authorization. API breadth unknown from search results."
+  },
+  "cost_usd": 0.1184519,
+  "turns": 7,
+  "seconds": 35.7,
+  "is_error": false,
+  "error": null
+}

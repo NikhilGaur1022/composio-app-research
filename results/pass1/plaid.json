@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Plaid is a fintech API platform that enables applications to connect with users' financial institutions to access and verify banking data.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://plaid.com/docs/api/",
+    "mcp": {
+      "status": "official",
+      "url": "https://plaid.com/docs/resources/mcp/"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://plaid.com/docs/api/oauth/",
+        "quote": "OAuth 2.0 and OIDC for authentication, which lets Plaid verify user identity and obtain a stable user identifier through the ID token's sub field"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://plaid.com/docs/api/",
+        "quote": "The client_id is required and may be provided either in the PLAID-CLIENT-ID header or as part of a request body"
+      },
+      {
+        "field": "access",
+        "url": "https://plaid.com/docs/api/",
+        "quote": "To gain access to the Plaid API, create an account on the Plaid Dashboard. Once you've completed the signup process and acknowledged our terms, we'll provide a live client_id and secret via the Dashboard."
+      },
+      {
+        "field": "access",
+        "url": "https://costbench.com/software/api-management/plaid/free-plan/",
+        "quote": "Plaid offers free starter access on signup, but it's restricted to 200 API calls per product with live data. Production use requires paid plans with per-API-call pricing"
+      },
+      {
+        "field": "api_type",
+        "url": "https://plaid.com/docs/api/",
+        "quote": "The Plaid API is JSON over HTTP. Requests are POST requests, and responses are JSON"
+      },
+      {
+        "field": "mcp",
+        "url": "https://plaid.com/docs/resources/mcp/",
+        "quote": "Local MCP Server runs as a subprocess of an MCP client (Claude Desktop, Cursor, VS Code, Zed, etc.) and provides helpful utilities including mock data generation, documentation search"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Plaid has self-serve signup with a limited free sandbox tier (200 calls/product), but production API access requires a paid subscription. The exact endpoint count is not publicly disclosed but likely falls in the medium range given the breadth of financial data products. OAuth2 is the preferred authentication method. Official MCP server available for AI assistant integration."
+  },
+  "cost_usd": 0.22265005,
+  "turns": 5,
+  "seconds": 67.2,
+  "is_error": false,
+  "error": null
+}

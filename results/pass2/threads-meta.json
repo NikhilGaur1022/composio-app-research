@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "admin_approval",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "app_review",
+    "confidence": 0.78,
+    "docs_url": "https://developers.facebook.com/docs/threads",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.facebook.com/docs/threads/overview",
+        "quote": "https://graph.threads.net/v1.0/<THREADS_USER_ID>/threads_publishing_limit?fields=quota_usage,config&access_token=<ACCESS_TOKEN>"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "In order for app users without a role on your app to be able to grant your app these permissions, each permission must first be approved through the App Review process, and your app must be published."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "create an app and pick the Threads Use Case"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.facebook.com/docs/threads/overview",
+        "quote": "The Threads API can be accessed by either graph.threads.com or graph.threads.net."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.facebook.com/docs/threads/reference",
+        "quote": "Refer to each endpoint's reference document for usage requirements."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Digital-Threads/token-pilot",
+        "quote": "io.github.Digital-Threads/token-pilot"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.facebook.com/docs/threads/get-started",
+        "quote": "each permission must first be approved through the App Review process, and your app must be published"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/Digital-Threads/token-pilot"
+    },
+    "notes": "Meta's official Threads API (graph.threads.net / graph.threads.com), REST-style HTTP endpoints (GET/POST) under the Graph API family, distinct from Meta's older Instagram/Facebook Graph API but structurally identical. Free Meta developer account + app creation gets a developer immediate self-testing access via the \"Threads Tester\" role, but any permission used against real (non-tester) users requires Meta App Review and app publishing, which is a gated approval process, not pure self-serve. Only 9 documented endpoint groups (Publishing, Media Retrieval, Reply Management, User, Locations, Location Search, Insights, oEmbed, Debug) — small breadth. No official Meta-published MCP server found; only a community project (token-pilot) surfaced in registry hints.",
+    "one_liner": "Threads API is Meta's official REST-style HTTP API (graph.threads.net) letting developers publish posts, manage replies, and pull insights/profile data for the Threads social app.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.1810034,
+  "turns": 8,
+  "seconds": 68.1,
+  "is_error": false,
+  "error": null
+}

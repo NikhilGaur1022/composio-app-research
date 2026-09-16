@@ -1,0 +1,90 @@
+{
+  "id": 68,
+  "name": "MongoDB Atlas",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "mongodb.com/docs/atlas/api",
+  "one_liner": "MongoDB Atlas is a fully managed cloud database platform providing REST APIs for database cluster administration, configuration, and lifecycle management.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server"
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass1": "medium"
+    },
+    "mcp": {
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://cloud.mongodb.com/api/atlas/v2/groups",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Digest realm=\"MMS Public API\", domain=\"\", nonce=\"u1ON62Xgtyu5vP80ATz5oB9LoRpnPtnv\", algorithm=MD5, qop=\"auth\", stale=false; body: {   \"error\" : 401,   \"reason\" : \"Unauthorized\",   \"detail\" : \"You are not authorized for this resource.\",   \"errorCode\" : \"UNEXPECTED_ERROR\" }",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Digest realm=\"MMS Public API\", domain=\"\", nonce=\"u1ON62Xgtyu5vP80ATz5oB9LoRpnPtnv\", algorithm=MD5, qop=\"auth\", stale=false",
+    "inferred": "other"
+  },
+  "notes": "MongoDB Atlas free tier (M0) provides self-serve API access. Atlas Admin API v2 is the primary REST API for programmatic access. OAuth2 Service Accounts are recommended over legacy API keys. App Services tier includes 1M free API requests monthly. API breadth estimated as medium based on typical admin API scope covering projects, clusters, users, billing, and monitoring resources.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.104
+}

@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v7/oauth-overview.html",
+        "quote": "The Zoho CRM API uses the OAuth2.0 protocol for authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+        "quote": "Connect Zoho CRM to any app and perform actions with 5000 API calls/day."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html",
+        "quote": "Forever free, for 3 users"
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html",
+        "quote": "You will receive the client credentials such as Client ID and Client Secret in the Client Secret tab"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.zoho.com/crm/developer/mcp.html",
+        "quote": "Deploy four composable MCP servers that give your AI agent secure, scoped access to your Zoho CRM."
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html",
+        "quote": "Go to Zoho Developer Console and click on GET STARTED"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://www.zoho.com/crm/developer/mcp.html"
+    },
+    "notes": "Zoho CRM REST API (v8) uses OAuth2 exclusively; self-client and server-based client registration via api-console.zoho.com is free and self-serve, no approval needed. The permanent free CRM plan (3 users) includes 5,000 API calls/day, and paid plans scale credits up. API surface spans dozens of modules (Leads, Deals, Bulk, Notifications, Functions, Blueprint, etc.) — large breadth. Zoho also publishes official MCP servers (Data Insights, Data Operations, Module Customization, Workflow & Process Automation) at mcp.zoho.com, connecting via OAuth. Composio catalog corroborates oauth2-only with 57 wrapped tools (non-official wrapper).",
+    "one_liner": "Zoho CRM is a cloud CRM platform offering a REST API (OAuth2) for managing leads, contacts, deals and workflow automation.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.2281854,
+  "turns": 11,
+  "seconds": 76.9,
+  "is_error": false,
+  "error": null
+}

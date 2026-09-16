@@ -1,0 +1,73 @@
+{
+  "name": "Zoho Cliq",
+  "checked": 6,
+  "grounded": 5,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+      "quote": "Zoho Cliq API uses the OAuth 2.0 protocol for authentication.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/cliq/help/platform/webhook-tokens.html",
+      "quote": "Authentication of the webhook URL should be done by passing the value of a Webhook token as the key for authentication.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.498
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/registerclient/",
+      "quote": "Go to the Zoho API Console, then click GET STARTED.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/registerclient/",
+      "quote": "you will receive a Client ID and Client Secret. These credentials are used to obtain an access token.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+      "quote": "The Zoho Cliq MCP Server brings your chats into the world of AI using the Model Context Protocol (MCP).",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+      "quote": "Zoho Cliq API uses the OAuth 2.0 protocol for authentication.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.83,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

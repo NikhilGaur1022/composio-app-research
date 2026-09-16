@@ -1,0 +1,111 @@
+{
+  "id": 66,
+  "name": "Neo4j",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "neo4j.com/docs/api",
+  "one_liner": "A graph database platform with REST and GraphQL APIs for building connected data applications.",
+  "auth_methods": [
+    "api_key",
+    "basic",
+    "oauth2",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "small",
+  "docs_url": "https://neo4j.com/docs/api",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/neo4j-contrib/mcp-neo4j"
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.87,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "basic",
+        "oauth2",
+        "other"
+      ],
+      "pass1": [
+        "basic",
+        "bearer_token",
+        "jwt",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/neo4j",
+      "quote": "Composio catalog: auth ['OAUTH2', 'BASIC', 'API_KEY', 'S2S_OAUTH2'], 21 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "NEO4J",
+    "tools": 21,
+    "auth": [
+      "api_key",
+      "basic",
+      "oauth2",
+      "other"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/neo4j"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 400,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "API breadth unknown from search results. REST API is deprecated (removed in Neo4j 4.0) but still documented. GraphQL is the modern approach. Confidence reduced due to inability to verify exact endpoint counts and some auth details from snippets alone.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "basic",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.111
+}

@@ -1,0 +1,93 @@
+{
+  "name": "Fathom",
+  "checked": 8,
+  "grounded": 7,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "access",
+      "url": "https://help.fathom.video/en/articles/8368641",
+      "quote": "Anyone can browse the API docs and start building",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.fathom.video/en/articles/8368641",
+      "quote": "API keys are created at the user level. Your key can access meetings recorded by you or shared to your Team.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.fathom.ai/api-overview",
+      "quote": "All REST API resources are authenticated with API keys generated via the Fathom website's settings area.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.fathom.ai/",
+      "quote": "Build a Fathom integration that other users can install.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.fathom.ai/api-overview",
+      "quote": "/recordings",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.fathom.ai/mcp-docs",
+      "quote": "Fathom now offers an official MCP (Model Context Protocol) server, allowing you to connect your Fathom meeting data to AI assistants like ChatGPT, Claude, and more.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.fathom.ai/mcp-docs",
+      "quote": "MCP server URL: `https://api.fathom.ai/mcp`",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://help.fathom.video/en/articles/8368641",
+      "quote": "users can make 60 calls per minute across all of their API keys; this ensures system stability and reliability",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.88,
+  "by_field": {
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ]
+  }
+}

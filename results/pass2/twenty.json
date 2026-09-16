@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "unknown",
+    "api_type": "rest_and_graphql",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.72,
+    "docs_url": "https://docs.twenty.com/developers/extend/api",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Authorization: Bearer YOUR_API_KEY"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Create an API key in Settings → API & Webhooks → + Create key. Copy it immediately — it's shown once."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "For OAuth-based access (external apps acting on behalf of users), see [OAuth](/developers/extend/oauth)."
+      },
+      {
+        "field": "access",
+        "url": "https://twenty.com/pricing",
+        "quote": "Self-host the open source core for free, or upgrade to Organization for SSO and row-level permissions."
+      },
+      {
+        "field": "access",
+        "url": "https://twenty.com/pricing",
+        "quote": "Start your free trial today without credit card."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Core API (/rest/ and /graphql/) — Handles CRUD operations on records like People, Companies, and custom objects"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+        "quote": "A Model Context Protocol (MCP) server for Twenty CRM integration. Enables natural language interactions with your CRM data through Claude and other AI assistants."
+      },
+      {
+        "field": "verdict",
+        "url": "https://twenty.com/pricing",
+        "quote": "REST & GraphQL API"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/mhenry3164/twenty-crm-mcp-server"
+    },
+    "notes": "Twenty is open-source and self-hostable (Docker Compose) for free with unrestricted REST/GraphQL API access via API key (bearer token) — this is the most accessible self-serve path. The managed cloud offering has a no-credit-card free trial, then requires a paid plan (Pro $9/user/mo+) for API access; endpoint count is not fixed since the API is dynamically generated per workspace schema. OAuth2 is documented for third-party apps acting on behalf of users. No official vendor MCP server found; several community MCP servers exist (github.com/mhenry3164, igorwarzocha, jezweb) and an open GitHub issue (twentyhq/twenty#12953) requesting an official one.",
+    "one_liner": "Twenty is an open-source CRM (self-hostable or cloud-hosted) offering REST and GraphQL APIs for records and workspace schema management.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.22037500000000002,
+  "turns": 14,
+  "seconds": 140.8,
+  "is_error": false,
+  "error": null
+}

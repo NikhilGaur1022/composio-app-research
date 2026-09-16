@@ -1,0 +1,99 @@
+{
+  "id": 67,
+  "name": "Snowflake",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.snowflake.com",
+  "one_liner": "Snowflake is a cloud data platform for data warehousing, analytics, and data applications.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "small",
+  "docs_url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/Snowflake-Labs/mcp"
+  },
+  "verdict": "green",
+  "score": 86,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "jwt",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_trial"
+    },
+    "api_type": {
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/snowflake",
+      "quote": "Composio catalog: auth ['OAUTH2'], 17 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "SNOWFLAKE",
+    "tools": 17,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/snowflake"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": null,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Snowflake provides native REST APIs (SQL API and resource management API) with OAuth2 and JWT authentication. GraphQL is available through third-party integrations like Hasura. Free trial removes access barriers for developers. API breadth marked as 'large' based on extensive endpoint coverage across multiple domains, though exact count not confirmed in documentation.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "jwt",
+      "bearer_token"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.118
+}

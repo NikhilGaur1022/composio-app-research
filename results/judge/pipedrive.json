@@ -1,0 +1,93 @@
+{
+  "name": "Pipedrive",
+  "checked": 8,
+  "grounded": 5,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+      "quote": "Authorization via OAuth 2.0 is a well-known and stable way to get fine-grained access to an API.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.339
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "quote": "The API token must be provided in the `x-api-token` header for all requests.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.407
+    },
+    {
+      "field": "access",
+      "url": "https://www.pipedrive.com/en/register",
+      "quote": "100% access. No credit card required",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "quote": "an API token is tied to a specific user and company, giving access to all user's data",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.346
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.pipedrive.com/v1/deals",
+      "quote": "{\"success\":false,\"error\":\"unauthorized access\",\"errorCode\":401,\"error_info\":\"Please check developers.pipedrive.com\"}",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "quote": "An official, reliable and fully supported connection built and maintained by Pipedrive.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "quote": "Pipedrive MCP is available on all Pipedrive plans. Usage is based on token limits included in your plan and additional tokens can be purchased if needed.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.pipedrive.com/en/register",
+      "quote": "100% access. No credit card required",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.62,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

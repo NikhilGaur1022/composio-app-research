@@ -1,0 +1,111 @@
+{
+  "id": 33,
+  "name": "LinkedIn Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "learn.microsoft.com/linkedin/marketing",
+  "one_liner": "LinkedIn's API for programmatic management and optimization of advertising campaigns and accounts.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "partner_gated",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview",
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "verdict": "red",
+  "score": 53,
+  "blocker": "partner_gate",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries",
+    "gated/no-API finding with weak grounding needs a human eye"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "unauth_probe": [
+        "oauth2"
+      ],
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "partner_gated"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "small",
+      "composio_tools": "small",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/linkedin_ads",
+      "quote": "Composio catalog: auth ['OAUTH2'], 28 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/learnifier.com/1.1.0/swagger.json",
+      "quote": "APIs.guru OpenAPI spec: 34 operations, securitySchemes []",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.linkedin.com/rest/adAccounts",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"status\":401,\"serviceErrorCode\":65604,\"code\":\"EMPTY_ACCESS_TOKEN\",\"message\":\"Empty oauth2 access token\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "LINKEDIN_ADS",
+    "tools": 28,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/linkedin_ads"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 34
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": "oauth2"
+  },
+  "notes": "LinkedIn Ads API is strictly partner-gated and requires both admin approval and a paid partnership agreement. Free tier access is limited to basic profile endpoints only. No official MCP server available. API rate limit is 100 requests/minute. Estimated cost starts at $699+/month for approved partners.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "red",
+    "blocker": "partner_gate"
+  },
+  "pass2": null,
+  "cost_usd": 0.13
+}

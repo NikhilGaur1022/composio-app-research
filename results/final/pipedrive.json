@@ -1,0 +1,174 @@
+{
+  "id": 3,
+  "name": "Pipedrive",
+  "category": "CRM and Sales",
+  "hint": "pipedrive.com",
+  "one_liner": "Pipedrive is a sales CRM and pipeline-management platform with a broad REST API (OAuth2 or per-user API token) and a vendor-official MCP server, accessible via a no-credit-card 14-day trial before requiring a paid plan.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+  "mcp": {
+    "status": "official",
+    "url": "https://www.pipedrive.com/en/features/mcp-server"
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.76,
+  "agreement": 0.87,
+  "grounding_rate": 0.62,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs self_serve_trial)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_trial",
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass2": "large",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "official",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://www.pipedrive.com/en/register",
+      "quote": "100% access. No credit card required",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.pipedrive.com/v1/deals",
+      "quote": "{\"success\":false,\"error\":\"unauthorized access\",\"errorCode\":401,\"error_info\":\"Please check developers.pipedrive.com\"}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "quote": "An official, reliable and fully supported connection built and maintained by Pipedrive.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.pipedrive.com/en/features/mcp-server",
+      "quote": "Pipedrive MCP is available on all Pipedrive plans. Usage is based on token limits included in your plan and additional tokens can be purchased if needed.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.pipedrive.com/en/register",
+      "quote": "100% access. No credit card required",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+      "quote": "Authorization via OAuth 2.0 is a well-known and stable way to get fine-grained access to an API.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "quote": "The API token must be provided in the `x-api-token` header for all requests.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "quote": "an API token is tied to a specific user and company, giving access to all user's data",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/pipedrive",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 402 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.pipedrive.com/v1/deals",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"success\":false,\"error\":\"unauthorized access\",\"errorCode\":401,\"error_info\":\"Please check developers.pipedrive.com\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "PIPEDRIVE",
+    "tools": 402,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/pipedrive"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Pipedrive has no permanent free tier; API access comes via a 14-day self-serve free trial (no credit card) that converts to a paid plan (from $12.50/user/mo). Both API token (x-api-token header, aka api_key) and OAuth2 (for Marketplace apps) are documented; HTTP Basic Auth appears only as the client_id/client_secret step of the OAuth2 code exchange, not a standalone API auth method, so it was not listed separately. Pipedrive shipped an official, vendor-hosted MCP server (mcp.pipedrive.ai) in 2026, bundled into all plans via OAuth connect — no separate approval needed beyond having a Pipedrive account. api_breadth is estimated \"large\" based on the breadth of REST resources (Deals, Persons, Organizations, Activities, Leads, Products, Pipelines, Users, Files, Webhooks, etc.) and third-party tool wrappers reporting 400+ operations; I could not load the official endpoint index (404/timeout) to verify an exact count, so this figure carries lower confidence than the auth/access findings.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.78
+  },
+  "cost_usd": 0.39
+}

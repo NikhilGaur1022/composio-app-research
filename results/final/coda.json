@@ -1,0 +1,114 @@
+{
+  "id": 78,
+  "name": "Coda",
+  "category": "Productivity and Project Management",
+  "hint": "coda.io/developers",
+  "one_liner": "Coda is a collaborative document platform combining docs, spreadsheets, and workflow automation.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://coda.io/developers/apis/v1",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/bartolli/codanna"
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.78,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "apis_guru_spec": [
+        "api_key"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "composio_tools": "medium",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/coda",
+      "quote": "Composio catalog: auth ['API_KEY'], 110 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/codat.io/accounting/2.1.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 127 operations, securitySchemes ['api_key']",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://coda.io/apis/v1/docs",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"statusCode\":401,\"statusMessage\":\"Unauthorized\",\"message\":\"Unauthorized\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "CODA",
+    "tools": 110,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/coda"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 127
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Coda API is self-serve with free tier access. Bearer tokens are the primary auth method for direct API access, while OAuth2 is available for Pack SDK developers. Both REST and GraphQL APIs are documented and available without approval gates.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.109
+}

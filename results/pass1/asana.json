@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Project management and work tracking platform with REST API, OAuth/token authentication, and official MCP server support.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developers.asana.com/docs/authentication",
+    "mcp": {
+      "status": "official",
+      "url": "https://developers.asana.com/docs/mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.asana.com/docs/personal-access-token",
+        "quote": "API keys (the older method of authenticating) are being shut off, and Personal Access Tokens (PATs) are the direct replacement for API keys."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.asana.com/docs/oauth",
+        "quote": "OAuth 2.0 provides delegated access to Asana resources with user-facing authorization flows."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "You can generate a personal access token from the Asana developer console."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.asana.com/reference/rest-api-reference",
+        "quote": "The Asana API is a RESTful interface with predictable resource-oriented URLs, accepts JSON or form-encoded requests, returns JSON, and uses standard HTTP features."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.asana.com/docs/mcp-server",
+        "quote": "Asana offers a Model Context Protocol (MCP) server, accessible via app integration, which allows AI assistants and other applications to access the Asana Work Graph."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.asana.com/reference/rest-api-reference",
+        "quote": "Comprehensive reference for objects, schemas, and endpoints with in-context API explorer."
+      }
+    ],
+    "confidence": 0.88,
+    "notes": "Asana uses Personal Access Tokens (bearer_token auth) as the modern authentication method, with OAuth2 for delegated access. API breadth estimated as medium based on documented comprehensive endpoint coverage; exact endpoint count not publicly stated. Official MCP server (V2) now generally available for AI agent integration. Self-serve credentials available from developer console—no admin approval or payment required for basic API access."
+  },
+  "cost_usd": 0.12615065,
+  "turns": 4,
+  "seconds": 46.8,
+  "is_error": false,
+  "error": null
+}

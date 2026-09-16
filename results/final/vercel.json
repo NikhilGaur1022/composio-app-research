@@ -1,0 +1,117 @@
+{
+  "id": 62,
+  "name": "Vercel",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "vercel.com/docs/rest-api",
+  "one_liner": "Vercel is a serverless platform for deploying and managing web applications with integrated CI/CD and edge functions.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://vercel.com/docs/rest-api",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/vercel/mcp-handler"
+  },
+  "verdict": "green",
+  "score": 97,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "apis_guru_spec": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "composio_tools": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "official",
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/vercel",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 146 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/vercel.com/0.0.1/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 112 operations, securitySchemes ['bearer_token', 'oauth2']",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.vercel.com/v9/projects",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: {\"error\":{\"code\":\"forbidden\",\"message\":\"The request is missing an authentication token\",\"missingToken\":true}}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "VERCEL",
+    "tools": 146,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/vercel"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 112
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": "bearer_token"
+  },
+  "notes": "Vercel provides a comprehensive REST API with bearer token authentication accessible to all users with Vercel accounts. Tokens can be created self-serve from account settings, making this suitable for agent toolkit development. API covers deployments, projects, domains, teams, and other platform management functions.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.112
+}

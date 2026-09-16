@@ -1,0 +1,115 @@
+{
+  "name": "Otter AI",
+  "checked": 10,
+  "grounded": 3,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "All API requests require authentication using Bearer token authentication.",
+      "status": 403,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "quote": "OAuth-authenticated with granular permissions.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "This content is available for the Otter Enterprise plan and may require admin permissions.",
+      "status": 403,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "If you do not see this feature for your workspace, contact your Otter account manager.",
+      "status": 403,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "Authorization: Bearer YOUR_API_KEY",
+      "status": 403,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "Enterprise plan users are currently limited to 10 requests / second.",
+      "status": 403,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "quote": "Otter's MCP Server",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.679
+    },
+    {
+      "field": "mcp",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "quote": "Interested in Otter for your enterprise? Request a demo to see how the MCP Server can transform your team's workflow.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.902
+    },
+    {
+      "field": "verdict",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "This content is available for the Otter Enterprise plan and may require admin permissions.",
+      "status": 403,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "one_liner",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "quote": "Otter's MCP Server connects your meeting data directly to AI tools like Claude and ChatGPT, bringing your meeting intelligence into your everyday AI workflows.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.904
+    }
+  ],
+  "grounding_rate": 0.3,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ],
+    "one_liner": [
+      "grounded"
+    ]
+  }
+}

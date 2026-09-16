@@ -1,0 +1,53 @@
+{
+  "name": "Mermaid CLI",
+  "checked": 4,
+  "grounded": 4,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "api_type",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "npm install -g @mermaid-js/mermaid-cli",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "docker run --rm -u `id -u`:`id -g` -v /path/to/diagrams:/data minlag/mermaid-cli",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/andrewginns/mermaid-mcp-server",
+      "quote": "Python MCP Server abstracting the official mermaid-cli for ease of use",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "npx -p @mermaid-js/mermaid-cli mmdc -h",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "by_field": {
+    "api_type": [
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded"
+    ]
+  }
+}

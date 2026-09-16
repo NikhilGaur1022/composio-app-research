@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Cryptocurrency exchange providing self-serve REST API for spot, futures, and margin trading with OAuth2 and API key authentication.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://developers.binance.com/docs/binance-spot-api-docs/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.binance.com/docs/binance-open-api/apis",
+        "quote": "The Binance API allows developers to use the OAuth2 protocol to allow a Binance user to grant a 3rd party application full or partial access to his/her account."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.binance.com/docs/binance-pay/authentication",
+        "quote": "Binance Pay API uses API keys to authenticate requests. You can view and manage your API keys in the Binance Merchant Admin Portal."
+      },
+      {
+        "field": "access",
+        "url": "https://www.binance.com/en/support/faq/how-to-create-api-keys-on-binance-360002502072",
+        "quote": "You can log in to your Binance account, click the profile icon, go to [API Management], then click [Create API] to generate your credentials yourself."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
+        "quote": "To create API keys, you need to enable two-factor authentication (2FA) on your account and complete account verification."
+      },
+      {
+        "field": "api_type",
+        "url": "https://binance-docs.github.io/apidocs/spot/en/",
+        "quote": "All API requests must be made over HTTPS. Calls made over plain HTTP will fail."
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "Binance offers a robust, self-serve REST API with support for OAuth2 and API key authentication. Credentials can be generated freely after account verification (2FA, Verified Plus status). The API covers hundreds of endpoints across Spot, Futures, and Margin trading. No paid tier or approval gate required for standard API access, making it a green verdict for agent toolkit integration."
+  },
+  "cost_usd": 0.13341759999999997,
+  "turns": 8,
+  "seconds": 41.5,
+  "is_error": false,
+  "error": null
+}

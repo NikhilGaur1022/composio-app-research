@@ -1,0 +1,116 @@
+{
+  "id": 63,
+  "name": "Netlify",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.netlify.com/api",
+  "one_liner": "Netlify is a web hosting and serverless platform for deploying static sites and applications with CI/CD, forms, and serverless functions.",
+  "auth_methods": [
+    "oauth2",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 97,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.87,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "other"
+      ],
+      "apis_guru_spec": [
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "composio_tools": "small",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "composio_wraps_mcp": "official",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/netlify_mcp",
+      "quote": "Composio catalog: auth ['DCR_OAUTH'], 9 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/netlify.com/2.15.0/swagger.json",
+      "quote": "APIs.guru OpenAPI spec: 120 operations, securitySchemes ['oauth2']",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.netlify.com/api/v1/sites",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"code\":401,\"message\":\"Access Denied\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "NETLIFY_MCP",
+    "tools": 9,
+    "auth": [
+      "other"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/netlify_mcp"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 120
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Free tier includes full API access. Personal access tokens and OAuth applications both supported. REST API is primary interface with endpoints for sites, deploys, hooks, and more.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.136
+}

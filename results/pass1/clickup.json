@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Task management and team collaboration platform with REST API for automation and integrations.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developer.clickup.com/docs",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "ClickUp provides two authentication methods to authenticate to the ClickUp API: personal tokens and OAuth."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "Personal tokens begin with pk_ and should be added to the header as: Authorization: {personal_token}."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "For apps or integrations that other people use, use the OAuth flow. ClickUp uses the authorization code grant type."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.clickup.com/docs/authentication",
+        "quote": "Personal tokens are ideal for internal tools, one-off scripts, admin utilities, and quick testing. You generate a token from your ClickUp account settings."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.clickup.com/docs/Getting%20Started",
+        "quote": "The ClickUp API is a REST API that uses predictable URLs and common HTTP response codes, and returns data in JSON format."
+      }
+    ],
+    "confidence": 0.9,
+    "notes": "ClickUp offers free tier access with self-serve personal API token generation from account settings. OAuth available for app integrations with workspace admin approval. REST API with endpoints organized by feature (Tasks, Lists, Spaces, Goals, etc.). Postman collection and OpenAPI spec available at developer.clickup.com."
+  },
+  "cost_usd": 0.11322560000000001,
+  "turns": 6,
+  "seconds": 33.1,
+  "is_error": false,
+  "error": null
+}

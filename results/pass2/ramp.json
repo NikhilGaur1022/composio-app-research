@@ -1,0 +1,93 @@
+{
+  "ok": true,
+  "result": {
+    "access": "partner_gated",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "blocker": "partner_gate",
+    "confidence": 0.55,
+    "docs_url": "https://docs.ramp.com/developer-api/v1/overview",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://support.ramp.com/accessing-the-developer-api",
+        "quote": "Client ID and Client Secret"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://support.ramp.com/accessing-the-developer-api",
+        "quote": "onboard production customers through OAuth"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://api.ramp.com/developer/v1/transactions",
+        "quote": "Access token with given access_token not found"
+      },
+      {
+        "field": "access",
+        "url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API",
+        "quote": "Admin access is required"
+      },
+      {
+        "field": "access",
+        "url": "https://support.ramp.com/accessing-the-developer-api",
+        "quote": "Request access using the sandbox access form"
+      },
+      {
+        "field": "access",
+        "url": "https://ramp.com/developer-api",
+        "quote": "One platform, three ways in."
+      },
+      {
+        "field": "access",
+        "url": "https://ramp.com/developer-api",
+        "quote": "Embed Ramp's full spend management stack directly into your platform via API."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.ramp.com",
+        "quote": "api.ramp.com/developer/v1"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://docs.ramp.com/openapi/developer-api.json",
+        "quote": "\"security\": [ { \"oauth2\": [\"accounting:read\"] } ]"
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.ramp.com/ramp-mcp",
+        "quote": "Any MCP-compatible AI client can connect using the server URL `https://mcp.ramp.com/mcp`."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.ramp.com/ramp-mcp",
+        "quote": "Your Ramp permissions come with you."
+      },
+      {
+        "field": "verdict",
+        "url": "https://ramp.com/developer-api",
+        "quote": "Dedicated partner manager"
+      },
+      {
+        "field": "one_liner",
+        "url": "https://ramp.com",
+        "quote": "Time and money-saving corporate cards, bill payments, accounting automation"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.ramp.com/mcp"
+    },
+    "notes": "Ramp has a substantial official REST API (docs.ramp.com/developer-api, api.ramp.com/developer/v1) covering transactions, cards, bills, vendors, reimbursements, purchase orders, trips, accounting sync (Accounting API alone has ~45-50 endpoints per OpenAPI spec sampling; Composio's toolkit wraps 88 tools). Auth is OAuth2 only: a business Admin/Business Owner creates a \"Developer app\" in-app and enables the client_credentials grant for server-to-server access to their own data (self-serve within an existing paid Ramp business account); authorization_code/OAuth is used when onboarding other businesses. Building an integration that serves OTHER Ramp businesses (the agent-toolkit case) requires either the sandbox access form (self-serve, ~1 min provisioning, pre-populated sandbox business) for testing, then explicitly \"apply for production access,\" or going through Ramp's Technology Partner Program (contact-sales form) for embedded/integration partnerships - hence partner_gated/yellow rather than fully self-serve. Notably Ramp also ships an OFFICIAL hosted MCP server (mcp.ramp.com/mcp, one-click install for Claude/ChatGPT) that proxies the authenticated end-user's own Ramp permissions - this is a strong, low-friction path for an agent toolkit even though the raw REST API has partner gating for multi-tenant production use. api_breadth marked \"large\" with moderate confidence only - could not get an exact total endpoint count within budget (OpenAPI spec fetch was truncated to the Accounting sub-API).",
+    "one_liner": "Ramp is a corporate card, expense management, bill pay, and accounting-automation platform for businesses, with a developer REST API and an official hosted MCP server for AI agents.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.4824248,
+  "turns": 18,
+  "seconds": 161.1,
+  "is_error": false,
+  "error": null
+}

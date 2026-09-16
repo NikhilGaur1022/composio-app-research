@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Creator monetization platform providing REST API for payments infrastructure and digital product hosting.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://dev-docs.fanbasis.com/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "undocumented",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.npmjs.com/package/@fanbasis/checkout-sdk",
+        "quote": "Developers can initialize the client using an API key from the environment variable FANBASIS_CHECKOUT_API_KEY"
+      },
+      {
+        "field": "api_type",
+        "url": "https://apidocs.fan/",
+        "quote": "FanBasis provides a REST API with full documentation including comprehensive reference"
+      },
+      {
+        "field": "access",
+        "url": "https://www.fanbasis.com/enterprises",
+        "quote": "full sandbox environment for testing with simulated processors"
+      }
+    ],
+    "confidence": 0.35,
+    "notes": "Primary documentation at dev-docs.fanbasis.com requires login. API key auth confirmed via public NPM SDK. Free/paid access model not clearly documented in public sources. No mention of OAuth or other auth methods. Endpoint count unknown. MCP server status unknown."
+  },
+  "cost_usd": 0.12352129999999999,
+  "turns": 6,
+  "seconds": 67.0,
+  "is_error": false,
+  "error": null
+}

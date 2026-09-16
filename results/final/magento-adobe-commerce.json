@@ -1,0 +1,96 @@
+{
+  "id": 45,
+  "name": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "hint": "developer.adobe.com/commerce",
+  "one_liner": "Magento (Adobe Commerce) is a headless ecommerce platform providing REST and GraphQL APIs for building storefronts and admin integrations.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "partner_gated",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developer.adobe.com/commerce/webapi/",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "red",
+  "score": 56,
+  "blocker": "partner_gate",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.72,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries",
+    "gated/no-API finding with weak grounding needs a human eye"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "apis_guru_spec": [
+        "api_key"
+      ],
+      "pass1": [
+        "bearer_token",
+        "other"
+      ]
+    },
+    "access": {
+      "pass1": "partner_gated"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "small",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/adobe.com/aem/3.7.1-pre.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 48 operations, securitySchemes ['basic']",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 48
+  },
+  "probe": {
+    "status": 200,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Requires TPP (Third-Party Partner) account or demo request to access development credentials. Cloud-based service requires paid subscription. Supports both REST (OAuth 1.0a, bearer tokens) and GraphQL APIs. Exact endpoint count not published, but breadth spans storefront and admin operations.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token",
+      "other"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "partner_gate"
+  },
+  "pass2": null,
+  "cost_usd": 0.124
+}

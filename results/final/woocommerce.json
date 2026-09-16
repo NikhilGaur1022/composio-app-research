@@ -1,0 +1,93 @@
+{
+  "id": 42,
+  "name": "WooCommerce",
+  "category": "Ecommerce",
+  "hint": "woocommerce.com/document/woocommerce-rest-api",
+  "one_liner": "Open-source WordPress ecommerce plugin with REST API for managing products, orders, and customers.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://woocommerce.com/document/woocommerce-rest-api/",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.87,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "api_key",
+        "basic",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://woocommerce.com/wp-json/wc/v3/products",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"code\":\"woocommerce_rest_cannot_view\",\"message\":\"Sorry, you cannot list resources.\",\"data\":{\"status\":401}}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "WooCommerce REST API is fully self-serve with credentials generated in admin panel. Core API is REST (v3); GraphQL support available via optional WooGraphQL extension. API breadth estimated at medium range based on common endpoints (products, orders, customers, variations). No official MCP server.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.122
+}

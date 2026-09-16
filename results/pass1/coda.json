@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Coda is a collaborative document platform combining docs, spreadsheets, and workflow automation.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "docs_url": "https://coda.io/developers/apis/v1",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://coda.io/developers/apis/v1",
+        "quote": "Coda uses a Bearer token for API requests. You can create a new API token via your Account Settings"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://coda.io/packs/build/latest/tutorials/build/oauth/",
+        "quote": "OAuth2 is available as an authentication type, and Coda handles all of the OAuth logic for Packs"
+      },
+      {
+        "field": "api_type",
+        "url": "https://garethtdavies.com/crypto/first-steps-with-coda-graphql-api.html",
+        "quote": "Coda supports both REST and GraphQL APIs"
+      },
+      {
+        "field": "access",
+        "url": "https://help.coda.io/hc/en-us/articles/39555725230989-Billing-and-pricing-basics",
+        "quote": "Coda offers a free plan with a healthy set of features for free"
+      },
+      {
+        "field": "access",
+        "url": "https://coda.io/developers/apis/v1",
+        "quote": "Public API documentation is reachable without an auth wall"
+      }
+    ],
+    "notes": "Coda API is self-serve with free tier access. Bearer tokens are the primary auth method for direct API access, while OAuth2 is available for Pack SDK developers. Both REST and GraphQL APIs are documented and available without approval gates."
+  },
+  "cost_usd": 0.10881089999999999,
+  "turns": 6,
+  "seconds": 31.4,
+  "is_error": false,
+  "error": null
+}

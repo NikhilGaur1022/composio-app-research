@@ -1,0 +1,152 @@
+{
+  "id": 28,
+  "name": "WhatsApp Business",
+  "category": "Communications and Messaging",
+  "hint": "developers.facebook.com/docs/whatsapp",
+  "one_liner": "WhatsApp Business Platform (Cloud API) lets businesses send/receive WhatsApp messages, templates, and media programmatically via Meta's Graph API.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/tkhattar14/whatsapp-business-mcp"
+  },
+  "verdict": "yellow",
+  "score": 95,
+  "blocker": "app_review",
+  "model_verdict": "yellow",
+  "confidence": 0.69,
+  "agreement": 0.91,
+  "grounding_rate": null,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (admin_approval vs self_serve_free)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass2": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "admin_approval"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass2": "medium",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "quote": "The temporary access token you created to send the hello_world template message expires quickly and is not suitable for development purposes.",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "quote": "Generate access token to send a test message",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+      "quote": "developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/reference",
+      "quote": "Meta for Developers",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+      "quote": "tkhattar14/whatsapp-business-mcp (3★)",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "quote": "A list of publishing requirements are listed",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/whatsapp",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 57 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "WHATSAPP",
+    "tools": 57,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/whatsapp"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 400,
+    "www_authenticate": "OAuth \"Facebook Platform\" \"invalid_request\" \"An active access token must be used to query information about the current user.\"",
+    "inferred": "other"
+  },
+  "notes": "Free Meta developer account + app gives an instant test phone number and temporary bearer token for sandbox testing (self-serve, no cost). Auth is Meta/Facebook OAuth2 flow producing bearer access tokens (temporary or permanent via System User); Graph API is REST-based. Scaling to production (beyond ~250 business-initiated conversations/24h to real customers) requires Meta Business Verification and app review of permissions (whatsapp_business_messaging, whatsapp_business_management), which is a lightweight but mandatory approval gate — hence yellow/app_review rather than pure green. No official Meta-published MCP server found; only community MCP implementations exist on GitHub. Composio wraps it with 57 tools via api_key/oauth2, consistent with REST + bearer/OAuth2 findings. API surface (messages, templates, media, phone numbers, business profile, flows, webhooks) is more than a handful of endpoints but not enormous — estimated medium breadth.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "app_review"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.263
+}

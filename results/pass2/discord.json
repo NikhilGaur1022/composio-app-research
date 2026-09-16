@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "basic",
+      "other"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://docs.discord.com/developers/reference",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "quote": "The first step in implementing OAuth2 is registering a developer application and retrieving your client ID and client secret."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.discord.com/developers/reference",
+        "quote": "Using a bot token found on the Bot page within your app's settings."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.discord.com/developers/reference",
+        "quote": "Using an OAuth2 bearer token gained through the OAuth2 API."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "quote": "All OAuth2 token endpoints require either HTTP Basic authentication or credentials supplied in the form data body"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/SaseQ/discord-mcp",
+        "quote": "SaseQ/discord-mcp (493 stars) - community-maintained MCP server for Discord"
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "quote": "Bot users are automatically added to all apps, and are authenticated using the bot token found in your app's settings."
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/SaseQ/discord-mcp"
+    },
+    "notes": "Discord's developer portal (discord.com/developers/applications) lets anyone register an application and generate a bot token / OAuth2 client credentials for free, no approval gate for standard bot/API scopes (privileged intents like message content require a form but not blocking basic API access). API is REST with a large surface (guilds, channels, users, webhooks, interactions, etc., several hundred endpoints) plus a Gateway websocket for real-time events. No official vendor-published MCP server found; several community MCP servers exist (SaseQ/discord-mcp, moltis, gortex, Smithery listings).",
+    "one_liner": "Discord is a voice/text/community chat platform with a REST API and Gateway websocket for building bots and integrations.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.13706780000000002,
+  "turns": 7,
+  "seconds": 34.0,
+  "is_error": false,
+  "error": null
+}

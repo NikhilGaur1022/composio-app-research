@@ -1,0 +1,103 @@
+{
+  "id": 51,
+  "name": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.dataforseo.com",
+  "one_liner": "SEO and SEM data collection platform offering SERP, keyword, and on-page analytics via REST API",
+  "auth_methods": [
+    "basic"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://docs.dataforseo.com/v3/",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "basic"
+      ],
+      "unauth_probe": [
+        "basic"
+      ],
+      "pass1": [
+        "basic"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/dataforseo",
+      "quote": "Composio catalog: auth ['BASIC'], 312 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.dataforseo.com/v3/appendix/user_data",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Basic realm=\"DataForSEO REST API\"; body: {\"status_code\":40100,\"status_message\":\"You are not Authorized to Access this Resource. Your Login Information Here: https:\\/\\/app.dataforseo.com\\/login .\",\"time\":\"0 sec.\",\"cost\":0,\"tasks_count\":0,\"tas",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "DATAFORSEO",
+    "tools": 312,
+    "auth": [
+      "basic"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/dataforseo"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Basic realm=\"DataForSEO REST API\"",
+    "inferred": "basic"
+  },
+  "notes": "API uses HTTP Basic Auth with email + auto-generated password. Free tier includes $1 credit upon signup (covers ~500 live SERP requests). $50 minimum deposit required for paid use. Supports JSON and XML responses. Official SDKs available for PHP, Python, C#, Java, TypeScript. Multiple API categories: SERP, Keywords Data, On-Page, Labs.",
+  "pass1": {
+    "auth_methods": [
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.101
+}

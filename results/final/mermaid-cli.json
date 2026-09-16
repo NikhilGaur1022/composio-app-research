@@ -1,0 +1,127 @@
+{
+  "id": 98,
+  "name": "Mermaid CLI",
+  "category": "AI, Research and Media-native",
+  "hint": "github.com/mermaid-js/mermaid-cli",
+  "one_liner": "Mermaid CLI (mmdc) is an open-source command-line tool that renders Mermaid diagram text definitions into SVG, PNG, or PDF files.",
+  "auth_methods": [
+    "none"
+  ],
+  "access": "no_public_api",
+  "api_type": "cli_only",
+  "api_breadth": "large",
+  "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/andrewginns/mermaid-mcp-server"
+  },
+  "verdict": "red",
+  "score": 30,
+  "blocker": "cli_not_api",
+  "model_verdict": "yellow",
+  "confidence": 0.92,
+  "agreement": 0.89,
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "formula verdict red, model said yellow"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "none"
+      ],
+      "pass2": [
+        "none"
+      ]
+    },
+    "access": {
+      "pass2": "no_public_api"
+    },
+    "api_type": {
+      "pass2": "cli_only",
+      "apis_guru_spec": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "large",
+      "composio_tools": "small",
+      "pass2": "unknown"
+    },
+    "mcp": {
+      "composio_wraps_mcp": "official",
+      "pass2": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "npm install -g @mermaid-js/mermaid-cli",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "docker run --rm -u `id -u`:`id -g` -v /path/to/diagrams:/data minlag/mermaid-cli",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/andrewginns/mermaid-mcp-server",
+      "quote": "Python MCP Server abstracting the official mermaid-cli for ease of use",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "npx -p @mermaid-js/mermaid-cli mmdc -h",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/mermaid_chart_mcp",
+      "quote": "Composio catalog: auth ['NO_AUTH'], 1 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 845 operations, securitySchemes []",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "MERMAID_CHART_MCP",
+    "tools": 1,
+    "auth": [
+      "none"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/mermaid_chart_mcp"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 845
+  },
+  "probe": {
+    "status": null,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Mermaid CLI (mmdc) is an open-source command-line tool (npm package / Docker image) that renders Mermaid diagram definitions to SVG/PNG/PDF locally. There is no hosted vendor API or auth of any kind — it runs entirely offline as a local process. No official MCP server exists for mermaid-cli itself; several community-built MCP wrappers (Python and JS) exist that shell out to mmdc, but none are vendor-published by mermaid-js. Note: this is distinct from the commercial 'Mermaid Chart' SaaS product (mermaidchart.com), which does have its own official hosted MCP server — that is a different product from this open-source CLI and was not evaluated here. Buildability verdict is for mermaid-cli as a local agent skill/tool invocation, not a hosted API integration.",
+  "pass1": null,
+  "pass2": {
+    "auth_methods": [
+      "none"
+    ],
+    "access": "no_public_api",
+    "api_type": "cli_only",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "cli_not_api",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.13
+}

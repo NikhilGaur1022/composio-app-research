@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_trial",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "blocker": "none",
+    "confidence": 0.75,
+    "docs_url": "https://developer.close.com/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.close.com/",
+        "quote": "API keys for scripts or OAuth 2.0 for user-facing integrations."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.close.com/api/overview/api-key-authentication",
+        "quote": "send your HTTP requests with an Authorization header that contains the word Basic followed by a space and a base64-encoded string composed of an api key followed by a colon"
+      },
+      {
+        "field": "access",
+        "url": "https://www.close.com/pricing",
+        "quote": "Start your free trial—no credit card required"
+      },
+      {
+        "field": "access",
+        "url": "https://www.close.com/pricing",
+        "quote": "API access + event log API - Connect your Close organization using API keys of using OAuth access"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.close.com/api/overview/api-key-authentication",
+        "quote": "Alternatively, see Authentication with OAuth instead."
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.close.com/docs/mcp-server",
+        "quote": "The MCP server URL is https://mcp.close.com/mcp"
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.close.com/docs/mcp-server",
+        "quote": "Close's MCP server is an officially supported across the Claude ecosystem."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.close.com/api/overview/api-key-authentication",
+        "quote": "API keys can be created and managed in your Close account under Settings → Developer → API Keys"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.close.com/mcp"
+    },
+    "notes": "Close has a mature documented REST API (developer.close.com) supporting both HTTP Basic auth with an API key (created self-serve in Settings > Developer > API Keys) and OAuth 2.0 for user-facing integrations. Free trial (14 days, no credit card) lets developers get an API key immediately, then requires a paid plan (Solo $9/user/mo and up) to continue; API access is listed as included on all paid tiers. Close also publishes an official first-party MCP server (https://mcp.close.com/mcp) supporting both OAuth 2.0 DCR and API-key-based headers (Close-API-Key / Close-Scope), explicitly positioned for Claude/ChatGPT/Cursor agent integrations. Endpoint count not explicitly enumerated in fetched pages (docs pointed to llms.txt for full index); estimated medium breadth based on the number of distinct CRM resources (leads, contacts, opportunities, tasks, activities, custom fields, sequences, bulk actions, webhooks, smart views, reporting).",
+    "one_liner": "Close is a sales-focused CRM (calling, email, SMS, pipelines) built for inside sales teams.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.17731059999999998,
+  "turns": 8,
+  "seconds": 81.5,
+  "is_error": false,
+  "error": null
+}

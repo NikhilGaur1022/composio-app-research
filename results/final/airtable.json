@@ -1,0 +1,104 @@
+{
+  "id": 72,
+  "name": "Airtable",
+  "category": "Productivity and Project Management",
+  "hint": "airtable.com/developers",
+  "one_liner": "Airtable is a spreadsheet-database hybrid that provides a REST API for programmatic access to bases, tables, records, and fields.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://airtable.com/developers/web/api/introduction",
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 93,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/airtable",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 26 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.airtable.com/v0/meta/bases",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"error\":{\"type\":\"AUTHENTICATION_REQUIRED\",\"message\":\"Authentication required\"}}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "AIRTABLE",
+    "tools": 26,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/airtable"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Airtable deprecated legacy API keys on February 1, 2024 in favor of Personal Access Tokens (PATs) and OAuth2. Both authentication methods are self-serve and available on the free tier with a rate limit of 5 requests per second per base. The REST API provides comprehensive CRUD operations and schema introspection capabilities.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.113
+}

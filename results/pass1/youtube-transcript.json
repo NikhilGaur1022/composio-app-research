@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "REST API for extracting YouTube video transcripts, searching videos, and accessing channel/playlist data at scale",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://transcriptapi.com/docs/api/",
+    "mcp": {
+      "status": "official",
+      "url": "https://transcriptapi.com/docs/mcp/"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://transcriptapi.com/docs/api/",
+        "quote": "Bearer token authentication with API keys passed in Authorization header"
+      },
+      {
+        "field": "access",
+        "url": "https://transcriptapi.com/",
+        "quote": "100 free credits to start, get a free API key in 30 seconds with no credit card required"
+      },
+      {
+        "field": "api_type",
+        "url": "https://transcriptapi.com/docs/",
+        "quote": "REST endpoints for transcripts, YouTube search, channel search, channel video listing, playlist workflows"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://transcriptapi.com/docs/api/",
+        "quote": "Seven endpoints: /youtube/transcript, /youtube/search, /youtube/channel/videos, /youtube/channel/search, /youtube/playlist/videos, /youtube/channel/resolve, /youtube/channel/latest"
+      },
+      {
+        "field": "mcp",
+        "url": "https://transcriptapi.com/docs/mcp/",
+        "quote": "MCP (Model Context Protocol) officially supported"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Free tier grants 100 credits with no payment required; pricing scales from $5/month for 1,000 credits. Self-serve signup available. Official MCP server enables Claude integration without SDK setup."
+  },
+  "cost_usd": 0.1178437,
+  "turns": 6,
+  "seconds": 30.5,
+  "is_error": false,
+  "error": null
+}

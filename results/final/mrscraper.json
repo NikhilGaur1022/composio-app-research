@@ -1,0 +1,93 @@
+{
+  "id": 54,
+  "name": "MrScraper",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.mrscraper.com",
+  "one_liner": "Web scraping service with AI-powered data extraction from any public domain",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://docs.mrscraper.com",
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 88,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass1": [
+        "api_key"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/mrscraper",
+      "quote": "Composio catalog: auth ['API_KEY'], 11 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "MRSCRAPER",
+    "tools": 11,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/mrscraper"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 200,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Free tier available with 1,000 tokens/month (no credit card required). Paid plans start at $199/month. Python SDK and CLI tools available. REST API authenticated via API key token in headers and query parameters.",
+  "pass1": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.123
+}

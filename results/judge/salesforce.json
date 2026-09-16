@@ -1,0 +1,102 @@
+{
+  "name": "Salesforce",
+  "checked": 9,
+  "grounded": 7,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "access",
+      "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org.html",
+      "quote": "Step One: Sign up for Salesforce Developer Edition",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.salesforce.com/signup",
+      "quote": "developer.salesforce.com/signup",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.469
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+      "quote": "Authorization Through External Client Apps or Connected Apps and OAuth 2.0",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://login.salesforce.com/.well-known/openid-configuration",
+      "quote": "private_key_jwt",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.apis.guru/v2/specs/salesforce.local/einstein/2.0.1/openapi.json",
+      "quote": "bearer_token",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.salesforce.com/blogs/2025/06/introducing-mcp-support-across-salesforce",
+      "quote": "Introducing MCP Support Across Salesforce",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/salesforcecli/mcp",
+      "quote": "salesforcecli/mcp",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/salesforce",
+      "quote": "223",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://login.salesforce.com/services/oauth2/token",
+      "quote": "{\"error\":\"unsupported_grant_type\",\"error_description\":\"grant type not supported\"}",
+      "status": 400,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.78,
+  "by_field": {
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

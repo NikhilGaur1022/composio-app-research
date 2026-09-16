@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_trial",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "blocker": "none",
+    "confidence": 0.82,
+    "docs_url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "Zendesk supports using OAuth access tokens to authenticate API requests."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "Basic authentication is used for API tokens. The credentials must be sent with the request in an Authorization header."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "API tokens are auto-generated passwords in the Zendesk Admin Center."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.zendesk.com/documentation/",
+        "quote": "Try out the Sunshine Platform with a free, 14-day trial account."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+        "quote": "For information on the authentication required to use the API, see Security and authentication in the general API introduction."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/reminia/zendesk-mcp-server",
+        "quote": "A Model Context Protocol server for Zendesk"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/reminia/zendesk-mcp-server"
+    },
+    "notes": "Zendesk's REST API spans Ticketing, Help Center, Chat, Talk, Sunshine and more (well over 300 documented endpoints). API tokens (basic auth, generated instantly in Admin Center) still work but Zendesk is pushing OAuth access tokens as the recommended/required method going forward; both remain documented auth paths today. Free 14-day trial accounts get an Admin Center where a token can be generated immediately, so self-serve credentials are available before any paid commitment. No official vendor MCP server found; multiple community/partner MCP servers exist (reminia, mattcoatsworth, koundinya, fruggr, Swifteq/digital4better).",
+    "one_liner": "Zendesk is a customer service/helpdesk platform (tickets, help center, chat, talk) with a documented REST API for automating support workflows.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1744022,
+  "turns": 8,
+  "seconds": 59.0,
+  "is_error": false,
+  "error": null
+}

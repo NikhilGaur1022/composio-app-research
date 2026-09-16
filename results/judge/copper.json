@@ -1,0 +1,104 @@
+{
+  "name": "Copper",
+  "checked": 9,
+  "grounded": 6,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "API Keys - suitable for individual users",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.817
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "OAuth2.0 - the preferred approach for partner integrations",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.812
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "include the token in the header of every request, along with the email address of the user who generated the token",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "go to System settings > API Keys and click the 'GENERATE API KEY' button",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.copper.com/pricing",
+      "quote": "API & Embedded integration SDK",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.copper.com/",
+      "quote": "provides a RESTful interface with JSON-formatted responses to access most Copper resources",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developer.copper.com/",
+      "quote": "Leads, People, Companies, Opportunities, Projects, and Tasks",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.512
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/Pond-International/copper-mcp-server",
+      "quote": "MCP (Model Context Protocol) server for Copper CRM integration with Claude. Designed for deployment on Kubernetes (Qovery) with remote MCP server support via HTTPS.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "go to System settings > API Keys and click the 'GENERATE API KEY' button",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.67,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

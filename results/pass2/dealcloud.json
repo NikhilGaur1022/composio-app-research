@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "result": {
+    "access": "admin_approval",
+    "api_breadth": "unknown",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "blocker": "enterprise_only",
+    "confidence": 0.68,
+    "docs_url": "https://api.docs.dealcloud.com",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "The client application sends a POST request to the token endpoint, providing its `client_id`, `apiKey`, and the required `scope(s)`."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "The client includes this token in the `Authorization` header for subsequent API requests `Authorization: Bearer {{token}}`."
+      },
+      {
+        "field": "access",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions. Navigate to Admin > User Management, select the relevant user group, go to Capabilities > Site Areas, and enable \"API\"."
+      },
+      {
+        "field": "access",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "Once user permissions are set, click the User icon at the top-right of your DealCloud screen and select Profile. Scroll down to the API Key section and click Enable."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/jstewartrr/infra-20251230-mcp-dealcloud",
+        "quote": "jstewartrr/infra-20251230-mcp-dealcloud (0★)"
+      },
+      {
+        "field": "verdict",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "ensure the intended user is assigned to a user group with the appropriate permissions"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/jstewartrr/infra-20251230-mcp-dealcloud"
+    },
+    "notes": "DealCloud is an enterprise CRM sold as a paid platform (no self-serve free dev signup). API credentials (client_id + apiKey) are obtained from within an existing DealCloud tenant: an admin must enable the \\\"API\\\" capability for a user group, then the individual user self-enables their own API key in their Profile page. Auth uses OAuth2 client-credentials-style flow: POST client_id+apiKey to /api/rest/v1/oauth/token to get a short-lived (900s) bearer token used as Authorization: Bearer. No evidence of a vendor-published MCP server; only a low-star community repo found. API endpoint count not verified (docs site includes REST guides, Python/C# SDKs, and a separate User Management API section) so breadth is unknown from the pages fetched.",
+    "one_liner": "DealCloud is an enterprise deal/relationship-management CRM (used by PE, IB, and M&A firms) offering a REST API for data and workflow integration.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.1466164,
+  "turns": 7,
+  "seconds": 40.0,
+  "is_error": false,
+  "error": null
+}

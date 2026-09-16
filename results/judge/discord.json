@@ -1,0 +1,73 @@
+{
+  "name": "Discord",
+  "checked": 6,
+  "grounded": 4,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "access",
+      "url": "https://docs.discord.com/developers/topics/oauth2",
+      "quote": "The first step in implementing OAuth2 is registering a developer application and retrieving your client ID and client secret.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/reference",
+      "quote": "Using a bot token found on the Bot page within your app's settings.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/reference",
+      "quote": "Using an OAuth2 bearer token gained through the OAuth2 API.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/topics/oauth2",
+      "quote": "All OAuth2 token endpoints require either HTTP Basic authentication or credentials supplied in the form data body",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.741
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/SaseQ/discord-mcp",
+      "quote": "SaseQ/discord-mcp (493 stars) - community-maintained MCP server for Discord",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.519
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.discord.com/developers/topics/oauth2",
+      "quote": "Bot users are automatically added to all apps, and are authenticated using the bot token found in your app's settings.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.67,
+  "by_field": {
+    "access": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

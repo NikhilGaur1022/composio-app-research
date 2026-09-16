@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key"
+    ],
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://developer.systeme.io/reference",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.systeme.io/reference",
+        "quote": "attach your API key to the X-API-Key header of each request"
+      },
+      {
+        "field": "access",
+        "url": "https://systeme.io/pricing",
+        "quote": "the free plan never expires and does not require a credit card"
+      },
+      {
+        "field": "access",
+        "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+        "quote": "Give your key a name, set an expiration date, and click Save"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developer.systeme.io/llms.txt",
+        "quote": "Contact - Create, retrieve, update, delete, and list"
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+        "quote": "This is an initial release implementation and does not yet support the recommended authentication method (OAuth)."
+      },
+      {
+        "field": "verdict",
+        "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+        "quote": "API calls from a server-side environment"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.systeme.io/mcp"
+    },
+    "notes": "Public REST API (developer.systeme.io/reference, ~40 resources x CRUD = roughly 100-150 endpoints, so medium breadth) authenticated via X-API-Key header; keys are self-generated in dashboard Settings > MCP & API keys with no approval step, and the free plan (no credit card required) includes API/MCP key generation. Separately, systeme.io ships an official MCP server (mcp.systeme.io/mcp) authenticated with a key-based scheme (OAuth explicitly not yet supported per their docs), covering contacts, tags, and newsletters. No OAuth2/JWT/basic documented for the public API — key-only auth today.",
+    "one_liner": "systeme.io is an all-in-one funnel builder and marketing platform (funnels, email campaigns, courses, ecommerce) offering a self-serve REST API and an official MCP server.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.23809080000000002,
+  "turns": 10,
+  "seconds": 80.4,
+  "is_error": false,
+  "error": null
+}

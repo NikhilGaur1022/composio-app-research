@@ -1,0 +1,95 @@
+{
+  "name": "YouTube Transcript",
+  "checked": 8,
+  "grounded": 4,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://transcriptapi.com",
+      "quote": "Authorization: Bearer API_KEY",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://transcriptapi.com/api/v2/youtube/transcript",
+      "quote": "www-authenticate: Bearer",
+      "status": 401,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://transcriptapi.com",
+      "quote": "100 free credits to try the API — no card required.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://transcriptapi.com",
+      "quote": "Monthly: $5/month (1,000 credits/month)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.645
+    },
+    {
+      "field": "api_type",
+      "url": "https://transcriptapi.com",
+      "quote": "REST API with HTTP endpoints (curl examples provided throughout documentation).",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.429
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://transcriptapi.com",
+      "quote": "Get Transcripts, Search YouTube, Search Within Channels, Browse Channel Videos, Track New Uploads (RSS), Extract Playlist Videos, Resolve Channel Handles",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.527
+    },
+    {
+      "field": "mcp",
+      "url": "https://transcriptapi.com",
+      "quote": "claude mcp add --transport http transcript-api https://transcriptapi.com/mcp",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://transcriptapi.com",
+      "quote": "100 free credits to try the API — no card required.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.5,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "A graph database platform with REST and GraphQL APIs for building connected data applications.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "basic",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "docs_url": "https://neo4j.com/docs/api",
+    "mcp": {
+      "status": "official",
+      "url": "https://neo4j.com/docs/mcp/current/"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "To authenticate API requests to the Aura API, you must provide a Bearer Token in the Authorization header"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "use the /oauth/token endpoint to obtain a Bearer Token, with authentication using HTTP Basic Authentication"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://neo4j.com/docs/aura/api/authentication/",
+        "quote": "Basic authentication follows the RFC 7617 standard format"
+      },
+      {
+        "field": "access",
+        "url": "https://neo4j.com/pricing/",
+        "quote": "AuraDB Free tier is for learning and exploration with no credit card required"
+      },
+      {
+        "field": "api_type",
+        "url": "https://neo4j.com/docs/rest-docs/current/",
+        "quote": "The REST API allows setting properties on nodes and relationships through direct RESTful operations"
+      },
+      {
+        "field": "api_type",
+        "url": "https://neo4j.com/docs/graphql/current/",
+        "quote": "Neo4j GraphQL Library is a highly flexible, low-code, open source JavaScript library"
+      },
+      {
+        "field": "mcp",
+        "url": "https://neo4j.com/docs/mcp/current/authentication/",
+        "quote": "Neo4j MCP provides official Model Context Protocol support for Neo4j"
+      }
+    ],
+    "confidence": 0.75,
+    "notes": "API breadth unknown from search results. REST API is deprecated (removed in Neo4j 4.0) but still documented. GraphQL is the modern approach. Confidence reduced due to inability to verify exact endpoint counts and some auth details from snippets alone."
+  },
+  "cost_usd": 0.11080219999999999,
+  "turns": 6,
+  "seconds": 30.3,
+  "is_error": false,
+  "error": null
+}

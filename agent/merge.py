@@ -109,8 +109,9 @@ def merge_app(app, registry, probes, pass1, pass2, judge) -> dict:
     access, access_agree, _ = _vote(votes)
     access = access or "no_public_api"
     sources["access"] = {s: v for s, v, _ in votes}
+    notes_auto = []
     if r1.get("access") and r2.get("access") and r1["access"] != r2["access"]:
-        reasons.append(f"pass1/pass2 disagree on access ({r1['access']} vs {r2['access']})")
+        notes_auto.append(f"pass1/pass2 disagree on access ({r1['access']} vs {r2['access']})")
 
     # ---- api_type ----
     votes = []
@@ -171,7 +172,11 @@ def merge_app(app, registry, probes, pass1, pass2, judge) -> dict:
     score, verdict = buildability(access, api_type, breadth, auth, mcp_status, blocker)
     model_verdict = r2.get("verdict")
     if model_verdict and model_verdict != verdict:
-        reasons.append(f"formula verdict {verdict} != model verdict {model_verdict}")
+        # one band apart is normal (formula is stricter); two bands apart means the inputs conflict
+        if {model_verdict, verdict} == {"green", "red"}:
+            reasons.append(f"formula verdict {verdict} != model verdict {model_verdict}")
+        else:
+            notes_auto.append(f"formula verdict {verdict}, model said {model_verdict}")
 
     # ---- confidence ----
     grounding = (judge or {}).get("grounding_rate")
@@ -188,8 +193,8 @@ def merge_app(app, registry, probes, pass1, pass2, judge) -> dict:
         reasons.append(f"only {int(grounding * 100)}% of quotes grounded in cited pages")
     if checked and unreachable > checked:
         reasons.append("most cited pages unreachable")
-    if access in ("partner_gated", "no_public_api") and confidence < 0.8:
-        reasons.append("gated/no-API finding needs a human eye")
+    if access in ("partner_gated", "no_public_api") and (grounding is None or grounding < 0.75):
+        reasons.append("gated/no-API finding with weak grounding needs a human eye")
     needs_human = confidence < 0.6 or bool(reasons)
 
     evidence = []
@@ -211,7 +216,7 @@ def merge_app(app, registry, probes, pass1, pass2, judge) -> dict:
         "docs_url": r2.get("docs_url") or r1.get("docs_url") or "",
         "mcp": {"status": mcp_status, "url": mcp_url}, "verdict": verdict, "score": score, "blocker": blocker,
         "model_verdict": model_verdict, "confidence": confidence, "agreement": round(agreement, 2), "grounding_rate": grounding,
-        "needs_human": needs_human, "needs_human_reasons": reasons, "sources": sources, "evidence": evidence,
+        "needs_human": needs_human, "needs_human_reasons": reasons, "auto_notes": notes_auto, "sources": sources, "evidence": evidence,
         "composio": {"in_catalog": bool(comp.get("found")), "slug": comp.get("slug"), "tools": comp.get("tools"),
                      "auth": comp.get("auth"), "auth_agrees": (bool(set(comp.get("auth") or []) & set(auth)) if comp.get("found") else None),
                      "url": comp.get("url")},

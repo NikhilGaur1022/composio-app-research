@@ -1,0 +1,161 @@
+{
+  "id": 18,
+  "name": "Help Scout",
+  "category": "Support and Helpdesk",
+  "hint": "helpscout.com",
+  "one_liner": "Help Scout is a customer support helpdesk platform (shared inbox, live chat, knowledge base, and Docs) for small-to-mid-size support teams.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developer.helpscout.com/mailbox-api/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/drewburchfield/help-scout-mcp-server"
+  },
+  "verdict": "yellow",
+  "score": 90,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.77,
+  "agreement": 0.89,
+  "grounding_rate": 0.57,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs self_serve_trial)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "oauth2"
+      ],
+      "pass1": [
+        "basic",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_trial",
+      "pass1": "paid_plan"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass2": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "github": "community",
+      "pass2": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+      "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+      "quote": "You need to create an OAuth2 application before you can use the API. Create one by navigating to Your Profile > My apps and click Create My App.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.helpscout.com/mailbox-api/",
+      "quote": "This is an HTTPS-only API, with OAuth 2 authentication and CORS support running at: https://api.helpscout.net/v2",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server",
+      "quote": "An MCP server that gives AI assistants direct access to your Help Scout inboxes, conversations, customers, organizations, threads, and Docs knowledge base.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "When you sign up for a free trial of the Standard or Plus plan, you'll get 15 days to take all of the plan's features for a test drive — no credit card required.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "200 calls/minute",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "Want to trial the Pro plan? Talk to our sales team.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/help_scout",
+      "quote": "Composio catalog: auth ['OAUTH2'], 129 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.helpscout.net/v2/conversations",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer realm=\"service\"; body: {\"error_description\":\"The access token is missing\",\"error\":\"invalid_request\"} ",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "HELP_SCOUT",
+    "tools": 129,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/help_scout"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Bearer realm=\"service\"",
+    "inferred": "bearer_token"
+  },
+  "notes": "Official OAuth2-only REST API (Authorization Code + Client Credentials flows) at api.helpscout.net/v2, covering conversations, customers, inboxes, organizations, reports, users, teams, webhooks, workflows, tags, ratings (medium breadth). API access requires a paid Standard/Plus/Pro subscription, but Help Scout offers a 15-day no-credit-card free trial on Standard/Plus during which a developer can create an OAuth2 app and get working credentials — hence self_serve_trial rather than paid_plan. No official MCP server; several community/third-party MCP servers exist on GitHub (most-starred: drewburchfield/help-scout-mcp-server, 47★), explicitly not affiliated with Help Scout. Composio also wraps the API via OAuth2 (129 tools), consistent with rest/medium breadth.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "basic"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.344
+}

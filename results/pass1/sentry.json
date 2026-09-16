@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Error tracking and performance monitoring platform with REST API and official MCP server for AI agents.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://docs.sentry.io/api/",
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.sentry.dev/"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "All requests to the Sentry REST API must include an Authorization header with a Bearer token"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.sentry.io/account/auth-tokens/",
+        "quote": "Personal tokens can be created by any user within Sentry on the 'User settings' page"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.sentry.io/api/auth/",
+        "quote": "Sentry supports OAuth2 with the authorization code grant type"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.sentry.io/account/auth-tokens/",
+        "quote": "Personal tokens can be created by any user"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/getsentry/sentry-mcp",
+        "quote": "The official Sentry MCP server is a first-party remote server hosted by Sentry at https://mcp.sentry.dev/"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.sentry.io/api/",
+        "quote": "Official Sentry REST API documentation"
+      }
+    ],
+    "confidence": 0.9,
+    "notes": "Sentry provides self-serve free access to API credentials through personal tokens and internal integrations. OAuth2, bearer tokens, and API keys are all supported authentication methods. Official MCP server at mcp.sentry.dev provides remote access for AI agents. REST is the primary API type. Endpoint count not determined. Verdict is green - buildable agent toolkit with self-serve free credentials and official MCP integration."
+  },
+  "cost_usd": 0.2542623,
+  "turns": 3,
+  "seconds": 59.3,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,84 @@
+{
+  "name": "Help Scout",
+  "checked": 7,
+  "grounded": 4,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+      "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+      "quote": "You need to create an OAuth2 application before you can use the API. Create one by navigating to Your Profile > My apps and click Create My App.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.helpscout.com/mailbox-api/",
+      "quote": "This is an HTTPS-only API, with OAuth 2 authentication and CORS support running at: https://api.helpscout.net/v2",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "When you sign up for a free trial of the Standard or Plus plan, you'll get 15 days to take all of the plan's features for a test drive — no credit card required.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.384
+    },
+    {
+      "field": "access",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "200 calls/minute",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.helpscout.com/pricing/",
+      "quote": "Want to trial the Pro plan? Talk to our sales team.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.443
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server",
+      "quote": "An MCP server that gives AI assistants direct access to your Help Scout inboxes, conversations, customers, organizations, threads, and Docs knowledge base.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.57,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
+}

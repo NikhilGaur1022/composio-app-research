@@ -1,0 +1,145 @@
+{
+  "id": 19,
+  "name": "Gorgias",
+  "category": "Support and Helpdesk",
+  "hint": "gorgias.com",
+  "one_liner": "Gorgias is an e-commerce-focused helpdesk/support platform with a REST API for tickets, customers, macros, and integrations.",
+  "auth_methods": [
+    "api_key",
+    "basic",
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developers.gorgias.com/reference/introduction",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/mattcoatsworth/Gorgias-MCP-Server"
+  },
+  "verdict": "green",
+  "score": 86,
+  "blocker": "none",
+  "model_verdict": "yellow",
+  "confidence": 0.73,
+  "agreement": 0.93,
+  "grounding_rate": 0.57,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "formula verdict green, model said yellow"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "basic",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_trial",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass2": "medium"
+    },
+    "mcp": {
+      "pass2": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.gorgias.com/docs/authentication",
+      "quote": "Using OAuth2 is mandatory for public apps.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.gorgias.com/docs/authentication",
+      "quote": "perform requests directly from the API Reference using your API keys",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.gorgias.com/reference/introduction",
+      "quote": "uses standard HTTP response codes, authentication, and verbs",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.gorgias.com/signup?ref-position=other",
+      "quote": "Get Started with Free Trial",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.gorgias.com/llms.txt",
+      "quote": "Account, Customers, Custom Fields, Events, Files, Integrations, Jobs, Macros, Metric Cards, Rules, Satisfaction Surveys, Search, Statistics, Tags, Teams, Tickets, Ticket Messages, Users, Views, Voice Calls, Widgets",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.gorgias.com/pricing",
+      "quote": "Developer Docs",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/mattcoatsworth/Gorgias-MCP-Server",
+      "quote": "Gorgias-MCP-Server (4★)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/gorgias",
+      "quote": "Composio catalog: auth ['API_KEY', 'OAUTH2'], 32 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "GORGIAS",
+    "tools": 32,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/gorgias"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 404,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Private-app API keys (HTTP Basic auth: email + API key) are obtainable directly from any Gorgias account (trial or paid) via account settings, no app review needed — this is the self-serve path most agent toolkits would use. Public/marketplace apps additionally require OAuth2 and are implied to need a listing process, but no explicit review/approval page was found in this pass (would need to check developers.gorgias.com/docs/set-up-oauth2-app-store for confirmation). Pricing page did not explicitly state which tiers include API access; rate limits (40-80 req/20s per third-party source) suggest it's broadly available rather than gated to a specific paid tier. No official vendor-published MCP server found; several community GitHub MCP servers and a Composio-wrapped toolkit (32 tools, api_key+oauth2) exist.",
+  "pass1": null,
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "oauth2"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "none",
+    "confidence": 0.62
+  },
+  "cost_usd": 0.31
+}

@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Google's AI research tool that generates summaries, podcasts, and study guides from documents, with enterprise API access only",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-notebooklm",
+    "mcp": {
+      "status": "community"
+    },
+    "verdict": "red",
+    "blocker": "no_public_api",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-notebooklm",
+        "quote": "you need a Google Cloud project with the NotebookLM Enterprise API enabled and either gcloud auth login or an OAuth token"
+      },
+      {
+        "field": "access",
+        "url": "https://autocontentapi.com/blog/does-notebooklm-have-an-api",
+        "quote": "The consumer NotebookLM product does not provide a self-serve public API key. Access is restricted to enterprise customers"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Create and manage notebooks (API) | Gemini Notebook Enterprise"
+      },
+      {
+        "field": "mcp",
+        "url": "https://lobehub.com/mcp/ray-manaloto-notebooklm-claude-integration",
+        "quote": "NotebookLM Claude Integration MCP Server provides comprehensive tools via open-source MCP standard (community implementations)"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Consumer NotebookLM has no official public API. Enterprise access requires Google Cloud project and admin approval. Community-built MCP servers exist but are unofficial. Enterprise API is preview-stage. No self-serve developer onboarding available."
+  },
+  "cost_usd": 0.099991,
+  "turns": 5,
+  "seconds": 27.3,
+  "is_error": false,
+  "error": null
+}

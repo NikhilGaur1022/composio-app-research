@@ -1,0 +1,75 @@
+{
+  "name": "Front",
+  "checked": 6,
+  "grounded": 5,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "access",
+      "url": "https://dev.frontapp.com/docs/welcome",
+      "quote": "You'll get access to a free developer environment that will provide everything you need to begin building with our APIs.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "The Core API uses Bearer tokens to authenticate its user. You MUST send the token for each request in the Authorization header.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "Front recommends implementing OAuth when feasible, which has the additional benefit of building within our application framework.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://dev.frontapp.com/reference/introduction",
+      "quote": "REST API designed to communicate using JSON for request and response handling.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.667
+    },
+    {
+      "field": "mcp",
+      "url": "https://dev.frontapp.com/docs/mcp-server",
+      "quote": "Front's MCP server (mcp.frontapp.com/mcp) lets AI agents act on Front conversation data using a single OAuth-authenticated endpoint.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 0.883
+    },
+    {
+      "field": "verdict",
+      "url": "https://dev.frontapp.com/docs/welcome",
+      "quote": "You'll get access to a free developer environment that will provide everything you need to begin building with our APIs.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.83,
+  "by_field": {
+    "access": [
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

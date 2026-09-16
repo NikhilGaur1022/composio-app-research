@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://docs.reducto.ai/get-started/quickstart",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://docs.reducto.ai/get-started/quickstart",
+        "quote": "Go to studio.reducto.ai and sign up for a free account."
+      },
+      {
+        "field": "access",
+        "url": "https://reducto.ai/pricing",
+        "quote": "Free$150 in free usage"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.reducto.ai/get-started/quickstart",
+        "quote": "Authorization: Bearer $REDUCTO_API_KEY"
+      },
+      {
+        "field": "api_type",
+        "url": "https://platform.reducto.ai/openapi.json",
+        "quote": "/parse, /extract, /split, /edit, /pipeline, /classify, /job/{job_id}, /upload"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://platform.reducto.ai/openapi.json",
+        "quote": "18 distinct paths including /parse, /parse_async, /extract, /split, /edit, /pipeline, /classify, /job/{job_id}, /upload"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.reducto.ai/mcp-server",
+        "quote": "The hosted server runs at https://mcp.reducto.ai/mcp, and you can add this to your MCP client config by replacing your-api-key with a key from studio.reducto.ai/api-keys."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.reducto.ai/get-started/quickstart",
+        "quote": "Go to studio.reducto.ai and sign up for a free account."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.reducto.ai/mcp-server"
+    },
+    "notes": "Self-serve free account at studio.reducto.ai grants an API key immediately (bearer token auth), with $150 free usage credit before paid rates ($10/1k pages parse, $20/1k pages extract) apply. REST API is small (~18 paths) covering parse/extract/split/edit/classify/pipeline plus job/upload management. Official vendor-published MCP server (reductoai/mcp-server-reducto) is hosted at mcp.reducto.ai and uses the same API key. Higher tiers (Growth/Enterprise) require sales contact but are not needed for basic agent-toolkit buildability.",
+    "one_liner": "Reducto is a document parsing/extraction API that converts PDFs and complex documents into structured, LLM-ready data.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.16754739999999999,
+  "turns": 7,
+  "seconds": 34.5,
+  "is_error": false,
+  "error": null
+}

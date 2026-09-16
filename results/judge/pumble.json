@@ -1,0 +1,86 @@
+{
+  "name": "Pumble",
+  "checked": 7,
+  "grounded": 6,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "access",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "Available on all plans",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "This message is not visible to other users.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "enter your API key in the Authorize part",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://pumble-api-keys.addons.marketplace.cake.com/api-docs/",
+      "quote": "Scalar API Reference",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/pumble",
+      "quote": "tools: 9",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://pumble.com/learn/pumble/ai-automation-guide/",
+      "quote": "Pumble maintains a native MCP (Model Context Protocol) server hosted directly at pumble.com, helping you connect your workspace to your AI agent of choice.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "The rate limit is up to 1000 requests per minute per user.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.86,
+  "by_field": {
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "auth_methods": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

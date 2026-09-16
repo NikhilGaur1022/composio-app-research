@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Airtable is a spreadsheet-database hybrid that provides a REST API for programmatic access to bases, tables, records, and fields.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://airtable.com/developers/web/api/introduction",
+    "mcp": {
+      "status": "unknown"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.92,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+        "quote": "Personal Access Tokens are a granular authentication method that replaces legacy API keys by allowing developers to grant specific, time-bound, and scoped permissions to external applications. PATs utilize the OAuth 2.0 framework."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api",
+        "quote": "OAuth2 is a protocol that allows applications to request authorization to access details from an Airtable user's account without getting their password."
+      },
+      {
+        "field": "access",
+        "url": "https://support.airtable.com/docs/airtable-plans",
+        "quote": "Airtable API access is included with all plans, including the free tier."
+      },
+      {
+        "field": "access",
+        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+        "quote": "Create a personal access token in the Builder/Developer hub by clicking your profile avatar in the top-right and choosing Builder hub."
+      },
+      {
+        "field": "api_type",
+        "url": "https://airtable.com/developers/web/api/introduction",
+        "quote": "The Airtable API closely follows REST semantics, uses JSON to encode objects, and relies on standard HTTP codes to signal operation outcomes."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api",
+        "quote": "The Airtable Web API can be used to list, create, update, and delete records across your bases, as well as create and update fields, tables, and bases programmatically."
+      }
+    ],
+    "notes": "Airtable deprecated legacy API keys on February 1, 2024 in favor of Personal Access Tokens (PATs) and OAuth2. Both authentication methods are self-serve and available on the free tier with a rate limit of 5 requests per second per base. The REST API provides comprehensive CRUD operations and schema introspection capabilities."
+  },
+  "cost_usd": 0.11332549999999998,
+  "turns": 6,
+  "seconds": 29.3,
+  "is_error": false,
+  "error": null
+}

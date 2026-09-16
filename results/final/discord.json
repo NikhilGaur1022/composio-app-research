@@ -1,0 +1,163 @@
+{
+  "id": 26,
+  "name": "Discord",
+  "category": "Communications and Messaging",
+  "hint": "discord.com",
+  "one_liner": "Discord is a voice/text/community chat platform with a REST API and Gateway websocket for building bots and integrations.",
+  "auth_methods": [
+    "basic",
+    "bearer_token",
+    "oauth2",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://docs.discord.com/developers/reference",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/SaseQ/discord-mcp"
+  },
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.85,
+  "agreement": 1.0,
+  "grounding_rate": 0.67,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "basic",
+        "bearer_token",
+        "oauth2",
+        "other"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass2": "large",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "community",
+      "pass1": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://docs.discord.com/developers/topics/oauth2",
+      "quote": "The first step in implementing OAuth2 is registering a developer application and retrieving your client ID and client secret.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/reference",
+      "quote": "Using a bot token found on the Bot page within your app's settings.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/reference",
+      "quote": "Using an OAuth2 bearer token gained through the OAuth2 API.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.discord.com/developers/topics/oauth2",
+      "quote": "Bot users are automatically added to all apps, and are authenticated using the bot token found in your app's settings.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/topics/oauth2",
+      "quote": "All OAuth2 token endpoints require either HTTP Basic authentication or credentials supplied in the form data body",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/SaseQ/discord-mcp",
+      "quote": "SaseQ/discord-mcp (493 stars) - community-maintained MCP server for Discord",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/discord",
+      "quote": "Composio catalog: auth ['OAUTH2'], 28 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://discord.com/api/v10/users/@me",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"message\": \"401: Unauthorized\", \"code\": 0}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "DISCORD",
+    "tools": 28,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/discord"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Discord's developer portal (discord.com/developers/applications) lets anyone register an application and generate a bot token / OAuth2 client credentials for free, no approval gate for standard bot/API scopes (privileged intents like message content require a form but not blocking basic API access). API is REST with a large surface (guilds, channels, users, webhooks, interactions, etc., several hundred endpoints) plus a Gateway websocket for real-time events. No official vendor-published MCP server found; several community MCP servers exist (SaseQ/discord-mcp, moltis, gortex, Smithery listings).",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "basic",
+      "other"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.244
+}

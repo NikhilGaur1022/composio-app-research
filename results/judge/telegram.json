@@ -1,0 +1,104 @@
+{
+  "name": "Telegram",
+  "checked": 9,
+  "grounded": 7,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "Each bot is given a unique authentication token when it is created.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "https://api.telegram.org/bot<token>/METHOD_NAME",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://core.telegram.org/api/obtaining_api_id",
+      "quote": "You will get basic addresses as well as the api_id and api_hash parameters required for user authorization",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "Each bot is given a unique authentication token when it is created.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://core.telegram.org/api/obtaining_api_id",
+      "quote": "Sign up for Telegram using an official application. Log in to your Telegram core: https://my.telegram.org",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/telegram.org/5.0.0/openapi.json",
+      "quote": "74 endpoints",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/chigwell/telegram-mcp",
+      "quote": "chigwell/telegram-mcp (1618★)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.537
+    },
+    {
+      "field": "verdict",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "Each bot is given a unique authentication token when it is created.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.78,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

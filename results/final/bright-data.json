@@ -1,0 +1,104 @@
+{
+  "id": 57,
+  "name": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "hint": "brightdata.com",
+  "one_liner": "Bright Data is a web data collection platform providing residential proxies, datacenter proxies, SERP API, and web scraping services.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://docs.brightdata.com",
+  "mcp": {
+    "status": "none",
+    "url": "https://github.com/arjunprabhulal/adk-mcp-brightdata"
+  },
+  "verdict": "green",
+  "score": 88,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass1": [
+        "api_key",
+        "basic",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/brightdata",
+      "quote": "Composio catalog: auth ['API_KEY'], 10 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.brightdata.com/zone",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: Credentials are invalid",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "BRIGHTDATA",
+    "tools": 10,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/brightdata"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Bright Data offers automatic free trial (14-30 days) and recurring 5,000 credits/month free tier for Web Unlocker, SERP API, Web Scraper, and Scraper Studio. Self-serve signup with immediate API access. Usage-based pricing for additional credits.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.114
+}

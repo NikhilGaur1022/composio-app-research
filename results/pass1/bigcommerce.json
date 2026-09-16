@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "BigCommerce is a fully-hosted ecommerce platform providing REST and GraphQL APIs for building storefronts and integrations.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://developer.bigcommerce.com/docs/start/authentication",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.72,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.bigcommerce.com/docs/start/authentication",
+        "quote": "BigCommerce offers three types of OAuth-based API accounts"
+      },
+      {
+        "field": "access",
+        "url": "https://www.bigcommerce.com/essentials/pricing/",
+        "quote": "BigCommerce offers a fully functional 15-day free trial, during which you can test drive BigCommerce"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.bigcommerce.com/docs/api",
+        "quote": "BigCommerce's GraphQL Storefront API has one single endpoint: /graphql. REST APIs use multiple endpoints organized by resource type"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developer.bigcommerce.com/docs/api",
+        "quote": "Enterprise plan includes unlimited API calls for automation and integrated workflows across REST and GraphQL APIs"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.bigcommerce.com/essentials/pricing/",
+        "quote": "API access varies by plan. Enterprise requires conversation for unlimited API access. Different plans have different API limitations"
+      }
+    ],
+    "notes": "BigCommerce requires a paid subscription after the 15-day trial to maintain API access. OAuth2 is the documented authentication method. Both REST and GraphQL APIs are available. API rate limits and feature access vary by subscription tier. For a free developer account with persistent API access, a paid plan would be required."
+  },
+  "cost_usd": 0.1172936,
+  "turns": 8,
+  "seconds": 46.2,
+  "is_error": false,
+  "error": null
+}

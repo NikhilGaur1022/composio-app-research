@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Meta Marketing API lets developers programmatically create, manage, and report on Facebook and Instagram ad campaigns, ad sets, creatives, audiences, and insights.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://developers.facebook.com/docs/marketing-apis",
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/pipeboard-co/meta-ads-mcp"
+    },
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+        "quote": "If you're managing someone's ads, use the `scope` parameter to prompt them for the `ads_management` or `ads_read` permissions."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://graph.facebook.com/v21.0/me/adaccounts",
+        "quote": "OAuth \"Facebook Platform\" \"invalid_request\" \"An active access token must be used to query information about the current user.\""
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/permissions/reference/ads_management",
+        "quote": "Business Verification is required for all apps making requests for Advanced Access."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/app-review",
+        "quote": "If your app will be used by anyone without a Role on the app or a role in a Business that has claimed the app, it must first undergo App Review."
+      },
+      {
+        "field": "api_type",
+        "url": "https://graph.facebook.com/v21.0/me/adaccounts",
+        "quote": "{\"error\":{\"message\":\"An active access token must be used to query information about the current user.\",\"type\":\"OAuthException\",\"code\":2500,\"fbtrace_id\":\"A4Dg2mXdap5qxspBnE3BUSq\"}}"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/pipeboard-co/meta-ads-mcp",
+        "quote": "pipeboard-co/meta-ads-mcp (1261★)"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.facebook.com/docs/app-review",
+        "quote": "As part of the review process we will test your app to verify that it actually uses the permissions and features you are requesting."
+      }
+    ],
+    "confidence": 0.72,
+    "notes": "A developer can self-serve create an app and get OAuth access tokens for free to test against their own ad account (Standard Access, no review needed). Production use managing other businesses' ad accounts requires ads_management permission via Meta App Review plus Business Verification (Advanced Access), which is an approval gate rather than a paid tier. No official Meta-published MCP server found; several community MCP servers exist (e.g. pipeboard-co/meta-ads-mcp). API is REST over graph.facebook.com with hundreds of endpoints/fields across campaigns, ad sets, ads, creatives, audiences, catalogs, and insights."
+  },
+  "cost_usd": 0.183753,
+  "turns": 9,
+  "seconds": 73.1,
+  "is_error": false,
+  "error": null
+}

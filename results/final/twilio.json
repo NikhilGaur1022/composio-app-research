@@ -1,0 +1,182 @@
+{
+  "id": 22,
+  "name": "Twilio",
+  "category": "Communications and Messaging",
+  "hint": "twilio.com",
+  "one_liner": "Twilio is a cloud communications platform providing programmable APIs for SMS, voice, video, email, and messaging channels.",
+  "auth_methods": [
+    "api_key",
+    "basic"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://www.twilio.com/docs/iam/api",
+  "mcp": {
+    "status": "official",
+    "url": "https://www.twilio.com/docs/ai/mcp"
+  },
+  "verdict": "green",
+  "score": 92,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.8,
+  "agreement": 0.87,
+  "grounding_rate": 0.67,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (self_serve_free vs self_serve_trial)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "apis_guru_spec": [
+        "api_key"
+      ],
+      "unauth_probe": [
+        "basic"
+      ],
+      "pass2": [
+        "api_key",
+        "basic"
+      ],
+      "pass1": [
+        "api_key",
+        "basic",
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_trial",
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "pass2": "large",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.twilio.com/docs/iam/api",
+      "quote": "Use your API key SID as the username and your API key secret as the password.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+      "quote": "To authenticate requests to the Twilio APIs, use HTTP Basic authentication.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+      "quote": "Equivalent to using your Account SID and Auth Token for API requests.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/en-us/pricing",
+      "quote": "Sign up for a free trial—no credit card required",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.twilio.com/docs/ai/mcp",
+      "quote": "Twilio MCP server",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.twilio.com/docs/iam/api",
+      "quote": "You can create an API key in the Twilio Console or using the API.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.twilio.com/en-us/pricing",
+      "quote": "Start for free. Then pay as you go.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.twilio.com/2010-04-01/Accounts.json",
+      "quote": "Basic realm=\"Twilio API\"",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.twilio.com/en-us/blog/developers/introducing-twilio-mcp-skills",
+      "quote": "direct, structured access to Twilio's full API surface—over 1,800 endpoints across 30+ products",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/twilio.com/api/1.42.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 199 operations, securitySchemes ['basic']",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.twilio.com/2010-04-01/Accounts.json",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Basic realm=\"Twilio API\"; body: {\"code\":20003,\"message\":\"Authentication Error - No credentials provided\",\"more_info\":\"https://www.twilio.com/docs/errors/20003\",\"status\":401}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 199
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Basic realm=\"Twilio API\"",
+    "inferred": "basic"
+  },
+  "notes": "Twilio's REST API (Programmable Messaging, Voice, Verify, etc.) uses HTTP Basic auth with either Account SID+Auth Token or API Key SID+Secret (Main/Standard/Restricted key types) — no OAuth2 documented for the core REST API, though Twilio does support OAuth for some newer products (not verified here). Signup is fully self-serve with a no-credit-card free trial that grants trial credit; sending to unverified numbers is restricted until upgrading to a paid account, hence self_serve_trial rather than self_serve_free. Official vendor-hosted MCP server (mcp.twilio.com, docs at twilio.com/docs/ai/mcp) exposes the full API surface (1,800+ endpoints/30+ products) for docs/search; Twilio Labs also publishes a separate alpha local MCP server that can execute API calls. api_breadth marked large based on the 1,800+ endpoint figure from Twilio's own blog (apis.guru's 199-endpoint OpenAPI spec covers only a subset of one product family).",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "basic",
+      "api_key"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.88
+  },
+  "cost_usd": 0.293
+}

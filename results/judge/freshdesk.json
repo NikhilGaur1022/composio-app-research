@@ -1,0 +1,104 @@
+{
+  "name": "Freshdesk",
+  "checked": 9,
+  "grounded": 5,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "You can use your personal API key to authenticate the request. If you use the API key, there is no need for a password.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "curl -v -u apikey:X",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "Log in to your Support Portal. Click on your profile picture on the top right corner of your portal. Go to Profile settings Page. Your API key will be available below the change password section to yo",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "When you sign up, you instantly get access to our Enterprise plan for 14 days.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.407
+    },
+    {
+      "field": "access",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "Growth - $19/agent/month (billed annually)",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "Tickets (create, view, list, update, delete, merge, archive)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.634
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/freshdesk",
+      "quote": "178",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/effytech/freshdesk_mcp",
+      "quote": "An MCP server implementation that integrates with Freshdesk, enabling AI models to interact with Freshdesk modules and perform various support operations.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "When you sign up, you instantly get access to our Enterprise plan for 14 days.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.407
+    }
+  ],
+  "grounding_rate": 0.56,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "not_grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
+}

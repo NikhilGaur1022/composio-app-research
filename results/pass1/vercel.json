@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Vercel is a serverless platform for deploying and managing web applications with integrated CI/CD and edge functions.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://vercel.com/docs/rest-api",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+        "quote": "Include the token in the Authorization header: Authorization: Bearer <TOKEN>"
+      },
+      {
+        "field": "access",
+        "url": "https://vercel.com/kb/guide/how-do-i-use-a-vercel-api-access-token",
+        "quote": "Access Tokens can be created and managed from inside your account settings."
+      },
+      {
+        "field": "api_type",
+        "url": "https://vercel.com/docs/rest-api",
+        "quote": "All endpoints live under the URL https://api.vercel.com and follow the REST architecture"
+      },
+      {
+        "field": "verdict",
+        "url": "https://vercel.com/docs/rest-api/getting-started",
+        "quote": "Access Tokens are required to authenticate and use the Vercel API"
+      }
+    ],
+    "confidence": 0.88,
+    "notes": "Vercel provides a comprehensive REST API with bearer token authentication accessible to all users with Vercel accounts. Tokens can be created self-serve from account settings, making this suitable for agent toolkit development. API covers deployments, projects, domains, teams, and other platform management functions."
+  },
+  "cost_usd": 0.11241870000000001,
+  "turns": 7,
+  "seconds": 34.7,
+  "is_error": false,
+  "error": null
+}

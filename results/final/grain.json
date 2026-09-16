@@ -1,0 +1,133 @@
+{
+  "id": 100,
+  "name": "Grain",
+  "category": "AI, Research and Media-native",
+  "hint": "grain.com (meeting notes)",
+  "one_liner": "Grain is an AI meeting-recorder/notes platform whose public REST API (recordings, transcripts, notes, hooks) and official remote MCP server let developers pull meeting data and automate workflows.",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "paid_plan",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developers.grain.com/",
+  "mcp": {
+    "status": "community",
+    "url": "https://developers.grain.com/mcp"
+  },
+  "verdict": "yellow",
+  "score": 71,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.88,
+  "agreement": 0.94,
+  "grounding_rate": 0.86,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "paid_plan",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest"
+    },
+    "api_breadth": {
+      "pass2": "small"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Click here to generate a PAT.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Workspace API access is available on Business and Enterprise plans and requires admin access to generate.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Personal API access is available on Starter, Business, and Enterprise plans.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.grain.com/",
+      "quote": "https://api.grain.com",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.grain.com/mcp",
+      "quote": "Official Grain MCP Server: Quick Start Guide",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://support.grain.com/en/articles/15507288-grain-api",
+      "quote": "Personal API access is available on Starter, Business, and Enterprise plans.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://grain.com/release-note/06-18-2025",
+      "quote": "Grain's official MCP server",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.grain.com/_/public-api/recordings",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer resource_metadata=\"https://grain.com/.well-known/oauth-protected-resource\"; body: {\"error\":\"unauthorized\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Bearer resource_metadata=\"https://grain.com/.well-known/oauth-protected-resource\"",
+    "inferred": "bearer_token"
+  },
+  "notes": "Grain's public REST API requires a bearer token (Personal Access Token or Workspace Access Token, generated in account/workspace settings) or OAuth2 for third-party distributed integrations. No free tier: PAT access needs Starter plan or above; WAT needs Business/Enterprise and admin rights. All requests need a Public-Api-Version header (current: 2025-10-31). API surface is small (~20 endpoints: recordings, hooks/webhooks, users/teams/meeting types, OAuth token mgmt). Grain also ships an official hosted remote MCP server (https://api.grain.com/_/mcp) using OAuth, exposing meeting recordings/notes/transcripts/deals/coaching data with built-in report prompts — this MCP path could give agent builders a self-serve-ish route via OAuth without a paid PAT, but the underlying REST API itself is paid-gated.",
+  "pass1": null,
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.2
+}

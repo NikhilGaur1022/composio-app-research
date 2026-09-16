@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.72,
+    "docs_url": "https://docs.datadoghq.com/api/latest/",
+    "evidence": [
+      {
+        "field": "api_type",
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "an HTTP REST API"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "Manage your account's API and application keys in Datadog, and see the API and Application Keys page in the documentation."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.datadoghq.com/developers/authorization/oauth2_in_datadog/",
+        "quote": "create and configure your OAuth client in the Developer Platform"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+        "quote": "Navigate to Organization Settings, click the API keys tab, select \"New Key,\" enter a name, and click \"Create API key.\""
+      },
+      {
+        "field": "access",
+        "url": "https://www.datadoghq.com/pricing/",
+        "quote": "Core collection and visualization features ... Up to 5 hosts"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/winor30/mcp-server-datadog",
+        "quote": "winor30/mcp-server-datadog (143 stars, community-maintained)"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/winor30/mcp-server-datadog"
+    },
+    "notes": "API/application keys are self-serve: any signed-up account (including the free Infrastructure Monitoring tier, up to 5 hosts) can generate keys immediately from Organization Settings — no approval needed. OAuth2 is also documented (DD-API-KEY/DD-APPLICATION-KEY headers for standard auth; separate OAuth2 client flow for building published integrations via the Developer Platform, which is oriented at partners/integration builders but not required for basic API key access). No official Datadog-published MCP server was found; several community MCP servers exist (winor30, GeLi2001, datadog-labs, shelfio). API surface is very large (dozens of product categories: metrics, logs, monitors, dashboards, security, synthetics, RUM, SLOs, etc.), consistent with composio's report of 65 wrapped tools covering a subset.",
+    "one_liner": "Datadog is a cloud monitoring and security platform (infrastructure, APM, logs, RUM, security) with a large public REST API for querying and managing all its telemetry and configuration data.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.1890402,
+  "turns": 8,
+  "seconds": 66.8,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Smartsheet is a cloud-based project management and work collaboration platform for teams.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developers.smartsheet.com/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+        "quote": "Each API request requires passing in an access token as the Bearer value in your authorization header."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+        "quote": "OAuth 2.0 is the right choice for multi-user integrations, SaaS products, or anything where you're acting on behalf of other people's Smartsheet accounts."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+        "quote": "You need a Business, Enterprise, or Advanced Work Management plan"
+      },
+      {
+        "field": "access",
+        "url": "https://apidog.com/blog/smartsheet-api-guide/",
+        "quote": "API access is not available on the free tier or self-serve Pro plan"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "API access requires minimum Business plan subscription ($24.19/user/month). Free tier and Pro plans do not include API access. OAuth 2.0 and API key (bearer token) authentication are supported. Exact endpoint count unknown from available documentation."
+  },
+  "cost_usd": 0.1366981,
+  "turns": 6,
+  "seconds": 70.5,
+  "is_error": false,
+  "error": null
+}

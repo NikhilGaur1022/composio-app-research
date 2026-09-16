@@ -1,0 +1,178 @@
+{
+  "id": 2,
+  "name": "HubSpot",
+  "category": "CRM and Sales",
+  "hint": "hubspot.com",
+  "one_liner": "HubSpot is a CRM and sales/marketing platform with a broad REST (plus supplementary GraphQL) API for CRM objects, marketing, and CMS.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "large",
+  "docs_url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth",
+  "mcp": {
+    "status": "official",
+    "url": "https://developers.hubspot.com/ai-tools/mcp"
+  },
+  "verdict": "green",
+  "score": 100,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.9,
+  "agreement": 0.96,
+  "grounding_rate": 0.88,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "unauth_probe": [
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "rest_and_graphql",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass2": "large",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "official",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth",
+      "quote": "If you want to limit distribution of your app to a single authorized account, you'll use a static auth access token.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.hubspot.com/docs/guides/apps/private-apps/overview",
+      "quote": "When making a call to one of the HubSpot API endpoints, set the value of the Authorization field to Bearer [YOUR_TOKEN].",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.hubspot.com/get-started",
+      "quote": "Create developer account with a HubSpot Developer account",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.hubspot.com/changelog/graphql-live",
+      "quote": "GraphQL for CMS Developers is live for CMS Hub Pro and Enterprise",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.hubspot.com/ai-tools/mcp",
+      "quote": "HubSpot offers two distinct MCP (Model Context Protocol) servers — one for connecting any MCP-compatible AI tool or agent to your CRM...",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.hubspot.com/changelog/hubspot-developer-mcp-server-for-app-and-cms-development-now-in-ga",
+      "quote": "HubSpot Developer MCP server (local) for App and CMS Development Now in GA",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://api.hubapi.com/crm/v3/objects/contacts",
+      "quote": "This API supports OAuth 2.0 authentication and you can find more details at https://developers.hubspot.com/docs/methods/auth/oauth-ov",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth",
+      "quote": "If you plan to distribute your app to multiple accounts...your app must be built using OAuth authentication.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/hubspot",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 245 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.hubapi.com/crm/v3/objects/contacts",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"status\":\"error\",\"message\":\"Authentication credentials not found. This API supports OAuth 2.0 authentication and you can find more details at https://developers.hubspot.com/docs/methods/auth/oauth-ov",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "HUBSPOT",
+    "tools": 245,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/hubspot"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": "oauth2"
+  },
+  "notes": "HubSpot free developer accounts allow creating private apps (bearer token auth) or OAuth apps immediately, no sales contact required for base API access; higher-volume/enterprise scopes and marketplace listing require app review/OAuth. Two official vendor-published MCP servers exist (remote CRM MCP at mcp.hubspot.com, and local Developer MCP via HubSpot CLI), both GA as of Feb 2026. API is predominantly REST (v3, hundreds of endpoints across CRM/Marketing/CMS/etc.) with a supplementary GraphQL API for CRM/CMS data querying (CMS Hub Pro/Enterprise for some GraphQL features).",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.33599999999999997
+}

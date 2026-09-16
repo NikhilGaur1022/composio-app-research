@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Academic research paper search engine providing REST API access to 220+ million peer-reviewed papers with OAuth and API key authentication.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://docs.consensus.app/api-get-started",
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.consensus.app/docs/mcp"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://support.goconsensus.com/how-to-access-your-api-credentials",
+        "quote": "You can generate a new key through your Profile icon › API & MCP Dashboard › Keys and clients › New key, and send the key in the x-api-key header on every request"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.consensus.app/api-get-started",
+        "quote": "any application that needs to access the API on behalf of a user must implement OAuth. Access tokens expire after one hour"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.consensus.app/core-features/api",
+        "quote": "After a few months in closed beta with pharma teams, AI bio startups, and materials science groups, anyone can sign up and start building today"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.consensus.app/api-get-started",
+        "quote": "The academic search that powers Consensus, is now callable from your own systems with the Consensus REST API. search over 220 million peer-reviewed research papers"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.consensus.app/docs/mcp",
+        "quote": "The Consensus API & MCP are live"
+      }
+    ],
+    "confidence": 0.95,
+    "notes": "Consensus offers both API key and OAuth 2.0 authentication methods. API keys are self-serve and can be generated immediately from the dashboard. OAuth is required for applications accessing the API on behalf of users. Official MCP server is available. API endpoint count is not publicly disclosed."
+  },
+  "cost_usd": 0.1341387,
+  "turns": 5,
+  "seconds": 54.1,
+  "is_error": false,
+  "error": null
+}

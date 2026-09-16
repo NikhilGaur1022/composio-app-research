@@ -1,0 +1,104 @@
+{
+  "name": "iPayX",
+  "checked": 9,
+  "grounded": 0,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "Every request requires a Bearer token in the `Authorization` header. Keys start with `ipx_live_`.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "Method: HTTP Bearer token in `Authorization` header. Format: `ipx_live_xxxxx` (production)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.ipayx.ai/pricing",
+      "quote": "5 audits, lifetime",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.ipayx.ai/pricing",
+      "quote": "Banks and institutions: contact sales.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.282
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "POST /audit – Forensic analysis of individual transactions, returning a 0–10 score and hidden spread calculation",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "POST /audit ... GET /rates ... POST /audit/document",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.268
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "Production MCP: `https://hvujzsdwcoweirroubeh.supabase.co/functions/v1/mcp-server`",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "How to get a key: Open your iPayX dashboard → API keys",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "10 audits / day per API key (free)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.253
+    }
+  ],
+  "grounding_rate": 0.0,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
+}

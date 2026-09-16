@@ -1,0 +1,105 @@
+{
+  "id": 70,
+  "name": "Sentry",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.sentry.io/api",
+  "one_liner": "Error tracking and performance monitoring platform with REST API and official MCP server for AI agents.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://docs.sentry.io/api/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/getsentry/sentry-mcp"
+  },
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/sentry",
+      "quote": "Composio catalog: auth ['OAUTH2'], 211 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://sentry.io/api/0/projects/",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer realm=\"api\"; body: {\"detail\":\"Authentication credentials were not provided.\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "SENTRY",
+    "tools": 211,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/sentry"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Bearer realm=\"api\"",
+    "inferred": "bearer_token"
+  },
+  "notes": "Sentry provides self-serve free access to API credentials through personal tokens and internal integrations. OAuth2, bearer tokens, and API keys are all supported authentication methods. Official MCP server at mcp.sentry.dev provides remote access for AI agents. REST is the primary API type. Endpoint count not determined. Verdict is green - buildable agent toolkit with self-serve free credentials and official MCP integration.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.254
+}

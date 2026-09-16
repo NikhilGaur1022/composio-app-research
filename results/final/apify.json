@@ -1,0 +1,102 @@
+{
+  "id": 55,
+  "name": "Apify",
+  "category": "Data, SEO and Scraping",
+  "hint": "docs.apify.com",
+  "one_liner": "Web scraping, automation, and data extraction platform with pre-built actors and scrapers for social media, search engines, maps, and e-commerce sites",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://docs.apify.com/api",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/apify/apify-mcp-server"
+  },
+  "verdict": "green",
+  "score": 97,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.83,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/apify",
+      "quote": "Composio catalog: auth ['API_KEY'], 113 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.apify.com/v2/acts",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {   \"error\": {     \"type\": \"token-not-provided\",     \"message\": \"Authentication token was not provided\"   } }",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "APIFY",
+    "tools": 113,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/apify"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": "bearer_token"
+  },
+  "notes": "Apify offers a REST API with OAuth and bearer token authentication, a free tier with $5 monthly credits, and an official MCP server maintained by Apify at mcp.apify.com for direct AI agent integration.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.106
+}

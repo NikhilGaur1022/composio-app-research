@@ -1,0 +1,93 @@
+{
+  "name": "PitchBook",
+  "checked": 8,
+  "grounded": 5,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://api.pitchbook.com/api-docs",
+      "quote": "OpenAPI 3.0.1 specification ... security scheme called \"pbToken\" ... all endpoints require this authentication method",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.463
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+      "quote": "The API uses API key or token-based authentication.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+      "quote": "Existing PitchBook platform customers start in the Plugins & Apps section of the Platform sidebar. New customers contact the Direct Data team directly.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+      "quote": "There is no self-serve path, no free trial for the API.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+      "quote": "a separate enterprise contract on top of a platform subscription",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+      "quote": "A developer cannot evaluate the API's capabilities, request shapes, or response schemas without first signing a contract.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.pitchbook.com/api-docs",
+      "quote": "extensive endpoints across multiple categories including: Company data and search, Deal information and analytics, Patent records, Investor and fund data, Financial metrics and valuations, Social anal",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.396
+    },
+    {
+      "field": "mcp",
+      "url": "https://registry.modelcontextprotocol.io",
+      "quote": "no hits for pitchbook in MCP registry",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.368
+    }
+  ],
+  "grounding_rate": 0.62,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
+}

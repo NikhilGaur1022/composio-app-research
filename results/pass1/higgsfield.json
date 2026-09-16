@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "AI platform for generating images and videos with a REST API and CLI client.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://docs.higgsfield.ai/docs",
+    "mcp": {
+      "status": "official",
+      "url": "mcp.higgsfield.ai/mcp"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.higgsfield.ai/docs/authentication",
+        "quote": "Authorization header with the format 'Authorization: Key ${HF_API_KEY_ID}:${HF_API_KEY_SECRET}'"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.higgsfield.ai/docs/authentication",
+        "quote": "JWT tokens with Authorization: Bearer header format for CLI authentication"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://higgsfield.ai/cli",
+        "quote": "Sign in using email, Google, Apple, or Microsoft credentials"
+      },
+      {
+        "field": "access",
+        "url": "https://higgsfield.ai/pricing",
+        "quote": "Pricing plans: Basic $9, Starter $15, Plus $49, Ultra $129; 3-day MCP trial plan available"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.higgsfield.ai/docs",
+        "quote": "API access is tied to your Higgsfield account and plan"
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/cli",
+        "quote": "Higgsfield CLI and MCP server available for content automation"
+      }
+    ],
+    "confidence": 0.75,
+    "notes": "API requires paid plan subscription; free 3-day trial available for MCP. Supports multiple auth methods (OAuth2 via account creation, API key authentication, JWT bearer tokens). API breadth unknown from available documentation."
+  },
+  "cost_usd": 0.1094226,
+  "turns": 6,
+  "seconds": 28.9,
+  "is_error": false,
+  "error": null
+}

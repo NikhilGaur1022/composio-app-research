@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Comprehensive observability and monitoring platform providing REST and GraphQL APIs for metrics, logs, traces, and infrastructure monitoring.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://docs.datadoghq.com/api/latest/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/",
+        "quote": "API Key Method: Requests that write data require an API key. OAuth2 Method: Datadog access tokens are short-lived tokens with a time-to-live (TTL) of 1 hour that grant access to Datadog APIs."
+      },
+      {
+        "field": "access",
+        "url": "https://www.datadoghq.com/pricing/",
+        "quote": "The Free tier covers up to 5 hosts with core dashboards, 1,000-plus integrations, and one day of metric retention. Free tier exists primarily for proof-of-concept deployments."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.datadoghq.com/api/latest/",
+        "quote": "Datadog API is an HTTP REST API. Datadog GraphQL API offers flexible querying options for metrics, events, and logs."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.datadoghq.com/pricing/",
+        "quote": "Both Pro and Enterprise provide access to all monitoring products. Differences in SSO/SAML, custom RBAC, extended retention, and priority support."
+      }
+    ],
+    "confidence": 0.72,
+    "notes": "Datadog offers self-serve free tier for evaluation (proof-of-concept), but comprehensive API access for production use requires Pro or Enterprise paid plans. Free tier is severely limited (5 hosts, 1-day retention). API breadth estimated as large (>300 endpoints) based on platform comprehensiveness covering dashboards, alerts, monitors, metrics, logs, traces, synthetics, and infrastructure. OAuth2 and API keys are primary auth methods. No official MCP server found."
+  },
+  "cost_usd": 0.11089569999999999,
+  "turns": 6,
+  "seconds": 30.7,
+  "is_error": false,
+  "error": null
+}

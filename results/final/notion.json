@@ -1,0 +1,113 @@
+{
+  "id": 71,
+  "name": "Notion",
+  "category": "Productivity and Project Management",
+  "hint": "developers.notion.com",
+  "one_liner": "Notion is a workspace productivity platform that allows developers to programmatically access and manipulate databases, pages, blocks, and workspace content via API.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developers.notion.com",
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/makenotion/notion-next"
+  },
+  "verdict": "green",
+  "score": 93,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "small",
+      "composio_tools": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "official",
+      "github": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/notion",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 56 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 13 operations, securitySchemes []",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.notion.com/v1/users",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"object\":\"error\",\"status\":401,\"code\":\"unauthorized\",\"message\":\"Authorization header must use the format \\\"Bearer <token>\\\".\",\"request_id\":\"513335ce-d11f-460f-a41f-103410c109f2\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "NOTION",
+    "tools": 56,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/notion"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 13
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": "bearer_token"
+  },
+  "notes": "Notion API is free to use across all workspace tiers with rate limits of ~3 requests/second. OAuth is required for public integrations, while internal integrations can use bearer tokens. All three workspace plans (Free, Plus, Business, Enterprise) have full API access.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.128
+}

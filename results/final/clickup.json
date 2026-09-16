@@ -1,0 +1,108 @@
+{
+  "id": 77,
+  "name": "ClickUp",
+  "category": "Productivity and Project Management",
+  "hint": "clickup.com/api",
+  "one_liner": "Task management and team collaboration platform with REST API for automation and integrations.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developer.clickup.com/docs",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/taazkareem/clickup-mcp-server"
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "small",
+      "composio_tools": "large",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/clickup",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 164 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/clickup.com/1.0.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 2 operations, securitySchemes []",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "CLICKUP",
+    "tools": 164,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/clickup"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 2
+  },
+  "probe": {
+    "status": 400,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "ClickUp offers free tier access with self-serve personal API token generation from account settings. OAuth available for app integrations with workspace admin approval. REST API with endpoints organized by feature (Tasks, Lists, Spaces, Goals, etc.). Postman collection and OpenAPI spec available at developer.clickup.com.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.113
+}

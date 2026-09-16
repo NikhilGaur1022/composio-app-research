@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Time tracking and project management platform for teams to track work time, manage projects, and generate invoices.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://help.getharvest.com/api-v2/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "OAuth 2.0 (Authorization Code Flow and Implicit Grant Flow) and Personal Access Tokens"
+      },
+      {
+        "field": "access",
+        "url": "https://support.getharvest.com/hc/en-us/articles/360048180732-The-Harvest-API",
+        "quote": "The Harvest API is included with all subscription tiers (free, trial, and paid)"
+      },
+      {
+        "field": "api_type",
+        "url": "https://help.getharvest.com/api-v2/",
+        "quote": "REST v2 API with support for GET, POST, PUT, PATCH, DELETE operations"
+      }
+    ],
+    "confidence": 0.88,
+    "notes": "Harvest API is REST v2 with approximately 50+ endpoints covering Clients, Projects, Tasks, Time Entries, Expenses, Invoices, Estimates, Users, and Cost Rates. Available on all tiers including free. OAuth 2.0 and Personal Access Tokens supported. Permissions mirror account roles (Administrators: all access; Managers: projects/people they manage; Members: own data only). No official MCP server. Buildable immediately as a self-serve agent toolkit."
+  },
+  "cost_usd": 0.14663724999999997,
+  "turns": 3,
+  "seconds": 50.8,
+  "is_error": false,
+  "error": null
+}

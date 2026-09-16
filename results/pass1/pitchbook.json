@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Financial data platform providing REST API access to private market data including deals, investors, funds, and company information",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://pitchbook.com/help/PitchBook-api",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "red",
+    "blocker": "partner_gate",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "PitchBook authenticates requests using a static API key passed in the Authorization header with the format 'PB-Token {API_KEY}'"
+      },
+      {
+        "field": "access",
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "There is no free tier, no trial API access, and no way to estimate costs without engaging sales"
+      },
+      {
+        "field": "api_type",
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "PitchBook offers a RESTful JSON API. However, no GraphQL endpoint appears in any publicly available material"
+      },
+      {
+        "field": "verdict",
+        "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+        "quote": "API access requires a standalone contract separate from a standard platform subscription"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "PitchBook API is enterprise-only, requiring a separate Direct Data contract. Developer documentation is not publicly accessible. No self-serve signup, no sandbox without sales engagement."
+  },
+  "cost_usd": 0.1075044,
+  "turns": 6,
+  "seconds": 34.5,
+  "is_error": false,
+  "error": null
+}

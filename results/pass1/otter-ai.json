@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Otter AI is a meeting transcription and note-taking platform that converts audio conversations into searchable transcripts with AI-powered summaries and action items.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+    "mcp": {
+      "status": "official",
+      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "All API requests require authentication using Bearer token authentication"
+      },
+      {
+        "field": "access",
+        "url": "https://help.otter.ai/hc/en-us/articles/4412365535895-Does-Otter-offer-an-open-API",
+        "quote": "Otter offers a public API for Enterprise customers. To get started, you need to contact your Otter account manager to enable access"
+      },
+      {
+        "field": "api_type",
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Otter.ai's Public API provides programmatic access to retrieve channels, conversations, transcripts, audio, action items, insights, outlines"
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+        "quote": "With Otter's MCP Server, these AI assistants can search your meeting transcripts across all time periods, analyze patterns and themes"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Otter AI has both a REST API and an official MCP server. The REST API is limited to Enterprise plan customers only, requiring contact with an account manager to enable. Self-serve API key generation is available after onboarding. The MCP server provides OAuth-authenticated access with granular permissions for AI assistants."
+  },
+  "cost_usd": 0.1172242,
+  "turns": 8,
+  "seconds": 36.1,
+  "is_error": false,
+  "error": null
+}

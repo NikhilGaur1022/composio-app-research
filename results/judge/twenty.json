@@ -1,0 +1,93 @@
+{
+  "name": "Twenty",
+  "checked": 8,
+  "grounded": 5,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "Authorization: Bearer YOUR_API_KEY",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "Create an API key in Settings → API & Webhooks → + Create key. Copy it immediately — it's shown once.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "For OAuth-based access (external apps acting on behalf of users), see [OAuth](/developers/extend/oauth).",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.8
+    },
+    {
+      "field": "access",
+      "url": "https://twenty.com/pricing",
+      "quote": "Self-host the open source core for free, or upgrade to Organization for SSO and row-level permissions.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.517
+    },
+    {
+      "field": "access",
+      "url": "https://twenty.com/pricing",
+      "quote": "Start your free trial today without credit card.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "Core API (/rest/ and /graphql/) — Handles CRUD operations on records like People, Companies, and custom objects",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.641
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+      "quote": "A Model Context Protocol (MCP) server for Twenty CRM integration. Enables natural language interactions with your CRM data through Claude and other AI assistants.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://twenty.com/pricing",
+      "quote": "REST & GraphQL API",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.62,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

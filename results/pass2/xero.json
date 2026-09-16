@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.72,
+    "docs_url": "https://developer.xero.com",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.xero.com/faq/getting-started",
+        "quote": "The Xero API does not support basic API Key authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/getting-started",
+        "quote": "The first step is to sign up for a free Xero account."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.xero.com/faq/getting-started",
+        "quote": "The quickest way to try out the API is to set up your demo company and dive into the API Explorer."
+      },
+      {
+        "field": "api_type",
+        "url": "https://api.xero.com/api.xro/2.0/Organisation",
+        "quote": "{\"Type\":null,\"Title\":\"Unauthorized\",\"Status\":401,\"Detail\":\"AuthenticationUnsuccessful\",\"Instance\":\"c3d029bd-75c1-4486-9178-d9c98a83a756\",\"Extensions\":{}}"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/XeroAPI/xero-mcp-server",
+        "quote": "An MCP server that integrates with the MCP protocol"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.xero.com/faq/getting-started",
+        "quote": "OAuth 1.0a is in the process of being deprecated and OAuth 2.0 is required for all new integrations."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/XeroAPI/xero-mcp-server"
+    },
+    "notes": "Xero's public Accounting/Payroll REST APIs use OAuth2 only (no API-key/basic auth). Any developer can sign up for a free Xero account, register an app in the developer portal to get a Client ID/Secret immediately, and build/test freely against a free demo company via the API Explorer — no paywall or approval needed to start developing. Publishing an app for broad public/production use (beyond the developer's own demo/trial orgs) goes through Xero's App Store review, and a premium 'Custom Connections' feature (client_credentials grant, no user consent screen) is a paid add-on — but base API access and OAuth2 authorization-code development is self-serve free. apis.guru lists 224 accounting-API endpoints (medium breadth). Xero publishes an official MCP server (@xeroapi/xero-mcp-server, MIT licensed, under the XeroAPI GitHub org) that runs locally via OAuth2 Custom Connections credentials.",
+    "one_liner": "Xero is cloud accounting/bookkeeping software (invoicing, payroll, bank reconciliation) with a REST API for building financial integrations.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.24157420000000002,
+  "turns": 12,
+  "seconds": 91.7,
+  "is_error": false,
+  "error": null
+}

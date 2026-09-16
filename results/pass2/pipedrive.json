@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_trial",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+        "quote": "Authorization via OAuth 2.0 is a well-known and stable way to get fine-grained access to an API."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+        "quote": "The API token must be provided in the `x-api-token` header for all requests."
+      },
+      {
+        "field": "access",
+        "url": "https://www.pipedrive.com/en/register",
+        "quote": "100% access. No credit card required"
+      },
+      {
+        "field": "access",
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+        "quote": "an API token is tied to a specific user and company, giving access to all user's data"
+      },
+      {
+        "field": "api_type",
+        "url": "https://api.pipedrive.com/v1/deals",
+        "quote": "{\"success\":false,\"error\":\"unauthorized access\",\"errorCode\":401,\"error_info\":\"Please check developers.pipedrive.com\"}"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.pipedrive.com/en/features/mcp-server",
+        "quote": "An official, reliable and fully supported connection built and maintained by Pipedrive."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.pipedrive.com/en/features/mcp-server",
+        "quote": "Pipedrive MCP is available on all Pipedrive plans. Usage is based on token limits included in your plan and additional tokens can be purchased if needed."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.pipedrive.com/en/register",
+        "quote": "100% access. No credit card required"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://www.pipedrive.com/en/features/mcp-server"
+    },
+    "notes": "Pipedrive has no permanent free tier; API access comes via a 14-day self-serve free trial (no credit card) that converts to a paid plan (from $12.50/user/mo). Both API token (x-api-token header, aka api_key) and OAuth2 (for Marketplace apps) are documented; HTTP Basic Auth appears only as the client_id/client_secret step of the OAuth2 code exchange, not a standalone API auth method, so it was not listed separately. Pipedrive shipped an official, vendor-hosted MCP server (mcp.pipedrive.ai) in 2026, bundled into all plans via OAuth connect — no separate approval needed beyond having a Pipedrive account. api_breadth is estimated \"large\" based on the breadth of REST resources (Deals, Persons, Organizations, Activities, Leads, Products, Pipelines, Users, Files, Webhooks, etc.) and third-party tool wrappers reporting 400+ operations; I could not load the official endpoint index (404/timeout) to verify an exact count, so this figure carries lower confidence than the auth/access findings.",
+    "one_liner": "Pipedrive is a sales CRM and pipeline-management platform with a broad REST API (OAuth2 or per-user API token) and a vendor-official MCP server, accessible via a no-credit-card 14-day trial before requiring a paid plan.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.2795922,
+  "turns": 13,
+  "seconds": 219.4,
+  "is_error": false,
+  "error": null
+}

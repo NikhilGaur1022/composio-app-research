@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Website and e-commerce builder platform providing REST APIs for managing products, orders, and inventory.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://developers.squarespace.com/commerce-apis/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+        "quote": "Depending on your development needs, you can use a generated API key or start the OAuth process with Squarespace to become a registered OAuth client."
+      },
+      {
+        "field": "access",
+        "url": "https://support.squarespace.com/hc/en-us/articles/236297987-Squarespace-API-keys",
+        "quote": "API keys require the Commerce Advanced plan at about $52/mo, and the Advanced tier unlocks Developer API Keys for custom applications."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.squarespace.com/",
+        "quote": "Squarespace uses a REST API, providing APIs for different functionalities like Forms, Orders, Inventory, Transactions, etc."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.squarespace.com/commerce-apis/faq",
+        "quote": "The Commerce API (OAuth 2.0) covers orders, products, and inventory only - there are no identity or user-management scopes."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.squarespace.com/commerce-apis/oauth",
+        "quote": "Before a client can make Squarespace API calls, the client must be registered with Squarespace as an OAuth client, and Squarespace will review your registration."
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "API key access requires paid Advanced plan ($52/mo). OAuth integration requires developer approval and is gated for marketplace extensions. Commerce API is limited to commerce operations (orders, products, inventory). No public MCP server available."
+  },
+  "cost_usd": 0.1146486,
+  "turns": 7,
+  "seconds": 253.7,
+  "is_error": false,
+  "error": null
+}

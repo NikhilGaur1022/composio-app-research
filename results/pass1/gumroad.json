@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Gumroad is an e-commerce platform that allows creators to sell digital products directly to customers with built-in payment processing.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://gumroad.com/api",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://apitracker.io/a/gumroad",
+        "quote": "The Gumroad API uses OAuth 2.0 for authentication. You need to register an OAuth application to get an application ID and secret."
+      },
+      {
+        "field": "access",
+        "url": "https://help.gumroad.com/article/280-create-application-api",
+        "quote": "To start using the API, you'll need to register your OAuth application, and after creating an application, you'll be given a unique application id and application secret."
+      },
+      {
+        "field": "api_type",
+        "url": "https://gumroad.com/api",
+        "quote": "The Gumroad v2 REST API provides programmatic access to products, sales, subscribers, offer codes, license keys, customers, and the authenticated user account."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://gumroad.com/api",
+        "quote": "API endpoints for products, sales, subscribers, offer codes, license keys, customers, and authenticated user account."
+      }
+    ],
+    "notes": "Gumroad API is freely accessible via self-serve OAuth registration. The Verify License API endpoint does not require OAuth application credentials. Six scopes available: view_profile, edit_products, view_sales, view_payouts, and others. No MCP server found. No paid tier requirement for API access."
+  },
+  "cost_usd": 0.10709250000000001,
+  "turns": 6,
+  "seconds": 166.2,
+  "is_error": false,
+  "error": null
+}

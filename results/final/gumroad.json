@@ -1,0 +1,100 @@
+{
+  "id": 48,
+  "name": "Gumroad",
+  "category": "Ecommerce",
+  "hint": "gumroad.com/api",
+  "one_liner": "Gumroad is an e-commerce platform that allows creators to sell digital products directly to customers with built-in payment processing.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://gumroad.com/api",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "small"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/gumroad",
+      "quote": "Composio catalog: auth ['OAUTH2'], 7 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.gumroad.com/v2/products",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer realm=\"Doorkeeper\", error=\"invalid_token\", error_description=\"The access token is invalid\"; body: ",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "GUMROAD",
+    "tools": 7,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/gumroad"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Bearer realm=\"Doorkeeper\", error=\"invalid_token\", error_description=\"The access token is invalid\"",
+    "inferred": "bearer_token"
+  },
+  "notes": "Gumroad API is freely accessible via self-serve OAuth registration. The Verify License API endpoint does not require OAuth application credentials. Six scopes available: view_profile, edit_products, view_sales, view_payouts, and others. No MCP server found. No paid tier requirement for API access.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.107
+}

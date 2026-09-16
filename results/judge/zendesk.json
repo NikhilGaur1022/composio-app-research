@@ -1,0 +1,73 @@
+{
+  "name": "Zendesk",
+  "checked": 6,
+  "grounded": 6,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "Zendesk supports using OAuth access tokens to authenticate API requests.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "Basic authentication is used for API tokens. The credentials must be sent with the request in an Authorization header.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "API tokens are auto-generated passwords in the Zendesk Admin Center.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.zendesk.com/documentation/",
+      "quote": "Try out the Sunshine Platform with a free, 14-day trial account.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+      "quote": "For information on the authentication required to use the API, see Security and authentication in the general API introduction.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/reminia/zendesk-mcp-server",
+      "quote": "A Model Context Protocol server for Zendesk",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ]
+  }
+}

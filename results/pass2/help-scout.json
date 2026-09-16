@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_trial",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "blocker": "paid_only",
+    "confidence": 0.85,
+    "docs_url": "https://developer.helpscout.com/mailbox-api/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+        "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+        "quote": "You need to create an OAuth2 application before you can use the API. Create one by navigating to Your Profile > My apps and click Create My App."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.helpscout.com/mailbox-api/",
+        "quote": "This is an HTTPS-only API, with OAuth 2 authentication and CORS support running at: https://api.helpscout.net/v2"
+      },
+      {
+        "field": "access",
+        "url": "https://www.helpscout.com/pricing/",
+        "quote": "When you sign up for a free trial of the Standard or Plus plan, you'll get 15 days to take all of the plan's features for a test drive — no credit card required."
+      },
+      {
+        "field": "access",
+        "url": "https://www.helpscout.com/pricing/",
+        "quote": "200 calls/minute"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.helpscout.com/pricing/",
+        "quote": "Want to trial the Pro plan? Talk to our sales team."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/drewburchfield/help-scout-mcp-server",
+        "quote": "An MCP server that gives AI assistants direct access to your Help Scout inboxes, conversations, customers, organizations, threads, and Docs knowledge base."
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server"
+    },
+    "notes": "Official OAuth2-only REST API (Authorization Code + Client Credentials flows) at api.helpscout.net/v2, covering conversations, customers, inboxes, organizations, reports, users, teams, webhooks, workflows, tags, ratings (medium breadth). API access requires a paid Standard/Plus/Pro subscription, but Help Scout offers a 15-day no-credit-card free trial on Standard/Plus during which a developer can create an OAuth2 app and get working credentials — hence self_serve_trial rather than paid_plan. No official MCP server; several community/third-party MCP servers exist on GitHub (most-starred: drewburchfield/help-scout-mcp-server, 47★), explicitly not affiliated with Help Scout. Composio also wraps the API via OAuth2 (129 tools), consistent with rest/medium breadth.",
+    "one_liner": "Help Scout is a customer support helpdesk platform (shared inbox, live chat, knowledge base, and Docs) for small-to-mid-size support teams.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.221482,
+  "turns": 8,
+  "seconds": 70.0,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,176 @@
+{
+  "id": 17,
+  "name": "Plain",
+  "category": "Support and Helpdesk",
+  "hint": "plain.com",
+  "one_liner": "Plain is a B2B customer support / helpdesk platform (threads, customers, tenants, help center) with a GraphQL API and an official MCP server.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "graphql",
+  "api_breadth": "small",
+  "docs_url": "https://www.plain.com/docs/graphql/authentication",
+  "mcp": {
+    "status": "official",
+    "url": "https://mcp.plain.com/mcp"
+  },
+  "verdict": "green",
+  "score": 86,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.91,
+  "agreement": 0.9,
+  "grounding_rate": 1.0,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs self_serve_trial)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "bearer_token"
+      ],
+      "pass1": [
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_trial",
+      "pass1": "paid_plan",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "graphql",
+      "pass1": "graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass2": "small",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.plain.com/docs/graphql/authentication",
+      "quote": "Authorization: Bearer plainApiKey_xxx",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.plain.com/docs/graphql/authentication",
+      "quote": "Click 'Add API key' and select the permissions you need.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.plain.com/pricing",
+      "quote": "7 day free trial",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.plain.com/pricing",
+      "quote": "No credit card required",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.plain.com/docs/graphql/authentication",
+      "quote": "Go to Settings → Machine Users and click + Add Machine User",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.plain.com/changelog/plain-mcp",
+      "quote": "30 tools across threads, customers, tenants, help center articles, and workspace data",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.plain.com/changelog/plain-mcp",
+      "quote": "You can now connect AI tools like Claude, ChatGPT, and Cursor directly to your Plain workspace using the Plain MCP server.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.plain.com/changelog/plain-mcp",
+      "quote": "You authenticate with your existing Plain account, so the MCP server has the same permissions as your user.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.plain.com/docs/graphql/authentication",
+      "quote": "Each API key carries its own fine-grained permissions",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/plain",
+      "quote": "Composio catalog: auth ['API_KEY'], 23 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://core-api.uk.plain.com/graphql/v1",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"message\":\"Unauthorized\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "PLAIN",
+    "tools": 23,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/plain"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Plain's public API is GraphQL-only (core-api.uk.plain.com/graphql/v1). Credentials are created self-serve via Settings → Machine Users → API Keys, scoped with fine-grained permissions, no admin/partner approval documented. Product access is a 7-day free trial (no credit card) then paid seats starting at $35/seat/month; API/webhooks/events are listed under 'Extensibility' without an explicit paid-tier gate, but sustained use requires converting to a paid plan after trial. Plain also ships an official, vendor-maintained MCP server (mcp.plain.com) authenticated via the user's own Plain account session rather than API keys, exposing ~30 tools over threads/customers/tenants/help-center/workspace data.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "graphql",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "graphql",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.78
+  },
+  "cost_usd": 0.34099999999999997
+}

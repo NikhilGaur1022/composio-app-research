@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "result": {
+    "access": "paid_plan",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "blocker": "paid_only",
+    "confidence": 0.85,
+    "docs_url": "https://developers.smartsheet.com/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+        "quote": "If an unauthorized user gets a copy of this token, they will be able to access all Smartsheet data that you have access to, both to read and modify on your behalf."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+        "quote": "You can generate access tokens in the Smartsheet UI."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+        "quote": "Required plan: Business, Enterprise, or Advanced Work Management"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.smartsheet.com/register",
+        "quote": "The email address used to register for Developer Tools must belong to an existing licensed Smartsheet user on a Business plan or higher."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+        "quote": "REST base URL of https://api.smartsheet.com/2.0"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+        "quote": "Unlock the power of AI by connecting Smartsheet with Claude, ChatGPT, and other AI clients through the Smartsheet MCP (Model Context Protocol) server."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+        "quote": "Required plan: Business, Enterprise, or Advanced Work Management"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server"
+    },
+    "notes": "API and official MCP server both gated behind Business/Enterprise/Advanced Work Management plans; no free-tier credential path exists. Free trial accounts explicitly cannot generate API access tokens.",
+    "one_liner": "Smartsheet is a work management/collaboration platform (sheets, projects, workflows) with a REST API and official MCP server.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.21224600000000005,
+  "turns": 11,
+  "seconds": 54.4,
+  "is_error": false,
+  "error": null
+}

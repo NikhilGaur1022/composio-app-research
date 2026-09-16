@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Jira is Atlassian's issue-tracking and project-management tool, exposed via a Cloud REST API for programmatic access to issues, projects, and workflows.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/atlassian/atlassian-mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+        "quote": "you're not saving your primary account password outside of where you authenticate"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+        "quote": "Set this to the desired scopes: Separate multiple scopes with a space"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+        "quote": "generate an API token for your Atlassian account"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+        "quote": "Users trying to install an unapproved OAuth 2.0 integration are warned that the app has not yet been reviewed by Atlassian"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://api.apis.guru/v2/specs/atlassian.com/jira/1001.0.0-SNAPSHOT/openapi.json",
+        "quote": "487 endpoints"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/atlassian/atlassian-mcp-server",
+        "quote": "Official remote MCP server for Atlassian. Securely connect Jira, Confluence, Jira Service Management, Bitbucket, and Compass to Claude, ChatGPT, Cursor, VS Code, and other AI tools using OAuth 2.1 or API tokens."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+        "quote": "Access the developer console and select \"Create\" → \"OAuth 2.0 integration\""
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "API tokens (basic auth) and OAuth 2.0 (3LO) app registration are both self-serve/free via an Atlassian account and developer console — no paid tier or approval needed to obtain credentials for private/dev use; Marketplace distribution requires review but that's not a blocker for building an agent toolkit. Atlassian also publishes an official hosted remote MCP server (GA Feb 2026) supporting OAuth 2.1 or API tokens, in addition to numerous community MCP servers (sooperset/mcp-atlassian, etc.)."
+  },
+  "cost_usd": 0.17088020000000004,
+  "turns": 8,
+  "seconds": 45.7,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Grain is a meeting intelligence platform that automatically records, transcribes, and generates AI-powered notes and action items from calls and meetings.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developers.grain.com/",
+    "mcp": {
+      "status": "official",
+      "url": "https://developers.grain.com/mcp"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Grain supports three authentication methods including Personal Access Token (PAT). Grain supports HTTP Bearer authentication, with three token types accepted: OAuth2 access tokens, Personal Access Tokens, and Workspace Access Tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Personal API access is available on Starter, Business, and Enterprise plans. Workspace API access is available on Business and Enterprise plans and requires admin access to generate."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.grain.com/",
+        "quote": "The API endpoint is located at api.grain.com/_/public-api/ for accessing meeting data and intelligence notes."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.grain.com/mcp",
+        "quote": "Grain's official MCP server allows you to securely access your meetings, notes, transcripts, deals, and coaching scorecard data natively using Anthropic's Claude Integrations."
+      },
+      {
+        "field": "verdict",
+        "url": "https://support.grain.com/en/articles/15507288-grain-api",
+        "quote": "Personal API access is available on Starter, Business, and Enterprise plans. Workspace API access is available on Business and Enterprise plans."
+      }
+    ],
+    "confidence": 0.87,
+    "notes": "Grain provides official MCP integration which enables direct Claude integration. API requires paid subscription tier (Starter or higher for personal access, Business/Enterprise for workspace access). REST API available at api.grain.com/_/public-api/."
+  },
+  "cost_usd": 0.11503369999999999,
+  "turns": 7,
+  "seconds": 39.0,
+  "is_error": false,
+  "error": null
+}

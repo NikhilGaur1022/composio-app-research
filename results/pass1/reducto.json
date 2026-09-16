@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "AI-powered intelligent document processing platform that extracts structured data from PDFs, images, spreadsheets, and 30+ other document formats",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://docs.reducto.ai",
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.reducto.ai/mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.reducto.ai",
+        "quote": "API key authentication via REDUCTO_API_KEY environment variable"
+      },
+      {
+        "field": "access",
+        "url": "https://reducto.ai/pricing",
+        "quote": "Free credits: 15,000 free credits + $150 initial credit, then $0.015/credit pay-as-you-go"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.reducto.ai",
+        "quote": "REST API with OpenAPI 3.1 specification and SDKs for Python, Node.js, and Go"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.reducto.ai/mcp-server",
+        "quote": "Official MCP server available, integrates with Claude Desktop, Claude Code, Codex, Cursor, VS Code, Windsurf"
+      }
+    ],
+    "confidence": 0.95,
+    "notes": "Reducto offers 6 core endpoints (Parse, Extract, Split, Edit, Classify, Pipeline) plus Upload and Webhooks APIs. Free tier includes substantial credits. Official MCP server provides full integration with AI agents including Claude."
+  },
+  "cost_usd": 0.153226,
+  "turns": 5,
+  "seconds": 48.7,
+  "is_error": false,
+  "error": null
+}

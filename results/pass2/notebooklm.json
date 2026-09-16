@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "access": "paid_plan",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "enterprise_only",
+    "confidence": 0.75,
+    "docs_url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "evidence": [
+      {
+        "field": "api_type",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "https://ENDPOINT_LOCATION-discoveryengine.googleapis.com/v1alpha/projects/PROJECT_NUMBER/locations/LOCATION/notebooks"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "gcloud auth print-access-token"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+        "quote": "You can purchase Gemini Notebook Enterprise as a standalone product or as part of Gemini Enterprise."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "quote": "Pre-GA features are available 'as is' and might have limited support."
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+        "quote": "a highly compliant, enterprise-ready version of Gemini Notebook"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/mcp-dir/notebooklm-mcp",
+        "quote": "NotebookLM has no official API"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/mcp-dir/notebooklm-mcp"
+    },
+    "notes": "The consumer-facing NotebookLM product (notebooklm.google.com) has no public API at all. Programmatic access only exists through 'Gemini Notebook Enterprise' (formerly NotebookLM Enterprise), a separately-purchased enterprise product built on Google Cloud's Discovery Engine, requiring a GCP project, IAM role 'Cloud NotebookLM User', and enterprise identity federation. The REST API is at v1alpha (pre-GA/preview) and covers a small set of operations (create/get/list/delete/share notebooks, sources, audio overviews). No official vendor MCP server exists; only unofficial/community MCP wrappers (e.g. Pantheon-Security/notebooklm-mcp-secure, mcp-dir/notebooklm-mcp) exist, and these explicitly note there is no official API and typically rely on browser automation rather than the enterprise REST API.",
+    "one_liner": "NotebookLM is Google's AI-powered research/notetaking tool that lets users upload sources and get grounded summaries, Q&A, and audio overviews; programmatic access exists only via the separately-sold 'Gemini Notebook Enterprise' Google Cloud REST API.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.21109440000000002,
+  "turns": 8,
+  "seconds": 54.7,
+  "is_error": false,
+  "error": null
+}

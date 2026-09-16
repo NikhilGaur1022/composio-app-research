@@ -1,0 +1,93 @@
+{
+  "name": "HubSpot",
+  "checked": 8,
+  "grounded": 7,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth",
+      "quote": "If you plan to distribute your app to multiple accounts...your app must be built using OAuth authentication.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.608
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth",
+      "quote": "If you want to limit distribution of your app to a single authorized account, you'll use a static auth access token.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.hubspot.com/docs/guides/apps/private-apps/overview",
+      "quote": "When making a call to one of the HubSpot API endpoints, set the value of the Authorization field to Bearer [YOUR_TOKEN].",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.hubspot.com/get-started",
+      "quote": "Create developer account with a HubSpot Developer account",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.hubspot.com/changelog/graphql-live",
+      "quote": "GraphQL for CMS Developers is live for CMS Hub Pro and Enterprise",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.hubspot.com/ai-tools/mcp",
+      "quote": "HubSpot offers two distinct MCP (Model Context Protocol) servers — one for connecting any MCP-compatible AI tool or agent to your CRM...",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.hubspot.com/changelog/hubspot-developer-mcp-server-for-app-and-cms-development-now-in-ga",
+      "quote": "HubSpot Developer MCP server (local) for App and CMS Development Now in GA",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://api.hubapi.com/crm/v3/objects/contacts",
+      "quote": "This API supports OAuth 2.0 authentication and you can find more details at https://developers.hubspot.com/docs/methods/auth/oauth-ov",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.88,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

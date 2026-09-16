@@ -1,0 +1,64 @@
+{
+  "name": "QuickBooks",
+  "checked": 5,
+  "grounded": 2,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://quickbooks.api.intuit.com/v3/company/1/companyinfo/1",
+      "quote": "Bearer realm=\"Intuit\"",
+      "status": 401,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.getknit.dev/blog/quickbooks-online-api-integration-guide-in-depth",
+      "quote": "OAuth 2.0 allows users to log into their QuickBooks account via the OAuth 2.0 flow.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.getknit.dev/blog/quickbooks-online-api-integration-guide-in-depth",
+      "quote": "Each entity supports full and sparse update operations",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.getknit.dev/blog/quickbooks-online-api-integration-guide-in-depth",
+      "quote": "QuickBooks Online imposes rate limits to restrict the number of requests in a specified timeframe.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.787
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.composio.dev/toolkits/quickbooks",
+      "quote": "wraps_official_mcp: false",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.438
+    }
+  ],
+  "grounding_rate": 0.4,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "grounded"
+    ],
+    "api_breadth": [
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ]
+  }
+}

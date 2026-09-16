@@ -1,0 +1,104 @@
+{
+  "id": 64,
+  "name": "Cloudflare",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "developers.cloudflare.com/api",
+  "one_liner": "CDN and security platform providing REST and GraphQL APIs for managing DNS, firewall, workers, storage, and edge computing services.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "small",
+  "docs_url": "https://developers.cloudflare.com/fundamentals/api/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/cloudflare/mcp-server-cloudflare"
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/cloudflare",
+      "quote": "Composio catalog: auth ['API_KEY'], 20 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.cloudflare.com/client/v4/zones",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: {\"success\":false,\"errors\":[{\"code\":9106,\"message\":\"Missing X-Auth-Email header\"},{\"code\":9107,\"message\":\"Missing X-Auth-Key header\"}],\"messages\":[],\"result\":null}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "CLOUDFLARE",
+    "tools": 20,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/cloudflare"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Cloudflare's comprehensive platform API is well-documented and accessible via free tier. Both REST and GraphQL endpoints are available. API breadth estimated as large based on coverage of multiple major products (Workers, R2, Analytics, Firewall, etc.). Bearer token support inferred from standard API token implementations.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.105
+}

@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.82,
+    "docs_url": "https://developers.asana.com/docs/authentication",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "OAuth is an open-standard authentication protocol that allows you to approve one application interacting with another on your behalf without providing your username and password."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "Treat your PAT like you would treat a password. Do not share it and do not display it online."
+      },
+      {
+        "field": "access",
+        "url": "https://forum.asana.com/t/how-to-get-de-credentials-about-api-using-a-free-tier/148548",
+        "quote": "you should look here for the information on how to authenticate to the API"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.asana.com",
+        "quote": "signals: oauth true"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://api.apis.guru/v2/specs/asana.com/1.0/openapi.json",
+        "quote": "endpoints: 167"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/roychri/mcp-server-asana",
+        "quote": "roychri/mcp-server-asana (148★)"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.asana.com/docs/authentication",
+        "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API."
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/roychri/mcp-server-asana"
+    },
+    "notes": "Asana's REST API (developers.asana.com) supports OAuth 2.0 for multi-user apps and Personal Access Tokens (used as Bearer tokens) for scripts/single-user use, both self-serve from the Asana web app with no approval process found in docs. A free Asana account is sufficient to generate a PAT via the developer console (app.asana.com/0/my-apps); paid tiers only affect feature availability (e.g., Portfolios) and rate limits (150 req/min free vs 1500 paid per community sources), not baseline API access. Also supports Service Accounts (Enterprise-only, super-admin created) and OpenID Connect for user login, not counted as core API auth methods. No official Asana-published MCP server was found; multiple community MCP servers exist (e.g. roychri/mcp-server-asana, 148 stars). API surface is REST, ~167 endpoints per the apis.guru OpenAPI spec.",
+    "one_liner": "Asana is a work/project management platform with a REST API for managing tasks, projects, portfolios, and workflows.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.20612019999999998,
+  "turns": 8,
+  "seconds": 84.5,
+  "is_error": false,
+  "error": null
+}

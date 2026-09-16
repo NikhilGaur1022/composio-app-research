@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Magento (Adobe Commerce) is a headless ecommerce platform providing REST and GraphQL APIs for building storefronts and admin integrations.",
+    "auth_methods": [
+      "bearer_token",
+      "other"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://developer.adobe.com/commerce/webapi/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "partner_gate",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "quote": "OAuth 1.0a for third-party applications, tokens for mobile applications, and login credentials for administrators"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+        "quote": "OAuth 1.0a and token-based (Bearer) authentication against a merchant-hosted base URL"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.adobe.com/commerce/marketplace/guides/eqp/v1/sandbox",
+        "quote": "A TPP account is required to access all sandboxes"
+      },
+      {
+        "field": "access",
+        "url": "https://www.topbubbleindex.com/blog/adobe-commerce-free-trial/",
+        "quote": "there isn't a public, self-service Adobe Commerce trial available immediately. You need to locate the 'Request a Demo' form"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "quote": "GraphQL and REST endpoints expose nearly every storefront and admin function"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developer.adobe.com/commerce/webapi/reference/rest/paas",
+        "quote": "REST API provides access to products, catalogs, categories, customers, carts, checkout, orders, inventory, sales rules, CMS content, and store configuration"
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "Requires TPP (Third-Party Partner) account or demo request to access development credentials. Cloud-based service requires paid subscription. Supports both REST (OAuth 1.0a, bearer tokens) and GraphQL APIs. Exact endpoint count not published, but breadth spans storefront and admin operations."
+  },
+  "cost_usd": 0.12377400000000001,
+  "turns": 7,
+  "seconds": 266.9,
+  "is_error": false,
+  "error": null
+}

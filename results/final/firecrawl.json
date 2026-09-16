@@ -1,0 +1,94 @@
+{
+  "id": 56,
+  "name": "Firecrawl",
+  "category": "Data, SEO and Scraping",
+  "hint": "firecrawl.dev",
+  "one_liner": "Firecrawl is a web scraping and search API that intelligently extracts structured data, markdown, and search results from web pages at scale.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://docs.firecrawl.dev",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/firecrawl/firecrawl-mcp-server"
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.83,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass1": [
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "small"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/firecrawl",
+      "quote": "Composio catalog: auth ['API_KEY'], 30 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "FIRECRAWL",
+    "tools": 30,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/firecrawl"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 405,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Firecrawl offers both REST API and official MCP server for AI agent integration. Free tier is generous (1,000 credits/month with no payment required), making it immediately buildable. Bearer token authentication via API key is straightforward. The MCP server is officially maintained by the Firecrawl team, providing native integration for Claude and other LLM clients.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.11
+}

@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "PostgreSQL database platform with auto-generated REST/GraphQL APIs, real-time features, and authentication.",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "docs_url": "https://supabase.com/docs",
+    "mcp": {
+      "status": "official",
+      "url": "https://supabase.com/docs/guides/getting-started/mcp"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://supabase.com/docs/guides/auth/oauth-server",
+        "quote": "OAuth2 allows your application to generate tokens on behalf of a Supabase user"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://supabase.com/docs/reference/api/introduction",
+        "quote": "tokens with a custom expiry that you manually generate to access the Management API"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://supabase.com/docs/guides/auth/jwts",
+        "quote": "All API requests require an access token to be included in the Authorization header: Authorization Bearer <access_token>"
+      },
+      {
+        "field": "access",
+        "url": "https://supabase.com/docs/guides/api",
+        "quote": "The REST interface is automatically reflected from your database's schema and is instant and auto-generated"
+      },
+      {
+        "field": "api_type",
+        "url": "https://supabase.com/docs/guides/graphql",
+        "quote": "endpoint at https://<PROJECT_REF>.supabase.co/graphql/v1"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/supabase-community/supabase-mcp",
+        "quote": "spin up projects, design tables, query data, and manage configurations—all through a unified protocol"
+      }
+    ],
+    "confidence": 0.93,
+    "notes": "Supabase provides auto-generated REST and GraphQL APIs that scale with database schema; no fixed endpoint count. Official MCP server enables AI assistant integration (Cursor, Claude, Windsurf). Free tier includes full API access via Personal Access Tokens and OAuth2. No approval or paid tier required for basic API access."
+  },
+  "cost_usd": 0.13551205,
+  "turns": 4,
+  "seconds": 44.5,
+  "is_error": false,
+  "error": null
+}

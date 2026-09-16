@@ -1,0 +1,93 @@
+{
+  "name": "higgsfield",
+  "checked": 8,
+  "grounded": 6,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.higgsfield.ai/docs/authentication",
+      "quote": "Authenticate server-side API requests with your Higgsfield key and secret.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.higgsfield.ai/docs/authentication",
+      "quote": "Send both values in the Authorization header: Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://console.higgsfield.ai/api-keys",
+      "quote": "Sign up with a business email and get $15",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.higgsfield.ai/docs/authentication",
+      "quote": "Create and manage API credentials in Higgsfield Console. Each credential consists of a key ID and a secret.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.higgsfield.ai/docs",
+      "quote": "immediately returns a request identifier and links for checking or canceling the request",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://higgsfield.ai/mcp",
+      "quote": "No API keys to manage or configure.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.413
+    },
+    {
+      "field": "mcp",
+      "url": "https://higgsfield.ai/mcp",
+      "quote": "30+ models for image generation, video creation, and character training",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.523
+    },
+    {
+      "field": "one_liner",
+      "url": "https://docs.higgsfield.ai/docs",
+      "quote": "Authorization: Key ${HF_API_KEY_ID}:${HF_API_KEY_SECRET}",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.75,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "one_liner": [
+      "grounded"
+    ]
+  }
+}

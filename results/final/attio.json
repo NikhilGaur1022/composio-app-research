@@ -25,8 +25,9 @@
   "confidence": 0.83,
   "agreement": 0.79,
   "grounding_rate": 0.88,
-  "needs_human": true,
-  "needs_human_reasons": [
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
     "pass1/pass2 disagree on access (admin_approval vs paid_plan)"
   ],
   "sources": {

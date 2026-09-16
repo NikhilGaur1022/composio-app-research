@@ -1,0 +1,95 @@
+{
+  "name": "Intercom",
+  "checked": 8,
+  "grounded": 1,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "OAuth is for if you're building a public app that accesses other people's Intercom data.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.394
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "An Access Token is for if you're using the API to access data in your own Intercom workspace, in other words, building a private app.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.38
+    },
+    {
+      "field": "access",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "We provide you with an Access Token as soon as you create an app on your workspace. You can find your Access Token in the Configure > Authentication section.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.347
+    },
+    {
+      "field": "access",
+      "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/",
+      "quote": "Private App Developers: Can work within their existing paid Intercom workspace by accessing the Developer Hub",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.386
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/",
+      "quote": "The intercom API reference",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.471
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/",
+      "quote": "Admins, AI Content, Articles, Audiences, Away Status Reasons, Banners, Brands, Calls, Companies, Contacts, Content, Content Snippets, Conversations, Custom Object Instances, Data Attributes...",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.339
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/intercom/intercom-mcp-server",
+      "quote": "Learn how to use the Model Context Protocol (MCP) to enable AI agents to securely access and interact with your Intercom data whenever helpful.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/",
+      "quote": "Public App Developers: Must create a new development workspace to develop and publish the app... limited to US regions and have restrictions like maximum 20 users/leads and watermarked Messenger.",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.335
+    }
+  ],
+  "grounding_rate": 0.12,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
+}

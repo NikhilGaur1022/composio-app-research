@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.85,
+    "docs_url": "https://help.getharvest.com/api-v2/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "The API can be accessed by creating a Personal Access Token from the Developers section of Harvest ID."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "register an OAuth2 Application, also known as an OAuth2 Client"
+      },
+      {
+        "field": "access",
+        "url": "https://www.getharvest.com/pricing",
+        "quote": "1 seat, 2 projects, Time tracking, Invoicing, Expense tracking, Mac & iOS apps ... $0 forever"
+      },
+      {
+        "field": "access",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+        "quote": "After creating it you'll be provided with a random token and a list of your account IDs."
+      },
+      {
+        "field": "mcp",
+        "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+        "quote": "The Harvest MCP is the connection that gives an MCP-compatible assistant — such as Claude — controlled access to your Harvest account"
+      },
+      {
+        "field": "mcp",
+        "url": "https://api.harvestapp.com/mcp",
+        "quote": "405 Method Not Allowed"
+      },
+      {
+        "field": "verdict",
+        "url": "https://help.getharvest.com/api-v2/",
+        "quote": "the current API V2 documentation"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP"
+    },
+    "notes": "Harvest API v2 uses Bearer-token auth for both Personal Access Tokens (self-serve, created in the Harvest ID Developers portal, no plan restriction) and OAuth2 apps (self-registered, for multi-account integrations). Harvest has a permanently free plan (1 seat/2 projects) so a developer can get API credentials without paying. Harvest also ships an official remote MCP server (api.harvestapp.com/mcp) documented in its help center, distinct from several community MCP implementations on GitHub. API surface is moderate: ~14 resource groups (Clients, Invoices, Estimates, Expenses, Tasks, Timesheets, Projects, Roles, Users, Reports, PTO) with standard CRUD, estimated 40-50 endpoints total.",
+    "one_liner": "Harvest is a time tracking, invoicing, and project-budgeting tool for teams and freelancers.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.28441260000000007,
+  "turns": 13,
+  "seconds": 87.7,
+  "is_error": false,
+  "error": null
+}

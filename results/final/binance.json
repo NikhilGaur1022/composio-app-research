@@ -1,0 +1,154 @@
+{
+  "id": 83,
+  "name": "Binance",
+  "category": "Finance and Fintech",
+  "hint": "binance-docs.github.io",
+  "one_liner": "Binance is a cryptocurrency exchange offering spot, margin, futures, and wallet trading via a large REST API.",
+  "auth_methods": [
+    "api_key",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/AnalyticAce/binance-mcp-server"
+  },
+  "verdict": "yellow",
+  "score": 98,
+  "blocker": "other",
+  "model_verdict": "yellow",
+  "confidence": 0.59,
+  "agreement": 1.0,
+  "grounding_rate": 0.0,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "only 0% of quotes grounded in cited pages",
+    "most cited pages unreachable"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "api_key",
+        "other"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass2": "large",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+      "quote": "Signatures generated using HMAC are not case-sensitive.",
+      "grounded": "unreachable"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+      "quote": "It is highly recommended to use Ed25519 API keys",
+      "grounded": "unreachable"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/endpoint-security-type",
+      "quote": "Secure endpoints require a valid API key to be specified and authenticated.",
+      "grounded": "unreachable"
+    },
+    {
+      "field": "access",
+      "url": "https://www.binance.com/en/support/faq/how-to-create-api-360002502072",
+      "quote": "before creating an API Key, you need to make a deposit of any amount to your Spot Wallet to activate your account and complete identity verification",
+      "grounded": "unreachable"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+      "quote": "API keys can be created on the API Management page of your Binance account.",
+      "grounded": "unreachable"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-info",
+      "quote": "Secure endpoints require a valid API key to be specified and authenticated.",
+      "grounded": "unreachable"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.binance.com/en/support/faq/how-to-create-api-360002502072",
+      "quote": "before creating an API Key, you need to make a deposit of any amount to your Spot Wallet to activate your account and complete identity verification",
+      "grounded": "unreachable"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/AnalyticAce/binance-mcp-server",
+      "quote": "binance-mcp-server (47 stars)",
+      "grounded": "not_grounded"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 400,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Docs moved from binance-docs.github.io to developers.binance.com (github.io now redirects). REST API is free self-serve via the Binance account's API Management page, but creating a key requires 2FA, a Spot Wallet deposit, and identity (KYC) verification first — a real-world friction point beyond typical dev-account signup, hence yellow rather than green. Auth is a static API key sent via X-MBX-APIKEY header plus a request signature (HMAC, RSA, or Ed25519) — not OAuth2/JWT/bearer/basic. API surface is very large (spot, margin, futures, options, wallet, sub-account endpoints combined run into the hundreds). No vendor-published MCP server found; several community MCP servers exist on GitHub and in the MCP registry (all community-maintained, none official).",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "other"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "other",
+    "confidence": 0.75
+  },
+  "cost_usd": 0.30300000000000005
+}

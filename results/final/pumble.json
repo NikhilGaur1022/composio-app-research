@@ -1,0 +1,157 @@
+{
+  "id": 25,
+  "name": "Pumble",
+  "category": "Communications and Messaging",
+  "hint": "pumble.com",
+  "one_liner": "Pumble is a team chat/messaging app offering a self-serve REST API (via an installable API addon) plus a first-party MCP server for connecting AI agents to workspaces.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://pumble-api-keys.addons.marketplace.cake.com/api-docs/",
+  "mcp": {
+    "status": "official",
+    "url": "https://pumble.com/learn/pumble/ai-automation-guide/"
+  },
+  "verdict": "green",
+  "score": 93,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.89,
+  "agreement": 1.0,
+  "grounding_rate": 0.86,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass2": [
+        "api_key"
+      ],
+      "pass1": [
+        "api_key"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass2": "small",
+      "pass1": "small"
+    },
+    "mcp": {
+      "pass2": "official",
+      "pass1": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "Available on all plans",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "This message is not visible to other users.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "enter your API key in the Authorize part",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://pumble-api-keys.addons.marketplace.cake.com/api-docs/",
+      "quote": "Scalar API Reference",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://pumble.com/learn/pumble/ai-automation-guide/",
+      "quote": "Pumble maintains a native MCP (Model Context Protocol) server hosted directly at pumble.com, helping you connect your workspace to your AI agent of choice.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "The rate limit is up to 1000 requests per minute per user.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/pumble",
+      "quote": "tools: 9",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/pumble",
+      "quote": "Composio catalog: auth ['API_KEY'], 9 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pumble-api-keys.addons.marketplace.cake.com/listChannels",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: Invalid key",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "PUMBLE",
+    "tools": 9,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/pumble"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "API requires installing a free \"API addon\" in the workspace, then any member can self-generate keys via /api-keys generate or the API panel; no plan restriction or approval step found. REST API is small (send/reply/delete messages, reactions, create channel, list channels/DMs — ~9 actions per Composio). Pumble also documents a first-party MCP server (endpoint on pumble.com, auth via x-app-token header) for Claude/Gemini/Codex clients, described on a marketing/learn page rather than the core developer docs — treat mcp.status confidence as moderate since it wasn't cross-confirmed in a formal MCP registry.",
+  "pass1": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.75
+  },
+  "cost_usd": 0.292
+}

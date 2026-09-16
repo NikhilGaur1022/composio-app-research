@@ -1,0 +1,143 @@
+{
+  "id": 94,
+  "name": "Consensus",
+  "category": "AI, Research and Media-native",
+  "hint": "consensus.app (OAuth requested)",
+  "one_liner": "Consensus is an AI-powered search engine that finds, ranks, and synthesizes findings from 220+ million peer-reviewed academic research papers.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "paid_plan",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://docs.consensus.app/api-get-started",
+  "mcp": {
+    "status": "community",
+    "url": "com.consensus-analytics/mcp (MCP registry listing, community-maintained; no vendor-published server found)"
+  },
+  "verdict": "yellow",
+  "score": 71,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.71,
+  "agreement": 1.0,
+  "grounding_rate": 0.43,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "only 43% of quotes grounded in cited pages"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass2": [
+        "api_key"
+      ]
+    },
+    "access": {
+      "pass2": "paid_plan"
+    },
+    "api_type": {
+      "pass2": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass2": "small"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://consensus.app/home/api/",
+      "quote": "The Consensus API is now open to everyone",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://consensus.app/home/api/",
+      "quote": "Calls are $0.05 each beyond the credits included in your plan (500 on Pro/Team/Enterprise, 2,000 on Deep) plus 1 additional credit per 100 papers.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://agentsapis.com/consensus-api/",
+      "quote": "GET /v1/quick_search",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Auth: API_KEY",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Composio-managed OAuth available? N/A",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Tools: 1",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Pagination beyond the first page and full-text chunks require Enterprise access",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Composio catalog: auth ['API_KEY'], 1 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://consensus.app/api",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: <!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta nam",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "CONSENSUS",
+    "tools": 1,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/consensus"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Note: \"consensus.app\" (AI academic-research search engine) is a distinct company from \"goconsensus.com\" (B2B sales-demo software also branded \"Consensus\") — several third-party trackers (e.g. apitracker.io/a/consensus) conflate the two; disregard any goconsensus.com data. The official docs.consensus.app and help.consensus.app pages returned HTTP 403 (Cloudflare bot-block) on direct fetch, so findings here rely on the consensus.app/home/api marketing page, the Composio toolkit page (which mirrors the official docs), and a third-party API guide (agentsapis.com) — lowering confidence versus a primary-source read. Access is via a self-serve \"Create API key\" flow with no approval/waitlist (\"now open to everyone\"), but usable credits are allocated per paid plan tier (Pro/Team/Enterprise: 500 credits; Deep: 2,000), with no evidence of a free-tier credit allocation, so classified as paid_plan rather than self_serve_free. Auth is a single x-api-key header (api_key), not OAuth — the task hint \"(OAuth requested)\" and the precomputed .well-known/oauth-authorization-server discovery URL likely relate to consensus.app's own user login/SSO rather than the public data API; this was not independently verified due to fetch-budget limits and repeated 403s on the consensus.app domain. Only one documented endpoint (quick_search) was found; pagination beyond page 1 and full-text chunk retrieval are gated to Enterprise. No official MCP server found; MCP registry shows only community/unrelated entries.",
+  "pass1": null,
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.62
+  },
+  "cost_usd": 0.216
+}

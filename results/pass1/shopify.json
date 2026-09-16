@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Shopify is a cloud-based ecommerce platform providing REST and GraphQL APIs for building apps and integrations with Shopify stores.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://shopify.dev/docs/api",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://praella.com/blogs/shopify-insights/mastering-shopify-api-authentication-a-comprehensive-guide",
+        "quote": "OAuth 2.0, a widely-recognized protocol for authorizing applications that allows apps to securely access resources without exposing user credentials"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://praella.com/blogs/shopify-insights/mastering-shopify-api-authentication-a-comprehensive-guide",
+        "quote": "Session tokens - short-lived JWTs - to verify that a request from your app's frontend originates from a valid shop"
+      },
+      {
+        "field": "access",
+        "url": "https://www.skailama.com/blog/shopify-partners",
+        "quote": "The Shopify Partner Program is free to join and has zero revenue minimums at the entry tier"
+      },
+      {
+        "field": "access",
+        "url": "https://the4.co/blogs/shopify-tutorials/shopify-developer-account",
+        "quote": "Development accounts provide access to all Shopify features and tools, including the Shopify Admin, APIs, and theme customizations, free of charge"
+      },
+      {
+        "field": "api_type",
+        "url": "https://shopify.dev/docs/apps/build/graphql/migrate",
+        "quote": "REST endpoints receive no new capabilities. Shopify is investing all new features exclusively in GraphQL"
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.ecorn.agency/blog/shopify-graphql-vs-rest",
+        "quote": "GraphQL queries are executed by sending POST HTTP requests to the endpoint: https://{store_name}.myshopify.com/admin/api/2026-07/graphql.json"
+      }
+    ],
+    "confidence": 0.92,
+    "notes": "Shopify offers free developer accounts through its Partner Program with test stores for development. OAuth 2.0 is the primary authentication for public apps; REST API is deprecated for new apps but GraphQL is fully supported. Both APIs available but REST deprecated. No MCP server found in search results."
+  },
+  "cost_usd": 0.1096449,
+  "turns": 6,
+  "seconds": 37.4,
+  "is_error": false,
+  "error": null
+}

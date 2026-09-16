@@ -1,0 +1,143 @@
+{
+  "id": 97,
+  "name": "higgsfield",
+  "category": "AI, Research and Media-native",
+  "hint": "higgsfield.ai/cli (content suite)",
+  "one_liner": "Higgsfield is an AI-native image/video generation platform offering a REST API, CLI, and official MCP server for building agentic creative-media workflows.",
+  "auth_methods": [
+    "api_key",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://docs.higgsfield.ai/docs",
+  "mcp": {
+    "status": "official",
+    "url": "https://mcp.higgsfield.ai/mcp"
+  },
+  "verdict": "green",
+  "score": 93,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.84,
+  "agreement": 1.0,
+  "grounding_rate": 0.75,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "other"
+      ],
+      "pass2": [
+        "api_key"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass2": "small"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "composio_wraps_mcp": "official",
+      "pass2": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.higgsfield.ai/docs/authentication",
+      "quote": "Authenticate server-side API requests with your Higgsfield key and secret.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.higgsfield.ai/docs/authentication",
+      "quote": "Send both values in the Authorization header: Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://console.higgsfield.ai/api-keys",
+      "quote": "Sign up with a business email and get $15",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.higgsfield.ai/docs/authentication",
+      "quote": "Create and manage API credentials in Higgsfield Console. Each credential consists of a key ID and a secret.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.higgsfield.ai/docs",
+      "quote": "immediately returns a request identifier and links for checking or canceling the request",
+      "grounded": "grounded"
+    },
+    {
+      "field": "one_liner",
+      "url": "https://docs.higgsfield.ai/docs",
+      "quote": "Authorization: Key ${HF_API_KEY_ID}:${HF_API_KEY_SECRET}",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://higgsfield.ai/mcp",
+      "quote": "No API keys to manage or configure.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://higgsfield.ai/mcp",
+      "quote": "30+ models for image generation, video creation, and character training",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/higgsfield_mcp",
+      "quote": "Composio catalog: auth ['DCR_OAUTH'], 101 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "HIGGSFIELD_MCP",
+    "tools": 101,
+    "auth": [
+      "other"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/higgsfield_mcp"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 200,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Higgsfield's core developer API (docs.higgsfield.ai) uses a custom two-part API key (key ID + secret) sent via Authorization: Key header, obtainable via free self-serve signup at console.higgsfield.ai with a $15 signup credit, then pay-per-use pricing (not a hard trial cutoff, so classified as self_serve_free rather than self_serve_trial). Separately, Higgsfield also ships an official hosted MCP server (mcp.higgsfield.ai) that authenticates via account login/OAuth-style sign-in instead of API keys — this is a second, higher-level access path layered on top of the same account/credits, not a replacement for the REST API's auth. api_breadth is an estimate (docs list ~5+ model endpoints: SOUL, SOUL 2, SOUL Cinema, video models, etc.) — no endpoint count was published, so treat as approximate.",
+  "pass1": null,
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.221
+}

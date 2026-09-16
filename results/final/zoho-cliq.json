@@ -1,0 +1,142 @@
+{
+  "id": 23,
+  "name": "Zoho Cliq",
+  "category": "Communications and Messaging",
+  "hint": "zoho.com/cliq",
+  "one_liner": "Zoho Cliq is a team messaging/chat app (channels, DMs, bots, extensions) that exposes a REST API and an official MCP server for automation.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://www.zoho.com/cliq/help/restapi/v2/",
+  "mcp": {
+    "status": "official",
+    "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html"
+  },
+  "verdict": "green",
+  "score": 97,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.89,
+  "agreement": 1.0,
+  "grounding_rate": 0.83,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass2": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "pass2": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+      "quote": "Zoho Cliq API uses the OAuth 2.0 protocol for authentication.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/registerclient/",
+      "quote": "Go to the Zoho API Console, then click GET STARTED.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/registerclient/",
+      "quote": "you will receive a Client ID and Client Secret. These credentials are used to obtain an access token.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+      "quote": "The Zoho Cliq MCP Server brings your chats into the world of AI using the Model Context Protocol (MCP).",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+      "quote": "Zoho Cliq API uses the OAuth 2.0 protocol for authentication.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/cliq/help/platform/webhook-tokens.html",
+      "quote": "Authentication of the webhook URL should be done by passing the value of a Webhook token as the key for authentication.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://cliq.zoho.com/api/v2/channels",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body:   ",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "REST API v2 uses OAuth2 via the free, self-serve Zoho API Console (api-console.zoho.com) — no approval/paid tier required to register a client and get Client ID/Secret. Separately, incoming webhooks/bots use a static \"webhook token\" (zapikey) passed as a query param, and extensions use a ZAPI key — both function like API keys. Zoho publishes an official MCP server for Cliq (chat, channels, reminders) with docs for connecting to Claude and other MCP clients. API surface (channels, chats, messages, bots, contacts, etc.) appears to be in the tens-to-low-hundreds of endpoints, so breadth is estimated medium rather than confirmed via an endpoint count.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.78
+  },
+  "cost_usd": 0.667
+}

@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key"
+    ],
+    "blocker": "none",
+    "confidence": 0.72,
+    "docs_url": "https://docs.higgsfield.ai/docs",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.higgsfield.ai/docs/authentication",
+        "quote": "Authenticate server-side API requests with your Higgsfield key and secret."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.higgsfield.ai/docs/authentication",
+        "quote": "Send both values in the Authorization header: Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET"
+      },
+      {
+        "field": "access",
+        "url": "https://console.higgsfield.ai/api-keys",
+        "quote": "Sign up with a business email and get $15"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.higgsfield.ai/docs/authentication",
+        "quote": "Create and manage API credentials in Higgsfield Console. Each credential consists of a key ID and a secret."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.higgsfield.ai/docs",
+        "quote": "immediately returns a request identifier and links for checking or canceling the request"
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/mcp",
+        "quote": "No API keys to manage or configure."
+      },
+      {
+        "field": "mcp",
+        "url": "https://higgsfield.ai/mcp",
+        "quote": "30+ models for image generation, video creation, and character training"
+      },
+      {
+        "field": "one_liner",
+        "url": "https://docs.higgsfield.ai/docs",
+        "quote": "Authorization: Key ${HF_API_KEY_ID}:${HF_API_KEY_SECRET}"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "notes": "Higgsfield's core developer API (docs.higgsfield.ai) uses a custom two-part API key (key ID + secret) sent via Authorization: Key header, obtainable via free self-serve signup at console.higgsfield.ai with a $15 signup credit, then pay-per-use pricing (not a hard trial cutoff, so classified as self_serve_free rather than self_serve_trial). Separately, Higgsfield also ships an official hosted MCP server (mcp.higgsfield.ai) that authenticates via account login/OAuth-style sign-in instead of API keys — this is a second, higher-level access path layered on top of the same account/credits, not a replacement for the REST API's auth. api_breadth is an estimate (docs list ~5+ model endpoints: SOUL, SOUL 2, SOUL Cinema, video models, etc.) — no endpoint count was published, so treat as approximate.",
+    "one_liner": "Higgsfield is an AI-native image/video generation platform offering a REST API, CLI, and official MCP server for building agentic creative-media workflows.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.2206908,
+  "turns": 10,
+  "seconds": 79.0,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,137 @@
+{
+  "id": 85,
+  "name": "iPayX",
+  "category": "Finance and Fintech",
+  "hint": "ipayx.ai/docs",
+  "one_liner": "iPayX is a FINTRAC-registered FX forensic audit API/MCP service that scores bank and card FX rates against live mid-market rates across 300+ currencies.",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://www.ipayx.ai/docs/api",
+  "mcp": {
+    "status": "community",
+    "url": "https://www.ipayx.ai/docs/mcp-server"
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.59,
+  "agreement": 1.0,
+  "grounding_rate": 0.0,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "only 0% of quotes grounded in cited pages"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest"
+    },
+    "api_breadth": {
+      "pass2": "small"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "Every request requires a Bearer token in the `Authorization` header. Keys start with `ipx_live_`.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "Method: HTTP Bearer token in `Authorization` header. Format: `ipx_live_xxxxx` (production)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.ipayx.ai/pricing",
+      "quote": "5 audits, lifetime",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.ipayx.ai/pricing",
+      "quote": "Banks and institutions: contact sales.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "POST /audit – Forensic analysis of individual transactions, returning a 0–10 score and hidden spread calculation",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.ipayx.ai/docs/api",
+      "quote": "POST /audit ... GET /rates ... POST /audit/document",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "Production MCP: `https://hvujzsdwcoweirroubeh.supabase.co/functions/v1/mcp-server`",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "How to get a key: Open your iPayX dashboard → API keys",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.ipayx.ai/docs/mcp-server",
+      "quote": "10 audits / day per API key (free)",
+      "grounded": "not_grounded"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 200,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "iPayX is a FINTRAC-registered FX forensic audit API (MSB C10001283) that audits bank/card-network FX rates vs live mid-market across 300+ currencies. Self-serve signup grants a free API key (5 lifetime audits via REST, 10/day via MCP free tier), with Bearer token auth (`ipx_live_...`). Small REST surface (3 endpoints: POST /audit, GET /rates, POST /audit/document) plus webhooks. Vendor publishes an official MCP server alongside the REST API. Production/enterprise FINTRAC-signed reporting for banks routes to sales, but that's an enterprise upsell, not a gate on basic self-serve API access.",
+  "pass1": null,
+  "pass2": {
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.75
+  },
+  "cost_usd": 0.28
+}

@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key"
+    ],
+    "blocker": "none",
+    "confidence": 0.75,
+    "docs_url": "https://pumble-api-keys.addons.marketplace.cake.com/api-docs/",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "Available on all plans"
+      },
+      {
+        "field": "access",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "This message is not visible to other users."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "enter your API key in the Authorize part"
+      },
+      {
+        "field": "api_type",
+        "url": "https://pumble-api-keys.addons.marketplace.cake.com/api-docs/",
+        "quote": "Scalar API Reference"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://docs.composio.dev/toolkits/pumble",
+        "quote": "tools: 9"
+      },
+      {
+        "field": "mcp",
+        "url": "https://pumble.com/learn/pumble/ai-automation-guide/",
+        "quote": "Pumble maintains a native MCP (Model Context Protocol) server hosted directly at pumble.com, helping you connect your workspace to your AI agent of choice."
+      },
+      {
+        "field": "verdict",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "The rate limit is up to 1000 requests per minute per user."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://pumble.com/learn/pumble/ai-automation-guide/"
+    },
+    "notes": "API requires installing a free \"API addon\" in the workspace, then any member can self-generate keys via /api-keys generate or the API panel; no plan restriction or approval step found. REST API is small (send/reply/delete messages, reactions, create channel, list channels/DMs — ~9 actions per Composio). Pumble also documents a first-party MCP server (endpoint on pumble.com, auth via x-app-token header) for Claude/Gemini/Codex clients, described on a marketing/learn page rather than the core developer docs — treat mcp.status confidence as moderate since it wasn't cross-confirmed in a formal MCP registry.",
+    "one_liner": "Pumble is a team chat/messaging app offering a self-serve REST API (via an installable API addon) plus a first-party MCP server for connecting AI agents to workspaces.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.18343260000000003,
+  "turns": 8,
+  "seconds": 57.9,
+  "is_error": false,
+  "error": null
+}

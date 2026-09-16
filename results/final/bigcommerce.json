@@ -1,0 +1,80 @@
+{
+  "id": 43,
+  "name": "BigCommerce",
+  "category": "Ecommerce",
+  "hint": "developer.bigcommerce.com",
+  "one_liner": "BigCommerce is a fully-hosted ecommerce platform providing REST and GraphQL APIs for building storefronts and integrations.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "large",
+  "docs_url": "https://developer.bigcommerce.com/docs/start/authentication",
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "verdict": "yellow",
+  "score": 90,
+  "blocker": "paid_only",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_trial"
+    },
+    "api_type": {
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "pass1": "large"
+    },
+    "mcp": {
+      "pass1": "none"
+    }
+  },
+  "evidence": [],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 404,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "BigCommerce requires a paid subscription after the 15-day trial to maintain API access. OAuth2 is the documented authentication method. Both REST and GraphQL APIs are available. API rate limits and feature access vary by subscription tier. For a free developer account with persistent API access, a paid plan would be required.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": null,
+  "cost_usd": 0.117
+}

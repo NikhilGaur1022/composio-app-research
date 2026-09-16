@@ -1,0 +1,75 @@
+{
+  "name": "Xero",
+  "checked": 6,
+  "grounded": 6,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "quote": "The Xero API does not support basic API Key authentication.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "quote": "The first step is to sign up for a free Xero account.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "quote": "The quickest way to try out the API is to set up your demo company and dive into the API Explorer.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://api.xero.com/api.xro/2.0/Organisation",
+      "quote": "{\"Type\":null,\"Title\":\"Unauthorized\",\"Status\":401,\"Detail\":\"AuthenticationUnsuccessful\",\"Instance\":\"c3d029bd-75c1-4486-9178-d9c98a83a756\",\"Extensions\":{}}",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/XeroAPI/xero-mcp-server",
+      "quote": "An MCP server that integrates with the MCP protocol",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "quote": "OAuth 1.0a is in the process of being deprecated and OAuth 2.0 is required for all new integrations.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 1.0,
+  "by_field": {
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

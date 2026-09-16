@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://www.zoho.com/cliq/help/restapi/v2/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+        "quote": "Zoho Cliq API uses the OAuth 2.0 protocol for authentication."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.zoho.com/cliq/help/platform/webhook-tokens.html",
+        "quote": "Authentication of the webhook URL should be done by passing the value of a Webhook token as the key for authentication."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/cliq/help/restapi/v2/registerclient/",
+        "quote": "Go to the Zoho API Console, then click GET STARTED."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/cliq/help/restapi/v2/registerclient/",
+        "quote": "you will receive a Client ID and Client Secret. These credentials are used to obtain an access token."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+        "quote": "The Zoho Cliq MCP Server brings your chats into the world of AI using the Model Context Protocol (MCP)."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+        "quote": "Zoho Cliq API uses the OAuth 2.0 protocol for authentication."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html"
+    },
+    "notes": "REST API v2 uses OAuth2 via the free, self-serve Zoho API Console (api-console.zoho.com) — no approval/paid tier required to register a client and get Client ID/Secret. Separately, incoming webhooks/bots use a static \"webhook token\" (zapikey) passed as a query param, and extensions use a ZAPI key — both function like API keys. Zoho publishes an official MCP server for Cliq (chat, channels, reminders) with docs for connecting to Claude and other MCP clients. API surface (channels, chats, messages, bots, contacts, etc.) appears to be in the tens-to-low-hundreds of endpoints, so breadth is estimated medium rather than confirmed via an endpoint count.",
+    "one_liner": "Zoho Cliq is a team messaging/chat app (channels, DMs, bots, extensions) that exposes a REST API and an official MCP server for automation.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.2089588,
+  "turns": 9,
+  "seconds": 46.8,
+  "is_error": false,
+  "error": null
+}

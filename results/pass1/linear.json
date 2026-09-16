@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Linear is an issue tracking and project management platform with a GraphQL API for team collaboration.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "graphql",
+    "api_breadth": "large",
+    "docs_url": "https://linear.app/developers",
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.linear.app/mcp"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://linear.app/developers/oauth-2-0-authentication",
+        "quote": "Linear supports OAuth2 authentication, which is recommended if you're building applications to integrate with Linear."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.linear.app/docs/oauth/authentication",
+        "quote": "Personal API keys can be generated in Linear Settings > Account > API > Personal API keys"
+      },
+      {
+        "field": "access",
+        "url": "https://linear.app/pricing",
+        "quote": "API access is included in all plans including the free tier (unlimited users)"
+      },
+      {
+        "field": "api_type",
+        "url": "https://linear.app/developers/graphql",
+        "quote": "Linear exposes a self-serve GraphQL API with OAuth 2.0, API keys, signed webhooks, and a TypeScript SDK"
+      },
+      {
+        "field": "mcp",
+        "url": "https://linear.app/docs/mcp",
+        "quote": "Linear hosts and maintains a remote Model Context Protocol (MCP) server at https://mcp.linear.app/mcp, shipped on 1 May 2025"
+      }
+    ],
+    "notes": "Linear provides a modern, well-documented GraphQL API with both OAuth2 and personal API key authentication. Free tier includes full API access, making it ideal for agent toolkit integration. Official MCP server support enables seamless Claude integration. No approval or payment required to start building."
+  },
+  "cost_usd": 0.11062599999999999,
+  "turns": 6,
+  "seconds": 36.8,
+  "is_error": false,
+  "error": null
+}

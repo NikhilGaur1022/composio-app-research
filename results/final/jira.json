@@ -1,0 +1,128 @@
+{
+  "id": 74,
+  "name": "Jira",
+  "category": "Productivity and Project Management",
+  "hint": "developer.atlassian.com",
+  "one_liner": "Jira is a project management and issue tracking platform for planning, tracking, and managing work across teams.",
+  "auth_methods": [
+    "api_key",
+    "basic",
+    "oauth2",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/sooperset/mcp-atlassian"
+  },
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2",
+        "other"
+      ],
+      "apis_guru_spec": [
+        "basic",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "basic",
+        "bearer_token",
+        "jwt",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "large",
+      "composio_tools": "medium",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/jira",
+      "quote": "Composio catalog: auth ['OAUTH2', 'S2S_OAUTH2', 'API_KEY'], 102 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/atlassian.com/jira/1001.0.0-SNAPSHOT/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 487 operations, securitySchemes ['basic', 'oauth2']",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.atlassian.com/oauth/token/accessible-resources",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"code\":401,\"message\":\"Unauthorized\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "JIRA",
+    "tools": 102,
+    "auth": [
+      "api_key",
+      "oauth2",
+      "other"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/jira"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 487
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Jira Cloud offers full API access on the free tier with self-serve credential generation. OAuth 2.0 is the modern standard; OAuth 1.0a and API tokens with basic auth are also supported. Forge apps use JWT. The REST API is comprehensive with endpoints covering projects, issues, workflows, users, and more.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic",
+      "bearer_token",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.123
+}

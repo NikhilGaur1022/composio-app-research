@@ -1,0 +1,93 @@
+{
+  "name": "Close",
+  "checked": 8,
+  "grounded": 7,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.close.com/",
+      "quote": "API keys for scripts or OAuth 2.0 for user-facing integrations.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.close.com/api/overview/api-key-authentication",
+      "quote": "send your HTTP requests with an Authorization header that contains the word Basic followed by a space and a base64-encoded string composed of an api key followed by a colon",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.close.com/pricing",
+      "quote": "Start your free trial—no credit card required",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.8
+    },
+    {
+      "field": "access",
+      "url": "https://www.close.com/pricing",
+      "quote": "API access + event log API - Connect your Close organization using API keys of using OAuth access",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.close.com/api/overview/api-key-authentication",
+      "quote": "Alternatively, see Authentication with OAuth instead.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.close.com/docs/mcp-server",
+      "quote": "The MCP server URL is https://mcp.close.com/mcp",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://help.close.com/docs/mcp-server",
+      "quote": "Close's MCP server is an officially supported across the Claude ecosystem.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.close.com/api/overview/api-key-authentication",
+      "quote": "API keys can be created and managed in your Close account under Settings → Developer → API Keys",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.88,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "not_grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

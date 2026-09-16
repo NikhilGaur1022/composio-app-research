@@ -1,0 +1,163 @@
+{
+  "id": 21,
+  "name": "Slack",
+  "category": "Communications and Messaging",
+  "hint": "slack.com",
+  "one_liner": "Slack is a team messaging and collaboration platform with channels, DMs, and a large app/bot ecosystem.",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://docs.slack.dev/authentication/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/korotovsky/slack-mcp-server"
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.83,
+  "agreement": 0.96,
+  "grounding_rate": 0.67,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "apis_guru_spec": [
+        "oauth2"
+      ],
+      "pass2": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "composio_tools": "large",
+      "pass2": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "community",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://docs.slack.dev/quickstart",
+      "quote": "If you don't have a Slack workspace already, we recommend also setting up a developer sandbox.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://docs.slack.dev/quickstart",
+      "quote": "Now you've got everything you need to start developing on the Slack platform!",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.slack.dev/authentication/",
+      "quote": "Learn how to use OAuth 2.0 to securely authenticate users and request access tokens.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.slack.dev/authentication/",
+      "quote": "Understand the different types of tokens your app can use (user tokens, bot tokens, and app tokens) and how to manage them.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/slack.com/1.7.0/openapi.json",
+      "quote": "174 endpoints",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/korotovsky/slack-mcp-server",
+      "quote": "korotovsky/slack-mcp-server (1829★)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/slack",
+      "quote": "Composio catalog: auth ['OAUTH2'], 167 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/slack.com/1.7.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 174 operations, securitySchemes ['oauth2']",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "SLACK",
+    "tools": 167,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/slack"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 174
+  },
+  "probe": {
+    "status": 200,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Slack Web API (REST-style) accessed via app creation on api.slack.com/docs.slack.dev; free developer sandbox/workspace lets anyone create an app and obtain OAuth bot/user tokens (xoxb-/xoxp-) sent as Bearer tokens. No official Slack-published MCP server found; several high-star community MCP servers exist (korotovsky/slack-mcp-server, tuannvm/slack-mcp-client, slackapi/slack-skills-plugin). Some admin-level endpoints (Enterprise Grid) require additional approval, but core Web API is self-serve.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.259
+}

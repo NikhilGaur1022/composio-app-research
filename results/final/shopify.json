@@ -1,0 +1,104 @@
+{
+  "id": 41,
+  "name": "Shopify",
+  "category": "Ecommerce",
+  "hint": "shopify.dev",
+  "one_liner": "Shopify is a cloud-based ecommerce platform providing REST and GraphQL APIs for building apps and integrations with Shopify stores.",
+  "auth_methods": [
+    "api_key",
+    "oauth2",
+    "other"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "large",
+  "docs_url": "https://shopify.dev/docs/api",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2",
+        "other"
+      ],
+      "pass1": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/shopify",
+      "quote": "Composio catalog: auth ['API_KEY', 'OAUTH2', 'S2S_OAUTH2'], 407 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "SHOPIFY",
+    "tools": 407,
+    "auth": [
+      "api_key",
+      "oauth2",
+      "other"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/shopify"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 200,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Shopify offers free developer accounts through its Partner Program with test stores for development. OAuth 2.0 is the primary authentication for public apps; REST API is deprecated for new apps but GraphQL is fully supported. Both APIs available but REST deprecated. No MCP server found in search results.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.11
+}

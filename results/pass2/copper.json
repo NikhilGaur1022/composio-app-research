@@ -1,0 +1,74 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_trial",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "blocker": "none",
+    "confidence": 0.72,
+    "docs_url": "https://developer.copper.com/",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "API Keys - suitable for individual users"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "OAuth2.0 - the preferred approach for partner integrations"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "include the token in the header of every request, along with the email address of the user who generated the token"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "go to System settings > API Keys and click the 'GENERATE API KEY' button"
+      },
+      {
+        "field": "access",
+        "url": "https://www.copper.com/pricing",
+        "quote": "API & Embedded integration SDK"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.copper.com/",
+        "quote": "provides a RESTful interface with JSON-formatted responses to access most Copper resources"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developer.copper.com/",
+        "quote": "Leads, People, Companies, Opportunities, Projects, and Tasks"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Pond-International/copper-mcp-server",
+        "quote": "MCP (Model Context Protocol) server for Copper CRM integration with Claude. Designed for deployment on Kubernetes (Qovery) with remote MCP server support via HTTPS."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "go to System settings > API Keys and click the 'GENERATE API KEY' button"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/Pond-International/copper-mcp-server"
+    },
+    "notes": "Copper's Dev API supports API-key auth (per-user token generated in System settings, sent via header + user email) and OAuth2.0 (preferred for partner/third-party integrations, Authorization Code flow). API access is gated to paid plan tiers (Professional/Business per copper.com/pricing feature comparison; Basic plan lacks it), but Copper offers a 14-day no-credit-card free trial that includes higher-tier features, so a developer can self-serve a trial account and generate an API key without admin approval or a sales conversation. No official Copper-published MCP server found (registry hit for \"copperline-labs/rendex-mcp\" appears unrelated to Copper CRM); several small community/unofficial MCP servers exist on GitHub (e.g. Pond-International/copper-mcp-server, dazanza/copper-mcp, charlesmmorais/coppermind), none with significant adoption. API breadth estimated as medium based on ~15 documented resource categories (Leads, People, Companies, Opportunities, Projects, Tasks, Account, Users, Tags, Activities, Custom Fields, Field Layouts, Webhooks, Related Items, File Upload) with standard CRUD/list endpoints each; exact endpoint count not enumerated in fetched pages.",
+    "one_liner": "Copper is a CRM built for Google Workspace users, offering pipeline, contact, and sales-opportunity management with deep Gmail/Calendar integration.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.29965539999999996,
+  "turns": 11,
+  "seconds": 86.5,
+  "is_error": false,
+  "error": null
+}

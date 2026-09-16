@@ -1,0 +1,84 @@
+{
+  "name": "Consensus",
+  "checked": 7,
+  "grounded": 3,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Auth: API_KEY",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Composio-managed OAuth available? N/A",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.375
+    },
+    {
+      "field": "access",
+      "url": "https://consensus.app/home/api/",
+      "quote": "The Consensus API is now open to everyone",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://consensus.app/home/api/",
+      "quote": "Calls are $0.05 each beyond the credits included in your plan (500 on Pro/Team/Enterprise, 2,000 on Deep) plus 1 additional credit per 100 papers.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://agentsapis.com/consensus-api/",
+      "quote": "GET /v1/quick_search",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Tools: 1",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.composio.dev/toolkits/consensus",
+      "quote": "Pagination beyond the first page and full-text chunks require Enterprise access",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.309
+    }
+  ],
+  "grounding_rate": 0.43,
+  "by_field": {
+    "auth_methods": [
+      "not_grounded",
+      "not_grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Intercom is a customer messaging and support platform (helpdesk, live chat, AI agent Fin) with a REST API and app/integration platform.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/intercom/intercom-mcp-server"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+        "quote": "OAuth is for if you're building a public app that accesses other people's Intercom data."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+        "quote": "An Access Token is for if you're using the API to access data in your own Intercom workspace, in other words, building a private app."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+        "quote": "We provide you with an Access Token as soon as you create an app on your workspace. You can find your Access Token in the Configure > Authentication section."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/",
+        "quote": "Private App Developers: Can work within their existing paid Intercom workspace by accessing the Developer Hub"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/",
+        "quote": "The intercom API reference"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/",
+        "quote": "Admins, AI Content, Articles, Audiences, Away Status Reasons, Banners, Brands, Calls, Companies, Contacts, Content, Content Snippets, Conversations, Custom Object Instances, Data Attributes..."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/intercom/intercom-mcp-server",
+        "quote": "Learn how to use the Model Context Protocol (MCP) to enable AI agents to securely access and interact with your Intercom data whenever helpful."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/",
+        "quote": "Public App Developers: Must create a new development workspace to develop and publish the app... limited to US regions and have restrictions like maximum 20 users/leads and watermarked Messenger."
+      }
+    ],
+    "confidence": 0.72,
+    "notes": "OAuth2 for public apps accessing other workspaces' data; Access Token (API key) for private apps within your own workspace, issued instantly on app creation with no admin approval or app review step documented. Full production API access effectively requires an Intercom workspace, which is a paid product (free trial available); a free, capability-limited development workspace exists for building/testing public apps (US-only, 20 user cap, watermarked). MCP: Intercom publishes an official MCP server (github.com/intercom/intercom-mcp-server) in addition to several community MCP servers."
+  },
+  "cost_usd": 0.20171819999999996,
+  "turns": 9,
+  "seconds": 70.9,
+  "is_error": false,
+  "error": null
+}

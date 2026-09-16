@@ -1,0 +1,88 @@
+{
+  "id": 35,
+  "name": "Mailchimp",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "mailchimp.com/developer",
+  "one_liner": "",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "partner_gated",
+  "api_type": "none",
+  "api_breadth": "large",
+  "docs_url": "",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "red",
+  "score": 33,
+  "blocker": "no_public_api",
+  "model_verdict": null,
+  "confidence": 0.39,
+  "agreement": 0.5,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries",
+    "gated/no-API finding with weak grounding needs a human eye"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "unauth_probe": [
+        "api_key"
+      ]
+    },
+    "access": {
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {},
+    "api_breadth": {
+      "composio_tools": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/mailchimp",
+      "quote": "Composio catalog: auth ['OAUTH2'], 275 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://us1.api.mailchimp.com/3.0/lists",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"type\":\"https://mailchimp.com/developer/marketing/docs/errors/\",\"title\":\"API Key Invalid\",\"status\":401,\"detail\":\"Your request did not include a valid API key or token.\",\"instance\":\"8a9c914d-ec71-1511",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "MAILCHIMP",
+    "tools": 275,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/mailchimp"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": "api_key"
+  },
+  "notes": "",
+  "pass1": null,
+  "pass2": null,
+  "cost_usd": 0.082
+}

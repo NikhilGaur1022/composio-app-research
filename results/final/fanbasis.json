@@ -1,0 +1,81 @@
+{
+  "id": 50,
+  "name": "fanbasis",
+  "category": "Ecommerce",
+  "hint": "fanbasis.com",
+  "one_liner": "Creator monetization platform providing REST API for payments infrastructure and digital product hosting.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "unknown",
+  "docs_url": "https://dev-docs.fanbasis.com/",
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "verdict": "yellow",
+  "score": 85,
+  "blocker": "undocumented",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.87,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "api_key"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "pass1": "none"
+    }
+  },
+  "evidence": [],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 301,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Primary documentation at dev-docs.fanbasis.com requires login. API key auth confirmed via public NPM SDK. Free/paid access model not clearly documented in public sources. No mention of OAuth or other auth methods. Endpoint count unknown. MCP server status unknown.",
+  "pass1": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "yellow",
+    "blocker": "undocumented"
+  },
+  "pass2": null,
+  "cost_usd": 0.124
+}

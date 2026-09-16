@@ -1,0 +1,105 @@
+{
+  "id": 36,
+  "name": "Klaviyo",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.klaviyo.com",
+  "one_liner": "Marketing automation platform with email, SMS, and customer data platform APIs",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "large",
+  "docs_url": "https://developers.klaviyo.com/",
+  "mcp": {
+    "status": "community",
+    "url": ""
+  },
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/klaviyo",
+      "quote": "Composio catalog: auth ['API_KEY', 'OAUTH2'], 225 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://a.klaviyo.com/api/profiles/",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: Bearer, Klaviyo-API-Key; body: {\"errors\":[{\"id\":\"6cd174a4-de51-4668-94d8-137cba7dcce0\",\"status\":401,\"code\":\"not_authenticated\",\"title\":\"Authentication credentials were not provided.\",\"detail\":\"Authentication credentials were not pr",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "KLAVIYO",
+    "tools": 225,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/klaviyo"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": "Bearer, Klaviyo-API-Key",
+    "inferred": "bearer_token"
+  },
+  "notes": "API key auth is deprecated; OAuth2 is the future standard. Free tier includes access to profiles, events, lists, segments, campaigns, flows, templates, webhooks. Advanced features like SMS events require paid plans. Both REST and GraphQL APIs are fully documented at developers.klaviyo.com.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.112
+}

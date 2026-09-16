@@ -1,0 +1,74 @@
+{
+  "id": 58,
+  "name": "Sherlock",
+  "category": "Data, SEO and Scraping",
+  "hint": "github.com/sherlock-project/sherlock",
+  "one_liner": "",
+  "auth_methods": [
+    "none"
+  ],
+  "access": "no_public_api",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/holistis/bug-bounty-intelligence-mcp"
+  },
+  "verdict": "red",
+  "score": 48,
+  "blocker": "no_public_api",
+  "model_verdict": null,
+  "confidence": 0.32,
+  "agreement": 0.33,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries",
+    "gated/no-API finding with weak grounding needs a human eye",
+    "no_public_api but api_type=rest"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {},
+    "access": {},
+    "api_type": {
+      "apis_guru_spec": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 845 operations, securitySchemes []",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 845
+  },
+  "probe": {
+    "status": null,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "",
+  "pass1": null,
+  "pass2": null,
+  "cost_usd": 0.138
+}

@@ -1,0 +1,170 @@
+{
+  "id": 5,
+  "name": "Twenty",
+  "category": "CRM and Sales",
+  "hint": "twenty.com (open-source CRM)",
+  "one_liner": "Twenty is an open-source CRM (self-hostable or cloud-hosted) offering REST and GraphQL APIs for records and workspace schema management.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "small",
+  "docs_url": "https://docs.twenty.com/developers/extend/api",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/mhenry3164/twenty-crm-mcp-server"
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.78,
+  "agreement": 0.96,
+  "grounding_rate": 0.62,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "rest_and_graphql",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass2": "unknown",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "community",
+      "pass1": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "Authorization: Bearer YOUR_API_KEY",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "Create an API key in Settings → API & Webhooks → + Create key. Copy it immediately — it's shown once.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://twenty.com/pricing",
+      "quote": "Start your free trial today without credit card.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+      "quote": "A Model Context Protocol (MCP) server for Twenty CRM integration. Enables natural language interactions with your CRM data through Claude and other AI assistants.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://twenty.com/pricing",
+      "quote": "REST & GraphQL API",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "For OAuth-based access (external apps acting on behalf of users), see [OAuth](/developers/extend/oauth).",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://twenty.com/pricing",
+      "quote": "Self-host the open source core for free, or upgrade to Organization for SSO and row-level permissions.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "Core API (/rest/ and /graphql/) — Handles CRUD operations on records like People, Companies, and custom objects",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/twenty",
+      "quote": "Composio catalog: auth ['API_KEY'], 8 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.twenty.com/rest/companies",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: {\"statusCode\":403,\"messages\":[\"Missing authentication token\"],\"error\":\"FORBIDDEN_EXCEPTION\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "TWENTY",
+    "tools": 8,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/twenty"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": "bearer_token"
+  },
+  "notes": "Twenty is open-source and self-hostable (Docker Compose) for free with unrestricted REST/GraphQL API access via API key (bearer token) — this is the most accessible self-serve path. The managed cloud offering has a no-credit-card free trial, then requires a paid plan (Pro $9/user/mo+) for API access; endpoint count is not fixed since the API is dynamically generated per workspace schema. OAuth2 is documented for third-party apps acting on behalf of users. No official vendor MCP server found; several community MCP servers exist (github.com/mhenry3164, igorwarzocha, jezweb) and an open GitHub issue (twentyhq/twenty#12953) requesting an official one.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.72
+  },
+  "cost_usd": 0.33
+}

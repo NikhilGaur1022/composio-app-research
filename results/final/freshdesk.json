@@ -1,0 +1,170 @@
+{
+  "id": 13,
+  "name": "Freshdesk",
+  "category": "Support and Helpdesk",
+  "hint": "freshdesk.com",
+  "one_liner": "Freshdesk is a cloud-based customer support/helpdesk platform (ticketing, omnichannel, automations) by Freshworks.",
+  "auth_methods": [
+    "api_key",
+    "basic"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developers.freshdesk.com/api/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/effytech/freshdesk_mcp"
+  },
+  "verdict": "yellow",
+  "score": 90,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.77,
+  "agreement": 0.89,
+  "grounding_rate": 0.56,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "pass1/pass2 disagree on access (paid_plan vs self_serve_trial)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "basic"
+      ],
+      "pass1": [
+        "basic"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_trial",
+      "pass1": "paid_plan",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "large",
+      "pass2": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "You can use your personal API key to authenticate the request. If you use the API key, there is no need for a password.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "curl -v -u apikey:X",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "Log in to your Support Portal. Click on your profile picture on the top right corner of your portal. Go to Profile settings Page. Your API key will be available below the change password section to your right.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "Growth - $19/agent/month (billed annually)",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/effytech/freshdesk_mcp",
+      "quote": "An MCP server implementation that integrates with Freshdesk, enabling AI models to interact with Freshdesk modules and perform various support operations.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "When you sign up, you instantly get access to our Enterprise plan for 14 days.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.freshdesk.com/api/",
+      "quote": "Tickets (create, view, list, update, delete, merge, archive)",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://docs.composio.dev/toolkits/freshdesk",
+      "quote": "178",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "When you sign up, you instantly get access to our Enterprise plan for 14 days.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/freshdesk",
+      "quote": "Composio catalog: auth ['API_KEY'], 178 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "FRESHDESK",
+    "tools": 178,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/freshdesk"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 301,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Freshdesk v2 REST API uses HTTP Basic Auth with the API key as username (no password needed); no OAuth2 for the core API. API key is available immediately in Profile Settings for any account, including the 14-day free trial, but there is no permanent free tier — sustained use requires a paid plan (Growth/Pro/Enterprise). Wide resource coverage (tickets, contacts, companies, agents, solutions, automations, CSAT, custom objects, etc.); Composio catalogs 178 tools, suggesting medium API breadth. No vendor-published MCP server found; only community implementations (effytech/freshdesk_mcp and others) exist.",
+  "pass1": {
+    "auth_methods": [
+      "basic"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "basic"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.366
+}

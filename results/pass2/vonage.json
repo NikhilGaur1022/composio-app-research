@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "jwt"
+    ],
+    "blocker": "none",
+    "confidence": 0.8,
+    "docs_url": "https://developer.vonage.com/en/home",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://developer.vonage.com/en/getting-started/overview",
+        "quote": "an API key and secret that you can use to access our APIs"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.vonage.com/en/getting-started/overview",
+        "quote": "We'll give you some free credit when you first open your account and you can top up when you run low."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "API key and secret sent Base64 encoded in the Authorization header"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "a compact, URL-safe means of representing claims to be transferred between two parties"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.vonage.com/en/api/sms",
+        "quote": "Your API key. Only required if setting sig."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.vonage.com/en/home",
+        "quote": "rest"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-documentation-mcp-server",
+        "quote": "We're excited to announce the Vonage Documentation MCP Server — a new way to access Vonage docs directly from your development environment or AI assistant."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.vonage.com/en/getting-started/overview",
+        "quote": "Access to our APIs is charged on a per-request basis."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-documentation-mcp-server"
+    },
+    "notes": "Vonage (formerly Nexmo) is a large communications platform (Voice, SMS, Messages, Verify, Video, Number Insight, Conversation, Application APIs, etc.) — apis.guru only indexed the small \"account\" sub-API (3 endpoints), so api_breadth is judged large based on the full product surface, not that one spec. Auth is primarily API key/secret via HTTP Basic, plus JWT (Bearer) for Voice/Video/Application-scoped APIs; some legacy endpoints (e.g. SMS) accept api_key/api_secret as signed request params. Free developer account with starter credit is self-serve (no approval gate); production use is pay-as-you-go. Vonage publishes an official Documentation MCP server and an official API-bindings MCP server (community forks/alternatives also exist, e.g. khan2a/telephony-mcp-server), so mcp.status is official rather than community.",
+    "one_liner": "Vonage is a cloud communications platform (CPaaS) providing REST APIs for SMS, Voice, Video, Messages, Verify, and Number Insight.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.18173659999999997,
+  "turns": 8,
+  "seconds": 48.4,
+  "is_error": false,
+  "error": null
+}

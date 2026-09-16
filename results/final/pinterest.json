@@ -1,0 +1,100 @@
+{
+  "id": 38,
+  "name": "Pinterest",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.pinterest.com",
+  "one_liner": "Social media platform for discovering, sharing, and shopping visual content",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developers.pinterest.com/docs/",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass1": [
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "composio_tools": "small",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/pinterest",
+      "quote": "Composio catalog: auth ['OAUTH2'], 24 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.pinterest.com/v5/user_account",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"code\":2,\"message\":\"Authentication failed.\",\"status\":\"failure\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "PINTEREST",
+    "tools": 24,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/pinterest"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Pinterest API uses OAuth2 with Authorization Code and Client Credentials flows. Trial tier is freely accessible via self-serve request (reviewed daily). Standard tier also free but requires app approval and video demo. No published pricing. REST API covering ads management, conversion tracking, analytics, and organic/paid content operations.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.275
+}

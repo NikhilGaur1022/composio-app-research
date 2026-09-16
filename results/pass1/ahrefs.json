@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "SEO and backlink analysis platform providing API access to search, domain, and competitor data for paid subscribers.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://docs.ahrefs.com",
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/api-guide"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/api-guide",
+        "quote": "API Key (Bearer token) for direct Enterprise API v3 access, and OAuth 2.0 Authorization Code flow for Ahrefs Connect"
+      },
+      {
+        "field": "access",
+        "url": "https://thatmarketingbuddy.com/pricing/ahrefs",
+        "quote": "Starter and the free tier get no API access at all. API access requires Lite or higher; Starter and Ahrefs Free are excluded."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/api-guide",
+        "quote": "Ahrefs API v3 lets you pull organic and backlinks data from Site Explorer, keyword metrics and ideas from Keywords Explorer, Google SERP data"
+      },
+      {
+        "field": "mcp",
+        "url": "https://thatmarketingbuddy.com/pricing/ahrefs",
+        "quote": "monthly unit budgets are tier-gated and shared with the MCP server and Ahrefs Connect on the same plan"
+      }
+    ],
+    "confidence": 0.8,
+    "notes": "API requires paid Lite plan ($129/mo) or higher for access. Bearer token and OAuth 2.0 are primary auth methods. Official MCP server available. API v2 deprecated as of Nov 2025; v3 is current."
+  },
+  "cost_usd": 0.1115459,
+  "turns": 6,
+  "seconds": 29.0,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,73 @@
+{
+  "name": "DealCloud",
+  "checked": 6,
+  "grounded": 5,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "quote": "The client application sends a POST request to the token endpoint, providing its `client_id`, `apiKey`, and the required `scope(s)`.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "quote": "The client includes this token in the `Authorization` header for subsequent API requests `Authorization: Bearer {{token}}`.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://api.docs.dealcloud.com/docs/apikeys",
+      "quote": "To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions. Navigate to Admin > User Management, select the relevant user group, go to Capabilities > S",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://api.docs.dealcloud.com/docs/apikeys",
+      "quote": "Once user permissions are set, click the User icon at the top-right of your DealCloud screen and select Profile. Scroll down to the API Key section and click Enable.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://github.com/jstewartrr/infra-20251230-mcp-dealcloud",
+      "quote": "jstewartrr/infra-20251230-mcp-dealcloud (0★)",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.734
+    },
+    {
+      "field": "verdict",
+      "url": "https://api.docs.dealcloud.com/docs/apikeys",
+      "quote": "ensure the intended user is assigned to a user group with the appropriate permissions",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.83,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

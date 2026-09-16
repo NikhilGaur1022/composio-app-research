@@ -1,0 +1,91 @@
+{
+  "id": 29,
+  "name": "Aircall",
+  "category": "Communications and Messaging",
+  "hint": "aircall.io",
+  "one_liner": "Aircall is a cloud-based communications platform providing voice calling, SMS messaging, and conversation intelligence for business integrations.",
+  "auth_methods": [
+    "basic"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developer.aircall.io/api-references",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/themobilefirstco/aircall-mcp-server"
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.87,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass1": [
+        "basic",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://api.aircall.io/v1/calls",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"message\":\"Unauthorized\"}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Self-serve basic auth credentials available from dashboard. OAuth for marketplace partners requires contacting Aircall. Rate limited to 120 requests/minute per company. Free tier mentioned but plan-gating details are undocumented.",
+  "pass1": {
+    "auth_methods": [
+      "basic",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.137
+}

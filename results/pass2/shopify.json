@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest_and_graphql",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "mcp": {
+      "status": "official",
+      "url": "https://shopify.dev/docs/apps/build/devmcp"
+    },
+    "one_liner": "Shopify is an ecommerce platform whose Admin/Storefront APIs let developers build apps and integrations against merchant stores, authenticated via OAuth (or static access tokens for custom apps).",
+    "notes": "Free Partner account + free development store give self-serve API credentials (OAuth access tokens or custom-app \"Admin API access token\") for building/testing immediately, no approval needed for that. Public App Store listing does require app review, but that's a distribution gate, not a credential gate, so access is scored self_serve_free rather than admin_approval. REST Admin API is now legacy (frozen at 2025-10 version, no new public apps allowed to use it since 2025-04-01) while GraphQL Admin API is the actively developed surface — flagged as a partial caveat inside api_type rather than a blocker since GraphQL fully covers the same functionality. Access tokens are sent in a custom `X-Shopify-Access-Token` header (not standard OAuth Bearer syntax), grouped here under api_key/oauth2 rather than adding \"other\". Vendor also publishes an official local \"Dev MCP server\" for docs/API discovery (no auth required) in addition to several community MCP servers seen in the registry hints.",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+        "quote": "The merchant is redirected to Shopify to approve access, then back to your app with a code that your app exchanges for an access token."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+        "quote": "Your app authenticates as itself with its client ID and client secret, and there's no merchant approval step."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+        "quote": "The credential your code sends on each GraphQL Admin API request, in the `X-Shopify-Access-Token` header"
+      },
+      {
+        "field": "api_type",
+        "url": "https://shopify.dev/docs/api/admin-rest",
+        "quote": "The REST Admin API is a legacy API as of October 1, 2024. Starting April 1, 2025, all new public apps must be built exclusively with the GraphQL Admin API."
+      },
+      {
+        "field": "api_type",
+        "url": "https://shopify.dev/docs/api/admin-graphql",
+        "quote": "The Admin API lets you build apps and integrations that extend and enhance the Shopify admin."
+      },
+      {
+        "field": "access",
+        "url": "https://www.shopify.com/partners",
+        "quote": "Become a partner"
+      },
+      {
+        "field": "mcp",
+        "url": "https://shopify.dev/docs/apps/build/devmcp",
+        "quote": "If you prefer MCP, you can connect to Shopify's developer resources through the Dev MCP server. The server runs locally and doesn't require authentication."
+      },
+      {
+        "field": "verdict",
+        "url": "https://shopify.dev/docs/api/admin-graphql",
+        "quote": "https://{store_name}.myshopify.com/admin/api/2026-07/graphql.json"
+      }
+    ],
+    "verdict": "green"
+  },
+  "cost_usd": 0.17234499999999997,
+  "turns": 9,
+  "seconds": 61.7,
+  "is_error": false,
+  "error": null
+}

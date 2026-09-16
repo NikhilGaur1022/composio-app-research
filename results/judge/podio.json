@@ -1,0 +1,95 @@
+{
+  "name": "Podio",
+  "checked": 8,
+  "grounded": 7,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.podio.com/authentication",
+      "quote": "Your application is assigned a unique identifier, called 'Client ID', together with a 'Client Secret'. You will need both of these to authenticate.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.podio.com/authentication",
+      "quote": "Authorization: OAuth2 ACCESS_TOKEN",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.podio.com/api-key",
+      "quote": "It's easy to get one or more API keys for accessing your Podio data. You just have to sign in or sign up with Podio, and go to the API key tab in your settings.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://developers.podio.com/",
+      "quote": "you should review our Terms of API use and then grab an API key for each app you want to build from your account settings page.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://developers.podio.com/",
+      "quote": "The Podio API is a complete programmable interface to all Podio functionality",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://developers.podio.com/",
+      "quote": "the entire Podio frontend is built on the API",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://developers.podio.com/",
+      "quote": "The Podio API is a complete programmable interface to all Podio functionality",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://api.podio.com/org/",
+      "quote": "Bearer realm=\"podio\", error=\"invalid_request\"",
+      "status": 401,
+      "verdict": "not_grounded",
+      "score": 0.483
+    }
+  ],
+  "grounding_rate": 0.88,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "api_type": [
+      "grounded"
+    ],
+    "api_breadth": [
+      "grounded"
+    ],
+    "mcp": [
+      "grounded"
+    ],
+    "verdict": [
+      "not_grounded"
+    ]
+  }
+}

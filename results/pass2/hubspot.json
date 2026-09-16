@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest_and_graphql",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.82,
+    "docs_url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth",
+        "quote": "If you plan to distribute your app to multiple accounts...your app must be built using OAuth authentication."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth",
+        "quote": "If you want to limit distribution of your app to a single authorized account, you'll use a static auth access token."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.hubspot.com/docs/guides/apps/private-apps/overview",
+        "quote": "When making a call to one of the HubSpot API endpoints, set the value of the Authorization field to Bearer [YOUR_TOKEN]."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.hubspot.com/get-started",
+        "quote": "Create developer account with a HubSpot Developer account"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.hubspot.com/changelog/graphql-live",
+        "quote": "GraphQL for CMS Developers is live for CMS Hub Pro and Enterprise"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.hubspot.com/ai-tools/mcp",
+        "quote": "HubSpot offers two distinct MCP (Model Context Protocol) servers — one for connecting any MCP-compatible AI tool or agent to your CRM..."
+      },
+      {
+        "field": "mcp",
+        "url": "https://developers.hubspot.com/changelog/hubspot-developer-mcp-server-for-app-and-cms-development-now-in-ga",
+        "quote": "HubSpot Developer MCP server (local) for App and CMS Development Now in GA"
+      },
+      {
+        "field": "verdict",
+        "url": "https://api.hubapi.com/crm/v3/objects/contacts",
+        "quote": "This API supports OAuth 2.0 authentication and you can find more details at https://developers.hubspot.com/docs/methods/auth/oauth-ov"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://developers.hubspot.com/ai-tools/mcp"
+    },
+    "notes": "HubSpot free developer accounts allow creating private apps (bearer token auth) or OAuth apps immediately, no sales contact required for base API access; higher-volume/enterprise scopes and marketplace listing require app review/OAuth. Two official vendor-published MCP servers exist (remote CRM MCP at mcp.hubspot.com, and local Developer MCP via HubSpot CLI), both GA as of Feb 2026. API is predominantly REST (v3, hundreds of endpoints across CRM/Marketing/CMS/etc.) with a supplementary GraphQL API for CRM/CMS data querying (CMS Hub Pro/Enterprise for some GraphQL features).",
+    "one_liner": "HubSpot is a CRM and sales/marketing platform with a broad REST (plus supplementary GraphQL) API for CRM objects, marketing, and CMS.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.2158656,
+  "turns": 10,
+  "seconds": 165.4,
+  "is_error": false,
+  "error": null
+}

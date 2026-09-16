@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Web scraping service with AI-powered data extraction from any public domain",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://docs.mrscraper.com",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+        "quote": "Every request the skill makes carries these headers: x-api-token: <MRSCRAPER_API_TOKEN>"
+      },
+      {
+        "field": "access",
+        "url": "https://mrscraper.com/pricing",
+        "quote": "MrScraper's Scraper Free includes 1,000 tokens every month at no cost - no credit card required"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.mrscraper.com/docs/features/activating-api",
+        "quote": "When using the API, you pass the token as a query parameter and in the x-api-token header"
+      }
+    ],
+    "confidence": 0.88,
+    "notes": "Free tier available with 1,000 tokens/month (no credit card required). Paid plans start at $199/month. Python SDK and CLI tools available. REST API authenticated via API key token in headers and query parameters."
+  },
+  "cost_usd": 0.12282580000000001,
+  "turns": 7,
+  "seconds": 54.1,
+  "is_error": false,
+  "error": null
+}

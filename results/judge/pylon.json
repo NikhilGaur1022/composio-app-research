@@ -1,0 +1,64 @@
+{
+  "name": "Pylon",
+  "checked": 5,
+  "grounded": 4,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://api.usepylon.com/issues",
+      "quote": "Token must follow Bearer authorization scheme: https://www.rfc-editor.org/rfc/rfc6750#section-2.1.",
+      "status": 401,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "quote": "Generate an API token in the Pylon dashboard.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://www.featurebase.app/blog/pylon-pricing",
+      "quote": "API access and custom dashboards for exporting data and building tailored reports.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.composio.dev/toolkits/pylon_mcp",
+      "quote": "wraps_official_mcp: true",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.373
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://www.scalekit.com/blog/pylon-mcp-vs-api",
+      "quote": "The Pylon REST API is a bearer-authenticated interface at https://api.usepylon.com, spanning 22 documented resource groups.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.8,
+  "by_field": {
+    "auth_methods": [
+      "grounded"
+    ],
+    "access": [
+      "grounded",
+      "grounded"
+    ],
+    "mcp": [
+      "not_grounded"
+    ],
+    "api_breadth": [
+      "grounded"
+    ]
+  }
+}

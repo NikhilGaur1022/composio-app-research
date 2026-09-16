@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "large",
+    "api_type": "rest_and_graphql",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "jwt"
+    ],
+    "blocker": "none",
+    "confidence": 0.55,
+    "docs_url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+    "evidence": [
+      {
+        "field": "access",
+        "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org.html",
+        "quote": "Step One: Sign up for Salesforce Developer Edition"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.salesforce.com/signup",
+        "quote": "developer.salesforce.com/signup"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+        "quote": "Authorization Through External Client Apps or Connected Apps and OAuth 2.0"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://login.salesforce.com/.well-known/openid-configuration",
+        "quote": "private_key_jwt"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://api.apis.guru/v2/specs/salesforce.local/einstein/2.0.1/openapi.json",
+        "quote": "bearer_token"
+      },
+      {
+        "field": "mcp",
+        "url": "https://developer.salesforce.com/blogs/2025/06/introducing-mcp-support-across-salesforce",
+        "quote": "Introducing MCP Support Across Salesforce"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/salesforcecli/mcp",
+        "quote": "salesforcecli/mcp"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://docs.composio.dev/toolkits/salesforce",
+        "quote": "223"
+      },
+      {
+        "field": "verdict",
+        "url": "https://login.salesforce.com/services/oauth2/token",
+        "quote": "{\"error\":\"unsupported_grant_type\",\"error_description\":\"grant type not supported\"}"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/salesforcecli/mcp"
+    },
+    "notes": "developer.salesforce.com returned HTTP 403 to direct fetches (bot protection), so REST/OAuth doc claims rely on search-result snippets/titles and a direct fetch of login.salesforce.com/.well-known/openid-configuration rather than fully verbatim doc-page quotes; confidence lowered accordingly. Confirmed via search: Developer Edition signup (developer.salesforce.com/signup) grants a free org with full REST/SOAP/Bulk/Metadata/GraphQL API access; auth is OAuth 2.0 (authorization_code, JWT bearer, client_credentials, refresh_token flows) using bearer access tokens, with client auth methods client_secret_post/client_secret_basic/private_key_jwt per the OIDC discovery doc. Salesforce also publishes an official MCP server (salesforcecli/mcp, Salesforce DX MCP, hosted MCP available in every Dev Edition org per the June 2025 dev blog), alongside many community MCP servers (tsmztech, kablewy, cirra, kodey). API surface is very large (sObjects, Bulk, Metadata, Tooling, GraphQL, Streaming, Composite, plus product-specific APIs), well over 300 endpoints, so api_breadth=large despite the smaller Einstein-only OpenAPI spec (45 endpoints) apis.guru indexed.",
+    "one_liner": "Salesforce is a CRM/sales platform with an extensive suite of official REST, SOAP, Bulk, Metadata, and GraphQL APIs for automating and extending its platform.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.26764299999999996,
+  "turns": 12,
+  "seconds": 199.4,
+  "is_error": false,
+  "error": null
+}

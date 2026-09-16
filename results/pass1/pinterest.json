@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Social media platform for discovering, sharing, and shopping visual content",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developers.pinterest.com/docs/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+        "quote": "Authorization Code is the most secure grant type because the user must explicitly approve the scopes requested by your app"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "Pinterest does not publish API access fees for either tier, so both Trial and Standard are effectively free"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pinterest.com/docs/getting-started/access-tiers/",
+        "quote": "Trial applications are reviewed each business day"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.pinterest.com/docs/api/v5/introduction/",
+        "quote": "Pinterest API v5 is a REST API"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "quote": "To get started, create a business account and request Trial access to the Pinterest API at no charge"
+      }
+    ],
+    "notes": "Pinterest API uses OAuth2 with Authorization Code and Client Credentials flows. Trial tier is freely accessible via self-serve request (reviewed daily). Standard tier also free but requires app approval and video demo. No published pricing. REST API covering ads management, conversion tracking, analytics, and organic/paid content operations."
+  },
+  "cost_usd": 0.27530099999999996,
+  "turns": 5,
+  "seconds": 106.0,
+  "is_error": false,
+  "error": null
+}

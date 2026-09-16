@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Ecwid is a cloud-based ecommerce platform for managing products, orders, customers, and storefront settings across online channels.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://api-docs.ecwid.com/reference/rest-api",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://api-docs.ecwid.com/reference/rest-api",
+        "quote": "Ecwid REST API exposes products, categories, orders, customers, payment and shipping methods, and storefront settings using OAuth 2.0 authentication with public (read-only) or private access tokens."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://github.com/Ecwid/ecwid-api-docs/blob/master/includes/_authentication.md",
+        "quote": "Use the token in the \"Authorization: Bearer secret_token\" header format."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+        "quote": "Only stores on paid plans can access API. However, Ecwid provides a free upgrade to a paid plan if you work on store customization, want to build an integration, or develop a public application."
+      },
+      {
+        "field": "api_type",
+        "url": "https://api-docs.ecwid.com/reference/rest-api",
+        "quote": "About Ecwid REST API: REST API calls... available endpoints include: Store profile, Products, Categories, Product variations, Product types, Orders, Carts, Customers, Customer groups, Discount coupons."
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "API access requires a paid subscription, but Ecwid offers free paid plan upgrades for qualifying development use cases. Buildable with yellow verdict due to paid requirement, though free alternatives exist for qualifying projects."
+  },
+  "cost_usd": 0.10829559999999999,
+  "turns": 6,
+  "seconds": 217.5,
+  "is_error": false,
+  "error": null
+}

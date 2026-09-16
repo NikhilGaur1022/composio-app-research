@@ -1,0 +1,116 @@
+{
+  "id": 75,
+  "name": "Asana",
+  "category": "Productivity and Project Management",
+  "hint": "developers.asana.com",
+  "one_liner": "Project management and work tracking platform with REST API, OAuth/token authentication, and official MCP server support.",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://developers.asana.com/docs/authentication",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/roychri/mcp-server-asana"
+  },
+  "verdict": "green",
+  "score": 95,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "apis_guru_spec": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "medium",
+      "composio_tools": "large",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/asana",
+      "quote": "Composio catalog: auth ['OAUTH2'], 153 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/asana.com/1.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 167 operations, securitySchemes ['bearer_token', 'oauth2']",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://app.asana.com/api/1.0/users/me",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"errors\":[{\"message\":\"Not Authorized\",\"help\":\"For more information on API status codes and how to handle them, read the docs on errors: https://developers.asana.com/docs/errors\"}]}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "ASANA",
+    "tools": 153,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/asana"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 167
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Asana uses Personal Access Tokens (bearer_token auth) as the modern authentication method, with OAuth2 for delegated access. API breadth estimated as medium based on documented comprehensive endpoint coverage; exact endpoint count not publicly stated. Official MCP server (V2) now generally available for AI agent integration. Self-serve credentials available from developer console—no admin approval or payment required for basic API access.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.126
+}

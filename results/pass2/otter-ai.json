@@ -1,0 +1,79 @@
+{
+  "ok": true,
+  "result": {
+    "access": "admin_approval",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "blocker": "enterprise_only",
+    "confidence": 0.72,
+    "docs_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "All API requests require authentication using Bearer token authentication."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+        "quote": "OAuth-authenticated with granular permissions."
+      },
+      {
+        "field": "access",
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "This content is available for the Otter Enterprise plan and may require admin permissions."
+      },
+      {
+        "field": "access",
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "If you do not see this feature for your workspace, contact your Otter account manager."
+      },
+      {
+        "field": "api_type",
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Authorization: Bearer YOUR_API_KEY"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "Enterprise plan users are currently limited to 10 requests / second."
+      },
+      {
+        "field": "mcp",
+        "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+        "quote": "Otter's MCP Server"
+      },
+      {
+        "field": "mcp",
+        "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+        "quote": "Interested in Otter for your enterprise? Request a demo to see how the MCP Server can transform your team's workflow."
+      },
+      {
+        "field": "verdict",
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "quote": "This content is available for the Otter Enterprise plan and may require admin permissions."
+      },
+      {
+        "field": "one_liner",
+        "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+        "quote": "Otter's MCP Server connects your meeting data directly to AI tools like Claude and ChatGPT, bringing your meeting intelligence into your everyday AI workflows."
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+    },
+    "notes": "Otter's REST/webhook Public API (Bearer-token API keys, ~7 documented endpoints across channel/conversation/workspace resources plus webhooks) is restricted to Enterprise-plan workspaces and may require admin permissions to enable; workspaces that don't see the Developer tab must contact their Otter account manager. Otter also runs an official OAuth-authenticated remote MCP server for meeting-transcript search/summarization, again positioned as an enterprise offering (\"Request a demo\"). Could not directly fetch the help.otter.ai pages (403 to normal WebFetch; used a read-proxy) so treat exact endpoint counts as approximate.",
+    "one_liner": "Otter.ai is an AI meeting assistant that records, transcribes, and summarizes conversations, exposing an Enterprise-gated REST API and an official OAuth MCP server for querying meeting transcripts/insights.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.2752894,
+  "turns": 12,
+  "seconds": 92.7,
+  "is_error": false,
+  "error": null
+}

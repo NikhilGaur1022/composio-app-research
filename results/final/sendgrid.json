@@ -1,0 +1,114 @@
+{
+  "id": 40,
+  "name": "SendGrid",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "sendgrid.com",
+  "one_liner": "Email delivery and marketing platform with REST API for sending transactional emails, managing campaigns, and monitoring email statistics.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://www.twilio.com/docs/sendgrid/api-reference",
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.89,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key"
+      ],
+      "apis_guru_spec": [
+        "api_key"
+      ],
+      "pass1": [
+        "basic",
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "large",
+      "composio_tools": "large",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/sendgrid",
+      "quote": "Composio catalog: auth ['API_KEY'], 364 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/sendgrid.com/1.0.0/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 334 operations, securitySchemes ['api_key']",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.sendgrid.com/v3/templates",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"errors\":[{\"field\":null,\"message\":\"authorization required\"}]}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "SENDGRID",
+    "tools": 364,
+    "auth": [
+      "api_key"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/sendgrid"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 334
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "SendGrid offers a permanently free tier (100 emails/day) with self-serve API key generation. The v3 REST API covers email sending, templates, campaigns, contacts, suppression, statistics, and webhooks. No official MCP server identified.",
+  "pass1": {
+    "auth_methods": [
+      "bearer_token",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.121
+}

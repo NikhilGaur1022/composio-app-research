@@ -1,0 +1,74 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_trial",
+    "api_breadth": "small",
+    "api_type": "graphql",
+    "auth_methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://www.plain.com/docs/graphql/authentication",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.plain.com/docs/graphql/authentication",
+        "quote": "Authorization: Bearer plainApiKey_xxx"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.plain.com/docs/graphql/authentication",
+        "quote": "Click 'Add API key' and select the permissions you need."
+      },
+      {
+        "field": "access",
+        "url": "https://www.plain.com/pricing",
+        "quote": "7 day free trial"
+      },
+      {
+        "field": "access",
+        "url": "https://www.plain.com/pricing",
+        "quote": "No credit card required"
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.plain.com/docs/graphql/authentication",
+        "quote": "Go to Settings → Machine Users and click + Add Machine User"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://www.plain.com/changelog/plain-mcp",
+        "quote": "30 tools across threads, customers, tenants, help center articles, and workspace data"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.plain.com/changelog/plain-mcp",
+        "quote": "You can now connect AI tools like Claude, ChatGPT, and Cursor directly to your Plain workspace using the Plain MCP server."
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.plain.com/changelog/plain-mcp",
+        "quote": "You authenticate with your existing Plain account, so the MCP server has the same permissions as your user."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.plain.com/docs/graphql/authentication",
+        "quote": "Each API key carries its own fine-grained permissions"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.plain.com/mcp"
+    },
+    "notes": "Plain's public API is GraphQL-only (core-api.uk.plain.com/graphql/v1). Credentials are created self-serve via Settings → Machine Users → API Keys, scoped with fine-grained permissions, no admin/partner approval documented. Product access is a 7-day free trial (no credit card) then paid seats starting at $35/seat/month; API/webhooks/events are listed under 'Extensibility' without an explicit paid-tier gate, but sustained use requires converting to a paid plan after trial. Plain also ships an official, vendor-maintained MCP server (mcp.plain.com) authenticated via the user's own Plain account session rather than API keys, exposing ~30 tools over threads/customers/tenants/help-center/workspace data.",
+    "one_liner": "Plain is a B2B customer support / helpdesk platform (threads, customers, tenants, help center) with a GraphQL API and an official MCP server.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.237865,
+  "turns": 10,
+  "seconds": 81.0,
+  "is_error": false,
+  "error": null
+}

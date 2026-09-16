@@ -1,0 +1,129 @@
+{
+  "id": 95,
+  "name": "Reducto",
+  "category": "AI, Research and Media-native",
+  "hint": "reducto.ai (document parsing)",
+  "one_liner": "Reducto is a document parsing/extraction API that converts PDFs and complex documents into structured, LLM-ready data.",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://docs.reducto.ai/get-started/quickstart",
+  "mcp": {
+    "status": "official",
+    "url": "https://docs.reducto.ai/mcp-server"
+  },
+  "verdict": "green",
+  "score": 93,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.79,
+  "agreement": 0.96,
+  "grounding_rate": 0.57,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "bearer_token"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "rest"
+    },
+    "api_breadth": {
+      "pass2": "small"
+    },
+    "mcp": {
+      "pass2": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://docs.reducto.ai/get-started/quickstart",
+      "quote": "Go to studio.reducto.ai and sign up for a free account.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://reducto.ai/pricing",
+      "quote": "Free$150 in free usage",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.reducto.ai/get-started/quickstart",
+      "quote": "Authorization: Bearer $REDUCTO_API_KEY",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.reducto.ai/get-started/quickstart",
+      "quote": "Go to studio.reducto.ai and sign up for a free account.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://platform.reducto.ai/openapi.json",
+      "quote": "/parse, /extract, /split, /edit, /pipeline, /classify, /job/{job_id}, /upload",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://platform.reducto.ai/openapi.json",
+      "quote": "18 distinct paths including /parse, /parse_async, /extract, /split, /edit, /pipeline, /classify, /job/{job_id}, /upload",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.reducto.ai/mcp-server",
+      "quote": "The hosted server runs at https://mcp.reducto.ai/mcp, and you can add this to your MCP client config by replacing your-api-key with a key from studio.reducto.ai/api-keys.",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://platform.reducto.ai/parse",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: <html>\r <head><title>403 Forbidden</title></head>\r <body>\r <center><h1>403 Forbidden</h1></center>\r </body>\r </html>\r ",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Self-serve free account at studio.reducto.ai grants an API key immediately (bearer token auth), with $150 free usage credit before paid rates ($10/1k pages parse, $20/1k pages extract) apply. REST API is small (~18 paths) covering parse/extract/split/edit/classify/pipeline plus job/upload management. Official vendor-published MCP server (reductoai/mcp-server-reducto) is hosted at mcp.reducto.ai and uses the same API key. Higher tiers (Growth/Enterprise) require sales contact but are not needed for basic agent-toolkit buildability.",
+  "pass1": null,
+  "pass2": {
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85
+  },
+  "cost_usd": 0.168
+}

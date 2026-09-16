@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "access": "paid_plan",
+    "api_breadth": "small",
+    "api_type": "rest",
+    "auth_methods": [
+      "basic",
+      "oauth2"
+    ],
+    "blocker": "paid_only",
+    "confidence": 0.72,
+    "docs_url": "https://developers.aircall.io/api-references",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://support.aircall.io/en-gb/articles/10375355327517",
+        "quote": "Use Basic Auth if you are an Aircall customer building for your own account only."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works",
+        "quote": "Aircall implemented the OAuth 2.0 authentication protocol so you can easily build an app on top of Aircall and deploy it on Aircall's Marketplace."
+      },
+      {
+        "field": "access",
+        "url": "https://aircall.io/pricing/",
+        "quote": "250+ integrations and API access"
+      },
+      {
+        "field": "access",
+        "url": "https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works",
+        "quote": "OAuth credentials — If you haven't received them yet, apply to the Tech Partner program"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.aircall.io/api-references/",
+        "quote": "The foundation for every Aircall integration is the REST API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/themobilefirstco/aircall-mcp-server",
+        "quote": "aircall-mcp-server"
+      }
+    ],
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/themobilefirstco/aircall-mcp-server"
+    },
+    "notes": "Two auth tracks: (1) Basic Auth with a self-generated api_id/token, available to any Aircall customer on a paid plan (even entry-level Essentials includes \"API access\") for building against your own account only; (2) OAuth2, required for multi-tenant Marketplace apps, which requires applying to and being approved by Aircall's Technology Partner program (client_id/client_secret issued after approval). No official Aircall-published MCP server found; several unofficial community MCP servers exist on GitHub with low star counts. Not present in Composio catalog. API surface appears CRM/telephony-resource sized (calls, contacts, users, numbers, teams, tags, webhooks, insights) — treated as small/unknown breadth since no endpoint count was directly verified.",
+    "one_liner": "Aircall is a cloud-based call center and business phone system with click-to-dial, call routing, and CRM integrations.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.2404674,
+  "turns": 11,
+  "seconds": 88.0,
+  "is_error": false,
+  "error": null
+}

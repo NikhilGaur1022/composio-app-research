@@ -1,0 +1,112 @@
+{
+  "id": 61,
+  "name": "GitHub",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.github.com/rest",
+  "one_liner": "Version control and collaboration platform providing REST and GraphQL APIs for repository, issue, pull request, and workflow automation.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "large",
+  "docs_url": "https://docs.github.com/en/rest",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/modelcontextprotocol/servers"
+  },
+  "verdict": "green",
+  "score": 98,
+  "blocker": "none",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.89,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass1": [
+        "basic",
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_free"
+    },
+    "api_type": {
+      "apis_guru_spec": "rest",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "large",
+      "composio_tools": "large",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/github",
+      "quote": "Composio catalog: auth ['OAUTH2'], 893 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 845 operations, securitySchemes []",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.github.com/user",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\r   \"message\": \"Requires authentication\",\r   \"documentation_url\": \"https://docs.github.com/rest\",\r   \"status\": \"401\"\r }",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "GITHUB",
+    "tools": 893,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/github"
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 845
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "GitHub offers free tier access with self-serve credentials for both REST and GraphQL APIs. REST API has hundreds of endpoints; GraphQL provides flexible query access to the same data. Personal access tokens and OAuth are primary documented methods. Free users can authenticate and make API calls with standard rate limits; higher limits available with paid accounts. Official GitHub MCP server enables AI-powered repository and workflow automation.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": null,
+  "cost_usd": 0.121
+}

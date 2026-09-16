@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "B2B data enrichment platform providing contact, company, and email verification through a REST API",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://docs.waterfall.io/v1/introduction",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.waterfall.io/v1/introduction",
+        "quote": "All requests require an API key in the x-api-key header"
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.leadsforge.ai/blog/waterfall-io-review",
+        "quote": "Waterfall.io offers multiple REST endpoints: Prospector, Contact Enrichment, Phone Enrichment, Company Enrichment, and Email Verification"
+      },
+      {
+        "field": "access",
+        "url": "https://www.leadsforge.ai/blog/waterfall-io-review",
+        "quote": "Waterfall.io uses usage-based pricing with no monthly commitments, credit expirations, or long-term contracts; you pay only for successful enrichments"
+      }
+    ],
+    "confidence": 0.65,
+    "notes": "Waterfall.io is a REST API-based B2B data enrichment platform using API key authentication. Access appears to be usage-based/paid with no free tier indicated in search results. Multiple endpoints confirmed for prospecting, contact enrichment, and email verification. Exact endpoint count unknown (estimated small <50). No evidence of MCP server or free tier access found. Lower confidence due to inability to confirm whether there is a free trial or dev sandbox available."
+  },
+  "cost_usd": 0.10973050000000002,
+  "turns": 8,
+  "seconds": 35.5,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Cloud-based accounting software with REST API for accessing QuickBooks Online financial data including invoices, customers, bills, payments, and reports.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/develop",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.getknit.dev/blog/quickbooks-online-api-integration-guide-in-depth",
+        "quote": "The QuickBooks API uses OAuth 2.0 exclusively — there are no API keys or basic authentication options."
+      },
+      {
+        "field": "access",
+        "url": "https://www.apideck.com/blog/exploring-the-quickbooks-online-accounting-api",
+        "quote": "A QuickBooks developer account is free, and you can sign up at the Intuit Developer Portal and get immediate sandbox access."
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.apideck.com/blog/exploring-the-quickbooks-online-accounting-api",
+        "quote": "The QuickBooks Online Accounting API is a REST API maintained by Intuit"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.intuit.com/app/developer/qbpayments/docs/develop/sandboxes/sandbox-faqs",
+        "quote": "To find your Client ID and Client Secret, navigate to Keys & Credentials under Development Settings."
+      }
+    ],
+    "confidence": 0.87,
+    "notes": "QuickBooks uses OAuth 2.0 exclusively for authentication. Free developer account provides immediate sandbox access with sample data. REST API covers full accounting data model with CRUD operations. Pricing applies only in production for CorePlus (data retrieval) calls beyond 500K/month free tier. API breadth marked unknown as specific endpoint count not found in search results."
+  },
+  "cost_usd": 0.1214668,
+  "turns": 8,
+  "seconds": 34.3,
+  "is_error": false,
+  "error": null
+}

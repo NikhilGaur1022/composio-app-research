@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Devin is an AI-powered software engineering platform that autonomously plans, analyzes, and executes software development tasks.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "medium",
+    "docs_url": "https://docs.devin.ai/api-reference",
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.devin.ai/"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.devin.ai/api-reference/authentication",
+        "quote": "You send the API key on every request with an Authorization header: Authorization: Bearer $DEVIN_API_KEY"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.devin.ai/api-reference/authentication",
+        "quote": "Navigate to Settings > Service Users to create and manage API keys for workspace automation"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.devin.ai/api-reference/overview",
+        "quote": "REST API with Organization and Enterprise scope endpoints at https://api.devin.ai/v3/"
+      },
+      {
+        "field": "mcp",
+        "url": "https://mcp.devin.ai/",
+        "quote": "Authenticated MCP server by Cognition with repository documentation tools and platform tools"
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.devin.ai/api-reference",
+        "quote": "Public REST API with self-serve bearer token authentication and official MCP server available"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Devin offers a REST API with bearer token authentication for service users and personal access tokens. Credentials are self-serve via workspace settings with no documented payment barrier. Official MCP server available at mcp.devin.ai. API covers sessions, knowledge, playbooks, schedules, and enterprise features. Confidence slightly reduced due to limited endpoint count details from search constraints."
+  },
+  "cost_usd": 0.17020565,
+  "turns": 3,
+  "seconds": 38.9,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "result": {
+    "access": "self_serve_free",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://airtable.com/developers/web/api/authentication",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://airtable.com/developers/web/api/authentication",
+        "quote": "Personal access tokens are for personal development, like building an integration for yourself, your client, or your company."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://airtable.com/developers/web/api/authentication",
+        "quote": "OAuth access tokens are recommended for building an integration where other users grant your service access to Airtable's API on their behalf."
+      },
+      {
+        "field": "access",
+        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+        "quote": "From /create/tokens, click the 'Create new token' button to create a new personal access token."
+      },
+      {
+        "field": "access",
+        "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+        "quote": "Once your token is created, we will only show it to you once, so we encourage you to copy it to your clipboard and store it somewhere safe."
+      },
+      {
+        "field": "api_type",
+        "url": "https://airtable.com/developers/web/api/introduction",
+        "quote": "The API closely follows REST semantics, uses JSON to encode objects, and relies on standard HTTP codes to signal operation outcomes."
+      },
+      {
+        "field": "mcp",
+        "url": "https://airtable.com/developers/agents",
+        "quote": "Any MCP-compatible tool can read, write, and query your bases through natural language, scoped to your existing permissions."
+      },
+      {
+        "field": "verdict",
+        "url": "https://airtable.com/developers/web/api/authentication",
+        "quote": "As of February 1st, 2024, the deprecation period for Airtable API keys has ended"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://airtable.com/developers/agents"
+    },
+    "notes": "Airtable API keys were fully deprecated (removed) as of Feb 1, 2024, replaced by personal access tokens (bearer_token, self-serve at /create/tokens, no paid-plan gate found) and OAuth2 for third-party integrations. Official MCP server distributed via npm (@airtable/mcp-cli) and documented at airtable.com/developers/agents. Did not verify exact endpoint count for api_breadth (estimated medium based on typical REST resource set: records, bases, tables, fields, views, webhooks, comments, attachments).",
+    "one_liner": "Airtable is a cloud spreadsheet-database hybrid for building apps and workflows around structured data.",
+    "verdict": "green"
+  },
+  "cost_usd": 0.116601,
+  "turns": 7,
+  "seconds": 35.8,
+  "is_error": false,
+  "error": null
+}

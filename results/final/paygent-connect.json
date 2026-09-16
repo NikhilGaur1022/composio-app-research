@@ -1,0 +1,94 @@
+{
+  "id": 84,
+  "name": "Paygent Connect",
+  "category": "Finance and Fintech",
+  "hint": "paygent (NMI-powered)",
+  "one_liner": "Paygent Connect appears to be a small, NMI-powered white-label payment gateway/reseller, but no official, independently verifiable developer documentation site for this specific branded product could be located.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "access": "admin_approval",
+  "api_type": "rest",
+  "api_breadth": "unknown",
+  "docs_url": "https://docs.nmi.com/",
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "verdict": "yellow",
+  "score": 72,
+  "blocker": "undocumented",
+  "model_verdict": "red",
+  "confidence": 0.58,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [],
+  "auto_notes": [
+    "formula verdict yellow, model said red"
+  ],
+  "sources": {
+    "auth_methods": {
+      "pass2": [
+        "api_key"
+      ]
+    },
+    "access": {
+      "pass2": "admin_approval"
+    },
+    "api_type": {
+      "pass2": "rest"
+    },
+    "api_breadth": {
+      "pass2": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "api_type",
+      "url": "https://docs.nmi.com/reference/getting-started",
+      "quote": "Manage API authentication, user access, and event-driven integrations",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "verdict",
+      "url": "https://paygent.com",
+      "quote": "",
+      "grounded": "unchecked"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 0,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Could not locate an official, independently-documented \"Paygent Connect\" product. Multiple unrelated entities share the \"Paygent\" name (Japanese Paygent Co./GMO-affiliated payment gateway at pay-gent.com with no public dev docs found; api.paygent.tech, an unrelated crypto/AI-agent wallet product; and generic \"paygent\" WooCommerce/gomerchant integrations for the Japanese gateway). The hint \"NMI-powered\" suggests Paygent Connect is a small white-label/ISV reseller built on NMI's gateway platform (common for ISOs), which would mean the underlying tech is NMI's Direct Post/Query REST API (api_key-style security-key auth) but issued under Paygent's own branding after merchant underwriting — a pattern typical of NMI resellers, not self-serve. The paygent.com domain returned no response (status 0) in the deterministic probe and no docs page was found. All fields above are best-effort inference from the NMI white-label reseller pattern, not verified against an actual Paygent Connect developer portal — confidence is low and this should be re-verified with a live fetch of the actual Paygent Connect vendor domain if/when it is identified. MCP registry hits (\"com.obsmetrics.paygent/agents\", \"io.github.djautomd-lab/aipaygent\") could not be confirmed as related to this specific product, so mcp.status is reported as unknown rather than guessed.",
+  "pass1": null,
+  "pass2": {
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "red",
+    "blocker": "undocumented",
+    "confidence": 0.15
+  },
+  "cost_usd": 0.506
+}

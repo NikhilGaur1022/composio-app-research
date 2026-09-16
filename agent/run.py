@@ -44,11 +44,17 @@ def _run_stage(stage: str, apps, fn, workers: int, force: bool):
             return isinstance(r, dict) and "ok" in r and not r["ok"]
         return False
     todo = [a for a in apps if _needs(a)]
+    if args_global and args_global.reverse:
+        todo = todo[::-1]
     print(f"[{stage}] {len(todo)} to run, {len(apps) - len(todo)} cached, workers={workers}", flush=True)
     t0 = time.time()
     done = 0
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {ex.submit(fn, a): a for a in todo}
+        def guarded(a):
+            if not force and _out(stage, a).exists() and not (args_global and args_global.retry_failed):
+                return read_json(_out(stage, a))
+            return fn(a)
+        futs = {ex.submit(guarded, a): a for a in todo}
         for f in as_completed(futs):
             a = futs[f]
             try:
@@ -128,6 +134,7 @@ def main():
     ap.add_argument("--app", help="comma-separated app names (default: all 100)")
     ap.add_argument("--workers", type=int, default=None)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--reverse", action="store_true", help="process the list from the end (lets two runs share the work)")
     ap.add_argument("--retry-failed", action="store_true", help="re-run apps whose LLM stage returned ok=false")
     args = ap.parse_args()
     args_global = args

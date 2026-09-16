@@ -1,0 +1,110 @@
+{
+  "id": 69,
+  "name": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "hint": "docs.datadoghq.com/api",
+  "one_liner": "Comprehensive observability and monitoring platform providing REST and GraphQL APIs for metrics, logs, traces, and infrastructure monitoring.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_type": "rest_and_graphql",
+  "api_breadth": "medium",
+  "docs_url": "https://docs.datadoghq.com/api/latest/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/winor30/mcp-server-datadog"
+  },
+  "verdict": "yellow",
+  "score": 90,
+  "blocker": "paid_only",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 0.85,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "self_serve_trial",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass1": "large"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/datadog",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY', 'BEARER_TOKEN'], 65 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.datadoghq.com/api/v1/validate",
+      "quote": "Unauthenticated probe -> HTTP 403; WWW-Authenticate: None; body: {\"errors\":[\"Forbidden\"]}",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "DATADOG",
+    "tools": 65,
+    "auth": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/datadog"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 403,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Datadog offers self-serve free tier for evaluation (proof-of-concept), but comprehensive API access for production use requires Pro or Enterprise paid plans. Free tier is severely limited (5 hosts, 1-day retention). API breadth estimated as large (>300 endpoints) based on platform comprehensiveness covering dashboards, alerts, monitors, metrics, logs, traces, synthetics, and infrastructure. OAuth2 and API keys are primary auth methods. No official MCP server found.",
+  "pass1": {
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "paid_only"
+  },
+  "pass2": null,
+  "cost_usd": 0.111
+}

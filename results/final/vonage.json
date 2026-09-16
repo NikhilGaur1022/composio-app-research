@@ -1,0 +1,169 @@
+{
+  "id": 30,
+  "name": "Vonage",
+  "category": "Communications and Messaging",
+  "hint": "developer.vonage.com",
+  "one_liner": "Vonage is a cloud communications platform (CPaaS) providing REST APIs for SMS, Voice, Video, Messages, Verify, and Number Insight.",
+  "auth_methods": [
+    "api_key",
+    "basic",
+    "jwt"
+  ],
+  "access": "self_serve_free",
+  "api_type": "rest",
+  "api_breadth": "small",
+  "docs_url": "https://developer.vonage.com/en/home",
+  "mcp": {
+    "status": "community",
+    "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-documentation-mcp-server"
+  },
+  "verdict": "green",
+  "score": 91,
+  "blocker": "none",
+  "model_verdict": "green",
+  "confidence": 0.74,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": false,
+  "needs_human_reasons": [],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "apis_guru_spec": [
+        "api_key"
+      ],
+      "pass2": [
+        "api_key",
+        "basic",
+        "jwt"
+      ],
+      "pass1": [
+        "basic",
+        "bearer_token",
+        "jwt",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "self_serve_free",
+      "pass1": "self_serve_free",
+      "docs_signal": "self_serve_free"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "apis_guru_spec": "rest",
+      "pass1": "rest"
+    },
+    "api_breadth": {
+      "apis_guru_spec": "small",
+      "pass2": "large",
+      "pass1": "unknown"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "pass2": "official",
+      "pass1": "official"
+    }
+  },
+  "evidence": [
+    {
+      "field": "access",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "an API key and secret that you can use to access our APIs",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "access",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "We'll give you some free credit when you first open your account and you can top up when you run low.",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "API key and secret sent Base64 encoded in the Authorization header",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "a compact, URL-safe means of representing claims to be transferred between two parties",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/api/sms",
+      "quote": "Your API key. Only required if setting sig.",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "api_type",
+      "url": "https://developer.vonage.com/en/home",
+      "quote": "rest",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "mcp",
+      "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-documentation-mcp-server",
+      "quote": "We're excited to announce the Vonage Documentation MCP Server — a new way to access Vonage docs directly from your development environment or AI assistant.",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "quote": "Access to our APIs is charged on a per-request basis.",
+      "grounded": "unchecked"
+    },
+    {
+      "field": "api_breadth",
+      "url": "https://api.apis.guru/v2/specs/vonage.com/account/1.11.8/openapi.json",
+      "quote": "APIs.guru OpenAPI spec: 3 operations, securitySchemes ['bearer_token']",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": false,
+    "slug": null,
+    "tools": null,
+    "auth": null,
+    "auth_agrees": null,
+    "url": null
+  },
+  "apis_guru": {
+    "found": true,
+    "endpoints": 3
+  },
+  "probe": {
+    "status": 404,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Vonage (formerly Nexmo) is a large communications platform (Voice, SMS, Messages, Verify, Video, Number Insight, Conversation, Application APIs, etc.) — apis.guru only indexed the small \"account\" sub-API (3 endpoints), so api_breadth is judged large based on the full product surface, not that one spec. Auth is primarily API key/secret via HTTP Basic, plus JWT (Bearer) for Voice/Video/Application-scoped APIs; some legacy endpoints (e.g. SMS) accept api_key/api_secret as signed request params. Free developer account with starter credit is self-serve (no approval gate); production use is pay-as-you-go. Vonage publishes an official Documentation MCP server and an official API-bindings MCP server (community forks/alternatives also exist, e.g. khan2a/telephony-mcp-server), so mcp.status is official rather than community.",
+  "pass1": {
+    "auth_methods": [
+      "basic",
+      "bearer_token",
+      "jwt",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "verdict": "green",
+    "blocker": "none"
+  },
+  "pass2": {
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "jwt"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.8
+  },
+  "cost_usd": 0.312
+}

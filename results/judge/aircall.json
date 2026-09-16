@@ -1,0 +1,9 @@
+{
+  "name": "Aircall",
+  "checked": 0,
+  "grounded": 0,
+  "unreachable": 0,
+  "items": [],
+  "grounding_rate": null,
+  "by_field": {}
+}

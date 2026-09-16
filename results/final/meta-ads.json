@@ -1,0 +1,99 @@
+{
+  "id": 32,
+  "name": "Meta Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "hint": "developers.facebook.com/docs/marketing-apis",
+  "one_liner": "Meta's Marketing API provides programmatic access to manage and analyze Facebook and Instagram advertising campaigns.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "access": "admin_approval",
+  "api_type": "graphql",
+  "api_breadth": "medium",
+  "docs_url": "https://developers.facebook.com/docs/marketing-api/",
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/irinabuht12-oss/google-meta-ads-ga4-mcp"
+  },
+  "verdict": "yellow",
+  "score": 75,
+  "blocker": "app_review",
+  "model_verdict": null,
+  "confidence": 0.45,
+  "agreement": 1.0,
+  "grounding_rate": null,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass2 failed; relying on pass1 + registries"
+  ],
+  "auto_notes": [],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "api_key",
+        "oauth2"
+      ],
+      "pass1": [
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass1": "admin_approval"
+    },
+    "api_type": {
+      "pass1": "graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass1": "large"
+    },
+    "mcp": {
+      "github": "community",
+      "pass1": "none"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/metaads",
+      "quote": "Composio catalog: auth ['OAUTH2', 'API_KEY'], 56 tools",
+      "grounded": "registry"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "METAADS",
+    "tools": 56,
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/metaads"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 400,
+    "www_authenticate": "OAuth \"Facebook Platform\" \"invalid_request\" \"An active access token must be used to query information about the current user.\"",
+    "inferred": "other"
+  },
+  "notes": "Free self-serve signup available but Advanced Access for production use requires app review and business verification. Graph API (GraphQL) with multiple functional pillars: Marketing API, Insights API, and Ad Library API. System User tokens preferred for server-to-server automation.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "admin_approval",
+    "api_type": "graphql",
+    "api_breadth": "large",
+    "verdict": "yellow",
+    "blocker": "app_review"
+  },
+  "pass2": null,
+  "cost_usd": 0.107
+}

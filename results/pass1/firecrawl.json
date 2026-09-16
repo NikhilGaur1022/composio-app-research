@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Firecrawl is a web scraping and search API that intelligently extracts structured data, markdown, and search results from web pages at scale.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://docs.firecrawl.dev",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/firecrawl/firecrawl-mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction",
+        "quote": "Authentication is performed via an Authorization header containing a Bearer token, where the token value is the Firecrawl API key"
+      },
+      {
+        "field": "access",
+        "url": "https://www.firecrawl.dev/pricing",
+        "quote": "free tier gives 1,000 credits per month, no credit card required"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction",
+        "quote": "The REST API is versioned at /v2 under https://api.firecrawl.dev, with endpoints including /v2/batch/scrape for bulk jobs"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+        "quote": "Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients"
+      }
+    ],
+    "notes": "Firecrawl offers both REST API and official MCP server for AI agent integration. Free tier is generous (1,000 credits/month with no payment required), making it immediately buildable. Bearer token authentication via API key is straightforward. The MCP server is officially maintained by the Firecrawl team, providing native integration for Claude and other LLM clients."
+  },
+  "cost_usd": 0.1100343,
+  "turns": 6,
+  "seconds": 37.6,
+  "is_error": false,
+  "error": null
+}
