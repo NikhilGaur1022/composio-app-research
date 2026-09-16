@@ -8,61 +8,56 @@
       "api_key"
     ],
     "blocker": "none",
-    "confidence": 0.72,
+    "confidence": 0.75,
     "docs_url": "https://docs.higgsfield.ai/docs",
     "evidence": [
       {
         "field": "auth_methods",
-        "url": "https://docs.higgsfield.ai/docs/authentication",
-        "quote": "Authenticate server-side API requests with your Higgsfield key and secret."
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://docs.higgsfield.ai/docs/authentication",
-        "quote": "Send both values in the Authorization header: Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET"
+        "url": "https://docs.higgsfield.ai/docs",
+        "quote": "Authorization: Key ${HF_API_KEY_ID}:${HF_API_KEY_SECRET}"
       },
       {
         "field": "access",
         "url": "https://console.higgsfield.ai/api-keys",
-        "quote": "Sign up with a business email and get $15"
+        "quote": "Sign up and complete your onboarding tasks to get all the rewards"
       },
       {
         "field": "access",
-        "url": "https://docs.higgsfield.ai/docs/authentication",
-        "quote": "Create and manage API credentials in Higgsfield Console. Each credential consists of a key ID and a secret."
+        "url": "https://docs.higgsfield.ai/docs",
+        "quote": "Create and manage server-side credentials in Higgsfield Console"
       },
       {
         "field": "api_type",
-        "url": "https://docs.higgsfield.ai/docs",
-        "quote": "immediately returns a request identifier and links for checking or canceling the request"
+        "url": "https://docs.higgsfield.ai/docs/llms.txt",
+        "quote": "Official Python and TypeScript client libraries; OpenAPI specification (supplementary reference)"
       },
       {
         "field": "mcp",
-        "url": "https://higgsfield.ai/mcp",
-        "quote": "No API keys to manage or configure."
+        "url": "https://higgsfield.ai/cli",
+        "quote": "Run Higgsfield from the command line in Claude Code, Cursor, or any MCP-compatible CLI agent."
       },
       {
         "field": "mcp",
-        "url": "https://higgsfield.ai/mcp",
-        "quote": "30+ models for image generation, video creation, and character training"
+        "url": "https://higgsfield.ai/cli",
+        "quote": "No. Add the Higgsfield MCP server URL in your agent's settings and authenticate through your Higgsfield account."
       },
       {
-        "field": "one_liner",
+        "field": "verdict",
         "url": "https://docs.higgsfield.ai/docs",
-        "quote": "Authorization: Key ${HF_API_KEY_ID}:${HF_API_KEY_SECRET}"
+        "quote": "Output files are available for at least seven days"
       }
     ],
     "mcp": {
       "status": "official",
-      "url": "https://mcp.higgsfield.ai/mcp"
+      "url": "https://higgsfield.ai/cli"
     },
-    "notes": "Higgsfield's core developer API (docs.higgsfield.ai) uses a custom two-part API key (key ID + secret) sent via Authorization: Key header, obtainable via free self-serve signup at console.higgsfield.ai with a $15 signup credit, then pay-per-use pricing (not a hard trial cutoff, so classified as self_serve_free rather than self_serve_trial). Separately, Higgsfield also ships an official hosted MCP server (mcp.higgsfield.ai) that authenticates via account login/OAuth-style sign-in instead of API keys — this is a second, higher-level access path layered on top of the same account/credits, not a replacement for the REST API's auth. api_breadth is an estimate (docs list ~5+ model endpoints: SOUL, SOUL 2, SOUL Cinema, video models, etc.) — no endpoint count was published, so treat as approximate.",
-    "one_liner": "Higgsfield is an AI-native image/video generation platform offering a REST API, CLI, and official MCP server for building agentic creative-media workflows.",
+    "notes": "Higgsfield offers a self-serve free signup (with $15 onboarding credit) at console.higgsfield.ai, then API key (ID+secret) auth via docs.higgsfield.ai. Also ships an official MCP server (higgsfield.ai/cli) for agent/CLI integration, authenticated via account login rather than API key. API is async (request/poll/webhook) covering image/video generation models (SOUL, SOUL 2, etc.); breadth appears small (model-generation endpoints, not a broad REST surface), though a full endpoint count wasn't found within budget. Composio also wraps the MCP server with ~101 tools, suggesting broader coverage via MCP than raw REST count implies.",
+    "one_liner": "Higgsfield is an AI content-generation platform (image/video models) offering a REST API plus an official MCP server for CLI/agent integrations.",
     "verdict": "green"
   },
-  "cost_usd": 0.2206908,
+  "cost_usd": 0.18086280000000002,
   "turns": 10,
-  "seconds": 79.0,
+  "seconds": 47.2,
   "is_error": false,
   "error": null
 }

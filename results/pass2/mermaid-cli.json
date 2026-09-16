@@ -1,48 +1,38 @@
 {
   "ok": true,
   "result": {
-    "access": "no_public_api",
-    "api_breadth": "unknown",
-    "api_type": "cli_only",
+    "one_liner": "Mermaid CLI (mmdc) is an open-source command-line tool that renders Mermaid diagram definitions into SVG/PNG/PDF files locally, with no hosted API or service.",
     "auth_methods": [
       "none"
     ],
-    "blocker": "cli_not_api",
-    "confidence": 0.85,
+    "access": "no_public_api",
+    "api_type": "cli_only",
+    "api_breadth": "unknown",
     "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+    "mcp": {
+      "status": "none",
+      "url": ""
+    },
+    "verdict": "yellow",
+    "blocker": "cli_not_api",
     "evidence": [
       {
         "field": "api_type",
         "url": "https://github.com/mermaid-js/mermaid-cli",
-        "quote": "npm install -g @mermaid-js/mermaid-cli"
-      },
-      {
-        "field": "api_type",
-        "url": "https://github.com/mermaid-js/mermaid-cli",
-        "quote": "docker run --rm -u `id -u`:`id -g` -v /path/to/diagrams:/data minlag/mermaid-cli"
-      },
-      {
-        "field": "mcp",
-        "url": "https://github.com/andrewginns/mermaid-mcp-server",
-        "quote": "Python MCP Server abstracting the official mermaid-cli for ease of use"
+        "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output."
       },
       {
         "field": "auth_methods",
         "url": "https://github.com/mermaid-js/mermaid-cli",
-        "quote": "npx -p @mermaid-js/mermaid-cli mmdc -h"
+        "quote": "mmdc -i input.mmd -o output.svg"
       }
     ],
-    "mcp": {
-      "status": "community",
-      "url": "https://github.com/andrewginns/mermaid-mcp-server"
-    },
-    "notes": "Mermaid CLI (mmdc) is an open-source command-line tool (npm package / Docker image) that renders Mermaid diagram definitions to SVG/PNG/PDF locally. There is no hosted vendor API or auth of any kind — it runs entirely offline as a local process. No official MCP server exists for mermaid-cli itself; several community-built MCP wrappers (Python and JS) exist that shell out to mmdc, but none are vendor-published by mermaid-js. Note: this is distinct from the commercial 'Mermaid Chart' SaaS product (mermaidchart.com), which does have its own official hosted MCP server — that is a different product from this open-source CLI and was not evaluated here. Buildability verdict is for mermaid-cli as a local agent skill/tool invocation, not a hosted API integration.",
-    "one_liner": "Mermaid CLI (mmdc) is an open-source command-line tool that renders Mermaid diagram text definitions into SVG, PNG, or PDF files.",
-    "verdict": "yellow"
+    "confidence": 0.85,
+    "notes": "Mermaid CLI is a local, open-source npm/Docker tool (mmdc) for rendering Mermaid diagrams; it has no hosted API, no auth, and no vendor MCP server. It should not be confused with 'Mermaid Chart' (mermaidchart.com), the separate commercial SaaS product that does have a hosted API and an official MCP server (which is what the precomputed composio/mcp leads actually point to). As an agent toolkit, Mermaid CLI is usable as a local shell/CLI skill (agents can shell out to mmdc to render diagrams) rather than as a hosted API integration — hence yellow/cli_not_api rather than red."
   },
-  "cost_usd": 0.1301018,
-  "turns": 5,
-  "seconds": 40.3,
+  "cost_usd": 0.09197480000000001,
+  "turns": 4,
+  "seconds": 23.3,
   "is_error": false,
   "error": null
 }

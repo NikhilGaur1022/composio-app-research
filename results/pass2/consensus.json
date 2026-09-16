@@ -1,25 +1,26 @@
 {
   "ok": true,
   "result": {
-    "access": "paid_plan",
-    "api_breadth": "small",
-    "api_type": "rest",
+    "one_liner": "Consensus is an AI-powered academic search engine that answers research questions with evidence-backed summaries drawn from 200+ million peer-reviewed papers.",
     "auth_methods": [
+      "oauth2",
       "api_key"
     ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://docs.consensus.app",
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.consensus.app/mcp"
+    },
+    "verdict": "yellow",
     "blocker": "paid_only",
-    "confidence": 0.62,
-    "docs_url": "https://docs.consensus.app/api-get-started",
     "evidence": [
       {
-        "field": "auth_methods",
-        "url": "https://docs.composio.dev/toolkits/consensus",
-        "quote": "Auth: API_KEY"
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://docs.composio.dev/toolkits/consensus",
-        "quote": "Composio-managed OAuth available? N/A"
+        "field": "access",
+        "url": "https://consensus.app/home/api/",
+        "quote": "Calls are $0.05 each beyond the credits included in your plan (500 on Pro/Team/Enterprise, 2,000 on Deep) plus 1 additional credit per 100 papers."
       },
       {
         "field": "access",
@@ -27,37 +28,32 @@
         "quote": "The Consensus API is now open to everyone"
       },
       {
-        "field": "access",
+        "field": "auth_methods",
+        "url": "https://consensus.app/.well-known/oauth-authorization-server",
+        "quote": "grant_types_supported\":[\"authorization_code\",\"refresh_token\"]"
+      },
+      {
+        "field": "auth_methods",
         "url": "https://consensus.app/home/api/",
-        "quote": "Calls are $0.05 each beyond the credits included in your plan (500 on Pro/Team/Enterprise, 2,000 on Deep) plus 1 additional credit per 100 papers."
+        "quote": "Create API key"
       },
       {
-        "field": "api_type",
-        "url": "https://agentsapis.com/consensus-api/",
-        "quote": "GET /v1/quick_search"
+        "field": "mcp",
+        "url": "https://mcpservers.org/remote-mcp-servers/consensus",
+        "quote": "This official MCP server is maintained and verified by Consensus, ensuring reliability, security, and up-to-date functionality."
       },
       {
-        "field": "api_breadth",
-        "url": "https://docs.composio.dev/toolkits/consensus",
-        "quote": "Tools: 1"
-      },
-      {
-        "field": "verdict",
-        "url": "https://docs.composio.dev/toolkits/consensus",
-        "quote": "Pagination beyond the first page and full-text chunks require Enterprise access"
+        "field": "one_liner",
+        "url": "https://consensus.app/home/api/",
+        "quote": "Connect the Consensus API within your project to seamlessly integrate up-to-date peer-reviewed citations into your own custom workflow."
       }
     ],
-    "mcp": {
-      "status": "community",
-      "url": "com.consensus-analytics/mcp (MCP registry listing, community-maintained; no vendor-published server found)"
-    },
-    "notes": "Note: \"consensus.app\" (AI academic-research search engine) is a distinct company from \"goconsensus.com\" (B2B sales-demo software also branded \"Consensus\") — several third-party trackers (e.g. apitracker.io/a/consensus) conflate the two; disregard any goconsensus.com data. The official docs.consensus.app and help.consensus.app pages returned HTTP 403 (Cloudflare bot-block) on direct fetch, so findings here rely on the consensus.app/home/api marketing page, the Composio toolkit page (which mirrors the official docs), and a third-party API guide (agentsapis.com) — lowering confidence versus a primary-source read. Access is via a self-serve \"Create API key\" flow with no approval/waitlist (\"now open to everyone\"), but usable credits are allocated per paid plan tier (Pro/Team/Enterprise: 500 credits; Deep: 2,000), with no evidence of a free-tier credit allocation, so classified as paid_plan rather than self_serve_free. Auth is a single x-api-key header (api_key), not OAuth — the task hint \"(OAuth requested)\" and the precomputed .well-known/oauth-authorization-server discovery URL likely relate to consensus.app's own user login/SSO rather than the public data API; this was not independently verified due to fetch-budget limits and repeated 403s on the consensus.app domain. Only one documented endpoint (quick_search) was found; pagination beyond page 1 and full-text chunk retrieval are gated to Enterprise. No official MCP server found; MCP registry shows only community/unrelated entries.",
-    "one_liner": "Consensus is an AI-powered search engine that finds, ranks, and synthesizes findings from 220+ million peer-reviewed academic research papers.",
-    "verdict": "yellow"
+    "confidence": 0.55,
+    "notes": "consensus.app (AI research search engine) supports both OAuth2 (authorization_code + PKCE + dynamic client registration, confirmed via its own .well-known/oauth-authorization-server metadata) and API-key auth (\"Create API key\" flow on home/api page). API credits are tied to paid subscription tiers (Pro/Team/Enterprise/Deep) with pay-per-call overage ($0.05/call) — no documented free dev tier with included credits, so access is paid_plan rather than self-serve-free. Official hosted MCP server exists at mcp.consensus.app/mcp using the same OAuth2 bridge. Do not confuse with goconsensus.com (\"Consensus\" sales-enablement/proposal software), a different company that also has its own OAuth guide and MCP server — that is not this app. docs.consensus.app itself returned 403 (Cloudflare challenge) on direct fetch, so some claims rely on consensus.app marketing pages and third-party summaries rather than the primary docs site; confidence lowered accordingly."
   },
-  "cost_usd": 0.2157456,
-  "turns": 10,
-  "seconds": 91.9,
+  "cost_usd": 0.285165,
+  "turns": 12,
+  "seconds": 117.9,
   "is_error": false,
   "error": null
 }

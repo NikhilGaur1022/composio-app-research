@@ -1,26 +1,31 @@
 {
   "ok": true,
   "result": {
-    "one_liner": "Fathom is an AI meeting recorder/notetaker that transcribes, summarizes, and extracts action items from video calls, exposing a public REST API for meetings, recordings, transcripts, summaries, and webhooks.",
+    "access": "self_serve_free",
+    "api_breadth": "small",
+    "api_type": "rest",
     "auth_methods": [
       "api_key",
       "oauth2"
     ],
-    "access": "self_serve_free",
-    "api_type": "rest",
-    "api_breadth": "small",
-    "docs_url": "https://developers.fathom.ai/",
-    "mcp": {
-      "status": "official",
-      "url": "https://api.fathom.ai/mcp"
-    },
-    "verdict": "green",
     "blocker": "none",
+    "confidence": 0.78,
+    "docs_url": "https://developers.fathom.ai/",
     "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.fathom.ai/quickstart",
+        "quote": "Head to the API Access section of your User Settings and generate an API key."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developers.fathom.ai/",
+        "quote": "Building a public OAuth app (for other Fathom users to install)? Start here instead."
+      },
       {
         "field": "access",
         "url": "https://help.fathom.video/en/articles/8368641",
-        "quote": "Anyone can browse the API docs and start building"
+        "quote": "Anyone can browse the API docs and start building!"
       },
       {
         "field": "access",
@@ -28,19 +33,9 @@
         "quote": "API keys are created at the user level. Your key can access meetings recorded by you or shared to your Team."
       },
       {
-        "field": "auth_methods",
-        "url": "https://developers.fathom.ai/api-overview",
-        "quote": "All REST API resources are authenticated with API keys generated via the Fathom website's settings area."
-      },
-      {
-        "field": "auth_methods",
-        "url": "https://developers.fathom.ai/",
-        "quote": "Build a Fathom integration that other users can install."
-      },
-      {
-        "field": "api_breadth",
-        "url": "https://developers.fathom.ai/api-overview",
-        "quote": "/recordings"
+        "field": "api_type",
+        "url": "https://developers.fathom.ai/quickstart",
+        "quote": "X-Api-Key: YOUR_API_KEY"
       },
       {
         "field": "mcp",
@@ -48,22 +43,22 @@
         "quote": "Fathom now offers an official MCP (Model Context Protocol) server, allowing you to connect your Fathom meeting data to AI assistants like ChatGPT, Claude, and more."
       },
       {
-        "field": "mcp",
-        "url": "https://developers.fathom.ai/mcp-docs",
-        "quote": "MCP server URL: `https://api.fathom.ai/mcp`"
-      },
-      {
-        "field": "api_type",
+        "field": "verdict",
         "url": "https://help.fathom.video/en/articles/8368641",
-        "quote": "users can make 60 calls per minute across all of their API keys; this ensures system stability and reliability"
+        "quote": "Anyone can browse the API docs and start building!"
       }
     ],
-    "confidence": 0.75,
-    "notes": "Official docs live at developers.fathom.ai (Fathom's dedicated API domain), separate from the consumer app at fathom.video. API key access is self-serve and free (generated from account Settings > API Access, no plan gate or approval mentioned in docs). OAuth2 is documented as the path for multi-tenant/marketplace apps installed by other users, alongside per-user API keys for single-workspace/internal use. Vendor-hosted official MCP server exists at api.fathom.ai/mcp using OAuth-based user authorization; exact OAuth scope/flow details and total endpoint count could not be confirmed within fetch budget (authentication sub-page 404'd), and api_breadth is estimated as small based on the handful of named resources (meetings, recordings summary/transcript, webhooks) — lowering confidence slightly for auth_methods completeness."
+    "mcp": {
+      "status": "official",
+      "url": "https://api.fathom.ai/mcp"
+    },
+    "notes": "Fathom exposes a small REST API (meetings, transcripts, summaries, teams, webhooks) with self-serve API-key generation from user settings — no paid-plan gate mentioned in docs. Public OAuth apps are supported for third-party integrations (needed for marketplace listing, but not required for personal API key use). Rate limit: 60 calls/min per account across keys. Fathom also publishes its own official MCP server at api.fathom.ai/mcp, distinct from several community MCP wrappers found in registries. Did not verify actual pricing-tier gating beyond docs statements (no fetch of billing/pricing page), slightly lowering confidence.",
+    "one_liner": "Fathom is an AI meeting-recording/notetaker app whose public REST API exposes meeting recordings, transcripts, summaries, and action items for building integrations.",
+    "verdict": "green"
   },
-  "cost_usd": 0.22111399999999998,
-  "turns": 11,
-  "seconds": 67.1,
+  "cost_usd": 0.19213900000000003,
+  "turns": 9,
+  "seconds": 53.8,
   "is_error": false,
   "error": null
 }

@@ -201,7 +201,7 @@ def row_html(r):
             f'<td>{esc(CATS_SHORT[r["category"]])}</td>'
             f'<td>{" ".join(pill("au", AUTH_LABEL.get(a, a)) for a in r["auth_methods"])}</td>'
             f'<td>{pill("ac ac-" + r["access"], ACCESS_LABEL[r["access"]])}</td>'
-            f'<td>{esc(API_LABEL.get(r["api_type"], r["api_type"]))}<span class="sub">{esc(r["api_breadth"])}{(" · " + str(r["apis_guru"]["endpoints"]) + " ops") if r["apis_guru"].get("endpoints") else ""}</span></td>'
+            f'<td>{esc(API_LABEL.get(r["api_type"], r["api_type"]))}<span class="sub">{esc(r["api_breadth"])}{(" · " + str(r["apis_guru"]["endpoints"]) + " ops in spec") if r["apis_guru"].get("endpoints") and (("small" if r["apis_guru"]["endpoints"] < 50 else "medium" if r["apis_guru"]["endpoints"] <= 300 else "large") == r["api_breadth"]) else ""}</span></td>'
             f'<td>{pill("mcp mcp-" + r["mcp"]["status"], r["mcp"]["status"])}{(" <a class=\"lnk\" href=\"" + esc(r["mcp"]["url"]) + "\" target=\"_blank\" rel=\"noopener\">↗</a>") if r["mcp"].get("url") else ""}</td>'
             f'<td>{"✓" if r["composio"]["in_catalog"] else "–"}{("<span class=\"sub\">" + str(r["composio"]["tools"]) + " tools</span>") if r["composio"].get("tools") else ""}</td>'
             f'<td>{verdict_pill(r["verdict"])}<span class="sub">{esc(BLOCKER_LABEL.get(r["blocker"], r["blocker"]))}</span></td>'
