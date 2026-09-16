@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "ATTIO",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/attio",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Attio",
+    "tools": 109,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "attio",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=attio",
+    "hits": [
+      {
+        "name": "ai.smithery/kaszek-kaszek-attio-mcp",
+        "description": "Automate Attio CRM workflows with fast search and bulk operations across companies, people, deals,…",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kesslerio-attio-mcp-server",
+        "description": "Enable AI assistants to interact directly with your Attio CRM data through natural language querie…",
+        "repo": "https://github.com/kesslerio/attio-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kesslerio-attio-mcp-server",
+        "description": "Enable AI assistants to interact directly with your Attio CRM data through natural language querie…",
+        "repo": "https://github.com/kesslerio/attio-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kesslerio-attio-mcp-server",
+        "description": "Connect AI to your Attio CRM. Manage contacts, companies, deals, and sales pipelines. Create tasks…",
+        "repo": "https://github.com/kesslerio/attio-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kesslerio-attio-mcp-server",
+        "description": "Connect AI to your Attio CRM. Manage contacts, companies, deals, and sales pipelines. Create tasks…",
+        "repo": "https://github.com/kesslerio/attio-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kesslerio-attio-mcp-server-beta",
+        "description": "Streamline your Attio workflows using natural language to search, create, update, and organize com…",
+        "repo": "https://github.com/kesslerio/attio-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.kesslerio/attio-mcp-server",
+        "description": "AI-powered Attio CRM access. Manage contacts, companies, deals, tasks, notes and workflows.",
+        "repo": "https://github.com/kesslerio/attio-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.kesslerio/attio-mcp-server",
+        "description": "AI-powered Attio CRM access. Manage contacts, companies, deals, tasks, notes and workflows.",
+        "repo": "https://github.com/kesslerio/attio-mcp-server",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Attio",
+    "url": "https://github.com/search?q=Attio+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "kesslerio/attio-mcp-server",
+        "stars": 69,
+        "url": "https://github.com/kesslerio/attio-mcp-server",
+        "desc": "Attio Model Context Protocol (MCP) server implementation"
+      },
+      {
+        "full_name": "hmk/attio-mcp-server",
+        "stars": 16,
+        "url": "https://github.com/hmk/attio-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "redriverwest/attio-mcp",
+        "stars": 8,
+        "url": "https://github.com/redriverwest/attio-mcp",
+        "desc": "MCP server for integrating Attio CRM with AI agents"
+      },
+      {
+        "full_name": "itsbrex/attio-mcp-server",
+        "stars": 7,
+        "url": "https://github.com/itsbrex/attio-mcp-server",
+        "desc": "Model Context Protocol server for Attio CRM - enables Claude Desktop and Cursor to interact with your Attio workspace"
+      },
+      {
+        "full_name": "Arkel-ai/attio-mcp-server",
+        "stars": 5,
+        "url": "https://github.com/Arkel-ai/attio-mcp-server",
+        "desc": "âœ¨ Attio MCP Server"
+      },
+      {
+        "full_name": "TrialAndErrorAI/attio-mcp",
+        "stars": 2,
+        "url": "https://github.com/TrialAndErrorAI/attio-mcp",
+        "desc": "Code Mode MCP server for Attio CRM â€” 130+ endpoints through 3 tools"
+      },
+      {
+        "full_name": "kesslerio/attio-mcp",
+        "stars": 1,
+        "url": "https://github.com/kesslerio/attio-mcp",
+        "desc": "Attio Model Context Protocol (MCP) server implementation"
+      },
+      {
+        "full_name": "mlemos/attio-simple-mcp-server",
+        "stars": 1,
+        "url": "https://github.com/mlemos/attio-simple-mcp-server",
+        "desc": "A very simple MCP server for Attio CRM - a starting point if you want to integrate Attio with your preferred AI tools"
+      }
+    ]
+  }
+}

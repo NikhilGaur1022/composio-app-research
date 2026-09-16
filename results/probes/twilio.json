@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://twilio.com",
+    "status": 200,
+    "final_url": "https://www.twilio.com/en-us",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": true,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.twilio.com/2010-04-01/Accounts.json",
+    "status": 401,
+    "www_authenticate": "Basic realm=\"Twilio API\"",
+    "body_snippet": "{\"code\":20003,\"message\":\"Authentication Error - No credentials provided\",\"more_info\":\"https://www.twilio.com/docs/errors/20003\",\"status\":401}",
+    "inferred_scheme": "basic",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

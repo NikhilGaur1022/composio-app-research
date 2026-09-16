@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "ZENDESK",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/zendesk",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Zendesk",
+    "tools": 452,
+    "triggers": 2,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "zendesk",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=zendesk",
+    "hits": [
+      {
+        "name": "io.github.fruggr/zendesk-mcp-server",
+        "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+        "repo": "https://github.com/fruggr/zendesk-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.fruggr/zendesk-mcp-server",
+        "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+        "repo": "https://github.com/fruggr/zendesk-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.fruggr/zendesk-mcp-server",
+        "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+        "repo": "https://github.com/fruggr/zendesk-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.fruggr/zendesk-mcp-server",
+        "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+        "repo": "https://github.com/fruggr/zendesk-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.fruggr/zendesk-mcp-server",
+        "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+        "repo": "https://github.com/fruggr/zendesk-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.fruggr/zendesk-mcp-server",
+        "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+        "repo": "https://github.com/fruggr/zendesk-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.fruggr/zendesk-mcp-server",
+        "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+        "repo": "https://github.com/fruggr/zendesk-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.fruggr/zendesk-mcp-server",
+        "description": "Draft, translate and update Help Center articles and manage Zendesk tickets from your AI assistant.",
+        "repo": "https://github.com/fruggr/zendesk-mcp-server",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Zendesk",
+    "url": "https://github.com/search?q=Zendesk+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "reminia/zendesk-mcp-server",
+        "stars": 119,
+        "url": "https://github.com/reminia/zendesk-mcp-server",
+        "desc": "A Model Context Protocol server for Zendesk"
+      },
+      {
+        "full_name": "mattcoatsworth/zendesk-mcp-server",
+        "stars": 30,
+        "url": "https://github.com/mattcoatsworth/zendesk-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "koundinya/zd-mcp-server",
+        "stars": 16,
+        "url": "https://github.com/koundinya/zd-mcp-server",
+        "desc": "Zendesk MCP Server"
+      },
+      {
+        "full_name": "fruggr/zendesk-mcp-server",
+        "stars": 8,
+        "url": "https://github.com/fruggr/zendesk-mcp-server",
+        "desc": "Bring Zendesk deep into your AI assistant: find answers and draft, update and translate Help Center articles, and manage"
+      },
+      {
+        "full_name": "andmarios/zendesk-skill",
+        "stars": 7,
+        "url": "https://github.com/andmarios/zendesk-skill",
+        "desc": "Claude Skill (with cli tool) and MCP server for Zendesk"
+      },
+      {
+        "full_name": "michaelrice/zendesk-mcp",
+        "stars": 6,
+        "url": "https://github.com/michaelrice/zendesk-mcp",
+        "desc": "Zendesk MCP server for Claude Code and other MCP clients"
+      },
+      {
+        "full_name": "hidechae/zendesk-help-center-mcp-server",
+        "stars": 6,
+        "url": "https://github.com/hidechae/zendesk-help-center-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "nealrichardson/zendesk-mcp-server",
+        "stars": 4,
+        "url": "https://github.com/nealrichardson/zendesk-mcp-server",
+        "desc": ""
+      }
+    ]
+  }
+}

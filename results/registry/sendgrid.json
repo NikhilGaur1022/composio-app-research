@@ -1,0 +1,93 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "SENDGRID",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/sendgrid",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "SendGrid",
+    "tools": 364,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "sendgrid.com",
+    "version": "1.0.0",
+    "spec_url": "https://api.apis.guru/v2/specs/sendgrid.com/1.0.0/openapi.json",
+    "title": "Email Activity (beta)",
+    "url": "https://apis.guru/?q=sendgrid.com",
+    "endpoints": 334,
+    "auth": [
+      "api_key"
+    ],
+    "breadth": "large"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "sendgrid",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=sendgrid",
+    "hits": [
+      {
+        "name": "io.github.Choppaaahh/sendgrid-mcp-secure",
+        "description": "Security-first SendGrid MCP server: dry-run default, recipient allowlists, rate caps, audit log.",
+        "repo": "https://github.com/Choppaaahh/sendgrid-mcp-secure",
+        "status": "active"
+      },
+      {
+        "name": "io.github.codespar/mcp-sendgrid",
+        "description": "MCP server for SendGrid — global transactional + marketing email (Twilio-owned)",
+        "repo": "https://github.com/codespar/mcp-dev-latam",
+        "status": "active"
+      },
+      {
+        "name": "io.github.codespar/mcp-sendgrid",
+        "description": "MCP server for SendGrid — global transactional + marketing email (Twilio-owned)",
+        "repo": "https://github.com/codespar/mcp-dev-latam",
+        "status": "active"
+      },
+      {
+        "name": "io.github.deyikong/sendgrid-mcp",
+        "description": "MCP server for SendGrid's v3 API: email marketing, transactional mail, templates, and analytics.",
+        "repo": "https://github.com/deyikong/sendgrid-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.deyikong/sendgrid-mcp",
+        "description": "MCP server for SendGrid's v3 API: email marketing, transactional mail, templates, and analytics.",
+        "repo": "https://github.com/deyikong/sendgrid-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.deyikong/sendgrid-mcp",
+        "description": "MCP server for SendGrid's v3 API: email marketing, transactional mail, templates, and analytics.",
+        "repo": "https://github.com/deyikong/sendgrid-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.usefulapi/sendgrid",
+        "description": "Send email and read templates, marketing contacts, lists, stats, bounces and unsubscribes.",
+        "repo": "https://github.com/m190/usefulapi-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "SendGrid",
+    "url": "https://github.com/search?q=SendGrid+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID BF70:0BE7:102ACC:12AF07:6AAAF910 and timestamp 2026-09-16 20:16:16 UTC. Fo",
+    "items": []
+  }
+}

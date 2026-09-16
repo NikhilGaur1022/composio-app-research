@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developers.facebook.com/docs/threads",
+    "status": 200,
+    "final_url": "https://developers.facebook.com/documentation/threads",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://graph.threads.net/v1.0/me",
+    "status": 400,
+    "www_authenticate": "OAuth \"Facebook Platform\" \"invalid_token\" \"Invalid OAuth 2.0 Access Token\"",
+    "body_snippet": "{\"error\":{\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AIgHiwicJSLotfDwGYin7MR\"}}",
+    "inferred_scheme": "other",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

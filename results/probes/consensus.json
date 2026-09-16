@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://consensus.app",
+    "status": 200,
+    "final_url": "https://consensus.app",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://consensus.app/api",
+    "status": 403,
+    "www_authenticate": null,
+    "body_snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta nam",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://consensus.app/.well-known/oauth-authorization-server"
+  }
+}

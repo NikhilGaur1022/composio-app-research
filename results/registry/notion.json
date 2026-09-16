@@ -1,0 +1,160 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "NOTION",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/notion",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Notion",
+    "tools": 56,
+    "triggers": 8,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "notion.com",
+    "version": "1.0.0",
+    "spec_url": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
+    "title": "Notion API",
+    "url": "https://apis.guru/?q=notion.com",
+    "endpoints": 13,
+    "auth": [],
+    "breadth": "small"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "notion",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=notion",
+    "hits": [
+      {
+        "name": "ai.smithery/smithery-notion",
+        "description": "A Notion workspace is a collaborative environment where teams can organize work, manage projects,…",
+        "repo": "https://github.com/smithery-ai/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/notion",
+        "description": "Create, update, and manage pages, databases, and workspace users",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/notion",
+        "description": "Create, update, and manage pages, databases, and workspace users",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.notion/mcp",
+        "description": "Official Notion MCP server",
+        "repo": "https://github.com/makenotion/notion-next",
+        "status": "active"
+      },
+      {
+        "name": "com.notion/mcp",
+        "description": "Official Notion MCP server",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.ai-aviate/better-notion",
+        "description": "Operate Notion with a single Markdown document — read, create, and update pages in one call.",
+        "repo": "https://github.com/ai-aviate/better-mcp-notion",
+        "status": "active"
+      },
+      {
+        "name": "io.github.awkoy/notion-mcp-server",
+        "description": "Token-auth Notion MCP: pages, databases, blocks, comments, files. Runs headless in CI and agents.",
+        "repo": "https://github.com/awkoy/notion-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.awkoy/notion-mcp-server",
+        "description": "Token-auth Notion MCP: pages, databases, blocks, comments, files. Runs headless in CI and agents.",
+        "repo": "https://github.com/awkoy/notion-mcp-server",
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "com.notion/mcp",
+        "description": "Official Notion MCP server",
+        "repo": "https://github.com/makenotion/notion-next",
+        "status": "active"
+      },
+      {
+        "name": "com.notion/mcp",
+        "description": "Official Notion MCP server",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Notion",
+    "url": "https://github.com/search?q=Notion+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "makenotion/notion-mcp-server",
+        "stars": 4636,
+        "url": "https://github.com/makenotion/notion-mcp-server",
+        "desc": "Official Notion MCP Server"
+      },
+      {
+        "full_name": "suekou/mcp-notion-server",
+        "stars": 922,
+        "url": "https://github.com/suekou/mcp-notion-server",
+        "desc": "A Model Context Protocol server for connecting Notion to MCP-compatible clients"
+      },
+      {
+        "full_name": "marvkr/better-design",
+        "stars": 235,
+        "url": "https://github.com/marvkr/better-design",
+        "desc": "ðŸŽ¨ Open-source design MCP server + shadcn/ui registry â€” AI design systems for Claude Code, Cursor, Codex, GitHub Cop"
+      },
+      {
+        "full_name": "andylow92/file-system-brain-mcp",
+        "stars": 174,
+        "url": "https://github.com/andylow92/file-system-brain-mcp",
+        "desc": "Self-improving, AI-native markdown vault you hand to an AI agent. GitHub-style file tree + Notion editing, exposed to Cl"
+      },
+      {
+        "full_name": "awkoy/notion-mcp-server",
+        "stars": 171,
+        "url": "https://github.com/awkoy/notion-mcp-server",
+        "desc": "Notion MCP server for Claude, Cursor, ChatGPT & Claude Desktop. Connect AI agents to Notion via Model Context Protocol â"
+      },
+      {
+        "full_name": "ccabanillas/notion-mcp",
+        "stars": 111,
+        "url": "https://github.com/ccabanillas/notion-mcp",
+        "desc": "A Model Context Protocol (MCP) server implementation for Notion integration, providing a standardized interface for inte"
+      },
+      {
+        "full_name": "Grey-Iris/easy-notion-mcp",
+        "stars": 51,
+        "url": "https://github.com/Grey-Iris/easy-notion-mcp",
+        "desc": "Markdown-first Notion MCP server. ~6-7x fewer response tokens vs official Notion MCP. 43 tools."
+      },
+      {
+        "full_name": "Badhansen/notion-mcp",
+        "stars": 31,
+        "url": "https://github.com/Badhansen/notion-mcp",
+        "desc": "A simple Model Context Protocol (MCP) server that integrates with Notion's API to manage my personal todo list."
+      }
+    ]
+  }
+}

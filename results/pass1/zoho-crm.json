@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Zoho CRM is a cloud-based customer relationship management platform offering sales automation, contact management, and business intelligence features.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "medium",
+    "docs_url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+        "quote": "REST API endpoints support OAuth 2.0 and API key authentication, which can be enabled or disabled independently."
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/crm/developer/developer-edition.html",
+        "quote": "Zoho offers a fully featured free Developer Edition that is the perfect environment for users to learn their way around Zoho CRM"
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.zoho.com/crm/developer/graphql-apis.html",
+        "quote": "Zoho CRM offers flexible RESTful endpoints and GraphQL API endpoints allowing you to perform CRUD operations"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.zoho.com/crm/developer/docs/api/graphql/limitations.html",
+        "quote": "GraphQL APIs are available in Enterprise, Zoho One Enterprise, CRM Plus and Ultimate edition. GraphQL currently supports only query operations."
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "Zoho CRM has self-serve free Developer Edition and free CRM tier for testing. OAuth2 is primary auth method with API key also supported. REST API broadly available; GraphQL is read-only and limited to higher-tier editions. API breadth estimated at medium based on typical CRM endpoint count."
+  },
+  "cost_usd": 0.1077367,
+  "turns": 6,
+  "seconds": 166.2,
+  "is_error": false,
+  "error": null
+}

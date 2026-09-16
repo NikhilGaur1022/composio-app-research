@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Support and helpdesk platform with messaging, email, and team collaboration features.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://dev.frontapp.com/docs/authentication",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://dev.frontapp.com/docs/authentication",
+        "quote": "Front supports OAuth 2.0 and API Tokens for authentication... The Core API uses Bearer tokens to authenticate its user."
+      },
+      {
+        "field": "access",
+        "url": "https://front.com/pricing",
+        "quote": "API access is included on all plans, with usage limits based on your plan. Starter supports up to 50 requests per minute."
+      },
+      {
+        "field": "api_type",
+        "url": "https://dev.frontapp.com/reference/introduction",
+        "quote": "API calls will always work with https://api2.frontapp.com as the base URL."
+      }
+    ],
+    "confidence": 0.75,
+    "notes": "Front requires a paid subscription to access the API—no free tier API access found. OAuth 2.0 recommended for public integrations; bearer tokens for single-customer integrations. API rate limits included in plan; higher limits available as add-ons. Exact endpoint count not documented; MCP support not found in official documentation."
+  },
+  "cost_usd": 0.10065909999999999,
+  "turns": 6,
+  "seconds": 80.7,
+  "is_error": false,
+  "error": null
+}

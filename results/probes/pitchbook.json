@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://pitchbook.com",
+    "status": 403,
+    "final_url": "https://pitchbook.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.pitchbook.com/",
+    "status": 404,
+    "www_authenticate": null,
+    "body_snippet": "",
+    "inferred_scheme": null,
+    "api_alive": false
+  },
+  "openapi_discovery": {
+    "found": "https://api.pitchbook.com/api-docs"
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

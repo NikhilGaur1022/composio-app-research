@@ -1,0 +1,54 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "woocommerce",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce",
+    "hits": [
+      {
+        "name": "io.github.AmitGurbani/mcp-server-woocommerce",
+        "description": "82 MCP tools for WooCommerce — products, orders, customers, coupons, shipping, taxes, and more.",
+        "repo": "https://github.com/AmitGurbani/mcp-server-woocommerce",
+        "status": "active"
+      },
+      {
+        "name": "io.github.AmitGurbani/mcp-server-woocommerce",
+        "description": "101 tools for WooCommerce store management with field filtering and guided prompts.",
+        "repo": "https://github.com/AmitGurbani/mcp-server-woocommerce",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/woocommerce",
+        "description": "WooCommerce MCP Pack — wraps the WooCommerce REST API v3",
+        "repo": "https://github.com/pipeworx-io/mcp-woocommerce",
+        "status": "active"
+      },
+      {
+        "name": "io.github.wppoland/woocommerce-mcp",
+        "description": "Read-only MCP server for WordPress + WooCommerce products, orders, sales, and posts.",
+        "repo": "https://github.com/wppoland/woocommerce-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "WooCommerce",
+    "url": "https://github.com/search?q=WooCommerce+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 9C6B:34DF4B:256C40:29FDAF:6AAAF910 and timestamp 2026-09-16 20:16:17 UTC. ",
+    "items": []
+  }
+}

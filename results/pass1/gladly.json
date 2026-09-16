@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Gladly is a cloud-based customer support and helpdesk platform for managing customer interactions across multiple channels.",
+    "auth_methods": [
+      "api_key",
+      "basic"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developer.gladly.com/rest/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "red",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "api_type",
+        "url": "https://developer.gladly.com/rest/",
+        "quote": "Gladly API"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://help.gladly.com/developer-tutorials/docs/authentication",
+        "quote": "token-based Basic Authentication. API tokens are associated with designated Gladly users."
+      },
+      {
+        "field": "access",
+        "url": "https://www.saasworthy.com/product/gladly/pricing",
+        "quote": "Gladly does not offer a free plan, and free trials are not publicly available."
+      },
+      {
+        "field": "access",
+        "url": "https://hiverhq.com/blog/gladly-pricing",
+        "quote": "Gladly pricing typically starts at $180 to $210 per agent per month"
+      }
+    ],
+    "confidence": 0.75,
+    "notes": "API requires a paid subscription starting at $180-210/agent/month with annual contracts. No free tier or public trial available. REST API is documented but access is gated behind paid plans. Authentication uses API tokens with Basic Authentication scheme."
+  },
+  "cost_usd": 0.1022507,
+  "turns": 5,
+  "seconds": 40.2,
+  "is_error": false,
+  "error": null
+}

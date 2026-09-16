@@ -1,0 +1,77 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "mongodb atlas",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mongodb atlas",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "MongoDB Atlas",
+    "url": "https://github.com/search?q=MongoDB+Atlas+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "mongodb-js/mongodb-mcp-server",
+        "stars": 1129,
+        "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+        "desc": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters."
+      },
+      {
+        "full_name": "mongodb-developer/mcp-mongodb-atlas",
+        "stars": 14,
+        "url": "https://github.com/mongodb-developer/mcp-mongodb-atlas",
+        "desc": "MCP (Model Context Protocol) server for managing MongoDB Atlas projects â€” create and manage clusters, database users, "
+      },
+      {
+        "full_name": "montumodi/mongodb-atlas-mcp-server",
+        "stars": 3,
+        "url": "https://github.com/montumodi/mongodb-atlas-mcp-server",
+        "desc": "MCP server for mongodb atlas api. Internally uses mongodb-atlas-api-client"
+      },
+      {
+        "full_name": "mongodb-industry-solutions/leafy-bank-capitalmarkets-mcp",
+        "stars": 2,
+        "url": "https://github.com/mongodb-industry-solutions/leafy-bank-capitalmarkets-mcp",
+        "desc": "A demo showcasing the MongoDB MCP Server and an AI-powered ReAct Agent that processes financial data from MongoDB Atlas "
+      },
+      {
+        "full_name": "vaibhav4046/PitchCraft-Agent",
+        "stars": 1,
+        "url": "https://github.com/vaibhav4046/PitchCraft-Agent",
+        "desc": "AI agent that flags ticket-resale scams â€” Gemini + Google ADK grounded in MongoDB Atlas Vector Search + the MongoDB MC"
+      },
+      {
+        "full_name": "deekshitha-a-20/mongodb-rag-mcp",
+        "stars": 1,
+        "url": "https://github.com/deekshitha-a-20/mongodb-rag-mcp",
+        "desc": "MCP server for RAG over MongoDB Atlas Vector Search, with local embeddings and no LangChain. TypeScript"
+      },
+      {
+        "full_name": "Ravindi373/StudyMate-AI-powered-study-notes",
+        "stars": 1,
+        "url": "https://github.com/Ravindi373/StudyMate-AI-powered-study-notes",
+        "desc": "Full-stack AI-powered study notes app - React, Express, MongoDB, and Google Gemini AI for note summaries and quizzes, wi"
+      },
+      {
+        "full_name": "MiniatureJourney/notely-agent",
+        "stars": 1,
+        "url": "https://github.com/MiniatureJourney/notely-agent",
+        "desc": "AI-powered academic notes platform for Indian college students. NoteBot (Gemini 2.5 Flash) searches, summarizes, and qui"
+      }
+    ]
+  }
+}

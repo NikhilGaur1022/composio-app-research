@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://plaid.com/docs",
+    "status": 200,
+    "final_url": "https://plaid.com/docs/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": true,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://production.plaid.com/accounts/get",
+    "status": 404,
+    "www_authenticate": null,
+    "body_snippet": "{   \"display_message\": null,   \"documentation_url\": \"https://plaid.com/docs/errors/invalid-request/#not_found\",   \"error_code\": \"NOT_FOUND\",   \"error_message\": \"invalid route: /accounts/get\",   \"error",
+    "inferred_scheme": null,
+    "api_alive": false
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://docs.github.com/rest",
+    "status": 200,
+    "final_url": "https://docs.github.com/en/rest",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": true,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": true,
+    "rest": true,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.github.com/user",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\r   \"message\": \"Requires authentication\",\r   \"documentation_url\": \"https://docs.github.com/rest\",\r   \"status\": \"401\"\r }",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

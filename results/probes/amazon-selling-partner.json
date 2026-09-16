@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developer-docs.amazon.com/sp-api",
+    "status": 200,
+    "final_url": "https://developer-docs.amazon/sp-api",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": true,
+    "rest": true,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://sellingpartnerapi-na.amazon.com/orders/v0/orders",
+    "status": 403,
+    "www_authenticate": null,
+    "body_snippet": "{   \"errors\": [     {       \"code\": \"Unauthorized\",       \"message\": \"Access to requested resource is denied.\",       \"details\": \"Access token is missing in the request header.\"     }   ] }",
+    "inferred_scheme": "bearer_token",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

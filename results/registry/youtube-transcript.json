@@ -1,0 +1,40 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "YOUTUBE_TRANSCRIPT",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/youtube_transcript",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "YouTube Transcript",
+    "tools": 9,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "youtube transcript",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=youtube transcript",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "YouTube Transcript",
+    "url": "https://github.com/search?q=YouTube+Transcript+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 9B13:27A20E:24A7E7:293FC9:6AAAF957 and timestamp 2026-09-16 20:17:28 UTC. ",
+    "items": []
+  }
+}

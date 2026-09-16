@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "API-first customer support platform for technical teams with GraphQL API and native MCP server.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "graphql",
+    "api_breadth": "unknown",
+    "docs_url": "https://www.plain.com/docs/graphql/authentication",
+    "mcp": {
+      "status": "official",
+      "url": "https://www.plain.com/docs/mcp"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.72,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.plain.com/docs/graphql/authentication",
+        "quote": "Authorization: Bearer YOUR_API_KEY"
+      },
+      {
+        "field": "access",
+        "url": "https://www.plain.com/pricing",
+        "quote": "Foundation at $39/month for one seat, Expansion at $299/month for three seats, and Frontier at $1,055/month for six seats"
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.plain.com/docs/graphql/introduction",
+        "quote": "Plain provides a public GraphQL API with no rate limits — the same endpoints the product UI uses internally"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.plain.com/blog/api-first-support-platforms",
+        "quote": "only one has native MCP server support — Plain is that platform"
+      }
+    ],
+    "notes": "Plain requires paid subscription to access the API. API keys are generated per workspace with fine-grained permissions. GraphQL is the primary API offering. Verdict is yellow because API access is gated behind paid tiers but otherwise has standard self-serve credential setup within paid workspaces."
+  },
+  "cost_usd": 0.10251210000000001,
+  "turns": 6,
+  "seconds": 30.8,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,59 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "BREX",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/brex",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Brex",
+    "tools": 84,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "brex.io",
+    "version": "2021.12",
+    "spec_url": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.json",
+    "title": "KYC API Documentation",
+    "url": "https://apis.guru/?q=brex.io",
+    "endpoints": 54,
+    "auth": [
+      "api_key"
+    ],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "brex",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=brex",
+    "hits": [
+      {
+        "name": "io.github.PalabreX/runpay",
+        "description": "Stripe-native marketplace where AI agents discover and pay per call for API services.",
+        "repo": "https://github.com/PalabreX/runpay-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Brex",
+    "url": "https://github.com/search?q=Brex+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID B172:0BE7:1058B4:12E547:6AAAF953 and timestamp 2026-09-16 20:17:23 UTC. Fo",
+    "items": []
+  }
+}

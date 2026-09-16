@@ -1,0 +1,120 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "copper",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=copper",
+    "hits": [
+      {
+        "name": "io.github.copperline-labs/rendex-mcp",
+        "description": "Capture website screenshots as PNG/JPEG. Full-page, dark mode, ad blocking, custom viewports.",
+        "repo": "https://github.com/copperline-labs/rendex-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.copperline-labs/rendex-mcp",
+        "description": "Capture website screenshots as PNG/JPEG/WebP. Element selector, dark mode, ad blocking.",
+        "repo": "https://github.com/copperline-labs/rendex-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.copperline-labs/rendex-mcp",
+        "description": "Capture screenshots, generate PDFs, and render HTML to images. MCP-native for AI agents.",
+        "repo": "https://github.com/copperline-labs/rendex-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.copperline-labs/rendex-mcp",
+        "description": "Capture screenshots, generate PDFs, and render HTML to images. MCP-native for AI agents.",
+        "repo": "https://github.com/copperline-labs/rendex-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.copperline-labs/rendex-mcp",
+        "description": "Render HTML, Markdown, or any URL to images or PDF, plus reader-mode extraction. MCP-native.",
+        "repo": "https://github.com/copperline-labs/rendex-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.copperline-labs/rendex-mcp",
+        "description": "Render HTML, Markdown, or any URL to images or PDF, plus reader-mode extraction. MCP-native.",
+        "repo": "https://github.com/copperline-labs/rendex-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.copperline-labs/rendex-mcp",
+        "description": "Render HTML, Markdown, or any URL to images or PDF, plus reader-mode extraction. MCP-native.",
+        "repo": "https://github.com/copperline-labs/rendex-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.copperline-labs/rendex-mcp",
+        "description": "Render HTML, Markdown, or any URL to images or PDF, plus reader-mode extraction. MCP-native.",
+        "repo": "https://github.com/copperline-labs/rendex-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Copper",
+    "url": "https://github.com/search?q=Copper+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "charlesmmorais/coppermind",
+        "stars": 1,
+        "url": "https://github.com/charlesmmorais/coppermind",
+        "desc": "AI PCB-design copilot for KiCAD â€” an IPC-first, transactional, verified MCP server. Routing, native DRC/ERC, Freerouti"
+      },
+      {
+        "full_name": "dazanza/copper-mcp",
+        "stars": 0,
+        "url": "https://github.com/dazanza/copper-mcp",
+        "desc": "MCP server for Copper CRM API - contact search, activity logging, opportunity tracking"
+      },
+      {
+        "full_name": "Pond-International/copper-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/Pond-International/copper-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "hamzaalaao/Copperleaf-MCP-Server",
+        "stars": 0,
+        "url": "https://github.com/hamzaalaao/Copperleaf-MCP-Server",
+        "desc": ""
+      },
+      {
+        "full_name": "hasankhadra/copper-mcp",
+        "stars": 0,
+        "url": "https://github.com/hasankhadra/copper-mcp",
+        "desc": "Unofficial MCP server for Copper CRM â€” read-heavy, agent-friendly, one guarded write tool. Built to show what an offic"
+      },
+      {
+        "full_name": "mj41Fantastican/mj41-mcp",
+        "stars": 0,
+        "url": "https://github.com/mj41Fantastican/mj41-mcp",
+        "desc": "MJ41 MCP Server â€” Copper oracles, blockchain investigation, AI news wire. 11 tools, zero config."
+      },
+      {
+        "full_name": "jeletor/buildwatch-mcp",
+        "stars": 0,
+        "url": "https://github.com/jeletor/buildwatch-mcp",
+        "desc": "MCP server for querying UK construction material prices. Compare timber, copper, cable and more across Screwfix, Wickes,"
+      }
+    ]
+  }
+}

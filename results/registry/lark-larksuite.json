@@ -1,0 +1,78 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "lark",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=lark",
+    "hits": [
+      {
+        "name": "ai.meetlark/mcp-server",
+        "description": "Agent-first meeting schedule polls for humans and agents. Create polls, vote, find times.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.meetlark/mcp-server",
+        "description": "Agent-first meeting schedule polls for humans and agents. Create polls, vote, find times.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.splark/splark",
+        "description": "Async video interviews: send a link, get short video answers with transcripts and AI captions.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.splark/splark",
+        "description": "The ask-and-answer video format: send a question, get a short one-take video answer, captioned.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.splark/splark",
+        "description": "The ask-and-answer video format: send a question, get a short one-take video answer, captioned.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.brandonclark1996-design/toolrank",
+        "description": "Rank MCP servers/APIs for a job. Lexical ranking, 36 curated tools, no Stripe.",
+        "repo": "https://github.com/brandonclark1996-design/toolrank",
+        "status": "active"
+      },
+      {
+        "name": "io.github.clarkthomas/clearlot",
+        "description": "Live hardware/MRO quotes for agents. x402 get_quote. Merchant checkout. No custody.",
+        "repo": "https://github.com/clarkthomas/clearlot",
+        "status": "active"
+      },
+      {
+        "name": "io.github.clarkthomas/clearlot",
+        "description": "Specified RFQ tape. Free search and quote. Missed specs stay. Merchant checkout.",
+        "repo": "https://github.com/clarkthomas/clearlot",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Lark",
+    "url": "https://github.com/search?q=Lark+mcp+server&type=repositories",
+    "error": "the JSON object must be str, bytes or bytearray, not NoneType",
+    "items": []
+  }
+}

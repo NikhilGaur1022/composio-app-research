@@ -1,0 +1,114 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "MONDAY",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/monday",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Monday",
+    "tools": 125,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "monday",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=monday",
+    "hits": [
+      {
+        "name": "ai.waystation/monday",
+        "description": "Access and manage your Monday.com boards, items, and updates seamlessly",
+        "repo": "https://github.com/waystation-ai/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.monday/monday.com",
+        "description": "MCP server for monday.com integration.",
+        "repo": "https://github.com/mondaycom/mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/monday",
+        "description": "Monday.com MCP — wraps the Monday.com GraphQL API (BYO API key)",
+        "repo": "https://github.com/pipeworx-io/mcp-monday",
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "com.monday/monday.com",
+        "description": "MCP server for monday.com integration.",
+        "repo": "https://github.com/mondaycom/mcp",
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Monday.com",
+    "url": "https://github.com/search?q=Monday.com+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "Prat011/mcp-server-monday",
+        "stars": 34,
+        "url": "https://github.com/Prat011/mcp-server-monday",
+        "desc": "MCP Server to interact with Monday.com boards and items"
+      },
+      {
+        "full_name": "RomKadria/monday-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/RomKadria/monday-mcp-server",
+        "desc": "monday.com mcp server "
+      },
+      {
+        "full_name": "AStheTECH/mewcp-monday",
+        "stars": 0,
+        "url": "https://github.com/AStheTECH/mewcp-monday",
+        "desc": "Monday.com MCP Server"
+      },
+      {
+        "full_name": "mrbaune/monday-mcp",
+        "stars": 0,
+        "url": "https://github.com/mrbaune/monday-mcp",
+        "desc": "MCP server for Monday.com"
+      },
+      {
+        "full_name": "primrose-mcp/primrose-mcp-monday",
+        "stars": 0,
+        "url": "https://github.com/primrose-mcp/primrose-mcp-monday",
+        "desc": "MCP Server for Monday.com integration"
+      },
+      {
+        "full_name": "docdavidgrundy/monday-mcp-connector",
+        "stars": 0,
+        "url": "https://github.com/docdavidgrundy/monday-mcp-connector",
+        "desc": "Tiny MCP server for ChatGPT + monday.com integration"
+      },
+      {
+        "full_name": "lbldssr/monday-mcp",
+        "stars": 0,
+        "url": "https://github.com/lbldssr/monday-mcp",
+        "desc": "A lightweight MCP server for Monday.com, enabling AI assistants and development tools to interact with the Monday.com Gr"
+      },
+      {
+        "full_name": "pel-sites/monday-activity-mcp",
+        "stars": 0,
+        "url": "https://github.com/pel-sites/monday-activity-mcp",
+        "desc": "MCP server exposing tools for AI to query Monday.com activity data"
+      }
+    ]
+  }
+}

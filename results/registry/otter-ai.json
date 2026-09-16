@@ -1,0 +1,89 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "OTTER_AI_MCP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/otter_ai_mcp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Otter.ai MCP",
+    "tools": 3,
+    "triggers": 0,
+    "auth_raw": [
+      "DCR_OAUTH"
+    ],
+    "auth": [
+      "other"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": true
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "otter",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=otter",
+    "hits": [
+      {
+        "name": "ai.painspotter/painspotter",
+        "description": "AI-analyzed startup opportunities from Reddit, Hacker News & Product Hunt, with commercial scores.",
+        "repo": "https://github.com/archoor/reddit-insight",
+        "status": "active"
+      },
+      {
+        "name": "ai.seaotter/otterscore",
+        "description": "Hostile-by-default critic that grades AI agent output against your acceptance policy.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.seaotter/otterscore",
+        "description": "SeaOtter dispatches work to a Superteam and checks the delivered outcome before money moves.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.seaotter/otterscore",
+        "description": "SeaOtter dispatches work to a Superteam and checks the delivered outcome before money moves.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.seaotter/otterscore",
+        "description": "SeaOtter dispatches work to a Superteam and checks the delivered outcome before money moves.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.seaotter/otterscore",
+        "description": "SeaOtter dispatches work to a Superteam and checks the delivered outcome before money moves.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.potterysupplieshq/site",
+        "description": "PotterySuppliesHQ: the site's own MCP server — dataset, enquiry (enquiry = a human handoff, not...",
+        "repo": "https://github.com/joeetdev/venture-estate",
+        "status": "active"
+      },
+      {
+        "name": "com.threadotter/agent",
+        "description": "GTM tools: buying-intent mentions from Reddit, X, LinkedIn, Bluesky; propose replies in your voice.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Otter AI",
+    "url": "https://github.com/search?q=Otter+AI+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID A311:32835C:24E0D4:2976A7:6AAAF953 and timestamp 2026-09-16 20:17:23 UTC. ",
+    "items": []
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "MRSCRAPER",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/mrscraper",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "MrScraper",
+    "tools": 11,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "mrscraper",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mrscraper",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "MrScraper",
+    "url": "https://github.com/search?q=MrScraper+mcp+server&type=repositories",
+    "items": []
+  }
+}

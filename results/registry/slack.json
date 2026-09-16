@@ -1,0 +1,147 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "SLACK",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/slack",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Slack",
+    "tools": 167,
+    "triggers": 9,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "slack.com",
+    "version": "1.7.0",
+    "spec_url": "https://api.apis.guru/v2/specs/slack.com/1.7.0/openapi.json",
+    "title": "Slack Web API",
+    "url": "https://apis.guru/?q=slack.com",
+    "endpoints": 174,
+    "auth": [
+      "oauth2"
+    ],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "slack",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=slack",
+    "hits": [
+      {
+        "name": "ai.smithery/smithery-ai-slack",
+        "description": "Enable interaction with Slack workspaces. Supports subscribing to Slack events through Resources.",
+        "repo": "https://github.com/smithery-ai/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "ai.waystation/slack",
+        "description": "Send messages, access channels, and manage files in your Slack workspace.",
+        "repo": "https://github.com/waystation-ai/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/slack",
+        "description": "Manage channels, conversations, users, and workspace apps programmatically",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/slack",
+        "description": "Manage channels, conversations, users, and workspace apps programmatically",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.pulsemcp/slack",
+        "description": "MCP server for Slack — read/write messages, manage threads, and react to messages.",
+        "repo": "https://github.com/pulsemcp/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "com.pulsemcp/slack",
+        "description": "MCP server for Slack — read/write messages, manage threads, and react to messages.",
+        "repo": "https://github.com/pulsemcp/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "io.github.CSOAI-ORG/slack-enterprise-mcp",
+        "description": "Slack Enterprise MCP server. Tools: send message, search messages, list channels. Built by M...",
+        "repo": "https://github.com/CSOAI-ORG/slack-enterprise-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.CSOAI-ORG/slack-enterprise-mcp",
+        "description": "slack-enterprise-mcp MCP server by MEOK AI Labs",
+        "repo": "https://github.com/CSOAI-ORG/slack-enterprise-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Slack",
+    "url": "https://github.com/search?q=Slack+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "korotovsky/slack-mcp-server",
+        "stars": 1829,
+        "url": "https://github.com/korotovsky/slack-mcp-server",
+        "desc": "The most powerful MCP Slack Server with no permission requirements, Apps support, GovSlack, DMs, Group DMs and smart his"
+      },
+      {
+        "full_name": "tuannvm/slack-mcp-client",
+        "stars": 171,
+        "url": "https://github.com/tuannvm/slack-mcp-client",
+        "desc": "A Slack bot and MCP client acts as a bridge between Slack and Model Context Protocol (MCP) servers. Using Slack as the i"
+      },
+      {
+        "full_name": "slackapi/slack-skills-plugin",
+        "stars": 131,
+        "url": "https://github.com/slackapi/slack-skills-plugin",
+        "desc": "Claude Code, Codex, Cursor, and npx skills plugin that enables your AI tools with a Slack MCP Server and Slack Developer"
+      },
+      {
+        "full_name": "ubie-oss/slack-mcp-server",
+        "stars": 110,
+        "url": "https://github.com/ubie-oss/slack-mcp-server",
+        "desc": "A Slack MCP server"
+      },
+      {
+        "full_name": "zencoderai/slack-mcp-server",
+        "stars": 76,
+        "url": "https://github.com/zencoderai/slack-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "timescale/tiger-slack",
+        "stars": 49,
+        "url": "https://github.com/timescale/tiger-slack",
+        "desc": "Real-time Slack ingest and MCP server to power your agentic Slack bots"
+      },
+      {
+        "full_name": "evolsb/claude-code-google-workspace",
+        "stars": 37,
+        "url": "https://github.com/evolsb/claude-code-google-workspace",
+        "desc": "Multi-account Google Workspace (Gmail, Drive, Calendar, Sheets, Docs) + Slack MCP servers for Claude Code. Setup guide w"
+      },
+      {
+        "full_name": "uptimepage/uptimepage",
+        "stars": 34,
+        "url": "https://github.com/uptimepage/uptimepage",
+        "desc": "Hosted uptime monitoring and public status pages for teams. Multi-region checks, automatic incidents, on-call alerts (Sl"
+      }
+    ]
+  }
+}

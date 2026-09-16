@@ -1,0 +1,30 @@
+{
+  "docs_reachable": {
+    "url": "https://docs.snowflake.com",
+    "status": 200,
+    "final_url": "https://docs.snowflake.com/en/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+    "skipped": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

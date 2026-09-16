@@ -1,0 +1,139 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "PIPEDRIVE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/pipedrive",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Pipedrive",
+    "tools": 402,
+    "triggers": 3,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "pipedrive",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pipedrive",
+    "hits": [
+      {
+        "name": "io.github.Servosity/pipedrive-mcp",
+        "description": "Full Pipedrive CRUD plus a local SQLite pipeline copy: stale deals, forecasts, aging, dupes, rep",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/pipedrive-mcp",
+        "description": "Full Pipedrive CRUD plus a local SQLite pipeline copy: stale deals, forecasts, aging, dupes, rep",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/pipedrive-mcp",
+        "description": "Full Pipedrive CRUD plus a local SQLite pipeline copy: stale deals, forecasts, aging, dupes, rep",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/pipedrive-mcp",
+        "description": "Full Pipedrive CRUD plus a local SQLite pipeline copy: stale deals, forecasts, aging, dupes, rep",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.ckalima/pipedrive-mcp-server",
+        "description": "MCP server for Pipedrive CRM. 155 tools for deals, persons, organizations, activities, and more.",
+        "repo": "https://github.com/ckalima/pipedrive-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.ckalima/pipedrive-mcp-server",
+        "description": "MCP server for Pipedrive CRM. 155 tools for deals, persons, organizations, activities, and more.",
+        "repo": "https://github.com/ckalima/pipedrive-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.ckalima/pipedrive-mcp-server",
+        "description": "MCP server for Pipedrive CRM. 155 tools for deals, persons, organizations, activities, and more.",
+        "repo": "https://github.com/ckalima/pipedrive-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.ckalima/pipedrive-mcp-server",
+        "description": "MCP server for Pipedrive CRM. 155 tools for deals, persons, organizations, activities, and more.",
+        "repo": "https://github.com/ckalima/pipedrive-mcp-server",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Pipedrive",
+    "url": "https://github.com/search?q=Pipedrive+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "WillDent/pipedrive-mcp-server",
+        "stars": 60,
+        "url": "https://github.com/WillDent/pipedrive-mcp-server",
+        "desc": "Secure, self-hosted MCP server for Pipedrive CRM with v2 read tools, optional preview-first writes, stdio/HTTP transport"
+      },
+      {
+        "full_name": "nubiia-dev/mcp-pipedrive",
+        "stars": 12,
+        "url": "https://github.com/nubiia-dev/mcp-pipedrive",
+        "desc": "Pipedrive CRM MCP server for AI assistants like Claude â€” 300+ tools covering the full Pipedrive API. Built by Nubiia."
+      },
+      {
+        "full_name": "comma-compliance/pipedrive-mcp",
+        "stars": 8,
+        "url": "https://github.com/comma-compliance/pipedrive-mcp",
+        "desc": "Pipedrive CRM server for the Model Context Protocol (MCP). 75 tools covering full CRUD, custom field resolution, and sho"
+      },
+      {
+        "full_name": "GarethWright/PipeDrive-MCP-Server",
+        "stars": 8,
+        "url": "https://github.com/GarethWright/PipeDrive-MCP-Server",
+        "desc": ""
+      },
+      {
+        "full_name": "ckalima/pipedrive-mcp-server",
+        "stars": 8,
+        "url": "https://github.com/ckalima/pipedrive-mcp-server",
+        "desc": "MCP server for Pipedrive CRM. 155 contract-tested tools, v2-first API, gated destructive ops. Works with Claude Desktop,"
+      },
+      {
+        "full_name": "Teapot-Agency/mcp_pipedrive",
+        "stars": 6,
+        "url": "https://github.com/Teapot-Agency/mcp_pipedrive",
+        "desc": "MCP server for Pipedrive CRM - Full CRUD operations (36 tools) for deals, persons, organizations, activities, notes & le"
+      },
+      {
+        "full_name": "zavora-ai/mcp-crm",
+        "stars": 3,
+        "url": "https://github.com/zavora-ai/mcp-crm",
+        "desc": "ADK-Rust Enterprise CRM MCP Server â€” Salesforce, HubSpot, Zoho CRM, Pipedrive with unified contacts, deals, pipelines"
+      },
+      {
+        "full_name": "vaibhavpandeyvpz/pipedriver",
+        "stars": 2,
+        "url": "https://github.com/vaibhavpandeyvpz/pipedriver",
+        "desc": "MCP server for the Pipedrive API v2."
+      }
+    ]
+  }
+}

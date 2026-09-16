@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Attio is a modern, flexible, data-driven CRM platform with customizable objects and AI-driven workflows for revenue teams.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "medium",
+    "docs_url": "https://docs.attio.com/rest-api/overview",
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/kesslerio/attio-mcp-server"
+    },
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.attio.com/rest-api/overview",
+        "quote": "There are two ways to authenticate with Attio: access tokens, or OAuth. Access tokens are scoped to a single workspace, while OAuth is only required if you plan on publishing an integration."
+      },
+      {
+        "field": "access",
+        "url": "https://apitracker.io/a/attio",
+        "quote": "API access requires approval and comes with rate limits, typically around 1,000 calls per hour."
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.attio.com/rest-api/overview",
+        "quote": "The documentation covers REST endpoints, GraphQL support, webhook configuration, and authentication methods."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://apitracker.io/a/attio",
+        "quote": "REST API exposes core CRM objects through standardized endpoints supporting CRUD operations, including Deals, Companies, People, Users, and Workspaces."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/kesslerio/attio-mcp-server",
+        "quote": "Community-maintained MCP server for Attio enabling agent-driven workflows."
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "API available across all pricing tiers (Free to Enterprise) but requires admin/app approval to enable. Bearer token and OAuth 2.0 supported. Official Attio MCP mentioned in 2026 updates but community implementation available now."
+  },
+  "cost_usd": 0.1539296,
+  "turns": 6,
+  "seconds": 47.3,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,48 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "MERMAID_CHART_MCP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/mermaid_chart_mcp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Mermaid Chart MCP",
+    "tools": 1,
+    "triggers": 0,
+    "auth_raw": [
+      "NO_AUTH"
+    ],
+    "auth": [
+      "none"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": true
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "github.com",
+    "version": "1.1.4",
+    "spec_url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+    "title": "GitHub v3 REST API",
+    "url": "https://apis.guru/?q=github.com",
+    "endpoints": 845,
+    "auth": [],
+    "breadth": "large"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "mermaid cli",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid cli",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Mermaid CLI",
+    "url": "https://github.com/search?q=Mermaid+CLI+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 9B26:27C2C5:252600:29C16B:6AAAF957 and timestamp 2026-09-16 20:17:28 UTC. ",
+    "items": []
+  }
+}

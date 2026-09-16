@@ -1,0 +1,95 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "TWENTY",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/twenty",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Twenty",
+    "tools": 8,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "twenty",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=twenty",
+    "hits": [
+      {
+        "name": "io.usefulapi/twenty",
+        "description": "Read people, companies, opportunities, notes and tasks; create and update records in Twenty CRM.",
+        "repo": "https://github.com/m190/usefulapi-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Twenty",
+    "url": "https://github.com/search?q=Twenty+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "mhenry3164/twenty-crm-mcp-server",
+        "stars": 104,
+        "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+        "desc": "A Model Context Protocol (MCP) server for Twenty CRM integration. Enables natural language interactions with your CRM da"
+      },
+      {
+        "full_name": "Jdu278/twenty-mcp-server",
+        "stars": 14,
+        "url": "https://github.com/Jdu278/twenty-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "smartsheet/cli-agent-power-tools",
+        "stars": 9,
+        "url": "https://github.com/smartsheet/cli-agent-power-tools",
+        "desc": "A free, open-source, pack of Claude Code agents for project managers. Purpose-built against the Smartsheet MCP server. T"
+      },
+      {
+        "full_name": "KonstiDoll/twenty-crm-mcp-server",
+        "stars": 7,
+        "url": "https://github.com/KonstiDoll/twenty-crm-mcp-server",
+        "desc": "A clean, GraphQL-based Model Context Protocol server for Twenty CRM. Enables natural language interactions with your CRM"
+      },
+      {
+        "full_name": "decode-data/twentycrm-graphql-mcp",
+        "stars": 1,
+        "url": "https://github.com/decode-data/twentycrm-graphql-mcp",
+        "desc": "MCP server for Twenty CRM GraphQL API"
+      },
+      {
+        "full_name": "High-Impact-Athletes/hia-twenty-mcp",
+        "stars": 1,
+        "url": "https://github.com/High-Impact-Athletes/hia-twenty-mcp",
+        "desc": "Remote MCP server for Twenty CRM on Cloudflare Workers"
+      },
+      {
+        "full_name": "0xfabrica/twentycrm-mcp",
+        "stars": 1,
+        "url": "https://github.com/0xfabrica/twentycrm-mcp",
+        "desc": "Safety-first, token-efficient MCP server for Twenty CRM â€” 14 tools, guarded writes, and no hard deletes."
+      },
+      {
+        "full_name": "Mikefluff/twenty-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/Mikefluff/twenty-mcp-server",
+        "desc": "Model Context Protocol server for Twenty CRM API integration - AI-powered CRM integration toolkit"
+      }
+    ]
+  }
+}

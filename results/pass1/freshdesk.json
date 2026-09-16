@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Freshdesk is a cloud-based customer support platform enabling teams to manage tickets, contacts, and support interactions through a REST API.",
+    "auth_methods": [
+      "basic"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developers.freshdesk.com/api/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key",
+        "quote": "Freshdesk uses HTTP Basic Auth, where your API key is the username and any arbitrary string (like 'X') is the password."
+      },
+      {
+        "field": "access",
+        "url": "https://www.getmacha.com/blog/freshdesk-pricing-explained",
+        "quote": "Importantly, the main limitations of the Freshdesk free plan are the lack of automation, API access, and advanced reporting."
+      },
+      {
+        "field": "access",
+        "url": "https://www.getmacha.com/blog/freshdesk-pricing-explained",
+        "quote": "if you need API access, you'll need to subscribe to at least the Growth plan ($19/agent/month)"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.freshdesk.com/api/",
+        "quote": "The Freshdesk API is a full CRUD surface over the objects you see in the Freshdesk UI."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.getmacha.com/blog/freshdesk-pricing-explained",
+        "quote": "Free plan includes: 1-2 agents, Email ticketing, Knowledge base. Growth plan ($19/agent/month): 200 API calls/min"
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "API requires paid subscription starting at Growth plan ($19/agent/month). Basic authentication with API key. REST API covers tickets, contacts, companies, agents, and related entities. No MCP server found. Free tier exists but explicitly excludes API access."
+  },
+  "cost_usd": 0.1051772,
+  "turns": 6,
+  "seconds": 121.0,
+  "is_error": false,
+  "error": null
+}

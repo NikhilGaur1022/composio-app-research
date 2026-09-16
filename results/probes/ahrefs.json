@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://ahrefs.com/api",
+    "status": 200,
+    "final_url": "https://docs.ahrefs.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": true,
+    "api_key": true,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": true,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": true,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.ahrefs.com/v3/site-explorer/metrics",
+    "status": 403,
+    "www_authenticate": null,
+    "body_snippet": "[\"Error\",\"Forbidden\"]",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://api.ahrefs.com/.well-known/oauth-authorization-server"
+  }
+}

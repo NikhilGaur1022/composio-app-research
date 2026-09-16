@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://transcriptapi.com",
+    "status": 200,
+    "final_url": "https://transcriptapi.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": true,
+    "bearer": true,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": true,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://transcriptapi.com/api/v2/youtube/transcript",
+    "status": 401,
+    "www_authenticate": "Bearer",
+    "body_snippet": "{\"detail\":\"Not authenticated\"}",
+    "inferred_scheme": "bearer_token",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": "https://transcriptapi.com/openapi.json"
+  },
+  "oauth_discovery": {
+    "found": "https://transcriptapi.com/.well-known/oauth-authorization-server"
+  }
+}

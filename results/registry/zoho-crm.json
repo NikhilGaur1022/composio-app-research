@@ -1,0 +1,88 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "ZOHO",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/zoho",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Zoho",
+    "tools": 57,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "zoho crm",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=zoho crm",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Zoho CRM",
+    "url": "https://github.com/search?q=Zoho+CRM+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "Officehub-Tech-LLC/MCP-Server",
+        "stars": 14,
+        "url": "https://github.com/Officehub-Tech-LLC/MCP-Server",
+        "desc": "MCP Server Integration with Zoho CRM"
+      },
+      {
+        "full_name": "Mgabr90/zoho-mcp-server",
+        "stars": 3,
+        "url": "https://github.com/Mgabr90/zoho-mcp-server",
+        "desc": "Unified Zoho CRM and Books MCP Server with AnythingLLM integration"
+      },
+      {
+        "full_name": "LokiMCPUniverse/zoho-crm-mcp-server",
+        "stars": 3,
+        "url": "https://github.com/LokiMCPUniverse/zoho-crm-mcp-server",
+        "desc": "MCP server for Zoho CRM - Complete CRM suite integration"
+      },
+      {
+        "full_name": "junnaisystems/Zoho-CRM-MCP",
+        "stars": 3,
+        "url": "https://github.com/junnaisystems/Zoho-CRM-MCP",
+        "desc": "A comprehensive Model Context Protocol server for Zoho CRM integration - Built by Jennifer Ugo of JunnAI"
+      },
+      {
+        "full_name": "CDataSoftware/zoho-crm-mcp-server-by-cdata",
+        "stars": 3,
+        "url": "https://github.com/CDataSoftware/zoho-crm-mcp-server-by-cdata",
+        "desc": "This read-only MCP Server allows you to connect to Zoho CRM data from Claude Desktop through CData JDBC Drivers. For ful"
+      },
+      {
+        "full_name": "zavora-ai/mcp-crm",
+        "stars": 3,
+        "url": "https://github.com/zavora-ai/mcp-crm",
+        "desc": "ADK-Rust Enterprise CRM MCP Server â€” Salesforce, HubSpot, Zoho CRM, Pipedrive with unified contacts, deals, pipelines"
+      },
+      {
+        "full_name": "whiteside-daniel/zohocrm-mcpserver",
+        "stars": 2,
+        "url": "https://github.com/whiteside-daniel/zohocrm-mcpserver",
+        "desc": "containerized MCP server for Zoho CRM"
+      },
+      {
+        "full_name": "primrose-mcp/primrose-mcp-zoho",
+        "stars": 1,
+        "url": "https://github.com/primrose-mcp/primrose-mcp-zoho",
+        "desc": "MCP Server for Zoho CRM integration"
+      }
+    ]
+  }
+}

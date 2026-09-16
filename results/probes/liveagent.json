@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://liveagent.com",
+    "status": 200,
+    "final_url": "https://www.liveagent.com/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": true,
+    "enterprise_only": true,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://www.liveagent.com/api/v3/tickets",
+    "status": 301,
+    "www_authenticate": null,
+    "body_snippet": "",
+    "inferred_scheme": null,
+    "api_alive": false
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "DISCORD",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/discord",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Discord",
+    "tools": 28,
+    "triggers": 1,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "discord",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=discord",
+    "hits": [
+      {
+        "name": "ai.smithery/Danushkumar-V-mcp-discord",
+        "description": "An MCP server that integrates with Discord to provide AI-powered features.",
+        "repo": "https://github.com/Danushkumar-V/mcp-discord",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/sachicali-discordmcp-suite",
+        "description": "Control your Discord community: send/read messages, manage channels and forums, and handle webhook…",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.lasers.guildcontrol/discord",
+        "description": "Safety-first MCP server for Discord with privacy-safe reads, audits, and reviewed administration",
+        "repo": "https://github.com/j-256/guildcontrol",
+        "status": "active"
+      },
+      {
+        "name": "app.lasers.guildcontrol/discord",
+        "description": "Safety-first MCP server for Discord with privacy-safe reads, audits, and reviewed administration",
+        "repo": "https://github.com/j-256/guildcontrol",
+        "status": "active"
+      },
+      {
+        "name": "app.lasers.guildcontrol/discord",
+        "description": "Safety-first MCP server for Discord with privacy-safe reads, audits, and reviewed administration",
+        "repo": "https://github.com/j-256/guildcontrol",
+        "status": "active"
+      },
+      {
+        "name": "app.lasers.guildcontrol/discord",
+        "description": "Safety-first MCP server for Discord with privacy-safe reads, audits, and reviewed administration",
+        "repo": "https://github.com/j-256/guildcontrol",
+        "status": "active"
+      },
+      {
+        "name": "com.discordservers/search",
+        "description": "Search Discord server listings, and manage your own servers once you sign in.",
+        "repo": "https://github.com/DiscordServers/monorepo",
+        "status": "active"
+      },
+      {
+        "name": "io.github.DockerDiscordControl/timergy",
+        "description": "Create scheduling polls, vote, and finalize times from AI agents.",
+        "repo": "https://github.com/timergy-app/timergy",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Discord",
+    "url": "https://github.com/search?q=Discord+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "MODSetter/SurfSense",
+        "stars": 16159,
+        "url": "https://github.com/MODSetter/SurfSense",
+        "desc": "Open-source NotebookLM alternative. Research the open web with live data(Reddit, YT, IG, TikTok, Indeed, Google Search, "
+      },
+      {
+        "full_name": "moltis-org/moltis",
+        "stars": 2864,
+        "url": "https://github.com/moltis-org/moltis",
+        "desc": "A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, "
+      },
+      {
+        "full_name": "zzet/gortex",
+        "stars": 1582,
+        "url": "https://github.com/zzet/gortex",
+        "desc": "High-performance code-intelligence engine for AI agents and IDE, supports 257 languages, multi repositories, based on gr"
+      },
+      {
+        "full_name": "SaseQ/discord-mcp",
+        "stars": 493,
+        "url": "https://github.com/SaseQ/discord-mcp",
+        "desc": "A MCP server for the Discord integration. Enable your AI assistants to seamlessly interact with Discord. Enhance your Di"
+      },
+      {
+        "full_name": "v-3/discordmcp",
+        "stars": 231,
+        "url": "https://github.com/v-3/discordmcp",
+        "desc": "Discord MCP Server for Claude Integration"
+      },
+      {
+        "full_name": "KOBA789/human-in-the-loop",
+        "stars": 231,
+        "url": "https://github.com/KOBA789/human-in-the-loop",
+        "desc": "An MCP (Model Context Protocol) server that allows AI assistants to ask questions to humans via Discord."
+      },
+      {
+        "full_name": "mr-tbot/mesh-api",
+        "stars": 173,
+        "url": "https://github.com/mr-tbot/mesh-api",
+        "desc": "MESH-API  â€” Off-Grid AI & API Router & with MCP server & over 30 API extensions for Meshtastic & MeshCore - Seamlessly"
+      },
+      {
+        "full_name": "hanweg/mcp-discord",
+        "stars": 168,
+        "url": "https://github.com/hanweg/mcp-discord",
+        "desc": "MCP server for discord bot"
+      }
+    ]
+  }
+}

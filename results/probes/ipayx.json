@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://ipayx.ai/docs",
+    "status": 200,
+    "final_url": "https://www.ipayx.ai/docs",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://ipayx.ai/docs",
+    "status": 200,
+    "www_authenticate": null,
+    "body_snippet": "<!doctype html> <html lang=\"en\">   <head>     <meta charset=\"UTF-8\" />     <script>       if (window.location.hostname === 'ipayx.ai') {         window.location.replace('https://www.ipayx.ai' + window",
+    "inferred_scheme": null,
+    "api_alive": false
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

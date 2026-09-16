@@ -1,0 +1,147 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "CLICKUP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/clickup",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "ClickUp",
+    "tools": 164,
+    "triggers": 21,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "clickup.com",
+    "version": "1.0.0",
+    "spec_url": "https://api.apis.guru/v2/specs/clickup.com/1.0.0/openapi.json",
+    "title": "clickup20",
+    "url": "https://apis.guru/?q=clickup.com",
+    "endpoints": 2,
+    "auth": [],
+    "breadth": "small"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "clickup",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=clickup",
+    "hits": [
+      {
+        "name": "ai.smithery/skr-cloudify-clickup-mcp-server-new",
+        "description": "Manage your ClickUp workspace by creating, updating, and organizing tasks, lists, folders, and tag…",
+        "repo": "https://github.com/skr-cloudify/clickup-mcp-server-new",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/clickup",
+        "description": "Manage tasks, lists, checklists, comments, and project workflows",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/clickup",
+        "description": "Manage tasks, lists, checklists, comments, and project workflows",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cvrt-jh/clickup-mcp",
+        "description": "Lightweight ClickUp MCP server - 35 tools, token-optimized (95% smaller responses)",
+        "repo": "https://github.com/cvrt-jh/clickup-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cvrt-jh/clickup-mcp",
+        "description": "Lightweight ClickUp MCP server - 37 tools, token-optimized (95% smaller responses)",
+        "repo": "https://github.com/cvrt-jh/clickup-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.helbertparanhos/clickup-mcp-pro",
+        "description": "The most complete ClickUp MCP server — 161 tools + clickup_raw for the full v2/v3 API.",
+        "repo": "https://github.com/helbertparanhos/clickup-mcp-pro",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/clickup",
+        "description": "ClickUp MCP — wraps the ClickUp REST API v2 (BYO API key)",
+        "repo": "https://github.com/pipeworx-io/mcp-clickup",
+        "status": "active"
+      },
+      {
+        "name": "io.github.retailbox-automation/clickup-mcp",
+        "description": "Audit ClickUp workspaces: spaces, folders, lists, custom fields, tasks, and views.",
+        "repo": "https://github.com/retailbox-automation/clickup-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "ClickUp",
+    "url": "https://github.com/search?q=ClickUp+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "taazkareem/clickup-mcp-server",
+        "stars": 50,
+        "url": "https://github.com/taazkareem/clickup-mcp-server",
+        "desc": "ClickUp MCP Server - Integrate ClickUp project management with AI through Model Context Protocol"
+      },
+      {
+        "full_name": "nsxdavid/clickup-mcp-server",
+        "stars": 43,
+        "url": "https://github.com/nsxdavid/clickup-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "Nazruden/clickup-mcp-server",
+        "stars": 23,
+        "url": "https://github.com/Nazruden/clickup-mcp-server",
+        "desc": "A Model Context Protocol server implementation for ClickUp integration, enabling AI assistants to interact with ClickUp "
+      },
+      {
+        "full_name": "arslan8122/clickup-mcp",
+        "stars": 14,
+        "url": "https://github.com/arslan8122/clickup-mcp",
+        "desc": "MCP server for ClickUp â€” tasks, time tracking, daily    updates from Claude Code/Cursor/any AI tool"
+      },
+      {
+        "full_name": "Chykalophia/ClickUp-MCP-Server---Enhanced",
+        "stars": 7,
+        "url": "https://github.com/Chykalophia/ClickUp-MCP-Server---Enhanced",
+        "desc": ""
+      },
+      {
+        "full_name": "Leanware-io/clickup-mcp-server",
+        "stars": 6,
+        "url": "https://github.com/Leanware-io/clickup-mcp-server",
+        "desc": "MCP Server for ClickUp"
+      },
+      {
+        "full_name": "grunion-ai/weave",
+        "stars": 6,
+        "url": "https://github.com/grunion-ai/weave",
+        "desc": "Open-source, self-hosted alternative to Airtable, Fibery, Notion databases and ClickUp: a database and work management p"
+      },
+      {
+        "full_name": "noah-vh/mcp-server-clickup",
+        "stars": 5,
+        "url": "https://github.com/noah-vh/mcp-server-clickup",
+        "desc": "Model Context Protocol (MCP) server implementation for ClickUp integration"
+      }
+    ]
+  }
+}

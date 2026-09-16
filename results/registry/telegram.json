@@ -1,0 +1,145 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "TELEGRAM",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/telegram",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Telegram",
+    "tools": 18,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "telegram.org",
+    "version": "5.0.0",
+    "spec_url": "https://api.apis.guru/v2/specs/telegram.org/5.0.0/openapi.json",
+    "title": "Telegram Bot API",
+    "url": "https://apis.guru/?q=telegram.org",
+    "endpoints": 74,
+    "auth": [],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "telegram",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=telegram",
+    "hits": [
+      {
+        "name": "ai.awraiter/telegram",
+        "description": "Telegram channels you administer: analytics, content plans, scheduled publishing. No userbot",
+        "repo": "https://github.com/MediaZione/AwrAiter",
+        "status": "active"
+      },
+      {
+        "name": "com.jojapi/telegram",
+        "description": "Telegram: FASTEST real time Telegram API. Retrieve channel's info and messages in milliseconds..",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.limzo/telegram-group-stats",
+        "description": "Live, verifiable stats for public Telegram groups tracked by Limzo. Read-only, no auth needed.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.limzo/telegram-group-stats",
+        "description": "Read-only public Telegram group stats from Limzo: leaderboards, activity, levels. No API key.",
+        "repo": "https://github.com/LimzoCom/limzo-mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.limzo/telegram-group-stats",
+        "description": "Read-only public Telegram group stats from Limzo: leaderboards, activity, levels. No API key.",
+        "repo": "https://github.com/LimzoCom/limzo-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.GeiserX/telegram-archive-mcp",
+        "description": "MCP server for Telegram Archive — search messages, browse chats, and access history",
+        "repo": "https://github.com/GeiserX/telegram-archive-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.JustJuice55/telegram-catalog",
+        "description": "Search 1.2M+ Telegram channels, 245k+ chats, 160k+ bots — no account, no key, no install.",
+        "repo": "https://github.com/JustJuice55/tgden-api",
+        "status": "active"
+      },
+      {
+        "name": "io.github.OlegNickeshin/telegram-business-mcp",
+        "description": "Self-hosted Telegram Business MCP: search chats, read files and transcripts, optionally reply.",
+        "repo": "https://github.com/OlegNickeshin/telegram-business-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Telegram",
+    "url": "https://github.com/search?q=Telegram+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "moltis-org/moltis",
+        "stars": 2864,
+        "url": "https://github.com/moltis-org/moltis",
+        "desc": "A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, "
+      },
+      {
+        "full_name": "chigwell/telegram-mcp",
+        "stars": 1618,
+        "url": "https://github.com/chigwell/telegram-mcp",
+        "desc": "Telegram MCP server powered by Telethon to let MCP clients read chats, manage groups, and send/modify messages, media, c"
+      },
+      {
+        "full_name": "dryeab/mcp-telegram",
+        "stars": 252,
+        "url": "https://github.com/dryeab/mcp-telegram",
+        "desc": "MCP Server for Telegram"
+      },
+      {
+        "full_name": "sparfenyuk/mcp-telegram",
+        "stars": 188,
+        "url": "https://github.com/sparfenyuk/mcp-telegram",
+        "desc": "MCP server to work with Telegram through MTProto"
+      },
+      {
+        "full_name": "coddy-project/coddy-agent",
+        "stars": 146,
+        "url": "https://github.com/coddy-project/coddy-agent",
+        "desc": "General-purpose agent in one static Go binary: console TUI, ACP server for editors, OpenAI-compatible API with embedded "
+      },
+      {
+        "full_name": "Lexus2016/claude-code-studio",
+        "stars": 136,
+        "url": "https://github.com/Lexus2016/claude-code-studio",
+        "desc": "A fully functional web workspace for Claude Code CLIâ€”chat, Kanban task board, task scheduling, multi-agent orchestrati"
+      },
+      {
+        "full_name": "nirholas/pump-fun-sdk",
+        "stars": 124,
+        "url": "https://github.com/nirholas/pump-fun-sdk",
+        "desc": "Token creation launching, bonding curve trading, AMM migration, tiered fees, creator fee sharing, vanity keygen, MCP ser"
+      },
+      {
+        "full_name": "unchase/antigravity-storage-manager",
+        "stars": 104,
+        "url": "https://github.com/unchase/antigravity-storage-manager",
+        "desc": "Unified AI Gateway with visual dashboard, secure Google Drive sync, Telegram notifications, multi-account profiles, real"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developer.atlassian.com",
+    "status": 200,
+    "final_url": "https://developer.atlassian.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.atlassian.com/oauth/token/accessible-resources",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"code\":401,\"message\":\"Unauthorized\"}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "SENTRY",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/sentry",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Sentry",
+    "tools": 211,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "sentry",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=sentry",
+    "hits": [
+      {
+        "name": "com.0xpi.sdsentry/sds-lookup",
+        "description": "Free safety data sheet (SDS) lookup by product name, plus an OSHA HazCom readiness check.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/sentry",
+        "description": "Track errors, manage performance alerts, and configure dashboards and monitors",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/sentry",
+        "description": "Track errors, manage performance alerts, and configure dashboards and monitors",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/sentry",
+        "description": "Track errors, manage performance alerts, and configure dashboards and monitors",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Jackxiaozhiren/datasentry",
+        "description": "Local-first MCP server for data-quality discovery, evidence, drift, and controlled repair.",
+        "repo": "https://github.com/Jackxiaozhiren/datasentry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Roshan6335/mcpsentry",
+        "description": "Security scanner and runtime proxy for MCP servers.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.Roshan6335/mcpsentry",
+        "description": "Security scanner and runtime proxy for MCP servers.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.friendlygeorge/sentry-mcp-server",
+        "description": "MCP server for Sentry — error tracking, issues, releases, events, and projects for AI assistants.",
+        "repo": "https://github.com/friendlygeorge/sentry-mcp-server",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Sentry",
+    "url": "https://github.com/search?q=Sentry+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "getsentry/sentry-mcp",
+        "stars": 854,
+        "url": "https://github.com/getsentry/sentry-mcp",
+        "desc": "An MCP server for interacting with Sentry via LLMs."
+      },
+      {
+        "full_name": "theRubberDuckiee/mcp-server-configs",
+        "stars": 24,
+        "url": "https://github.com/theRubberDuckiee/mcp-server-configs",
+        "desc": "MCP (Model Context Protocol) server configurations for popular services like GitHub, Figma, Puppeteer, Sentry, and Conte"
+      },
+      {
+        "full_name": "MCP-100/mcp-sentry",
+        "stars": 22,
+        "url": "https://github.com/MCP-100/mcp-sentry",
+        "desc": "A Model Context Protocol server for retrieving and analyzing issues from Sentry.io"
+      },
+      {
+        "full_name": "daltoniam/switchboard",
+        "stars": 19,
+        "url": "https://github.com/daltoniam/switchboard",
+        "desc": "One MCP server to rule them all. Aggregates GitHub, Datadog, Linear, Sentry, Slack, and Metabase behind a single search/"
+      },
+      {
+        "full_name": "ddfourtwo/sentry-selfhosted-mcp",
+        "stars": 18,
+        "url": "https://github.com/ddfourtwo/sentry-selfhosted-mcp",
+        "desc": "An MCP server for self-hosted sentry."
+      },
+      {
+        "full_name": "gokborayilmaz/code-reviewer-fixer-agent",
+        "stars": 12,
+        "url": "https://github.com/gokborayilmaz/code-reviewer-fixer-agent",
+        "desc": "This AI agent analyzes code repositories, detects potential security vulnerabilities, reviews code quality, and suggests"
+      },
+      {
+        "full_name": "danielsmithdevelopment/ClawQL",
+        "stars": 12,
+        "url": "https://github.com/danielsmithdevelopment/ClawQL",
+        "desc": "MCP server: search + execute over OpenAPI 3, Swagger 2, or Google Discovery, with optional internal GraphQL for lean API"
+      },
+      {
+        "full_name": "getsentry/sentry-mcp-stdio",
+        "stars": 11,
+        "url": "https://github.com/getsentry/sentry-mcp-stdio",
+        "desc": "Model Context Protocol (MCP) server for Sentry"
+      }
+    ]
+  }
+}

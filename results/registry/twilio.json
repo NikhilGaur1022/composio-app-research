@@ -1,0 +1,112 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "twilio.com:api",
+    "version": "1.42.0",
+    "spec_url": "https://api.apis.guru/v2/specs/twilio.com/api/1.42.0/openapi.json",
+    "title": "Twilio - Api",
+    "url": "https://apis.guru/?q=twilio.com",
+    "endpoints": 199,
+    "auth": [
+      "basic"
+    ],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "twilio",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=twilio",
+    "hits": [
+      {
+        "name": "io.github.codespar/mcp-twilio",
+        "description": "MCP server for Twilio — global SMS, WhatsApp, Voice, Verify, and Lookup across 180+ countries",
+        "repo": "https://github.com/codespar/mcp-dev-latam",
+        "status": "active"
+      },
+      {
+        "name": "io.github.codespar/mcp-twilio",
+        "description": "MCP server for Twilio — global SMS, WhatsApp, Voice, Verify, and Lookup across 180+ countries",
+        "repo": "https://github.com/codespar/mcp-dev-latam",
+        "status": "active"
+      },
+      {
+        "name": "io.github.mrfentmen/twilio-mcp-server",
+        "description": "Send SMS, MMS, WhatsApp messages, make voice calls, and manage Twilio phone numbers.",
+        "repo": "https://github.com/mrfentmen/twilio-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/twilio",
+        "description": "Twilio MCP Pack — send SMS, list messages, make calls via Twilio REST API.",
+        "repo": "https://github.com/pipeworx-io/mcp-twilio",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Twilio",
+    "url": "https://github.com/search?q=Twilio+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "mr-tbot/mesh-api",
+        "stars": 173,
+        "url": "https://github.com/mr-tbot/mesh-api",
+        "desc": "MESH-API  â€” Off-Grid AI & API Router & with MCP server & over 30 API extensions for Meshtastic & MeshCore - Seamlessly"
+      },
+      {
+        "full_name": "XiyaoWang0519/agent-call",
+        "stars": 134,
+        "url": "https://github.com/XiyaoWang0519/agent-call",
+        "desc": "Open-source MCP server for safe, stateful AI-agent phone calls with OpenAI Realtime and Twilio."
+      },
+      {
+        "full_name": "YiyangLi/sms-mcp-server",
+        "stars": 15,
+        "url": "https://github.com/YiyangLi/sms-mcp-server",
+        "desc": "A Model Context Protocol (MCP) server that enables Claude and other AI assistants to send SMS messages using Twilio."
+      },
+      {
+        "full_name": "adstastic/claude-code-whatsapp-approval",
+        "stars": 14,
+        "url": "https://github.com/adstastic/claude-code-whatsapp-approval",
+        "desc": "MCP server with Whatsapp integration (Twilio) to remote approve Claude Code tool use"
+      },
+      {
+        "full_name": "deshartman/twilio-agent-payments-mcp-server",
+        "stars": 5,
+        "url": "https://github.com/deshartman/twilio-agent-payments-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "deshartman/twilio-messaging-mcp-server",
+        "stars": 5,
+        "url": "https://github.com/deshartman/twilio-messaging-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "twilio-samples/openai-mcp-samples",
+        "stars": 4,
+        "url": "https://github.com/twilio-samples/openai-mcp-samples",
+        "desc": "Sample MCP codes for connecting OpenAI to Twilio Function hosted Twilio MCP server."
+      },
+      {
+        "full_name": "prakharbhardwaj/voice-agent-mcp-server",
+        "stars": 3,
+        "url": "https://github.com/prakharbhardwaj/voice-agent-mcp-server",
+        "desc": "A Model Context Protocol (MCP) server that integrates Twilio Voice, Deepgram AI, and OpenAI to create intelligent voice-"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "GOOGLEADS",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/googleads",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Google Ads",
+    "tools": 28,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "google.com",
+    "version": "v3",
+    "spec_url": "https://api.apis.guru/v2/specs/google.com/v3/openapi.json",
+    "title": "Travel Partner API",
+    "url": "https://apis.guru/?q=google.com",
+    "endpoints": 23,
+    "auth": [],
+    "breadth": "small"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "google ads",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=google ads",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Google Ads",
+    "url": "https://github.com/search?q=Google+Ads+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "irinabuht12-oss/google-meta-ads-ga4-mcp",
+        "stars": 1883,
+        "url": "https://github.com/irinabuht12-oss/google-meta-ads-ga4-mcp",
+        "desc": "Google Ads MCP + Meta Ads MCP + GA4 in one server for Claude, ChatGPT, Cursor & n8n â€” 250+ tools, hosted remote MCP, O"
+      },
+      {
+        "full_name": "pipeboard-co/meta-ads-mcp",
+        "stars": 1261,
+        "url": "https://github.com/pipeboard-co/meta-ads-mcp",
+        "desc": "Meta Ads (Facebook/Instagram) MCP server for Claude, ChatGPT, Perplexity & Cursor â€” the Meta node of Pipeboardâ€™s 5-p"
+      },
+      {
+        "full_name": "gomarble-ai/google-ads-mcp-server",
+        "stars": 143,
+        "url": "https://github.com/gomarble-ai/google-ads-mcp-server",
+        "desc": "This repo helps us to analyze googla ads performance data"
+      },
+      {
+        "full_name": "amekala/ads-mcp",
+        "stars": 93,
+        "url": "https://github.com/amekala/ads-mcp",
+        "desc": "MCP server for managing ad campaigns across Google Ads, Meta Ads, LinkedIn Ads, and TikTok Ads. 100+ tools for campaign "
+      },
+      {
+        "full_name": "mathiaschu/google-ads-analyzer",
+        "stars": 66,
+        "url": "https://github.com/mathiaschu/google-ads-analyzer",
+        "desc": "A Claude Code skill + MCP server setup for expert-level Google Ads campaign analysis"
+      },
+      {
+        "full_name": "FGRibreau/mcp-google-ads",
+        "stars": 49,
+        "url": "https://github.com/FGRibreau/mcp-google-ads",
+        "desc": "MCP server for Google Ads â€” full campaign management with safety guardrails"
+      },
+      {
+        "full_name": "markifact/markifact-mcp",
+        "stars": 48,
+        "url": "https://github.com/markifact/markifact-mcp",
+        "desc": "MCP server for Google Ads, Meta Ads, GA4, TikTok Ads, and LinkedIn Ads. Manage 300+ ad operations from Claude, ChatGPT, "
+      },
+      {
+        "full_name": "jshorwitz/awesome-agentic-advertising",
+        "stars": 40,
+        "url": "https://github.com/jshorwitz/awesome-agentic-advertising",
+        "desc": "A curated list of MCP servers, tools, protocols, and resources for AI-powered advertising campaign management. Covers Go"
+      }
+    ]
+  }
+}

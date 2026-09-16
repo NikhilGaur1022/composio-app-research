@@ -1,0 +1,30 @@
+{
+  "docs_reachable": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "status": 200,
+    "final_url": "https://github.com/sherlock-project/sherlock",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://github.com/sherlock-project/sherlock",
+    "skipped": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

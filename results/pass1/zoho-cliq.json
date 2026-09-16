@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Team messaging and collaboration platform with REST API for chatbots, integrations, and AI agent automation",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+    "mcp": {
+      "status": "official",
+      "url": "https://www.zoho.com/cliq/mcp-server.html"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+        "quote": "OAuth 2.0 Bearer authentication scheme with Zoho-oauthtoken header prefix"
+      },
+      {
+        "field": "access",
+        "url": "https://www.zoho.com/cliq/help/developers.html",
+        "quote": "Create free Zoho account and register app in Zoho Developer Console to receive Client ID and Client Secret"
+      },
+      {
+        "field": "api_type",
+        "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+        "quote": "Zoho Cliq REST API v3 recommended for new development with full CRUD coverage for chats, messages, bots, and slash commands"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.zoho.com/cliq/mcp-server.html",
+        "quote": "Official Zoho Cliq MCP Server available for AI agents to access channels, threads, users, roles, and create notifications"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.zoho.com/cliq/help/developers.html",
+        "quote": "Self-service API credentials via free Zoho account with OAuth2 authentication for immediate agent toolkit integration"
+      }
+    ],
+    "notes": "Zoho Cliq offers a comprehensive REST API with official MCP server support. Free tier includes full API access without paid subscription requirement. OAuth2 is the sole authentication method. API breadth estimated at medium based on module coverage (chats, messages, bots, settings, functions, datastores). Official MCP integration enables seamless AI agent collaboration."
+  },
+  "cost_usd": 0.4580326,
+  "turns": 6,
+  "seconds": 118.7,
+  "is_error": false,
+  "error": null
+}

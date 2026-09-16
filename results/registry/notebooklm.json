@@ -1,0 +1,86 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "cloud-elements.com:ecwid",
+    "version": "api-v2",
+    "spec_url": "https://api.apis.guru/v2/specs/cloud-elements.com/ecwid/api-v2/swagger.json",
+    "title": "ecwid",
+    "url": "https://apis.guru/?q=cloud-elements.com",
+    "endpoints": 42,
+    "auth": [],
+    "breadth": "small"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "notebooklm",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=notebooklm",
+    "hits": [
+      {
+        "name": "io.github.Pantheon-Security/notebooklm-mcp-secure",
+        "description": "Security-hardened NotebookLM MCP with post-quantum encryption",
+        "repo": "https://github.com/Pantheon-Security/notebooklm-mcp-secure",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Pantheon-Security/notebooklm-mcp-secure",
+        "description": "Security-hardened NotebookLM MCP with post-quantum encryption",
+        "repo": "https://github.com/Pantheon-Security/notebooklm-mcp-secure",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Pantheon-Security/notebooklm-mcp-secure",
+        "description": "Security-hardened NotebookLM MCP with post-quantum encryption",
+        "repo": "https://github.com/Pantheon-Security/notebooklm-mcp-secure",
+        "status": "active"
+      },
+      {
+        "name": "io.github.mcp-dir/notebooklm-mcp",
+        "description": "Google NotebookLM via natural language: create notebooks, add sources (PDF, URL, YouTube) and ask gr",
+        "repo": "https://github.com/mcp-dir/notebooklm-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.roomi-fields/notebooklm-mcp",
+        "description": "Automate Google NotebookLM — Q&A with citations, audio, video, content generation",
+        "repo": "https://github.com/roomi-fields/notebooklm-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.roomi-fields/notebooklm-mcp",
+        "description": "Automate Google NotebookLM — Q&A with citations, audio, video, content generation",
+        "repo": "https://github.com/roomi-fields/notebooklm-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.roomi-fields/notebooklm-mcp",
+        "description": "Automate Google NotebookLM — Q&A with citations, audio, video, content generation",
+        "repo": "https://github.com/roomi-fields/notebooklm-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.roomi-fields/notebooklm-mcp",
+        "description": "Automate Google NotebookLM — Q&A with citations, audio, video, content generation",
+        "repo": "https://github.com/roomi-fields/notebooklm-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "NotebookLM",
+    "url": "https://github.com/search?q=NotebookLM+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID AF25:28620D:2572E6:2A09F5:6AAAF951 and timestamp 2026-09-16 20:17:23 UTC. ",
+    "items": []
+  }
+}

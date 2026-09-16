@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "DealCloud is a CRM and sales intelligence platform offering REST APIs for data, relationship intelligence, and publishing workflows.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://api.docs.dealcloud.com/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "quote": "Requesting an OAuth2 Bearer Token"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "Obtaining an API Key"
+      },
+      {
+        "field": "access",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "quote": "To enable API access, navigate to Admin > User Management, select the relevant user group, go to Capabilities > Site Areas, and enable 'API'"
+      },
+      {
+        "field": "api_type",
+        "url": "https://api.docs.dealcloud.com/docs",
+        "quote": "The client application sends a POST request to the token endpoint"
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.g2.com/products/dealcloud/pricing",
+        "quote": "pricing information for DealCloud is supplied by the software provider"
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "API access requires active DealCloud subscription with admin-enabled API capabilities. Supports OAuth2 bearer tokens and API key authentication. Provides Data APIs, Relationship Intelligence APIs, Publications APIs, and User Management APIs. Admin approval needed for workspace API activation beyond self-serve user key generation."
+  },
+  "cost_usd": 0.10572530000000001,
+  "turns": 6,
+  "seconds": 47.0,
+  "is_error": false,
+  "error": null
+}

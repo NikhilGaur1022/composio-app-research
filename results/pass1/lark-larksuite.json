@@ -1,0 +1,50 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Lark (Larksuite) is a collaborative all-in-one communication and productivity platform with integrated messaging, docs, calendar, and task management.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token",
+      "api_key"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://open.larksuite.com",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/larksuite/lark-openapi-mcp"
+    },
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/overview",
+        "quote": "App Authentication using App ID and App Secret, with OAuth 2.0 redirect URL for user-based API calls"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM",
+        "quote": "Authorization: Bearer ${access_token} - User Access Token and Tenant Access Token issued from app_id and app_secret"
+      },
+      {
+        "field": "access",
+        "url": "https://open.larksuite.com/document/ukTMukTMukTM/uQjN3QjL0YzN04CN2cDN",
+        "quote": "Apply for API permission - for security reasons, you need to apply for corresponding permissions and only after enterprise administrator approves"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/larksuite/lark-openapi-mcp",
+        "quote": "larksuite/lark-openapi-mcp: 飞书/Lark官方 OpenAPI MCP"
+      }
+    ],
+    "confidence": 0.65,
+    "notes": "Lark provides REST API with OAuth2 and bearer token auth. API requires enterprise admin approval for permissions, blocking casual developer access. Official MCP server available. Exact endpoint count unknown from search results. Confidence limited by incomplete access tier documentation in search results."
+  },
+  "cost_usd": 0.1007748,
+  "turns": 6,
+  "seconds": 35.5,
+  "is_error": false,
+  "error": null
+}

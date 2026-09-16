@@ -1,0 +1,107 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "PYLON_MCP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/pylon_mcp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Pylon MCP",
+    "tools": 12,
+    "triggers": 0,
+    "auth_raw": [
+      "DCR_OAUTH"
+    ],
+    "auth": [
+      "other"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": true
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "pylon",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pylon",
+    "hits": [
+      {
+        "name": "io.github.JustinBeckwith/pylon-mcp",
+        "description": "MCP server for Pylon customer support platform",
+        "repo": "https://github.com/JustinBeckwith/pylon-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.JustinBeckwith/pylon-mcp",
+        "description": "MCP server for Pylon customer support platform",
+        "repo": "https://github.com/JustinBeckwith/pylon-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.JustinBeckwith/pylon-mcp",
+        "description": "MCP server for Pylon customer support platform",
+        "repo": "https://github.com/JustinBeckwith/pylon-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Pylon",
+    "url": "https://github.com/search?q=Pylon+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "JustinBeckwith/pylon-mcp",
+        "stars": 5,
+        "url": "https://github.com/JustinBeckwith/pylon-mcp",
+        "desc": "MCP server for Pylon customer support platform"
+      },
+      {
+        "full_name": "toalba/Pylon",
+        "stars": 3,
+        "url": "https://github.com/toalba/Pylon",
+        "desc": "VS Code MCP server â€” exposes terminals, diagnostics, debugging & editor actions to AI coding agents over a single HTTP"
+      },
+      {
+        "full_name": "pylonapi/pylon-mcp",
+        "stars": 1,
+        "url": "https://github.com/pylonapi/pylon-mcp",
+        "desc": "MCP server for Pylon AI â€” 10 pay-per-request APIs as AI agent tools. Powered by x402 on Base."
+      },
+      {
+        "full_name": "lwsinclair/pylon-mcp",
+        "stars": 0,
+        "url": "https://github.com/lwsinclair/pylon-mcp",
+        "desc": "MCP server for the Pylon API"
+      },
+      {
+        "full_name": "gasconc/pylon-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/gasconc/pylon-mcp-server",
+        "desc": "MCP Server for Pylon API - Accounts, Issues, Messages, Custom Fields, Tasks, Projects & Milestones"
+      },
+      {
+        "full_name": "inheinsight/pylon-kb-mcp",
+        "stars": 0,
+        "url": "https://github.com/inheinsight/pylon-kb-mcp",
+        "desc": "MCP server for Pylon's Knowledge Base API"
+      },
+      {
+        "full_name": "bgrgndzz/pylon-replies-mcp",
+        "stars": 0,
+        "url": "https://github.com/bgrgndzz/pylon-replies-mcp",
+        "desc": "MCP server for sending customer-facing replies on Pylon issues"
+      },
+      {
+        "full_name": "Carter-S/pylon-mcp",
+        "stars": 0,
+        "url": "https://github.com/Carter-S/pylon-mcp",
+        "desc": "MCP server exposing the full Pylon API (114 endpoints) â€” auto-generated from Pylon's OpenAPI spec. Covers knowledge ba"
+      }
+    ]
+  }
+}

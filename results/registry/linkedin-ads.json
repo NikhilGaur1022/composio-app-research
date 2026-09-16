@@ -1,0 +1,48 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "LINKEDIN_ADS",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/linkedin_ads",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Linkedin Ads",
+    "tools": 28,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "learnifier.com",
+    "version": "1.1.0",
+    "spec_url": "https://api.apis.guru/v2/specs/learnifier.com/1.1.0/swagger.json",
+    "title": "Learnifier",
+    "url": "https://apis.guru/?q=learnifier.com",
+    "endpoints": 34,
+    "auth": [],
+    "breadth": "small"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "linkedin ads",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=linkedin ads",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "LinkedIn Ads",
+    "url": "https://github.com/search?q=LinkedIn+Ads+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID A978:21F80A:77B8408:8416766:6AAAF902 and timestamp 2026-09-16 20:16:02 UTC",
+    "items": []
+  }
+}

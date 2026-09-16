@@ -1,0 +1,152 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "LINEAR",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/linear",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Linear",
+    "tools": 47,
+    "triggers": 12,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "linear",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=linear",
+    "hits": [
+      {
+        "name": "app.linear/linear",
+        "description": "MCP server for Linear project management and issue tracking",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.linear/linear",
+        "description": "MCP server for Linear project management and issue tracking",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.Evozim/linear-broker",
+        "description": "Integrates agents with Linear software development workflows.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.adelaidasofia/linear-mcp",
+        "description": "Multi-workspace Linear MCP — PAT auth, 57 tools + 3 prompts, substrate enforcement, drop-in.",
+        "repo": "https://github.com/adelaidasofia/linear-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/linear",
+        "description": "Linear MCP — wraps the Linear GraphQL API (OAuth)",
+        "repo": "https://github.com/pipeworx-io/mcp-linear",
+        "status": "active"
+      },
+      {
+        "name": "io.github.sadri-dridi/linear-id-ok",
+        "description": "LIN-123 identifier shape, value discarded",
+        "repo": "https://github.com/sadri-dridi/named-mcp-utilities",
+        "status": "active"
+      },
+      {
+        "name": "io.github.sadri-dridi/linear-id-shape",
+        "description": "Check a Linear issue id shape. Id discarded.",
+        "repo": "https://github.com/sadri-dridi/named-mcp-utilities",
+        "status": "active"
+      },
+      {
+        "name": "io.github.toolwright-adk/linear-bootstrap",
+        "description": "Bootstrap Linear projects from natural language — milestones, epics, issues, and dependencies.",
+        "repo": "https://github.com/toolwright-adk/toolwright-monorepo",
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "app.linear/linear",
+        "description": "MCP server for Linear project management and issue tracking",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.linear/linear",
+        "description": "MCP server for Linear project management and issue tracking",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Linear",
+    "url": "https://github.com/search?q=Linear+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "jerhadf/linear-mcp-server",
+        "stars": 349,
+        "url": "https://github.com/jerhadf/linear-mcp-server",
+        "desc": "A server that integrates Linear's project management system with the Model Context Protocol (MCP) to allow LLMs to inter"
+      },
+      {
+        "full_name": "marvkr/better-design",
+        "stars": 235,
+        "url": "https://github.com/marvkr/better-design",
+        "desc": "ðŸŽ¨ Open-source design MCP server + shadcn/ui registry â€” AI design systems for Claude Code, Cursor, Codex, GitHub Cop"
+      },
+      {
+        "full_name": "tacticlaunch/mcp-linear",
+        "stars": 147,
+        "url": "https://github.com/tacticlaunch/mcp-linear",
+        "desc": "MCP server that enables AI assistants to interact with Linear project management system through natural language, allowi"
+      },
+      {
+        "full_name": "cline/linear-mcp",
+        "stars": 134,
+        "url": "https://github.com/cline/linear-mcp",
+        "desc": "a private MCP server for accessing Linear"
+      },
+      {
+        "full_name": "prime-radiant-inc/streamlinear",
+        "stars": 89,
+        "url": "https://github.com/prime-radiant-inc/streamlinear",
+        "desc": "A lightweight Linear MCP server for Claude Code that exposes one tool with action dispatch (search, get, update, comment"
+      },
+      {
+        "full_name": "iceener/linear-streamable-mcp-server",
+        "stars": 71,
+        "url": "https://github.com/iceener/linear-streamable-mcp-server",
+        "desc": "MCP Server for interacting with Linear API. Written in TypeScript, Node and Hono.dev"
+      },
+      {
+        "full_name": "timescale/tiger-linear-mcp-server",
+        "stars": 33,
+        "url": "https://github.com/timescale/tiger-linear-mcp-server",
+        "desc": "A wrapper around the Linear API for internal LLMs"
+      },
+      {
+        "full_name": "cosmix/linear-mcp",
+        "stars": 30,
+        "url": "https://github.com/cosmix/linear-mcp",
+        "desc": "A Model Context Protocol server for Linear."
+      }
+    ]
+  }
+}

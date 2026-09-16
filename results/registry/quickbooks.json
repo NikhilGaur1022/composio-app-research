@@ -1,0 +1,89 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "QUICKBOOKS",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/quickbooks",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "QuickBooks",
+    "tools": 114,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "quickbooks",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=quickbooks",
+    "hits": [
+      {
+        "name": "com.caribooks/quickbooks",
+        "description": "QuickBooks Online in Claude and ChatGPT: 161 tools, full ledger, multi-company, Canada + US, FR/EN.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.caribooks/quickbooks",
+        "description": "QuickBooks Online in Claude and ChatGPT: 209 tools, full ledger, multi-company, Canada + US, FR/EN.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.caribooks/quickbooks",
+        "description": "QuickBooks Online in Claude and ChatGPT: 211 tools, full ledger, multi-company, Canada + US, FR/EN.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.caribooks/quickbooks",
+        "description": "QuickBooks Online in Claude and ChatGPT: 221 tools, full ledger, multi-company, Canada + US, FR/EN.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.NyxToolsDev/quickbooks-mcp-server",
+        "description": "Connect Claude to QuickBooks Online — query finances, create invoices, run reports",
+        "repo": "https://github.com/NyxToolsDev/quickbooks-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/quickbooks-mcp",
+        "description": "Every QuickBooks Online Accounting entity, plus an offline SQLite mirror and AR/AP aging.",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/quickbooks-mcp",
+        "description": "Every QuickBooks Online Accounting entity, plus an offline SQLite mirror and AR/AP aging.",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/quickbooks-mcp",
+        "description": "Every QuickBooks Online Accounting entity, plus an offline SQLite mirror and AR/AP aging.",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "QuickBooks",
+    "url": "https://github.com/search?q=QuickBooks+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID BA1A:3637A4:260794:2A9B89:6AAAF949 and timestamp 2026-09-16 20:17:14 UTC. ",
+    "items": []
+  }
+}

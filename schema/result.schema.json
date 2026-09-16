@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AppResearchResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "one_liner", "auth_methods", "access", "api_type", "api_breadth",
+    "docs_url", "mcp", "verdict", "blocker", "evidence", "confidence", "notes"
+  ],
+  "properties": {
+    "one_liner": { "type": "string", "description": "What the app does, one sentence." },
+    "auth_methods": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "string", "enum": ["oauth2", "api_key", "basic", "bearer_token", "jwt", "other", "none"] },
+      "description": "All auth methods the public API supports. 'none' only if there is no public API."
+    },
+    "access": {
+      "type": "string",
+      "enum": ["self_serve_free", "self_serve_trial", "paid_plan", "admin_approval", "partner_gated", "no_public_api"],
+      "description": "How a developer gets credentials. self_serve_free = free tier/dev account; self_serve_trial = free trial then paid; paid_plan = API only on a paid tier; admin_approval = needs workspace admin or app review; partner_gated = contact sales / partnership required; no_public_api = no documented public API."
+    },
+    "api_type": { "type": "string", "enum": ["rest", "graphql", "rest_and_graphql", "sdk_only", "cli_only", "mcp_only", "none"] },
+    "api_breadth": { "type": "string", "enum": ["small", "medium", "large", "unknown"], "description": "small <50 endpoints, medium 50-300, large >300" },
+    "docs_url": { "type": "string" },
+    "mcp": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "type": "string", "enum": ["official", "community", "none", "unknown"] },
+        "url": { "type": "string" }
+      }
+    },
+    "verdict": { "type": "string", "enum": ["green", "yellow", "red"], "description": "green = buildable as agent toolkit today; yellow = buildable with caveats; red = blocked" },
+    "blocker": {
+      "type": "string",
+      "enum": ["none", "partner_gate", "no_public_api", "app_review", "paid_only", "cli_not_api", "undocumented", "enterprise_only", "deprecated", "other"]
+    },
+    "evidence": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["field", "url", "quote"],
+        "properties": {
+          "field": { "type": "string", "enum": ["auth_methods", "access", "api_type", "api_breadth", "mcp", "verdict", "one_liner"] },
+          "url": { "type": "string" },
+          "quote": { "type": "string", "description": "Verbatim short quote (<=200 chars) from the page that supports the claim." }
+        }
+      }
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "notes": { "type": "string" }
+  }
+}

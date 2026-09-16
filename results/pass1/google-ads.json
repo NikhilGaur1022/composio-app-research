@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Google Ads API enables programmatic access to manage Google Ads accounts, campaigns, and advertising operations",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "docs_url": "https://developers.google.com/google-ads/api",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+        "quote": "Use OAuth 2.0 to Access Google Ads API"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+        "quote": "Each developer token has an access level (Test, Basic, or Standard) which determines the number of API calls"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+        "quote": "A developer token is a 22-character alphanumeric string obtained from the API Center page"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.google.com/google-ads/api/rest/overview",
+        "quote": "The Google Ads API can be called either using gRPC or REST"
+      }
+    ],
+    "confidence": 0.68,
+    "notes": "Google Ads API requires OAuth2 authentication and a developer token. Free testing access available via Test Account Access, but production use (Basic/Standard access) requires application approval. API available via REST and gRPC with client libraries in multiple languages. No MCP server identified. Approval requirement classifies as yellow."
+  },
+  "cost_usd": 0.11389179999999999,
+  "turns": 7,
+  "seconds": 32.0,
+  "is_error": false,
+  "error": null
+}

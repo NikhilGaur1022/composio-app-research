@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://docs.sentry.io/api",
+    "status": 200,
+    "final_url": "https://docs.sentry.io/api/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://sentry.io/api/0/projects/",
+    "status": 401,
+    "www_authenticate": "Bearer realm=\"api\"",
+    "body_snippet": "{\"detail\":\"Authentication credentials were not provided.\"}",
+    "inferred_scheme": "bearer_token",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://sentry.io/.well-known/oauth-authorization-server"
+  }
+}

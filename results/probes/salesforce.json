@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://salesforce.com",
+    "status": 200,
+    "final_url": "https://www.salesforce.com/in/?ir=1&bc=HL",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://login.salesforce.com/services/oauth2/token",
+    "status": 400,
+    "www_authenticate": null,
+    "body_snippet": "{\"error\":\"unsupported_grant_type\",\"error_description\":\"grant type not supported\"}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://login.salesforce.com/.well-known/openid-configuration"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "aircall",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=aircall",
+    "hits": [
+      {
+        "name": "io.usefulapi/aircall",
+        "description": "Read calls, contacts, users, teams and numbers; tag calls and create or update contacts.",
+        "repo": "https://github.com/m190/usefulapi-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Aircall",
+    "url": "https://github.com/search?q=Aircall+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "themobilefirstco/aircall-mcp-server",
+        "stars": 2,
+        "url": "https://github.com/themobilefirstco/aircall-mcp-server",
+        "desc": "Unofficial MCP server for Aircall by Allo - 73 tools for calls, contacts, SMS, users, teams & AI insights. Built by The "
+      },
+      {
+        "full_name": "RosenAdvertising/aircall-mcp",
+        "stars": 0,
+        "url": "https://github.com/RosenAdvertising/aircall-mcp",
+        "desc": "MCP server for Aircall"
+      },
+      {
+        "full_name": "CassiaResearch/aircall-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/CassiaResearch/aircall-mcp-server",
+        "desc": "Unofficial MCP server for Aircall by Allo - 73 tools for calls, contacts, SMS, users, teams & AI insights. Built by The "
+      },
+      {
+        "full_name": "vitormiguel99/aircall-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/vitormiguel99/aircall-mcp-server",
+        "desc": "MCP server providing read access to Aircall calls, transcripts, and AI summaries"
+      },
+      {
+        "full_name": "MaximeDeconinck/aircall-mcp",
+        "stars": 0,
+        "url": "https://github.com/MaximeDeconinck/aircall-mcp",
+        "desc": "Unofficial Aircall MCP server ready to deploy on Vercel"
+      },
+      {
+        "full_name": "growth-box/aircall-mcp",
+        "stars": 0,
+        "url": "https://github.com/growth-box/aircall-mcp",
+        "desc": "Local, read-only MCP server for the official Aircall REST API"
+      }
+    ]
+  }
+}

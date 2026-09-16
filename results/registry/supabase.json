@@ -1,0 +1,158 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "SUPABASE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/supabase",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Supabase",
+    "tools": 129,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "supabase",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=supabase",
+    "hits": [
+      {
+        "name": "ai.smithery/MisterSandFR-supabase-mcp-selfhosted",
+        "description": "Query and manage your Supabase database directly from your workspace. Execute SQL statements, brow…",
+        "repo": "https://github.com/MisterSandFR/Supabase-MCP-SelfHosted",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/MisterSandFR-supabase-mcp-selfhosted",
+        "description": "Manage Supabase projects end to end across database, auth, storage, realtime, and migrations. Moni…",
+        "repo": "https://github.com/MisterSandFR/Supabase-MCP-SelfHosted",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/pinion05-supabase-mcp-lite",
+        "description": "Same functionality, consuming only 1/20 of the context window tokens.",
+        "repo": "https://github.com/pinion05/supabase-mcp-lite",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/pinion05-supabase-mcp-lite",
+        "description": "Same functionality, consuming only 1/20 of the context window tokens.",
+        "repo": "https://github.com/pinion05/supabase-mcp-lite",
+        "status": "active"
+      },
+      {
+        "name": "ai.waystation/supabase",
+        "description": "Connect to your Supabase database to query data and schemas.",
+        "repo": "https://github.com/waystation-ai/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.supabase/mcp",
+        "description": "MCP server for interacting with the Supabase platform",
+        "repo": "https://github.com/supabase/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.supabase/mcp",
+        "description": "MCP server for interacting with the Supabase platform",
+        "repo": "https://github.com/supabase/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.supabase/mcp",
+        "description": "MCP server for interacting with the Supabase platform",
+        "repo": "https://github.com/supabase/mcp",
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "com.supabase/mcp",
+        "description": "MCP server for interacting with the Supabase platform",
+        "repo": "https://github.com/supabase/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.supabase/mcp",
+        "description": "MCP server for interacting with the Supabase platform",
+        "repo": "https://github.com/supabase/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.supabase/mcp",
+        "description": "MCP server for interacting with the Supabase platform",
+        "repo": "https://github.com/supabase/mcp",
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Supabase",
+    "url": "https://github.com/search?q=Supabase+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "alexander-zuev/supabase-mcp-server",
+        "stars": 832,
+        "url": "https://github.com/alexander-zuev/supabase-mcp-server",
+        "desc": "Query MCP enables end-to-end management of Supabase via chat interface: read & write query executions, management API su"
+      },
+      {
+        "full_name": "marvkr/better-design",
+        "stars": 235,
+        "url": "https://github.com/marvkr/better-design",
+        "desc": "ðŸŽ¨ Open-source design MCP server + shadcn/ui registry â€” AI design systems for Claude Code, Cursor, Codex, GitHub Cop"
+      },
+      {
+        "full_name": "coleam00/supabase-mcp",
+        "stars": 194,
+        "url": "https://github.com/coleam00/supabase-mcp",
+        "desc": "Supabase MCP server created in Python."
+      },
+      {
+        "full_name": "HenkDz/selfhosted-supabase-mcp",
+        "stars": 138,
+        "url": "https://github.com/HenkDz/selfhosted-supabase-mcp",
+        "desc": "An MCP Server for your Self Hosted Supabase"
+      },
+      {
+        "full_name": "zhensherlock/sp500-mcp-server",
+        "stars": 106,
+        "url": "https://github.com/zhensherlock/sp500-mcp-server",
+        "desc": "An MCP server and Next.js web app for querying S&P 500 company data from Supabase, with tools for company info, news, of"
+      },
+      {
+        "full_name": "JoshuaRileyDev/supabase-mcp-server",
+        "stars": 52,
+        "url": "https://github.com/JoshuaRileyDev/supabase-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "ToKiDoO/crawl4ai-rag-mcp",
+        "stars": 46,
+        "url": "https://github.com/ToKiDoO/crawl4ai-rag-mcp",
+        "desc": "A self-contained MCP server in docker that combines the Crawl4AI, SearXNG, and Supabase to provide AI agents and coding "
+      },
+      {
+        "full_name": "hiromima/lovable-mcp-server",
+        "stars": 39,
+        "url": "https://github.com/hiromima/lovable-mcp-server",
+        "desc": "Unofficial MCP server for analyzing Lovable-generated projects with Claude Desktop. Community-built tool for enhanced de"
+      }
+    ]
+  }
+}

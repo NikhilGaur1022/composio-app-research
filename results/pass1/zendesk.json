@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Cloud-based customer support and helpdesk platform for managing customer interactions across multiple channels",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "basic"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://developer.zendesk.com/api-reference/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+        "quote": "You can authenticate API requests using basic authentication with your email address and password, your email address and an API token, or an OAuth access token"
+      },
+      {
+        "field": "access",
+        "url": "https://www.eesel.ai/blog/zendesk-api",
+        "quote": "Every Zendesk plan includes API access with no additional fees"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.zendesk.com/api-reference/",
+        "quote": "REST API covers functionality across Zendesk's product suite. The Conversations API is the first GraphQL API released by Zendesk"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developer.zendesk.com/api-reference/",
+        "quote": "APIs for ticketing, help center, live chat, voice, sales CRM as well as some features that span capabilities, such as omnichannel routing and custom data"
+      }
+    ],
+    "notes": "OAuth 2.0 is recommended for production use. API tokens are being deprecated and will stop working by April 30, 2027. Basic authentication is disabled on accounts with SSO. Free tier includes full API access with rate limits (~200 req/min); higher tiers get increased rate limits."
+  },
+  "cost_usd": 0.1097618,
+  "turns": 6,
+  "seconds": 57.0,
+  "is_error": false,
+  "error": null
+}

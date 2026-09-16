@@ -1,0 +1,88 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "BRIGHTDATA",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/brightdata",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Bright Data",
+    "tools": 10,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "bright data",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=bright data",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Bright Data",
+    "url": "https://github.com/search?q=Bright+Data+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "arjunprabhulal/adk-mcp-brightdata",
+        "stars": 7,
+        "url": "https://github.com/arjunprabhulal/adk-mcp-brightdata",
+        "desc": "A comprehensive implementation of Google's Agent Development Kit (ADK) v1.2.0+ integrated with Bright Data's Model Conte"
+      },
+      {
+        "full_name": "awsdataarchitect/financial-signals-dashboard",
+        "stars": 7,
+        "url": "https://github.com/awsdataarchitect/financial-signals-dashboard",
+        "desc": "AI-Powered Stock Analysis with Bright Data MCP Server & Strands Agents SDK"
+      },
+      {
+        "full_name": "luminati-io/web-scraping-with-mcp",
+        "stars": 5,
+        "url": "https://github.com/luminati-io/web-scraping-with-mcp",
+        "desc": "Example MCP server and instructions for connecting Anthropic LLMs to external web scraping tools, with real-world exampl"
+      },
+      {
+        "full_name": "RamakrishnaTanam/Job-finder-Agent--MCP-Server",
+        "stars": 1,
+        "url": "https://github.com/RamakrishnaTanam/Job-finder-Agent--MCP-Server",
+        "desc": "A powerful AI-powered job search agent that analyzes LinkedIn profiles and finds relevant job opportunities using Bright"
+      },
+      {
+        "full_name": "Oseni03/BrightData-Ecommerce-MCP-Server",
+        "stars": 0,
+        "url": "https://github.com/Oseni03/BrightData-Ecommerce-MCP-Server",
+        "desc": ""
+      },
+      {
+        "full_name": "Anujmishra2005/Bright-Data-MCP-Server",
+        "stars": 0,
+        "url": "https://github.com/Anujmishra2005/Bright-Data-MCP-Server",
+        "desc": ""
+      },
+      {
+        "full_name": "rees-bayba/brightdata-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/rees-bayba/brightdata-mcp-server",
+        "desc": "Brightdata MCP Server for Railway - Web scraping and data extraction via Model Context Protocol"
+      },
+      {
+        "full_name": "rakesh1308/brightdata-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/rakesh1308/brightdata-mcp-server",
+        "desc": "Self-hosted Python MCP server for Bright Data SERP, Web Unlocker, Web Scraper datasets, and Discover APIs, with async wo"
+      }
+    ]
+  }
+}

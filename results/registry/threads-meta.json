@@ -1,0 +1,78 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "threads",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=threads",
+    "hits": [
+      {
+        "name": "io.github.Digital-Threads/token-pilot",
+        "description": "Save up to 80% tokens when AI reads code via AST-aware structural reading",
+        "repo": "https://github.com/Digital-Threads/token-pilot",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Digital-Threads/token-pilot",
+        "description": "Save up to 80% tokens when AI reads code via AST-aware structural reading",
+        "repo": "https://github.com/Digital-Threads/token-pilot",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Digital-Threads/token-pilot",
+        "description": "Save up to 80% tokens when AI reads code via AST-aware structural reading",
+        "repo": "https://github.com/Digital-Threads/token-pilot",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Digital-Threads/token-pilot",
+        "description": "Save up to 80% tokens when AI reads code via AST-aware structural reading",
+        "repo": "https://github.com/Digital-Threads/token-pilot",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Digital-Threads/token-pilot",
+        "description": "Save up to 80% tokens when AI reads code via AST-aware structural reading",
+        "repo": "https://github.com/Digital-Threads/token-pilot",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Digital-Threads/token-pilot",
+        "description": "Save up to 80% tokens when AI reads code via AST-aware structural reading",
+        "repo": "https://github.com/Digital-Threads/token-pilot",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Digital-Threads/token-pilot",
+        "description": "Save up to 80% tokens when AI reads code via AST-aware structural reading",
+        "repo": "https://github.com/Digital-Threads/token-pilot",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Digital-Threads/token-pilot",
+        "description": "Save up to 80% tokens when AI reads code via AST-aware structural reading",
+        "repo": "https://github.com/Digital-Threads/token-pilot",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Threads",
+    "url": "https://github.com/search?q=Threads+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 933F:27A20E:2475B3:29046C:6AAAF90B and timestamp 2026-09-16 20:16:11 UTC. ",
+    "items": []
+  }
+}

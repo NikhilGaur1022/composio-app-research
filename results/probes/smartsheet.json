@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://smartsheet.com/developers",
+    "status": 200,
+    "final_url": "https://developers.smartsheet.com/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.smartsheet.com/2.0/sheets",
+    "status": 403,
+    "www_authenticate": null,
+    "body_snippet": "{   \"errorCode\" : 1004,   \"message\" : \"You are not authorized to perform this action.\",   \"refId\" : \"inzaz2\" }",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

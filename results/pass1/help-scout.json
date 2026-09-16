@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Help Scout is a customer support platform providing REST APIs for managing conversations, customers, mailboxes, users, workflows, reports, and knowledge bases.",
+    "auth_methods": [
+      "oauth2",
+      "basic"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developer.helpscout.com/",
+    "mcp": {
+      "status": "none",
+      "url": ""
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.78,
+    "notes": "Help Scout offers two separate REST APIs (Mailbox/Inbox and Docs) with distinct authentication methods. Free plans explicitly exclude API access; paid accounts can self-serve credentials via 'Your Profile → My Apps' for Mailbox API or 'Authentication > API Keys' for Docs API. OAuth 2.0 tokens expire in 48 hours with no refresh mechanism. No GraphQL or official MCP server available.",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+        "quote": "The API authenticates by exchanging an app's client ID and secret for a two-day Bearer access token. The REST API (v2) is authenticated via OAuth 2.0 client credentials or authorization code flow."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.helpscout.com/docs-api/",
+        "quote": "Authentication is based on API keys, with the API key passed via HTTP Basic Authentication in the username field."
+      },
+      {
+        "field": "access",
+        "url": "https://developer.helpscout.com/",
+        "quote": "Note that the Free plan does not include access to the API or integrations."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.helpscout.com/",
+        "quote": "Help Scout has two public REST APIs: Inbox (Mailbox 2.0) for the helpdesk and a Docs API for knowledge bases."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developer.helpscout.com/",
+        "quote": "The APIs cover conversations, customers, mailboxes, users, workflows, reports, ratings, and knowledge-base content."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developer.helpscout.com/",
+        "quote": "The Free plan does not include access to the API or integrations."
+      }
+    ]
+  },
+  "cost_usd": 0.12288479999999997,
+  "turns": 7,
+  "seconds": 51.7,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,134 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "github.com",
+    "version": "1.1.4",
+    "spec_url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+    "title": "GitHub v3 REST API",
+    "url": "https://apis.guru/?q=github.com",
+    "endpoints": 845,
+    "auth": [],
+    "breadth": "large"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "sherlock",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=sherlock",
+    "hits": [
+      {
+        "name": "io.github.FGC-Shreyansh-Chachaundiya/codesherlock-mcp-server",
+        "description": "AI-powered static and contextual code analysis MCP server",
+        "repo": "https://github.com/FGC-Shreyansh-Chachaundiya/CodeSherlock-MCP-Server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.FGC-Shreyansh-Chachaundiya/codesherlock-mcp-server",
+        "description": "AI-powered static and contextual code analysis MCP server",
+        "repo": "https://github.com/FGC-Shreyansh-Chachaundiya/CodeSherlock-MCP-Server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.jcucci/dotnet-sherlock-mcp",
+        "description": ".NET assembly introspection MCP server with advanced reflection and type analysis capabilities",
+        "repo": "https://github.com/jcucci/dotnet-sherlock-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.jcucci/dotnet-sherlock-mcp",
+        "description": ".NET assembly introspection MCP server with advanced reflection and type analysis capabilities",
+        "repo": "https://github.com/jcucci/dotnet-sherlock-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.jcucci/dotnet-sherlock-mcp",
+        "description": ".NET assembly introspection MCP server with advanced reflection and type analysis capabilities",
+        "repo": "https://github.com/jcucci/dotnet-sherlock-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.jcucci/dotnet-sherlock-mcp",
+        "description": ".NET assembly introspection MCP server with advanced reflection and type analysis capabilities",
+        "repo": "https://github.com/jcucci/dotnet-sherlock-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.jcucci/dotnet-sherlock-mcp",
+        "description": ".NET assembly introspection MCP server with advanced reflection and type analysis capabilities",
+        "repo": "https://github.com/jcucci/dotnet-sherlock-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.jcucci/dotnet-sherlock-mcp",
+        "description": ".NET assembly introspection MCP server with advanced reflection and type analysis capabilities",
+        "repo": "https://github.com/jcucci/dotnet-sherlock-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Sherlock",
+    "url": "https://github.com/search?q=Sherlock+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "holistis/bug-bounty-intelligence-mcp",
+        "stars": 10,
+        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
+        "desc": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, ben"
+      },
+      {
+        "full_name": "jcucci/dotnet-sherlock-mcp",
+        "stars": 8,
+        "url": "https://github.com/jcucci/dotnet-sherlock-mcp",
+        "desc": "MCP server that uses reflection to provide LLM's with knowledger about dotnet classes, their members and their signature"
+      },
+      {
+        "full_name": "Burnsedia/sherlock-mcp",
+        "stars": 7,
+        "url": "https://github.com/Burnsedia/sherlock-mcp",
+        "desc": "Sherlock MCP Server: Find truth and counter propaganda through ethical OSINT. FastMCP integration for social media usern"
+      },
+      {
+        "full_name": "Hackerobi/pentest-osint-mcp-server",
+        "stars": 3,
+        "url": "https://github.com/Hackerobi/pentest-osint-mcp-server",
+        "desc": "A comprehensive MCP server integrating 25+ OSINT tools for penetration testing. Connects Claude Desktop to Sherlock, Mai"
+      },
+      {
+        "full_name": "holistis/3ilm-mcp",
+        "stars": 3,
+        "url": "https://github.com/holistis/3ilm-mcp",
+        "desc": "MCP server: 1,032 verified smart contract vulnerability findings from 10 Sherlock audit contests"
+      },
+      {
+        "full_name": "NTU-Sherlock/wp-publisher-mcp",
+        "stars": 3,
+        "url": "https://github.com/NTU-Sherlock/wp-publisher-mcp",
+        "desc": "WordPress MCP Server â€” Publish Markdown to WordPress with Gutenberg block support"
+      },
+      {
+        "full_name": "H4RR1SON/sherlock-mcp",
+        "stars": 2,
+        "url": "https://github.com/H4RR1SON/sherlock-mcp",
+        "desc": "Official MCP server for Covertlabs infostealer intelligence platform"
+      },
+      {
+        "full_name": "Fewsats/sherlock-mcp",
+        "stars": 1,
+        "url": "https://github.com/Fewsats/sherlock-mcp",
+        "desc": "Sherlock Domains MCP Server for buying & managing domains"
+      }
+    ]
+  }
+}

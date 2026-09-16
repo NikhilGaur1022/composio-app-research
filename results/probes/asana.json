@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developers.asana.com",
+    "status": 200,
+    "final_url": "https://developers.asana.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": true,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": true,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://app.asana.com/api/1.0/users/me",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"errors\":[{\"message\":\"Not Authorized\",\"help\":\"For more information on API status codes and how to handle them, read the docs on errors: https://developers.asana.com/docs/errors\"}]}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://app.asana.com/.well-known/oauth-authorization-server"
+  }
+}

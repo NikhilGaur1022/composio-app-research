@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "LiveAgent is a cloud-based customer support and helpdesk software with live chat, ticketing, and multichannel communication capabilities.",
+    "auth_methods": [
+      "api_key",
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_trial",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://support.liveagent.com/802463-REST-API",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://support.liveagent.com/741982-API-key",
+        "quote": "An API key is an identity of your LiveAgent which you can use to build your own custom integration solutions."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://support.liveagent.com/802463-REST-API",
+        "quote": "For OAuth2 authentication, the documentation mentions configuring an access token for authorization."
+      },
+      {
+        "field": "api_type",
+        "url": "https://support.liveagent.com/802463-REST-API",
+        "quote": "REST API documentation available for integration solutions."
+      },
+      {
+        "field": "access",
+        "url": "https://www.liveagent.com/pricing/",
+        "quote": "LiveAgent offers a 30-day free trial with no credit card required. API and integrations are included in each subscription."
+      },
+      {
+        "field": "access",
+        "url": "https://www.liveagent.com/pricing/",
+        "quote": "Pricing plans start at $15/agent/month with no free tier available."
+      }
+    ],
+    "confidence": 0.75,
+    "notes": "LiveAgent provides REST API access via API key authentication. OAuth2 and bearer token support are mentioned in documentation. API is available to all paid subscribers (starting at $15/agent/month) and during the 30-day free trial. No permanent free tier or self-serve sandbox available. API breadth unknown from available documentation."
+  },
+  "cost_usd": 0.1096304,
+  "turns": 8,
+  "seconds": 47.8,
+  "is_error": false,
+  "error": null
+}

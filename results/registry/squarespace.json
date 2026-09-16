@@ -1,0 +1,29 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "squarespace",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=squarespace",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Squarespace",
+    "url": "https://github.com/search?q=Squarespace+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 9B60:21A114:25255E:29B6CC:6AAAF914 and timestamp 2026-09-16 20:16:20 UTC. ",
+    "items": []
+  }
+}

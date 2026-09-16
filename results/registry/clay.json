@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "CLAY_MCP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/clay_mcp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Clay MCP",
+    "tools": 17,
+    "triggers": 0,
+    "auth_raw": [
+      "DCR_OAUTH"
+    ],
+    "auth": [
+      "other"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": true
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "clay",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=clay",
+    "hits": [
+      {
+        "name": "com.mambabuilt/mcp-clay-to-instantly-smartlead-push",
+        "description": "Push enriched leads into an Instantly or Smartlead campaign, with ICP gating and dedupe.",
+        "repo": "https://github.com/mambalabsdev/mcp-clay-to-instantly-smartlead-push",
+        "status": "active"
+      },
+      {
+        "name": "com.mambabuilt/mcp-clay-to-instantly-smartlead-push",
+        "description": "Push enriched leads into an Instantly or Smartlead campaign, with ICP gating and dedupe.",
+        "repo": "https://github.com/mambalabsdev/mcp-clay-to-instantly-smartlead-push",
+        "status": "active"
+      },
+      {
+        "name": "com.mambabuilt/mcp-clay-to-instantly-smartlead-push",
+        "description": "Push enriched leads into an Instantly or Smartlead campaign, with ICP gating and dedupe.",
+        "repo": "https://github.com/mambalabsdev/mcp-clay-to-instantly-smartlead-push",
+        "status": "active"
+      },
+      {
+        "name": "io.github.clay-swartz/pennyrail",
+        "description": "Find and quote agent capabilities, then pay only the selected x402 execution URL.",
+        "repo": "https://github.com/clay-swartz/pennyrail",
+        "status": "active"
+      },
+      {
+        "name": "io.github.claymore666/ccu-mcp",
+        "description": "MCP server for controlling HomeMatic smart home devices via the CCU JSON-RPC API",
+        "repo": "https://github.com/claymore666/ccu-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.claymore666/ccu-mcp",
+        "description": "MCP server for controlling HomeMatic smart home devices via the CCU JSON-RPC API",
+        "repo": "https://github.com/claymore666/ccu-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.claymore666/ccu-mcp",
+        "description": "MCP server for controlling HomeMatic smart home devices via the CCU JSON-RPC API",
+        "repo": "https://github.com/claymore666/ccu-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.claymore666/ccu-mcp",
+        "description": "MCP server for controlling HomeMatic smart home devices via the CCU JSON-RPC API",
+        "repo": "https://github.com/claymore666/ccu-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Clay",
+    "url": "https://github.com/search?q=Clay+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "bpw-civic/clay-mcp-server",
+        "stars": 4,
+        "url": "https://github.com/bpw-civic/clay-mcp-server",
+        "desc": "MCP server for Clay.com API - people and company enrichment"
+      },
+      {
+        "full_name": "mambalabsdev/mcp-job-board-keyword-signal-scanner",
+        "stars": 2,
+        "url": "https://github.com/mambalabsdev/mcp-job-board-keyword-signal-scanner",
+        "desc": "MCP server for Job Board Keyword Signal Scanner. Scans Greenhouse, Lever, Ashby, Workday, and Rippling for roles in any "
+      },
+      {
+        "full_name": "mambalabsdev/mcp-domain-to-linkedin-url-resolver",
+        "stars": 2,
+        "url": "https://github.com/mambalabsdev/mcp-domain-to-linkedin-url-resolver",
+        "desc": "MCP server for Domain to LinkedIn URL Resolver. Resolves a company domain or name to its LinkedIn company URL with confi"
+      },
+      {
+        "full_name": "mambalabsdev/mcp-icp-fit-scorer",
+        "stars": 2,
+        "url": "https://github.com/mambalabsdev/mcp-icp-fit-scorer",
+        "desc": "MCP server for ICP Fit Scorer. Scores a company against your ideal customer profile with weighted signals via Apify. Ret"
+      },
+      {
+        "full_name": "shanefirek/clay-mcp-public",
+        "stars": 1,
+        "url": "https://github.com/shanefirek/clay-mcp-public",
+        "desc": "73-tool MCP server for Clay. 1,100+ enrichment providers, waterfall sequences, CRM sync."
+      },
+      {
+        "full_name": "jbalbu01/sales-intelligence-mcp-server",
+        "stars": 1,
+        "url": "https://github.com/jbalbu01/sales-intelligence-mcp-server",
+        "desc": "MCP server with 16 tools for Gong, ZoomInfo, Clay, and LinkedIn Sales Navigator â€” gives Claude direct access to sales "
+      },
+      {
+        "full_name": "mambalabsdev/mcp-gtm-suite",
+        "stars": 1,
+        "url": "https://github.com/mambalabsdev/mcp-gtm-suite",
+        "desc": "MCP server for the full Mamba Labs GTM Suite. All six GTM actors as tools in one server via Apify. Clay-ready output."
+      },
+      {
+        "full_name": "mambalabsdev/mcp-gtm-hiring-signal-scraper",
+        "stars": 1,
+        "url": "https://github.com/mambalabsdev/mcp-gtm-hiring-signal-scraper",
+        "desc": "MCP server for GTM Hiring Signal Scraper. Detects GTM hiring activity from company career pages via Apify. Clay-ready ou"
+      }
+    ]
+  }
+}

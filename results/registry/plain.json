@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "PLAIN",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/plain",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Plain",
+    "tools": 23,
+    "triggers": 11,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "plain",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=plain",
+    "hits": [
+      {
+        "name": "ai.smithery/plainyogurt21-clintrials-mcp",
+        "description": "Provide structured access to ClinicalTrials.gov data for searching, retrieving, and analyzing clin…",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/plainyogurt21-sec-edgar-mcp",
+        "description": "Provide AI assistants with real-time access to official SEC EDGAR filings and financial data. Enab…",
+        "repo": "https://github.com/plainyogurt21/sec-edgar-mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.gumballtools/regex-explainer",
+        "description": "Explain a regex in plain English and detect catastrophic backtracking risk.",
+        "repo": "https://github.com/bwalvoord/gumball",
+        "status": "active"
+      },
+      {
+        "name": "com.plainfreight/quotes",
+        "description": "All-in DDP quotes for China to USA shipments, 100 g to 2,000 kg, from a live rate card",
+        "repo": "https://github.com/plainfreight-com/plainfreight-mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.plainrouter/mcp",
+        "description": "Inspect an approved ad account and first-party signal health, then propose policy-gated actions.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.plainrouter/mcp",
+        "description": "Inspect an approved ad account and first-party signal health, then propose policy-gated actions.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.plainrouter/mcp",
+        "description": "Inspect an approved ad account and first-party signal health, then propose policy-gated actions.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "dev.workers.exportitnow.plainport/plainport",
+        "description": "Deterministic web intake and data utilities for autonomous agents.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Plain",
+    "url": "https://github.com/search?q=Plain+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "Mibayy/token-savior",
+        "stars": 1155,
+        "url": "https://github.com/Mibayy/token-savior",
+        "desc": "MCP server that gets Claude to 97.9% (188/192) on a real coding benchmark at -80% active tokens and -83% wall time, vs 7"
+      },
+      {
+        "full_name": "alpacahq/alpaca-mcp-server",
+        "stars": 962,
+        "url": "https://github.com/alpacahq/alpaca-mcp-server",
+        "desc": "Alpacaâ€™s official MCP Server lets you trade stocks, ETFs, crypto, and options, run data analysis, and build strategies"
+      },
+      {
+        "full_name": "Extelligence-ai/bagel",
+        "stars": 397,
+        "url": "https://github.com/Extelligence-ai/bagel",
+        "desc": "Query robotics, drone, and IoT data in plain English through an MCP server, with an intelligent edge data reduction pipe"
+      },
+      {
+        "full_name": "mirno-ehf/ue5-mcp",
+        "stars": 75,
+        "url": "https://github.com/mirno-ehf/ue5-mcp",
+        "desc": "Let AI edit your Unreal Engine Blueprints. MCP server plugin for Claude Code â€” describe what you want in plain English"
+      },
+      {
+        "full_name": "dermatologist/pyomop",
+        "stars": 66,
+        "url": "https://github.com/dermatologist/pyomop",
+        "desc": "Python package for managing OHDSI clinical data models. Includes support for LLM based plain text queries, MCP server an"
+      },
+      {
+        "full_name": "steel-dev/steel-mcp-server",
+        "stars": 55,
+        "url": "https://github.com/steel-dev/steel-mcp-server",
+        "desc": " Cloud Chrome for MCP clients. Read pages that block plain fetches, fill forms, take screenshots, and hand the browser t"
+      },
+      {
+        "full_name": "Chess-analysis-mcp/tintins-chess-analysis",
+        "stars": 44,
+        "url": "https://github.com/Chess-analysis-mcp/tintins-chess-analysis",
+        "desc": "Stockfish + LLM chess coach: an MCP server and web board that explain your mistakes in plain English"
+      },
+      {
+        "full_name": "tokenizin-agency/mcp-npx-fetch",
+        "stars": 42,
+        "url": "https://github.com/tokenizin-agency/mcp-npx-fetch",
+        "desc": "A powerful MCP server for fetching and transforming web content into various formats (HTML, JSON, Markdown, Plain Text) "
+      }
+    ]
+  }
+}

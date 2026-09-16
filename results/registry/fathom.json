@@ -1,0 +1,91 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "FATHOM",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/fathom",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Fathom",
+    "tools": 7,
+    "triggers": 1,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "fathom",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=fathom",
+    "hits": [
+      {
+        "name": "ai.fathom.api/mcp",
+        "description": "Give your AI assistant real meeting context via Fathom so every output grounded in your work",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.Krzysztof318/mailfathom",
+        "description": "Security-first, self-hosted email archive with read-only search and cited answers for AI agents.",
+        "repo": "https://github.com/Krzysztof318/MailFathom",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Krzysztof318/mailfathom",
+        "description": "Security-first, self-hosted email archive with search, cited answers, and sending for AI agents.",
+        "repo": "https://github.com/Krzysztof318/MailFathom",
+        "status": "active"
+      },
+      {
+        "name": "io.github.agencyenterprise/fathom-mcp-server",
+        "description": "Connect Claude to Fathom meeting recordings, transcripts, and summaries",
+        "repo": "https://github.com/agencyenterprise/fathom-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.mindstone/mcp-server-fathom",
+        "description": "Fathom AI meeting transcription MCP server for Model Context Protocol hosts",
+        "repo": "https://github.com/mindstone/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "io.github.mindstone/mcp-server-fathom",
+        "description": "Fathom AI meeting transcription MCP server for Model Context Protocol hosts",
+        "repo": "https://github.com/mindstone/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "io.github.sadri-dridi/fathom-m",
+        "description": "Fathoms to meters, number discarded",
+        "repo": "https://github.com/sadri-dridi/named-mcp-utilities",
+        "status": "active"
+      },
+      {
+        "name": "io.github.sadri-dridi/fathom-to-m",
+        "description": "Fathoms to meters",
+        "repo": "https://github.com/sadri-dridi/named-mcp-utilities",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Fathom",
+    "url": "https://github.com/search?q=Fathom+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 9933:1F9C76:257DE0:2A14F7:6AAAF953 and timestamp 2026-09-16 20:17:23 UTC. ",
+    "items": []
+  }
+}

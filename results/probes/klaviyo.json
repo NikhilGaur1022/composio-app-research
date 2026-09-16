@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developers.klaviyo.com",
+    "status": 0,
+    "final_url": "https://developers.klaviyo.com",
+    "error": "ReadError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://a.klaviyo.com/api/profiles/",
+    "status": 401,
+    "www_authenticate": "Bearer, Klaviyo-API-Key",
+    "body_snippet": "{\"errors\":[{\"id\":\"6cd174a4-de51-4668-94d8-137cba7dcce0\",\"status\":401,\"code\":\"not_authenticated\",\"title\":\"Authentication credentials were not provided.\",\"detail\":\"Authentication credentials were not pr",
+    "inferred_scheme": "bearer_token",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://a.klaviyo.com/.well-known/openid-configuration"
+  }
+}

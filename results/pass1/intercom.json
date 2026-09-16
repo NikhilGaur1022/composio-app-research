@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Customer communication and support platform with contact management, messaging, and help desk features.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developers.intercom.com/docs/build-an-integration/learn-more",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+        "quote": "OAuth is for if you're building a public app that accesses other people's Intercom data. Access Tokens are for if you're using the API to access data in your own Intercom workspace."
+      },
+      {
+        "field": "access",
+        "url": "https://www.intercom.com/pricing",
+        "quote": "API is included in paid plans. Entry point Essential plan $29/seat/month. No permanent free tier."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/rest-apis",
+        "quote": "Intercom exposes a REST API (currently at v2.15) over HTTPS with JSON request and response bodies."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/rest-apis",
+        "quote": "REST API covers contacts, conversations, tickets, help center articles, workflows, and Fin AI Agent endpoints."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.intercom.com/pricing",
+        "quote": "API access requires paid subscription starting at $29/seat/month with no free tier alternative."
+      }
+    ],
+    "confidence": 0.82,
+    "notes": "Intercom requires a paid plan for API access with no free tier option. Authentication uses OAuth for public apps or Bearer tokens for private workspace apps. API is REST-only with no GraphQL endpoint. Rate limits are 10,000 calls/minute per app or 25,000/minute per workspace."
+  },
+  "cost_usd": 0.1125855,
+  "turns": 7,
+  "seconds": 98.0,
+  "is_error": false,
+  "error": null
+}

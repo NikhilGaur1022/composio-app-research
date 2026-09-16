@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Real-time communication platform with APIs to build bots, integrations, and applications within Discord servers and direct messages",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://docs.discord.com/developers/",
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/Craigeous/discord-mcp-rs"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "quote": "Bot users are authenticated using the bot token found in your app's settings"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "quote": "Your application exchanges the authorization code received from the redirect for an access token"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.discord.com/developers/",
+        "quote": "Register a developer application and retrieve your client ID and client secret"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.discord.com/developers/",
+        "quote": "The HTTP API is a REST API that lets you interact and modify core Discord resources"
+      },
+      {
+        "field": "verdict",
+        "url": "https://github.com/discord/discord-api-docs",
+        "quote": "Official Discord Developer Docs with complete REST API reference and OAuth2 authentication"
+      }
+    ],
+    "confidence": 0.92,
+    "notes": "Discord offers fully public REST API with self-serve free tier access. Developers can register applications and obtain bot tokens or use OAuth2 flows. No GraphQL API. Community MCP servers available but no official vendor MCP. Suitable for building agent toolkits today."
+  },
+  "cost_usd": 0.1072419,
+  "turns": 6,
+  "seconds": 34.7,
+  "is_error": false,
+  "error": null
+}

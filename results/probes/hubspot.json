@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://hubspot.com",
+    "status": 200,
+    "final_url": "https://www.hubspot.com/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.hubapi.com/crm/v3/objects/contacts",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"status\":\"error\",\"message\":\"Authentication credentials not found. This API supports OAuth 2.0 authentication and you can find more details at https://developers.hubspot.com/docs/methods/auth/oauth-ov",
+    "inferred_scheme": "oauth2",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://api.hubapi.com/.well-known/oauth-authorization-server"
+  }
+}

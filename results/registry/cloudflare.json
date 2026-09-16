@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "CLOUDFLARE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/cloudflare",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Cloudflare",
+    "tools": 20,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "cloudflare",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=cloudflare",
+    "hits": [
+      {
+        "name": "com.cloudflare.mcp/mcp",
+        "description": "Cloudflare MCP servers",
+        "repo": "https://github.com/cloudflare/mcp-server-cloudflare",
+        "status": "active"
+      },
+      {
+        "name": "com.jojapi/bypass-cloudflare-api",
+        "description": "Bypass Cloudflare API: A powerful scraping API designed to bypass Cloudflare protection.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.jojapi/cloudflare-solver",
+        "description": "Cloudflare Solver: Scraping API designed to bypass Cloudflare protection.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.trycloudflare.annotated-lot-operational-tourism/kai-agi",
+        "description": "AI predictions, model comparison, research briefs and web search from an autonomous AI",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.trycloudflare.candy-josh-writers-balance/yultrace-audit",
+        "description": "Audit a verified EVM contract with Slither (via Blockscout).",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.trycloudflare.candy-josh-writers-balance/yultrace-audit",
+        "description": "Audit a verified EVM contract with Slither (via Blockscout). Remote + pip install variants.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.trycloudflare.candy-josh-writers-balance/yultrace-audit",
+        "description": "EVM contract Slither audit + verified source fetch via Blockscout (no API key).",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.trycloudflare.candy-josh-writers-balance/yultrace-audit",
+        "description": "EVM Slither audit + source fetch + security.txt Contact lookup (Blockscout; no API key).",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Cloudflare",
+    "url": "https://github.com/search?q=Cloudflare+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "cloudflare/mcp-server-cloudflare",
+        "stars": 4201,
+        "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+        "desc": ""
+      },
+      {
+        "full_name": "iannuttall/mcp-boilerplate",
+        "stars": 1022,
+        "url": "https://github.com/iannuttall/mcp-boilerplate",
+        "desc": "A remote Cloudflare MCP server boilerplate with user authentication and Stripe for paid tools."
+      },
+      {
+        "full_name": "dondai1234/master-fetch",
+        "stars": 876,
+        "url": "https://github.com/dondai1234/master-fetch",
+        "desc": "MCP server for web fetching with Cloudflare bypass, Trafilatura extraction, and smart routing. Free, self-hosted, no API"
+      },
+      {
+        "full_name": "cloudflare/mcp",
+        "stars": 841,
+        "url": "https://github.com/cloudflare/mcp",
+        "desc": "MCP server for the Cloudflare API"
+      },
+      {
+        "full_name": "danielealbano/android-remote-control-mcp",
+        "stars": 627,
+        "url": "https://github.com/danielealbano/android-remote-control-mcp",
+        "desc": "An MCP Server for Android running on the phone, optmized for token usage, supports also files downloads and cloudflare a"
+      },
+      {
+        "full_name": "elusznik/mcp-server-code-execution-mode",
+        "stars": 340,
+        "url": "https://github.com/elusznik/mcp-server-code-execution-mode",
+        "desc": "An MCP server that executes Python code in isolated rootless containers with optional MCP server proxying. Implementatio"
+      },
+      {
+        "full_name": "jimprosser/obsidian-web-mcp",
+        "stars": 172,
+        "url": "https://github.com/jimprosser/obsidian-web-mcp",
+        "desc": "Secure remote MCP server for Obsidian vaults -- access your notes from Claude, your phone, or any MCP client, anywhere. "
+      },
+      {
+        "full_name": "avansaber/seo-monster",
+        "stars": 156,
+        "url": "https://github.com/avansaber/seo-monster",
+        "desc": "SEOMonster: a local, user-credential-driven MCP server for SEO workflows over Google Search Console, GA4, PageSpeed Insi"
+      }
+    ]
+  }
+}

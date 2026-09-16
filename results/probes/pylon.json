@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://usepylon.com",
+    "status": 200,
+    "final_url": "https://www.usepylon.com/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.usepylon.com/issues",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{   \"errors\": [     \"Token must follow Bearer authorization scheme: https://www.rfc-editor.org/rfc/rfc6750#section-2.1.\"   ],   \"request_id\": \"1e1aef8f-2c79-4eab-9b60-56ca964441b4\",   \"code\": \"invalid",
+    "inferred_scheme": "bearer_token",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": "https://api.usepylon.com/openapi.json"
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

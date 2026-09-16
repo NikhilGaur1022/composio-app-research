@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "result": {
+    "access": "paid_plan",
+    "api_breadth": "medium",
+    "api_type": "rest",
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token",
+      "basic"
+    ],
+    "blocker": "paid_only",
+    "confidence": 0.82,
+    "docs_url": "https://docs.attio.com/rest-api/guides/authentication",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.attio.com/rest-api/guides/authentication",
+        "quote": "Attio implements the standard OAuth 2.0 specification."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.attio.com/rest-api/guides/authentication",
+        "quote": "We also support HTTP Basic Authentication, where the username is the token and the password is left blank."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.attio.com/rest-api/guides/authentication",
+        "quote": "you can generate an API key in the developer settings page of your apps"
+      },
+      {
+        "field": "access",
+        "url": "https://attio.com/pricing",
+        "quote": "API and webhook access"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.attio.com/",
+        "quote": "REST API"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.attio.com/mcp/overview",
+        "quote": "Attio MCP is Attio's hosted MCP server"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.attio.com/mcp/overview",
+        "quote": "Attio MCP uses OAuth authentication, so you simply log in with your Attio account—no API keys required."
+      },
+      {
+        "field": "verdict",
+        "url": "https://attio.com/pricing",
+        "quote": "API and webhook access"
+      }
+    ],
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.attio.com/mcp"
+    },
+    "notes": "Attio's REST API supports OAuth2 (multi-workspace apps) or single-workspace API keys generated in Workspace Settings > Developers, both used as Bearer tokens (Basic Auth also supported). API/webhook access is gated behind paid plans (Plus/Pro/Enterprise) — the Free plan does not include it, so credentials aren't obtainable on a free tier, hence paid_plan/yellow rather than green. Attio also publishes an official hosted MCP server (mcp.attio.com) authenticated via OAuth login to the user's Attio account, in addition to several community MCP servers (kesslerio/attio-mcp-server etc.) seen in the registry hints. API breadth estimated as medium based on object/record/list/attribute/note/task/webhook endpoint surface and third-party wrappers (e.g. Composio) exposing ~109 tools built on it; exact endpoint count not verified.",
+    "one_liner": "Attio is a CRM and relationship-intelligence platform for sales and go-to-market teams, offering a REST API, App SDK, and hosted MCP server for programmatic workspace access.",
+    "verdict": "yellow"
+  },
+  "cost_usd": 0.35833460000000006,
+  "turns": 13,
+  "seconds": 79.1,
+  "is_error": false,
+  "error": null
+}

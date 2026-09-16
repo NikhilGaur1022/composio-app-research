@@ -1,0 +1,89 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "CONSENSUS",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/consensus",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Consensus",
+    "tools": 1,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "consensus",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=consensus",
+    "hits": [
+      {
+        "name": "com.consensus-analytics/mcp",
+        "description": "Read-only financial facts from SEC/EU/KR filings: tickers, periods, report lines, =CaData() grids.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.Evozim/consensus-voter-mcp",
+        "description": "Premium agentic endpoint for consensus-voter-mcp.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.MICONNM/openclaw-consensus-mcp",
+        "description": "9-LLM consensus + disagreement scoring + cheapest-route picks to fight hallucinations.",
+        "repo": "https://github.com/MICONNM/openclaw-consensus-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.TheStevenJohnstone/ai-consensus",
+        "description": "Standing review layer for coding agents: Claude, GPT and Gemini debate, return consensus + dissent.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.TheStevenJohnstone/ai-consensus",
+        "description": "Standing review layer for coding agents: Claude, GPT and Gemini debate, return consensus + dissent.",
+        "repo": "https://github.com/TheStevenJohnstone/ai-consensus-connector",
+        "status": "active"
+      },
+      {
+        "name": "io.github.adicted07-lang/meridian-consensus",
+        "description": "Committee-reviewed market sizing, forecasts, and competitive landscape from Meridian Consensus.",
+        "repo": "https://github.com/adicted07-lang/market-research-saas",
+        "status": "active"
+      },
+      {
+        "name": "io.github.adicted07-lang/meridian-consensus",
+        "description": "Committee-reviewed market sizing, forecasts, and competitive landscape from Meridian Consensus.",
+        "repo": "https://github.com/adicted07-lang/meridian-consensus",
+        "status": "active"
+      },
+      {
+        "name": "io.github.adicted07-lang/meridian-consensus",
+        "description": "Committee-reviewed market sizing, forecasts, and competitive landscape from Meridian Consensus.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Consensus",
+    "url": "https://github.com/search?q=Consensus+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 9B31:27A20E:24A67A:293E15:6AAAF955 and timestamp 2026-09-16 20:17:25 UTC. ",
+    "items": []
+  }
+}

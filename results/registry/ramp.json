@@ -1,0 +1,89 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "RAMP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/ramp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Ramp",
+    "tools": 88,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "ramp",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ramp",
+    "hits": [
+      {
+        "name": "ai.adramp/google-ads",
+        "description": "Google Ads MCP server — manage campaigns, keywords, and metrics.",
+        "repo": "https://github.com/stylemi-co/adramp",
+        "status": "active"
+      },
+      {
+        "name": "ai.adramp/google-ads",
+        "description": "Google Ads MCP server — manage campaigns, keywords, and metrics.",
+        "repo": "https://github.com/stylemi-co/adramp",
+        "status": "active"
+      },
+      {
+        "name": "ai.adramp/google-ads",
+        "description": "Google Ads MCP server — manage campaigns, keywords, and metrics.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.adramp/google-ads",
+        "description": "Google Ads MCP server — manage campaigns, keywords, and metrics.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/ramp",
+        "description": "Manage expenses, corporate cards, accounts payable, and accounting integrations",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/ramp",
+        "description": "Manage expenses, corporate cards, accounts payable, and accounting integrations",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/ramp",
+        "description": "Manage expenses, corporate cards, accounts payable, and accounting integrations",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mudko/onramperx",
+        "description": "Non-custodial value router: ranked fiat/crypto & cross-chain routes, swaps, onramp, gasless wallet.",
+        "repo": "https://github.com/lmno100/onramperx",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Ramp",
+    "url": "https://github.com/search?q=Ramp+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID BA5B:21D4CE:248640:291AED:6AAAF94F and timestamp 2026-09-16 20:17:22 UTC. ",
+    "items": []
+  }
+}

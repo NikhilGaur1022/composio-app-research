@@ -1,0 +1,177 @@
+{
+  "id": 4,
+  "name": "Attio",
+  "category": "CRM and Sales",
+  "hint": "attio.com",
+  "one_liner": "Attio is a CRM and relationship-intelligence platform for sales and go-to-market teams, offering a REST API, App SDK, and hosted MCP server for programmatic workspace access.",
+  "auth_methods": [
+    "api_key",
+    "basic",
+    "bearer_token",
+    "oauth2"
+  ],
+  "access": "paid_plan",
+  "api_type": "rest",
+  "api_breadth": "medium",
+  "docs_url": "https://docs.attio.com/rest-api/guides/authentication",
+  "mcp": {
+    "status": "official",
+    "url": "https://mcp.attio.com/mcp"
+  },
+  "verdict": "yellow",
+  "score": 77,
+  "blocker": "paid_only",
+  "model_verdict": "yellow",
+  "confidence": 0.83,
+  "agreement": 0.79,
+  "grounding_rate": 0.88,
+  "needs_human": true,
+  "needs_human_reasons": [
+    "pass1/pass2 disagree on access (admin_approval vs paid_plan)"
+  ],
+  "sources": {
+    "auth_methods": {
+      "composio_catalog": [
+        "oauth2"
+      ],
+      "pass2": [
+        "api_key",
+        "basic",
+        "bearer_token",
+        "oauth2"
+      ],
+      "pass1": [
+        "api_key",
+        "oauth2"
+      ]
+    },
+    "access": {
+      "pass2": "paid_plan",
+      "pass1": "admin_approval",
+      "docs_signal": "partner_gated"
+    },
+    "api_type": {
+      "pass2": "rest",
+      "pass1": "rest_and_graphql"
+    },
+    "api_breadth": {
+      "composio_tools": "medium",
+      "pass2": "medium",
+      "pass1": "medium"
+    },
+    "mcp": {
+      "mcp_registry": "community",
+      "github": "community",
+      "pass2": "official",
+      "pass1": "community"
+    }
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "Attio implements the standard OAuth 2.0 specification.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "We also support HTTP Basic Authentication, where the username is the token and the password is left blank.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "you can generate an API key in the developer settings page of your apps",
+      "grounded": "grounded"
+    },
+    {
+      "field": "access",
+      "url": "https://attio.com/pricing",
+      "quote": "API and webhook access",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.attio.com/mcp/overview",
+      "quote": "Attio MCP is Attio's hosted MCP server",
+      "grounded": "grounded"
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.attio.com/mcp/overview",
+      "quote": "Attio MCP uses OAuth authentication, so you simply log in with your Attio account—no API keys required.",
+      "grounded": "grounded"
+    },
+    {
+      "field": "verdict",
+      "url": "https://attio.com/pricing",
+      "quote": "API and webhook access",
+      "grounded": "grounded"
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.attio.com/",
+      "quote": "REST API",
+      "grounded": "not_grounded"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.composio.dev/toolkits/attio",
+      "quote": "Composio catalog: auth ['OAUTH2'], 109 tools",
+      "grounded": "registry"
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.attio.com/v2/objects",
+      "quote": "Unauthenticated probe -> HTTP 401; WWW-Authenticate: None; body: {\"status_code\":401,\"type\":\"auth_error\",\"code\":\"unauthorized\",\"message\":\"The Authorization header was not provided. Double check that you are including the header and that there is not a typo in the na",
+      "grounded": "probe"
+    }
+  ],
+  "composio": {
+    "in_catalog": true,
+    "slug": "ATTIO",
+    "tools": 109,
+    "auth": [
+      "oauth2"
+    ],
+    "auth_agrees": true,
+    "url": "https://docs.composio.dev/toolkits/attio"
+  },
+  "apis_guru": {
+    "found": false,
+    "endpoints": null
+  },
+  "probe": {
+    "status": 401,
+    "www_authenticate": null,
+    "inferred": null
+  },
+  "notes": "Attio's REST API supports OAuth2 (multi-workspace apps) or single-workspace API keys generated in Workspace Settings > Developers, both used as Bearer tokens (Basic Auth also supported). API/webhook access is gated behind paid plans (Plus/Pro/Enterprise) — the Free plan does not include it, so credentials aren't obtainable on a free tier, hence paid_plan/yellow rather than green. Attio also publishes an official hosted MCP server (mcp.attio.com) authenticated via OAuth login to the user's Attio account, in addition to several community MCP servers (kesslerio/attio-mcp-server etc.) seen in the registry hints. API breadth estimated as medium based on object/record/list/attribute/note/task/webhook endpoint surface and third-party wrappers (e.g. Composio) exposing ~109 tools built on it; exact endpoint count not verified.",
+  "pass1": {
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "app_review"
+  },
+  "pass2": {
+    "auth_methods": [
+      "oauth2",
+      "api_key",
+      "bearer_token",
+      "basic"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.82
+  },
+  "cost_usd": 0.512
+}

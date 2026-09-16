@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developer.adobe.com/commerce",
+    "status": 200,
+    "final_url": "https://developer.adobe.com/commerce/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "status": 200,
+    "www_authenticate": null,
+    "body_snippet": "<!DOCTYPE html> <html>   <head>     <title>REST API Overview</title>     <link rel=\"canonical\" href=\"https://developer.adobe.com/commerce/webapi/rest/\">     <meta name=\"description\" content=\"Overview ",
+    "inferred_scheme": null,
+    "api_alive": false
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developers.cloudflare.com/api",
+    "status": 200,
+    "final_url": "https://developers.cloudflare.com/api/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": true,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.cloudflare.com/client/v4/zones",
+    "status": 403,
+    "www_authenticate": null,
+    "body_snippet": "{\"success\":false,\"errors\":[{\"code\":9106,\"message\":\"Missing X-Auth-Email header\"},{\"code\":9107,\"message\":\"Missing X-Auth-Key header\"}],\"messages\":[],\"result\":null}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://api.cloudflare.com/.well-known/openid-configuration"
+  }
+}

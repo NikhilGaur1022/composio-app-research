@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Vonage provides communications APIs for SMS, voice, messaging, verification, and related telecommunications services",
+    "auth_methods": [
+      "basic",
+      "bearer_token",
+      "jwt",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developer.vonage.com",
+    "mcp": {
+      "status": "official",
+      "url": "https://github.com/Vonage/vonage-mcp-server-documentation"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "Basic Authentication sends your API Key and API Secret Base64-encoded in the Authorization header."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "JWT Bearer Authentication uses a JSON Web Token signed with your Vonage Application's private key."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+        "quote": "OAuth 2.0 with client credentials, where you need your client ID and client secret"
+      },
+      {
+        "field": "access",
+        "url": "https://www.vonage.com/communications-apis/pricing/",
+        "quote": "Vonage offers free credit to start developing with no credit card required"
+      },
+      {
+        "field": "access",
+        "url": "https://www.vonage.com/communications-apis/pricing/",
+        "quote": "The free trial allows developers to evaluate the APIs before committing to paid usage"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.vonage.com/en/voice/voice-api/concepts/endpoints",
+        "quote": "Vonage offers methods that initiate outbound calls which you can use directly via HTTP"
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/Vonage/vonage-mcp-server-documentation",
+        "quote": "Vonage/vonage-mcp-server-documentation: Bridging the Vonage Developer Documentation to LLMs"
+      }
+    ],
+    "confidence": 0.82,
+    "notes": "Vonage provides a comprehensive REST API for communications with multiple authentication methods. Free tier available for development with pay-as-you-go pricing. Official MCP server exists for LLM integration. API breadth is not precisely specified in search results but spans multiple major product lines (SMS, Voice, Verify, Messages, Numbers, Application APIs)."
+  },
+  "cost_usd": 0.129657,
+  "turns": 6,
+  "seconds": 65.3,
+  "is_error": false,
+  "error": null
+}

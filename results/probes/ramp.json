@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://docs.ramp.com",
+    "status": 200,
+    "final_url": "https://docs.ramp.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.ramp.com/developer/v1/transactions",
+    "status": 404,
+    "www_authenticate": null,
+    "body_snippet": "{\"error_v2\":{\"additional_info\":{},\"message\":\"Access token with given access_token not found\",\"error_code\":\"DEVELOPER_7002\",\"error_id\":\"24673d05\",\"notes\":\"\"},\"error\":{\"message\":\"Access token with given",
+    "inferred_scheme": null,
+    "api_alive": false
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

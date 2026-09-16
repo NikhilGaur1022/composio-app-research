@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://clickup.com/api",
+    "status": 200,
+    "final_url": "https://developer.clickup.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": true,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.clickup.com/api/v2/team",
+    "status": 400,
+    "www_authenticate": null,
+    "body_snippet": "{\"err\":\"Authorization header required\",\"ECODE\":\"OAUTH_017\"}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

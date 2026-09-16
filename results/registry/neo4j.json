@@ -1,0 +1,143 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "NEO4J",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/neo4j",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Neo4J",
+    "tools": 21,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2",
+      "BASIC",
+      "API_KEY",
+      "S2S_OAUTH2"
+    ],
+    "auth": [
+      "api_key",
+      "basic",
+      "oauth2",
+      "other"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "neo4j",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=neo4j",
+    "hits": [
+      {
+        "name": "io.github.neo4j-contrib/gds-agent",
+        "description": "Neo4j Graph Data Science MCP server",
+        "repo": "https://github.com/neo4j-contrib/gds-agent",
+        "status": "active"
+      },
+      {
+        "name": "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+        "description": "MCP server for Neo4j Aura Database Instance Manager.",
+        "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+        "status": "active"
+      },
+      {
+        "name": "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+        "description": "MCP server for Neo4j Aura Database Instance Manager.",
+        "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+        "status": "active"
+      },
+      {
+        "name": "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+        "description": "MCP server for Neo4j Aura Database Instance Manager.",
+        "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+        "status": "active"
+      },
+      {
+        "name": "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+        "description": "MCP server for Neo4j Aura Database Instance Manager.",
+        "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+        "status": "active"
+      },
+      {
+        "name": "io.github.neo4j-contrib/mcp-neo4j-cypher",
+        "description": "A simple Neo4j MCP server that allows you to run Cypher queries against a Neo4j database.",
+        "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+        "status": "active"
+      },
+      {
+        "name": "io.github.neo4j-contrib/mcp-neo4j-cypher",
+        "description": "A simple Neo4j MCP server that allows you to run Cypher queries against a Neo4j database.",
+        "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+        "status": "active"
+      },
+      {
+        "name": "io.github.neo4j-contrib/mcp-neo4j-cypher",
+        "description": "A simple Neo4j MCP server that allows you to run Cypher queries against a Neo4j database.",
+        "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Neo4j",
+    "url": "https://github.com/search?q=Neo4j+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "neo4j-contrib/mcp-neo4j",
+        "stars": 983,
+        "url": "https://github.com/neo4j-contrib/mcp-neo4j",
+        "desc": "Neo4j Labs Model Context Protocol servers"
+      },
+      {
+        "full_name": "orneryd/NornicDB",
+        "stars": 876,
+        "url": "https://github.com/orneryd/NornicDB",
+        "desc": "Nornicdb is a distributed low-latency, Graph+Vector, Temporal MVCC with all sub-ms HNSW search, graph traversal, and wri"
+      },
+      {
+        "full_name": "cyanheads/atlas-mcp-server",
+        "stars": 479,
+        "url": "https://github.com/cyanheads/atlas-mcp-server",
+        "desc": "A Model Context Protocol (MCP) server for ATLAS, a Neo4j-powered task management system for LLM Agents - implementing a "
+      },
+      {
+        "full_name": "neo4j/mcp",
+        "stars": 288,
+        "url": "https://github.com/neo4j/mcp",
+        "desc": "Neo4j official MCP Server"
+      },
+      {
+        "full_name": "elvismdev/mem0-mcp-selfhosted",
+        "stars": 107,
+        "url": "https://github.com/elvismdev/mem0-mcp-selfhosted",
+        "desc": "Self-hosted mem0 MCP server for Claude Code. Run a complete memory server against self-hosted Qdrant + Neo4j + Ollama wh"
+      },
+      {
+        "full_name": "neo4j-contrib/gds-agent",
+        "stars": 96,
+        "url": "https://github.com/neo4j-contrib/gds-agent",
+        "desc": "Neo4j Graph Data Scientist Agent (MCP Server & Skills)"
+      },
+      {
+        "full_name": "knowall-ai/mcp-reverie",
+        "stars": 69,
+        "url": "https://github.com/knowall-ai/mcp-reverie",
+        "desc": "Memory management MCP server for AI agents using Neo4j knowledge graphs"
+      },
+      {
+        "full_name": "da-okazaki/mcp-neo4j-server",
+        "stars": 59,
+        "url": "https://github.com/da-okazaki/mcp-neo4j-server",
+        "desc": "mcp-neo4j-server"
+      }
+    ]
+  }
+}

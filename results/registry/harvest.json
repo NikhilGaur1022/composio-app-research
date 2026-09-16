@@ -1,0 +1,119 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "HARVEST",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/harvest",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Harvest",
+    "tools": 57,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "harvest",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=harvest",
+    "hits": [
+      {
+        "name": "io.github.Evozim/crypto-tax-loss-harvester-mcp",
+        "description": "Premium agentic endpoint for crypto-tax-loss-harvester-mcp.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.hulin42/keynote-harvest-mcp",
+        "description": "Harvest Keynote and PDF slide decks into previews, text, image assets, and a manifest for agents.",
+        "repo": "https://github.com/hulin42/keynote-harvest-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.virgilvox/vue-harvest",
+        "description": "Extract reusable component libraries and design tokens from Vue applications",
+        "repo": "https://github.com/virgilvox/vue-harvest",
+        "status": "active"
+      },
+      {
+        "name": "io.github.virgilvox/vue-harvest",
+        "description": "Extract reusable component libraries and design tokens from Vue applications",
+        "repo": "https://github.com/virgilvox/vue-harvest",
+        "status": "active"
+      },
+      {
+        "name": "io.usefulapi/harvest",
+        "description": "Read time entries, projects, clients, tasks and invoices; log and update tracked time.",
+        "repo": "https://github.com/m190/usefulapi-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Harvest",
+    "url": "https://github.com/search?q=Harvest+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "raphasouthall/neurostack",
+        "stars": 47,
+        "url": "https://github.com/raphasouthall/neurostack",
+        "desc": "Local RAG layer and optimizer for your Markdown knowledge base. CLI + MCP server: grounded answers for any AI client, st"
+      },
+      {
+        "full_name": "taiste/harvest-mcp-server",
+        "stars": 38,
+        "url": "https://github.com/taiste/harvest-mcp-server",
+        "desc": "MCP Server for Harvest"
+      },
+      {
+        "full_name": "ianaleck/harvest-mcp-server",
+        "stars": 8,
+        "url": "https://github.com/ianaleck/harvest-mcp-server",
+        "desc": "Model Context Protocol (MCP) server for Harvest time tracking API v2. Provides 60+ tools for managing   clients, project"
+      },
+      {
+        "full_name": "dazeb/mcp-react-component-harvester",
+        "stars": 8,
+        "url": "https://github.com/dazeb/mcp-react-component-harvester",
+        "desc": "A Model Context Protocol (MCP) server that automatically discovers, fetches and processes react components from popular "
+      },
+      {
+        "full_name": "HurriKane/skyfactory-2.4-faults",
+        "stars": 8,
+        "url": "https://github.com/HurriKane/skyfactory-2.4-faults",
+        "desc": "[16/5/2015 18:44:34 PM] Loading Language: English [16/5/2015 18:44:34 PM] Loading Language: English [16/5/2015 18:44:34 "
+      },
+      {
+        "full_name": "southleft/harvest-mcp",
+        "stars": 7,
+        "url": "https://github.com/southleft/harvest-mcp",
+        "desc": "MCP server for Harvest time tracking API - use with Claude Desktop and other AI assistants"
+      },
+      {
+        "full_name": "abcubed3/okf",
+        "stars": 6,
+        "url": "https://github.com/abcubed3/okf",
+        "desc": "The OKF-go provides a high-performance suite of utilities to validate bundles, harvest metadata from databases and APIs,"
+      },
+      {
+        "full_name": "adrian-dotco/harvest-mcp-server",
+        "stars": 5,
+        "url": "https://github.com/adrian-dotco/harvest-mcp-server",
+        "desc": "An MCP server for natural language time entry in Harvest"
+      }
+    ]
+  }
+}

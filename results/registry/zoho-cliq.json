@@ -1,0 +1,35 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "zoho cliq",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=zoho cliq",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Zoho Cliq",
+    "url": "https://github.com/search?q=Zoho+Cliq+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "The-Luminous-Group/cliq-api-integration",
+        "stars": 0,
+        "url": "https://github.com/The-Luminous-Group/cliq-api-integration",
+        "desc": "MCP server for Zoho Cliq - post messages, list channels, team communication"
+      }
+    ]
+  }
+}

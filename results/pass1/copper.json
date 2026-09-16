@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Customer relationship management (CRM) and sales platform with REST API for integrations and third-party applications.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developer.copper.com/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "quote": "Copper CRM APIs support two types of authentication: API Key Authentication and OAuth 2.0"
+      },
+      {
+        "field": "access",
+        "url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips",
+        "quote": "Go to Settings > API Credentials or Integrations > API Keys. Click Generate API Key and copy it."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.copper.com/",
+        "quote": "REST API with JSON-formatted responses. Base URL: https://api.copper.com/developer_api/"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Copper offers self-serve API key generation with no approval required. OAuth 2.0 access tokens do not expire. API key requires both token and user email in request headers. Specific endpoint count not documented, but OpenAPI documentation is available covering core CRM entities (contacts, opportunities, activities)."
+  },
+  "cost_usd": 0.12300540000000001,
+  "turns": 5,
+  "seconds": 419.0,
+  "is_error": false,
+  "error": null
+}

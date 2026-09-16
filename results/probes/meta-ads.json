@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developers.facebook.com/docs/marketing-apis",
+    "status": 200,
+    "final_url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://graph.facebook.com/v21.0/me/adaccounts",
+    "status": 400,
+    "www_authenticate": "OAuth \"Facebook Platform\" \"invalid_request\" \"An active access token must be used to query information about the current user.\"",
+    "body_snippet": "{\"error\":{\"message\":\"An active access token must be used to query information about the current user.\",\"type\":\"OAuthException\",\"code\":2500,\"fbtrace_id\":\"A4Dg2mXdap5qxspBnE3BUSq\"}}",
+    "inferred_scheme": "other",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

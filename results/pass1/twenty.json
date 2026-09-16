@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Open-source CRM platform with GraphQL and REST APIs for managing contacts, companies, and custom objects with workspace-specific schemas",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "unknown",
+    "docs_url": "https://docs.twenty.com/developers/extend/api",
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/igorwarzocha/twenty-mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "with Bearer API key auth and batch operations up to 60 records"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Twenty offers REST and GraphQL APIs, webhooks, and OAuth"
+      },
+      {
+        "field": "access",
+        "url": "https://www.opensourcealternatives.to/item/twenty",
+        "quote": "Twenty is available both cloud-hosted at twenty.com (with a free tier available) and as a self-hosted option via Docker"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Create an API key in Settings → API & Webhooks → + Create key. Copy it immediately — it's shown once"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Core API — /rest/ and /graphql/ CRUD on records: People, Companies, Opportunities"
+      },
+      {
+        "field": "verdict",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "quote": "Your workspace-specific API documentation is available under Settings → API & Webhooks after creating an API key"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "Twenty is AGPLv3 licensed open-source; free tier available on cloud and self-hosted; API keys self-serve with no approval required. API endpoint count unknown as endpoints are auto-generated per workspace schema. Community MCP server exists but not vendor-official."
+  },
+  "cost_usd": 0.10988220000000001,
+  "turns": 6,
+  "seconds": 58.1,
+  "is_error": false,
+  "error": null
+}

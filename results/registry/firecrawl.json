@@ -1,0 +1,89 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "FIRECRAWL",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/firecrawl",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Firecrawl",
+    "tools": 30,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "firecrawl",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=firecrawl",
+    "hits": [
+      {
+        "name": "com.mcparmory/firecrawl",
+        "description": "Scrape, crawl, and extract structured data from websites at scale",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/firecrawl",
+        "description": "Scrape, crawl, and extract structured data from websites at scale",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Ansarii/firecrawl-stealth-mcp",
+        "description": "WAF-bypass web scraper and passive URL mapper for AI agents with zero pay-on-fail.",
+        "repo": "https://github.com/Ansarii/neon-stealth-web-scraper",
+        "status": "active"
+      },
+      {
+        "name": "io.github.firecrawl/firecrawl-mcp-server",
+        "description": "MCP server for Firecrawl — search, scrape, and interact with the web.",
+        "repo": "https://github.com/firecrawl/firecrawl-mcp-server.git",
+        "status": "active"
+      },
+      {
+        "name": "io.github.firecrawl/firecrawl-mcp-server",
+        "description": "MCP server for Firecrawl — search, scrape, and interact with the web.",
+        "repo": "https://github.com/firecrawl/firecrawl-mcp-server.git",
+        "status": "active"
+      },
+      {
+        "name": "io.github.firecrawl/firecrawl-mcp-server",
+        "description": "MCP server for Firecrawl — search, scrape, and interact with the web.",
+        "repo": "https://github.com/firecrawl/firecrawl-mcp-server.git",
+        "status": "active"
+      },
+      {
+        "name": "io.github.firecrawl/firecrawl-mcp-server",
+        "description": "MCP server for Firecrawl — search, scrape, and interact with the web.",
+        "repo": "https://github.com/firecrawl/firecrawl-mcp-server.git",
+        "status": "active"
+      },
+      {
+        "name": "io.github.firecrawl/firecrawl-mcp-server",
+        "description": "MCP server for Firecrawl — search, scrape, and interact with the web.",
+        "repo": "https://github.com/firecrawl/firecrawl-mcp-server.git",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Firecrawl",
+    "url": "https://github.com/search?q=Firecrawl+mcp+server&type=repositories",
+    "error": "the JSON object must be str, bytes or bytearray, not NoneType",
+    "items": []
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "PLAID_MCP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/plaid_mcp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Plaid MCP",
+    "tools": 5,
+    "triggers": 0,
+    "auth_raw": [
+      "DCR_OAUTH"
+    ],
+    "auth": [
+      "other"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": true
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "plaid.com",
+    "version": "2020-09-14_1.334.0",
+    "spec_url": "https://api.apis.guru/v2/specs/plaid.com/2020-09-14_1.334.0/openapi.json",
+    "title": "The Plaid API",
+    "url": "https://apis.guru/?q=plaid.com",
+    "endpoints": 198,
+    "auth": [
+      "api_key"
+    ],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "plaid",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=plaid",
+    "hits": [
+      {
+        "name": "io.github.pipeworx-io/plaid",
+        "description": "Plaid MCP — wraps Plaid Sandbox API (sandbox.plaid.com)",
+        "repo": "https://github.com/pipeworx-io/mcp-plaid",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Plaid",
+    "url": "https://github.com/search?q=Plaid+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "tomfunk/fungible",
+        "stars": 111,
+        "url": "https://github.com/tomfunk/fungible",
+        "desc": "Terminal UI and Desktop GUI for personal finance â€” Plaid sync, CSV import, AI assistant, and MCP server"
+      },
+      {
+        "full_name": "elcukro/bank-mcp",
+        "stars": 45,
+        "url": "https://github.com/elcukro/bank-mcp",
+        "desc": "Give your AI assistant secure, read-only access to your bank accounts. MCP server supporting Plaid, Teller, Enable Banki"
+      },
+      {
+        "full_name": "plaid/ai-coding-toolkit",
+        "stars": 28,
+        "url": "https://github.com/plaid/ai-coding-toolkit",
+        "desc": "Build your Plaid integration in record time with a development toolkit for your AI coding tools, including prompts, sand"
+      },
+      {
+        "full_name": "304techmaven/plaid-mcp-server",
+        "stars": 10,
+        "url": "https://github.com/304techmaven/plaid-mcp-server",
+        "desc": "MCP server that connects LLMs to plaid authorization and transactions api calls"
+      },
+      {
+        "full_name": "JosueM1109/personal-finance-mcp",
+        "stars": 7,
+        "url": "https://github.com/JosueM1109/personal-finance-mcp",
+        "desc": "Self-hosted, read-only MCP server for personal finance. Connect your banks via Plaid and query them from Claude Code."
+      },
+      {
+        "full_name": "Harshaan-Chugh/FinAgent-MCP",
+        "stars": 4,
+        "url": "https://github.com/Harshaan-Chugh/FinAgent-MCP",
+        "desc": "MCP server for financial data integration, featuring Plaid banking/investment data and Robinhood crypto trading."
+      },
+      {
+        "full_name": "PLAID-lib/plaid-mcp-server",
+        "stars": 3,
+        "url": "https://github.com/PLAID-lib/plaid-mcp-server",
+        "desc": "MCP server for converting datasets"
+      },
+      {
+        "full_name": "zavora-ai/mcp-banking",
+        "stars": 3,
+        "url": "https://github.com/zavora-ai/mcp-banking",
+        "desc": "ADK-Rust Enterprise Banking MCP Server â€” Plaid(US/Canada), Mono (Africa), Open Banking UK/EU with accounts, transactio"
+      }
+    ]
+  }
+}

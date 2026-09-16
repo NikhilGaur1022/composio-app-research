@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://aircall.io",
+    "status": 200,
+    "final_url": "https://aircall.io",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.aircall.io/v1/calls",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"message\":\"Unauthorized\"}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "VERCEL",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/vercel",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Vercel",
+    "tools": 146,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "vercel.com",
+    "version": "0.0.1",
+    "spec_url": "https://api.apis.guru/v2/specs/vercel.com/0.0.1/openapi.json",
+    "title": "Vercel API",
+    "url": "https://apis.guru/?q=vercel.com",
+    "endpoints": 112,
+    "auth": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "vercel",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=vercel",
+    "hits": [
+      {
+        "name": "app.vercel.agent-svg-registry/mcp",
+        "description": "Search SVG metadata and buy licensed commercial SVG exports for coding agents.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.vercel.agentready-rho/agentready",
+        "description": "Scan any website or MCP server for agent readiness: 0-100 score, a fix per failing check. Free.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.vercel.auditflag-lac/auditflag",
+        "description": "Search SEC EDGAR for going-concern auditor opinions in real 10-K/10-Q filings.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.vercel.cloakcheck-wheat/cloakcheck",
+        "description": "Scan a page for hidden prompt-injection payloads targeting AI agents.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.vercel.exploitwatch-kappa/exploitwatch",
+        "description": "Check dependencies against CISA's real Known Exploited Vulnerabilities feed.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.vercel.filingcheck-bot/filingcheck",
+        "description": "Real SEC EDGAR filing metrics: margin-of-safety, EPS growth, going-concern flags.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.vercel.flightsweeper-webmcp/public",
+        "description": "Anonymous public tools for FlightSweeper. See the published agent boundary before use.",
+        "repo": "https://github.com/raintree-technology/flightsweeper-webmcp",
+        "status": "active"
+      },
+      {
+        "name": "app.vercel.groundtruth-ruby/groundtruth",
+        "description": "Ask real humans a question and get their verbatim answers back.",
+        "repo": "https://github.com/aniketshaw748-hub/groundtruth",
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "com.vercel/vercel-mcp",
+        "description": "An MCP server for connecting to Vercel",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.vercel/vercel-mcp",
+        "description": "An MCP server for Vercel",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Vercel",
+    "url": "https://github.com/search?q=Vercel+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "vercel/mcp-handler",
+        "stars": 669,
+        "url": "https://github.com/vercel/mcp-handler",
+        "desc": "Easily spin up an MCP Server on Next.js, Nuxt, Svelte, and more"
+      },
+      {
+        "full_name": "marvkr/better-design",
+        "stars": 235,
+        "url": "https://github.com/marvkr/better-design",
+        "desc": "ðŸŽ¨ Open-source design MCP server + shadcn/ui registry â€” AI design systems for Claude Code, Cursor, Codex, GitHub Cop"
+      },
+      {
+        "full_name": "antoinebou12/uml-mcp",
+        "stars": 101,
+        "url": "https://github.com/antoinebou12/uml-mcp",
+        "desc": "UML-MCP Server is a UML diagram generation tool based on MCP (Model Context Protocol), which can help users generate var"
+      },
+      {
+        "full_name": "nganiet/mcp-vercel",
+        "stars": 69,
+        "url": "https://github.com/nganiet/mcp-vercel",
+        "desc": "MCP server connecting Claude to Vercel"
+      },
+      {
+        "full_name": "Quegenx/vercel-mcp-server",
+        "stars": 63,
+        "url": "https://github.com/Quegenx/vercel-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "IvanAmador/vercel-ai-docs-mcp",
+        "stars": 50,
+        "url": "https://github.com/IvanAmador/vercel-ai-docs-mcp",
+        "desc": "A Model Context Protocol (MCP) server that provides AI-powered search and querying capabilities for the Vercel AI SDK do"
+      },
+      {
+        "full_name": "kaorii-ako/Shiori-v1",
+        "stars": 43,
+        "url": "https://github.com/kaorii-ako/Shiori-v1",
+        "desc": "Open-source AI study companion â€” Google Classroom sync, Gemini AI plans, SRS flashcards, GPA predictor, AI quiz, MCP s"
+      },
+      {
+        "full_name": "shadowrootdev/awesome-agent-skills-mcp",
+        "stars": 25,
+        "url": "https://github.com/shadowrootdev/awesome-agent-skills-mcp",
+        "desc": "MCP server providing 100+ AI agent skills from Anthropic, Vercel, Trail of Bits, Hugging Face & more. Works with Claude,"
+      }
+    ]
+  }
+}

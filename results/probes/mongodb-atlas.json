@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://mongodb.com/docs/atlas/api",
+    "status": 200,
+    "final_url": "https://www.mongodb.com/docs/atlas/api/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://cloud.mongodb.com/api/atlas/v2/groups",
+    "status": 401,
+    "www_authenticate": "Digest realm=\"MMS Public API\", domain=\"\", nonce=\"u1ON62Xgtyu5vP80ATz5oB9LoRpnPtnv\", algorithm=MD5, qop=\"auth\", stale=false",
+    "body_snippet": "{   \"error\" : 401,   \"reason\" : \"Unauthorized\",   \"detail\" : \"You are not authorized for this resource.\",   \"errorCode\" : \"UNEXPECTED_ERROR\" }",
+    "inferred_scheme": "other",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

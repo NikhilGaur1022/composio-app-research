@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Meta's Threads API enables developers to publish posts, manage replies, and access content insights on the Threads social platform.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developers.facebook.com/docs/threads",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.facebook.com/docs/threads/get-started/get-access-tokens-and-permissions/",
+        "quote": "Threads Profile Discovery API requires an appropriate access token and permissions"
+      },
+      {
+        "field": "access",
+        "url": "https://www.blotato.com/blog/threads-api-pricing",
+        "quote": "The Threads API pricing in 2026 is free, with Meta publishing no paid tier"
+      },
+      {
+        "field": "access",
+        "url": "https://www.blotato.com/blog/threads-api-pricing",
+        "quote": "production access waits on Meta App Review"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.facebook.com/docs/threads",
+        "quote": "The Threads API uses the base URL: https://graph.threads.com/v1.0/"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.facebook.com/docs/threads/get-started/",
+        "quote": "App Review required for production and public use of Threads API"
+      }
+    ],
+    "confidence": 0.7,
+    "notes": "Threads API is free with OAuth2 authentication via Instagram's flow. App Review is required for production/public access, making it buildable but with approval caveat (yellow). API endpoint breadth unknown from search results."
+  },
+  "cost_usd": 0.10808060000000001,
+  "turns": 7,
+  "seconds": 28.3,
+  "is_error": false,
+  "error": null
+}

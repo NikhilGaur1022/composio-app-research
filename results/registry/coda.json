@@ -1,0 +1,147 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "CODA",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/coda",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Coda",
+    "tools": 110,
+    "triggers": 4,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "codat.io:accounting",
+    "version": "2.1.0",
+    "spec_url": "https://api.apis.guru/v2/specs/codat.io/accounting/2.1.0/openapi.json",
+    "title": "Accounting API",
+    "url": "https://apis.guru/?q=codat.io",
+    "endpoints": 127,
+    "auth": [
+      "api_key"
+    ],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "coda",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=coda",
+    "hits": [
+      {
+        "name": "com.iterruptivo.ecodashboard/ecoplaza-mcp",
+        "description": "Read-only MCP for EcoPlaza, Peruvian commercial real estate: projects, units, advisor contact.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/codacy",
+        "description": "Analyze code quality, security issues, and coverage across repositories",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/codacy",
+        "description": "Analyze code quality, security issues, and coverage across repositories",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.ChocoData-com/amazon-scraper-api-mcp",
+        "description": "Scrape Amazon products, search, and async batch ASIN lookups across 20 marketplaces",
+        "repo": "https://github.com/ChocoData-com/amazon-scraper-api-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.ajemba/codasms-mcp",
+        "description": "Receive one-time SMS/OTP verification codes via the CODASMS API: get a number, wait, release.",
+        "repo": "https://github.com/ajemba/codasms-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.harshitAgr/codabench-mcp",
+        "description": "MCP server for the Codabench REST API — drives a full ML-benchmark participant workflow.",
+        "repo": "https://github.com/harshitAgr/codabench-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.nkpar/coda",
+        "description": "Interact with Coda.io documents, tables, and rows via the Coda API",
+        "repo": "https://github.com/nkpar/coda-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.vish288/mcp-coda",
+        "description": "MCP server for Coda API — docs, pages, tables, rows, formulas, permissions, and automation.",
+        "repo": "https://github.com/vish288/mcp-coda",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Coda",
+    "url": "https://github.com/search?q=Coda+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "bartolli/codanna",
+        "stars": 742,
+        "url": "https://github.com/bartolli/codanna",
+        "desc": "Local code intelligence MCP server and CLI for AI coding agents"
+      },
+      {
+        "full_name": "orellazri/coda-mcp",
+        "stars": 63,
+        "url": "https://github.com/orellazri/coda-mcp",
+        "desc": "MCP Server for Coda"
+      },
+      {
+        "full_name": "codacy/codacy-mcp-server",
+        "stars": 62,
+        "url": "https://github.com/codacy/codacy-mcp-server",
+        "desc": "Codacy's MCP Server implementation"
+      },
+      {
+        "full_name": "TJC-LP/coda-mcp-server",
+        "stars": 6,
+        "url": "https://github.com/TJC-LP/coda-mcp-server",
+        "desc": "An MCP server for interacting with Coda.io"
+      },
+      {
+        "full_name": "elberrd/CodaMcpServer",
+        "stars": 5,
+        "url": "https://github.com/elberrd/CodaMcpServer",
+        "desc": ""
+      },
+      {
+        "full_name": "nkpar/coda-mcp",
+        "stars": 2,
+        "url": "https://github.com/nkpar/coda-mcp",
+        "desc": "MCP server for Coda.io API - enables AI assistants to read and write Coda documents"
+      },
+      {
+        "full_name": "mohammad-k13/Codal-MCP",
+        "stars": 2,
+        "url": "https://github.com/mohammad-k13/Codal-MCP",
+        "desc": "MCP Server that expose tools, recourses and prompts for LLM that related to Codal.ir website "
+      },
+      {
+        "full_name": "vish288/mcp-coda",
+        "stars": 2,
+        "url": "https://github.com/vish288/mcp-coda",
+        "desc": "MCP server for Coda API â€” 54 tools, 12 resources, 5 prompts. Docs, pages, tables, rows, formulas, permissions, automat"
+      }
+    ]
+  }
+}

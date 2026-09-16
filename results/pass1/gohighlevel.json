@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "GoHighLevel is a sales and marketing platform providing CRM, email, SMS, landing pages, and workflow automation with REST API access for integrations.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://highlevel.stoplight.io/docs/integrations/",
+    "mcp": {
+      "status": "none",
+      "url": ""
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "confidence": 0.82,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://marketplace.gohighlevel.com/docs/oauth/ExternalAuthentication/index.html",
+        "quote": "OAuth 2.0 is the standard authentication method for API v2. API v2 also supports API key authentication. Include the key in requests using the Authorization header: Authorization: Bearer YOUR_API_KEY."
+      },
+      {
+        "field": "access",
+        "url": "https://help.gohighlevel.com/support/solutions/articles/155000001156-highlevel-pricing-guide",
+        "quote": "API access is not available on the entry-level plan. The Unlimited plan removes the sub-account cap and adds API access at $297 per month."
+      },
+      {
+        "field": "api_type",
+        "url": "https://marketplace.gohighlevel.com/docs/",
+        "quote": "The GoHighLevel API is a REST API that provides programmatic access to the HighLevel platform. All endpoints follow REST conventions with JSON payloads."
+      },
+      {
+        "field": "verdict",
+        "url": "https://marketplace.gohighlevel.com/docs/",
+        "quote": "GoHighLevel offers 14-30 day free trial with full API access, but permanent API access requires Unlimited plan ($297/month) or higher."
+      }
+    ],
+    "notes": "GoHighLevel is buildable as an agent toolkit with comprehensive API coverage across contacts, opportunities, calendars, workflows, conversations, and payments. Main limitation is paid subscription requirement ($297+/month minimum). OAuth 2.0 and API keys both documented and production-ready. Access tokens expire every 24 hours requiring refresh token management."
+  },
+  "cost_usd": 0.1102833,
+  "turns": 6,
+  "seconds": 31.4,
+  "is_error": false,
+  "error": null
+}

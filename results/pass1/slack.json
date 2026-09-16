@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Team communication platform with channels, messaging, and workspace integrations",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://api.slack.com/",
+    "mcp": {
+      "status": "official",
+      "url": "https://docs.slack.dev/ai/slack-mcp-server/"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://api.slack.com/authentication",
+        "quote": "To obtain users' tokens, you need to send users through the OAuth 2.0 authentication flow"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://api.slack.com/authentication",
+        "quote": "Tokens are presented with the string Bearer prepended to them, indicating the OAuth 2.0 authentication scheme"
+      },
+      {
+        "field": "access",
+        "url": "https://api.slack.com/faq",
+        "quote": "The Slack API is free, and rate limits are tier-based (1-100+ requests per minute) depending on method"
+      },
+      {
+        "field": "access",
+        "url": "https://zuplo.com/learning-center/slack-api",
+        "quote": "You can join the Developer Program and provision a sandbox with access to all Slack features for free"
+      },
+      {
+        "field": "api_type",
+        "url": "https://api.slack.com/methods",
+        "quote": "Web API methods"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+        "quote": "Slack has run its own remote MCP server at mcp.slack.com/mcp since February 17, 2026"
+      }
+    ],
+    "confidence": 0.92,
+    "notes": "Slack provides free, self-serve API access with OAuth2 authentication. Official MCP server available since Feb 2026. Web API (REST) includes 150+ methods. No approval or paid subscription required for API access."
+  },
+  "cost_usd": 0.1480027,
+  "turns": 6,
+  "seconds": 74.9,
+  "is_error": false,
+  "error": null
+}

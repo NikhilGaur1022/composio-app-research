@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://firecrawl.dev",
+    "status": 200,
+    "final_url": "https://www.firecrawl.dev/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": true,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.firecrawl.dev/v1/scrape",
+    "status": 405,
+    "www_authenticate": null,
+    "body_snippet": "{\"success\":false,\"code\":\"METHOD_NOT_ALLOWED\",\"error\":\"GET /v1/scrape is not supported. Use POST instead.\",\"allowed_methods\":[\"POST\"],\"documentation_url\":\"https://docs.firecrawl.dev/api-reference/intro",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

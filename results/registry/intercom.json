@@ -1,0 +1,107 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "INTERCOM",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/intercom",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Intercom",
+    "tools": 133,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "intercom",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=intercom",
+    "hits": [
+      {
+        "name": "io.github.MuhammadTalhaMT/intercom",
+        "description": "Relays messages between two Claude Code sessions on different machines using the Channels API",
+        "repo": "https://github.com/MuhammadTalhaMT/claude-intercom",
+        "status": "active"
+      },
+      {
+        "name": "io.github.MuhammadTalhaMT/intercom",
+        "description": "Relays messages between two Claude Code sessions on different machines using the Channels API",
+        "repo": "https://github.com/MuhammadTalhaMT/claude-intercom",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/intercom",
+        "description": "Intercom MCP Pack — contacts, conversations, companies via OAuth.",
+        "repo": "https://github.com/pipeworx-io/mcp-intercom",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Intercom",
+    "url": "https://github.com/search?q=Intercom+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "fabian1710/mcp-intercom",
+        "stars": 8,
+        "url": "https://github.com/fabian1710/mcp-intercom",
+        "desc": "MCP server for Intercom chat integration"
+      },
+      {
+        "full_name": "raoulbia-ai/mcp-server-for-intercom",
+        "stars": 8,
+        "url": "https://github.com/raoulbia-ai/mcp-server-for-intercom",
+        "desc": ""
+      },
+      {
+        "full_name": "kaosensei/intercom-mcp",
+        "stars": 8,
+        "url": "https://github.com/kaosensei/intercom-mcp",
+        "desc": "A Model Context Protocol (MCP) server for reading Intercom Help Center articles"
+      },
+      {
+        "full_name": "intercom/intercom-mcp-server",
+        "stars": 7,
+        "url": "https://github.com/intercom/intercom-mcp-server",
+        "desc": "Intercom MCP Server documentation"
+      },
+      {
+        "full_name": "sanztheo/claude-intercom",
+        "stars": 2,
+        "url": "https://github.com/sanztheo/claude-intercom",
+        "desc": "Real-time messaging between Claude Code instances. MCP server + fs.watch + asyncRewake for instant inter-agent communica"
+      },
+      {
+        "full_name": "OtakuXavier/intercom-mcp-server",
+        "stars": 2,
+        "url": "https://github.com/OtakuXavier/intercom-mcp-server",
+        "desc": "MCP for Intercom"
+      },
+      {
+        "full_name": "acunningham-ship-it/intercom-mcp",
+        "stars": 1,
+        "url": "https://github.com/acunningham-ship-it/intercom-mcp",
+        "desc": "A message bus / coordination layer for AI agent fleets â€” MCP server letting Claude Code (or any MCP client) sessions a"
+      },
+      {
+        "full_name": "vineethkrishnan/mcp-pool",
+        "stars": 1,
+        "url": "https://github.com/vineethkrishnan/mcp-pool",
+        "desc": "A curated collection of Model Context Protocol (MCP) servers for popular SaaS platforms â€” Stripe, Sentry, Notion, Line"
+      }
+    ]
+  }
+}

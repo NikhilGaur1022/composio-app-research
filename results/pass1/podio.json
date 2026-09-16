@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Podio is a team collaboration and work management CRM platform that provides apps, tasks, and communication features for sales and business operations.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developers.podio.com/doc",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.88,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.podio.com/authentication",
+        "quote": "The Podio API uses the OAuth2 protocol for authentication. Before you can use the Podio API you must register your application"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.podio.com/",
+        "quote": "The Podio API is free to use for both premium and free Podio accounts. You have to sign in or sign up with Podio, and then you find your API keys as a tab under your account settings."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.podio.com/doc",
+        "quote": "The Podio API is a complete programmable interface to all Podio functionality. The API is available at https://api.podio.com and is RESTful"
+      }
+    ],
+    "notes": "Podio offers self-serve free API access with OAuth2 authentication. Multiple OAuth flows supported including server-side, client-side, app auth, and username/password. API breadth is unknown as endpoint count not explicitly documented in search results."
+  },
+  "cost_usd": 0.10605500000000001,
+  "turns": 6,
+  "seconds": 223.9,
+  "is_error": false,
+  "error": null
+}

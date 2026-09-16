@@ -1,0 +1,61 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "AHREFS",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/ahrefs",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Ahrefs",
+    "tools": 40,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY",
+      "OAUTH2"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "ahrefs",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ahrefs",
+    "hits": [
+      {
+        "name": "com.jojapi/ahrefs",
+        "description": "Ahrefs: Ahrefs API: SEO powerhouse featuring keyword research, backlink analysis, and SERP tracking.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/ahrefs",
+        "description": "Analyze domain authority, backlinks, traffic, and keyword rankings for SEO intelligence",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/ahrefs",
+        "description": "Analyze domain authority, backlinks, traffic, and keyword rankings for SEO intelligence",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Ahrefs",
+    "url": "https://github.com/search?q=Ahrefs+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID BE7D:0BE7:1034E3:12BB09:6AAAF91E and timestamp 2026-09-16 20:16:31 UTC. Fo",
+    "items": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Meta's REST API for sending and receiving messages through WhatsApp Business accounts at scale.",
+    "auth_methods": [
+      "bearer_token"
+    ],
+    "access": "admin_approval",
+    "api_type": "rest",
+    "api_breadth": "unknown",
+    "docs_url": "https://developers.facebook.com/docs/whatsapp/business-management-api/get-started/",
+    "mcp": {
+      "status": "unknown"
+    },
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.facebook.com/blog/post/2022/12/05/auth-tokens/",
+        "quote": "For any request to the API, you must set the Authorization header to Bearer <YOUR ACCESS TOKEN>."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/whatsapp/business-management-api/get-started/",
+        "quote": "To apply for the WhatsApp API, you must have a verified Meta Business Manager, a WhatsApp Business Account, and an unused phone number ready for registration."
+      },
+      {
+        "field": "api_type",
+        "url": "https://rollout.com/integration-guides/whatsapp-business/api-essentials",
+        "quote": "WhatsApp Business Platform provides developers with a complete REST API that allows sending messages, managing templates, receiving notifications via webhook."
+      },
+      {
+        "field": "verdict",
+        "url": "https://wuaps.com/en/blog/requirements-to-use-the-official-whatsapp-business-api/",
+        "quote": "WhatsApp Business API is not free, and businesses need to work with official WhatsApp Business Solution Providers (BSPs) to access the API."
+      }
+    ],
+    "confidence": 0.72,
+    "notes": "WhatsApp Business API requires business account verification and generates bearer token credentials via Meta App Dashboard. Exact endpoint count unknown but confirmed REST-based with message sending, template management, and webhook capabilities. Paid tier with BSP integration pathway suggests admin approval + potential partner gating."
+  },
+  "cost_usd": 0.11201530000000001,
+  "turns": 7,
+  "seconds": 30.5,
+  "is_error": false,
+  "error": null
+}

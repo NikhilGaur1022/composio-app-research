@@ -1,0 +1,28 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "pitchbook",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pitchbook",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "PitchBook",
+    "url": "https://github.com/search?q=PitchBook+mcp+server&type=repositories",
+    "items": []
+  }
+}

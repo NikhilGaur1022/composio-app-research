@@ -1,0 +1,141 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "DATADOG",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/datadog",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Datadog",
+    "tools": 65,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY",
+      "BEARER_TOKEN"
+    ],
+    "auth": [
+      "api_key",
+      "bearer_token",
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "datadog",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=datadog",
+    "hits": [
+      {
+        "name": "com.mcparmory/datadog",
+        "description": "Monitor infrastructure, manage agents and deployments, track metrics, logs, and events",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/datadog",
+        "description": "Monitor infrastructure, manage agents and deployments, track metrics, logs, and events",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.TANTIOPE/datadog-mcp",
+        "description": "Full Datadog API access: monitors, logs, metrics, traces, dashboards, and observability tools",
+        "repo": "https://github.com/tantiope/datadog-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.us-all/datadog",
+        "description": "Datadog MCP — 165 tools for metrics, monitors, logs, APM, RUM, incidents, CI/CD, fleet",
+        "repo": "https://github.com/us-all/datadog-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.us-all/datadog",
+        "description": "Datadog MCP — 165 tools for metrics, monitors, logs, APM, RUM, incidents, CI/CD, fleet",
+        "repo": "https://github.com/us-all/datadog-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.us-all/datadog",
+        "description": "Datadog MCP — 165 tools for metrics, monitors, logs, APM, RUM, incidents, CI/CD, fleet",
+        "repo": "https://github.com/us-all/datadog-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.us-all/datadog",
+        "description": "Datadog MCP — 165 tools for metrics, monitors, logs, APM, RUM, incidents, CI/CD, fleet",
+        "repo": "https://github.com/us-all/datadog-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.us-all/datadog",
+        "description": "Datadog MCP — 165 tools for metrics, monitors, logs, APM, RUM, incidents, CI/CD, fleet",
+        "repo": "https://github.com/us-all/datadog-mcp-server",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Datadog",
+    "url": "https://github.com/search?q=Datadog+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "winor30/mcp-server-datadog",
+        "stars": 143,
+        "url": "https://github.com/winor30/mcp-server-datadog",
+        "desc": ""
+      },
+      {
+        "full_name": "GeLi2001/datadog-mcp-server",
+        "stars": 69,
+        "url": "https://github.com/GeLi2001/datadog-mcp-server",
+        "desc": "MCP server interacts with the official Datadog API"
+      },
+      {
+        "full_name": "datadog-labs/mcp-server",
+        "stars": 44,
+        "url": "https://github.com/datadog-labs/mcp-server",
+        "desc": "Official Datadog MCP Server"
+      },
+      {
+        "full_name": "shelfio/datadog-mcp",
+        "stars": 20,
+        "url": "https://github.com/shelfio/datadog-mcp",
+        "desc": "Datadog MCP Server - Comprehensive monitoring and observability tools for Datadog via Model Context Protocol"
+      },
+      {
+        "full_name": "daltoniam/switchboard",
+        "stars": 19,
+        "url": "https://github.com/daltoniam/switchboard",
+        "desc": "One MCP server to rule them all. Aggregates GitHub, Datadog, Linear, Sentry, Slack, and Metabase behind a single search/"
+      },
+      {
+        "full_name": "sqr/datadog-mcp",
+        "stars": 7,
+        "url": "https://github.com/sqr/datadog-mcp",
+        "desc": "Model Context Protocol server to integrate with Datadog"
+      },
+      {
+        "full_name": "TANTIOPE/datadog-mcp-server",
+        "stars": 5,
+        "url": "https://github.com/TANTIOPE/datadog-mcp-server",
+        "desc": "MCP server providing AI assistants with full Datadog observability access."
+      },
+      {
+        "full_name": "robertohuertasm/zed-datadog-mcp",
+        "stars": 5,
+        "url": "https://github.com/robertohuertasm/zed-datadog-mcp",
+        "desc": "Datadog MCP Server extension for Datadog"
+      }
+    ]
+  }
+}

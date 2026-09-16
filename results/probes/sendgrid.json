@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://sendgrid.com",
+    "status": 200,
+    "final_url": "https://www.twilio.com/en-us/sendgrid",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": true,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.sendgrid.com/v3/templates",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"errors\":[{\"field\":null,\"message\":\"authorization required\"}]}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

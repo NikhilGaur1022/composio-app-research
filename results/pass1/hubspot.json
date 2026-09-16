@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "CRM and sales platform for managing customer relationships, sales pipelines, marketing, and customer service operations.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "large",
+    "docs_url": "https://developers.hubspot.com/docs",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.hubspot.com/blog/harnessing-the-power-of-hubspots-public-apis-with-postman",
+        "quote": "HubSpot supports two ways to authenticate calls to its APIs: OAuth, and private app access tokens."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.hubspot.com/apisbytier",
+        "quote": "The HubSpot CRM API is available on every plan, including the Free tier"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.hubspot.com/docs/cms/start-building/features/data-driven-content/graphql/query-hubspot-data-using-graphql",
+        "quote": "All of the HubSpot APIs are organized around REST. The GraphQL API provides a single, unified way to fetch data"
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.hubspot.com/apisbytier",
+        "quote": "The API itself is free on every plan, including the free tier, with no separate API access fee"
+      }
+    ],
+    "confidence": 0.88,
+    "notes": "API is free on all tiers including free plan. Private app tokens and OAuth are primary auth methods; legacy API keys deprecated in late 2022. Rate limits scale by subscription tier (free: 100 req/10s, ~250k calls/day). Buildable as agent toolkit with self-serve credentials and no approval requirements."
+  },
+  "cost_usd": 0.120051,
+  "turns": 6,
+  "seconds": 60.3,
+  "is_error": false,
+  "error": null
+}

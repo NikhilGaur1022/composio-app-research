@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://mailchimp.com/developer",
+    "status": 200,
+    "final_url": "https://mailchimp.com/developer/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": true,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://us1.api.mailchimp.com/3.0/lists",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"type\":\"https://mailchimp.com/developer/marketing/docs/errors/\",\"title\":\"API Key Invalid\",\"status\":401,\"detail\":\"Your request did not include a valid API key or token.\",\"instance\":\"8a9c914d-ec71-1511",
+    "inferred_scheme": "api_key",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

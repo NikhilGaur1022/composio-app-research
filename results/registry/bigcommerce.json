@@ -1,0 +1,29 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "bigcommerce",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=bigcommerce",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "BigCommerce",
+    "url": "https://github.com/search?q=BigCommerce+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID A90F:1F9B8F:24D11D:296730:6AAAF911 and timestamp 2026-09-16 20:16:18 UTC. ",
+    "items": []
+  }
+}

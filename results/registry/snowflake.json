@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "SNOWFLAKE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/snowflake",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Snowflake",
+    "tools": 17,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "snowflake",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=snowflake",
+    "hits": [
+      {
+        "name": "io.github.Snowflake-Labs/mcp",
+        "description": "MCP Server for Snowflake from Snowflake Labs",
+        "repo": "https://github.com/Snowflake-Labs/mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Snowflake-Labs/mcp",
+        "description": "MCP Server for Snowflake from Snowflake Labs",
+        "repo": "https://github.com/Snowflake-Labs/mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.nsphung/mcp-snowflake-server",
+        "description": "A Snowflake MCP server — SQL queries, schema exploration, and data insights for AI assistants",
+        "repo": "https://github.com/nsphung/mcp-snowflake-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.nsphung/mcp-snowflake-server",
+        "description": "A Snowflake MCP server — SQL queries, schema exploration, and data insights for AI assistants",
+        "repo": "https://github.com/nsphung/mcp-snowflake-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.nsphung/mcp-snowflake-server",
+        "description": "A Snowflake MCP server — SQL queries, schema exploration, and data insights for AI assistants",
+        "repo": "https://github.com/nsphung/mcp-snowflake-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.nsphung/mcp-snowflake-server",
+        "description": "A Snowflake MCP server — SQL queries, schema exploration, and data insights for AI assistants",
+        "repo": "https://github.com/nsphung/mcp-snowflake-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.nsphung/mcp-snowflake-server",
+        "description": "A Snowflake MCP server — SQL queries, schema exploration, and data insights for AI assistants",
+        "repo": "https://github.com/nsphung/mcp-snowflake-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.nsphung/mcp-snowflake-server",
+        "description": "A Snowflake MCP server — SQL queries, schema exploration, and data insights for AI assistants",
+        "repo": "https://github.com/nsphung/mcp-snowflake-server",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Snowflake",
+    "url": "https://github.com/search?q=Snowflake+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "Snowflake-Labs/mcp",
+        "stars": 297,
+        "url": "https://github.com/Snowflake-Labs/mcp",
+        "desc": "MCP Server for Snowflake including Cortex AI, object management, SQL orchestration, semantic view consumption, and more"
+      },
+      {
+        "full_name": "isaacwasserman/mcp-snowflake-server",
+        "stars": 186,
+        "url": "https://github.com/isaacwasserman/mcp-snowflake-server",
+        "desc": ""
+      },
+      {
+        "full_name": "ralforion/orionbelt-analytics",
+        "stars": 47,
+        "url": "https://github.com/ralforion/orionbelt-analytics",
+        "desc": "Ontology-based MCP server that analyzes database schemas (PostgreSQL, Snowflake, ClickHouse, Dremio) and generates RDF/O"
+      },
+      {
+        "full_name": "datawiz168/mcp-snowflake-service",
+        "stars": 45,
+        "url": "https://github.com/datawiz168/mcp-snowflake-service",
+        "desc": "MCP server implementation for Snowflake integration"
+      },
+      {
+        "full_name": "thorstenfoltz/octa",
+        "stars": 29,
+        "url": "https://github.com/thorstenfoltz/octa",
+        "desc": "Fast native desktop app for exploring 20+ data formats like Parquet, DuckDB, SQLite, Excel, Arrow, GeoJSON, Jupyter and "
+      },
+      {
+        "full_name": "Snowflake-Labs/MCP-HOL-BUILD-2025",
+        "stars": 24,
+        "url": "https://github.com/Snowflake-Labs/MCP-HOL-BUILD-2025",
+        "desc": "BUILD Agent Powered Workflows Using Snowflake Cortex AI and Managed MCP Servers"
+      },
+      {
+        "full_name": "dynamike/snowflake-mcp-server",
+        "stars": 14,
+        "url": "https://github.com/dynamike/snowflake-mcp-server",
+        "desc": "MCP Server for connecting to Snowflake with read-only questions"
+      },
+      {
+        "full_name": "Snowflake-Labs/sfguide-mcp-cortex-agents",
+        "stars": 13,
+        "url": "https://github.com/Snowflake-Labs/sfguide-mcp-cortex-agents",
+        "desc": "Guide to building MCP Server for Cortex Agent"
+      }
+    ]
+  }
+}

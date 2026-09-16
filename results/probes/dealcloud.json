@@ -1,0 +1,30 @@
+{
+  "docs_reachable": {
+    "url": "https://api.docs.dealcloud.com",
+    "status": 200,
+    "final_url": "https://api.docs.dealcloud.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": true,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.docs.dealcloud.com",
+    "skipped": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

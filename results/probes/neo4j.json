@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://neo4j.com/docs/api",
+    "status": 404,
+    "final_url": "https://neo4j.com/docs/api/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": true,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.neo4j.io/v1/instances",
+    "status": 400,
+    "www_authenticate": null,
+    "body_snippet": "{     \"error\": \"Authorization field missing\" }",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

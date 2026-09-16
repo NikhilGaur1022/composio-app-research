@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://open.larksuite.com",
+    "status": 200,
+    "final_url": "https://open.larksuite.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://open.larksuite.com/open-apis/im/v1/messages",
+    "status": 400,
+    "www_authenticate": null,
+    "body_snippet": "{\"code\":99991661,\"msg\":\"Missing access token for authorization. Please make a request with token attached.\",\"error\":{\"log_id\":\"2026091704182171FB7E2AA4CC9EBD78FA\"}}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

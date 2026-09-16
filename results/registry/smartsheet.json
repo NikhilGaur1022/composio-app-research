@@ -1,0 +1,120 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "smartsheet",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=smartsheet",
+    "hits": [
+      {
+        "name": "io.github.christianclaudio/smartsheet-rm",
+        "description": "MCP server for Smartsheet Resource Management (10,000ft API) time tracking and scheduling.",
+        "repo": "https://github.com/christianclaudio/mcp-server-smartsheet-rm",
+        "status": "active"
+      },
+      {
+        "name": "io.github.christianclaudio/smartsheet-rm",
+        "description": "MCP server for Smartsheet Resource Management (10,000ft API) time tracking and scheduling.",
+        "repo": "https://github.com/christianclaudio/mcp-server-smartsheet-rm",
+        "status": "active"
+      },
+      {
+        "name": "io.github.christianclaudio/smartsheet-rm",
+        "description": "MCP server for Smartsheet Resource Management (10,000ft API) time tracking and scheduling.",
+        "repo": "https://github.com/christianclaudio/mcp-server-smartsheet-rm",
+        "status": "active"
+      },
+      {
+        "name": "io.github.christianclaudio/smartsheet-rm",
+        "description": "MCP server for Smartsheet Resource Management (10,000ft API) time tracking and scheduling.",
+        "repo": "https://github.com/christianclaudio/mcp-server-smartsheet-rm",
+        "status": "active"
+      },
+      {
+        "name": "io.github.christianclaudio/smartsheet-rm",
+        "description": "MCP server for Smartsheet Resource Management (10,000ft API) time tracking and scheduling.",
+        "repo": "https://github.com/christianclaudio/mcp-server-smartsheet-rm",
+        "status": "active"
+      },
+      {
+        "name": "io.github.christianclaudio/smartsheet-rm",
+        "description": "MCP server for Smartsheet Resource Management (10,000ft API) time tracking and scheduling.",
+        "repo": "https://github.com/christianclaudio/mcp-server-smartsheet-rm",
+        "status": "active"
+      },
+      {
+        "name": "io.github.christianclaudio/smartsheet-rm",
+        "description": "MCP server for Smartsheet Resource Management (10,000ft API) time tracking and scheduling.",
+        "repo": "https://github.com/christianclaudio/mcp-server-smartsheet-rm",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Smartsheet",
+    "url": "https://github.com/search?q=Smartsheet+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "smartsheet-platform/smar-mcp",
+        "stars": 26,
+        "url": "https://github.com/smartsheet-platform/smar-mcp",
+        "desc": "Smartsheet MCP Server"
+      },
+      {
+        "full_name": "terilios/smartsheet-server",
+        "stars": 12,
+        "url": "https://github.com/terilios/smartsheet-server",
+        "desc": "MCP server providing healthcare analytics capabilities for Smartsheet, including clinical note summarization, patient fe"
+      },
+      {
+        "full_name": "smartsheet/cli-agent-power-tools",
+        "stars": 9,
+        "url": "https://github.com/smartsheet/cli-agent-power-tools",
+        "desc": "A free, open-source, pack of Claude Code agents for project managers. Purpose-built against the Smartsheet MCP server. T"
+      },
+      {
+        "full_name": "Beltran12138/wecom-docs-mcp-server",
+        "stars": 6,
+        "url": "https://github.com/Beltran12138/wecom-docs-mcp-server",
+        "desc": "[Archived] stdio MCP proxy over WeCom's robot-doc backend. Superseded by the official WecomTeam/wecom-cli v1.1.0 â€” see"
+      },
+      {
+        "full_name": "Abdeltoto/smartsheet-controller",
+        "stars": 3,
+        "url": "https://github.com/Abdeltoto/smartsheet-controller",
+        "desc": "Talk to Your Smartsheet - AI copilot with 53 tools, 80 formulas, voice control, streaming, and MCP server"
+      },
+      {
+        "full_name": "xbenng/smartsheet-mcp-server",
+        "stars": 1,
+        "url": "https://github.com/xbenng/smartsheet-mcp-server",
+        "desc": "MCP server for the full Smartsheet API"
+      },
+      {
+        "full_name": "prmbr42-bot/smartsheet-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/prmbr42-bot/smartsheet-mcp-server",
+        "desc": "Smartsheet MCP"
+      },
+      {
+        "full_name": "AltFl0w/smar-mcp",
+        "stars": 0,
+        "url": "https://github.com/AltFl0w/smar-mcp",
+        "desc": "Smartsheet MCP Server"
+      }
+    ]
+  }
+}

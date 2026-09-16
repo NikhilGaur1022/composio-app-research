@@ -1,0 +1,35 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "dealcloud",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dealcloud",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "DealCloud",
+    "url": "https://github.com/search?q=DealCloud+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "jstewartrr/infra-20251230-mcp-dealcloud",
+        "stars": 0,
+        "url": "https://github.com/jstewartrr/infra-20251230-mcp-dealcloud",
+        "desc": "DealCloud MCP Server for Sovereign Mind"
+      }
+    ]
+  }
+}

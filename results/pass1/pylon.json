@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Pylon is a support helpdesk platform offering REST API access for customer support automation and integration.",
+    "auth_methods": [
+      "bearer_token",
+      "oauth2"
+    ],
+    "access": "paid_plan",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://docs.usepylon.com/pylon-docs/developer/api",
+    "mcp": {
+      "status": "official",
+      "url": "https://mcp.usepylon.com"
+    },
+    "verdict": "yellow",
+    "blocker": "paid_only",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+        "quote": "The Pylon API uses Bearer authentication, which means you'll need to pass your API token in the header of your request."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+        "quote": "MCP Server uses OAuth 2.0 (AuthKit) for authentication"
+      },
+      {
+        "field": "access",
+        "url": "https://www.usepylon.com/pricing",
+        "quote": "API access is included on the professional and enterprise tiers"
+      },
+      {
+        "field": "access",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+        "quote": "Only Admin users can create API tokens"
+      },
+      {
+        "field": "api_type",
+        "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+        "quote": "Public REST API available at https://api.usepylon.com"
+      },
+      {
+        "field": "mcp",
+        "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+        "quote": "Official Pylon MCP Server exposes 23+ tools for AI integration"
+      }
+    ],
+    "confidence": 0.85,
+    "notes": "API requires Professional or Enterprise paid plan subscription (minimum 3-7 seats). 14-day free trial available but API access only on paid tiers. Self-serve token generation for workspace admins on paid plans. Official MCP server provides convenient AI tool integration."
+  },
+  "cost_usd": 0.44038595,
+  "turns": 6,
+  "seconds": 122.0,
+  "is_error": false,
+  "error": null
+}

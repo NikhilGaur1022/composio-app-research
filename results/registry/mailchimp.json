@@ -1,0 +1,89 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "MAILCHIMP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/mailchimp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Mailchimp",
+    "tools": 275,
+    "triggers": 4,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "mailchimp",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mailchimp",
+    "hits": [
+      {
+        "name": "io.github.asklokesh/mailchimp-mcp-server",
+        "description": "MCP server for Mailchimp API integration",
+        "repo": "https://github.com/asklokesh/mailchimp-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cyanheads/mailchimp-mcp-server",
+        "description": "Mailchimp via MCP: draft, test, and send campaigns; manage audiences and subscribers; pull reports.",
+        "repo": "https://github.com/cyanheads/mailchimp-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cyanheads/mailchimp-mcp-server",
+        "description": "Mailchimp via MCP: draft, test, and send campaigns; manage audiences and subscribers; pull reports.",
+        "repo": "https://github.com/cyanheads/mailchimp-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cyanheads/mailchimp-mcp-server",
+        "description": "Mailchimp via MCP: draft, test, and send campaigns; manage audiences and subscribers; pull reports.",
+        "repo": "https://github.com/cyanheads/mailchimp-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cyanheads/mailchimp-mcp-server",
+        "description": "Mailchimp via MCP: draft, test, and send campaigns; manage audiences and subscribers; pull reports.",
+        "repo": "https://github.com/cyanheads/mailchimp-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cyanheads/mailchimp-mcp-server",
+        "description": "Mailchimp via MCP: draft, test, and send campaigns; manage audiences and subscribers; pull reports.",
+        "repo": "https://github.com/cyanheads/mailchimp-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cyanheads/mailchimp-mcp-server",
+        "description": "Mailchimp via MCP: draft, test, and send campaigns; manage audiences and subscribers; pull reports.",
+        "repo": "https://github.com/cyanheads/mailchimp-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.cyanheads/mailchimp-mcp-server",
+        "description": "Mailchimp via MCP: draft, test, and send campaigns; manage audiences and subscribers; pull reports.",
+        "repo": "https://github.com/cyanheads/mailchimp-mcp-server",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Mailchimp",
+    "url": "https://github.com/search?q=Mailchimp+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 9128:34DF4B:2562CD:29F2D7:6AAAF904 and timestamp 2026-09-16 20:16:04 UTC. ",
+    "items": []
+  }
+}

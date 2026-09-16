@@ -1,0 +1,67 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "KLAVIYO",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/klaviyo",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Klaviyo",
+    "tools": 225,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY",
+      "OAUTH2"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "klaviyo",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=klaviyo",
+    "hits": [
+      {
+        "name": "com.mcparmory/klaviyo",
+        "description": "Create and manage email campaigns, lists, and marketing automation",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/klaviyo",
+        "description": "Create and manage email campaigns, lists, and marketing automation",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/klaviyo",
+        "description": "Klaviyo MCP Pack — wraps the Klaviyo API for email marketing",
+        "repo": "https://github.com/pipeworx-io/mcp-klaviyo",
+        "status": "active"
+      },
+      {
+        "name": "io.scalably/klaviyo-mcp",
+        "description": "Klaviyo MCP: campaigns, flows, segments, metrics, reports, profiles across many accounts. 24 tools.",
+        "repo": "https://github.com/scalably-io/klaviyo-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Klaviyo",
+    "url": "https://github.com/search?q=Klaviyo+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 8702:12059B:24B10D:293F20:6AAAF909 and timestamp 2026-09-16 20:16:09 UTC. ",
+    "items": []
+  }
+}

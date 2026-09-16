@@ -1,0 +1,54 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "paygent",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=paygent",
+    "hits": [
+      {
+        "name": "com.obsmetrics.paygent/agents",
+        "description": "Pay-per-call safety guards for AI agents: injection, tool-call, signing, secret, x402-trust.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.djautomd-lab/aipaygent",
+        "description": "Claude-powered AI tools: research, write, code, analyze, translate, debate, pitch, score, and more.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.djautomd-lab/aipaygent",
+        "description": "Claude-powered AI tools: research, write, code, analyze, translate, debate, pitch, score, and more.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "com.obsmetrics.paygent/agents",
+        "description": "Pay-per-call safety guards for AI agents: injection, tool-call, signing, secret, x402-trust.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Paygent Connect",
+    "url": "https://github.com/search?q=Paygent+Connect+mcp+server&type=repositories",
+    "items": []
+  }
+}

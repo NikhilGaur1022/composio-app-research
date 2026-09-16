@@ -1,0 +1,78 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "front",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=front",
+    "hits": [
+      {
+        "name": "ai.clize/storefront",
+        "description": "Let your AI agent run a real store: checkout, orders, refunds, shipping and support.",
+        "repo": "https://github.com/cooldk/clize-cli",
+        "status": "active"
+      },
+      {
+        "name": "ai.clize/storefront",
+        "description": "Let your AI agent run a real store: checkout, orders, refunds, shipping and support.",
+        "repo": "https://github.com/cooldk/clize-cli",
+        "status": "active"
+      },
+      {
+        "name": "ai.clize/storefront",
+        "description": "Let your AI agent run a real store: checkout, orders, refunds, shipping and support.",
+        "repo": "https://github.com/cooldk/clize-cli",
+        "status": "active"
+      },
+      {
+        "name": "ai.clize/storefront",
+        "description": "Let your AI agent run a real store: checkout, orders, refunds, shipping and support.",
+        "repo": "https://github.com/cooldk/clize-cli",
+        "status": "active"
+      },
+      {
+        "name": "ai.clize/storefront",
+        "description": "Let your AI agent run a real store: checkout, orders, refunds, shipping and support.",
+        "repo": "https://github.com/cooldk/clize-cli",
+        "status": "active"
+      },
+      {
+        "name": "ai.clize/storefront",
+        "description": "Let your AI agent run a real store: checkout, orders, refunds, shipping and support.",
+        "repo": "https://github.com/cooldk/clize-cli",
+        "status": "active"
+      },
+      {
+        "name": "ai.clize/storefront",
+        "description": "Let your AI agent run a real store: checkout, orders, refunds, shipping and support.",
+        "repo": "https://github.com/cooldk/clize-cli",
+        "status": "active"
+      },
+      {
+        "name": "ai.clize/storefront",
+        "description": "Let your AI agent run a real store: checkout, orders, refunds, shipping and support.",
+        "repo": "https://github.com/cooldk/clize-cli",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Front",
+    "url": "https://github.com/search?q=Front+mcp+server&type=repositories",
+    "error": "the JSON object must be str, bytes or bytearray, not NoneType",
+    "items": []
+  }
+}

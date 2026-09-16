@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Pumble is a team collaboration and messaging platform with a REST API for sending messages, reactions, and listing channels/DMs.",
+    "auth_methods": [
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "small",
+    "docs_url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+    "mcp": {
+      "status": "community",
+      "url": "https://github.com/infralayers/pumble-mcp"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "All endpoints expect the workspace API key in the ApiKey request header, and keys are issued from the Pumble web app at Workspace settings → API keys."
+      },
+      {
+        "field": "access",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "The addon lets you generate an API key...available on all Pumble plans to Owners, Admins, and Members."
+      },
+      {
+        "field": "api_type",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "quote": "The Pumble API addon provides simple HTTP endpoints to handle messaging actions inside your workspace."
+      },
+      {
+        "field": "mcp",
+        "url": "https://github.com/infralayers/pumble-mcp",
+        "quote": "MCP server wrapping Pumble's API-key REST addon — send/read/edit messages, DMs, and list users from Claude Code."
+      },
+      {
+        "field": "verdict",
+        "url": "https://pumble.com/pricing",
+        "quote": "Free plan with unlimited users, unlimited history, and 10GB storage...Owners, Admins, and Members can generate API keys."
+      }
+    ],
+    "notes": "Pumble offers a generous free tier with API access available to all users. Community MCP servers exist for integration with Claude. Rate limit is 1000 requests per minute per user. API breadth appears limited but covers core messaging workflows."
+  },
+  "cost_usd": 0.108726,
+  "turns": 6,
+  "seconds": 36.2,
+  "is_error": false,
+  "error": null
+}

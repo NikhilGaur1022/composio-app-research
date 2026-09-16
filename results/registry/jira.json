@@ -1,0 +1,152 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "JIRA",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/jira",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Jira",
+    "tools": 102,
+    "triggers": 17,
+    "auth_raw": [
+      "OAUTH2",
+      "S2S_OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2",
+      "other"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "atlassian.com:jira",
+    "version": "1001.0.0-SNAPSHOT",
+    "spec_url": "https://api.apis.guru/v2/specs/atlassian.com/jira/1001.0.0-SNAPSHOT/openapi.json",
+    "title": "The Jira Cloud platform REST API",
+    "url": "https://apis.guru/?q=atlassian.com",
+    "endpoints": 487,
+    "auth": [
+      "basic",
+      "oauth2"
+    ],
+    "breadth": "large"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "jira",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=jira",
+    "hits": [
+      {
+        "name": "ai.waystation/jira",
+        "description": "Track issues, manage projects, and streamline workflows in Jira.",
+        "repo": "https://github.com/waystation-ai/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/atlassian-jira",
+        "description": "Create, search, and manage issues, projects, and team workflows",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/atlassian-jira",
+        "description": "Create, search, and manage issues, projects, and team workflows",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Kujirafu/agentlore",
+        "description": "AI-verified knowledge base with trust scoring, temporal facts, and skill cards.",
+        "repo": "https://github.com/Kujirafu/agentlore",
+        "status": "active"
+      },
+      {
+        "name": "io.github.MrRefactoring/atlassian-dc-mcp-jira",
+        "description": "MCP server for Atlassian Jira Data Center - search, view, and create issues",
+        "repo": "https://github.com/MrRefactoring/atlassian-dc-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.MrRefactoring/atlassian-dc-mcp-jira",
+        "description": "MCP server for Atlassian Jira Data Center - search, view, and create issues",
+        "repo": "https://github.com/MrRefactoring/atlassian-dc-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.MrRefactoring/atlassian-dc-mcp-jira",
+        "description": "MCP server for Atlassian Jira Data Center - search, view, and create issues",
+        "repo": "https://github.com/MrRefactoring/atlassian-dc-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.MrRefactoring/atlassian-dc-mcp-jira",
+        "description": "MCP server for Atlassian Jira Data Center - search, view, and create issues",
+        "repo": "https://github.com/MrRefactoring/atlassian-dc-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Jira",
+    "url": "https://github.com/search?q=Jira+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "sooperset/mcp-atlassian",
+        "stars": 5910,
+        "url": "https://github.com/sooperset/mcp-atlassian",
+        "desc": "MCP server for Atlassian tools (Confluence, Jira)"
+      },
+      {
+        "full_name": "atlassian/atlassian-mcp-server",
+        "stars": 1112,
+        "url": "https://github.com/atlassian/atlassian-mcp-server",
+        "desc": "Official remote MCP server for Atlassian. Securely connect Jira, Confluence, Jira Service Management, Bitbucket, and Com"
+      },
+      {
+        "full_name": "nguyenvanduocit/all-in-one-model-context-protocol",
+        "stars": 107,
+        "url": "https://github.com/nguyenvanduocit/all-in-one-model-context-protocol",
+        "desc": "ðŸš€ All-in-one MCP server with AI search, RAG, and multi-service integrations (GitLab/Jira/Confluence/YouTube) for AI-e"
+      },
+      {
+        "full_name": "b1ff/atlassian-dc-mcp",
+        "stars": 96,
+        "url": "https://github.com/b1ff/atlassian-dc-mcp",
+        "desc": "MCP servers for the Atlassian products (Bitbucket, Confluence, JIRA) of the Data Center version"
+      },
+      {
+        "full_name": "aashari/mcp-server-atlassian-jira",
+        "stars": 77,
+        "url": "https://github.com/aashari/mcp-server-atlassian-jira",
+        "desc": "Node.js/TypeScript MCP server for Atlassian Jira. Equips AI systems (LLMs) with tools to list/get projects, search/get i"
+      },
+      {
+        "full_name": "George5562/Jira-MCP-Server",
+        "stars": 64,
+        "url": "https://github.com/George5562/Jira-MCP-Server",
+        "desc": "MCP server that allows interaction with Jira using natural language"
+      },
+      {
+        "full_name": "phuc-nt/mcp-atlassian-server",
+        "stars": 53,
+        "url": "https://github.com/phuc-nt/mcp-atlassian-server",
+        "desc": "MCP server connecting AI assistants with Jira & Confluence for smart project management."
+      },
+      {
+        "full_name": "cbtw-apac/qdrant-loader",
+        "stars": 53,
+        "url": "https://github.com/cbtw-apac/qdrant-loader",
+        "desc": "Enterprise-ready vector database toolkit for building searchable knowledge bases from multiple data sources. Supports mu"
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "STRIPE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/stripe",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Stripe",
+    "tools": 432,
+    "triggers": 40,
+    "auth_raw": [
+      "API_KEY",
+      "OAUTH2"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "stripe.com",
+    "version": "2022-11-15",
+    "spec_url": "https://api.apis.guru/v2/specs/stripe.com/2022-11-15/openapi.json",
+    "title": "Stripe API",
+    "url": "https://apis.guru/?q=stripe.com",
+    "endpoints": 446,
+    "auth": [
+      "basic",
+      "bearer_token"
+    ],
+    "breadth": "large"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "stripe",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=stripe",
+    "hits": [
+      {
+        "name": "app.vercel.stripecheckup/stripecheckup",
+        "description": "Scan pasted Stripe webhook/checkout code for common integration bugs.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.stripe/mcp",
+        "description": "MCP server integrating with Stripe - tools for customers, products, payments, and more.",
+        "repo": "https://github.com/stripe/agent-toolkit",
+        "status": "active"
+      },
+      {
+        "name": "eu.nordicmcp/stripe",
+        "description": "Hosted Stripe MCP server: 18 tools for payments, subscriptions, invoicing, customers, and reporting.",
+        "repo": "https://github.com/pefman/nordicmcp.eu",
+        "status": "active"
+      },
+      {
+        "name": "io.github.CSOAI-ORG/meok-stripe-acp-checkout-mcp",
+        "description": "MEOK Stripe ACP Checkout MCP — ChatGPT shopping bridge. Issues + verifies + signs Stripe Agentic",
+        "repo": "https://github.com/CSOAI-ORG/meok-stripe-acp-checkout-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.CSOAI-ORG/meok-stripe-acp-checkout-mcp",
+        "description": "MEOK Stripe ACP Checkout MCP — ChatGPT shopping bridge. Issues + verifies + signs Stripe Agentic",
+        "repo": "https://github.com/CSOAI-ORG/meok-stripe-acp-checkout-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.CSOAI-ORG/stripe-billing-mcp",
+        "description": "Stripe Billing automation via MCP. Includes create customer, search customers, create subscr...",
+        "repo": "https://github.com/CSOAI-ORG/stripe-billing-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.CSOAI-ORG/stripe-billing-mcp",
+        "description": "stripe-billing-mcp MCP server by MEOK AI Labs",
+        "repo": "https://github.com/CSOAI-ORG/stripe-billing-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.CSOAI-ORG/stripe-billing-mcp",
+        "description": "stripe-billing-mcp MCP server by MEOK AI Labs",
+        "repo": "https://github.com/CSOAI-ORG/stripe-billing-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "com.stripe/mcp",
+        "description": "MCP server integrating with Stripe - tools for customers, products, payments, and more.",
+        "repo": "https://github.com/stripe/agent-toolkit",
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Stripe",
+    "url": "https://github.com/search?q=Stripe+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "iannuttall/mcp-boilerplate",
+        "stars": 1022,
+        "url": "https://github.com/iannuttall/mcp-boilerplate",
+        "desc": "A remote Cloudflare MCP server boilerplate with user authentication and Stripe for paid tools."
+      },
+      {
+        "full_name": "marvkr/better-design",
+        "stars": 235,
+        "url": "https://github.com/marvkr/better-design",
+        "desc": "ðŸŽ¨ Open-source design MCP server + shadcn/ui registry â€” AI design systems for Claude Code, Cursor, Codex, GitHub Cop"
+      },
+      {
+        "full_name": "Humblytics/humblytics-marketing-skills",
+        "stars": 84,
+        "url": "https://github.com/Humblytics/humblytics-marketing-skills",
+        "desc": "Hosted MCP server and 12 marketing skills for Claude and Codex. Give your agent live web analytics, A/B tests, funnels, "
+      },
+      {
+        "full_name": "codex-curator/studiomcphub",
+        "stars": 7,
+        "url": "https://github.com/codex-curator/studiomcphub",
+        "desc": "Creative AI MCP server â€” 32 tools (18 free): image generation, upscaling, bg removal, mockups, CMYK, print-ready PDF, "
+      },
+      {
+        "full_name": "mbeato/APIMesh",
+        "stars": 6,
+        "url": "https://github.com/mbeato/APIMesh",
+        "desc": "APIMesh â€” 23 pay-per-call web analysis APIs + 16-tool MCP server with autonomous API generation. Security audits, SEO,"
+      },
+      {
+        "full_name": "ADPList/adplist-mcp",
+        "stars": 6,
+        "url": "https://github.com/ADPList/adplist-mcp",
+        "desc": "Find and book a free mentor through Claude â€” the official ADPList MCP server. 40K+ mentors from companies like Google,"
+      },
+      {
+        "full_name": "doc2mcp/doc2mcp",
+        "stars": 5,
+        "url": "https://github.com/doc2mcp/doc2mcp",
+        "desc": "Paste any docs URL â€” LangChain, Stripe, your own â€” and get a hosted MCP server Cursor can read in seconds. No instal"
+      },
+      {
+        "full_name": "build-with-groq/groq-stripe-mcp-chat",
+        "stars": 5,
+        "url": "https://github.com/build-with-groq/groq-stripe-mcp-chat",
+        "desc": "Natural language chat interface that allows users to interact with Stripe's Model Context Protocol (MCP) server through "
+      }
+    ]
+  }
+}

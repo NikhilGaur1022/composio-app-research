@@ -1,0 +1,88 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "HELP_SCOUT",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/help_scout",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Help Scout",
+    "tools": 129,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "help scout",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=help scout",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Help Scout",
+    "url": "https://github.com/search?q=Help+Scout+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "drewburchfield/help-scout-mcp-server",
+        "stars": 47,
+        "url": "https://github.com/drewburchfield/help-scout-mcp-server",
+        "desc": "MCP server for Help Scout - search conversations, customers, organizations, reports, and Docs with AI agents, plus opt-i"
+      },
+      {
+        "full_name": "WayLit/help-scout-mcp-server",
+        "stars": 1,
+        "url": "https://github.com/WayLit/help-scout-mcp-server",
+        "desc": "MCP server for Help Scout - search conversations, threads, and inboxes with AI agents"
+      },
+      {
+        "full_name": "unievolver/dep-scout",
+        "stars": 1,
+        "url": "https://github.com/unievolver/dep-scout",
+        "desc": "An MCP server that helps AI coding agents reuse mature packages (crates.io, npm, PyPI, Go, Maven, NuGet) instead of rein"
+      },
+      {
+        "full_name": "pipeworx-io/mcp-help-scout",
+        "stars": 0,
+        "url": "https://github.com/pipeworx-io/mcp-help-scout",
+        "desc": "MCP server for help-scout"
+      },
+      {
+        "full_name": "samiabid/helpscout-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/samiabid/helpscout-mcp-server",
+        "desc": "Model Context Protocol server for the Help Scout Mailbox API"
+      },
+      {
+        "full_name": "Simulation-Theory/help-scout-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/Simulation-Theory/help-scout-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "solveitsimply/mcp-helpscout",
+        "stars": 0,
+        "url": "https://github.com/solveitsimply/mcp-helpscout",
+        "desc": "MCP server for the full Help Scout API (Docs + Inbox)"
+      },
+      {
+        "full_name": "BusyBee3333/help-scout-mcp-2026-complete",
+        "stars": 0,
+        "url": "https://github.com/BusyBee3333/help-scout-mcp-2026-complete",
+        "desc": "MCP server for Help Scout API - Complete 2026 version with 100+ tools"
+      }
+    ]
+  }
+}

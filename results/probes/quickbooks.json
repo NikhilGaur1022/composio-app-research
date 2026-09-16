@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developer.intuit.com",
+    "status": 200,
+    "final_url": "https://developer.intuit.com/app/developer/homepage",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://quickbooks.api.intuit.com/v3/company/1/companyinfo/1",
+    "status": 401,
+    "www_authenticate": "Bearer realm=\"Intuit\"",
+    "body_snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> <IntuitResponse time=\"2026-09-16T13:21:18.009-07:00\" xmlns=\"http://schema.intuit.com/finance/v3\">     <Fault type=\"AUTHENTICATION\">         <Err",
+    "inferred_scheme": "bearer_token",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

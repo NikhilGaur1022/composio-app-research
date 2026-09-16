@@ -1,0 +1,40 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "HIGHLEVEL",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/highlevel",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Highlevel",
+    "tools": 218,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "gohighlevel",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=gohighlevel",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "GoHighLevel",
+    "url": "https://github.com/search?q=GoHighLevel+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID A13E:31F045:246414:28F0CE:6AAAF904 and timestamp 2026-09-16 20:16:04 UTC. ",
+    "items": []
+  }
+}

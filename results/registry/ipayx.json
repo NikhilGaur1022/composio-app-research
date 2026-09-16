@@ -1,0 +1,60 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "ipayx",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ipayx",
+    "hits": [
+      {
+        "name": "io.github.Ipayx-stellar/fx-audit",
+        "description": "Forensic FX audit. Detects hidden bank markups in real time. Returns spread bps + audit score 1-10.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.iPAYX-Technologies/mcp-fx-audit",
+        "description": "FX forensic audit MCP. Detects hidden bank markups on cross-border payments. FINTRAC MSB.",
+        "repo": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+        "status": "active"
+      },
+      {
+        "name": "io.github.iPAYX-Technologies/mcp-fx-audit",
+        "description": "FX forensic audit MCP. Detects hidden bank markups on cross-border payments. FINTRAC MSB.",
+        "repo": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "iPayX",
+    "url": "https://github.com/search?q=iPayX+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "Ipayx-stellar/mcp-submit",
+        "stars": 0,
+        "url": "https://github.com/Ipayx-stellar/mcp-submit",
+        "desc": "One-click CLI to submit MCP servers to all major registries (registry.modelcontextprotocol.io, Smithery, Glama, Claude D"
+      },
+      {
+        "full_name": "Ipayx-stellar/mcp-fx-audit",
+        "stars": 0,
+        "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+        "desc": "MCP server for iPayX Protocol â€” audit FX fees, compare currency margins and score cross-border invoices in Claude, Cur"
+      }
+    ]
+  }
+}

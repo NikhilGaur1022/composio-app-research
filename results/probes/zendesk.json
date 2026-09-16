@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://zendesk.com",
+    "status": 200,
+    "final_url": "https://www.zendesk.com/in/#georedirect",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://support.zendesk.com/api/v2/tickets.json",
+    "status": 401,
+    "www_authenticate": "Zendesk realm=\"API\"",
+    "body_snippet": "{\"error\":\"Couldn't authenticate you\"}",
+    "inferred_scheme": "other",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

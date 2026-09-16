@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "LinkedIn's API for programmatic management and optimization of advertising campaigns and accounts.",
+    "auth_methods": [
+      "oauth2"
+    ],
+    "access": "partner_gated",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "red",
+    "blocker": "partner_gate",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+        "quote": "The LinkedIn API uses OAuth 2.0 to authorize applications and grant secure access to LinkedIn resources."
+      },
+      {
+        "field": "access",
+        "url": "https://docs.airbyte.com/integrations/sources/linkedin-ads",
+        "quote": "LinkedIn ad campaign data, conversion tracking, and ad management APIs require a partnership agreement and are invitation-based, available for ad agencies and LinkedIn Marketing Partners only."
+      },
+      {
+        "field": "api_type",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+        "quote": "LinkedIn uses v2 and REST patterns for its approved products using the Rest.li microservices architecture."
+      },
+      {
+        "field": "verdict",
+        "url": "https://www.getphyllo.com/post/linkedin-api-ultimate-guide-on-linkedin-api-integration",
+        "quote": "Enterprise deals start past $50,000 and require partnership agreements with approval timelines of 4-8 weeks on fast path."
+      }
+    ],
+    "confidence": 0.78,
+    "notes": "LinkedIn Ads API is strictly partner-gated and requires both admin approval and a paid partnership agreement. Free tier access is limited to basic profile endpoints only. No official MCP server available. API rate limit is 100 requests/minute. Estimated cost starts at $699+/month for approved partners."
+  },
+  "cost_usd": 0.1300455,
+  "turns": 5,
+  "seconds": 56.8,
+  "is_error": false,
+  "error": null
+}

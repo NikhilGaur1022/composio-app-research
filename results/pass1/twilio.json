@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Twilio is a cloud communications platform enabling developers to send SMS, make voice calls, and manage messaging across multiple channels via APIs.",
+    "auth_methods": [
+      "api_key",
+      "basic",
+      "bearer_token"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://www.twilio.com/docs/",
+    "mcp": {
+      "status": "official",
+      "url": "https://www.twilio.com/docs/ai/mcp"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://www.twilio.com/docs/iam/api",
+        "quote": "HTTP Basic authentication for authenticating requests to the Twilio APIs, using your API key SID as the username and your API key secret as the password"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.twilio.com/docs/iam/api-keys",
+        "quote": "API keys are the preferred way to authenticate with Twilio's REST APIs"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://www.twilio.com/docs/iam/access-tokens",
+        "quote": "Access Tokens are short-lived tokens that you use to authenticate Twilio client-side SDKs"
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/en-us/pricing",
+        "quote": "No credit card is required to start and you only pay for what you use"
+      },
+      {
+        "field": "access",
+        "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+        "quote": "Your Twilio trial account uses the same account credentials that you use after you upgrade, with no separate trial-only credentials"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://www.twilio.com/en-us/blog/introducing-twilio-mcp-skills",
+        "quote": "The Twilio Model Context Protocol (MCP) server gives AI coding agents direct, structured access to Twilio's full API surface—over 1,800 endpoints across 30+ products"
+      },
+      {
+        "field": "mcp",
+        "url": "https://www.twilio.com/docs/ai/mcp",
+        "quote": "Twilio MCP server exposes tools generating them directly from Twilio's OpenAPI specifications"
+      }
+    ],
+    "confidence": 0.95,
+    "notes": "Twilio offers self-serve free tier access with full REST API capabilities. Official MCP server is available. Large API surface (1400+ endpoints) is manageable via MCP's service/tag filtering."
+  },
+  "cost_usd": 0.1157628,
+  "turns": 6,
+  "seconds": 38.1,
+  "is_error": false,
+  "error": null
+}

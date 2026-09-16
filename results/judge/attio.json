@@ -1,0 +1,93 @@
+{
+  "name": "Attio",
+  "checked": 8,
+  "grounded": 7,
+  "unreachable": 0,
+  "items": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "Attio implements the standard OAuth 2.0 specification.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "We also support HTTP Basic Authentication, where the username is the token and the password is left blank.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "you can generate an API key in the developer settings page of your apps",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "access",
+      "url": "https://attio.com/pricing",
+      "quote": "API and webhook access",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "api_type",
+      "url": "https://docs.attio.com/",
+      "quote": "REST API",
+      "status": 200,
+      "verdict": "not_grounded",
+      "score": 0.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.attio.com/mcp/overview",
+      "quote": "Attio MCP is Attio's hosted MCP server",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "mcp",
+      "url": "https://docs.attio.com/mcp/overview",
+      "quote": "Attio MCP uses OAuth authentication, so you simply log in with your Attio account—no API keys required.",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    },
+    {
+      "field": "verdict",
+      "url": "https://attio.com/pricing",
+      "quote": "API and webhook access",
+      "status": 200,
+      "verdict": "grounded",
+      "score": 1.0
+    }
+  ],
+  "grounding_rate": 0.88,
+  "by_field": {
+    "auth_methods": [
+      "grounded",
+      "grounded",
+      "grounded"
+    ],
+    "access": [
+      "grounded"
+    ],
+    "api_type": [
+      "not_grounded"
+    ],
+    "mcp": [
+      "grounded",
+      "grounded"
+    ],
+    "verdict": [
+      "grounded"
+    ]
+  }
+}

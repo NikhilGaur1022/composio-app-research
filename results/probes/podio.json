@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://podio.com",
+    "status": 200,
+    "final_url": "https://podio.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.podio.com/org/",
+    "status": 401,
+    "www_authenticate": "Bearer realm=\"podio\", error=\"invalid_request\"",
+    "body_snippet": "{\"error\":\"unauthorized\",\"error_detail\":null,\"error_description\":\"invalid_request\",\"error_parameters\":{},\"error_propagate\":false,\"request\":{\"url\":\"/org/\",\"method\":\"GET\",\"query_string\":\"\"}}",
+    "inferred_scheme": "bearer_token",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

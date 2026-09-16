@@ -1,0 +1,98 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "AIRTABLE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/airtable",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Airtable",
+    "tools": 26,
+    "triggers": 6,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "airtable",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=airtable",
+    "hits": [
+      {
+        "name": "ai.waystation/airtable",
+        "description": "Access and manage your Airtable bases, tables, and records seamlessly",
+        "repo": "https://github.com/waystation-ai/mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.airtable/mcp",
+        "description": "Official Airtable MCP server — database and operations layer for agents.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/airtable",
+        "description": "Create, read, update, and delete records in Airtable bases and tables",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/airtable",
+        "description": "Create, read, update, and delete records in Airtable bases and tables",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Automations-Project/airtable-user-mcp",
+        "description": "Manage Airtable bases: schema, field CRUD, views, formula validation, extensions",
+        "repo": "https://github.com/Automations-Project/VSCode-Airtable-Formula",
+        "status": "active"
+      },
+      {
+        "name": "io.github.domdomegg/airtable-mcp-server",
+        "description": "Read and write access to Airtable database schemas, tables, and records.",
+        "repo": "https://github.com/domdomegg/airtable-mcp-server.git",
+        "status": "active"
+      },
+      {
+        "name": "io.github.domdomegg/airtable-mcp-server",
+        "description": "Read and write access to Airtable database schemas, tables, and records.",
+        "repo": "https://github.com/domdomegg/airtable-mcp-server.git",
+        "status": "active"
+      },
+      {
+        "name": "io.github.domdomegg/airtable-mcp-server",
+        "description": "Read and write access to Airtable database schemas, tables, and records.",
+        "repo": "https://github.com/domdomegg/airtable-mcp-server.git",
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "com.airtable/mcp",
+        "description": "Official Airtable MCP server — database and operations layer for agents.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Airtable",
+    "url": "https://github.com/search?q=Airtable+mcp+server&type=repositories",
+    "error": "the JSON object must be str, bytes or bytearray, not NoneType",
+    "items": []
+  }
+}

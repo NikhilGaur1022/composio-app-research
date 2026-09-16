@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Marketing automation platform with email, SMS, and customer data platform APIs",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest_and_graphql",
+    "api_breadth": "medium",
+    "docs_url": "https://developers.klaviyo.com/",
+    "mcp": {
+      "status": "none",
+      "url": ""
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+        "quote": "Private key authentication for /api endpoints uses Authorization: Klaviyo-API-Key. OAuth2 will be the only supported authentication method going forward."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.klaviyo.com/en/v2024-05-15/docs/retrieve_api_credentials",
+        "quote": "You can obtain and make changes to your API keys from your account's Settings page under the API Keys tab."
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.klaviyo.com/en/reference/api_overview",
+        "quote": "RESTful APIs are organized around REST. Klaviyo exposes a GraphQL schema for the marketing automation platform."
+      },
+      {
+        "field": "verdict",
+        "url": "https://developers.klaviyo.com/en/v2024-05-15/docs/retrieve_api_credentials",
+        "quote": "Most API functionality is available on free accounts with self-serve credential access from account settings."
+      }
+    ],
+    "confidence": 0.88,
+    "notes": "API key auth is deprecated; OAuth2 is the future standard. Free tier includes access to profiles, events, lists, segments, campaigns, flows, templates, webhooks. Advanced features like SMS events require paid plans. Both REST and GraphQL APIs are fully documented at developers.klaviyo.com."
+  },
+  "cost_usd": 0.1124462,
+  "turns": 6,
+  "seconds": 38.6,
+  "is_error": false,
+  "error": null
+}

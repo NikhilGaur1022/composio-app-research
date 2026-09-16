@@ -1,0 +1,93 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "SHOPIFY",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/shopify",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Shopify",
+    "tools": 407,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY",
+      "OAUTH2",
+      "S2S_OAUTH2"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2",
+      "other"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "shopify",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=shopify",
+    "hits": [
+      {
+        "name": "ai.gossiper/shopify-admin-mcp",
+        "description": "Control Shopify Admin tasks with agents or via prompt. Ultra slim integration, fast and secure.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.bestappify/shopify-app-store",
+        "description": "Shopify App Store intelligence: keyword ranks, competitors, reviews, revenue. Free tier.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.hasdata/shopify",
+        "description": "The public product catalogue and collections of any Shopify storefront, as structured JSON.",
+        "repo": "https://github.com/HasData/shopify-mcp",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/shopify-admin",
+        "description": "Manage products, orders, customers, inventory, and store configuration",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/shopify-admin",
+        "description": "Manage products, orders, customers, inventory, and store configuration",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/shopify-admin",
+        "description": "Manage products, orders, customers, inventory, and store configuration",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.mcparmory/shopify-admin",
+        "description": "Manage products, orders, customers, inventory, and store configuration",
+        "repo": "https://github.com/mcparmory/registry",
+        "status": "active"
+      },
+      {
+        "name": "com.moltlinestudio/shopify",
+        "description": "Check a product CSV, handles, variant matrices and metafield keys. 4 of 6 free.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Shopify",
+    "url": "https://github.com/search?q=Shopify+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 8B76:34DF4B:256852:29F921:6AAAF90B and timestamp 2026-09-16 20:16:11 UTC. ",
+    "items": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "XERO",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/xero",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Xero",
+    "tools": 53,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "xero.com:xero_accounting",
+    "version": "2.9.4",
+    "spec_url": "https://api.apis.guru/v2/specs/xero.com/xero_accounting/2.9.4/openapi.json",
+    "title": "Xero Accounting API",
+    "url": "https://apis.guru/?q=xero.com",
+    "endpoints": 224,
+    "auth": [
+      "oauth2"
+    ],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "xero",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=xero",
+    "hits": [
+      {
+        "name": "com.getboxkite/xero-backup-export",
+        "description": "Complete read-only backup and export of Xero accounting data as a ZIP plus a manifest.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.getboxkite/xero-backup-export",
+        "description": "Complete read-only backup and export of Xero accounting data as a ZIP plus a manifest.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/xero-mcp",
+        "description": "Every Xero Accounting read plus a local SQLite ledger  -  aging, reconciliation, and GL tie-out",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/xero-mcp",
+        "description": "Every Xero Accounting read plus a local SQLite ledger  -  aging, reconciliation, and GL tie-out",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/xero-mcp",
+        "description": "Every Xero Accounting read plus a local SQLite ledger  -  aging, reconciliation, and GL tie-out",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/xero-mcp",
+        "description": "Every Xero Accounting read plus a local SQLite ledger  -  aging, reconciliation, and GL tie-out",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/xero-mcp",
+        "description": "Every Xero Accounting read plus a local SQLite ledger  -  aging, reconciliation, and GL tie-out",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.WYRE-AI/xero-mcp",
+        "description": "MCP server for Xero accounting — contacts, invoices, payments, accounts, and financial reports.",
+        "repo": "https://github.com/WYRE-AI/xero-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Xero",
+    "url": "https://github.com/search?q=Xero+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID A751:28620D:256FF8:2A061E:6AAAF94D and timestamp 2026-09-16 20:17:18 UTC. ",
+    "items": []
+  }
+}

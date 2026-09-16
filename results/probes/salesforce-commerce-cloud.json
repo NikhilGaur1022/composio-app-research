@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://developer.salesforce.com/docs/commerce",
+    "status": 200,
+    "final_url": "https://developer.salesforce.com/developer-centers/commerce-cloud",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://account.demandware.com/dwsso/oauth2/access_token",
+    "status": 405,
+    "www_authenticate": null,
+    "body_snippet": "{\"error\":\"HTTP 405 Method Not Allowed\"}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

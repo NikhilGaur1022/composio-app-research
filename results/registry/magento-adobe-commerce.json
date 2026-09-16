@@ -1,0 +1,88 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "adobe.com:aem",
+    "version": "3.7.1-pre.0",
+    "spec_url": "https://api.apis.guru/v2/specs/adobe.com/aem/3.7.1-pre.0/openapi.json",
+    "title": "Adobe Experience Manager (AEM) API",
+    "url": "https://apis.guru/?q=adobe.com",
+    "endpoints": 48,
+    "auth": [
+      "basic"
+    ],
+    "breadth": "small"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "magento",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=magento",
+    "hits": [
+      {
+        "name": "io.github.juan-cinto-infracommerce/magento-cloud",
+        "description": "MCP server wrapping the magento-cloud CLI for database queries, logs, and environment management",
+        "repo": "https://github.com/juan-cinto-infracommerce/mcp-magento-cloud",
+        "status": "active"
+      },
+      {
+        "name": "io.github.juan-cinto-infracommerce/magento-cloud",
+        "description": "MCP server wrapping the magento-cloud CLI for database queries, logs, and environment management",
+        "repo": "https://github.com/juan-cinto-infracommerce/mcp-magento-cloud",
+        "status": "active"
+      },
+      {
+        "name": "io.github.juan-cinto-infracommerce/magento-cloud",
+        "description": "MCP server wrapping the magento-cloud CLI for database queries, logs, and environment management",
+        "repo": "https://github.com/juan-cinto-infracommerce/mcp-magento-cloud",
+        "status": "active"
+      },
+      {
+        "name": "io.github.juan-cinto-infracommerce/magento-cloud",
+        "description": "MCP server for Adobe Commerce Cloud — REST API + SSH, no PHP CLI required",
+        "repo": "https://github.com/juan-cinto-infracommerce/mcp-magento-cloud",
+        "status": "active"
+      },
+      {
+        "name": "io.github.juan-cinto-infracommerce/magento-cloud",
+        "description": "MCP server for Adobe Commerce Cloud — REST API + SSH, no PHP CLI required",
+        "repo": "https://github.com/juan-cinto-infracommerce/mcp-magento-cloud",
+        "status": "active"
+      },
+      {
+        "name": "io.github.juan-cinto-infracommerce/magento-cloud",
+        "description": "MCP server for Adobe Commerce Cloud — REST API + SSH, no PHP CLI required",
+        "repo": "https://github.com/juan-cinto-infracommerce/mcp-magento-cloud",
+        "status": "active"
+      },
+      {
+        "name": "io.github.juan-cinto-infracommerce/magento-cloud",
+        "description": "MCP server for Adobe Commerce Cloud — REST API + SSH, no PHP CLI required",
+        "repo": "https://github.com/juan-cinto-infracommerce/mcp-magento-cloud",
+        "status": "active"
+      },
+      {
+        "name": "io.github.juan-cinto-infracommerce/magento-cloud",
+        "description": "MCP server for Adobe Commerce Cloud — REST API + SSH, no PHP CLI required",
+        "repo": "https://github.com/juan-cinto-infracommerce/mcp-magento-cloud",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Magento",
+    "url": "https://github.com/search?q=Magento+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 8973:32835C:24B662:2944A8:6AAAF914 and timestamp 2026-09-16 20:16:20 UTC. ",
+    "items": []
+  }
+}

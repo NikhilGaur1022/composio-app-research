@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://docs.netlify.com/api",
+    "status": 200,
+    "final_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": true,
+    "api_key": false,
+    "bearer": true,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": true,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.netlify.com/api/v1/sites",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"code\":401,\"message\":\"Access Denied\"}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

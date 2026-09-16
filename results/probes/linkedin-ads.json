@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://learn.microsoft.com/linkedin/marketing",
+    "status": 200,
+    "final_url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-09",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.linkedin.com/rest/adAccounts",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"status\":401,\"serviceErrorCode\":65604,\"code\":\"EMPTY_ACCESS_TOKEN\",\"message\":\"Empty oauth2 access token\"}",
+    "inferred_scheme": "oauth2",
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

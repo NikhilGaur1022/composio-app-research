@@ -1,0 +1,78 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "GORGIAS",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/gorgias",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Gorgias",
+    "tools": 32,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY",
+      "OAUTH2"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "gorgias",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=gorgias",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Gorgias",
+    "url": "https://github.com/search?q=Gorgias+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "mattcoatsworth/Gorgias-MCP-Server",
+        "stars": 4,
+        "url": "https://github.com/mattcoatsworth/Gorgias-MCP-Server",
+        "desc": ""
+      },
+      {
+        "full_name": "benpalmer1/Gorgias-MCP-Server",
+        "stars": 2,
+        "url": "https://github.com/benpalmer1/Gorgias-MCP-Server",
+        "desc": "Helpful MCP server for the Gorgias API"
+      },
+      {
+        "full_name": "Elie-Elia/gorgias-mcp",
+        "stars": 0,
+        "url": "https://github.com/Elie-Elia/gorgias-mcp",
+        "desc": "MCP server: Gorgias MCP Server"
+      },
+      {
+        "full_name": "richa-lwp/gorgias-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/richa-lwp/gorgias-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "NoBanks/gorgias-mcp",
+        "stars": 0,
+        "url": "https://github.com/NoBanks/gorgias-mcp",
+        "desc": "MCP server for Gorgias, the e-commerce customer support helpdesk. 5 tools for AI agents to triage tickets, read context,"
+      },
+      {
+        "full_name": "chrisyoungcooks/gorgias-pp-cli",
+        "stars": 0,
+        "url": "https://github.com/chrisyoungcooks/gorgias-pp-cli",
+        "desc": "Token-efficient Go CLI + MCP server for the Gorgias customer support REST API. Built with the Printing Press framework."
+      }
+    ]
+  }
+}

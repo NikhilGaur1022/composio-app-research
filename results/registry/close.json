@@ -1,0 +1,156 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "CLOSE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/close",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Close",
+    "tools": 6,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "close",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=close",
+    "hits": [
+      {
+        "name": "city.close/close-api",
+        "description": "Walk, bike, and transit travel times from every US census block to nearby amenities.",
+        "repo": "https://github.com/henryspatialanalysis/wtm.api",
+        "status": "active"
+      },
+      {
+        "name": "city.close/close-api",
+        "description": "Walk, bike, and transit travel times from every US census block to nearby amenities.",
+        "repo": "https://github.com/henryspatialanalysis/wtm.api",
+        "status": "active"
+      },
+      {
+        "name": "com.close/close-mcp",
+        "description": "Close CRM to manage your sales pipeline. Learn more at https://close.com or https://mcp.close.com",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.close/close-mcp",
+        "description": "Close CRM to manage your sales pipeline. Learn more at https://close.com or https://mcp.close.com",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.Evozim/b2b-lead-closer-mcp",
+        "description": "Premium agentic endpoint for b2b-lead-closer-mcp.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.Evozim/salescloser-ai",
+        "description": "Conversational sales call auditor grading pitch conversion rates.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.FreeGuy-AI/closeread-verify",
+        "description": "A verified dependency-audit verdict any AI agent can call over MCP, not a raw scan.",
+        "repo": "https://github.com/FreeGuy-AI/closeread-verify",
+        "status": "active"
+      },
+      {
+        "name": "io.github.FreeGuy-AI/closeread-verify",
+        "description": "A verified dependency-audit verdict any AI agent can call over MCP, not a raw scan.",
+        "repo": "https://github.com/FreeGuy-AI/closeread-verify",
+        "status": "active"
+      }
+    ],
+    "official": [
+      {
+        "name": "city.close/close-api",
+        "description": "Walk, bike, and transit travel times from every US census block to nearby amenities.",
+        "repo": "https://github.com/henryspatialanalysis/wtm.api",
+        "status": "active"
+      },
+      {
+        "name": "city.close/close-api",
+        "description": "Walk, bike, and transit travel times from every US census block to nearby amenities.",
+        "repo": "https://github.com/henryspatialanalysis/wtm.api",
+        "status": "active"
+      },
+      {
+        "name": "com.close/close-mcp",
+        "description": "Close CRM to manage your sales pipeline. Learn more at https://close.com or https://mcp.close.com",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "status": "official"
+  },
+  "github": {
+    "source": "github",
+    "query": "Close",
+    "url": "https://github.com/search?q=Close+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "runekaagaard/mcp-redmine",
+        "stars": 243,
+        "url": "https://github.com/runekaagaard/mcp-redmine",
+        "desc": "A redmine MCP server covering close to 100% of redmines API"
+      },
+      {
+        "full_name": "puran-water/mathcad-mcp",
+        "stars": 17,
+        "url": "https://github.com/puran-water/mathcad-mcp",
+        "desc": "MCP server for PTC MathCAD Prime control: AI agents manage worksheet operations (open/close/save), set/retrieve values w"
+      },
+      {
+        "full_name": "fmepm/oracle-epm-mcp-server",
+        "stars": 14,
+        "url": "https://github.com/fmepm/oracle-epm-mcp-server",
+        "desc": "Open-source MCP server connecting Claude AI to Oracle EPM Cloud via REST APIs. Run business rules, export data, and auto"
+      },
+      {
+        "full_name": "wgaostudio/closetscan",
+        "stars": 7,
+        "url": "https://github.com/wgaostudio/closetscan",
+        "desc": "Turn a closet walkthrough video into a searchable wardrobe catalogue, with a local MCP server and agent skill"
+      },
+      {
+        "full_name": "na77tech-creator/aikstockdata",
+        "stars": 7,
+        "url": "https://github.com/na77tech-creator/aikstockdata",
+        "desc": "Korean stock market data for AI - KOSPI/KOSDAQ/KONEX confirmed closes, DART filings in plain language, and post-filing p"
+      },
+      {
+        "full_name": "PsychQuant/che-word-mcp",
+        "stars": 6,
+        "url": "https://github.com/PsychQuant/che-word-mcp",
+        "desc": "Swift-native MCP server for Microsoft Word (.docx) â€” 233 tools, the first pure-Swift OOXML library (no Word required)."
+      },
+      {
+        "full_name": "unclaimed-sol/unclaimed-sol-mcp",
+        "stars": 5,
+        "url": "https://github.com/unclaimed-sol/unclaimed-sol-mcp",
+        "desc": "MCP server for scanning and claiming reclaimable SOL from dormant Solana wallet accounts. Vibe Claiming â€” close empty "
+      },
+      {
+        "full_name": "willy92wins/dayz-mcp",
+        "stars": 5,
+        "url": "https://github.com/willy92wins/dayz-mcp",
+        "desc": "MCP tool to enable complete AI control over your dayz client/server. Used to develop many mods. Can be used to close the"
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "SALESFORCE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/salesforce",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Salesforce",
+    "tools": 223,
+    "triggers": 7,
+    "auth_raw": [
+      "OAUTH2",
+      "S2S_OAUTH2"
+    ],
+    "auth": [
+      "oauth2",
+      "other"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "salesforce.local:einstein",
+    "version": "2.0.1",
+    "spec_url": "https://api.apis.guru/v2/specs/salesforce.local/einstein/2.0.1/openapi.json",
+    "title": "Einstein Vision and Einstein Language",
+    "url": "https://apis.guru/?q=salesforce.local",
+    "endpoints": 45,
+    "auth": [
+      "bearer_token"
+    ],
+    "breadth": "small"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "salesforce",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=salesforce",
+    "hits": [
+      {
+        "name": "ai.cirra/salesforce-mcp",
+        "description": "Comprehensive Salesforce administration and data management capabilities",
+        "repo": "https://github.com/cirra-ai/mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "ai.cirra/salesforce-mcp",
+        "description": "Comprehensive Salesforce administration and management",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.cirra/salesforce-mcp",
+        "description": "Comprehensive Salesforce administration and management",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kodey-ai-salesforce-mcp",
+        "description": "Run SOQL queries to explore and retrieve Salesforce data. Inspect records, fields, and relationshi…",
+        "repo": "https://github.com/kodey-ai/salesforce-mcp",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kodey-ai-salesforce-mcp-kodey",
+        "description": "Run SOQL queries against your Salesforce org to explore and retrieve data. Quickly iterate on filt…",
+        "repo": "https://github.com/kodey-ai/salesforce-mcp",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kodey-ai-salesforce-mcp-minimal",
+        "description": "Run SOQL queries to explore and retrieve Salesforce data. Access accounts, contacts, opportunities…",
+        "repo": "https://github.com/kodey-ai/salesforce-mcp",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/kodey-ai-salesforce-mcp-server",
+        "description": "Run SOQL queries against your Salesforce org to retrieve records and insights. Explore objects, fi…",
+        "repo": "https://github.com/kodey-ai/salesforce-mcp",
+        "status": "active"
+      },
+      {
+        "name": "cloud.serpent/salesforce-devops",
+        "description": "Plan Salesforce deploys, open pull requests and trigger pipelines from your AI client.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Salesforce",
+    "url": "https://github.com/search?q=Salesforce+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "salesforcecli/mcp",
+        "stars": 469,
+        "url": "https://github.com/salesforcecli/mcp",
+        "desc": "MCP Server for interacting with Salesforce instances"
+      },
+      {
+        "full_name": "tsmztech/mcp-server-salesforce",
+        "stars": 168,
+        "url": "https://github.com/tsmztech/mcp-server-salesforce",
+        "desc": "Salesforce MCP Server"
+      },
+      {
+        "full_name": "forcedotcom/mcp-hosted",
+        "stars": 135,
+        "url": "https://github.com/forcedotcom/mcp-hosted",
+        "desc": "Salesforce Hosted MCP Servers"
+      },
+      {
+        "full_name": "kablewy/salesforce-mcp-server",
+        "stars": 45,
+        "url": "https://github.com/kablewy/salesforce-mcp-server",
+        "desc": "Model Context Protocol server for Salesforce REST API integration"
+      },
+      {
+        "full_name": "jaworjar95/salesforce-mcp-server",
+        "stars": 43,
+        "url": "https://github.com/jaworjar95/salesforce-mcp-server",
+        "desc": "A comprehensive Model Context Protocol (MCP) server that provides seamless Salesforce integration for AI development too"
+      },
+      {
+        "full_name": "advancedcommunities/salesforce-mcp-server",
+        "stars": 31,
+        "url": "https://github.com/advancedcommunities/salesforce-mcp-server",
+        "desc": "MCP server that enables AI assistants to interact with Salesforce orgs through the Salesforce CLI, providing tools for A"
+      },
+      {
+        "full_name": "certinia/debug-log-analyzer-mcp",
+        "stars": 31,
+        "url": "https://github.com/certinia/debug-log-analyzer-mcp",
+        "desc": "Apex Log MCP Server - AI-powered Salesforce Apex debug log analysis. Find performance bottlenecks, slow methods, SOQL bo"
+      },
+      {
+        "full_name": "timescale/tiger-salesforce-mcp-server",
+        "stars": 23,
+        "url": "https://github.com/timescale/tiger-salesforce-mcp-server",
+        "desc": "API wrapped around our salesforce database"
+      }
+    ]
+  }
+}

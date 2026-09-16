@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://close.com",
+    "status": 200,
+    "final_url": "https://close.com",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": true,
+    "contact_sales": false,
+    "free_tier": true,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.close.com/api/v1/lead/",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"error\": \"Unauthorized\"} ",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": "https://api.close.com/.well-known/oauth-authorization-server"
+  }
+}

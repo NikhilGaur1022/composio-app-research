@@ -1,0 +1,47 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "HIGGSFIELD_MCP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/higgsfield_mcp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Higgsfield MCP",
+    "tools": 101,
+    "triggers": 0,
+    "auth_raw": [
+      "DCR_OAUTH"
+    ],
+    "auth": [
+      "other"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": true
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "higgsfield",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=higgsfield",
+    "hits": [
+      {
+        "name": "app.higgsfield.mizan-bazar/mizan",
+        "description": "Check an x402 endpoint before your agent pays it: avoid / caution / ok, proven on-chain.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "higgsfield",
+    "url": "https://github.com/search?q=higgsfield+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 953F:B59EF:25BC51:2A575A:6AAAF957 and timestamp 2026-09-16 20:17:27 UTC. F",
+    "items": []
+  }
+}

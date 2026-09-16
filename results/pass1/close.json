@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Close is a cloud-based CRM platform with REST API, OAuth 2.0, and API key authentication, offering self-serve developer access with an official MCP server.",
+    "auth_methods": [
+      "api_key",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developer.close.com/",
+    "mcp": {
+      "status": "official",
+      "url": "https://help.close.com/docs/mcp-server"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "confidence": 0.92,
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.close.com/api/overview/api-key-authentication",
+        "quote": "Authentication with API keys | Close | Developer API Documentation"
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://developer.close.com/topics/authentication-oauth2/",
+        "quote": "Authentication with OAuth - Close API Documentation"
+      },
+      {
+        "field": "access",
+        "url": "https://help.close.com/docs/api-keys-oauth",
+        "quote": "API keys & OAuth - Close Help"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developer.close.com/api",
+        "quote": "Close API documentation references endpoints like GET /lead/ with query parameters and follows REST conventions"
+      },
+      {
+        "field": "mcp",
+        "url": "https://help.close.com/docs/mcp-server",
+        "quote": "Close MCP Server"
+      }
+    ],
+    "notes": "Close offers straightforward API access through self-serve credentials in account Settings. Both API key (HTTP Basic Auth) and OAuth 2.0 are supported for different use cases. The platform has an official MCP server for Claude integration. API breadth estimated at medium based on core CRM resources (leads, opportunities, contacts, webhooks, etc.)."
+  },
+  "cost_usd": 0.14199375000000003,
+  "turns": 4,
+  "seconds": 207.8,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,137 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "FRESHDESK",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/freshdesk",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Freshdesk",
+    "tools": 178,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "freshdesk",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=freshdesk",
+    "hits": [
+      {
+        "name": "io.github.WYRE-AI/freshdesk-mcp",
+        "description": "MCP server for Freshdesk — tickets, contacts, companies, agents, groups, and knowledge base.",
+        "repo": "https://github.com/WYRE-AI/freshdesk-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.mindstone/mcp-server-freshdesk",
+        "description": "Freshdesk Support MCP server for Model Context Protocol hosts",
+        "repo": "https://github.com/mindstone/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "io.github.mindstone/mcp-server-freshdesk",
+        "description": "Freshdesk Support MCP server for Model Context Protocol hosts",
+        "repo": "https://github.com/mindstone/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "io.github.mindstone/mcp-server-freshdesk",
+        "description": "Freshdesk Support MCP server for Model Context Protocol hosts",
+        "repo": "https://github.com/mindstone/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/freshdesk",
+        "description": "Freshdesk MCP Pack — helpdesk ticket and contact management via Freshdesk API v2.",
+        "repo": "https://github.com/pipeworx-io/mcp-freshdesk",
+        "status": "active"
+      },
+      {
+        "name": "io.github.pipeworx-io/freshdesk",
+        "description": "Freshdesk MCP Pack — helpdesk ticket and contact management via Freshdesk API v2.",
+        "repo": "https://github.com/pipeworx-io/mcp-freshdesk",
+        "status": "active"
+      },
+      {
+        "name": "io.github.wyre-technology/freshdesk-mcp",
+        "description": "MCP server for Freshdesk — tickets, contacts, companies, agents, groups, and knowledge base.",
+        "repo": "https://github.com/wyre-technology/freshdesk-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.wyre-technology/freshdesk-mcp",
+        "description": "MCP server for Freshdesk — tickets, contacts, companies, agents, groups, and knowledge base.",
+        "repo": "https://github.com/wyre-technology/freshdesk-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Freshdesk",
+    "url": "https://github.com/search?q=Freshdesk+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "effytech/freshdesk_mcp",
+        "stars": 68,
+        "url": "https://github.com/effytech/freshdesk_mcp",
+        "desc": "MCP server created for Freshdesk, allowing AI models to interact with Freshdesk modules"
+      },
+      {
+        "full_name": "Enreign/freshdeck-mcp",
+        "stars": 12,
+        "url": "https://github.com/Enreign/freshdeck-mcp",
+        "desc": "A Model Context Protocol (MCP) server implementation for Freshdesk API v2 integration. This server provides tools for ma"
+      },
+      {
+        "full_name": "hashcott/freshdesk-mcp",
+        "stars": 3,
+        "url": "https://github.com/hashcott/freshdesk-mcp",
+        "desc": "MCP server for Freshdesk â€” 194 tools, stdio & HTTP transports, full Zod validation. Works with Claude, Cursor, and any"
+      },
+      {
+        "full_name": "NeuraLegion/freshdesk_mcp",
+        "stars": 2,
+        "url": "https://github.com/NeuraLegion/freshdesk_mcp",
+        "desc": "MCP (Model Context Protocol) server for Freshdesk API integration. 41 tools for managing support tickets, contacts, comp"
+      },
+      {
+        "full_name": "nikhilchintawar/freshdesk-mcp",
+        "stars": 1,
+        "url": "https://github.com/nikhilchintawar/freshdesk-mcp",
+        "desc": "mcp server to access freshdesk"
+      },
+      {
+        "full_name": "CDataSoftware/freshdesk-mcp-server-by-cdata",
+        "stars": 1,
+        "url": "https://github.com/CDataSoftware/freshdesk-mcp-server-by-cdata",
+        "desc": "This read-only MCP Server allows you to connect to Freshdesk data from Claude Desktop through CData JDBC Drivers. For fu"
+      },
+      {
+        "full_name": "Shivakumar980/MCP_FreshDesk",
+        "stars": 0,
+        "url": "https://github.com/Shivakumar980/MCP_FreshDesk",
+        "desc": "MCP Server for FreshDesk."
+      },
+      {
+        "full_name": "bcavas/freshdesk-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/bcavas/freshdesk-mcp-server",
+        "desc": ""
+      }
+    ]
+  }
+}

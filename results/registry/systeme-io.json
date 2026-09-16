@@ -1,0 +1,29 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "systeme",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=systeme",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "systeme.io",
+    "url": "https://github.com/search?q=systeme.io+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID A016:28620D:254052:29CE62:6AAAF908 and timestamp 2026-09-16 20:16:08 UTC. ",
+    "items": []
+  }
+}

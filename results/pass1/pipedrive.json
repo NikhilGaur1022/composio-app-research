@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "CRM and sales platform enabling deal management, lead tracking, and sales automation.",
+    "auth_methods": [
+      "oauth2",
+      "api_key"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "large",
+    "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "green",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+        "quote": "Pipedrive offers two ways to authenticate: personal API tokens and OAuth 2.0."
+      },
+      {
+        "field": "auth_methods",
+        "url": "https://pipedrive.readme.io/docs/marketplace-oauth-api",
+        "quote": "OAuth 2.0 is necessary for developing apps that are available in the Pipedrive Marketplace."
+      },
+      {
+        "field": "access",
+        "url": "https://developers.pipedrive.com/",
+        "quote": "a free developer sandbox account lets you build and test integrations without touching production data"
+      },
+      {
+        "field": "api_type",
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-about-pipedrive-api",
+        "quote": "Pipedrive exposes a REST API in two active versions (v1 and v2) that communicates over HTTPS and returns JSON. There is no GraphQL endpoint."
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://pipedrive.readme.io/docs/core-api-concepts-about-pipedrive-api",
+        "quote": "The API provides extensive coverage for CRM operations with hundreds of endpoints"
+      }
+    ],
+    "confidence": 0.92,
+    "notes": "Pipedrive requires a paid account for production API use, but free sandbox accounts are available for development and testing. OAuth2 is required for marketplace apps. REST API only; unofficial GraphQL wrappers exist but not from vendor."
+  },
+  "cost_usd": 0.11043180000000001,
+  "turns": 6,
+  "seconds": 33.2,
+  "is_error": false,
+  "error": null
+}

@@ -1,0 +1,39 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "salesforce.local:einstein",
+    "version": "2.0.1",
+    "spec_url": "https://api.apis.guru/v2/specs/salesforce.local/einstein/2.0.1/openapi.json",
+    "title": "Einstein Vision and Einstein Language",
+    "url": "https://apis.guru/?q=salesforce.local",
+    "endpoints": 45,
+    "auth": [
+      "bearer_token"
+    ],
+    "breadth": "small"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "salesforce commerce cloud",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=salesforce commerce cloud",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Salesforce Commerce Cloud",
+    "url": "https://github.com/search?q=Salesforce+Commerce+Cloud+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID 9E1B:21A114:252336:29B3FE:6AAAF911 and timestamp 2026-09-16 20:16:18 UTC. ",
+    "items": []
+  }
+}

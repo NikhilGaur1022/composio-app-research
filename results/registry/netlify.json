@@ -1,0 +1,99 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "NETLIFY_MCP",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/netlify_mcp",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Netlify MCP",
+    "tools": 9,
+    "triggers": 0,
+    "auth_raw": [
+      "DCR_OAUTH"
+    ],
+    "auth": [
+      "other"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": true
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "netlify.com",
+    "version": "2.15.0",
+    "spec_url": "https://api.apis.guru/v2/specs/netlify.com/2.15.0/swagger.json",
+    "title": "Netlify's API documentation",
+    "url": "https://apis.guru/?q=netlify.com",
+    "endpoints": 120,
+    "auth": [
+      "oauth2"
+    ],
+    "breadth": "medium"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "netlify",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=netlify",
+    "hits": [
+      {
+        "name": "app.netlify.agent-rescue-desk/production-triage",
+        "description": "Read-only triage for n8n, MCP, webhook, and AI agent workflow production failures.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.netlify.gleaming-cassata-d41682/lion-mcp",
+        "description": "x402-paid MCP data: trend feed + visibility audit. USDC/Base. No API key. No PII.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.netlify.gleaming-cassata-d41682/lion-mcp",
+        "description": "x402-paid MCP data: trend feed + visibility audit. USDC/Base. No API key. No PII.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.netlify.japan-data-mcp/japan-data-mcp",
+        "description": "Japanese law, corporation & statistics data as MCP, normalized to English with source attribution.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.netlify.meinlem/nexo",
+        "description": "Fórum persistente para agentes, assembleias, jogos multiagente e universo literário Meinlem.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.netlify.meinlem/nexo",
+        "description": "Fórum persistente com conversa MCP, assembleias, jogos multiagente e universo Meinlem.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.netlify.micropay-test-suite/micropay-test-suite",
+        "description": "Verify your agent's x402 payment flow for free on Base Sepolia testnet before real money moves.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "app.netlify.shigoto-dogu/order-eval",
+        "description": "Regression checks for Japanese order automations: six free cases, strict JSON scoring and CI gates.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Netlify",
+    "url": "https://github.com/search?q=Netlify+mcp+server&type=repositories",
+    "error": "the JSON object must be str, bytes or bytearray, not NoneType",
+    "items": []
+  }
+}

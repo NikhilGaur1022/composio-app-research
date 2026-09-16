@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Meta's Marketing API provides programmatic access to manage and analyze Facebook and Instagram advertising campaigns.",
+    "auth_methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "access": "admin_approval",
+    "api_type": "graphql",
+    "api_breadth": "large",
+    "docs_url": "https://developers.facebook.com/docs/marketing-api/",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "app_review",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developers.facebook.com/docs/marketing-api/",
+        "quote": "Meta uses an OAuth permission system where your app needs specific scopes approved, with ads_management (for write access) and ads_read (for read access)"
+      },
+      {
+        "field": "access",
+        "url": "https://developers.facebook.com/docs/marketing-api/",
+        "quote": "Permissions start at Standard Access (your own assets only). Production use on other accounts needs Advanced Access, which requires App Review and Business Verification"
+      },
+      {
+        "field": "api_type",
+        "url": "https://developers.facebook.com/docs/marketing-api/",
+        "quote": "The Meta Ads API uses Graph API endpoints (which is Meta's implementation of GraphQL)"
+      }
+    ],
+    "confidence": 0.75,
+    "notes": "Free self-serve signup available but Advanced Access for production use requires app review and business verification. Graph API (GraphQL) with multiple functional pillars: Marketing API, Insights API, and Ad Library API. System User tokens preferred for server-to-server automation."
+  },
+  "cost_usd": 0.1069564,
+  "turns": 6,
+  "seconds": 30.0,
+  "is_error": false,
+  "error": null
+}

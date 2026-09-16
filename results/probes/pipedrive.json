@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://pipedrive.com",
+    "status": 200,
+    "final_url": "https://www.pipedrive.com/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": true,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://api.pipedrive.com/v1/deals",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"success\":false,\"error\":\"unauthorized access\",\"errorCode\":401,\"error_info\":\"Please check developers.pipedrive.com\"}",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

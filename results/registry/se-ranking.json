@@ -1,0 +1,78 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "se",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=se",
+    "hits": [
+      {
+        "name": "ag.hood/name-service",
+        "description": "Resolve .hood names on Robinhood Chain — forward/reverse, text records, availability & pricing.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "agency.kesey/pretrip",
+        "description": "Screen regulated-health marketing copy against source-cited rulesets, all 50 states.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "agency.ottobot/contractor-license-changes",
+        "description": "Did this contractor's licence change? Observed lapses and reinstatements, not a snapshot.",
+        "repo": "https://github.com/modelcontextprotocol/registry",
+        "status": "active"
+      },
+      {
+        "name": "agency.ottobot/contractor-license-changes",
+        "description": "Did this contractor's licence change? Observed lapses and reinstatements, not a snapshot.",
+        "repo": "https://github.com/modelcontextprotocol/registry",
+        "status": "active"
+      },
+      {
+        "name": "ai.actwise/ideation",
+        "description": "Actwise Ideation helps founders benchmark startup and product ideas before they build.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.adadvisor/mcp-server",
+        "description": "Query Meta Ads performance data — accounts, campaigns, ad sets, ads, metrics & settings.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.adadvisor/mcp-server",
+        "description": "Query Meta Ads performance data — accounts, campaigns, ad sets, ads, metrics & settings.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "ai.advisorsai/service-navigator",
+        "description": "Read-only service discovery, public-page checks, and request-link preparation.",
+        "repo": null,
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "SE Ranking",
+    "url": "https://github.com/search?q=SE+Ranking+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID A11A:21D4CE:245FC9:28ED69:6AAAF917 and timestamp 2026-09-16 20:16:23 UTC. ",
+    "items": []
+  }
+}

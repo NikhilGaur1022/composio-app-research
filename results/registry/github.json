@@ -1,0 +1,97 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "GITHUB",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/github",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "GitHub",
+    "tools": 893,
+    "triggers": 46,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": true,
+    "key": "github.com",
+    "version": "1.1.4",
+    "spec_url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.json",
+    "title": "GitHub v3 REST API",
+    "url": "https://apis.guru/?q=github.com",
+    "endpoints": 845,
+    "auth": [],
+    "breadth": "large"
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "github",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=github",
+    "hits": [
+      {
+        "name": "ai.smithery/Hint-Services-obsidian-github-mcp",
+        "description": "Connect AI assistants to your GitHub-hosted Obsidian vault to seamlessly access, search, and analy…",
+        "repo": "https://github.com/Hint-Services/obsidian-github-mcp",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/saidsef-mcp-github-pr-issue-analyser",
+        "description": "A Model Context Protocol (MCP) application for automated GitHub PR analysis and issue management.…",
+        "repo": "https://github.com/saidsef/mcp-github-pr-issue-analyser",
+        "status": "active"
+      },
+      {
+        "name": "ai.smithery/smithery-ai-github",
+        "description": "Access the GitHub API, enabling file operations, repository management, search functionality, and…",
+        "repo": "https://github.com/smithery-ai/mcp-servers",
+        "status": "active"
+      },
+      {
+        "name": "com.a2awire/data-github-changelog-platform-change-announcement",
+        "description": "GitHub platform changelog feed. $0.01/query. Register in-session — free testnet funds.",
+        "repo": "https://github.com/ee324/a2awire",
+        "status": "active"
+      },
+      {
+        "name": "com.a2awire/data-trending-repository-new-github-repo-discovery",
+        "description": "Fastest-growing new GitHub repos: stars, forks, language, topics, owners. Hourly. ($0.01/q)",
+        "repo": "https://github.com/ee324/a2awire",
+        "status": "active"
+      },
+      {
+        "name": "com.a2awire/data-trending-repository-new-github-repo-discovery",
+        "description": "Trending GitHub repos: new & rising daily. $0.01/query. Register in-session — free testnet funds.",
+        "repo": "https://github.com/ee324/a2awire",
+        "status": "active"
+      },
+      {
+        "name": "com.getstarhunt/github-developer-sourcing",
+        "description": "Hiring developers? Find and source software engineers by what they build on GitHub.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "com.mambabuilt/mcp-github-organization-signal-scanner",
+        "description": "Resolve a company domain to its GitHub organization with repo, language and activity signals.",
+        "repo": "https://github.com/mambalabsdev/mcp-github-organization-signal-scanner",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "GitHub",
+    "url": "https://github.com/search?q=GitHub+mcp+server&type=repositories",
+    "error": "the JSON object must be str, bytes or bytearray, not NoneType",
+    "items": []
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "HUBSPOT",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/hubspot",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "HubSpot",
+    "tools": 245,
+    "triggers": 2,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "hubspot",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=hubspot",
+    "hits": [
+      {
+        "name": "io.github.Centrify-Internal/hubspot-integrations-mcp",
+        "description": "MCP server for the HubSpot Integrations Center HubDB: search and retrieve integration data.",
+        "repo": "https://github.com/Centrify-Internal/hubspot-mcp-server",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/hubspot-mcp",
+        "description": "Every HubSpot Sales Hub feature, plus offline cross-object queries, property-change-history",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/hubspot-mcp",
+        "description": "Every HubSpot Sales Hub feature, plus offline cross-object queries, property-change-history",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/hubspot-mcp",
+        "description": "Every HubSpot Sales Hub feature, plus offline cross-object queries, property-change-history",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/hubspot-mcp",
+        "description": "Every HubSpot Sales Hub feature, plus offline cross-object queries, property-change-history",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/hubspot-mcp",
+        "description": "Every HubSpot Sales Hub feature, plus offline cross-object queries, property-change-history",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.Servosity/hubspot-mcp",
+        "description": "Every HubSpot Sales Hub feature, plus offline cross-object queries, property-change-history",
+        "repo": "https://github.com/servosity/msp-skills",
+        "status": "active"
+      },
+      {
+        "name": "io.github.mindstone/mcp-server-hubspot",
+        "description": "HubSpot CRM: contacts, deals, tickets, line items, properties, marketing, files, workflows, threads",
+        "repo": "https://github.com/mindstone/mcp-servers",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "HubSpot",
+    "url": "https://github.com/search?q=HubSpot+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "baryhuang/mcp-hubspot",
+        "stars": 128,
+        "url": "https://github.com/baryhuang/mcp-hubspot",
+        "desc": "A Model Context Protocol (MCP) server that enables AI assistants to interact with HubSpot CRM data, providing built-in v"
+      },
+      {
+        "full_name": "lkm1developer/hubspot-mcp-server",
+        "stars": 13,
+        "url": "https://github.com/lkm1developer/hubspot-mcp-server",
+        "desc": "hubspot mcp server"
+      },
+      {
+        "full_name": "scopiousdigital/hubspot-mcp",
+        "stars": 10,
+        "url": "https://github.com/scopiousdigital/hubspot-mcp",
+        "desc": "mcp server for interacting with HubSpot"
+      },
+      {
+        "full_name": "bcharleson/hubspot-cli",
+        "stars": 8,
+        "url": "https://github.com/bcharleson/hubspot-cli",
+        "desc": "JSON-first, agent-native CLI and MCP server for the HubSpot CRM API"
+      },
+      {
+        "full_name": "CelestoAI/SuperAuth",
+        "stars": 6,
+        "url": "https://github.com/CelestoAI/SuperAuth",
+        "desc": "APIs and MCP Server for Enterprise Apps like Google, Notion, Hubspot..."
+      },
+      {
+        "full_name": "HubSpot/mcp-server",
+        "stars": 5,
+        "url": "https://github.com/HubSpot/mcp-server",
+        "desc": "MCP Server for HubSpot"
+      },
+      {
+        "full_name": "LokiMCPUniverse/mcp-servers",
+        "stars": 4,
+        "url": "https://github.com/LokiMCPUniverse/mcp-servers",
+        "desc": "24 Enterprise MCP Servers for GenAI: AWS, Salesforce, HubSpot, Jenkins, Power BI + more. Production-ready AI agent integ"
+      },
+      {
+        "full_name": "adeel0x01/hubspot-mcp-tools",
+        "stars": 4,
+        "url": "https://github.com/adeel0x01/hubspot-mcp-tools",
+        "desc": "Model Context Protocol (MCP) server providing comprehensive HubSpot CRM integration tools covering Contacts, Companies, "
+      }
+    ]
+  }
+}

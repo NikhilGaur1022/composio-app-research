@@ -1,0 +1,53 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "DATAFORSEO",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/dataforseo",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Dataforseo",
+    "tools": 312,
+    "triggers": 0,
+    "auth_raw": [
+      "BASIC"
+    ],
+    "auth": [
+      "basic"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "dataforseo",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dataforseo",
+    "hits": [
+      {
+        "name": "io.scalably/dataforseo-mcp",
+        "description": "DataForSEO MCP wrapper: searchable API docs plus normalized calls to the official server. 4 tools.",
+        "repo": "https://github.com/scalably-io/dataforseo-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.scalably/dataforseo-mcp",
+        "description": "DataForSEO MCP wrapper: searchable API docs plus normalized calls to the official server. 4 tools.",
+        "repo": "https://github.com/scalably-io/dataforseo-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "DataForSEO",
+    "url": "https://github.com/search?q=DataForSEO+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID BF55:D74D7:260B68:2A9B34:6AAAF91C and timestamp 2026-09-16 20:16:29 UTC. F",
+    "items": []
+  }
+}

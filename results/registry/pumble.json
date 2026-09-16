@@ -1,0 +1,64 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "PUMBLE",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/pumble",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Pumble",
+    "tools": 9,
+    "triggers": 0,
+    "auth_raw": [
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "pumble",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pumble",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Pumble",
+    "url": "https://github.com/search?q=Pumble+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "infralayers/pumble-mcp",
+        "stars": 1,
+        "url": "https://github.com/infralayers/pumble-mcp",
+        "desc": "MCP server wrapping Pumble's API-key REST addon â€” send/read/edit messages, DMs, and list users from Claude Code."
+      },
+      {
+        "full_name": "shoutkol/pumble-mcp-server",
+        "stars": 0,
+        "url": "https://github.com/shoutkol/pumble-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "nitindermohan/pumble-mcp",
+        "stars": 0,
+        "url": "https://github.com/nitindermohan/pumble-mcp",
+        "desc": "A standalone MCP server that gives AI agents complete access to the Pumble messaging platform. Built on the official Pum"
+      },
+      {
+        "full_name": "apet97/pumble-python-sdk",
+        "stars": 0,
+        "url": "https://github.com/apet97/pumble-python-sdk",
+        "desc": "Unofficial Python SDK, MCP 2026 server, and MCP App for the Pumble API Keys addon"
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "binance",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=binance",
+    "hits": [
+      {
+        "name": "io.github.Alejandrehl/kainext-binance-mcp",
+        "description": "Security-first Binance Spot MCP + honest crypto analyst. 25 tools, 5 prompts, human-gated orders.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.Evozim/binance-orderbook-mcp",
+        "description": "Premium agentic endpoint for binance-orderbook-mcp.",
+        "repo": null,
+        "status": "active"
+      },
+      {
+        "name": "io.github.junct-bot/binance-mcp",
+        "description": "Binance MCP server — 340 tools for AI agent integration. Hosted by Junct.",
+        "repo": "https://github.com/junct-bot/binance-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.junct-bot/binance-mcp",
+        "description": "Binance exchange data - 340 tools for market data, trading pairs, order books",
+        "repo": "https://github.com/junct-bot/binance-mcp",
+        "status": "active"
+      },
+      {
+        "name": "io.github.junct-bot/binance-mcp",
+        "description": "Binance - 340 tools for market data, order books, and trading pairs",
+        "repo": "https://github.com/junct-bot/binance-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Binance",
+    "url": "https://github.com/search?q=Binance+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "AnalyticAce/binance-mcp-server",
+        "stars": 47,
+        "url": "https://github.com/AnalyticAce/binance-mcp-server",
+        "desc": "Unofficial tools and server implementation for Binance's Model Context Protocol (MCP). Designed to support developers bu"
+      },
+      {
+        "full_name": "nirholas/Binance-MCP",
+        "stars": 37,
+        "url": "https://github.com/nirholas/Binance-MCP",
+        "desc": "A Model Context Protocol (MCP) server for Binance.com API. Offers standardized access to spot trading, wallets, staking,"
+      },
+      {
+        "full_name": "ethancod1ng/binance-mcp-server",
+        "stars": 32,
+        "url": "https://github.com/ethancod1ng/binance-mcp-server",
+        "desc": "A Model Context Protocol (MCP) server for integrating AI assistants with Binance cryptocurrency exchange APIs, enabling "
+      },
+      {
+        "full_name": "nirholas/Binance-US-MCP",
+        "stars": 25,
+        "url": "https://github.com/nirholas/Binance-US-MCP",
+        "desc": "A Model Context Protocol (MCP) server for Binance.US API. Provides standardized access to market data, spot trading, wal"
+      },
+      {
+        "full_name": "qeinfinity/binance-mcp-server",
+        "stars": 20,
+        "url": "https://github.com/qeinfinity/binance-mcp-server",
+        "desc": ""
+      },
+      {
+        "full_name": "kydlikebtc/binance-mcp-server",
+        "stars": 9,
+        "url": "https://github.com/kydlikebtc/binance-mcp-server",
+        "desc": "Professional Binance MCP Server for Claude Desktop"
+      },
+      {
+        "full_name": "kukapay/binance-alpha-mcp",
+        "stars": 9,
+        "url": "https://github.com/kukapay/binance-alpha-mcp",
+        "desc": "An MCP server for tracking Binance Alpha trades, helping AI agents optimize alpha point accumulation."
+      },
+      {
+        "full_name": "kukapay/crypto-liquidations-mcp",
+        "stars": 8,
+        "url": "https://github.com/kukapay/crypto-liquidations-mcp",
+        "desc": "An MCP server that streams real-time cryptocurrency liquidation events from Binance."
+      }
+    ]
+  }
+}

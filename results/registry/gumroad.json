@@ -1,0 +1,47 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "GUMROAD",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/gumroad",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Gumroad",
+    "tools": 7,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2"
+    ],
+    "auth": [
+      "oauth2"
+    ],
+    "managed_oauth": true,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "gumroad",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=gumroad",
+    "hits": [
+      {
+        "name": "io.usefulapi/gumroad",
+        "description": "Read products, sales, subscribers and offer codes; verify, enable and disable product licenses.",
+        "repo": "https://github.com/m190/usefulapi-mcp",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Gumroad",
+    "url": "https://github.com/search?q=Gumroad+mcp+server&type=repositories",
+    "error": "gh: API rate limit exceeded for user ID 218079550. If you reach out to GitHub Support for help, please include the request ID AC02:D74D7:2609E4:2A9970:6AAAF91A and timestamp 2026-09-16 20:16:27 UTC. F",
+    "items": []
+  }
+}

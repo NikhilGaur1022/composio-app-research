@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://zoho.com/crm",
+    "status": 200,
+    "final_url": "https://www.zoho.com/en-in/crm/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": true,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://www.zohoapis.com/crm/v2/Leads",
+    "status": 401,
+    "www_authenticate": null,
+    "body_snippet": "{\"code\":\"AUTHENTICATION_FAILURE\",\"details\":{},\"message\":\"Authentication failed\",\"status\":\"error\"} ",
+    "inferred_scheme": null,
+    "api_alive": true
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

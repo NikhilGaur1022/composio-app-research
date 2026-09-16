@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://fanbasis.com",
+    "status": 200,
+    "final_url": "https://commas.com/",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": true,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": true
+  },
+  "unauth_probe": {
+    "url": "https://fanbasis.com/api",
+    "status": 301,
+    "www_authenticate": null,
+    "body_snippet": "<html>\r <head><title>301 Moved Permanently</title></head>\r <body>\r <center><h1>301 Moved Permanently</h1></center>\r <hr><center>nginx/1.18.0 (Ubuntu)</center>\r </body>\r </html>\r ",
+    "inferred_scheme": null,
+    "api_alive": false
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

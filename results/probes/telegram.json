@@ -1,0 +1,34 @@
+{
+  "docs_reachable": {
+    "url": "https://core.telegram.org",
+    "status": 200,
+    "final_url": "https://core.telegram.org",
+    "error": null
+  },
+  "docs_signals": {
+    "oauth": false,
+    "api_key": false,
+    "bearer": false,
+    "basic_auth": false,
+    "graphql": false,
+    "rest": false,
+    "contact_sales": false,
+    "free_tier": false,
+    "enterprise_only": false,
+    "mcp": false
+  },
+  "unauth_probe": {
+    "url": "https://api.telegram.org/botTOKEN/getMe",
+    "status": 404,
+    "www_authenticate": null,
+    "body_snippet": "{\"ok\":false,\"error_code\":404,\"description\":\"Not Found\"}",
+    "inferred_scheme": null,
+    "api_alive": false
+  },
+  "openapi_discovery": {
+    "found": null
+  },
+  "oauth_discovery": {
+    "found": null
+  }
+}

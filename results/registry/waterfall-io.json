@@ -1,0 +1,71 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": null,
+    "found": false,
+    "via": null,
+    "url": null,
+    "note": "not in Composio catalog (checked sitemap slug list)"
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "waterfall",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=waterfall",
+    "hits": [
+      {
+        "name": "com.mambabuilt/mcp-email-waterfall-orchestrator",
+        "description": "Finds and verifies work emails on your own provider keys, with real per-provider spend.",
+        "repo": "https://github.com/mambalabsdev/mcp-email-waterfall-orchestrator",
+        "status": "active"
+      },
+      {
+        "name": "com.mambabuilt/mcp-email-waterfall-orchestrator",
+        "description": "Finds and verifies work emails on your own provider keys, with real per-provider spend.",
+        "repo": "https://github.com/mambalabsdev/mcp-email-waterfall-orchestrator",
+        "status": "active"
+      },
+      {
+        "name": "io.github.waterfallbridge/mcp",
+        "description": "Run waterfall/bridge variance analysis on the WaterfallBridge web app via browser automation.",
+        "repo": "https://github.com/Icelemon27/Bridge",
+        "status": "active"
+      },
+      {
+        "name": "io.github.waterfallbridge/mcp",
+        "description": "Explain why any KPI or rate metric changed: bridge/variance analysis by driver, from CSV/Excel.",
+        "repo": "https://github.com/Icelemon27/Bridge",
+        "status": "active"
+      },
+      {
+        "name": "io.github.waterfallbridge/mcp",
+        "description": "Explain why any KPI or rate metric changed: bridge/variance analysis by driver, from CSV/Excel.",
+        "repo": "https://github.com/Icelemon27/Bridge",
+        "status": "active"
+      },
+      {
+        "name": "io.github.waterfallbridge/mcp",
+        "description": "Explain why any KPI or rate metric changed: bridge/variance analysis by driver, from CSV/Excel.",
+        "repo": "https://github.com/Icelemon27/Bridge",
+        "status": "active"
+      },
+      {
+        "name": "io.github.waterfallbridge/mcp",
+        "description": "Explain why any KPI or rate metric changed: bridge/variance analysis by driver, from CSV/Excel.",
+        "repo": "https://github.com/Icelemon27/Bridge",
+        "status": "active"
+      }
+    ],
+    "official": [],
+    "status": "community"
+  },
+  "github": {
+    "source": "github",
+    "query": "Waterfall.io",
+    "url": "https://github.com/search?q=Waterfall.io+mcp+server&type=repositories",
+    "items": []
+  }
+}

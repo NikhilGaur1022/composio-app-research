@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "result": {
+    "one_liner": "Aircall is a cloud-based communications platform providing voice calling, SMS messaging, and conversation intelligence for business integrations.",
+    "auth_methods": [
+      "basic",
+      "oauth2"
+    ],
+    "access": "self_serve_free",
+    "api_type": "rest",
+    "api_breadth": "medium",
+    "docs_url": "https://developer.aircall.io/api-references",
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "yellow",
+    "blocker": "none",
+    "evidence": [
+      {
+        "field": "auth_methods",
+        "url": "https://developer.aircall.io/tutorials/how-aircall-oauth-flow-works",
+        "quote": "OAuth is mainly for Technology Partners building apps for multiple Aircall customers to be listed on the Aircall App Marketplace, while Basic Auth is for Aircall customers"
+      },
+      {
+        "field": "access",
+        "url": "https://support.aircall.io/hc/en-gb/articles/10375395181853-Where-to-find-my-Aircall-API-Key",
+        "quote": "To generate an API key, go to the Aircall Dashboard > Integrations > API keys, click Generate an API key"
+      },
+      {
+        "field": "access",
+        "url": "https://pipeline.zoominfo.com/sales/aircall-api-review",
+        "quote": "there is no self-serve OAuth registration, and partners building marketplace apps must contact marketplace@aircall.io"
+      },
+      {
+        "field": "api_breadth",
+        "url": "https://apitracker.io/a/aircall",
+        "quote": "Aircall's API includes over 40 endpoints, but you'll typically use only 4-6 for most integrations"
+      },
+      {
+        "field": "verdict",
+        "url": "https://pipeline.zoominfo.com/sales/aircall-api-review",
+        "quote": "API pricing and plan-gating are opaque, and while Essentials lists 'API access' as a feature, Aircall does not state whether any endpoints are gated behind higher tiers"
+      }
+    ],
+    "confidence": 0.72,
+    "notes": "Self-serve basic auth credentials available from dashboard. OAuth for marketplace partners requires contacting Aircall. Rate limited to 120 requests/minute per company. Free tier mentioned but plan-gating details are undocumented."
+  },
+  "cost_usd": 0.136807,
+  "turns": 6,
+  "seconds": 62.2,
+  "is_error": false,
+  "error": null
+}

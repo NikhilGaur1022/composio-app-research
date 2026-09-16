@@ -1,0 +1,90 @@
+{
+  "composio": {
+    "source": "composio",
+    "slug": "METAADS",
+    "found": true,
+    "via": "public_index",
+    "url": "https://docs.composio.dev/toolkits/metaads",
+    "sdk_error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API key: ck_**HcVM', 'code': 801, 'slug': 'APIKey_InvalidAPIKey', 'stat",
+    "name": "Meta Ads",
+    "tools": 56,
+    "triggers": 0,
+    "auth_raw": [
+      "OAUTH2",
+      "API_KEY"
+    ],
+    "auth": [
+      "api_key",
+      "oauth2"
+    ],
+    "managed_oauth": false,
+    "wraps_mcp": false
+  },
+  "apis_guru": {
+    "source": "apis_guru",
+    "found": false
+  },
+  "mcp_registry": {
+    "source": "mcp_registry",
+    "query": "meta ads",
+    "url": "https://registry.modelcontextprotocol.io/v0/servers?search=meta ads",
+    "hits": [],
+    "official": [],
+    "status": "none"
+  },
+  "github": {
+    "source": "github",
+    "query": "Meta Ads",
+    "url": "https://github.com/search?q=Meta+Ads+mcp+server&type=repositories",
+    "items": [
+      {
+        "full_name": "irinabuht12-oss/google-meta-ads-ga4-mcp",
+        "stars": 1883,
+        "url": "https://github.com/irinabuht12-oss/google-meta-ads-ga4-mcp",
+        "desc": "Google Ads MCP + Meta Ads MCP + GA4 in one server for Claude, ChatGPT, Cursor & n8n â€” 250+ tools, hosted remote MCP, O"
+      },
+      {
+        "full_name": "pipeboard-co/meta-ads-mcp",
+        "stars": 1261,
+        "url": "https://github.com/pipeboard-co/meta-ads-mcp",
+        "desc": "Meta Ads (Facebook/Instagram) MCP server for Claude, ChatGPT, Perplexity & Cursor â€” the Meta node of Pipeboardâ€™s 5-p"
+      },
+      {
+        "full_name": "mathiaschu/meta-ads-analyzer",
+        "stars": 428,
+        "url": "https://github.com/mathiaschu/meta-ads-analyzer",
+        "desc": "Meta Ads Analyzer skill + MCP server for Claude Code. Breakdown Effect, Learning Phase, and expert-level campaign diagno"
+      },
+      {
+        "full_name": "amekala/ads-mcp",
+        "stars": 93,
+        "url": "https://github.com/amekala/ads-mcp",
+        "desc": "MCP server for managing ad campaigns across Google Ads, Meta Ads, LinkedIn Ads, and TikTok Ads. 100+ tools for campaign "
+      },
+      {
+        "full_name": "mikusnuz/meta-ads-mcp",
+        "stars": 78,
+        "url": "https://github.com/mikusnuz/meta-ads-mcp",
+        "desc": "MCP server for Meta Marketing API v25.0 â€” 135 tools for Facebook & Instagram ad campaign management"
+      },
+      {
+        "full_name": "EfrainTorres/armavita-meta-ads-mcp",
+        "stars": 51,
+        "url": "https://github.com/EfrainTorres/armavita-meta-ads-mcp",
+        "desc": "Instagram & Facebook MCP server for Meta Marketing API v26 with secure token redaction, cursor pagination, and OSS tooli"
+      },
+      {
+        "full_name": "markifact/markifact-mcp",
+        "stars": 48,
+        "url": "https://github.com/markifact/markifact-mcp",
+        "desc": "MCP server for Google Ads, Meta Ads, GA4, TikTok Ads, and LinkedIn Ads. Manage 300+ ad operations from Claude, ChatGPT, "
+      },
+      {
+        "full_name": "brandu-mos/konquest-meta-ads-mcp",
+        "stars": 44,
+        "url": "https://github.com/brandu-mos/konquest-meta-ads-mcp",
+        "desc": "57-tool supervised Meta Ads MCP server for Claude Code. Open-core: full CRUD, multi-asset ads, targeting, diagnostics, s"
+      }
+    ]
+  }
+}
