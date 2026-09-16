@@ -9,56 +9,51 @@
       "bearer_token"
     ],
     "blocker": "paid_only",
-    "confidence": 0.82,
+    "confidence": 0.8,
     "docs_url": "https://developers.grain.com/",
     "evidence": [
       {
         "field": "auth_methods",
-        "url": "https://support.grain.com/en/articles/15507288-grain-api",
-        "quote": "Click here to generate a PAT."
+        "url": "https://developers.grain.com/",
+        "quote": "Requests authenticated with these tokens are considered as \"Personal API\" and will have the same level of access as the user that generated the token has."
       },
       {
         "field": "auth_methods",
-        "url": "https://support.grain.com/en/articles/15507288-grain-api",
-        "quote": "Workspace API access is available on Business and Enterprise plans and requires admin access to generate."
+        "url": "https://developers.grain.com/",
+        "quote": "a standard OAuth2 Authorization Code flow, including the PKCE extension for client-side only authentication"
       },
       {
         "field": "access",
         "url": "https://support.grain.com/en/articles/15507288-grain-api",
-        "quote": "Personal API access is available on Starter, Business, and Enterprise plans."
+        "quote": "Personal API access is available on Starter, Business, and Enterprise plans. Workspace API access is available on Business and Enterprise plans and requires admin access to generate. The Free plan does not include API access."
       },
       {
         "field": "api_type",
         "url": "https://developers.grain.com/",
-        "quote": "https://api.grain.com"
-      },
-      {
-        "field": "mcp",
-        "url": "https://grain.com/release-note/06-18-2025",
-        "quote": "Grain's official MCP server"
+        "quote": "All authenticated requests require an Authorization: Bearer TOKEN header plus a Public-Api-Version: 2025-10-31 header."
       },
       {
         "field": "mcp",
         "url": "https://developers.grain.com/mcp",
-        "quote": "Official Grain MCP Server: Quick Start Guide"
+        "quote": "Grain's MCP server is officially supported by us and aligns with our existing security practices, follows the MCP specification exactly, and uses industry-standard OAuth authentication and HTTPS."
       },
       {
         "field": "verdict",
         "url": "https://support.grain.com/en/articles/15507288-grain-api",
-        "quote": "Personal API access is available on Starter, Business, and Enterprise plans."
+        "quote": "The Free plan does not include API access."
       }
     ],
     "mcp": {
       "status": "official",
       "url": "https://developers.grain.com/mcp"
     },
-    "notes": "Grain's public REST API requires a bearer token (Personal Access Token or Workspace Access Token, generated in account/workspace settings) or OAuth2 for third-party distributed integrations. No free tier: PAT access needs Starter plan or above; WAT needs Business/Enterprise and admin rights. All requests need a Public-Api-Version header (current: 2025-10-31). API surface is small (~20 endpoints: recordings, hooks/webhooks, users/teams/meeting types, OAuth token mgmt). Grain also ships an official hosted remote MCP server (https://api.grain.com/_/mcp) using OAuth, exposing meeting recordings/notes/transcripts/deals/coaching data with built-in report prompts — this MCP path could give agent builders a self-serve-ish route via OAuth without a paid PAT, but the underlying REST API itself is paid-gated.",
-    "one_liner": "Grain is an AI meeting-recorder/notes platform whose public REST API (recordings, transcripts, notes, hooks) and official remote MCP server let developers pull meeting data and automate workflows.",
+    "notes": "Grain has a documented REST API (api.grain.com) with Personal Access Tokens, Workspace Access Tokens, and an OAuth2 Authorization Code (+PKCE) flow for third-party apps; all requests use Bearer auth. API access requires a paid Starter/Business/Enterprise plan (Free plan excluded), so credentials aren't self-serve-free. Grain also publishes an official MCP server (developers.grain.com/mcp) using OAuth, with most tools available across plans except Deals/Sales Coaching tools gated to Business+. Older docs.grain.inc site returned 404, suggesting it's deprecated in favor of developers.grain.com.",
+    "one_liner": "Grain is an AI meeting notetaker/recorder that offers a REST API and official MCP server for reading meeting recordings, transcripts, and AI notes, gated behind paid subscription plans.",
     "verdict": "yellow"
   },
-  "cost_usd": 0.19952699999999998,
-  "turns": 8,
-  "seconds": 64.6,
+  "cost_usd": 0.2672238,
+  "turns": 10,
+  "seconds": 79.1,
   "is_error": false,
   "error": null
 }
